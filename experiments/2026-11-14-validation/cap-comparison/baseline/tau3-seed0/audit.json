@@ -1,0 +1,143 @@
+{
+  "name": "tau3-seed0",
+  "variant": "baseline",
+  "command": [
+    "/tmp/uav-cap-2t4l27mu/baseline",
+    "solve",
+    "--tau",
+    "3",
+    "--seed",
+    "0",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-validation/cap-comparison/baseline/tau3-seed0/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 1.2728876759999999,
+    "original_pass": false,
+    "original_pass_parts": {
+      "task": true,
+      "mode": false,
+      "dynamics": false,
+      "uav_speed": false,
+      "energy": false,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 0.005688761,
+      "viol_task": 0.00027898899999989624,
+      "viol_mode": 0.005688761,
+      "viol_dyn": 6.977081573865743e-06,
+      "viol_speed": 0.0020073709335333145,
+      "viol_bounds": 5.3870000000788565e-06,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 20.4795396,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.8727624000000489,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": false,
+    "replay_min_energy": -0.3385535280822105,
+    "replay_max_energy": 1,
+    "replay_violation": 0.3385535280822105,
+    "station_pairs": [],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 66.93121417221,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 291.0521665575,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 48.18692775102,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 13.77228317459,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 12.3629464993,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 7.707099770965,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 5.336290080375,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 3.382908460041,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 2.569921830683,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 2.162537780921,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 1.440248177501,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 1.112457793987,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 13,
+      "over_seconds": 0.8727598814865,
+      "below_seconds": 0.0
+    }
+  ],
+  "max_stage_over_seconds": 291.0521665575,
+  "final_stationarity": 4480.369569790375,
+  "final_smooth_feasibility": 0.005210691829615885
+}

@@ -1,0 +1,181 @@
+{
+  "name": "tau5-seed1",
+  "variant": "capped",
+  "command": [
+    "/tmp/uav-cap-2t4l27mu/capped",
+    "solve",
+    "--tau",
+    "5",
+    "--seed",
+    "1",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-validation/cap-comparison/capped/tau5-seed1/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 2.332197159,
+    "original_pass": false,
+    "original_pass_parts": {
+      "task": true,
+      "mode": false,
+      "dynamics": false,
+      "uav_speed": false,
+      "energy": false,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 0.009695299,
+      "viol_task": 0.00039741599999931765,
+      "viol_mode": 0.009695299,
+      "viol_dyn": 3.0361369892283052e-05,
+      "viol_speed": 0.003202009946969009,
+      "viol_bounds": 3.165e-06,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 34.903076399999996,
+    "modes": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.018057600000087604,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": false,
+    "replay_min_energy": -0.46806769624091626,
+    "replay_max_energy": 1,
+    "replay_violation": 0.46806769624091626,
+    "station_pairs": [
+      {
+        "region": 1,
+        "previous_segment": 2,
+        "next_segment": 7,
+        "gap_seconds": 144.3675096,
+        "distance_km": 0.08155315039614273,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 7,
+        "next_segment": 21,
+        "gap_seconds": 2113.9397496,
+        "distance_km": 4.1944135407151535,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 1060.9343640000002,
+        "distance_km": 1.2872685674534545,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.001787470710646,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 0.0003192999452839,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 0.001154605188858,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 0.0006089204440674,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 0.002191708344812,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 0.003516586240604,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 0.002416343089418,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 0.004308392364072,
+      "below_seconds": 0.001014545436256
+    },
+    {
+      "stage": 13,
+      "over_seconds": 0.01805856712087,
+      "below_seconds": 0.0
+    }
+  ],
+  "max_stage_over_seconds": 0.01805856712087,
+  "final_stationarity": 15024.91286036072,
+  "final_smooth_feasibility": 0.009208182903764971
+}

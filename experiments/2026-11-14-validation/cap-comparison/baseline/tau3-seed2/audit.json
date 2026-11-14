@@ -1,0 +1,172 @@
+{
+  "name": "tau3-seed2",
+  "variant": "baseline",
+  "command": [
+    "/tmp/uav-cap-2t4l27mu/baseline",
+    "solve",
+    "--tau",
+    "3",
+    "--seed",
+    "2",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-validation/cap-comparison/baseline/tau3-seed2/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 0.950704098,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 2.0240000000032454e-06,
+      "viol_task": 5.5000000109828306e-08,
+      "viol_mode": 2.0240000000032454e-06,
+      "viol_dyn": 4.285069677562037e-09,
+      "viol_speed": 2.3153880313042663e-08,
+      "viol_bounds": 3.333333331578814e-10,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0072864000000116835,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0072864000000116835,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 0.17345210706194492,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 5,
+        "next_segment": 8,
+        "gap_seconds": 81.2404368,
+        "distance_km": 0.8123584780877219,
+        "shortfall_km": 0.5686371676877219,
+        "missing_seconds": 189.54572256257393
+      },
+      {
+        "region": 1,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 5,
+        "next_segment": 8,
+        "gap_seconds": 81.2404368,
+        "distance_km": 0.8123584780877219,
+        "shortfall_km": 0.5686371676877219,
+        "missing_seconds": 189.54572256257393
+      }
+    ],
+    "max_station_shortfall_km": 0.5686371676877219,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 136.291819385,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 206.8577359939,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 161.0700739873,
+      "below_seconds": 6.042048814889e-05
+    },
+    {
+      "stage": 4,
+      "over_seconds": 80.17992574768,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 16.90124680347,
+      "below_seconds": 1.219996813193e-05
+    },
+    {
+      "stage": 6,
+      "over_seconds": 2.344633008061,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 0.1408648808539,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 0.06246893171634,
+      "below_seconds": 5.671834753144e-07
+    },
+    {
+      "stage": 9,
+      "over_seconds": 0.03552679314788,
+      "below_seconds": 1.207835767903e-09
+    },
+    {
+      "stage": 10,
+      "over_seconds": 0.02117361167642,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 0.01182445751536,
+      "below_seconds": 4.892888169027e-07
+    },
+    {
+      "stage": 12,
+      "over_seconds": 0.008744515831963,
+      "below_seconds": 1.802118810161e-06
+    },
+    {
+      "stage": 13,
+      "over_seconds": 0.007285547030716,
+      "below_seconds": 4.795843310931e-07
+    }
+  ],
+  "max_stage_over_seconds": 206.8577359939,
+  "final_stationarity": 0.7554351832631759,
+  "final_smooth_feasibility": 7.0074901992178695e-09
+}

@@ -45,7 +45,7 @@ def build_sources():
     modified+='#[test] fn excludes_negative_discharge_duration() {\n'
     modified+='let ph=Phys::default(); let inst=Instance {r0:[0.,0.],rf:[0.,0.],regions:vec![Region{o:[3.,0.],rho:1.}],tasks:vec!'+literal(fixture['instance']['tasks'])+'};\n'
     modified+='let tr=crate::instance::Traj {'+','.join(k+':vec!'+literal(fixture['solution'][k]) for k in ('r','e','s','c'))+'};\n'
-    modified+='let model=Model::new(&inst,&ph,3,Smooth{eps:.2,p:2.,delta:.001}); '
+    modified+='let model=Model::new(&inst,&ph,3,Smooth{eps:0.2,p:2.,delta:0.001}); '
     modified+='let x=tr.to_x(&model.lay); let we=vec![0.;model.lay.n_eq()]; let wi=vec![0.;model.lay.n_ineq()]; '
     modified+='let mut rec=Recorder::new(&we,&wi); let mut g=vec![0.;x.len()]; model.eval(&x,&mut rec,&mut g); '
     modified+='assert!(rec.h.iter().all(|h|h.abs()<1e-12)); assert!(rec.g[..12].iter().all(|g|*g<1e-12)); '

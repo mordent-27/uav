@@ -1,0 +1,31 @@
+--- src/model.rs
++++ cap-model.rs
+@@ -31,7 +31,7 @@
+         2 * (self.n - 1) + self.tau
+     }
+     pub fn n_ineq(&self) -> usize {
+-        6 * (self.n - 1)
++        7 * (self.n - 1)
+     }
+     /// Index of r_k's x-coordinate, None for the fixed end points.
+     #[inline]
+@@ -246,6 +246,9 @@
+             grad[lay.s(k)] += ph.v_d * w.ineq(4 * nseg + k, ph.v_d * (s - ph.s_max));
+             // Domain of the charging duration (Section II-A).
+             grad[lay.c(k)] -= ph.v_d * w.ineq(5 * nseg + k, -ph.v_d * c);
++            let cap = ph.v_d * w.ineq(6 * nseg + k, ph.v_d * (c - s));
++            grad[lay.c(k)] += cap;
++            grad[lay.s(k)] -= cap;
+         }
+         f
+     }
+@@ -351,3 +354,9 @@
+         }
+     }
+ }
++
++#[cfg(test)] mod cap_regression { use super::*;
++#[test] fn excludes_negative_discharge_duration() {
++let ph=Phys::default(); let inst=Instance {r0:[0.,0.],rf:[0.,0.],regions:vec![Region{o:[3.,0.],rho:1.}],tasks:vec![[0.28284271247461906,0.0]]};
++let tr=crate::instance::Traj {r:vec![[0.0,0.0],[0.0,0.0],[0.0,0.0]],e:vec![1.0,0.7853390588114977,0.8419117723451437],s:vec![0.1,0.008333333333333333],c:vec![0.014135623524599083,0.014142105799972379]};
++let model=Model::new(&inst,&ph,3,Smooth{eps:0.2,p:2.,delta:0.001}); let x=tr.to_x(&model.lay); let we=vec![0.;model.lay.n_eq()]; let wi=vec![0.;model.lay.n_ineq()]; let mut rec=Recorder::new(&we,&wi); let mut g=vec![0.;x.len()]; model.eval(&x,&mut rec,&mut g); assert!(rec.h.iter().all(|h|h.abs()<1e-12)); assert!(rec.g[..12].iter().all(|g|*g<1e-12)); assert!(rec.g[13]>0.1); } }

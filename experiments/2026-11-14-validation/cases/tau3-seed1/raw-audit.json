@@ -1,0 +1,102 @@
+{
+  "finite": true,
+  "objective": 0.840302907,
+  "original_pass": true,
+  "original_pass_parts": {
+    "task": true,
+    "mode": true,
+    "dynamics": true,
+    "uav_speed": true,
+    "energy": true,
+    "segment_time": true,
+    "charging_nonnegative": true,
+    "endpoints": true
+  },
+  "original_residuals": {
+    "viol": 1.5659999999979857e-06,
+    "viol_task": 7.899999987515116e-08,
+    "viol_mode": 1.5659999999979857e-06,
+    "viol_dyn": 3.707317730583526e-09,
+    "viol_speed": 1.0601585831437887e-08,
+    "viol_bounds": 3.333333331578814e-10,
+    "viol_endpoint": 0.0
+  },
+  "max_mode_score": 0.005637599999992748,
+  "modes": [
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "stored_mode_disagreements": 0,
+  "charging_over_segment_seconds": 0.005637599999992748,
+  "charging_domain_pass": true,
+  "exact_mode_battery_pass": true,
+  "replay_min_energy": 0.033136036745790354,
+  "replay_max_energy": 1,
+  "replay_violation": 0.0,
+  "station_pairs": [
+    {
+      "region": 1,
+      "previous_segment": 1,
+      "next_segment": 3,
+      "gap_seconds": 30.0000024,
+      "distance_km": 0.25780260286560797,
+      "shortfall_km": 0.16780259566560796,
+      "missing_seconds": 55.93419855520265
+    },
+    {
+      "region": 1,
+      "previous_segment": 3,
+      "next_segment": 6,
+      "gap_seconds": 308.0022876,
+      "distance_km": 1.5641483581567204,
+      "shortfall_km": 0.6401414953567203,
+      "missing_seconds": 213.3804984522401
+    },
+    {
+      "region": 1,
+      "previous_segment": 6,
+      "next_segment": 7,
+      "gap_seconds": 0,
+      "distance_km": 0.0,
+      "shortfall_km": 0.0,
+      "missing_seconds": 0.0
+    }
+  ],
+  "station_failed_pairs": [
+    {
+      "region": 1,
+      "previous_segment": 1,
+      "next_segment": 3,
+      "gap_seconds": 30.0000024,
+      "distance_km": 0.25780260286560797,
+      "shortfall_km": 0.16780259566560796,
+      "missing_seconds": 55.93419855520265
+    },
+    {
+      "region": 1,
+      "previous_segment": 3,
+      "next_segment": 6,
+      "gap_seconds": 308.0022876,
+      "distance_km": 1.5641483581567204,
+      "shortfall_km": 0.6401414953567203,
+      "missing_seconds": 213.3804984522401
+    }
+  ],
+  "max_station_shortfall_km": 0.6401414953567203,
+  "one_station_pass": false,
+  "physically_usable": false
+}
