@@ -99,7 +99,7 @@ def build_sources():
         (HERE/(variant+'-main.rs')).write_text(main)
 
 
-def run_one(binary,variant,case):
+def run_one(binary,variant,case,expected_stages=13):
     name=case['name'];folder=HERE/variant/name;folder.mkdir(parents=True,exist_ok=True)
     path=folder/'raw.json'
     cmd=[str(binary),'solve',*case['flags'],'--verbose','--out',str(path)]
@@ -127,7 +127,8 @@ def run_one(binary,variant,case):
             final_stationarity=d['stages'][-1]['stat'],final_smooth_feasibility=d['stages'][-1]['feas'])
         row['stage_domain']=[dict(stage=int(a),over_seconds=float(b),below_seconds=float(c))
             for a,b,c in re.findall(r'DOMAIN stage=(\d+) over_sec=(\S+) below_sec=(\S+)',(folder/'solver.log').read_text())]
-        assert len(row['stage_domain'])==13
+        if expected_stages is not None:
+            assert len(row['stage_domain'])==expected_stages
         row['max_stage_over_seconds']=max(s['over_seconds'] for s in row['stage_domain'])
         candidate,reason=audit.diag.polish_fixed_modes(dict(d,modes=row['audit']['modes']))
         row['polish_status']=reason
