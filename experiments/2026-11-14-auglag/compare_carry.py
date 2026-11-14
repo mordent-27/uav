@@ -60,7 +60,7 @@ def build_sources():
                 '        converged = res.converged && is_last;\n'
                 '        if !res.converged { break; }')
         path=HERE/(strategy+'-solver.rs');path.write_text(solver)
-        (HERE/(strategy+'.diff')).write_text(''.join(difflib.unified_diff(original.splitlines(True),solver.splitlines(True),fromfile='stage3-solver',tofile=strategy)))
+        (HERE/(strategy+'.diff')).write_text(''.join(difflib.unified_diff(original.splitlines(True),solver.splitlines(True),fromfile='stage3-solver',tofile=strategy,n=0)))
         old='#[path = '+json.dumps(str(VALIDATION/'cap-comparison/instrumented-solver.rs'))+'] mod solver;'
         new='#[path = '+json.dumps(str(path))+'] mod solver;'
         (HERE/(strategy+'-main.rs')).write_text(runner.replace_once(main,old,new))

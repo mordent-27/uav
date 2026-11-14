@@ -1,0 +1,410 @@
+{
+  "name": "tau7-seed2",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-carry-tq9o4k3x/reset_penalty",
+    "solve",
+    "--tau",
+    "7",
+    "--seed",
+    "2",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-auglag/reset_penalty/mode_scaled/tau7-seed2/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 1.9252053900000001,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 1.65799999951588e-06,
+      "viol_task": 1.65799999951588e-06,
+      "viol_mode": 2.4e-08,
+      "viol_dyn": 4.74999996280534e-09,
+      "viol_speed": 1.7504107940879976e-08,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 8.64e-05,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      2,
+      -1,
+      -1,
+      2,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": false,
+    "replay_min_energy": -1.0370233706202825e-06,
+    "replay_max_energy": 1,
+    "replay_violation": 1.0370233706202825e-06,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 4,
+        "next_segment": 5,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 5,
+        "next_segment": 6,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 6,
+        "next_segment": 7,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 7,
+        "next_segment": 8,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 8,
+        "next_segment": 9,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 12,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 12,
+        "next_segment": 13,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 598.5284868,
+        "distance_km": 3.6119062247302995,
+        "shortfall_km": 1.8163207643302994,
+        "missing_seconds": 605.4402547767663
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 947.976822,
+        "distance_km": 1.1545414349656928,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 24,
+        "next_segment": 25,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 25,
+        "next_segment": 26,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 26,
+        "next_segment": 27,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 27,
+        "next_segment": 28,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 31,
+        "next_segment": 34,
+        "gap_seconds": 220.5889344,
+        "distance_km": 0.4863230336389596,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 598.5284868,
+        "distance_km": 3.6119062247302995,
+        "shortfall_km": 1.8163207643302994,
+        "missing_seconds": 605.4402547767663
+      }
+    ],
+    "max_station_shortfall_km": 1.8163207643302994,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "final_stationarity": 0.13003237690344838,
+  "final_smooth_feasibility": 1.9106430200780886e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 1.467208692041e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 3.211209498311e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 1.978100233613e-05,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 2.153759420809e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 7.516052767664e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 6.627169063522e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 1.361864970795e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 1.545068673003e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 3.352774745335e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 5.246359222055e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 6.890941255111e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 4.335732023408e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 13,
+      "over_seconds": 5.681010661895e-08,
+      "below_seconds": 0.0
+    }
+  ],
+  "max_stage_over_seconds": 1.978100233613e-05,
+  "polish_status": "Rounded modes are battery-infeasible; reducing charging cannot repair them.",
+  "al_strategy": "reset_penalty",
+  "stages_completed": 13,
+  "homotopy_complete": true,
+  "outer_total": 150,
+  "inner_total": 300000,
+  "final_eps": 0.0005,
+  "final_p": 12,
+  "carry": [
+    {
+      "stage": 1,
+      "rho_before": 10.0,
+      "rho_after": 10.0,
+      "dual_before": 0.0,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 2,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 1.523434919151,
+      "dual_after": 1.523434919151
+    },
+    {
+      "stage": 3,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 13.99415012233,
+      "dual_after": 13.99415012233
+    },
+    {
+      "stage": 4,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 14.39853982912,
+      "dual_after": 14.39853982912
+    },
+    {
+      "stage": 5,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.53944870125,
+      "dual_after": 24.53944870125
+    },
+    {
+      "stage": 6,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.86868399514,
+      "dual_after": 24.86868399514
+    },
+    {
+      "stage": 7,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.87789487153,
+      "dual_after": 24.87789487153
+    },
+    {
+      "stage": 8,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.88328263957,
+      "dual_after": 24.88328263957
+    },
+    {
+      "stage": 9,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.9141112523,
+      "dual_after": 24.9141112523
+    },
+    {
+      "stage": 10,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.91628688212,
+      "dual_after": 24.91628688212
+    },
+    {
+      "stage": 11,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.93375951758,
+      "dual_after": 24.93375951758
+    },
+    {
+      "stage": 12,
+      "rho_before": 1000000.0,
+      "rho_after": 10.0,
+      "dual_before": 24.94475944527,
+      "dual_after": 24.94475944527
+    },
+    {
+      "stage": 13,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 25.03002723889,
+      "dual_after": 25.03002723889
+    }
+  ]
+}

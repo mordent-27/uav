@@ -1,0 +1,319 @@
+{
+  "name": "tau3-seed0",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-carry-tq9o4k3x/reset_duals",
+    "solve",
+    "--tau",
+    "3",
+    "--seed",
+    "0",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-auglag/reset_duals/mode_scaled/tau3-seed0/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 1.55318665,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 1.154000000003208e-06,
+      "viol_task": 1.154000000003208e-06,
+      "viol_mode": 5.6e-08,
+      "viol_dyn": 3.750000046598423e-09,
+      "viol_speed": 1.0597003274881445e-08,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0002016,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      3,
+      -1,
+      -1,
+      3,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": false,
+    "replay_min_energy": -1.0439408867912725e-06,
+    "replay_max_energy": 1,
+    "replay_violation": 1.0439408867912725e-06,
+    "station_pairs": [
+      {
+        "region": 3,
+        "previous_segment": 6,
+        "next_segment": 9,
+        "gap_seconds": 885.2171724,
+        "distance_km": 0.29184895570312375,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "final_stationarity": 1.2345102664341416,
+  "final_smooth_feasibility": 2.1157202256534384e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 2.725188175123e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 4.416563115228e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 1.544563976719e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 2.566202250698e-07,
+      "below_seconds": 6.175104413532e-07
+    },
+    {
+      "stage": 7,
+      "over_seconds": 3.204697507364e-07,
+      "below_seconds": 1.320259452875e-06
+    },
+    {
+      "stage": 8,
+      "over_seconds": 2.538713739231e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 1.569033203364e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 3.908063872515e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 5.71819541717e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 0.0,
+      "below_seconds": 3.166587336864e-07
+    },
+    {
+      "stage": 13,
+      "over_seconds": 0.0,
+      "below_seconds": 3.021817068844e-07
+    }
+  ],
+  "max_stage_over_seconds": 2.725188175123e-06,
+  "polish_status": "feasible witness; no KKT or optimality claim",
+  "polished_audit": {
+    "finite": true,
+    "objective": 1.5502466096349945,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      3,
+      -1,
+      -1,
+      3,
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 1.000000082740371e-10,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 3,
+        "previous_segment": 6,
+        "next_segment": 9,
+        "gap_seconds": 885.2174134917549,
+        "distance_km": 0.29184895570312375,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": true
+  },
+  "al_strategy": "reset_duals",
+  "stages_completed": 13,
+  "homotopy_complete": true,
+  "outer_total": 150,
+  "inner_total": 300000,
+  "final_eps": 0.0005,
+  "final_p": 12,
+  "carry": [
+    {
+      "stage": 1,
+      "rho_before": 10.0,
+      "rho_after": 10.0,
+      "dual_before": 0.0,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 2,
+      "rho_before": 1000000.0,
+      "rho_after": 1000000.0,
+      "dual_before": 1.152123936666,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 3,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 35.24274125483,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 4,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 59.07040562109,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 5,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 147.7255508517,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 6,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 121.4589820733,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 7,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 120.2732657631,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 8,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 107.1320813331,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 9,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 97.36441803718,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 10,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 92.90912594351,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 11,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 87.38124482781,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 12,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 81.64658352522,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 13,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 79.58725516346,
+      "dual_after": 0.0
+    }
+  ]
+}

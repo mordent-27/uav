@@ -1,0 +1,47 @@
+CARRY stage=1 rho_before=1.000000000000e1 rho_after=1.000000000000e1 dual_before=0.000000000000e0 dual_after=0.000000000000e0
+DOMAIN stage=1 over_sec=2.725188175123e-6 below_sec=0.000000000000e0
+CARRY stage=2 rho_before=1.000000000000e6 rho_after=1.000000000000e6 dual_before=1.152123936666e0 dual_after=0.000000000000e0
+DOMAIN stage=2 over_sec=0.000000000000e0 below_sec=0.000000000000e0
+CARRY stage=3 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=3.524274125483e1 dual_after=0.000000000000e0
+DOMAIN stage=3 over_sec=0.000000000000e0 below_sec=0.000000000000e0
+CARRY stage=4 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=5.907040562109e1 dual_after=0.000000000000e0
+DOMAIN stage=4 over_sec=4.416563115228e-7 below_sec=0.000000000000e0
+CARRY stage=5 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=1.477255508517e2 dual_after=0.000000000000e0
+DOMAIN stage=5 over_sec=1.544563976719e-7 below_sec=0.000000000000e0
+CARRY stage=6 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=1.214589820733e2 dual_after=0.000000000000e0
+DOMAIN stage=6 over_sec=2.566202250698e-7 below_sec=6.175104413532e-7
+CARRY stage=7 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=1.202732657631e2 dual_after=0.000000000000e0
+DOMAIN stage=7 over_sec=3.204697507364e-7 below_sec=1.320259452875e-6
+CARRY stage=8 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=1.071320813331e2 dual_after=0.000000000000e0
+DOMAIN stage=8 over_sec=2.538713739231e-7 below_sec=0.000000000000e0
+CARRY stage=9 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=9.736441803718e1 dual_after=0.000000000000e0
+DOMAIN stage=9 over_sec=1.569033203364e-6 below_sec=0.000000000000e0
+CARRY stage=10 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=9.290912594351e1 dual_after=0.000000000000e0
+DOMAIN stage=10 over_sec=3.908063872515e-7 below_sec=0.000000000000e0
+CARRY stage=11 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=8.738124482781e1 dual_after=0.000000000000e0
+DOMAIN stage=11 over_sec=5.718195417170e-7 below_sec=0.000000000000e0
+CARRY stage=12 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=8.164658352522e1 dual_after=0.000000000000e0
+DOMAIN stage=12 over_sec=0.000000000000e0 below_sec=3.166587336864e-7
+CARRY stage=13 rho_before=1.000000000000e8 rho_after=1.000000000000e8 dual_before=7.958725516346e1 dual_after=0.000000000000e0
+DOMAIN stage=13 over_sec=0.000000000000e0 below_sec=3.021817068844e-7
+stage    eps      p  outer  inner   evals      rho    objective     stat     feas     comp  viol(orig)
+    1 0.20000   2.00     10  20000   22361    1.0e6     1.531722   7.0e-2   7.5e-7   3.5e-8    5.95e-2
+    2 0.12000   2.40     10  20000   32296    1.0e8     1.554174    3.9e0   4.3e-7   3.9e-9    1.06e-2
+    3 0.07200   2.88     10  20000   42100    1.0e8     1.554806    2.3e0   5.9e-7    0.0e0    1.43e-3
+    4 0.04320   3.46     10  20000   43107    1.0e8     1.554482    1.0e0   6.0e-8   4.4e-9    1.16e-4
+    5 0.02592   4.15     10  20000   42534    1.0e8     1.554201   3.7e-1   6.3e-8   1.5e-9    2.86e-5
+    6 0.01555   4.98     10  20000   41246    1.0e8     1.553921   7.1e-1   5.8e-8   2.2e-8    2.61e-5
+    7 0.00933   5.97     10  20000   41223    1.0e8     1.553747   6.5e-1   5.0e-8   1.3e-8    1.70e-5
+    8 0.00560   7.17     10  20000   39904    1.0e8     1.553600    1.4e0   1.2e-7   4.7e-9    1.34e-5
+    9 0.00336   8.60     10  20000   38410    1.0e8     1.553557    6.0e0   2.8e-7   1.6e-8    1.06e-5
+   10 0.00202  10.32     10  20000   39067    1.0e8     1.553500   2.1e-1   4.3e-8   3.9e-9    5.82e-6
+   11 0.00121  12.00     10  20000   38449    1.0e8     1.553443    5.1e0   1.1e-7   6.1e-9    6.11e-6
+   12 0.00073  12.00     10  20000   38361    1.0e8     1.553381   8.3e-1   3.9e-8   3.2e-9    3.02e-6
+   13 0.00050  12.00     30  60000  111942    1.0e8     1.553187    1.2e0   2.1e-8   7.1e-9    1.15e-6
+tasks 3  stamps 17  variables 78
+warm start : objective 2.0379 h   violation 2.22e-16
+solution   : objective 1.5532 h   violation 1.15e-6  (task 1.2e-6, mode 5.6e-8, dyn 6.1e-10, speed 1.2e-9, bounds 0.0e0)
+charging segments 4   visit order [1, 2, 3]
+Theorem 1 diagnostics omitted for the modified approximation
+KKT converged: false   time 3.373 s
+wrote /home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-auglag/reset_duals/mode_scaled/tau3-seed0/raw.json

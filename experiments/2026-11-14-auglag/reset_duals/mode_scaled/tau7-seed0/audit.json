@@ -1,0 +1,539 @@
+{
+  "name": "tau7-seed0",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-carry-tq9o4k3x/reset_duals",
+    "solve",
+    "--tau",
+    "7",
+    "--seed",
+    "0",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-auglag/reset_duals/mode_scaled/tau7-seed0/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 3.028230368,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 2.1959999999543456e-06,
+      "viol_task": 2.1959999999543456e-06,
+      "viol_mode": 4.7e-08,
+      "viol_dyn": 4.116925217401146e-09,
+      "viol_speed": 8.793205441559593e-09,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0001692,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      3,
+      -1,
+      -1,
+      3,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      3,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      0,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": -8.206235815877427e-07,
+    "replay_max_energy": 1,
+    "replay_violation": 8.206235815877427e-07,
+    "station_pairs": [
+      {
+        "region": 3,
+        "previous_segment": 6,
+        "next_segment": 9,
+        "gap_seconds": 883.0332144,
+        "distance_km": 0.23170344043132568,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 14,
+        "gap_seconds": 355.7098836,
+        "distance_km": 0.22248077506197778,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 3,
+        "previous_segment": 9,
+        "next_segment": 16,
+        "gap_seconds": 2030.8863528000002,
+        "distance_km": 1.3048126470170596,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 4,
+        "next_segment": 21,
+        "gap_seconds": 6014.313288,
+        "distance_km": 1.2921545472783453,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 473.59512720000004,
+        "distance_km": 0.7043277447523975,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 26,
+        "gap_seconds": 4022.4025223999997,
+        "distance_km": 1.4050091797600643,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 26,
+        "next_segment": 27,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 27,
+        "next_segment": 28,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 28,
+        "next_segment": 29,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 29,
+        "next_segment": 30,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 30,
+        "next_segment": 31,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": true
+  },
+  "kkt_converged": false,
+  "final_stationarity": 0.30525454164376253,
+  "final_smooth_feasibility": 2.4246593146237325e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 1.809872601788e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 0.0,
+      "below_seconds": 1.565295563605e-06
+    },
+    {
+      "stage": 5,
+      "over_seconds": 6.112620035137e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 2.682289390599e-08,
+      "below_seconds": 8.281456526299e-07
+    },
+    {
+      "stage": 7,
+      "over_seconds": 4.266504649575e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 5.950766379659e-07,
+      "below_seconds": 7.234570173151e-08
+    },
+    {
+      "stage": 9,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 5.594322005642e-07,
+      "below_seconds": 5.618209456041e-07
+    },
+    {
+      "stage": 11,
+      "over_seconds": 3.944922388754e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 7.260565149103e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 13,
+      "over_seconds": 3.034564599602e-07,
+      "below_seconds": 7.341799762664e-07
+    }
+  ],
+  "max_stage_over_seconds": 1.809872601788e-06,
+  "polish_status": "feasible witness; no KKT or optimality claim",
+  "polished_audit": {
+    "finite": true,
+    "objective": 3.0278259951138438,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      3,
+      -1,
+      -1,
+      3,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1,
+      3,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      -1,
+      0,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 1.0000006378518833e-10,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 3,
+        "previous_segment": 6,
+        "next_segment": 9,
+        "gap_seconds": 883.0335555946776,
+        "distance_km": 0.23170344043132568,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 14,
+        "gap_seconds": 355.71034004377174,
+        "distance_km": 0.22248077506197778,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 3,
+        "previous_segment": 9,
+        "next_segment": 16,
+        "gap_seconds": 2030.8868097168395,
+        "distance_km": 1.3048126470170596,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 4,
+        "next_segment": 21,
+        "gap_seconds": 6013.155294604798,
+        "distance_km": 1.2921545472783453,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 473.59546523090927,
+        "distance_km": 0.7043277447523975,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 26,
+        "gap_seconds": 4021.649542488643,
+        "distance_km": 1.4050091797600643,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 26,
+        "next_segment": 27,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 27,
+        "next_segment": 28,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 28,
+        "next_segment": 29,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 29,
+        "next_segment": 30,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 30,
+        "next_segment": 31,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": true
+  },
+  "al_strategy": "reset_duals",
+  "stages_completed": 13,
+  "homotopy_complete": true,
+  "outer_total": 150,
+  "inner_total": 300000,
+  "final_eps": 0.0005,
+  "final_p": 12,
+  "carry": [
+    {
+      "stage": 1,
+      "rho_before": 10.0,
+      "rho_after": 10.0,
+      "dual_before": 0.0,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 2,
+      "rho_before": 10000000.0,
+      "rho_after": 10000000.0,
+      "dual_before": 2.067267842829,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 3,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 14.54525042618,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 4,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 749.105807539,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 5,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 190.3748524656,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 6,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 114.479106026,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 7,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 111.6480557797,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 8,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 133.4635034014,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 9,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 93.19164156153,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 10,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 96.05874499875,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 11,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 97.38347628244,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 12,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 80.42819295787,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 13,
+      "rho_before": 100000000.0,
+      "rho_after": 100000000.0,
+      "dual_before": 68.76357431652,
+      "dual_after": 0.0
+    }
+  ]
+}

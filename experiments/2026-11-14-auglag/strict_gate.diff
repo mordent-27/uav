@@ -1,0 +1,14 @@
+--- stage3-solver
++++ strict_gate
+@@ -75,0 +76 @@
++    let mut remaining_outer = (schedule.len()-1)*o.stage_outer + o.al.max_outer;
+@@ -76,0 +78 @@
++        if remaining_outer == 0 { break; }
+@@ -83 +85 @@
+-            max_outer: if is_last { o.al.max_outer } else { o.stage_outer },
++            max_outer: remaining_outer,
+@@ -103 +105,3 @@
+-        converged = res.converged;
++        remaining_outer -= res.outer;
++        converged = res.converged && is_last;
++        if !res.converged { break; }

@@ -1,0 +1,318 @@
+{
+  "name": "tau3-seed1",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-carry-tq9o4k3x/reset_penalty",
+    "solve",
+    "--tau",
+    "3",
+    "--seed",
+    "1",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-auglag/reset_penalty/mode_scaled/tau3-seed1/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 0.828544294,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 1.2630000001401243e-06,
+      "viol_task": 1.2630000001401243e-06,
+      "viol_mode": 2.1e-08,
+      "viol_dyn": 3.8750000430631815e-09,
+      "viol_speed": 1.5209298320773e-08,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 7.56e-05,
+    "modes": [
+      -1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": -8.662742765896958e-07,
+    "replay_max_energy": 1,
+    "replay_violation": 8.662742765896958e-07,
+    "station_pairs": [
+      {
+        "region": 1,
+        "previous_segment": 1,
+        "next_segment": 6,
+        "gap_seconds": 447.7144428,
+        "distance_km": 2.2690880675595344,
+        "shortfall_km": 0.9259447391595343,
+        "missing_seconds": 308.6482463865114
+      },
+      {
+        "region": 1,
+        "previous_segment": 6,
+        "next_segment": 7,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 7,
+        "next_segment": 8,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 8,
+        "next_segment": 9,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 9,
+        "next_segment": 10,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 10,
+        "next_segment": 11,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 14,
+        "gap_seconds": 710.3563128,
+        "distance_km": 1.8582099454186543,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 1,
+        "previous_segment": 1,
+        "next_segment": 6,
+        "gap_seconds": 447.7144428,
+        "distance_km": 2.2690880675595344,
+        "shortfall_km": 0.9259447391595343,
+        "missing_seconds": 308.6482463865114
+      }
+    ],
+    "max_station_shortfall_km": 0.9259447391595343,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "final_stationarity": 0.06273304660150042,
+  "final_smooth_feasibility": 1.7699731865599734e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 3.08038717034e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 7.224292664088e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 1.66844665396e-05,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 1.564639917628e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 3.079611359674e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 1.929533782752e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 2.992155773152e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 3.446012850072e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 8.40164812721e-09,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 9.934505405818e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 1.197863558344e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 5.170851871683e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 13,
+      "over_seconds": 4.10170772347e-08,
+      "below_seconds": 0.0
+    }
+  ],
+  "max_stage_over_seconds": 1.66844665396e-05,
+  "polish_status": "Rounded modes are battery-infeasible; reducing charging cannot repair them.",
+  "al_strategy": "reset_penalty",
+  "stages_completed": 13,
+  "homotopy_complete": true,
+  "outer_total": 150,
+  "inner_total": 248391,
+  "final_eps": 0.0005,
+  "final_p": 12,
+  "carry": [
+    {
+      "stage": 1,
+      "rho_before": 10.0,
+      "rho_after": 10.0,
+      "dual_before": 0.0,
+      "dual_after": 0.0
+    },
+    {
+      "stage": 2,
+      "rho_before": 100000.0,
+      "rho_after": 10.0,
+      "dual_before": 0.8184373372664,
+      "dual_after": 0.8184373372664
+    },
+    {
+      "stage": 3,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 5.243570999131,
+      "dual_after": 5.243570999131
+    },
+    {
+      "stage": 4,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 8.06874152218,
+      "dual_after": 8.06874152218
+    },
+    {
+      "stage": 5,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 14.41528754154,
+      "dual_after": 14.41528754154
+    },
+    {
+      "stage": 6,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 20.98926913245,
+      "dual_after": 20.98926913245
+    },
+    {
+      "stage": 7,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 21.901468152,
+      "dual_after": 21.901468152
+    },
+    {
+      "stage": 8,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 39.79298081937,
+      "dual_after": 39.79298081937
+    },
+    {
+      "stage": 9,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 39.90184483118,
+      "dual_after": 39.90184483118
+    },
+    {
+      "stage": 10,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 40.66767952589,
+      "dual_after": 40.66767952589
+    },
+    {
+      "stage": 11,
+      "rho_before": 1000000.0,
+      "rho_after": 10.0,
+      "dual_before": 40.67407880936,
+      "dual_after": 40.67407880936
+    },
+    {
+      "stage": 12,
+      "rho_before": 100000000.0,
+      "rho_after": 10.0,
+      "dual_before": 47.5264925577,
+      "dual_after": 47.5264925577
+    },
+    {
+      "stage": 13,
+      "rho_before": 10000000.0,
+      "rho_after": 10.0,
+      "dual_before": 47.63936773118,
+      "dual_after": 47.63936773118
+    }
+  ]
+}

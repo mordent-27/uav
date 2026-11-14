@@ -1,0 +1,10 @@
+--- stage3-solver
++++ reset_penalty
+@@ -77,0 +78,7 @@
++        let before = st.clone();
++        if l > 0 { st.rho = o.al.rho0; }
++        assert_eq!(st.lam, before.lam); assert_eq!(st.mu, before.mu); assert_eq!(st.rho, o.al.rho0);
++        let old_dual=before.lam.iter().chain(&before.mu).fold(0.0f64,|a,b|a.max(b.abs()));
++        let new_dual=st.lam.iter().chain(&st.mu).fold(0.0f64,|a,b|a.max(b.abs()));
++        eprintln!("CARRY stage={} rho_before={:.12e} rho_after={:.12e} dual_before={:.12e} dual_after={:.12e}",l+1,before.rho,st.rho,old_dual,new_dual);
++
