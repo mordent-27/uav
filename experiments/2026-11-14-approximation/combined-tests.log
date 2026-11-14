@@ -1,0 +1,34 @@
+warning: variable does not need to be mutable
+   --> /home/mordent/robotech/3A/optimization/uav/src/auglag.rs:135:17
+    |
+135 |             let mut al = |y: &[f64], g: &mut [f64]| {
+    |                 ----^^
+    |                 |
+    |                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: 1 warning emitted
+
+
+running 15 tests
+boundary fixture: zero_set=test battery::tests::continuous_across_threshold_for_any_sign_of_c ... trueok inequalities=
+truetest battery::tests::identity_at_zero_duration ...  equality=ok
+0.test battery::tests::derivatives_match_finite_differences ... 000000000000oke0
+ inequality=test battery::tests::semigroup ... 0.ok000000000000
+e0test battery::tests::negative_duration_inverts_charging ...
+ok
+test battery::tests::time_to_charge_inverts_charge ... ok
+test model::approximation_tests::scalar_hinge_has_the_intended_zero_set_and_derivative ... ok
+test model::tests::smooth_min_bounds_and_gradient ... ok
+test model::approximation_tests::original_boundary_charging_fixture_distinguishes_the_changes ... ok
+test model::scaling_tests::physical_mode_scaling_and_dimensionless_constraints_correspond ... ok
+test model::approximation_tests::combined_outer_approximation_contains_original_feasible_initials ... ok
+test lbfgs::tests::rosenbrock ... ok
+test model::scaling_tests::all_constraints_and_physical_gradients_are_unit_invariant ... ok
+eps=0.2 p=2: worst relative gradient error 1.39e-7
+eps=0.01 p=6: worst relative gradient error 7.38e-8
+test model::tests::gradient_matches_finite_differences ... ok
+test model::scaling_tests::dimensionless_gradient_matches_finite_differences ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s

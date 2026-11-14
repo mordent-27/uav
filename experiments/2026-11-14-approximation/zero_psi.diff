@@ -1,0 +1,12 @@
+--- stage3-B-model
++++ zero_psi
+@@ -79 +79 @@
+-    if y <= -delta {
++    if y <= 0.0 {
+@@ -82,2 +82 @@
+-        let t = y + delta;
+-        (t * t / (4.0 * delta), t / (2.0 * delta))
++        (y * y / (2.0 * delta), y / delta)
+@@ -85 +84 @@
+-        (y, 1.0)
++        (y - delta / 2.0, 1.0)

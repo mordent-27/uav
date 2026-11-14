@@ -113,7 +113,7 @@ def main():
             tests=Path(td)/(variant+'-tests');main_rs=HERE/(variant+'-main.rs')
             with (HERE/(variant+'-tests.log')).open('w') as log:
                 subprocess.run(['rustc','--edition=2021','--test',str(main_rs),'-o',str(tests)],stdout=log,stderr=subprocess.STDOUT,check=True)
-                subprocess.run([str(tests),'--nocapture'],stdout=log,stderr=subprocess.STDOUT,check=True)
+                subprocess.run([str(tests),'--nocapture','--test-threads=1'],stdout=log,stderr=subprocess.STDOUT,check=True)
             binary=Path(td)/variant;binaries[variant]=binary
             with (HERE/(variant+'-build.log')).open('w') as log:
                 subprocess.run(['rustc',*flags,str(main_rs),'-o',str(binary)],stdout=log,stderr=subprocess.STDOUT,check=True)

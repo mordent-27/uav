@@ -1,0 +1,406 @@
+{
+  "name": "tau5-seed2",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-approximation-imol4zt4/zero_psi",
+    "solve",
+    "--tau",
+    "5",
+    "--seed",
+    "2",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-approximation/zero_psi/mode_scaled/tau5-seed2/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 1.395649951,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 0.00012948670630935633,
+      "viol_task": 1.3150000004458207e-06,
+      "viol_mode": 0.00012948670630935633,
+      "viol_dyn": 3.6250000293169826e-09,
+      "viol_speed": 0.0,
+      "viol_bounds": 1e-09,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.12948670630935633,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 3.599999998105119e-06,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 2.0851012510703093e-05,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 5,
+        "next_segment": 6,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 6,
+        "next_segment": 8,
+        "gap_seconds": 51.1138044,
+        "distance_km": 0.31808674229800304,
+        "shortfall_km": 0.16474532909800305,
+        "missing_seconds": 54.915109699334344
+      },
+      {
+        "region": 0,
+        "previous_segment": 8,
+        "next_segment": 9,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 12,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 12,
+        "next_segment": 13,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 586.6321247999999,
+        "distance_km": 3.871353045333635,
+        "shortfall_km": 2.1114566709336353,
+        "missing_seconds": 703.8188903112117
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 955.2986063999999,
+        "distance_km": 2.82346004484507,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 6,
+        "next_segment": 8,
+        "gap_seconds": 51.1138044,
+        "distance_km": 0.31808674229800304,
+        "shortfall_km": 0.16474532909800305,
+        "missing_seconds": 54.915109699334344
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 586.6321247999999,
+        "distance_km": 3.871353045333635,
+        "shortfall_km": 2.1114566709336353,
+        "missing_seconds": 703.8188903112117
+      }
+    ],
+    "max_station_shortfall_km": 2.1114566709336353,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "final_stationarity": 2.9716395024911244,
+  "final_smooth_feasibility": 7.026793455270925e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 2.17042034345e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 0.0,
+      "below_seconds": 1.085615244172e-05
+    },
+    {
+      "stage": 5,
+      "over_seconds": 4.547673050637e-07,
+      "below_seconds": 1.070136175952e-06
+    },
+    {
+      "stage": 6,
+      "over_seconds": 0.0,
+      "below_seconds": 3.738129929881e-07
+    },
+    {
+      "stage": 7,
+      "over_seconds": 0.0,
+      "below_seconds": 1.128111581278e-06
+    },
+    {
+      "stage": 8,
+      "over_seconds": 0.0,
+      "below_seconds": 1.432587596638e-06
+    },
+    {
+      "stage": 9,
+      "over_seconds": 5.303961020386e-07,
+      "below_seconds": 2.407490541474e-06
+    },
+    {
+      "stage": 10,
+      "over_seconds": 2.557516042695e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 7.767969455175e-07,
+      "below_seconds": 2.601105256788e-07
+    },
+    {
+      "stage": 12,
+      "over_seconds": 1.33038755637e-06,
+      "below_seconds": 2.894943511222e-06
+    },
+    {
+      "stage": 13,
+      "over_seconds": 3.37514041715e-06,
+      "below_seconds": 2.544626666476e-06
+    }
+  ],
+  "max_stage_over_seconds": 3.37514041715e-06,
+  "polish_status": "feasible witness; no KKT or optimality claim",
+  "polished_audit": {
+    "finite": true,
+    "objective": 1.3866158673953564,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 1.0000006378518833e-10,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 5,
+        "next_segment": 6,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 6,
+        "next_segment": 8,
+        "gap_seconds": 31.808674233400307,
+        "distance_km": 0.31808674229800304,
+        "shortfall_km": 0.22266071959780212,
+        "missing_seconds": 74.22023986593403
+      },
+      {
+        "region": 0,
+        "previous_segment": 8,
+        "next_segment": 9,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 11,
+        "next_segment": 12,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 12,
+        "next_segment": 13,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 583.9983073284368,
+        "distance_km": 3.871353045333635,
+        "shortfall_km": 2.1193581233483245,
+        "missing_seconds": 706.4527077827748
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 24,
+        "gap_seconds": 955.2996645730163,
+        "distance_km": 2.8234444319777334,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 6,
+        "next_segment": 8,
+        "gap_seconds": 31.808674233400307,
+        "distance_km": 0.31808674229800304,
+        "shortfall_km": 0.22266071959780212,
+        "missing_seconds": 74.22023986593403
+      },
+      {
+        "region": 1,
+        "previous_segment": 14,
+        "next_segment": 21,
+        "gap_seconds": 583.9983073284368,
+        "distance_km": 3.871353045333635,
+        "shortfall_km": 2.1193581233483245,
+        "missing_seconds": 706.4527077827748
+      }
+    ],
+    "max_station_shortfall_km": 2.1193581233483245,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "approximation": "zero_psi",
+  "outer_total": 150,
+  "inner_total": 300000
+}

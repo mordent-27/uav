@@ -1,0 +1,31 @@
+--- stage3-B-model
++++ inequalities
+@@ -6 +6 @@
+-//! Equalities:   dynamics (N-1), task visits (tau), charge/discharge mode (N-1).
++//! Equalities: battery dynamics only; task/mode approximations moved to inequalities.
+@@ -31 +31 @@
+-        2 * (self.n - 1) + self.tau
++        self.n - 1
+@@ -34 +34 @@
+-        7 * (self.n - 1)
++        8 * (self.n - 1) + self.tau
+@@ -57,5 +57,5 @@
+-    pub fn eq_task(&self, i: usize) -> usize {
+-        self.n - 1 + i
+-    }
+-    pub fn eq_mode(&self, k: usize) -> usize {
+-        self.n - 1 + self.tau + k
++    pub fn ineq_task(&self, i: usize) -> usize {
++        7 * (self.n - 1) + i
++    }
++    pub fn ineq_mode(&self, k: usize) -> usize {
++        7 * (self.n - 1) + self.tau + k
+@@ -170 +170 @@
+-        // Task visits: phi_p over all stamps of || [r_k - a_i ; eps] || equals eps.
++        // Task visits: phi_p over all stamps of || [r_k - a_i ; eps] || is at most eps.
+@@ -179 +179 @@
+-            let wt = w.eq(lay.eq_task(i), phi - sm.eps);
++            let wt = w.ineq(lay.ineq_task(i), phi - sm.eps);
+@@ -211 +211 @@
+-            let wt = w.eq(lay.eq_mode(k), phi - sm.eps);
++            let wt = w.ineq(lay.ineq_mode(k), phi - sm.eps);
