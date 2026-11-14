@@ -1,0 +1,36 @@
+{
+  "source_file": "experiments/2026-11-14-final-continuation/fig1-accurate/raw.json",
+  "source_sha256": "dbf93497afcfe92d45253f4316c4a8ab0adc449fa10ac024c576ed114578cf6c",
+  "source_hashes": {
+    "auglag.rs": "becba4b59f12e4902cee6f792427734e12654ac252a3315c13eccb2887c0b0d5",
+    "battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2"
+  },
+  "code_hashes": {
+    "analyze.py": "cb37e034f4ef2d52f7821cefd68fef4354c05dc0462cc539a8e1fc94150dffe9",
+    "battery_bridge.rs": "13026a50007695c337838300df73a0f2795e6ed527aa827086d6c126c8081e22",
+    "fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "test_fixed_branch.py": "5436315882e17b37f5a73d3905e2bcd26cd6eaaced5c0a554fb8b3cd8117e9d7",
+    "travel_lower_bound.py": "da846ff7420d38f0de3b391aead354eecc6b6cad4ae85972e3e9ad0413cd6e81",
+    "verify_bounds.py": "9a607c0762748200029efee60f989d9c1c48907e76d43d8937a84a79a66c6704"
+  },
+  "parameters": {
+    "energy_buffer": 1e-08
+  },
+  "packages": {
+    "casadi": "3.8.2",
+    "numpy": "2.5.1"
+  },
+  "primary_sources": [
+    "https://web.casadi.org/docs/#nonlinear-programming",
+    "https://coin-or.github.io/Ipopt/OPTIONS.html"
+  ]
+}

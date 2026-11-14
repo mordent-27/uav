@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "name": "source",
+      "objective": 2.0987353877189365,
+      "min_replayed_energy": -0.0034620503201209414,
+      "max_replayed_energy": 1,
+      "replay_energy_violation": 0.0034620503201209414,
+      "original_residuals": {
+        "viol": 2.8951839450792882e-05,
+        "viol_task": 8.453784687389998e-06,
+        "viol_mode": 2.8951839450792882e-05,
+        "viol_dyn": 1.7409684804903236e-14,
+        "viol_speed": 2.0605739337042905e-13,
+        "viol_bounds": 2.314849700812971e-13,
+        "viol_endpoint": 0.0
+      },
+      "charge_segments": 12,
+      "flight_hours": 1.4999432128822148,
+      "charge_hours": 0.5987921748367219
+    },
+    {
+      "name": "timing",
+      "objective": 2.0998144140312416,
+      "min_replayed_energy": 1.004622299238811e-08,
+      "max_replayed_energy": 1,
+      "replay_energy_violation": 0.0,
+      "original_residuals": {
+        "viol": 5.204170427930421e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 5.204170427930421e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "charge_segments": 12,
+      "flight_hours": 1.4999462830139227,
+      "charge_hours": 0.5998681310173187
+    },
+    {
+      "name": "geometry",
+      "objective": 2.0989645738842415,
+      "min_replayed_energy": 1.0066219774396146e-08,
+      "max_replayed_energy": 1,
+      "replay_energy_violation": 0.0,
+      "original_residuals": {
+        "viol": 5.551115123125783e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 5.551115123125783e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "charge_segments": 12,
+      "flight_hours": 1.499345088407476,
+      "charge_hours": 0.5996194854767657
+    }
+  ],
+  "paper_readback_hours": 1.8932,
+  "timing_cost_seconds": 3.884494724298193,
+  "geometry_gain_seconds": 3.0594245292002498,
+  "net_cost_seconds": 0.8250701950979433,
+  "optimistic_bound_hours": 2.0832550006049693,
+  "frozen_branch_optimum_interval": [
+    2.0832550006049693,
+    2.0989645738842415
+  ],
+  "maximum_possible_further_improvement_seconds": 56.554463805380095,
+  "gap_to_paper_seconds": 740.7524659832694,
+  "bound_above_paper_seconds": 684.1980021778894,
+  "gap_ratio": 0.1086861260744989
+}
