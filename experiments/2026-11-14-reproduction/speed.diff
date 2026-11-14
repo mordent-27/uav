@@ -1,0 +1,25 @@
+--- src/model.rs
++++ speed-model.rs
+@@ -230,10 +230,18 @@
+             // hold for negative durations, which lower the objective and trap the solver; the
+             // signed square keeps the constraint violated there and is still C^1.
+             let d = sub(self.pos(x, k + 1), self.pos(x, k));
+-            let wt = w.ineq(k, d[0] * d[0] + d[1] * d[1] - v2 * s * s.abs());
+-            self.add_r(grad, k + 1, 2.0 * wt, d);
+-            self.add_r(grad, k, -2.0 * wt, d);
+-            grad[lay.s(k)] -= 2.0 * wt * v2 * s.abs();
++            // Positive smooth denominator: same feasible set at every x.
++            // On the speed boundary the derivative has distance rather than distance^2 scale.
++            let numerator = d[0]*d[0]+d[1]*d[1]-v2*s*s.abs();
++            let rlen = (d[0]*d[0]+d[1]*d[1]+sm.delta*sm.delta).sqrt();
++            let vlen = (v2*s*s+sm.delta*sm.delta).sqrt();
++            let denominator = rlen+vlen;
++            let wt = w.ineq(k, numerator/denominator);
++            let wr = wt*(2.0/denominator-numerator/(denominator*denominator*rlen));
++            self.add_r(grad, k+1, wr, d);
++            self.add_r(grad, k, -wr, d);
++            grad[lay.s(k)] += wt*(-2.0*v2*s.abs()/denominator
++                -numerator*v2*s/(denominator*denominator*vlen));
+             // Simple bounds, expressed like the dynamics in km of flight so that one penalty
+             // parameter fits all constraints.
+             // Battery bounds on e_{k+1}.

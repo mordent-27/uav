@@ -1,0 +1,16 @@
+test_augmented_gradient (__main__.BridgeTests.test_augmented_gradient) ... FAIL
+test_constraint_jacobian (__main__.BridgeTests.test_constraint_jacobian) ... ok
+test_initial_values (__main__.BridgeTests.test_initial_values) ... ok
+
+======================================================================
+FAIL: test_augmented_gradient (__main__.BridgeTests.test_augmented_gradient)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-reproduction/test_bridge.py", line 33, in test_augmented_gradient
+    self.assertLess(abs(fd-grad[i])/(1+abs(fd)),1e-5,(rho,i,fd,grad[i]))
+AssertionError: np.float64(0.00017036751180932294) not less than 1e-05 : (1000000.0, 6, -0.6747432053089142, np.float64(-0.6744578834761061))
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+FAILED (failures=1)
