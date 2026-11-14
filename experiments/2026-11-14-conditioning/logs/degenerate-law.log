@@ -1,0 +1,21 @@
+eps 0.0005, F 1.5: multiplier needed for h <= 1e-06: F*sqrt(eps/(2 tol)) = 23.7
+residual at that point: v = sqrt(2 eps tol) = 3.16e-05 h = 0.11 s
+
+rho       outer iterations to h<=1e-6   predicted 2F sqrt(eps)/(3 rho (2 tol)^1.5)
+   1e+02        78726                      79056.9
+   1e+03         7877                       7905.7
+   1e+04          791                        790.6
+   1e+05           82                         79.1
+   1e+06           10                          7.9
+   1e+08            1                          0.1
+
+rho = 1e4: iteration, h, multiplier, predicted multiplier (1.5 rho eps F^2 k)^(1/3), h*lam^2/(eps F^2/2)
+    1 2.110e-04    2.110    2.565 1.670
+    3 5.435e-05    3.474    3.699 1.166
+   10 2.005e-05    5.455    5.526 1.061
+   30 9.100e-06    7.969    7.970 1.027
+  100 3.996e-06   11.936   11.906 1.012
+  300 1.910e-06   17.209   17.171 1.006
+ 1000 8.548e-07   25.685   25.650 1.003
+ 3000 4.109e-07   37.023   36.993 1.001
+slope of log h against log k between 300 and 3000: -0.667 (prediction -2/3)
