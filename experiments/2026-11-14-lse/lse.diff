@@ -1,0 +1,25 @@
+--- PI-model
++++ lse
+@@ -85,0 +86,16 @@
++}
++
++
++pub fn lse_temperature(n:usize,p:f64,eps:f64)->f64 {
++    if n==1 {return eps/p;}
++    let logn=(n as f64).ln();eps*(logn/p).exp_m1()/logn
++}
++
++pub fn matched_lse(z:&[f64],p:f64,eps:f64,d:&mut[f64])->f64 {
++    if z.len()==1 {d[0]=1.;return z[0];}
++    let tau=lse_temperature(z.len(),p,eps);
++    let shift=z.iter().copied().fold(f64::INFINITY,f64::min);
++    let mut sum=0.;
++    for (di,zi) in d.iter_mut().zip(z) {*di=(-(zi-shift)/tau).exp();sum+=*di;}
++    for di in &mut d[..z.len()] {*di/=sum;}
++    shift-tau*sum.ln()
+@@ -177 +193 @@
+-            let phi = smooth_min(&z[..n], sm.p, &mut dz[..n]);
++            let phi = matched_lse(&z[..n], sm.p, sm.eps, &mut dz[..n]);
+@@ -209 +225 @@
+-            let phi = smooth_min(&z[..nj + 1], sm.p, &mut dz[..nj + 1]);
++            let phi = matched_lse(&z[..nj + 1], sm.p, sm.eps, &mut dz[..nj + 1]);

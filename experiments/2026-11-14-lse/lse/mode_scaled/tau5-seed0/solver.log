@@ -1,0 +1,34 @@
+DOMAIN stage=1 over_sec=0.000000000000e0 below_sec=0.000000000000e0
+DOMAIN stage=2 over_sec=0.000000000000e0 below_sec=9.772704284524e-7
+DOMAIN stage=3 over_sec=6.535466418045e-7 below_sec=0.000000000000e0
+DOMAIN stage=4 over_sec=6.437372634949e-7 below_sec=0.000000000000e0
+DOMAIN stage=5 over_sec=1.544593952740e-7 below_sec=0.000000000000e0
+DOMAIN stage=6 over_sec=2.852853765722e-7 below_sec=0.000000000000e0
+DOMAIN stage=7 over_sec=0.000000000000e0 below_sec=0.000000000000e0
+DOMAIN stage=8 over_sec=1.766043311591e-7 below_sec=0.000000000000e0
+DOMAIN stage=9 over_sec=1.317424169756e-7 below_sec=0.000000000000e0
+DOMAIN stage=10 over_sec=5.739334008048e-8 below_sec=0.000000000000e0
+DOMAIN stage=11 over_sec=2.535908982804e-7 below_sec=7.619285143505e-9
+DOMAIN stage=12 over_sec=6.082410575203e-7 below_sec=0.000000000000e0
+DOMAIN stage=13 over_sec=1.927432713433e-7 below_sec=0.000000000000e0
+stage    eps      p  outer  inner   evals      rho    objective     stat     feas     comp  viol(orig)
+    1 0.20000   2.00     10  20000   26798    1.0e8     2.568289    4.3e0   3.7e-6   3.7e-6    2.13e-1
+    2 0.12000   2.40     10  20000   45580    1.0e8     2.615099    1.4e0   9.0e-8   9.0e-8    1.56e-2
+    3 0.07200   2.88     10  20000   38227    1.0e8     2.617185    1.7e0   1.1e-7   1.1e-7    1.76e-3
+    4 0.04320   3.46     10  20000   36465    1.0e8     2.617281    1.5e0   3.8e-8   3.8e-8    3.39e-4
+    5 0.02592   4.15     10  20000   34164    1.0e8     2.617289   3.1e-1   2.3e-8   2.3e-8    2.63e-4
+    6 0.01555   4.98     10  20000   34350    1.0e8     2.617282   2.5e-1   1.5e-8   1.5e-8    2.07e-4
+    7 0.00933   5.97     10  20000   34872    1.0e8     2.617255   4.6e-1   1.2e-8   1.2e-8    1.70e-4
+    8 0.00560   7.17     10  20000   33296    1.0e8     2.617233   2.3e-1   9.3e-9   9.3e-9    1.43e-4
+    9 0.00336   8.60     10  20000   32590    1.0e8     2.617222   2.0e-1   7.4e-9   7.4e-9    1.19e-4
+   10 0.00202  10.32     10  20000   31790    1.0e8     2.617216   1.1e-1   6.0e-9   6.0e-9    9.91e-5
+   11 0.00121  12.00     10  20000   32405    1.0e8     2.617082    2.8e0   5.2e-9   5.2e-9    8.40e-5
+   12 0.00073  12.00     10  20000   31442    1.0e8     2.617071    3.9e0   6.3e-9   6.3e-9    6.66e-5
+   13 0.00050  12.00     30  60000   94079    1.0e8     2.616978    1.7e1   1.2e-8   1.2e-8    7.10e-5
+tasks 5  stamps 27  variables 128
+warm start : objective 3.3270 h   violation 2.22e-16
+solution   : objective 2.6170 h   violation 7.10e-5  (task 7.4e-7, mode 7.1e-5, dyn 2.1e-10, speed 2.5e-9, bounds 3.9e-10)
+charging segments 11   visit order [1, 2, 3, 4, 5]
+Theorem 1 diagnostics omitted for the modified approximation
+KKT converged: false   time 4.134 s
+wrote /home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-lse/lse/mode_scaled/tau5-seed0/raw.json

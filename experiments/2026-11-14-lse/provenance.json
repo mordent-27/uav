@@ -1,0 +1,153 @@
+{
+  "head": "8f269fc5087f9e40a9baba88f63162475d5e14e2",
+  "sources": {
+    "auglag.rs": "becba4b59f12e4902cee6f792427734e12654ac252a3315c13eccb2887c0b0d5",
+    "battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2"
+  },
+  "baseline": "experiments/2026-11-14-approximation/combined",
+  "model_sha256": "ca76cd43553ca6f20a8c590068d925058443e5db6fdd303b4cd504264b3d01ce",
+  "cases": [
+    {
+      "name": "fig1",
+      "flags": [
+        "--fig1"
+      ]
+    },
+    {
+      "name": "tau1-seed0",
+      "flags": [
+        "--tau",
+        "1",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "tau1-seed1",
+      "flags": [
+        "--tau",
+        "1",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "tau1-seed2",
+      "flags": [
+        "--tau",
+        "1",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "tau3-seed0",
+      "flags": [
+        "--tau",
+        "3",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "tau3-seed1",
+      "flags": [
+        "--tau",
+        "3",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "tau3-seed2",
+      "flags": [
+        "--tau",
+        "3",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "tau5-seed0",
+      "flags": [
+        "--tau",
+        "5",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "tau5-seed1",
+      "flags": [
+        "--tau",
+        "5",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "tau5-seed2",
+      "flags": [
+        "--tau",
+        "5",
+        "--seed",
+        "2"
+      ]
+    },
+    {
+      "name": "tau7-seed0",
+      "flags": [
+        "--tau",
+        "7",
+        "--seed",
+        "0"
+      ]
+    },
+    {
+      "name": "tau7-seed1",
+      "flags": [
+        "--tau",
+        "7",
+        "--seed",
+        "1"
+      ]
+    },
+    {
+      "name": "tau7-seed2",
+      "flags": [
+        "--tau",
+        "7",
+        "--seed",
+        "2"
+      ]
+    }
+  ],
+  "compile_flags": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "lto=true",
+    "-C",
+    "codegen-units=1",
+    "-C",
+    "debuginfo=1"
+  ],
+  "thresholds": {
+    "distance_km": 0.001,
+    "time_h": 0.0002777777777777778,
+    "energy": 1e-06,
+    "endpoint_km": 1e-09
+  },
+  "timeout": 90,
+  "max_workers": 2
+}
