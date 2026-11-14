@@ -1,0 +1,33 @@
+--- capped-model
++++ mode-scaled-model
+@@ -195,25 +195,25 @@
+             let lab = norm(dab);
+             let (p3, dp3) = psi(lab - ph.v_c * s, sm.delta);
+             let u3 = if lab > 0.0 { [dab[0] / lab, dab[1] / lab] } else { [0.0, 0.0] };
+-            z[0] = (c * c + sm.eps * sm.eps).sqrt();
++            z[0] = (ph.v_d * ph.v_d * c * c + sm.eps * sm.eps).sqrt();
+             for (j, reg) in self.inst.regions.iter().enumerate() {
+                 let (da, db) = (sub(ra, reg.o), sub(rb, reg.o));
+                 let (la, lb) = (norm(da), norm(db));
+                 let (p1, dp1) = psi(la - reg.rho, sm.delta);
+                 let (p2, dp2) = psi(lb - reg.rho, sm.delta);
+                 z[j + 1] =
+-                    ((c - s) * (c - s) + p1 * p1 + p2 * p2 + p3 * p3 + sm.eps * sm.eps).sqrt();
++                    (ph.v_d * ph.v_d * (c - s) * (c - s) + p1 * p1 + p2 * p2 + p3 * p3 + sm.eps * sm.eps).sqrt();
+                 pp[j] = [p1 * dp1, p2 * dp2, p3 * dp3];
+                 u[j][0] = if la > 0.0 { [da[0] / la, da[1] / la] } else { [0.0, 0.0] };
+                 u[j][1] = if lb > 0.0 { [db[0] / lb, db[1] / lb] } else { [0.0, 0.0] };
+             }
+             let phi = smooth_min(&z[..nj + 1], sm.p, &mut dz[..nj + 1]);
+             let wt = w.eq(lay.eq_mode(k), phi - sm.eps);
+-            grad[lay.c(k)] += wt * dz[0] * c / z[0];
++            grad[lay.c(k)] += wt * dz[0] * ph.v_d * ph.v_d * c / z[0];
+             for j in 0..nj {
+                 let q = wt * dz[j + 1] / z[j + 1];
+-                grad[lay.c(k)] += q * (c - s);
+-                grad[lay.s(k)] += q * (-(c - s) - pp[j][2] * ph.v_c);
++                grad[lay.c(k)] += q * ph.v_d * ph.v_d * (c - s);
++                grad[lay.s(k)] += q * (-ph.v_d * ph.v_d * (c - s) - pp[j][2] * ph.v_c);
+                 self.add_r(grad, k, q * pp[j][0], u[j][0]);
+                 self.add_r(grad, k + 1, q * pp[j][1], u[j][1]);
+                 self.add_r(grad, k, q * pp[j][2], u3);

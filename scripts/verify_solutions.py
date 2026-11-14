@@ -8,6 +8,7 @@ witnesses must also satisfy energy bounds at dense samples and exact endpoint/mo
 
 import argparse
 import json
+import math
 from pathlib import Path
 import subprocess
 import tempfile
@@ -44,8 +45,15 @@ def main():
         source.append("let tr = instance::Traj { " + ",".join(
             k + ": vec!" + literal(tr[k]) for k in ("r", "e", "s", "c")) + " };")
         source.append("let m = metrics::evaluate(&inst, &ph, &tr, sm);")
-        source.append("assert!((m.viol - " + literal(d["metrics"]["viol"]) + ").abs() < 1e-8);")
-        source.append("assert!((m.objective - " + literal(d["metrics"]["objective"]) + ").abs() < 1e-8);")
+        # output.rs rounds positions/times to 9 decimal places. A speed residual
+        # may therefore move by (2*sqrt(2) + v_d)*0.5e-9 km on readback; the
+        # objective sums one rounded time per segment and is itself rounded too.
+        # These are serialization checks, separate from physical feasibility.
+        half_ulp = 0.5e-9
+        violation_tol = max(1e-8, (2*math.sqrt(2)+expected["v_d"])*half_ulp + 1e-12)
+        objective_tol = max(1e-8, (len(tr["s"])+1)*half_ulp + 1e-12)
+        source.append("assert!((m.viol - " + literal(d["metrics"]["viol"]) + ").abs() < " + literal(violation_tol) + ");")
+        source.append("assert!((m.objective - " + literal(d["metrics"]["objective"]) + ").abs() < " + literal(objective_tol) + ");")
         source.append("println!(\"{} objective {:.12} original_violation {:.3e}\", " +
                       json.dumps(str(path)) + ", m.objective, m.viol);")
         if "diagnostic" in d:

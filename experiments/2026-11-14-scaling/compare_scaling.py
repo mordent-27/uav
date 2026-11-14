@@ -31,7 +31,7 @@ def replace_once(text,old,new):
 
 
 def build_sources():
-    cap=(PREV/'cap-comparison/cap-model.rs').read_text().split('\n#[cfg(test)] mod cap_regression')[0]+'\n'
+    cap=(PREV/'cap-comparison/cap-model.rs').read_text().split('\n#[cfg(test)] mod cap_regression')[0].rstrip()+'\n'
     mode=cap
     edits=[
       ('z[0] = (c * c + sm.eps * sm.eps).sqrt();',
@@ -76,8 +76,9 @@ def build_sources():
         main=re.sub(r'^mod (\w+);$',repl,original_main,flags=re.M)
         if variant=='dimensionless':
             main='const TIME_UNIT_H: f64 = 1.0 / 36.0;\n'+main
-            old='    let sol = solver::solve(&inst, &ph, &o);'
-            new='''    let initial = instance::initial_trajectory(&inst, &ph, &o.init);
+            old='\n    let sol = solver::solve(&inst, &ph, &o);'
+            new='''
+    let initial = instance::initial_trajectory(&inst, &ph, &o.init);
     let mut hp = ph.clone();
     hp.v_d *= TIME_UNIT_H; hp.v_c *= TIME_UNIT_H;
     hp.kappa *= TIME_UNIT_H; hp.zeta *= TIME_UNIT_H;
@@ -172,7 +173,8 @@ def main():
             physically_usable=sum(r['audit']['physically_usable'] for r in done),
             kkt_converged=sum(r['kkt_converged'] for r in done),
             stages_over_one_second=sum(r['max_stage_over_seconds']>1 for r in done),
-            polished_available=len(repaired),polished_physical=sum(a['physically_usable'] for a in repaired))
+            polished_available=len(repaired) if variant!='capped' else None,
+            polished_physical=sum(a['physically_usable'] for a in repaired) if variant!='capped' else None)
     dump(HERE/'results.json',dict(summary=summary,cases=results))
     print(json.dumps(summary,indent=2))
 
