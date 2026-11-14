@@ -29,7 +29,7 @@ def main():
     with (HERE / 'cases.csv').open('w') as handle:
         fields = ['name', 'segment', 'old_region', 'new_region', 'accepted', 'solver_status',
                   'objective', 'improvement_seconds', 'seconds']
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction='ignore')
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction='ignore', lineterminator='\n')
         writer.writeheader()
         writer.writerows(summary['cases'])
     comparison = dict(source=totals(source), best=totals(best), groups={})
