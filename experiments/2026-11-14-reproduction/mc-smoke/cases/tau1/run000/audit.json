@@ -1,0 +1,45 @@
+{
+  "finite": true,
+  "objective": 0.643925635,
+  "original_pass": true,
+  "original_pass_parts": {
+    "task": true,
+    "mode": true,
+    "dynamics": true,
+    "uav_speed": true,
+    "energy": true,
+    "segment_time": true,
+    "charging_nonnegative": true,
+    "endpoints": true
+  },
+  "original_residuals": {
+    "viol": 1.1580000000011026e-06,
+    "viol_task": 3.4500000012371856e-07,
+    "viol_mode": 1.1580000000011026e-06,
+    "viol_dyn": 3.499999956524391e-09,
+    "viol_speed": 1.4700089367991609e-08,
+    "viol_bounds": 0.0,
+    "viol_endpoint": 0.0
+  },
+  "max_mode_score": 0.004168800000003969,
+  "modes": [
+    -1,
+    -1,
+    -1,
+    -1,
+    0,
+    -1
+  ],
+  "stored_mode_disagreements": 0,
+  "charging_over_segment_seconds": 0.004168800000003969,
+  "charging_domain_pass": true,
+  "exact_mode_battery_pass": false,
+  "replay_min_energy": -8.852362528011248e-06,
+  "replay_max_energy": 1,
+  "replay_violation": 8.852362528011248e-06,
+  "station_pairs": [],
+  "station_failed_pairs": [],
+  "max_station_shortfall_km": 0.0,
+  "one_station_pass": true,
+  "physically_usable": false
+}

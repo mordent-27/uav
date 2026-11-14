@@ -1,0 +1,52 @@
+{
+  "head": "e7479794aeede8bad63ea760a6ddc41568d07551",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "system": "Linux-6.18.60-1-lts-x86_64-with-glibc2.44",
+  "source_hashes": {
+    "src/auglag.rs": "becba4b59f12e4902cee6f792427734e12654ac252a3315c13eccb2887c0b0d5",
+    "src/battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "src/instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "src/lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "src/main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "src/metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "src/model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "src/output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "src/params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "src/rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "src/solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2"
+  },
+  "bridge_hashes": {
+    "uav-reproduction-bridge.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "uav-reproduction-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "dependencies": {
+    "python": "3.12.13",
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "casadi": "3.8.2"
+  },
+  "primary_sources": {
+    "paper": "https://arxiv.org/abs/2609.40201v1",
+    "scipy": "https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html",
+    "casadi": "https://web.casadi.org/docs/#subclassing-callback"
+  },
+  "author_inputs": "Only paper available; no author code, raw inputs, stopping tolerances or random generator known.",
+  "diagnostic_code_checkpoint": "2c6dc8d",
+  "final_experiment_source_hashes": {
+    "analyze_mc.py": "8ad7eedd64dc967b8085c261d91ca9aa64d065d37dc4bc5e1a558057f48ae738",
+    "assess_diagnostics.py": "64f7b0fd707aeda33ba59442cdc0178a60785f16744282c378a07497b8f5529f",
+    "bridge-speed.rs": "07c7b7977eeb2047a40460139675ab9d15306aef0c1f8de9e6f1082b7c8a9199",
+    "bridge.rs": "d04c9a29b1608a9496573c00aed2927e16216fa7c30dcdb4412c572e147930de",
+    "check_speed.py": "8c941fd8feafe2c49ea991abb321e6aa208e79cdcd0d802f680d0e16402c0d18",
+    "compare_inner.py": "02e8c70e1fd1b1660596159ff983144ad817f8af18929eb95d01bf0947aef817",
+    "independent_al.py": "68911419e6fa126ebd8fac7b8f76bbd1773104c2d642cb5f11810cdc3caafa44",
+    "ipopt_reference.py": "a56b18e23705507842d898b4c6a43cd00e05d360c30776bd83e8a89995e47405",
+    "make_speed_variant.py": "e21e9837b1577c0c1325e4f5b85a58afc1cbfc0e79dc08814e21df38cd2b1f03",
+    "run_mc.py": "18a2669a9331657f37debfdf81e4811e8e605efa4671a654b7ac13d8c5a6d404",
+    "run_pilot.py": "d87fe6cb64511d8d33bac8ae5a99b830914484e6210fc849186992e94db9b875",
+    "speed-model.rs": "2cf39018b494045fecc8aa9d65ad9a31d78ca6a3afef69736a7bc24453b3ed00",
+    "speed.diff": "b6c193f9a8ecef45d5c16b745967333763d9b46cc0bb874b6a29efd78dca8648",
+    "sqp_reference.py": "0e5b45bf5499b7cc5a30198ef1c1dd81c295225e9a92d4b80bc878fa26a4eca8",
+    "test_bridge.py": "0640169052506ac6582ac2acd931679e9be8cad525812d6334ce6b0781548379"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "source": "diagnostics/tau1-speed-rust-full.json",
+  "rho": 100000000.0,
+  "initial_value": 0.5630789770311075,
+  "initial_grad": 0.11155899505667033,
+  "rust": {
+    "value": 0.5630784673841397,
+    "grad": 0.4828147159381815,
+    "iterations": 2000,
+    "evals": 2502,
+    "status": 1
+  },
+  "bfgs": {
+    "value": 0.5621963731891462,
+    "grad": 9.849277558690654,
+    "iterations": 344,
+    "evals": 596,
+    "status": "Desired error not necessarily achieved due to precision loss."
+  },
+  "note": "same y, multipliers, rho, objective and gradient; inner AL only, not full NLP KKT"
+}

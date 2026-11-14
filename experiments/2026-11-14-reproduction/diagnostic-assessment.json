@@ -1,0 +1,386 @@
+{
+  "cases": [
+    {
+      "case": "fig1-speed-full",
+      "source": "diagnostics/fig1-speed-full.json",
+      "original_kkt": {
+        "stat": 132.58312926425384,
+        "feas": 0.004171536995222927,
+        "comp": 0.0005876689892616582,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": false,
+      "skipped_coarse_stages": false,
+      "objective": 2.361614689,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.004644702132294002,
+      "max_squared_jacobian_singular_value_original": 2215.3873118374217,
+      "max_squared_jacobian_singular_value_scaled": 14.577847482632338
+    },
+    {
+      "case": "tau1-bfgs-direct-final",
+      "source": "diagnostics/tau1-bfgs-direct-final.json",
+      "original_kkt": {
+        "stat": 0.004412971289728882,
+        "feas": 2.5967995201641586e-08,
+        "comp": 4.732214620162267e-12,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": true,
+      "objective": 0.607171906,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 4.549962047764212e-06
+    },
+    {
+      "case": "tau1-ipopt",
+      "source": "diagnostics/tau1-ipopt.json",
+      "original_kkt": {
+        "stat": 62.94154654599098,
+        "feas": 0.29034500922045187,
+        "comp": 0.1676488961360434,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.4971754,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.2699953345884625
+    },
+    {
+      "case": "tau1-rust-full",
+      "source": "diagnostics/tau1-rust-full.json",
+      "original_kkt": {
+        "stat": 17.82881367363764,
+        "feas": 8.247123221155356e-08,
+        "comp": 2.771851830882139e-08,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.567626801,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 8.358672518207766e-06
+    },
+    {
+      "case": "tau1-speed-direct-final",
+      "source": "diagnostics/tau1-speed-direct-final.json",
+      "original_kkt": {
+        "stat": 8.678877065071422e-07,
+        "feas": 3.8701851251868834e-08,
+        "comp": 5.684341886080802e-14,
+        "dual": 0.0
+      },
+      "original_kkt_pass": true,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": true,
+      "objective": 0.607165532,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 5.6282567595556895e-06,
+      "max_squared_jacobian_singular_value_original": 731.295417901402,
+      "max_squared_jacobian_singular_value_scaled": 14.365010427179659
+    },
+    {
+      "case": "tau1-speed-full",
+      "source": "diagnostics/tau1-speed-full.json",
+      "original_kkt": {
+        "stat": 8.290933459220717e-07,
+        "feas": 7.152407825944743e-09,
+        "comp": 2.213340621892712e-11,
+        "dual": 0.0
+      },
+      "original_kkt_pass": true,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.561812413,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 1.9319212118951157e-06,
+      "max_squared_jacobian_singular_value_original": 429.3380237146108,
+      "max_squared_jacobian_singular_value_scaled": 14.368237745408704
+    },
+    {
+      "case": "tau1-speed-rust-full",
+      "source": "diagnostics/tau1-speed-rust-full.json",
+      "original_kkt": {
+        "stat": 0.0649209020569705,
+        "feas": 4.352482757346253e-09,
+        "comp": 1.758702516951871e-09,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.563077344,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 1.4348418293855247e-06,
+      "max_squared_jacobian_singular_value_original": 509.8046752389178,
+      "max_squared_jacobian_singular_value_scaled": 14.11404723916757
+    },
+    {
+      "case": "tau1-sqp",
+      "source": "diagnostics/tau1-sqp.json",
+      "original_kkt": {
+        "stat": 0.0036740697805726086,
+        "feas": 3.3023203501187566,
+        "comp": 3.3023203501187566,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.447189587,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 1.5508651866775673
+    },
+    {
+      "case": "tau1-seed1",
+      "source": "pilot/tau1-seed1.json",
+      "original_kkt": {
+        "stat": 5.706722604347112e-07,
+        "feas": 6.417346251294011e-09,
+        "comp": 4.689582056016661e-12,
+        "dual": 0.0
+      },
+      "original_kkt_pass": true,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.575773256,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 1.8366004093869903e-06,
+      "max_squared_jacobian_singular_value_original": 799.7669249416954,
+      "max_squared_jacobian_singular_value_scaled": 14.369093754006373
+    },
+    {
+      "case": "tau1-seed2",
+      "source": "pilot/tau1-seed2.json",
+      "original_kkt": {
+        "stat": 0.5527193136771934,
+        "feas": 0.0008588210418405027,
+        "comp": 0.00015469214726238079,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.415870217,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.0012634851102203417,
+      "max_squared_jacobian_singular_value_original": 792.0190787369693,
+      "max_squared_jacobian_singular_value_scaled": 13.804185106191339
+    },
+    {
+      "case": "tau3-seed0",
+      "source": "pilot/tau3-seed0.json",
+      "original_kkt": {
+        "stat": 31.14501151247532,
+        "feas": 0.006433659199124699,
+        "comp": 0.0006636243746314108,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 1.506627315,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.006915607702118923,
+      "max_squared_jacobian_singular_value_original": 2693.6957258119846,
+      "max_squared_jacobian_singular_value_scaled": 14.49604679147259
+    },
+    {
+      "case": "tau3-seed1",
+      "source": "pilot/tau3-seed1.json",
+      "original_kkt": {
+        "stat": 0.0048447799028301895,
+        "feas": 3.581583050754275e-09,
+        "comp": 1.6699708282885695e-10,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.782896137,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 1.3987090599672343e-06,
+      "max_squared_jacobian_singular_value_original": 509.6707815788162,
+      "max_squared_jacobian_singular_value_scaled": 14.377537105336902
+    },
+    {
+      "case": "tau3-seed2",
+      "source": "pilot/tau3-seed2.json",
+      "original_kkt": {
+        "stat": 8.105476893961584e-07,
+        "feas": 8.658791962731435e-09,
+        "comp": 7.355609454862133e-10,
+        "dual": 0.0
+      },
+      "original_kkt_pass": true,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 0.838914245,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 2.1535885571331154e-06,
+      "max_squared_jacobian_singular_value_original": 721.4713216444464,
+      "max_squared_jacobian_singular_value_scaled": 14.598016993270962
+    },
+    {
+      "case": "tau5-seed0",
+      "source": "pilot/tau5-seed0.json",
+      "original_kkt": {
+        "stat": 58.834137264690874,
+        "feas": 0.0060417745903449446,
+        "comp": 0.0010170673920981699,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 2.388803228,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.006522638637153124,
+      "max_squared_jacobian_singular_value_original": 1965.6739491566123,
+      "max_squared_jacobian_singular_value_scaled": 14.523624478562242
+    },
+    {
+      "case": "tau5-seed1",
+      "source": "pilot/tau5-seed1.json",
+      "original_kkt": {
+        "stat": 0.0056533365969927305,
+        "feas": 1.190562882026451e-08,
+        "comp": 3.8907188582015806e-10,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 1.883861633,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 2.8757685416897633e-06,
+      "max_squared_jacobian_singular_value_original": 641.8342317897426,
+      "max_squared_jacobian_singular_value_scaled": 14.57772108725883
+    },
+    {
+      "case": "tau5-seed2",
+      "source": "pilot/tau5-seed2.json",
+      "original_kkt": {
+        "stat": 0.0004766565779956433,
+        "feas": 7.495962566481974e-09,
+        "comp": 2.1955770534987096e-11,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": true,
+      "skipped_coarse_stages": false,
+      "objective": 1.375491241,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "original_violation": 2.013569143624952e-06,
+      "max_squared_jacobian_singular_value_original": 494.33737418531234,
+      "max_squared_jacobian_singular_value_scaled": 14.613709742053368
+    },
+    {
+      "case": "tau7-seed0",
+      "source": "pilot/tau7-seed0.json",
+      "original_kkt": {
+        "stat": 1.2070407657924196,
+        "feas": 8.00342452512981e-07,
+        "comp": 2.0762065844337485e-07,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 5,
+      "reached_final": false,
+      "skipped_coarse_stages": false,
+      "objective": 2.409449399,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.01254292977701532,
+      "max_squared_jacobian_singular_value_original": 1202.9646779580303,
+      "max_squared_jacobian_singular_value_scaled": 14.500283074739936
+    },
+    {
+      "case": "tau7-seed1",
+      "source": "pilot/tau7-seed1.json",
+      "original_kkt": {
+        "stat": 57.08412387555057,
+        "feas": 0.0055217261683100025,
+        "comp": 0.0006752498456137346,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 13,
+      "reached_final": false,
+      "skipped_coarse_stages": false,
+      "objective": 2.76661273,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.006000932098108549,
+      "max_squared_jacobian_singular_value_original": 3294.583051863444,
+      "max_squared_jacobian_singular_value_scaled": 14.502062984087093
+    },
+    {
+      "case": "tau7-seed2",
+      "source": "pilot/tau7-seed2.json",
+      "original_kkt": {
+        "stat": 15.545245714782396,
+        "feas": 5.6391766735740256e-05,
+        "comp": 1.6961879509835853e-06,
+        "dual": 0.0
+      },
+      "original_kkt_pass": false,
+      "stage": 7,
+      "reached_final": false,
+      "skipped_coarse_stages": false,
+      "objective": 2.092707934,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "original_violation": 0.00195368126486839,
+      "max_squared_jacobian_singular_value_original": 2048.7601335960994,
+      "max_squared_jacobian_singular_value_scaled": 14.561031558757543
+    }
+  ],
+  "degeneracy": {
+    "eps": 0.0005,
+    "p": 12.0,
+    "other_distance_km": 1.0,
+    "exact_visit_ring_radius_km": 3.1894373771703e-24,
+    "derivative_at_ring_approx": 6.3788747543406e-21,
+    "residual_at_zero_direct": 0.0,
+    "residual_at_zero_stable": -1.0172510782890963e-44,
+    "note": "algebraic two-candidate diagnostic; not proof that all computed KKT points are impossible"
+  }
+}

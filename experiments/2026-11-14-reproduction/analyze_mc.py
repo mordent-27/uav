@@ -45,7 +45,7 @@ def main():
     (HERE/'mc-comparison.json').write_text(json.dumps(groups,indent=2)+'\n')
     fields=list(groups[0])
     with (HERE/'mc-comparison.csv').open('w',newline='') as handle:
-        writer=csv.DictWriter(handle,fieldnames=fields);writer.writeheader();writer.writerows(groups)
+        writer=csv.DictWriter(handle,fieldnames=fields,lineterminator='\n');writer.writeheader();writer.writerows(groups)
 
     fig,axes=plt.subplots(1,3,figsize=(14,4.6),layout='constrained')
     colors=['#3673b9','#c45536']
@@ -75,6 +75,8 @@ def main():
     fig.suptitle('Independent random instances and solver settings; distribution comparison, not a matched replication',fontsize=11)
     fig.savefig(HERE/'mc-comparison.png',dpi=180)
     fig.savefig(HERE/'mc-comparison.svg')
+    svg=HERE/'mc-comparison.svg'
+    svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
     print(json.dumps(groups,indent=2))
 
 

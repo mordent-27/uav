@@ -11,6 +11,7 @@ import importlib.util
 import json
 from pathlib import Path
 import subprocess
+import tarfile
 from time import monotonic
 
 HERE=Path(__file__).resolve().parent
@@ -41,6 +42,14 @@ def main():
         assert json.loads(manifest_path.read_text())==manifest,'resume requires identical configuration'
     else:
         manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+    archive=base/'cases.tar.gz'
+    if not (base/'cases').exists() and archive.exists():
+        # A fresh checkout keeps raw files in the archive, not thousands of Git entries.
+        with tarfile.open(archive) as saved:
+            assert all(Path(item.name).parts[0]=='cases' and '..' not in Path(item.name).parts
+                       for item in saved.getmembers())
+            saved.extractall(base,filter='data')
+        print('restored stored cases from archive; completed cases will not be solved again',flush=True)
 
     def execute_case(tau,run):
         directory=base/'cases'/f'tau{tau}'/f'run{run:03d}'
@@ -94,7 +103,7 @@ def main():
     fields=['tau','run','seed','completed','timed_out','kkt_converged','original_violation_le_1e_3',
             'physical_audit_pass','objective','stat','feas','comp','elapsed','exit_code','original_violation','solver_seconds']
     with (base/'results.csv').open('w',newline='') as output:
-        writer=csv.DictWriter(output,fieldnames=fields,extrasaction='ignore');writer.writeheader()
+        writer=csv.DictWriter(output,fieldnames=fields,extrasaction='ignore',lineterminator='\n');writer.writeheader()
         writer.writerows(sorted(rows,key=lambda r:(r['tau'],r['run'])))
 
 
