@@ -98,10 +98,14 @@ mod tests {
         let wi:Vec<f64>=(0..model.lay.n_ineq()).map(|_|rng.uniform()).collect();
         let lag=|x:&[f64],g:&mut[f64]| {let mut rec=Recorder::new(&we,&wi);let f=model.eval(x,&mut rec,g);f+rec.val};
         let mut g=vec![0.;x.len()];let mut scratch=vec![0.;x.len()];lag(&x,&mut g);
+        let scales=model.var_scale();
         for i in 0..x.len() {
-            let old=x[i];let h=1e-6;x[i]=old+h;let fp=lag(&x,&mut scratch);
-            x[i]=old-h;let fm=lag(&x,&mut scratch);x[i]=old;
-            let fd=(fp-fm)/(2.*h);assert!((fd-g[i]).abs()/(1.+fd.abs())<1e-5,"{i}: {} vs {fd}",g[i]);
+            // Differentiate in the same preconditioned coordinates as L-BFGS.
+            // A common physical step mixes km, hours and battery fractions.
+            let old=x[i];let h=1e-6;x[i]=old+h*scales[i];let fp=lag(&x,&mut scratch);
+            x[i]=old-h*scales[i];let fm=lag(&x,&mut scratch);x[i]=old;
+            let fd=(fp-fm)/(2.*h);let analytic=g[i]*scales[i];
+            assert!((fd-analytic).abs()/(1.+fd.abs())<1e-5,"{i}: {analytic} vs {fd}");
         }
     }
 }

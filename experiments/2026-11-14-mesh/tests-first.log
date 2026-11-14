@@ -1,0 +1,43 @@
+warning: variable does not need to be mutable
+   --> /home/mordent/robotech/3A/optimization/uav/src/auglag.rs:135:17
+    |
+135 |             let mut al = |y: &[f64], g: &mut [f64]| {
+    |                 ----^^
+    |                 |
+    |                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: 1 warning emitted
+
+
+running 15 tests
+test battery::tests::derivatives_match_finite_differences ... ok
+test battery::tests::semigroup ... ok
+test battery::tests::identity_at_zero_duration ... ok
+test battery::tests::time_to_charge_inverts_charge ... ok
+test battery::tests::negative_duration_inverts_charging ... ok
+test battery::tests::continuous_across_threshold_for_any_sign_of_c ... ok
+test mesh_init::tests::original_event_stamps_and_energy_are_retained ... ok
+test model::tests::smooth_min_bounds_and_gradient ... ok
+test model::scaling_tests::physical_mode_scaling_and_dimensionless_constraints_correspond ... ok
+test mesh_init::tests::legal_refinement_preserves_the_entire_physical_history ... ok
+test lbfgs::tests::rosenbrock ... ok
+test model::scaling_tests::all_constraints_and_physical_gradients_are_unit_invariant ... ok
+test model::scaling_tests::dimensionless_gradient_matches_finite_differences ... ok
+test model::tests::gradient_matches_finite_differences ... ok
+test mesh_init::tests::refined_layout_gradient_matches_finite_differences ... FAILED
+
+failures:
+
+---- mesh_init::tests::refined_layout_gradient_matches_finite_differences stdout ----
+
+thread 'mesh_init::tests::refined_layout_gradient_matches_finite_differences' (97) panicked at /home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-mesh/mesh_init.rs:104:35:
+332: 1.1005053679367052 vs 1.1005340638803318
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    mesh_init::tests::refined_layout_gradient_matches_finite_differences
+
+test result: FAILED. 14 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s

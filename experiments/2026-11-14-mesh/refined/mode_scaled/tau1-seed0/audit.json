@@ -1,0 +1,257 @@
+{
+  "name": "tau1-seed0",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-mesh-yd9g7a3j/mesh",
+    "solve",
+    "--tau",
+    "1",
+    "--seed",
+    "0",
+    "--refine-init",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-mesh/refined/mode_scaled/tau1-seed0/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 0.6076460069999999,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 5.079999998436335e-07,
+      "viol_task": 5.079999998436335e-07,
+      "viol_mode": 8e-09,
+      "viol_dyn": 4.499999983753611e-09,
+      "viol_speed": 1.6845575157020676e-08,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 2.8800000000000002e-05,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      0,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": -2.142500000745784e-07,
+    "replay_max_energy": 1,
+    "replay_violation": 2.142500000745784e-07,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 7,
+        "next_segment": 8,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": true
+  },
+  "kkt_converged": false,
+  "final_stationarity": 0.011758914620552605,
+  "final_smooth_feasibility": 4.701059136912565e-09,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 4,
+      "over_seconds": 7.524386114177e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 5,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 6,
+      "over_seconds": 5.372357558819e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 4.606297843157e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 8,
+      "over_seconds": 6.392206763906e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 9,
+      "over_seconds": 4.089541830177e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 10,
+      "over_seconds": 2.401753795844e-08,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 11,
+      "over_seconds": 1.702600560538e-09,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 12,
+      "over_seconds": 1.526867882129e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 13,
+      "over_seconds": 2.937505239053e-08,
+      "below_seconds": 0.0
+    }
+  ],
+  "max_stage_over_seconds": 1.526867882129e-07,
+  "polish_status": "Rounded modes are battery-infeasible; reducing charging cannot repair them.",
+  "reused": false,
+  "initial_check": {
+    "name": "tau1-seed0",
+    "variant": "refined",
+    "command": [
+      "/tmp/uav-mesh-yd9g7a3j/mesh",
+      "solve",
+      "--tau",
+      "1",
+      "--seed",
+      "0",
+      "--refine-init",
+      "--inspect-init",
+      "--out",
+      "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-mesh/refined/mode_scaled/tau1-seed0/initial.json"
+    ],
+    "initial_audit": {
+      "finite": true,
+      "objective": 0.725909787,
+      "original_pass": true,
+      "original_pass_parts": {
+        "task": true,
+        "mode": true,
+        "dynamics": true,
+        "uav_speed": true,
+        "energy": true,
+        "segment_time": true,
+        "charging_nonnegative": true,
+        "endpoints": true
+      },
+      "original_residuals": {
+        "viol": 1.500000013088254e-09,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 1.500000013088254e-09,
+        "viol_speed": 2.854506631067011e-10,
+        "viol_bounds": 3.333333331578814e-10,
+        "viol_endpoint": 0.0
+      },
+      "max_mode_score": 0.0,
+      "modes": [
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "stored_mode_disagreements": 0,
+      "charging_over_segment_seconds": 0.0,
+      "charging_domain_pass": true,
+      "exact_mode_battery_pass": true,
+      "replay_min_energy": 0.12876061852595327,
+      "replay_max_energy": 1,
+      "replay_violation": 0.0,
+      "station_pairs": [
+        {
+          "region": 0,
+          "previous_segment": 2,
+          "next_segment": 7,
+          "gap_seconds": 811.720296,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 0,
+          "previous_segment": 7,
+          "next_segment": 8,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        }
+      ],
+      "station_failed_pairs": [],
+      "max_station_shortfall_km": 0.0,
+      "one_station_pass": true,
+      "physically_usable": true
+    },
+    "smoothing": [
+      {
+        "eps": 0.2,
+        "p": 2.0,
+        "task": 0.003441759100522,
+        "mode": 0.02520071970523
+      },
+      {
+        "eps": 0.0005,
+        "p": 12.0,
+        "task": 0.0,
+        "mode": 0.0
+      }
+    ],
+    "stamps": 12,
+    "base_stamps": 7,
+    "identical": false,
+    "initial_time": 0.725909787,
+    "base_initial_time": 0.725909785,
+    "unconditional_split_short_segments": 1,
+    "unconditional_split_extra_seconds": 30.0000012
+  }
+}

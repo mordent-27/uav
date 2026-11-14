@@ -1,0 +1,1274 @@
+{
+  "name": "tau7-seed2",
+  "variant": "mode_scaled",
+  "command": [
+    "/tmp/uav-mesh-yd9g7a3j/mesh",
+    "solve",
+    "--tau",
+    "7",
+    "--seed",
+    "2",
+    "--refine-init",
+    "--verbose",
+    "--out",
+    "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-mesh/refined/mode_scaled/tau7-seed2/raw.json"
+  ],
+  "returncode": 0,
+  "timeout": false,
+  "audit": {
+    "finite": true,
+    "objective": 2.019298244,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 1.6980000001609596e-06,
+      "viol_task": 1.6980000001609596e-06,
+      "viol_mode": 9.299999999962116e-08,
+      "viol_dyn": 3.721714559798417e-09,
+      "viol_speed": 0.0,
+      "viol_bounds": 1e-09,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0003347999999986362,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      2,
+      2,
+      -1,
+      -1,
+      -1,
+      -1,
+      2,
+      2,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 0.0005669383638012282,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 9,
+        "next_segment": 11,
+        "gap_seconds": 61.024402800000004,
+        "distance_km": 0.6102214697884308,
+        "shortfall_km": 0.4271482613884308,
+        "missing_seconds": 142.3827537961436
+      },
+      {
+        "region": 0,
+        "previous_segment": 11,
+        "next_segment": 12,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 12,
+        "next_segment": 13,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 14,
+        "next_segment": 15,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 19,
+        "next_segment": 20,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 20,
+        "next_segment": 21,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 22,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 22,
+        "next_segment": 23,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 23,
+        "next_segment": 29,
+        "gap_seconds": 262.60044120000003,
+        "distance_km": 0.8667498695482798,
+        "shortfall_km": 0.07894854594827971,
+        "missing_seconds": 26.3161819827599
+      },
+      {
+        "region": 1,
+        "previous_segment": 29,
+        "next_segment": 30,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 30,
+        "next_segment": 31,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 31,
+        "next_segment": 35,
+        "gap_seconds": 122.03830439999999,
+        "distance_km": 0.8079638538052114,
+        "shortfall_km": 0.4418489406052114,
+        "missing_seconds": 147.28298020173713
+      },
+      {
+        "region": 1,
+        "previous_segment": 35,
+        "next_segment": 38,
+        "gap_seconds": 251.16959879999996,
+        "distance_km": 2.406002430535428,
+        "shortfall_km": 1.6524936341354284,
+        "missing_seconds": 550.831211378476
+      },
+      {
+        "region": 1,
+        "previous_segment": 38,
+        "next_segment": 39,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 39,
+        "next_segment": 44,
+        "gap_seconds": 925.9055748000001,
+        "distance_km": 0.8960364847114547,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 44,
+        "next_segment": 45,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 45,
+        "next_segment": 46,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 46,
+        "next_segment": 47,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 47,
+        "next_segment": 48,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 48,
+        "next_segment": 49,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 49,
+        "next_segment": 50,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 50,
+        "next_segment": 51,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 51,
+        "next_segment": 52,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 52,
+        "next_segment": 53,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 58,
+        "next_segment": 59,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 59,
+        "next_segment": 64,
+        "gap_seconds": 212.41045799999998,
+        "distance_km": 0.5706519470570229,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 64,
+        "next_segment": 65,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 9,
+        "next_segment": 11,
+        "gap_seconds": 61.024402800000004,
+        "distance_km": 0.6102214697884308,
+        "shortfall_km": 0.4271482613884308,
+        "missing_seconds": 142.3827537961436
+      },
+      {
+        "region": 1,
+        "previous_segment": 23,
+        "next_segment": 29,
+        "gap_seconds": 262.60044120000003,
+        "distance_km": 0.8667498695482798,
+        "shortfall_km": 0.07894854594827971,
+        "missing_seconds": 26.3161819827599
+      },
+      {
+        "region": 1,
+        "previous_segment": 31,
+        "next_segment": 35,
+        "gap_seconds": 122.03830439999999,
+        "distance_km": 0.8079638538052114,
+        "shortfall_km": 0.4418489406052114,
+        "missing_seconds": 147.28298020173713
+      },
+      {
+        "region": 1,
+        "previous_segment": 35,
+        "next_segment": 38,
+        "gap_seconds": 251.16959879999996,
+        "distance_km": 2.406002430535428,
+        "shortfall_km": 1.6524936341354284,
+        "missing_seconds": 550.831211378476
+      }
+    ],
+    "max_station_shortfall_km": 1.6524936341354284,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "kkt_converged": false,
+  "final_stationarity": 2.5040451189392146,
+  "final_smooth_feasibility": 4.023633217342844e-08,
+  "stage_domain": [
+    {
+      "stage": 1,
+      "over_seconds": 9.230497616253e-07,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 2,
+      "over_seconds": 0.0,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 3,
+      "over_seconds": 0.0,
+      "below_seconds": 8.519184435513e-07
+    },
+    {
+      "stage": 4,
+      "over_seconds": 6.332996377312e-07,
+      "below_seconds": 3.054361883948e-07
+    },
+    {
+      "stage": 5,
+      "over_seconds": 0.0,
+      "below_seconds": 1.724154319439e-06
+    },
+    {
+      "stage": 6,
+      "over_seconds": 1.492588315444e-06,
+      "below_seconds": 0.0
+    },
+    {
+      "stage": 7,
+      "over_seconds": 2.548094685251e-06,
+      "below_seconds": 1.798347301111e-06
+    },
+    {
+      "stage": 8,
+      "over_seconds": 1.638809050963e-06,
+      "below_seconds": 3.96905264942e-07
+    },
+    {
+      "stage": 9,
+      "over_seconds": 7.923450270897e-07,
+      "below_seconds": 2.179300605589e-06
+    },
+    {
+      "stage": 10,
+      "over_seconds": 6.645329161947e-07,
+      "below_seconds": 1.094134502362e-06
+    },
+    {
+      "stage": 11,
+      "over_seconds": 2.89545181581e-06,
+      "below_seconds": 2.360727354644e-06
+    },
+    {
+      "stage": 12,
+      "over_seconds": 2.003161449216e-06,
+      "below_seconds": 2.088483568467e-06
+    },
+    {
+      "stage": 13,
+      "over_seconds": 9.792038117851e-07,
+      "below_seconds": 3.421093600231e-06
+    }
+  ],
+  "max_stage_over_seconds": 2.89545181581e-06,
+  "polish_status": "feasible witness; no KKT or optimality claim",
+  "polished_audit": {
+    "finite": true,
+    "objective": 1.9665051703922454,
+    "original_pass": true,
+    "original_pass_parts": {
+      "task": true,
+      "mode": true,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 0.0,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      0,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      2,
+      2,
+      -1,
+      -1,
+      -1,
+      -1,
+      2,
+      2,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": true,
+    "replay_min_energy": 1.000000082740371e-10,
+    "replay_max_energy": 1,
+    "replay_violation": 0.0,
+    "station_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 9,
+        "next_segment": 11,
+        "gap_seconds": 61.022146982443076,
+        "distance_km": 0.6102214697884308,
+        "shortfall_km": 0.42715502884110157,
+        "missing_seconds": 142.38500961370053
+      },
+      {
+        "region": 0,
+        "previous_segment": 11,
+        "next_segment": 12,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 12,
+        "next_segment": 13,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 13,
+        "next_segment": 14,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 0,
+        "previous_segment": 14,
+        "next_segment": 15,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 19,
+        "next_segment": 20,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 20,
+        "next_segment": 21,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 21,
+        "next_segment": 22,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 22,
+        "next_segment": 23,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 23,
+        "next_segment": 29,
+        "gap_seconds": 245.95481559797338,
+        "distance_km": 0.8667498695482798,
+        "shortfall_km": 0.12888542275435955,
+        "missing_seconds": 42.96180758478651
+      },
+      {
+        "region": 1,
+        "previous_segment": 29,
+        "next_segment": 30,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 30,
+        "next_segment": 31,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 31,
+        "next_segment": 35,
+        "gap_seconds": 90.0,
+        "distance_km": 0.8079638538052114,
+        "shortfall_km": 0.5379638538052114,
+        "missing_seconds": 179.32128460173712
+      },
+      {
+        "region": 1,
+        "previous_segment": 35,
+        "next_segment": 38,
+        "gap_seconds": 240.60051096551607,
+        "distance_km": 2.406002430535428,
+        "shortfall_km": 1.6842008976388798,
+        "missing_seconds": 561.4002992129599
+      },
+      {
+        "region": 1,
+        "previous_segment": 38,
+        "next_segment": 39,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 39,
+        "next_segment": 44,
+        "gap_seconds": 914.4865840989903,
+        "distance_km": 0.8960364847114547,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 44,
+        "next_segment": 45,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 45,
+        "next_segment": 46,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 46,
+        "next_segment": 47,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 47,
+        "next_segment": 48,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 48,
+        "next_segment": 49,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 49,
+        "next_segment": 50,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 50,
+        "next_segment": 51,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 51,
+        "next_segment": 52,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 1,
+        "previous_segment": 52,
+        "next_segment": 53,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 58,
+        "next_segment": 59,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 59,
+        "next_segment": 64,
+        "gap_seconds": 211.19667788079983,
+        "distance_km": 0.5706519470570229,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      },
+      {
+        "region": 2,
+        "previous_segment": 64,
+        "next_segment": 65,
+        "gap_seconds": 0,
+        "distance_km": 0.0,
+        "shortfall_km": 0.0,
+        "missing_seconds": 0.0
+      }
+    ],
+    "station_failed_pairs": [
+      {
+        "region": 0,
+        "previous_segment": 9,
+        "next_segment": 11,
+        "gap_seconds": 61.022146982443076,
+        "distance_km": 0.6102214697884308,
+        "shortfall_km": 0.42715502884110157,
+        "missing_seconds": 142.38500961370053
+      },
+      {
+        "region": 1,
+        "previous_segment": 23,
+        "next_segment": 29,
+        "gap_seconds": 245.95481559797338,
+        "distance_km": 0.8667498695482798,
+        "shortfall_km": 0.12888542275435955,
+        "missing_seconds": 42.96180758478651
+      },
+      {
+        "region": 1,
+        "previous_segment": 31,
+        "next_segment": 35,
+        "gap_seconds": 90.0,
+        "distance_km": 0.8079638538052114,
+        "shortfall_km": 0.5379638538052114,
+        "missing_seconds": 179.32128460173712
+      },
+      {
+        "region": 1,
+        "previous_segment": 35,
+        "next_segment": 38,
+        "gap_seconds": 240.60051096551607,
+        "distance_km": 2.406002430535428,
+        "shortfall_km": 1.6842008976388798,
+        "missing_seconds": 561.4002992129599
+      }
+    ],
+    "max_station_shortfall_km": 1.6842008976388798,
+    "one_station_pass": false,
+    "physically_usable": false
+  },
+  "reused": false,
+  "initial_check": {
+    "name": "tau7-seed2",
+    "variant": "refined",
+    "command": [
+      "/tmp/uav-mesh-yd9g7a3j/mesh",
+      "solve",
+      "--tau",
+      "7",
+      "--seed",
+      "2",
+      "--refine-init",
+      "--inspect-init",
+      "--out",
+      "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-14-mesh/refined/mode_scaled/tau7-seed2/initial.json"
+    ],
+    "initial_audit": {
+      "finite": true,
+      "objective": 2.816551537,
+      "original_pass": false,
+      "original_pass_parts": {
+        "task": true,
+        "mode": true,
+        "dynamics": true,
+        "uav_speed": true,
+        "energy": false,
+        "segment_time": true,
+        "charging_nonnegative": true,
+        "endpoints": true
+      },
+      "original_residuals": {
+        "viol": 0.043175446,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 1.6250000234308004e-09,
+        "viol_speed": 1.698097440439028e-08,
+        "viol_bounds": 0.043175446,
+        "viol_endpoint": 0.0
+      },
+      "max_mode_score": 0.0,
+      "modes": [
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        -1,
+        -1,
+        -1,
+        0,
+        0,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        2,
+        2,
+        -1,
+        -1,
+        -1,
+        -1,
+        2,
+        2,
+        -1,
+        -1
+      ],
+      "stored_mode_disagreements": 0,
+      "charging_over_segment_seconds": 0.0,
+      "charging_domain_pass": true,
+      "exact_mode_battery_pass": false,
+      "replay_min_energy": -0.043175443126076796,
+      "replay_max_energy": 1,
+      "replay_violation": 0.043175443126076796,
+      "station_pairs": [
+        {
+          "region": 0,
+          "previous_segment": 2,
+          "next_segment": 7,
+          "gap_seconds": 470.651328,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 0,
+          "previous_segment": 7,
+          "next_segment": 8,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 0,
+          "previous_segment": 8,
+          "next_segment": 10,
+          "gap_seconds": 35.30268,
+          "distance_km": 0.3530268016391666,
+          "shortfall_km": 0.2471187616391666,
+          "missing_seconds": 82.37292054638887
+        },
+        {
+          "region": 0,
+          "previous_segment": 10,
+          "next_segment": 15,
+          "gap_seconds": 208.0994688,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 0,
+          "previous_segment": 15,
+          "next_segment": 16,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 19,
+          "next_segment": 20,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 20,
+          "next_segment": 25,
+          "gap_seconds": 213.32144159999999,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 25,
+          "next_segment": 26,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 26,
+          "next_segment": 28,
+          "gap_seconds": 52.235244,
+          "distance_km": 0.5223524323787901,
+          "shortfall_km": 0.3656467003787901,
+          "missing_seconds": 121.88223345959669
+        },
+        {
+          "region": 1,
+          "previous_segment": 28,
+          "next_segment": 29,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 29,
+          "next_segment": 34,
+          "gap_seconds": 203.117832,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 34,
+          "next_segment": 35,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 35,
+          "next_segment": 38,
+          "gap_seconds": 439.6267872,
+          "distance_km": 4.396267905818276,
+          "shortfall_km": 3.077387544218276,
+          "missing_seconds": 1025.7958480727589
+        },
+        {
+          "region": 1,
+          "previous_segment": 38,
+          "next_segment": 39,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 39,
+          "next_segment": 44,
+          "gap_seconds": 850.0805424,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 44,
+          "next_segment": 45,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 45,
+          "next_segment": 48,
+          "gap_seconds": 338.52865679999996,
+          "distance_km": 3.3852865481827363,
+          "shortfall_km": 2.3697005777827362,
+          "missing_seconds": 789.9001925942455
+        },
+        {
+          "region": 1,
+          "previous_segment": 48,
+          "next_segment": 49,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 49,
+          "next_segment": 54,
+          "gap_seconds": 146.46273119999998,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 1,
+          "previous_segment": 54,
+          "next_segment": 55,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 2,
+          "previous_segment": 58,
+          "next_segment": 59,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 2,
+          "previous_segment": 59,
+          "next_segment": 64,
+          "gap_seconds": 194.02856640000002,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        },
+        {
+          "region": 2,
+          "previous_segment": 64,
+          "next_segment": 65,
+          "gap_seconds": 0,
+          "distance_km": 0.0,
+          "shortfall_km": 0.0,
+          "missing_seconds": 0.0
+        }
+      ],
+      "station_failed_pairs": [
+        {
+          "region": 0,
+          "previous_segment": 8,
+          "next_segment": 10,
+          "gap_seconds": 35.30268,
+          "distance_km": 0.3530268016391666,
+          "shortfall_km": 0.2471187616391666,
+          "missing_seconds": 82.37292054638887
+        },
+        {
+          "region": 1,
+          "previous_segment": 26,
+          "next_segment": 28,
+          "gap_seconds": 52.235244,
+          "distance_km": 0.5223524323787901,
+          "shortfall_km": 0.3656467003787901,
+          "missing_seconds": 121.88223345959669
+        },
+        {
+          "region": 1,
+          "previous_segment": 35,
+          "next_segment": 38,
+          "gap_seconds": 439.6267872,
+          "distance_km": 4.396267905818276,
+          "shortfall_km": 3.077387544218276,
+          "missing_seconds": 1025.7958480727589
+        },
+        {
+          "region": 1,
+          "previous_segment": 45,
+          "next_segment": 48,
+          "gap_seconds": 338.52865679999996,
+          "distance_km": 3.3852865481827363,
+          "shortfall_km": 2.3697005777827362,
+          "missing_seconds": 789.9001925942455
+        }
+      ],
+      "max_station_shortfall_km": 3.077387544218276,
+      "one_station_pass": false,
+      "physically_usable": false
+    },
+    "smoothing": [
+      {
+        "eps": 0.2,
+        "p": 2.0,
+        "task": 0.060731578823,
+        "mode": 0.02516447264902
+      },
+      {
+        "eps": 0.0005,
+        "p": 12.0,
+        "task": 0.0,
+        "mode": 0.0
+      }
+    ],
+    "stamps": 69,
+    "base_stamps": 37,
+    "identical": false,
+    "initial_time": 2.816551537,
+    "base_initial_time": 2.816551542,
+    "unconditional_split_short_segments": 4,
+    "unconditional_split_extra_seconds": 71.26143
+  }
+}

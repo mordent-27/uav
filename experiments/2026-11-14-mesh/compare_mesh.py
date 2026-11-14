@@ -48,7 +48,8 @@ def build_main():
 
 def flags_for(case,variant):
     flags=list(case['flags'])
-    flags+=['--refine-init'] if variant=='refined' else ['--order','nearest']
+    if variant=='refined':flags+=['--refine-init']
+    elif variant=='nearest':flags+=['--order','nearest']
     return dict(case,flags=flags)
 
 
@@ -57,6 +58,9 @@ def initial_snapshot(binary,variant,case):
     cmd=[str(binary),'solve',*flags_for(case,variant)['flags'],'--inspect-init','--out',str(folder/'initial.json')]
     with (folder/'initial.log').open('w') as log:subprocess.run(cmd,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True,timeout=10)
     d=json.loads((folder/'initial.json').read_text())
+    for key in ('thm_value_dev','thm_grad_dev'):d['metrics'].pop(key,None)
+    d['experiment']=dict(purpose='initial_snapshot',variant=variant)
+    (folder/'initial.json').write_text(json.dumps(d,separators=(',',':'))+'\n')
     prior=json.loads((SCALING/'mode_scaled'/case['name']/'raw.json').read_text())
     assert d['instance']==prior['instance']
     original=prior['init'];tr=d['init'];smin=d['phys']['s_min']
@@ -116,7 +120,7 @@ def main():
             subprocess.run(['rustc','--edition=2021','--test',str(main_rs),'-o',str(tests)],stdout=log,stderr=subprocess.STDOUT,check=True)
             subprocess.run([str(tests)],stdout=log,stderr=subprocess.STDOUT,check=True)
         # Inspect both variants before optimizing either one.
-        for variant in ('refined','nearest'):
+        for variant in ('baseline','refined','nearest'):
             initials[variant]={c['name']:initial_snapshot(binary,variant,c) for c in previous['cases']}
         dump(HERE/'initial-checks.json',initials)
         for variant in ('refined','nearest'):
