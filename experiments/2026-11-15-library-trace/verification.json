@@ -1,0 +1,25 @@
+{
+  "identical_initial_state": true,
+  "runs": {
+    "rust": {
+      "rows": 150,
+      "stages": 13,
+      "stop": "outer_limit"
+    },
+    "scipy-lbfgs": {
+      "rows": 150,
+      "stages": 13,
+      "stop": "outer_limit"
+    },
+    "scipy-bfgs": {
+      "rows": 150,
+      "stages": 13,
+      "stop": "outer_limit"
+    }
+  },
+  "paired_inner_results": 18,
+  "al_updates": true,
+  "original_kkt": true,
+  "recorded_choice_equalities": true,
+  "bfgs_prefix_infeasible_after_exact_task_restoration": true
+}

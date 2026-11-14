@@ -1,0 +1,83 @@
+{
+  "runs": [
+    {
+      "backend": "rust",
+      "stage": 13,
+      "objective": 2.093057928520585,
+      "kkt": false,
+      "stat": 0.009581337062848081,
+      "feas": 2.3996014686389344e-06,
+      "original_violation": 4.231828834908198e-05,
+      "pure_mode_min_energy": -0.003719390417117302,
+      "seconds": 7.316830469993874,
+      "inner_gradient_pass": 0,
+      "outer": 150,
+      "evaluations": 329886,
+      "last_mode29": 2
+    },
+    {
+      "backend": "scipy-lbfgs",
+      "stage": 13,
+      "objective": 2.0930532306052143,
+      "kkt": false,
+      "stat": 0.0006494080735853009,
+      "feas": 2.034455680293237e-06,
+      "original_violation": 4.2837894229694196e-05,
+      "pure_mode_min_energy": -0.0038745875225772025,
+      "seconds": 17.518260370008647,
+      "inner_gradient_pass": 0,
+      "outer": 150,
+      "evaluations": 335961,
+      "last_mode29": 2
+    },
+    {
+      "backend": "scipy-bfgs",
+      "stage": 13,
+      "objective": 1.762960680157838,
+      "kkt": false,
+      "stat": 0.0011740618612697694,
+      "feas": 0.003306888789538235,
+      "original_violation": 0.003773910737671453,
+      "pure_mode_min_energy": -0.3786242081400676,
+      "seconds": 45.590563093996025,
+      "inner_gradient_pass": 51,
+      "outer": 150,
+      "evaluations": 104237,
+      "last_mode29": -1
+    }
+  ],
+  "fixed_point_sharpening": [
+    {
+      "saved_stage": 3,
+      "winner": -1,
+      "stage_discharge_weight": 0.42012322386538997,
+      "final_parameters_discharge_weight": 0.7333905850149766,
+      "stage_discharge_share": 0.5341239991463892,
+      "final_parameters_discharge_share": 0.7679001481118849
+    },
+    {
+      "saved_stage": 4,
+      "winner": 2,
+      "stage_discharge_weight": 0.32944605738327926,
+      "final_parameters_discharge_weight": 0.028750813308657933,
+      "stage_discharge_share": 0.4008203233995964,
+      "final_parameters_discharge_share": 0.02910319395896226
+    },
+    {
+      "saved_stage": 5,
+      "winner": 2,
+      "stage_discharge_weight": 0.2757999318774753,
+      "final_parameters_discharge_weight": 0.0014086560106824964,
+      "stage_discharge_share": 0.32183857830603085,
+      "final_parameters_discharge_share": 0.001410235126973996
+    },
+    {
+      "saved_stage": 6,
+      "winner": 2,
+      "stage_discharge_weight": 0.007166929974708891,
+      "final_parameters_discharge_weight": 8.407531604145517e-17,
+      "stage_discharge_share": 0.007257398160963415,
+      "final_parameters_discharge_share": 8.407531604145528e-17
+    }
+  ]
+}
