@@ -1,0 +1,13 @@
+[package]
+name = "uav"
+version = "0.1.0"
+edition = "2021"
+description = "Smooth NLP trajectory optimization for a UAV with mobile charging support (arXiv:2609.40201)"
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+debug = 1
