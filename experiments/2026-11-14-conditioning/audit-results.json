@@ -1,0 +1,831 @@
+{
+  "paired_cases": 900,
+  "identical_binary": true,
+  "identical_inputs_and_initial_states": true,
+  "maximum_original_violation_readback_difference": 9.741146656666588e-10,
+  "baseline_source_unchanged": true,
+  "kkt_cases": [
+    "cases/tau1/run088"
+  ],
+  "states": [
+    {
+      "condition": "N",
+      "case": "fig1",
+      "normalized": {
+        "stat": 9.227785096105951e-07,
+        "feas": 1.8740659965235835e-06,
+        "comp": 2.4143518434494027e-10
+      },
+      "canonical": {
+        "stat": 9.227785192448638e-07,
+        "feas": 1.8740659965235835e-06,
+        "comp": 2.4143518434494027e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.995771002835921e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0039928770681927905
+    },
+    {
+      "condition": "N",
+      "case": "tau1-seed0",
+      "normalized": {
+        "stat": 5.080577868132874e-09,
+        "feas": 8.420586758553289e-07,
+        "comp": 7.540311990292532e-11
+      },
+      "canonical": {
+        "stat": 5.08043216523868e-09,
+        "feas": 8.420586758553289e-07,
+        "comp": 1.4393606306839501e-09,
+        "dual": 0.0
+      },
+      "kkt_pass": true,
+      "timed_out": false,
+      "original_violation": 2.6589908726046274e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.000706221249999972
+    },
+    {
+      "condition": "N",
+      "case": "tau1-seed1",
+      "normalized": {
+        "stat": 3.5661457984146076e-08,
+        "feas": 1.009539511285856e-06,
+        "comp": 3.994098339480363e-12
+      },
+      "canonical": {
+        "stat": 3.5661457984146076e-08,
+        "feas": 1.009539511285856e-06,
+        "comp": 8.120082384266425e-11,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.9668533443438783e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0008336873700023201
+    },
+    {
+      "condition": "N",
+      "case": "tau1-seed2",
+      "normalized": {
+        "stat": 1.269204593275693e-09,
+        "feas": 0.0008588687837361672,
+        "comp": 7.782060174195733e-06
+      },
+      "canonical": {
+        "stat": 5.6776654641371093e-05,
+        "feas": 0.0008588687837361672,
+        "comp": 0.00015494234537527518,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 0.001263536454326748,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.039675667499999956
+    },
+    {
+      "condition": "N",
+      "case": "tau3-seed0",
+      "normalized": {
+        "stat": 6.695226444534848e-07,
+        "feas": 1.670295889320589e-06,
+        "comp": 1.516334898184628e-10
+      },
+      "canonical": {
+        "stat": 6.695226444534848e-07,
+        "feas": 1.670295889320589e-06,
+        "comp": 1.516334898184628e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.7971506171172176e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.002210315318634304
+    },
+    {
+      "condition": "N",
+      "case": "tau3-seed1",
+      "normalized": {
+        "stat": 9.467154888550173e-07,
+        "feas": 1.6414085710210165e-06,
+        "comp": 1.9068265716404298e-10
+      },
+      "canonical": {
+        "stat": 9.467154888550173e-07,
+        "feas": 1.6414085710210165e-06,
+        "comp": 1.9068265716404298e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.788781377048016e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0024725143276514983
+    },
+    {
+      "condition": "N",
+      "case": "tau3-seed2",
+      "normalized": {
+        "stat": 2.2727246197229434e-06,
+        "feas": 1.7442960206780515e-06,
+        "comp": 4.1797627858830566e-11
+      },
+      "canonical": {
+        "stat": 2.272724617983594e-06,
+        "feas": 1.7442960206780515e-06,
+        "comp": 4.1797627858830566e-11,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.7930667942165375e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0024550064999998567
+    },
+    {
+      "condition": "N",
+      "case": "tau5-seed0",
+      "normalized": {
+        "stat": 9.553395014142165e-07,
+        "feas": 1.6904394197020606e-06,
+        "comp": 1.902411416375106e-10
+      },
+      "canonical": {
+        "stat": 9.553395014142165e-07,
+        "feas": 1.6904394197020606e-06,
+        "comp": 1.902411416375106e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.80810891569619e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.003010783418458951
+    },
+    {
+      "condition": "N",
+      "case": "tau5-seed1",
+      "normalized": {
+        "stat": 7.75910771473598e-07,
+        "feas": 1.663514498722869e-06,
+        "comp": 4.5216430767875163e-13
+      },
+      "canonical": {
+        "stat": 7.759107715846203e-07,
+        "feas": 1.663514498722869e-06,
+        "comp": 6.409095476556104e-12,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.867426811757224e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0033600688251164135
+    },
+    {
+      "condition": "N",
+      "case": "tau5-seed2",
+      "normalized": {
+        "stat": 9.608039976127802e-05,
+        "feas": 2.2472223268193156e-06,
+        "comp": 2.9963297468182937e-09
+      },
+      "canonical": {
+        "stat": 9.608039976127802e-05,
+        "feas": 2.2472223268193156e-06,
+        "comp": 3.798504621954635e-09,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 4.745811137208744e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.004539315372031005
+    },
+    {
+      "condition": "N",
+      "case": "tau7-seed0",
+      "normalized": {
+        "stat": 3.0547418197807767e-06,
+        "feas": 1.6792239847142213e-06,
+        "comp": 2.0537815198506948e-10
+      },
+      "canonical": {
+        "stat": 3.0547417877508424e-06,
+        "feas": 1.6792239847142213e-06,
+        "comp": 2.0537815198506948e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": true,
+      "original_violation": 3.986595638927099e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.005974370876474122
+    },
+    {
+      "condition": "N",
+      "case": "tau7-seed1",
+      "normalized": {
+        "stat": 6.709709813243481e-07,
+        "feas": 1.6572647611881944e-06,
+        "comp": 1.9414315342087314e-12
+      },
+      "canonical": {
+        "stat": 6.709709813243481e-07,
+        "feas": 1.6572647611881944e-06,
+        "comp": 2.184918912462308e-11,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.854975375932462e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.003240872737466649
+    },
+    {
+      "condition": "N",
+      "case": "tau7-seed2",
+      "normalized": {
+        "stat": 0.10339739649009677,
+        "feas": 4.979821212791613e-06,
+        "comp": 5.633961376802499e-07
+      },
+      "canonical": {
+        "stat": 0.10339739649009677,
+        "feas": 4.979821212791613e-06,
+        "comp": 6.266648924224683e-07,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": true,
+      "original_violation": 6.979480889997447e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.002365431759954073
+    },
+    {
+      "condition": "L",
+      "case": "fig1",
+      "normalized": {
+        "stat": 0.009581337062848081,
+        "feas": 2.11474261030669e-06,
+        "comp": 6.363273016301369e-07
+      },
+      "canonical": {
+        "stat": 0.009581337062848081,
+        "feas": 2.3996014686389344e-06,
+        "comp": 2.3996014686389344e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 4.231828834908198e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.003719392852651604
+    },
+    {
+      "condition": "L",
+      "case": "tau1-seed0",
+      "normalized": {
+        "stat": 1.383282596824199e-05,
+        "feas": 8.360500396366495e-07,
+        "comp": 5.004053032959187e-10
+      },
+      "canonical": {
+        "stat": 1.383282596824199e-05,
+        "feas": 8.360500396366495e-07,
+        "comp": 4.3367620605749835e-09,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.687585057321168e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0007949789999999179
+    },
+    {
+      "condition": "L",
+      "case": "tau1-seed1",
+      "normalized": {
+        "stat": 9.575250827046724e-07,
+        "feas": 8.04956198004322e-07,
+        "comp": 8.243550501957503e-10
+      },
+      "canonical": {
+        "stat": 9.575250827046724e-07,
+        "feas": 8.04956198004322e-07,
+        "comp": 7.541885338469001e-09,
+        "dual": 0.0
+      },
+      "kkt_pass": true,
+      "timed_out": false,
+      "original_violation": 2.643855559674585e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0007582690000000891
+    },
+    {
+      "condition": "L",
+      "case": "tau1-seed2",
+      "normalized": {
+        "stat": 6.933996748633338e-06,
+        "feas": 0.0007698666812081647,
+        "comp": 6.896402616261747e-06
+      },
+      "canonical": {
+        "stat": 4.443342796633942e-05,
+        "feas": 0.0007698666812081647,
+        "comp": 0.00013455545631302357,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 0.0011672880484450436,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.03967673999999999
+    },
+    {
+      "condition": "L",
+      "case": "tau3-seed0",
+      "normalized": {
+        "stat": 0.0002255485206778384,
+        "feas": 1.3424398092574692e-06,
+        "comp": 1.575658886351443e-07
+      },
+      "canonical": {
+        "stat": 0.00022554872880095264,
+        "feas": 1.3424398092574692e-06,
+        "comp": 1.406036236772934e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.383658023223268e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0019871944291036114
+    },
+    {
+      "condition": "L",
+      "case": "tau3-seed1",
+      "normalized": {
+        "stat": 0.0217201864972721,
+        "feas": 1.980036996902631e-06,
+        "comp": 1.980036996902631e-06
+      },
+      "canonical": {
+        "stat": 0.0217201864972721,
+        "feas": 1.2104442419058614e-05,
+        "comp": 1.2104442419058614e-05,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.287590115110594e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0023743803521321105
+    },
+    {
+      "condition": "L",
+      "case": "tau3-seed2",
+      "normalized": {
+        "stat": 6.357720146768497e-05,
+        "feas": 1.5719031304471795e-06,
+        "comp": 4.368230447319147e-09
+      },
+      "canonical": {
+        "stat": 6.357720146768497e-05,
+        "feas": 1.5719031304471795e-06,
+        "comp": 2.64151509554722e-08,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.747826182573695e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0021621417499999573
+    },
+    {
+      "condition": "L",
+      "case": "tau5-seed0",
+      "normalized": {
+        "stat": 0.00026712250714947905,
+        "feas": 1.7294410489176668e-06,
+        "comp": 4.817890891366268e-08
+      },
+      "canonical": {
+        "stat": 0.00026712250714947905,
+        "feas": 1.7294410489176668e-06,
+        "comp": 3.350755903852587e-07,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.854060570384482e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.002619654569948171
+    },
+    {
+      "condition": "L",
+      "case": "tau5-seed1",
+      "normalized": {
+        "stat": 5.581782204310166e-06,
+        "feas": 1.7003099273609976e-06,
+        "comp": 8.984416167723703e-10
+      },
+      "canonical": {
+        "stat": 5.581775141664559e-06,
+        "feas": 1.7003099273609976e-06,
+        "comp": 1.1488147322324949e-08,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.8511100792794004e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0032168085437942473
+    },
+    {
+      "condition": "L",
+      "case": "tau5-seed2",
+      "normalized": {
+        "stat": 0.0003964370146528652,
+        "feas": 1.5296540255177763e-06,
+        "comp": 9.347306931774222e-08
+      },
+      "canonical": {
+        "stat": 0.00039643721375511726,
+        "feas": 1.5296540255177763e-06,
+        "comp": 1.3267897784885463e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.695686856990815e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0034562133750001833
+    },
+    {
+      "condition": "L",
+      "case": "tau7-seed0",
+      "normalized": {
+        "stat": 0.0021688503778529047,
+        "feas": 2.316875643954626e-06,
+        "comp": 4.938941958234133e-07
+      },
+      "canonical": {
+        "stat": 0.0021688503249965704,
+        "feas": 3.577838590729243e-06,
+        "comp": 3.577838590729243e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 4.6676049166997566e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0044399463938447625
+    },
+    {
+      "condition": "L",
+      "case": "tau7-seed1",
+      "normalized": {
+        "stat": 0.0011120122177787606,
+        "feas": 1.0254744631790162e-06,
+        "comp": 1.4861274159972193e-07
+      },
+      "canonical": {
+        "stat": 0.0011120121967095448,
+        "feas": 1.0254744631790162e-06,
+        "comp": 1.0469401843238302e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.9270871844053192e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0029740451745395857
+    },
+    {
+      "condition": "L",
+      "case": "tau7-seed2",
+      "normalized": {
+        "stat": 0.0014888834235621878,
+        "feas": 0.0010938394795412983,
+        "comp": 1.0529939690217168e-05
+      },
+      "canonical": {
+        "stat": 0.0014888834235621878,
+        "feas": 0.0010938394795412983,
+        "comp": 0.00019931169875064825,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 0.00151338173853938,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.02770068653655089
+    },
+    {
+      "condition": "L0",
+      "case": "fig1",
+      "normalized": {
+        "stat": 0.2376938341236872,
+        "feas": 6.704594747386494e-06,
+        "comp": 6.044462337526091e-06
+      },
+      "canonical": {
+        "stat": 0.2376938341236872,
+        "feas": 6.704594747386494e-06,
+        "comp": 6.044462337526091e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 4.0088525759773235e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0032160075450198278
+    },
+    {
+      "condition": "L0",
+      "case": "tau1-seed0",
+      "normalized": {
+        "stat": 1.5218474000778925e-05,
+        "feas": 8.277127801310444e-07,
+        "comp": 1.07085449121687e-09
+      },
+      "canonical": {
+        "stat": 1.5218474000778925e-05,
+        "feas": 8.277127801310444e-07,
+        "comp": 1.07085449121687e-09,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.6734962629573755e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0006963985000000283
+    },
+    {
+      "condition": "L0",
+      "case": "tau1-seed1",
+      "normalized": {
+        "stat": 1.634421049285918e-05,
+        "feas": 9.30904084916963e-07,
+        "comp": 9.050383315323236e-10
+      },
+      "canonical": {
+        "stat": 1.634421049285918e-05,
+        "feas": 9.30904084916963e-07,
+        "comp": 9.050383315323236e-10,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.8436898348374595e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0005248661785363096
+    },
+    {
+      "condition": "L0",
+      "case": "tau1-seed2",
+      "normalized": {
+        "stat": 5.8046684479506894e-05,
+        "feas": 0.000858807259308775,
+        "comp": 1.2970085639205098e-05
+      },
+      "canonical": {
+        "stat": 5.8046684479506894e-05,
+        "feas": 0.000858807259308775,
+        "comp": 1.2970085639205098e-05,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 0.0012634702877195904,
+      "original_pass": false,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.03967431999999982
+    },
+    {
+      "condition": "L0",
+      "case": "tau3-seed0",
+      "normalized": {
+        "stat": 0.01811496738126977,
+        "feas": 8.693830480321907e-06,
+        "comp": 5.209333314937226e-06
+      },
+      "canonical": {
+        "stat": 0.01811496738126977,
+        "feas": 8.693830480321907e-06,
+        "comp": 5.209333314937226e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 4.6836148826050195e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.001943628551652199
+    },
+    {
+      "condition": "L0",
+      "case": "tau3-seed1",
+      "normalized": {
+        "stat": 0.009519692023074499,
+        "feas": 1.6471796465056992e-06,
+        "comp": 2.351713800641253e-07
+      },
+      "canonical": {
+        "stat": 0.009519692023074499,
+        "feas": 1.6471796465056992e-06,
+        "comp": 2.351713800641253e-07,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.841175181186485e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.001680805848547684
+    },
+    {
+      "condition": "L0",
+      "case": "tau3-seed2",
+      "normalized": {
+        "stat": 0.0033683691222464174,
+        "feas": 1.3553963808211542e-06,
+        "comp": 1.2429455171353299e-07
+      },
+      "canonical": {
+        "stat": 0.0033683691222464174,
+        "feas": 1.3553963808211542e-06,
+        "comp": 1.2429455171353299e-07,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.4192804876820304e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0018923850146372878
+    },
+    {
+      "condition": "L0",
+      "case": "tau5-seed0",
+      "normalized": {
+        "stat": 0.07613552005763312,
+        "feas": 4.012218195195705e-06,
+        "comp": 4.012218195195705e-06
+      },
+      "canonical": {
+        "stat": 0.07613552005763312,
+        "feas": 4.012218195195705e-06,
+        "comp": 4.012218195195705e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.3986367889354074e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0016562171342588972
+    },
+    {
+      "condition": "L0",
+      "case": "tau5-seed1",
+      "normalized": {
+        "stat": 0.09115268139453254,
+        "feas": 1.1305706672931626e-06,
+        "comp": 1.1305706672931626e-06
+      },
+      "canonical": {
+        "stat": 0.09115268139453254,
+        "feas": 1.1305706672931626e-06,
+        "comp": 1.1305706672931626e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.652392974265729e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0025799049674471997
+    },
+    {
+      "condition": "L0",
+      "case": "tau5-seed2",
+      "normalized": {
+        "stat": 0.046845303798569965,
+        "feas": 1.1606466070179788e-06,
+        "comp": 1.1606466070179788e-06
+      },
+      "canonical": {
+        "stat": 0.046845303798569965,
+        "feas": 1.1606466070179788e-06,
+        "comp": 1.1606466070179788e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.9505388164645374e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.00265055947686621
+    },
+    {
+      "condition": "L0",
+      "case": "tau7-seed0",
+      "normalized": {
+        "stat": 0.07958056088704998,
+        "feas": 8.190872346131028e-06,
+        "comp": 1.2818986620644068e-05
+      },
+      "canonical": {
+        "stat": 0.07958056088704998,
+        "feas": 8.190872346131028e-06,
+        "comp": 1.2818986620644068e-05,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 2.9370098636960607e-05,
+      "original_pass": true,
+      "battery_replay_pass": true,
+      "battery_replay_violation": 0.0
+    },
+    {
+      "condition": "L0",
+      "case": "tau7-seed1",
+      "normalized": {
+        "stat": 0.240079703517576,
+        "feas": 7.440621623060152e-06,
+        "comp": 5.353931345097873e-06
+      },
+      "canonical": {
+        "stat": 0.240079703517576,
+        "feas": 7.440621623060152e-06,
+        "comp": 5.353931345097873e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 8.657935361965741e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0034217260867763777
+    },
+    {
+      "condition": "L0",
+      "case": "tau7-seed2",
+      "normalized": {
+        "stat": 0.0911788186989996,
+        "feas": 4.612154333935581e-06,
+        "comp": 4.612154333935581e-06
+      },
+      "canonical": {
+        "stat": 0.0911788186989996,
+        "feas": 4.612154333935581e-06,
+        "comp": 4.612154333935581e-06,
+        "dual": 0.0
+      },
+      "kkt_pass": false,
+      "timed_out": false,
+      "original_violation": 3.7888071950461255e-05,
+      "original_pass": true,
+      "battery_replay_pass": false,
+      "battery_replay_violation": 0.0013672497682435392
+    }
+  ]
+}

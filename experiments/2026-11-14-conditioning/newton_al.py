@@ -57,7 +57,7 @@ def tr_step(w, V, g, delta):
     return V @ (-gt / (w + hi)), True
 
 
-def tr_newton(fg, y, gtol=1e-6, max_iter=200, delta=1.0):
+def tr_newton(fg, y, gtol=1e-6, max_iter=200, delta=1.0, hessian_step=1e-6):
     f, g = fg(y)
     evals, status = 1, 'max_iter'
     grad = lambda p: fg(p)[1]
@@ -66,7 +66,7 @@ def tr_newton(fg, y, gtol=1e-6, max_iter=200, delta=1.0):
         if np.max(np.abs(g)) <= gtol:
             status = 'converged'
             break
-        H = fd_hessian(grad, y)
+        H = fd_hessian(grad, y, step=hessian_step)
         evals += 2 * len(y)
         w, V = np.linalg.eigh(H)
         accepted = False

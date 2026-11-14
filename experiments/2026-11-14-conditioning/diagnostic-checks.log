@@ -1,0 +1,93 @@
+{
+  "quadratic_cases": 24,
+  "maximum_trust_region_stationarity_error": 4.9960036108132044e-15,
+  "spectra": [
+    {
+      "variant": "squared",
+      "iterations": 2027,
+      "gradient": 5.7211509513239974e-09,
+      "solver_status": "Desired error not necessarily achieved due to precision loss.",
+      "spectra": [
+        {
+          "step": 0.0001,
+          "minimum": -0.873757054871771,
+          "maximum": 6628.2013414110415,
+          "condition_2": 10218791688.863268,
+          "negative": 2
+        },
+        {
+          "step": 1e-05,
+          "minimum": -18.477936344244036,
+          "maximum": 9608.53647191967,
+          "condition_2": 14890960151.635456,
+          "negative": 1
+        },
+        {
+          "step": 1e-06,
+          "minimum": 6.452259427653678e-07,
+          "maximum": 12590.835300452829,
+          "condition_2": 19513839208.77373,
+          "negative": 0
+        },
+        {
+          "step": 1e-07,
+          "minimum": 6.452256172962777e-07,
+          "maximum": 12590.835239986709,
+          "condition_2": 19513848958.363956,
+          "negative": 0
+        },
+        {
+          "step": 1e-08,
+          "minimum": 6.452257988128761e-07,
+          "maximum": 12590.835836108858,
+          "condition_2": 19513844392.57421,
+          "negative": 0
+        }
+      ]
+    },
+    {
+      "variant": "normalized",
+      "iterations": 1206,
+      "gradient": 3.4292089098642174e-09,
+      "solver_status": "Desired error not necessarily achieved due to precision loss.",
+      "spectra": [
+        {
+          "step": 0.0001,
+          "minimum": 6.697003659813283e-07,
+          "maximum": 98.04117304410788,
+          "condition_2": 146395579.31321383,
+          "negative": 0
+        },
+        {
+          "step": 1e-05,
+          "minimum": -1.0192768663940997e-06,
+          "maximum": 98.04108995852438,
+          "condition_2": 135658246.06474397,
+          "negative": 1
+        },
+        {
+          "step": 1e-06,
+          "minimum": -1.0193071890554737e-06,
+          "maximum": 98.04108991518112,
+          "condition_2": 135662359.7786385,
+          "negative": 1
+        },
+        {
+          "step": 1e-07,
+          "minimum": -1.0193074855399222e-06,
+          "maximum": 98.04108984995658,
+          "condition_2": 135662402.01587808,
+          "negative": 1
+        },
+        {
+          "step": 1e-08,
+          "minimum": -1.019307590267963e-06,
+          "maximum": 98.04109168341367,
+          "condition_2": 135662332.9840966,
+          "negative": 1
+        }
+      ]
+    }
+  ],
+  "note": "Finite difference Hessians, not an exact-Hessian proof of local minimality"
+}
