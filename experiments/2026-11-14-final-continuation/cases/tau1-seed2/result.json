@@ -1,0 +1,68 @@
+{
+  "case": "tau1-seed2",
+  "stop": "outer_limit",
+  "kkt_converged": false,
+  "extra_outer": 600,
+  "extra_seconds": 1.5683489790026215,
+  "total_outer": 750,
+  "total_seconds": 13.022503678999783,
+  "original_kkt": {
+    "stat": 0.0006621545372240689,
+    "feas": 0.0008585528726447605,
+    "comp": 0.000154913769392806,
+    "dual": 0.0
+  },
+  "normalized_kkt": {
+    "stat": 1.4726500315494679e-08,
+    "feas": 0.0008585528726447605,
+    "comp": 7.780661728130424e-06
+  },
+  "objective": 0.41587004,
+  "original_violation": 0.0012631967019317819,
+  "physical_audit": {
+    "finite": true,
+    "objective": 0.41587004099999997,
+    "original_pass": false,
+    "original_pass_parts": {
+      "task": true,
+      "mode": false,
+      "dynamics": true,
+      "uav_speed": true,
+      "energy": true,
+      "segment_time": true,
+      "charging_nonnegative": true,
+      "endpoints": true
+    },
+    "original_residuals": {
+      "viol": 0.001263197,
+      "viol_task": 0.000134768999999757,
+      "viol_mode": 0.001263197,
+      "viol_dyn": 5.388749999488129e-07,
+      "viol_speed": 7.782285251778376e-06,
+      "viol_bounds": 5.4e-07,
+      "viol_endpoint": 0.0
+    },
+    "max_mode_score": 4.5475091999999995,
+    "modes": [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    "stored_mode_disagreements": 0,
+    "charging_over_segment_seconds": 0.0,
+    "charging_domain_pass": true,
+    "exact_mode_battery_pass": false,
+    "replay_min_energy": -0.03967510250000006,
+    "replay_max_energy": 1,
+    "replay_violation": 0.03967510250000006,
+    "station_pairs": [],
+    "station_failed_pairs": [],
+    "max_station_shortfall_km": 0.0,
+    "one_station_pass": true,
+    "physically_usable": false
+  },
+  "inner_evals": 34914
+}

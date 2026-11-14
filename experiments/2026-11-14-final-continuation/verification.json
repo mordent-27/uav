@@ -1,0 +1,67 @@
+{
+  "outputs": 6,
+  "rust_readback_pass": true,
+  "method": "independent objective gradient plus original constraint Jacobian times mapped multipliers",
+  "cases": [
+    {
+      "source": "experiments/2026-11-14-final-continuation/cases/fig1/raw.json",
+      "independent_kkt": {
+        "stat": 8.308243118690384e-07,
+        "feas": 1.4625251137849547e-06,
+        "comp": 1.9612012014391667e-10,
+        "dual": 0.0
+      },
+      "passed": false
+    },
+    {
+      "source": "experiments/2026-11-14-final-continuation/cases/tau1-seed1/raw.json",
+      "independent_kkt": {
+        "stat": 6.256226167677958e-08,
+        "feas": 9.998660791981674e-07,
+        "comp": 4.8629544835421257e-11,
+        "dual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "source": "experiments/2026-11-14-final-continuation/cases/tau1-seed2/raw.json",
+      "independent_kkt": {
+        "stat": 0.0006621545372382798,
+        "feas": 0.0008585528726447605,
+        "comp": 0.000154913769392806,
+        "dual": 0.0
+      },
+      "passed": false
+    },
+    {
+      "source": "experiments/2026-11-14-final-continuation/cases/tau3-seed0/raw.json",
+      "independent_kkt": {
+        "stat": 9.630095200419651e-07,
+        "feas": 9.99312835959186e-07,
+        "comp": 2.404612095581518e-11,
+        "dual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "source": "experiments/2026-11-14-final-continuation/fig1-refined/raw.json",
+      "independent_kkt": {
+        "stat": 9.977736956934269e-07,
+        "feas": 1.058102687545386e-06,
+        "comp": 1.9970400333413352e-10,
+        "dual": 0.0
+      },
+      "passed": false
+    },
+    {
+      "source": "experiments/2026-11-14-final-continuation/fig1-accurate/raw.json",
+      "independent_kkt": {
+        "stat": 9.87084341846911e-07,
+        "feas": 9.990274666044118e-07,
+        "comp": 8.333458922926695e-12,
+        "dual": 0.0
+      },
+      "passed": true
+    }
+  ]
+}
