@@ -1,0 +1,188 @@
+{
+  "examples": [
+    {
+      "case": "simple",
+      "seconds": 260.0,
+      "energy": [
+        1.0,
+        1.0,
+        0.8611111111111112,
+        0.8778558345955263
+      ],
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": false
+    },
+    {
+      "case": "simple-repaired",
+      "seconds": 726.6666666666666,
+      "energy": [
+        1.0,
+        1.0,
+        0.5370370370370371,
+        0.5755787037037038
+      ],
+      "original_violation": 0.0,
+      "carrier_feasible": true
+    },
+    {
+      "case": "essential-charges",
+      "seconds": 3100.0,
+      "energy": [
+        1.0,
+        0.5833333333333334,
+        0.8775198297559348,
+        0.18307538531149037,
+        0.8713082410958002,
+        0.45464157442913355
+      ],
+      "original_violation": 0.0,
+      "carrier_feasible": false
+    },
+    {
+      "case": "essential-charges-repaired",
+      "seconds": 5433.333333333333,
+      "energy": [
+        1.0,
+        0.5833333333333334,
+        0.8775198297559348,
+        0.9999999226169054,
+        0.9999999940741514,
+        0.5833333274074848
+      ],
+      "original_violation": 0.0,
+      "carrier_feasible": true
+    }
+  ],
+  "delay_limitation": {
+    "gap_distance_km": 10.0,
+    "original_gap_seconds": 1000.0,
+    "carrier_required_seconds": 3333.333333333333,
+    "maximum_uncharged_gap_seconds": 1440.0,
+    "cannot_repair_by_delay_even_from_full": true,
+    "delayed_arrival_energy": -1.4372949850588796,
+    "remove_first_charge_energy_before_second": -0.11111111111111116,
+    "remove_second_charge_best_energy_at_destination": -0.11111111111111116
+  },
+  "cohort": [
+    {
+      "case": "fig1",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/fig1/polished.json",
+      "source_sha256": "bd08bfb0e402511283ea7ad18fd82c632f68952f876308ed9c1ac0fdfe08999f",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau1-seed0",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau1-seed0/polished.json",
+      "source_sha256": "944f0b954ce913ed2dcede85da44b6e8c2e1fc455ee261b40386c3bbd3e8d720",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau1-seed1",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau1-seed1/polished.json",
+      "source_sha256": "51573d5148301f75373532f5c011ceb6bf269b43d612f4c365e3e8b68e1153e9",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau1-seed2",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau1-seed2/polished.json",
+      "source_sha256": "f0f44b361ce1fb8f67b5539a630f8c82c4095dcde9186dc59c8923e8c7ab04f7",
+      "original_violation": 4.163336342344337e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau3-seed0",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau3-seed0/polished.json",
+      "source_sha256": "1ba32f11b40f2676d01eb91b64d73c9d260f5db711ce5e754d22afce26f9fe54",
+      "original_violation": 4.163336342344337e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau3-seed1",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau3-seed1/polished.json",
+      "source_sha256": "392f019ab0fd203ca0c1d748bfe93873f3a2e31f5bd8b93bcfbe2b626ec6f6b2",
+      "original_violation": 4.163336342344337e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 1.1374463272018003
+    },
+    {
+      "case": "tau3-seed2",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau3-seed2/polished.json",
+      "source_sha256": "c31f326d4875bd29cc7ab9e7cb3b04bacd7b9ea4a9e7a5fc551ce68c439900af",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 0.29223879400543185
+    },
+    {
+      "case": "tau5-seed0",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau5-seed0/polished.json",
+      "source_sha256": "7d4b59082927128f6b87c4e87cdfb7b22112b6d8a09e34970a497784f4691b98",
+      "original_violation": 4.163336342344337e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau5-seed1",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau5-seed1/polished.json",
+      "source_sha256": "56170cab460479ae36689259de63ad91348b689398efb704d3041be36ab7d5b4",
+      "original_violation": 4.163336342344337e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 1.4214941835376989
+    },
+    {
+      "case": "tau5-seed2",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau5-seed2/polished.json",
+      "source_sha256": "80f7d201d0a08f0389bfb9675de4b30dac9cea81987ecce4e8ffb5784a6a7bd1",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 2.0964124110136053
+    },
+    {
+      "case": "tau7-seed0",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau7-seed0/polished.json",
+      "source_sha256": "6ebebb83f4042d583b3c338ab81b803d24d578fa285cfdf20f992a4c133f3dbf",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": true,
+      "previous_1m_audit_pass": true,
+      "max_excess_km": 0.0
+    },
+    {
+      "case": "tau7-seed1",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau7-seed1/polished.json",
+      "source_sha256": "f02ba826934907efb517a540a6c81ab3d6ac25f9ea1d7f511cae1858540c6234",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 1.238742093271815
+    },
+    {
+      "case": "tau7-seed2",
+      "source": "experiments/2026-11-14-approximation/combined/mode_scaled/tau7-seed2/polished.json",
+      "source_sha256": "1a4baf200a1d2bb17f85a935d797651fbd4dba8bd25c49071dcc8ee0933969b0",
+      "original_violation": 5.551115123125783e-17,
+      "carrier_feasible": false,
+      "previous_1m_audit_pass": false,
+      "max_excess_km": 2.421725338961764
+    }
+  ],
+  "cohort_count": 13,
+  "carrier_certified": 7,
+  "tolerance_disagreements": 0
+}

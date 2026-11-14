@@ -1,0 +1,417 @@
+{
+  "feasible": false,
+  "scope": "carrier motion for supplied fixed modes only",
+  "assumptions": [
+    "one independent carrier per disk",
+    "convex obstacle-free disks",
+    "piecewise linear UAV and carrier motion",
+    "speed limits only; no acceleration or carrier energy limit"
+  ],
+  "distance_tolerance_km": 1e-09,
+  "mode_tolerance_hours": 1e-12,
+  "times_hours": [
+    0.0,
+    0.05577682091287614,
+    0.06643230712169425,
+    0.10882146559938857,
+    0.18426472629296003,
+    0.1986985808323426,
+    0.21182499288491446,
+    0.22342177042624112,
+    0.23541610814535952,
+    0.245577347234763,
+    0.2568306796701535,
+    0.46520979122679007,
+    0.5613418425039334,
+    0.6016915524811484,
+    0.612128545393454,
+    0.6209138181020925,
+    0.8419158475134423
+  ],
+  "carriers": [
+    {
+      "region": 0,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 4,
+          "position": [
+            -4.789871265,
+            2.734458207
+          ]
+        },
+        {
+          "stamp": 5,
+          "position": [
+            -4.658053663,
+            2.651244932
+          ]
+        },
+        {
+          "stamp": 6,
+          "position": [
+            -4.540380036,
+            2.57218607
+          ]
+        },
+        {
+          "stamp": 7,
+          "position": [
+            -4.200463639,
+            2.329802642
+          ]
+        },
+        {
+          "stamp": 8,
+          "position": [
+            -4.098992348,
+            2.249280036
+          ]
+        },
+        {
+          "stamp": 9,
+          "position": [
+            -4.015873278,
+            2.17762537
+          ]
+        },
+        {
+          "stamp": 10,
+          "position": [
+            -3.926051884,
+            2.095752822
+          ]
+        }
+      ],
+      "anchor_pairs": [
+        {
+          "start_stamp": 4,
+          "end_stamp": 5,
+          "available_seconds": 51.96187634177723,
+          "required_seconds": 51.96187633817724,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 5,
+          "end_stamp": 6,
+          "available_seconds": 47.25508338925872,
+          "required_seconds": 47.255083385658736,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 6,
+          "end_stamp": 7,
+          "available_seconds": 41.74839914877595,
+          "required_seconds": 139.1613304839199,
+          "excess_km": 0.29223879400543185
+        },
+        {
+          "start_stamp": 7,
+          "end_stamp": 8,
+          "available_seconds": 43.17961578882623,
+          "required_seconds": 43.1796157852262,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 8,
+          "end_stamp": 9,
+          "available_seconds": 36.5804607218525,
+          "required_seconds": 36.580460718252525,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 9,
+          "end_stamp": 10,
+          "available_seconds": 40.51199676740582,
+          "required_seconds": 40.51199676380576,
+          "excess_km": 0.0
+        }
+      ],
+      "failures": [
+        {
+          "kind": "unreachable",
+          "start_stamp": 6,
+          "end_stamp": 7,
+          "available_seconds": 41.74839914877595,
+          "required_seconds": 139.1613304839199,
+          "excess_km": 0.29223879400543185
+        }
+      ],
+      "positions": null,
+      "feasible": false
+    },
+    {
+      "region": 1,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 11,
+          "position": [
+            1.522049023,
+            -3.061079487
+          ]
+        },
+        {
+          "stamp": 12,
+          "position": [
+            2.279517118,
+            -3.771118663
+          ]
+        }
+      ],
+      "anchor_pairs": [
+        {
+          "start_stamp": 11,
+          "end_stamp": 12,
+          "available_seconds": 346.0753845977159,
+          "required_seconds": 346.075384594116,
+          "excess_km": 0.0
+        }
+      ],
+      "failures": [],
+      "positions": [
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          1.522049023,
+          -3.061079487
+        ],
+        [
+          2.279517118,
+          -3.771118663
+        ],
+        [
+          2.279517118,
+          -3.771118663
+        ],
+        [
+          2.279517118,
+          -3.771118663
+        ],
+        [
+          2.279517118,
+          -3.771118663
+        ],
+        [
+          2.279517118,
+          -3.771118663
+        ]
+      ],
+      "feasible": true
+    },
+    {
+      "region": 2,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            8,
+            -5
+          ]
+        }
+      ],
+      "anchor_pairs": [],
+      "failures": [],
+      "positions": [
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ]
+      ],
+      "feasible": true
+    },
+    {
+      "region": 3,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            -5,
+            -7
+          ]
+        }
+      ],
+      "anchor_pairs": [],
+      "failures": [],
+      "positions": [
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ]
+      ],
+      "feasible": true
+    }
+  ]
+}

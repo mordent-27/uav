@@ -1,0 +1,91 @@
+{
+  "feasible": false,
+  "scope": "carrier motion for supplied fixed modes only",
+  "assumptions": [
+    "one independent carrier per disk",
+    "convex obstacle-free disks",
+    "piecewise linear UAV and carrier motion",
+    "speed limits only; no acceleration or carrier energy limit"
+  ],
+  "distance_tolerance_km": 1e-09,
+  "mode_tolerance_hours": 1e-12,
+  "times_hours": [
+    0.0,
+    0.16666666666666666,
+    0.25,
+    0.5277777777777778,
+    0.6944444444444444,
+    0.861111111111111
+  ],
+  "carriers": [
+    {
+      "region": 0,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 1,
+          "position": [
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 2,
+          "position": [
+            -5.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 3,
+          "position": [
+            5.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 4,
+          "position": [
+            5.0,
+            0.0
+          ]
+        }
+      ],
+      "anchor_pairs": [
+        {
+          "start_stamp": 1,
+          "end_stamp": 2,
+          "available_seconds": 300.00000000000006,
+          "required_seconds": 0.0,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 2,
+          "end_stamp": 3,
+          "available_seconds": 1000.0,
+          "required_seconds": 3333.333333333333,
+          "excess_km": 7.0
+        },
+        {
+          "start_stamp": 3,
+          "end_stamp": 4,
+          "available_seconds": 599.9999999999999,
+          "required_seconds": 0.0,
+          "excess_km": 0.0
+        }
+      ],
+      "failures": [
+        {
+          "kind": "unreachable",
+          "start_stamp": 2,
+          "end_stamp": 3,
+          "available_seconds": 1000.0,
+          "required_seconds": 3333.333333333333,
+          "excess_km": 7.0
+        }
+      ],
+      "positions": null,
+      "feasible": false
+    }
+  ]
+}

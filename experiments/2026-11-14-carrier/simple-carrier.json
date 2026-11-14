@@ -1,0 +1,89 @@
+{
+  "feasible": false,
+  "scope": "carrier motion for supplied fixed modes only",
+  "assumptions": [
+    "one independent carrier per disk",
+    "convex obstacle-free disks",
+    "piecewise linear UAV and carrier motion",
+    "speed limits only; no acceleration or carrier energy limit"
+  ],
+  "distance_tolerance_km": 1e-09,
+  "mode_tolerance_hours": 1e-12,
+  "times_hours": [
+    0.0,
+    0.008333333333333333,
+    0.06388888888888888,
+    0.07222222222222222
+  ],
+  "carriers": [
+    {
+      "region": 0,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 1,
+          "position": [
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 2,
+          "position": [
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "stamp": 3,
+          "position": [
+            1.0,
+            0.0
+          ]
+        }
+      ],
+      "anchor_pairs": [
+        {
+          "start_stamp": 0,
+          "end_stamp": 1,
+          "available_seconds": 30.0,
+          "required_seconds": 0.0,
+          "excess_km": 0.0
+        },
+        {
+          "start_stamp": 1,
+          "end_stamp": 2,
+          "available_seconds": 200.0,
+          "required_seconds": 666.6666666666666,
+          "excess_km": 1.4
+        },
+        {
+          "start_stamp": 2,
+          "end_stamp": 3,
+          "available_seconds": 29.999999999999993,
+          "required_seconds": 0.0,
+          "excess_km": 0.0
+        }
+      ],
+      "failures": [
+        {
+          "kind": "unreachable",
+          "start_stamp": 1,
+          "end_stamp": 2,
+          "available_seconds": 200.0,
+          "required_seconds": 666.6666666666666,
+          "excess_km": 1.4
+        }
+      ],
+      "positions": null,
+      "feasible": false
+    }
+  ]
+}

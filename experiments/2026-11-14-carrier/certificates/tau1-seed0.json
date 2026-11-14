@@ -1,0 +1,228 @@
+{
+  "feasible": true,
+  "scope": "carrier motion for supplied fixed modes only",
+  "assumptions": [
+    "one independent carrier per disk",
+    "convex obstacle-free disks",
+    "piecewise linear UAV and carrier motion",
+    "speed limits only; no acceleration or carrier energy limit"
+  ],
+  "distance_tolerance_km": 1e-09,
+  "mode_tolerance_hours": 1e-12,
+  "times_hours": [
+    0.0,
+    0.009413002133179266,
+    0.13997244633910166,
+    0.1502389294944697,
+    0.26866145743261677,
+    0.34135092377136966,
+    0.6071617098592135
+  ],
+  "carriers": [
+    {
+      "region": 0,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 4,
+          "position": [
+            -2.1356108101075053,
+            2.8767487358981922
+          ]
+        },
+        {
+          "stamp": 5,
+          "position": [
+            -2.6372918491508033,
+            2.2729162024709315
+          ]
+        }
+      ],
+      "anchor_pairs": [
+        {
+          "start_stamp": 4,
+          "end_stamp": 5,
+          "available_seconds": 261.6820788195104,
+          "required_seconds": 261.6820788159104,
+          "excess_km": 0.0
+        }
+      ],
+      "failures": [],
+      "positions": [
+        [
+          -2.1356108101075053,
+          2.8767487358981922
+        ],
+        [
+          -2.1356108101075053,
+          2.8767487358981922
+        ],
+        [
+          -2.1356108101075053,
+          2.8767487358981922
+        ],
+        [
+          -2.1356108101075053,
+          2.8767487358981922
+        ],
+        [
+          -2.1356108101075053,
+          2.8767487358981922
+        ],
+        [
+          -2.6372918491508033,
+          2.2729162024709315
+        ],
+        [
+          -2.6372918491508033,
+          2.2729162024709315
+        ]
+      ],
+      "feasible": true
+    },
+    {
+      "region": 1,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            1.5,
+            -2
+          ]
+        }
+      ],
+      "anchor_pairs": [],
+      "failures": [],
+      "positions": [
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ],
+        [
+          1.5,
+          -2
+        ]
+      ],
+      "feasible": true
+    },
+    {
+      "region": 2,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            8,
+            -5
+          ]
+        }
+      ],
+      "anchor_pairs": [],
+      "failures": [],
+      "positions": [
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ],
+        [
+          8,
+          -5
+        ]
+      ],
+      "feasible": true
+    },
+    {
+      "region": 3,
+      "initial_position_fixed": false,
+      "anchors": [
+        {
+          "stamp": 0,
+          "position": [
+            -5,
+            -7
+          ]
+        }
+      ],
+      "anchor_pairs": [],
+      "failures": [],
+      "positions": [
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ],
+        [
+          -5,
+          -7
+        ]
+      ],
+      "feasible": true
+    }
+  ],
+  "independent_check": {
+    "speed_excess_km": 0.0,
+    "region_excess_km": 0.0,
+    "contact_error_km": 0.0,
+    "initial_error_km": 0.0
+  }
+}
