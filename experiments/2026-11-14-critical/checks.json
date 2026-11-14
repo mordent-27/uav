@@ -1,0 +1,55 @@
+{
+  "duration": {
+    "segment_seconds": 30.0,
+    "charging_seconds": 50.91158087990056,
+    "negative_discharge_seconds": -20.911580879900562,
+    "battery": [
+      1.0,
+      0.7853390588114977,
+      0.8419117723451437
+    ],
+    "original_residual": 0.28284271247461906
+  },
+  "unit_change": {
+    "km_charge_seconds": 50.91158087990056,
+    "m_charge_seconds": 0.05091168685076916,
+    "description": "Spatial g and delta converted together; time remains in hours. No component normalization."
+  },
+  "battery_partition": {
+    "fd": "e*exp(-t^2)",
+    "same_total_duration": 1.0,
+    "final_energy": {
+      "1": 0.36787944117144233,
+      "2": 0.6065306597126334,
+      "10": 0.9048374180359601,
+      "100": 0.9900498337491679
+    }
+  },
+  "duplication": {
+    "single": 0.2,
+    "double": 0.14142135623730953,
+    "both_z_for_equality": 0.28284271247461906
+  },
+  "mesh": {
+    "49": {
+      "minimum_seconds": 1440,
+      "best_final_e": 0.0
+    },
+    "50": {
+      "minimum_seconds": 1470,
+      "best_final_e": -0.02083333333333326
+    }
+  },
+  "exact_visit": {
+    "phi": 0.19611613513818404,
+    "target": 0.2
+  },
+  "hinge": {
+    "paper_at_zero": 0.00025,
+    "alternative_at_zero": 0.0
+  },
+  "logsumexp": {
+    "naive_exponential_sum": 0.0,
+    "shifted_softmin": 1000.0
+  }
+}
