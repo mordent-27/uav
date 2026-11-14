@@ -99,7 +99,7 @@ def build_sources():
         (HERE/(variant+'-main.rs')).write_text(main)
 
 
-def run_one(binary,variant,case,expected_stages=13):
+def run_one(binary,variant,case,expected_stages=13,check_initial=True):
     name=case['name'];folder=HERE/variant/name;folder.mkdir(parents=True,exist_ok=True)
     path=folder/'raw.json'
     cmd=[str(binary),'solve',*case['flags'],'--verbose','--out',str(path)]
@@ -120,9 +120,10 @@ def run_one(binary,variant,case,expected_stages=13):
         path.write_text(json.dumps(d,separators=(',',':'),allow_nan=False)+'\n')
         prior=json.loads((PREV/'cap-comparison/capped'/name/'raw.json').read_text())
         assert d['instance']==prior['instance']
-        for key in ('r','e','s','c'):
-            va=d['init'][key];vb=prior['init'][key]
-            assert va==vb,(variant,name,key)
+        if check_initial:
+            for key in ('r','e','s','c'):
+                va=d['init'][key];vb=prior['init'][key]
+                assert va==vb,(variant,name,key)
         row.update(audit=audit.inspect(d),kkt_converged=d['metrics']['converged'],
             final_stationarity=d['stages'][-1]['stat'],final_smooth_feasibility=d['stages'][-1]['feas'])
         row['stage_domain']=[dict(stage=int(a),over_seconds=float(b),below_seconds=float(c))
