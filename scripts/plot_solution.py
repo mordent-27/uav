@@ -40,7 +40,8 @@ def main(src: str, dst: str) -> None:
         label = None
         if first[key]:
             first[key] = False
-            label = "charging on a station" if charging else f"this code ({d['metrics']['objective']:.4f} h)"
+            method = "fixed-mode timing" if "diagnostic" in d else "this code"
+            label = "charging on a station" if charging else f"{method} ({d['metrics']['objective']:.4f} h)"
         ax.plot([r[k][0], r[k + 1][0]], [r[k][1], r[k + 1][1]],
                 color="#0040d9" if charging else "k", ls=":" if charging else "-",
                 lw=2.4 if charging else 1.3, zorder=3, label=label)
@@ -85,9 +86,10 @@ def main(src: str, dst: str) -> None:
     a2.set_xlim(0, max(h["t"]) * 1.02)
 
     m = d["metrics"]
+    timing_label = "diagnostic time" if "diagnostic" in d else "solve time"
     fig.suptitle(
         f"objective {m['objective']:.4f} h   constraint violation {m['viol']:.1e}   "
-        f"solve time {m['seconds']:.2f} s",
+        f"{timing_label} {m['seconds']:.2f} s",
         fontsize=11,
     )
     fig.tight_layout()
