@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-15-fidelity/run.py", line 195, in <module>
+    solve(kind, budget)
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-15-fidelity/run.py", line 171, in solve
+    print(json.dumps(dict(kind=kind, budget=budget, **stages[-1], elapsed=monotonic()-start)), flush=True)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: dict() got multiple values for keyword argument 'budget'
