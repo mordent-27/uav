@@ -1,0 +1,27 @@
+{
+  "case": "tau3-seed2",
+  "group": "regression",
+  "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+  "baseline_reused": false,
+  "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+  "candidate_reuses_baseline": true,
+  "guard_action": "keep_original",
+  "guard_accepted": true,
+  "reason": null,
+  "steps": [
+    {
+      "script": "guard",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.5683450560027268
+    },
+    {
+      "script": "phase",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 5.6966221449984005
+    }
+  ],
+  "seconds": 6.266529065003851,
+  "error": null
+}

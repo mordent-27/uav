@@ -1,0 +1,545 @@
+{
+  "workers": 8,
+  "blas_threads": 1,
+  "affinity_cpus": 16,
+  "seconds": 24.078794569009915,
+  "jobs": [
+    {
+      "case": "fig1",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.4001281579985516
+        }
+      ],
+      "seconds": 0.40209693199722096,
+      "error": null
+    },
+    {
+      "case": "tau1-seed0",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.6250166230020113
+        }
+      ],
+      "seconds": 0.6261841099912999,
+      "error": null
+    },
+    {
+      "case": "tau1-seed1",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.38903938300791197
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 1.1917805749981198
+        }
+      ],
+      "seconds": 1.5822282919980353,
+      "error": null
+    },
+    {
+      "case": "tau1-seed2",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5634249889990315
+        }
+      ],
+      "seconds": 0.5645504480053205,
+      "error": null
+    },
+    {
+      "case": "tau1-seed3",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.380984596995404
+        }
+      ],
+      "seconds": 0.3820491210062755,
+      "error": null
+    },
+    {
+      "case": "tau3-seed0",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.4065133149997564
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 3.5919803120050346
+        }
+      ],
+      "seconds": 4.0007895109883975,
+      "error": null
+    },
+    {
+      "case": "tau3-seed1",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5455719799938379
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 4.206032971007517
+        }
+      ],
+      "seconds": 4.752963730992633,
+      "error": null
+    },
+    {
+      "case": "tau3-seed2",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5683450560027268
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 5.6966221449984005
+        }
+      ],
+      "seconds": 6.266529065003851,
+      "error": null
+    },
+    {
+      "case": "tau3-seed3",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.4133777280076174
+        }
+      ],
+      "seconds": 0.4142917179997312,
+      "error": null
+    },
+    {
+      "case": "tau5-seed0",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.42483631399227306
+        }
+      ],
+      "seconds": 0.426468871999532,
+      "error": null
+    },
+    {
+      "case": "tau5-seed1",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.6161629830021411
+        }
+      ],
+      "seconds": 0.6185931710060686,
+      "error": null
+    },
+    {
+      "case": "tau5-seed2",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.6815160719997948
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 10.976005526012159
+        }
+      ],
+      "seconds": 11.659478048997698,
+      "error": null
+    },
+    {
+      "case": "tau5-seed3",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+      "candidate_reuses_baseline": false,
+      "guard_action": "repair",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.559169619999011
+        },
+        {
+          "script": "initialize",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 0.5610493040003348
+        },
+        {
+          "script": "phase",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 2.6079399440059206
+        }
+      ],
+      "seconds": 3.730252367007779,
+      "error": null
+    },
+    {
+      "case": "tau7-seed0",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.4563224900048226
+        }
+      ],
+      "seconds": 0.4582861539965961,
+      "error": null
+    },
+    {
+      "case": "tau7-seed1",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5448351449886104
+        }
+      ],
+      "seconds": 0.5480420910025714,
+      "error": null
+    },
+    {
+      "case": "tau7-seed2",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed2",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+      "candidate_reuses_baseline": false,
+      "guard_action": "repair",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5381856460007839
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 17.186349326002528
+        },
+        {
+          "script": "initialize",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 0.5291026060003787
+        },
+        {
+          "script": "phase",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 4.532611085000099
+        }
+      ],
+      "seconds": 22.79003209801158,
+      "error": null
+    },
+    {
+      "case": "tau7-seed3",
+      "group": "regression",
+      "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau7-seed3",
+      "baseline_reused": true,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+      "candidate_reuses_baseline": false,
+      "guard_action": "repair",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.6784807900112355
+        },
+        {
+          "script": "initialize",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 0.7461718489939813
+        },
+        {
+          "script": "phase",
+          "kind": "repaired",
+          "returncode": 0,
+          "seconds": 4.367286774999229
+        }
+      ],
+      "seconds": 5.7962762669922085,
+      "error": null
+    },
+    {
+      "case": "tau1-seed101",
+      "group": "holdout",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5735475850087823
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 1.442812346998835
+        }
+      ],
+      "seconds": 2.0174873439973453,
+      "error": null
+    },
+    {
+      "case": "tau3-seed103",
+      "group": "holdout",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.6301628130022436
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 2.8671272869978566
+        }
+      ],
+      "seconds": 3.498732897991431,
+      "error": null
+    },
+    {
+      "case": "tau5-seed105",
+      "group": "holdout",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.5951214999950025
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 8.418612474997644
+        }
+      ],
+      "seconds": 9.015356435003923,
+      "error": null
+    },
+    {
+      "case": "tau7-seed107",
+      "group": "holdout",
+      "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+      "baseline_reused": false,
+      "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+      "candidate_reuses_baseline": true,
+      "guard_action": "keep_original",
+      "guard_accepted": true,
+      "reason": null,
+      "steps": [
+        {
+          "script": "guard",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 0.42274356199777685
+        },
+        {
+          "script": "phase",
+          "kind": "original",
+          "returncode": 0,
+          "seconds": 13.25009804299043
+        }
+      ],
+      "seconds": 13.674410583000281,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "case": "tau3-seed103",
+  "group": "holdout",
+  "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+  "baseline_reused": false,
+  "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+  "candidate_reuses_baseline": true,
+  "guard_action": "keep_original",
+  "guard_accepted": true,
+  "reason": null,
+  "steps": [
+    {
+      "script": "guard",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.6301628130022436
+    },
+    {
+      "script": "phase",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 2.8671272869978566
+    }
+  ],
+  "seconds": 3.498732897991431,
+  "error": null
+}

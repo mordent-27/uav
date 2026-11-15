@@ -1,0 +1,48 @@
+{
+  "stages": [
+    {
+      "stage": 13,
+      "outer": 7,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    }
+  ],
+  "completed_outer": 7,
+  "accepted_inner_points": 61,
+  "interrupted_accepted_points": 0,
+  "original_jacobian_stationarity_verified": true,
+  "restoration": {
+    "accepted": false,
+    "source": "solution.json",
+    "source_objective": 2.2497725983302828,
+    "source_common_kkt": {
+      "stat": 6.708117154345198e-09,
+      "feas": 8.067278059473507e-07,
+      "comp": 2.79851108851558e-10,
+      "dual": 0.0
+    },
+    "source_paper_units_kkt": {
+      "stat": 2.4149221755642714e-07,
+      "feas": 8.067278059473507e-07,
+      "comp": 3.532818482199218e-11,
+      "dual": 0.0
+    },
+    "limits": {
+      "residual": 1e-06,
+      "correction": 1e-06,
+      "kkt": 1e-06
+    },
+    "solver_status": "Maximum_Iterations_Exceeded",
+    "solver_success": false,
+    "iterations": 1500,
+    "raw_kkt": {
+      "stat": 2.477836822960787e-05,
+      "feas": 1.07715384991954,
+      "comp": 1.07715384991954,
+      "dual": 0.0
+    },
+    "reason": "solver flag or fixed-branch KKT of the returned point",
+    "seconds": 0.4922652150125941
+  }
+}

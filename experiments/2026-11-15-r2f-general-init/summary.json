@@ -1,0 +1,3558 @@
+{
+  "regression": {
+    "cases": 17,
+    "preserved_inputs": 14,
+    "repair_attempts": 3,
+    "physical_constructions_accepted": 3,
+    "fixed_branch_initializations_accepted": 3,
+    "baseline_kkt": 16,
+    "candidate_kkt": 17,
+    "candidate_both_scales_kkt": 17,
+    "baseline_restoration_accepted": 16,
+    "candidate_restoration_accepted": 16,
+    "gained_restoration": 1,
+    "lost_restoration": 1
+  },
+  "holdout": {
+    "cases": 4,
+    "preserved_inputs": 4,
+    "repair_attempts": 0,
+    "physical_constructions_accepted": 0,
+    "fixed_branch_initializations_accepted": 0,
+    "baseline_kkt": 4,
+    "candidate_kkt": 4,
+    "candidate_both_scales_kkt": 4,
+    "baseline_restoration_accepted": 4,
+    "candidate_restoration_accepted": 4,
+    "gained_restoration": 0,
+    "lost_restoration": 0
+  },
+  "cases": [
+    {
+      "case": "fig1",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.249000902703301e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.249000902703301e-16,
+            "viol_speed": 1.1102230246251565e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.07527301307133782,
+          "max_energy": 1,
+          "dense_min_energy": 0.07527301307133782,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.249000902703301e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.249000902703301e-16,
+            "viol_speed": 1.1102230246251565e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.07527301307133782,
+          "max_energy": 1,
+          "dense_min_energy": 0.07527301307133782,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "fig1",
+        "seconds": 0.01404634999926202,
+        "baseline_y_verified": true,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1002904431387135,
+        "hours": 2.1004732180111385,
+        "common_kkt": {
+          "stat": 7.732049556175014e-09,
+          "feas": 7.055392080825224e-07,
+          "comp": 1.0273203537858322e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.6537069808263425e-07,
+          "feas": 7.055392080825224e-07,
+          "comp": 2.8536676494050894e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076785655899201e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 11.596689714991953,
+        "restoration_seconds": 0.05252617399673909,
+        "verified_outer": 7,
+        "verified_inner": 305,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1002904431387135,
+        "hours": 2.1004732180111385,
+        "common_kkt": {
+          "stat": 7.732049556175014e-09,
+          "feas": 7.055392080825224e-07,
+          "comp": 1.0273203537858322e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.6537069808263425e-07,
+          "feas": 7.055392080825224e-07,
+          "comp": 2.8536676494050894e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076785655899201e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 11.596689714991953,
+        "restoration_seconds": 0.05252617399673909,
+        "verified_outer": 7,
+        "verified_inner": 305,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.40209693199722096,
+      "candidate_numerical_seconds": 11.663262238987954
+    },
+    {
+      "case": "tau1-seed0",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.220446049250313e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.12876062105009667,
+          "max_energy": 1,
+          "dense_min_energy": 0.12876062105009667,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.220446049250313e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.12876062105009667,
+          "max_energy": 1,
+          "dense_min_energy": 0.12876062105009667,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed0",
+        "seconds": 0.007751632991130464,
+        "baseline_y_verified": true,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.610262602800747,
+        "hours": 0.610306764971404,
+        "common_kkt": {
+          "stat": 8.410840933448238e-09,
+          "feas": 9.742008080489487e-07,
+          "comp": 1.5341305725780074e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.89718226742508e-07,
+          "feas": 9.742008080489487e-07,
+          "comp": 4.2614738127166873e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0067916167422197e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.3829198329913197,
+        "restoration_seconds": 0.016793820992461406,
+        "verified_outer": 6,
+        "verified_inner": 123,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.610262602800747,
+        "hours": 0.610306764971404,
+        "common_kkt": {
+          "stat": 8.410840933448238e-09,
+          "feas": 9.742008080489487e-07,
+          "comp": 1.5341305725780074e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.89718226742508e-07,
+          "feas": 9.742008080489487e-07,
+          "comp": 4.2614738127166873e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0067916167422197e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.3829198329913197,
+        "restoration_seconds": 0.016793820992461406,
+        "verified_outer": 6,
+        "verified_inner": 123,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.6261841099912999,
+      "candidate_numerical_seconds": 0.4074652869749116
+    },
+    {
+      "case": "tau1-seed1",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.1102230246251565e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.1102230246251565e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.17618757636176563,
+          "max_energy": 1,
+          "dense_min_energy": 0.17618757636176563,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.1102230246251565e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.1102230246251565e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.17618757636176563,
+          "max_energy": 1,
+          "dense_min_energy": 0.17618757636176563,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed1",
+        "seconds": 0.0035427109978627414,
+        "baseline_y_verified": false,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.5806776529329909,
+        "hours": 0.5807349470488428,
+        "common_kkt": {
+          "stat": 7.046067075479179e-09,
+          "feas": 7.901206148328704e-07,
+          "comp": 3.7788522311288375e-13,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.536584147172505e-07,
+          "feas": 7.901206148328704e-07,
+          "comp": 1.4210854715202004e-14,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0272974027003556e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.628120082008536,
+        "restoration_seconds": 0.01627481599280145,
+        "verified_outer": 6,
+        "verified_inner": 155,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.5806776529329909,
+        "hours": 0.5807349470488428,
+        "common_kkt": {
+          "stat": 7.046067075479179e-09,
+          "feas": 7.901206148328704e-07,
+          "comp": 3.7788522311288375e-13,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.536584147172505e-07,
+          "feas": 7.901206148328704e-07,
+          "comp": 1.4210854715202004e-14,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0272974027003556e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.628120082008536,
+        "restoration_seconds": 0.01627481599280145,
+        "verified_outer": 6,
+        "verified_inner": 155,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 1.5822282919980353,
+      "candidate_numerical_seconds": 0.6479376089992002
+    },
+    {
+      "case": "tau1-seed2",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1565852289650581,
+          "max_energy": 1,
+          "dense_min_energy": 0.1565852289650581,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1565852289650581,
+          "max_energy": 1,
+          "dense_min_energy": 0.1565852289650581,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed2",
+        "seconds": 0.0061420269921654835,
+        "baseline_y_verified": true,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.4694034392126891,
+        "hours": 0.4694345755915201,
+        "common_kkt": {
+          "stat": 6.813186001486393e-09,
+          "feas": 9.715040659896874e-07,
+          "comp": 2.005432632457005e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.446040305859043e-07,
+          "feas": 9.715040659896874e-07,
+          "comp": 5.570646201269458e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0069076683549838e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.36523488799866755,
+        "restoration_seconds": 0.014531642009387724,
+        "verified_outer": 6,
+        "verified_inner": 118,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.4694034392126891,
+        "hours": 0.4694345755915201,
+        "common_kkt": {
+          "stat": 6.813186001486393e-09,
+          "feas": 9.715040659896874e-07,
+          "comp": 2.005432632457005e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.446040305859043e-07,
+          "feas": 9.715040659896874e-07,
+          "comp": 5.570646201269458e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0069076683549838e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.36523488799866755,
+        "restoration_seconds": 0.014531642009387724,
+        "verified_outer": 6,
+        "verified_inner": 118,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.5645504480053205,
+      "candidate_numerical_seconds": 0.38590855700022075
+    },
+    {
+      "case": "tau1-seed3",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.7755575615628914e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 2.7755575615628914e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.19016616168351208,
+          "max_energy": 1,
+          "dense_min_energy": 0.19016616168351208,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.7755575615628914e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 2.7755575615628914e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.19016616168351208,
+          "max_energy": 1,
+          "dense_min_energy": 0.19016616168351208,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed3",
+        "seconds": 0.0037884560006204993,
+        "baseline_y_verified": true,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.6561488495438901,
+        "hours": 0.6561979912523659,
+        "common_kkt": {
+          "stat": 6.274965696356771e-09,
+          "feas": 9.222198450361532e-07,
+          "comp": 4.1897735281182236e-12,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 1.8015675284921429e-07,
+          "feas": 9.222198450361532e-07,
+          "comp": 1.16382598003284e-13,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0076787515522767e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.3705051309952978,
+        "restoration_seconds": 0.012565084995003417,
+        "verified_outer": 6,
+        "verified_inner": 138,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.6561488495438901,
+        "hours": 0.6561979912523659,
+        "common_kkt": {
+          "stat": 6.274965696356771e-09,
+          "feas": 9.222198450361532e-07,
+          "comp": 4.1897735281182236e-12,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 1.8015675284921429e-07,
+          "feas": 9.222198450361532e-07,
+          "comp": 1.16382598003284e-13,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0076787515522767e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.3705051309952978,
+        "restoration_seconds": 0.012565084995003417,
+        "verified_outer": 6,
+        "verified_inner": 138,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.3820491210062755,
+      "candidate_numerical_seconds": 0.3868586719909217
+    },
+    {
+      "case": "tau3-seed0",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.220446049250313e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.20234962552718272,
+          "max_energy": 1,
+          "dense_min_energy": 0.20234962552718272,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 2.220446049250313e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.20234962552718272,
+          "max_energy": 1,
+          "dense_min_energy": 0.20234962552718272,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau3-seed0",
+        "seconds": 0.006037621002178639,
+        "baseline_y_verified": false,
+        "native_stamps": 17,
+        "native_variables": 78
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.5682941701455957,
+        "hours": 1.5683572222133957,
+        "common_kkt": {
+          "stat": 6.70842963895129e-09,
+          "feas": 7.397517240996694e-07,
+          "comp": 3.472793927428164e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.4150346700224645e-07,
+          "feas": 7.397517240996694e-07,
+          "comp": 9.646649798411566e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 0.0,
+        "min_energy": 1.0069022504666236e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 2.8600493199919583,
+        "restoration_seconds": 0.04076147101295646,
+        "verified_outer": 7,
+        "verified_inner": 213,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.5682941701455957,
+        "hours": 1.5683572222133957,
+        "common_kkt": {
+          "stat": 6.70842963895129e-09,
+          "feas": 7.397517240996694e-07,
+          "comp": 3.472793927428164e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.4150346700224645e-07,
+          "feas": 7.397517240996694e-07,
+          "comp": 9.646649798411566e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 0.0,
+        "min_energy": 1.0069022504666236e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 2.8600493199919583,
+        "restoration_seconds": 0.04076147101295646,
+        "verified_outer": 7,
+        "verified_inner": 213,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 4.0007895109883975,
+      "candidate_numerical_seconds": 2.9068484120070934
+    },
+    {
+      "case": "tau3-seed1",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.34350763992892874,
+          "max_energy": 1,
+          "dense_min_energy": 0.34350763992892874,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.34350763992892874,
+          "max_energy": 1,
+          "dense_min_energy": 0.34350763992892874,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau3-seed1",
+        "seconds": 0.010424206004245207,
+        "baseline_y_verified": false,
+        "native_stamps": 17,
+        "native_variables": 78
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.8262464501889102,
+        "hours": 0.8264167168568919,
+        "common_kkt": {
+          "stat": 5.687487684517359e-09,
+          "feas": 8.505092607998107e-07,
+          "comp": 1.7306979875749295e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.0474955664262495e-07,
+          "feas": 8.505092607998107e-07,
+          "comp": 1.20187360248259e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0069829137204778e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 3.3866763709957013,
+        "restoration_seconds": 0.03021056299621705,
+        "verified_outer": 6,
+        "verified_inner": 251,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.8262464501889102,
+        "hours": 0.8264167168568919,
+        "common_kkt": {
+          "stat": 5.687487684517359e-09,
+          "feas": 8.505092607998107e-07,
+          "comp": 1.7306979875749295e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.0474955664262495e-07,
+          "feas": 8.505092607998107e-07,
+          "comp": 1.20187360248259e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0069829137204778e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 3.3866763709957013,
+        "restoration_seconds": 0.03021056299621705,
+        "verified_outer": 6,
+        "verified_inner": 251,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 4.752963730992633,
+      "candidate_numerical_seconds": 3.4273111399961635
+    },
+    {
+      "case": "tau3-seed2",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14343205234449363,
+          "max_energy": 1,
+          "dense_min_energy": 0.14343205234449363,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14343205234449363,
+          "max_energy": 1,
+          "dense_min_energy": 0.14343205234449363,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau3-seed2",
+        "seconds": 0.01208459799818229,
+        "baseline_y_verified": false,
+        "native_stamps": 17,
+        "native_variables": 78
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.9413611337573815,
+        "hours": 0.9415408355047373,
+        "common_kkt": {
+          "stat": 6.979031118446875e-09,
+          "feas": 9.000242109780251e-07,
+          "comp": 1.5461050564824497e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.512451202640875e-07,
+          "feas": 9.000242109780251e-07,
+          "comp": 4.2947362680068046e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076206202747073e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 4.566082493998692,
+        "restoration_seconds": 0.24778722699556965,
+        "verified_outer": 6,
+        "verified_inner": 294,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.9413611337573815,
+        "hours": 0.9415408355047373,
+        "common_kkt": {
+          "stat": 6.979031118446875e-09,
+          "feas": 9.000242109780251e-07,
+          "comp": 1.5461050564824497e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.512451202640875e-07,
+          "feas": 9.000242109780251e-07,
+          "comp": 4.2947362680068046e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076206202747073e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 4.566082493998692,
+        "restoration_seconds": 0.24778722699556965,
+        "verified_outer": 6,
+        "verified_inner": 294,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 6.266529065003851,
+      "candidate_numerical_seconds": 4.825954318992444
+    },
+    {
+      "case": "tau3-seed3",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 8.881784197001252e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.3877787807814457e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.42065755585880943,
+          "max_energy": 1,
+          "dense_min_energy": 0.42065755585880943,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 8.881784197001252e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.3877787807814457e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.42065755585880943,
+          "max_energy": 1,
+          "dense_min_energy": 0.42065755585880943,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau3-seed3",
+        "seconds": 0.008747697997023351,
+        "baseline_y_verified": true,
+        "native_stamps": 17,
+        "native_variables": 78
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.085631947758035,
+        "hours": 1.085727316479826,
+        "common_kkt": {
+          "stat": 5.866312768887383e-09,
+          "feas": 9.194335992643993e-07,
+          "comp": 3.4178122758551376e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.1118725967994578e-07,
+          "feas": 9.194335992643993e-07,
+          "comp": 2.3734807471216232e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0062328303916956e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 1.6484661079884972,
+        "restoration_seconds": 0.02066468099656049,
+        "verified_outer": 6,
+        "verified_inner": 182,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.085631947758035,
+        "hours": 1.085727316479826,
+        "common_kkt": {
+          "stat": 5.866312768887383e-09,
+          "feas": 9.194335992643993e-07,
+          "comp": 3.4178122758551376e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.1118725967994578e-07,
+          "feas": 9.194335992643993e-07,
+          "comp": 2.3734807471216232e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0062328303916956e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 1.6484661079884972,
+        "restoration_seconds": 0.02066468099656049,
+        "verified_outer": 6,
+        "verified_inner": 182,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.4142917179997312,
+      "candidate_numerical_seconds": 1.677878486982081
+    },
+    {
+      "case": "tau5-seed0",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14728850435993002,
+          "max_energy": 1,
+          "dense_min_energy": 0.14728850435993002,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14728850435993002,
+          "max_energy": 1,
+          "dense_min_energy": 0.14728850435993002,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau5-seed0",
+        "seconds": 0.01194772899907548,
+        "baseline_y_verified": true,
+        "native_stamps": 27,
+        "native_variables": 128
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.5888337143517215,
+        "hours": 2.5889528785154887,
+        "common_kkt": {
+          "stat": 1.49839478533198e-08,
+          "feas": 7.397640717987045e-07,
+          "comp": 3.4728164094444125e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.4935580989502455e-07,
+          "feas": 7.397640717987045e-07,
+          "comp": 9.646712248456701e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0055587917889852e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 5.4309948940062895,
+        "restoration_seconds": 0.2321275589929428,
+        "verified_outer": 7,
+        "verified_inner": 278,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.5888337143517215,
+        "hours": 2.5889528785154887,
+        "common_kkt": {
+          "stat": 1.49839478533198e-08,
+          "feas": 7.397640717987045e-07,
+          "comp": 3.4728164094444125e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.4935580989502455e-07,
+          "feas": 7.397640717987045e-07,
+          "comp": 9.646712248456701e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0055587917889852e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 5.4309948940062895,
+        "restoration_seconds": 0.2321275589929428,
+        "verified_outer": 7,
+        "verified_inner": 278,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.426468871999532,
+      "candidate_numerical_seconds": 5.675070181998308
+    },
+    {
+      "case": "tau5-seed1",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1753772604397188,
+          "max_energy": 1,
+          "dense_min_energy": 0.1753772604397188,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1753772604397188,
+          "max_energy": 1,
+          "dense_min_energy": 0.1753772604397188,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau5-seed1",
+        "seconds": 0.020829309010878205,
+        "baseline_y_verified": true,
+        "native_stamps": 27,
+        "native_variables": 128
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1456829059144704,
+        "hours": 2.145959989828828,
+        "common_kkt": {
+          "stat": 8.414665896171334e-09,
+          "feas": 9.016222458251618e-07,
+          "comp": 1.0455628494340384e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.0292797226216805e-07,
+          "feas": 9.016222458251618e-07,
+          "comp": 7.260853121069712e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 3.469446951953614e-17,
+        "min_energy": 1.0076785961210533e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 7.145231400994817,
+        "restoration_seconds": 0.037705625989474356,
+        "verified_outer": 6,
+        "verified_inner": 308,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1456829059144704,
+        "hours": 2.145959989828828,
+        "common_kkt": {
+          "stat": 8.414665896171334e-09,
+          "feas": 9.016222458251618e-07,
+          "comp": 1.0455628494340384e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.0292797226216805e-07,
+          "feas": 9.016222458251618e-07,
+          "comp": 7.260853121069712e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 3.469446951953614e-17,
+        "min_energy": 1.0076785961210533e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 7.145231400994817,
+        "restoration_seconds": 0.037705625989474356,
+        "verified_outer": 6,
+        "verified_inner": 308,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.6185931710060686,
+      "candidate_numerical_seconds": 7.203766335995169
+    },
+    {
+      "case": "tau5-seed2",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14343205234449363,
+          "max_energy": 1,
+          "dense_min_energy": 0.14343205234449363,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14343205234449363,
+          "max_energy": 1,
+          "dense_min_energy": 0.14343205234449363,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau5-seed2",
+        "seconds": 0.01783384299778845,
+        "baseline_y_verified": false,
+        "native_stamps": 27,
+        "native_variables": 128
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.5405834254074222,
+        "hours": 1.540919633820804,
+        "common_kkt": {
+          "stat": 9.561572929250861e-09,
+          "feas": 8.957954562428642e-07,
+          "comp": 1.5460796393140797e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.576099737972015e-07,
+          "feas": 8.957954562428642e-07,
+          "comp": 4.2946656647613324e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0075841050394274e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 9.855036241991911,
+        "restoration_seconds": 0.32968869399337564,
+        "verified_outer": 6,
+        "verified_inner": 362,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.5405834254074222,
+        "hours": 1.540919633820804,
+        "common_kkt": {
+          "stat": 9.561572929250861e-09,
+          "feas": 8.957954562428642e-07,
+          "comp": 1.5460796393140797e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.576099737972015e-07,
+          "feas": 8.957954562428642e-07,
+          "comp": 4.2946656647613324e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0075841050394274e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 9.855036241991911,
+        "restoration_seconds": 0.32968869399337564,
+        "verified_outer": 6,
+        "verified_inner": 362,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 11.659478048997698,
+      "candidate_numerical_seconds": 10.202558778983075
+    },
+    {
+      "case": "tau5-seed3",
+      "group": "regression",
+      "action": "repair",
+      "guard": {
+        "accepted": true,
+        "action": "repair",
+        "original_audit": {
+          "accepted": false,
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": -0.19675404958543197,
+          "max_energy": 1,
+          "dense_min_energy": -0.19675404958543197,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [
+          {
+            "stamp": 20,
+            "region": 0,
+            "before": [
+              -4.818048538914035,
+              3.7919726854802964
+            ],
+            "after": [
+              -2.320458570568938,
+              2.57496864039335
+            ]
+          }
+        ],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.08382093514804123,
+          "max_energy": 1,
+          "dense_min_energy": 0.08382093514804123,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "objective_hours": 4.115653693834488,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "same_stamps": true,
+        "case": "tau5-seed3",
+        "seconds": 0.11570175299129914,
+        "baseline_y_verified": true,
+        "native_stamps": 27,
+        "native_variables": 128
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.2525641210086067,
+        "hours": 2.25211762369599,
+        "common_kkt": {
+          "stat": 3.357306656986969e-08,
+          "feas": 1.763387393017516e-08,
+          "comp": 1.2206737031023058e-13,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 9.408885566219993e-07,
+          "feas": 1.763387393017516e-08,
+          "comp": 2.842170943040401e-14,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.001446403581241e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 12.109936241002288,
+        "restoration_seconds": 0.13130417099455371,
+        "verified_outer": 70,
+        "verified_inner": 610,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": false,
+        "raw_hours": 2.2497725983302828,
+        "hours": null,
+        "common_kkt": {
+          "stat": 6.708117154345198e-09,
+          "feas": 8.067278059473507e-07,
+          "comp": 2.79851108851558e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.4149221755642714e-07,
+          "feas": 8.067278059473507e-07,
+          "comp": 3.532818482199218e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_status": "Maximum_Iterations_Exceeded",
+        "restoration_reason": "solver flag or fixed-branch KKT of the returned point",
+        "al_seconds": 1.4983218150009634,
+        "restoration_seconds": 0.4922652150125941,
+        "verified_outer": 7,
+        "verified_inner": 61,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": false,
+      "initialization": {
+        "case": "tau5-seed3",
+        "accepted": true,
+        "input_only": true,
+        "moving_geometry": true,
+        "initial_objective": 2.8874367949445667,
+        "initial_min_energy": -0.19675404958543197,
+        "initial_modes": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1
+        ],
+        "initial_task_stamps": [
+          3,
+          8,
+          13,
+          18,
+          21
+        ],
+        "stamps": 27,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 15,
+        "raw_kkt": {
+          "stat": 3.054610965522557e-11,
+          "feas": 1.5987211554602255e-15,
+          "comp": 4.88825922844428e-09,
+          "dual": 0.0
+        },
+        "duration_correction": 0.0,
+        "objective": 2.2500213670302482,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0029410080214518e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 3.054610965522557e-11,
+          "feas": 0.0,
+          "comp": 4.888262518909173e-09,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "max_position_change_km": 2.7039232416978276,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "seconds": 0.04555429700121749
+      },
+      "change_seconds": null,
+      "measured_new_work_seconds": 3.730252367007779,
+      "candidate_numerical_seconds": 2.151843080006074
+    },
+    {
+      "case": "tau7-seed0",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14728850435993002,
+          "max_energy": 1,
+          "dense_min_energy": 0.14728850435993002,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14728850435993002,
+          "max_energy": 1,
+          "dense_min_energy": 0.14728850435993002,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau7-seed0",
+        "seconds": 0.016926586991758086,
+        "baseline_y_verified": true,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.0020602586616003,
+        "hours": 3.0022296618070463,
+        "common_kkt": {
+          "stat": 9.922241771265217e-09,
+          "feas": 7.397634168407373e-07,
+          "comp": 3.472815784943961e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.519144724517531e-07,
+          "feas": 7.397634168407373e-07,
+          "comp": 9.646710513733225e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0071601275196684e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 13.234439430991188,
+        "restoration_seconds": 0.03593190301035065,
+        "verified_outer": 7,
+        "verified_inner": 379,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.0020602586616003,
+        "hours": 3.0022296618070463,
+        "common_kkt": {
+          "stat": 9.922241771265217e-09,
+          "feas": 7.397634168407373e-07,
+          "comp": 3.472815784943961e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.519144724517531e-07,
+          "feas": 7.397634168407373e-07,
+          "comp": 9.646710513733225e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0071601275196684e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 13.234439430991188,
+        "restoration_seconds": 0.03593190301035065,
+        "verified_outer": 7,
+        "verified_inner": 379,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.4582861539965961,
+      "candidate_numerical_seconds": 13.287297920993296
+    },
+    {
+      "case": "tau7-seed1",
+      "group": "regression",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 8.881784197001252e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.09272230089148059,
+          "max_energy": 1,
+          "dense_min_energy": 0.09272230089148059,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 8.881784197001252e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.09272230089148059,
+          "max_energy": 1,
+          "dense_min_energy": 0.09272230089148059,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau7-seed1",
+        "seconds": 0.016676213999744505,
+        "baseline_y_verified": true,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.2539303707704517,
+        "hours": 3.254270328518145,
+        "common_kkt": {
+          "stat": 8.987749839511894e-09,
+          "feas": 8.70881214362477e-07,
+          "comp": 2.2013020280271834e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.958515674666984e-07,
+          "feas": 8.70881214362477e-07,
+          "comp": 1.5286819639077662e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0065096367473103e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 12.842374650004786,
+        "restoration_seconds": 0.056330237988731824,
+        "verified_outer": 7,
+        "verified_inner": 366,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.2539303707704517,
+        "hours": 3.254270328518145,
+        "common_kkt": {
+          "stat": 8.987749839511894e-09,
+          "feas": 8.70881214362477e-07,
+          "comp": 2.2013020280271834e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.958515674666984e-07,
+          "feas": 8.70881214362477e-07,
+          "comp": 1.5286819639077662e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0065096367473103e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 12.842374650004786,
+        "restoration_seconds": 0.056330237988731824,
+        "verified_outer": 7,
+        "verified_inner": 366,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 0.5480420910025714,
+      "candidate_numerical_seconds": 12.915381101993262
+    },
+    {
+      "case": "tau7-seed2",
+      "group": "regression",
+      "action": "repair",
+      "guard": {
+        "accepted": true,
+        "action": "repair",
+        "original_audit": {
+          "accepted": false,
+          "original_residuals": {
+            "viol": 0.04317544567444731,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 1.7763568394002505e-15,
+            "viol_bounds": 0.04317544567444731,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": -0.04317544567444731,
+          "max_energy": 1,
+          "dense_min_energy": -0.04317544567444731,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 5.551115123125783e-17,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.7763568394002505e-15,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 1.7763568394002505e-15,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.04682455432555266,
+          "max_energy": 1,
+          "dense_min_energy": 0.04682455432555266,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "objective_hours": 4.468538049843284,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "same_stamps": true,
+        "case": "tau7-seed2",
+        "seconds": 0.12197578200721182,
+        "baseline_y_verified": false,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1157997089527782,
+        "hours": 2.1160714865610144,
+        "common_kkt": {
+          "stat": 8.023660534595134e-09,
+          "feas": 6.37486161993747e-07,
+          "comp": 2.319359079794303e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.871425783812498e-07,
+          "feas": 6.37486161993747e-07,
+          "comp": 7.844391802791506e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 13,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0039578057785548e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 16.31998061700142,
+        "restoration_seconds": 0.057484994002152234,
+        "verified_outer": 7,
+        "verified_inner": 478,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.1193283545951833,
+        "hours": 2.119553467162956,
+        "common_kkt": {
+          "stat": 9.242834643485853e-09,
+          "feas": 6.374861619910365e-07,
+          "comp": 3.2758071255578614e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.387513227120053e-07,
+          "feas": 6.374861619910365e-07,
+          "comp": 9.099464237660726e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0039578057785548e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 4.022568694999791,
+        "restoration_seconds": 0.05131153599359095,
+        "verified_outer": 7,
+        "verified_inner": 151,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": false,
+      "initialization": {
+        "case": "tau7-seed2",
+        "accepted": true,
+        "input_only": true,
+        "moving_geometry": true,
+        "initial_objective": 2.816551539400368,
+        "initial_min_energy": -0.04317544567444731,
+        "initial_modes": [
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1
+        ],
+        "initial_task_stamps": [
+          3,
+          8,
+          13,
+          18,
+          23,
+          28,
+          33
+        ],
+        "stamps": 37,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 741,
+        "raw_kkt": {
+          "stat": 4.072467089378567e-11,
+          "feas": 8.15347789284715e-14,
+          "comp": 1.1856706798596406e-07,
+          "dual": 0.0
+        },
+        "duration_correction": 0.0,
+        "objective": 2.119553467201268,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0039577835740943e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 4.072467089378567e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 1.1856706798596406e-07,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "max_position_change_km": 2.96336741466121,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "seconds": 0.18893869999737944
+      },
+      "change_seconds": 12.535130166990172,
+      "measured_new_work_seconds": 22.79003209801158,
+      "candidate_numerical_seconds": 4.384794712997973
+    },
+    {
+      "case": "tau7-seed3",
+      "group": "regression",
+      "action": "repair",
+      "guard": {
+        "accepted": true,
+        "action": "repair",
+        "original_audit": {
+          "accepted": false,
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": -0.19675404958543197,
+          "max_energy": 1,
+          "dense_min_energy": -0.19675404958543197,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [
+          {
+            "stamp": 20,
+            "region": 0,
+            "before": [
+              -4.818048538914035,
+              3.7919726854802964
+            ],
+            "after": [
+              -2.320458570568938,
+              2.57496864039335
+            ]
+          }
+        ],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.09136412736526334,
+          "max_energy": 1,
+          "dense_min_energy": 0.09136412736526334,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "objective_hours": 5.874915410487512,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "same_stamps": true,
+        "case": "tau7-seed3",
+        "seconds": 0.16738101800729055,
+        "baseline_y_verified": true,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau7-seed3",
+        "common_pass": false,
+        "physical_pass": false,
+        "restoration_accepted": false,
+        "raw_hours": 3.60232680418119,
+        "hours": null,
+        "common_kkt": {
+          "stat": 1.5966564150135691,
+          "feas": 0.009564259379400801,
+          "comp": 0.009564259379400801,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 57.47963094048849,
+          "feas": 0.0008264288496104286,
+          "comp": 0.00026567387165002225,
+          "dual": 0.0
+        },
+        "stop": "timeout",
+        "charges": 13,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_status": null,
+        "restoration_reason": null,
+        "al_seconds": 120.03613449000113,
+        "restoration_seconds": 0.0,
+        "verified_outer": 177,
+        "verified_inner": 4183,
+        "interrupted_inner": 14
+      },
+      "baseline_reused": true,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.105498691447325,
+        "hours": 3.105837715419858,
+        "common_kkt": {
+          "stat": 9.152507467962638e-09,
+          "feas": 7.60542099029443e-07,
+          "comp": 1.3435427145824796e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.2949026884665495e-07,
+          "feas": 7.60542099029443e-07,
+          "comp": 3.7320630960624435e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.00383766854506e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 3.7149800570041407,
+        "restoration_seconds": 0.04713018800248392,
+        "verified_outer": 7,
+        "verified_inner": 91,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": false,
+      "initialization": {
+        "case": "tau7-seed3",
+        "accepted": true,
+        "input_only": true,
+        "moving_geometry": true,
+        "initial_objective": 4.14475693879245,
+        "initial_min_energy": -0.19675404958543197,
+        "initial_modes": [
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "initial_task_stamps": [
+          3,
+          8,
+          13,
+          18,
+          21,
+          28,
+          33
+        ],
+        "stamps": 37,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 55,
+        "raw_kkt": {
+          "stat": 5.28951882294848e-12,
+          "feas": 3.197442310920451e-15,
+          "comp": 7.0282921913793675e-09,
+          "dual": 0.0
+        },
+        "duration_correction": 0.0,
+        "objective": 3.1058377155525294,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.00383766854506e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 5.28951882294848e-12,
+          "feas": 1.598721179283027e-15,
+          "comp": 7.028291472954371e-09,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "max_position_change_km": 2.7039232416921104,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "seconds": 0.07172408800397534
+      },
+      "change_seconds": null,
+      "measured_new_work_seconds": 5.7962762669922085,
+      "candidate_numerical_seconds": 4.0012153510178905
+    },
+    {
+      "case": "tau1-seed101",
+      "group": "holdout",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14181432129096883,
+          "max_energy": 1,
+          "dense_min_energy": 0.14181432129096883,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 5.551115123125783e-17,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.14181432129096883,
+          "max_energy": 1,
+          "dense_min_energy": 0.14181432129096883,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 5.551115123125783e-17,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed101",
+        "seconds": 0.006242357005248778,
+        "baseline_y_verified": false,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.6000726969225989,
+        "hours": 0.6001179960673875,
+        "common_kkt": {
+          "stat": 1.3360547737595319e-08,
+          "feas": 9.94269164817426e-07,
+          "comp": 1.6279080583547767e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.633571397683056e-07,
+          "feas": 9.94269164817426e-07,
+          "comp": 4.5219668287632686e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 4.163336342344337e-17,
+        "min_energy": 1.0066052547053062e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.7227411479980219,
+        "restoration_seconds": 0.023487578000640497,
+        "verified_outer": 6,
+        "verified_inner": 118,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 0.6000726969225989,
+        "hours": 0.6001179960673875,
+        "common_kkt": {
+          "stat": 1.3360547737595319e-08,
+          "feas": 9.94269164817426e-07,
+          "comp": 1.6279080583547767e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.633571397683056e-07,
+          "feas": 9.94269164817426e-07,
+          "comp": 4.5219668287632686e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 2,
+        "original_residual": 4.163336342344337e-17,
+        "min_energy": 1.0066052547053062e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 0.7227411479980219,
+        "restoration_seconds": 0.023487578000640497,
+        "verified_outer": 6,
+        "verified_inner": 118,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 2.0174873439973453,
+      "candidate_numerical_seconds": 0.7524710830039112
+    },
+    {
+      "case": "tau3-seed103",
+      "group": "holdout",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.491862189340054e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1622376040912441,
+          "max_energy": 1,
+          "dense_min_energy": 0.1622376040912441,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.491862189340054e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1622376040912441,
+          "max_energy": 1,
+          "dense_min_energy": 0.1622376040912441,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau3-seed103",
+        "seconds": 0.01276558599784039,
+        "baseline_y_verified": false,
+        "native_stamps": 17,
+        "native_variables": 78
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.418812827255473,
+        "hours": 1.4190120718802424,
+        "common_kkt": {
+          "stat": 8.893731652371962e-09,
+          "feas": 7.167646044310911e-07,
+          "comp": 3.250419933209514e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.2017433948539065e-07,
+          "feas": 7.167646044310911e-07,
+          "comp": 9.028944258915317e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.004882865807133e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 2.103605060998234,
+        "restoration_seconds": 0.0608475759945577,
+        "verified_outer": 7,
+        "verified_inner": 176,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 1.418812827255473,
+        "hours": 1.4190120718802424,
+        "common_kkt": {
+          "stat": 8.893731652371962e-09,
+          "feas": 7.167646044310911e-07,
+          "comp": 3.250419933209514e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.2017433948539065e-07,
+          "feas": 7.167646044310911e-07,
+          "comp": 9.028944258915317e-12,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 6,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.004882865807133e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 2.103605060998234,
+        "restoration_seconds": 0.0608475759945577,
+        "verified_outer": 7,
+        "verified_inner": 176,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 3.498732897991431,
+      "candidate_numerical_seconds": 2.177218222990632
+    },
+    {
+      "case": "tau5-seed105",
+      "group": "holdout",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1925210823747201,
+          "max_energy": 1,
+          "dense_min_energy": 0.1925210823747201,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 2.7755575615628914e-17,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 4.440892098500626e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.1925210823747201,
+          "max_energy": 1,
+          "dense_min_energy": 0.1925210823747201,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 2.7755575615628914e-17,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau5-seed105",
+        "seconds": 0.02002263300528284,
+        "baseline_y_verified": false,
+        "native_stamps": 27,
+        "native_variables": 128
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.0951341112465762,
+        "hours": 2.0952585851225436,
+        "common_kkt": {
+          "stat": 7.634492303775096e-09,
+          "feas": 6.636752179560142e-07,
+          "comp": 4.242481990712754e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.748417229359035e-07,
+          "feas": 6.636752179560142e-07,
+          "comp": 1.1784672196424317e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076762535504713e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 7.731046607004828,
+        "restoration_seconds": 0.03029776900075376,
+        "verified_outer": 7,
+        "verified_inner": 364,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 2.0951341112465762,
+        "hours": 2.0952585851225436,
+        "common_kkt": {
+          "stat": 7.634492303775096e-09,
+          "feas": 6.636752179560142e-07,
+          "comp": 4.242481990712754e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.748417229359035e-07,
+          "feas": 6.636752179560142e-07,
+          "comp": 1.1784672196424317e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 10,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076762535504713e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 7.731046607004828,
+        "restoration_seconds": 0.03029776900075376,
+        "verified_outer": 7,
+        "verified_inner": 364,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 9.015356435003923,
+      "candidate_numerical_seconds": 7.781367009010864
+    },
+    {
+      "case": "tau7-seed107",
+      "group": "holdout",
+      "action": "keep_original",
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.491862189340054e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.03453718545588225,
+          "max_energy": 1,
+          "dense_min_energy": 0.03453718545588225,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 1.491862189340054e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.03453718545588225,
+          "max_energy": 1,
+          "dense_min_energy": 0.03453718545588225,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 1.1102230246251565e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau7-seed107",
+        "seconds": 0.01581806999456603,
+        "baseline_y_verified": false,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "baseline": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.8110702633053877,
+        "hours": 3.8113850344809466,
+        "common_kkt": {
+          "stat": 8.936072499249942e-09,
+          "feas": 7.153219455612297e-07,
+          "comp": 4.4336365828678836e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.2169860997299793e-07,
+          "feas": 7.153219455612297e-07,
+          "comp": 1.231565717463301e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.007678540609902e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 12.393670342004043,
+        "restoration_seconds": 0.046882890004781075,
+        "verified_outer": 7,
+        "verified_inner": 358,
+        "interrupted_inner": 0
+      },
+      "baseline_reused": false,
+      "candidate": {
+        "path": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+        "common_pass": true,
+        "physical_pass": true,
+        "restoration_accepted": true,
+        "raw_hours": 3.8110702633053877,
+        "hours": 3.8113850344809466,
+        "common_kkt": {
+          "stat": 8.936072499249942e-09,
+          "feas": 7.153219455612297e-07,
+          "comp": 4.4336365828678836e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.2169860997299793e-07,
+          "feas": 7.153219455612297e-07,
+          "comp": 1.231565717463301e-11,
+          "dual": 0.0
+        },
+        "stop": "kkt",
+        "charges": 14,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.007678540609902e-08,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "al_seconds": 12.393670342004043,
+        "restoration_seconds": 0.046882890004781075,
+        "verified_outer": 7,
+        "verified_inner": 358,
+        "interrupted_inner": 0
+      },
+      "candidate_reuses_baseline": true,
+      "initialization": null,
+      "change_seconds": 0.0,
+      "measured_new_work_seconds": 13.674410583000281,
+      "candidate_numerical_seconds": 12.45637130200339
+    }
+  ],
+  "new_phases": 13,
+  "new_outer": 86,
+  "new_inner": 3072,
+  "new_interrupted": 0,
+  "execution": {
+    "workers": 8,
+    "blas_threads": 1,
+    "affinity_cpus": 16,
+    "seconds": 24.078794569009915,
+    "jobs": [
+      {
+        "case": "fig1",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.4001281579985516
+          }
+        ],
+        "seconds": 0.40209693199722096,
+        "error": null
+      },
+      {
+        "case": "tau1-seed0",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.6250166230020113
+          }
+        ],
+        "seconds": 0.6261841099912999,
+        "error": null
+      },
+      {
+        "case": "tau1-seed1",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.38903938300791197
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 1.1917805749981198
+          }
+        ],
+        "seconds": 1.5822282919980353,
+        "error": null
+      },
+      {
+        "case": "tau1-seed2",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5634249889990315
+          }
+        ],
+        "seconds": 0.5645504480053205,
+        "error": null
+      },
+      {
+        "case": "tau1-seed3",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.380984596995404
+          }
+        ],
+        "seconds": 0.3820491210062755,
+        "error": null
+      },
+      {
+        "case": "tau3-seed0",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.4065133149997564
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 3.5919803120050346
+          }
+        ],
+        "seconds": 4.0007895109883975,
+        "error": null
+      },
+      {
+        "case": "tau3-seed1",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5455719799938379
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 4.206032971007517
+          }
+        ],
+        "seconds": 4.752963730992633,
+        "error": null
+      },
+      {
+        "case": "tau3-seed2",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5683450560027268
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 5.6966221449984005
+          }
+        ],
+        "seconds": 6.266529065003851,
+        "error": null
+      },
+      {
+        "case": "tau3-seed3",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.4133777280076174
+          }
+        ],
+        "seconds": 0.4142917179997312,
+        "error": null
+      },
+      {
+        "case": "tau5-seed0",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.42483631399227306
+          }
+        ],
+        "seconds": 0.426468871999532,
+        "error": null
+      },
+      {
+        "case": "tau5-seed1",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.6161629830021411
+          }
+        ],
+        "seconds": 0.6185931710060686,
+        "error": null
+      },
+      {
+        "case": "tau5-seed2",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.6815160719997948
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 10.976005526012159
+          }
+        ],
+        "seconds": 11.659478048997698,
+        "error": null
+      },
+      {
+        "case": "tau5-seed3",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+        "candidate_reuses_baseline": false,
+        "guard_action": "repair",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.559169619999011
+          },
+          {
+            "script": "initialize",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 0.5610493040003348
+          },
+          {
+            "script": "phase",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 2.6079399440059206
+          }
+        ],
+        "seconds": 3.730252367007779,
+        "error": null
+      },
+      {
+        "case": "tau7-seed0",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.4563224900048226
+          }
+        ],
+        "seconds": 0.4582861539965961,
+        "error": null
+      },
+      {
+        "case": "tau7-seed1",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5448351449886104
+          }
+        ],
+        "seconds": 0.5480420910025714,
+        "error": null
+      },
+      {
+        "case": "tau7-seed2",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed2",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+        "candidate_reuses_baseline": false,
+        "guard_action": "repair",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5381856460007839
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 17.186349326002528
+          },
+          {
+            "script": "initialize",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 0.5291026060003787
+          },
+          {
+            "script": "phase",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 4.532611085000099
+          }
+        ],
+        "seconds": 22.79003209801158,
+        "error": null
+      },
+      {
+        "case": "tau7-seed3",
+        "group": "regression",
+        "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau7-seed3",
+        "baseline_reused": true,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+        "candidate_reuses_baseline": false,
+        "guard_action": "repair",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.6784807900112355
+          },
+          {
+            "script": "initialize",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 0.7461718489939813
+          },
+          {
+            "script": "phase",
+            "kind": "repaired",
+            "returncode": 0,
+            "seconds": 4.367286774999229
+          }
+        ],
+        "seconds": 5.7962762669922085,
+        "error": null
+      },
+      {
+        "case": "tau1-seed101",
+        "group": "holdout",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5735475850087823
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 1.442812346998835
+          }
+        ],
+        "seconds": 2.0174873439973453,
+        "error": null
+      },
+      {
+        "case": "tau3-seed103",
+        "group": "holdout",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.6301628130022436
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 2.8671272869978566
+          }
+        ],
+        "seconds": 3.498732897991431,
+        "error": null
+      },
+      {
+        "case": "tau5-seed105",
+        "group": "holdout",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.5951214999950025
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 8.418612474997644
+          }
+        ],
+        "seconds": 9.015356435003923,
+        "error": null
+      },
+      {
+        "case": "tau7-seed107",
+        "group": "holdout",
+        "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+        "baseline_reused": false,
+        "candidate": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+        "candidate_reuses_baseline": true,
+        "guard_action": "keep_original",
+        "guard_accepted": true,
+        "reason": null,
+        "steps": [
+          {
+            "script": "guard",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 0.42274356199777685
+          },
+          {
+            "script": "phase",
+            "kind": "original",
+            "returncode": 0,
+            "seconds": 13.25009804299043
+          }
+        ],
+        "seconds": 13.674410583000281,
+        "error": null
+      }
+    ]
+  },
+  "main_source_changed": false,
+  "paper_reproduction": false
+}

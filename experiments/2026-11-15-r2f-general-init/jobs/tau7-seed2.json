@@ -1,0 +1,39 @@
+{
+  "case": "tau7-seed2",
+  "group": "regression",
+  "baseline": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed2",
+  "baseline_reused": false,
+  "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+  "candidate_reuses_baseline": false,
+  "guard_action": "repair",
+  "guard_accepted": true,
+  "reason": null,
+  "steps": [
+    {
+      "script": "guard",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.5381856460007839
+    },
+    {
+      "script": "phase",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 17.186349326002528
+    },
+    {
+      "script": "initialize",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.5291026060003787
+    },
+    {
+      "script": "phase",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 4.532611085000099
+    }
+  ],
+  "seconds": 22.79003209801158,
+  "error": null
+}

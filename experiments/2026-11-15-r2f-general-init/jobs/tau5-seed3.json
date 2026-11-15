@@ -1,0 +1,33 @@
+{
+  "case": "tau5-seed3",
+  "group": "regression",
+  "baseline": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+  "baseline_reused": true,
+  "candidate": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+  "candidate_reuses_baseline": false,
+  "guard_action": "repair",
+  "guard_accepted": true,
+  "reason": null,
+  "steps": [
+    {
+      "script": "guard",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.559169619999011
+    },
+    {
+      "script": "initialize",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.5610493040003348
+    },
+    {
+      "script": "phase",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 2.6079399440059206
+    }
+  ],
+  "seconds": 3.730252367007779,
+  "error": null
+}
