@@ -17,8 +17,12 @@ tr = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(tr)
 
 
-def load_seed(model):
-    source = json.loads(SOURCE.read_text())
+def source_path(kind):
+    return SOURCE if kind == 'good' else HERE / 'default-seed.json'
+
+
+def load_seed(model, kind='good'):
+    source = json.loads(source_path(kind).read_text())
     template = model.solution(model.y)
     assert source['instance'] == template['instance'] and source['phys'] == template['phys']
     assert len(source['solution']['r']) == model.stamps == 37
@@ -28,10 +32,13 @@ def load_seed(model):
     decoded = tr.decode(model, y, template)
     for key in trajectory:
         np.testing.assert_allclose(decoded[key], trajectory[key], rtol=1e-15, atol=1e-15)
-    residuals = tr.diag.residuals(source)
-    assert residuals['viol'] < 1e-10
-    replay = tr.diag.replay(source)
-    assert min(replay) >= 0. and max(replay) <= 1.
+    if kind == 'good':
+        residuals = tr.diag.residuals(source)
+        assert residuals['viol'] < 1e-10
+        replay = tr.diag.replay(source)
+        assert min(replay) >= 0. and max(replay) <= 1.
+    else:
+        np.testing.assert_allclose(y, model.y, atol=1e-14, rtol=1e-15)
     assert abs(sum(trajectory['s']) - source['metrics']['objective']) < 1e-13
     return source, y
 
@@ -44,7 +51,7 @@ def assess(model, original, y, lam, mu, source, eps, p):
                 objective=float(sum(tr.decode(model, y, source)['s'])))
 
 
-def export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, seconds, name):
+def export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, seconds, name, seed_kind='good'):
     result = dict(**tr.state(y, lam, mu, 1e4, eps, p, rows[-1]['stage'] if rows else 13),
                   **assess(model, original, y, lam, mu, source, eps, p),
                   stop=stop, outer_total=len(rows), seconds=seconds, name=name)
@@ -54,7 +61,7 @@ def export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, seco
     doc['init'] = copy.deepcopy(source['solution'])
     doc['metrics'].update(init_objective=source['metrics']['objective'], seconds=seconds,
                           converged=result['kkt_converged'])
-    doc['experiment'] = dict(name=name, paper_algorithm=False, source=str(SOURCE.relative_to(ROOT)),
+    doc['experiment'] = dict(name=name, paper_algorithm=False, source=str(source_path(seed_kind).relative_to(ROOT)), seed_kind=seed_kind,
         y_full_precision=y.tolist(), lam=lam.tolist(), mu=mu.tolist(),
         final_original_kkt=result['original_kkt'], stop=stop, outer_total=len(rows),
         source_objective=source['metrics']['objective'])
@@ -63,17 +70,17 @@ def export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, seco
     return result
 
 
-def run(backend, route):
-    name = backend + '-' + route
+def run(backend, route, seed_kind='good'):
+    name = backend + ('-default' if seed_kind == 'default' else '') + '-' + route
     folder = HERE / 'runs' / name
     folder.mkdir(parents=True, exist_ok=False)
     model, original = (tr.Model(0, 0, tr.LIBRARIES[key]) for key in ['normalized', 'original'])
-    source, y = load_seed(model)
+    source, y = load_seed(model, seed_kind)
     lam, mu = np.zeros(model.me), np.zeros(model.mi)
     schedule = [(13, .0005, 12., 150)] if route == 'direct' else [
         (stage+1, max(.0005, .2*.6**stage), min(12., 2.*1.2**stage), 30 if stage == 12 else 10) for stage in range(13)]
     tr.write(folder / 'initial.json', dict(**tr.state(y, lam, mu, 1e4, schedule[0][1], schedule[0][2], schedule[0][0]),
-        source=str(SOURCE.relative_to(ROOT)), source_objective=source['metrics']['objective']))
+        source=str(source_path(seed_kind).relative_to(ROOT)), seed_kind=seed_kind, source_objective=source['metrics']['objective']))
     start, rows, stop = monotonic(), [], 'outer_limit'
     with gzip.open(folder / 'outer.jsonl.gz', 'wt') as log:
         for stage, eps, p, budget in schedule:
@@ -114,29 +121,31 @@ def run(backend, route):
                 elapsed=monotonic()-start)), flush=True)
             if stop in ['timeout', 'kkt']:
                 break
-    result = export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, monotonic()-start, name)
+    result = export(folder, model, original, y, lam, mu, source, eps, p, rows, stop, monotonic()-start, name, seed_kind)
     model.close()
     original.close()
     return result
 
 
-def continue_newton():
-    path = HERE / 'runs/scipy-bfgs-direct/result.json'
+def continue_newton(seed_kind='good'):
+    case = 'scipy-bfgs' + ('-default' if seed_kind == 'default' else '') + '-direct'
+    path = HERE / 'runs' / case / 'result.json'
     saved = json.loads(path.read_text())
     if saved['kkt_converged']:
-        tr.write(HERE / 'newton-skipped.json', dict(reason='direct BFGS already reached original KKT'))
+        tr.write(HERE / ('newton-' + seed_kind + '-skipped.json'), dict(reason='direct BFGS already reached original KKT'))
         return
     sys.path.insert(0, str(HERE.parent / '2026-11-14-conditioning'))
     import newton_al as na
-    folder = HERE / 'newton'
+    name = 'newton-default' if seed_kind == 'default' else 'newton'
+    folder = HERE / name
     folder.mkdir(exist_ok=False)
     model, original = (tr.Model(0, 0, tr.LIBRARIES[key]) for key in ['normalized', 'original'])
-    source, _ = load_seed(model)
+    source, _ = load_seed(model, seed_kind)
     model.stage(.0005, 12.)
     original.stage(.0005, 12.)
     y, lam, mu = (np.array(saved[key]) for key in ['y', 'lam', 'mu'])
     tr.write(folder / 'initial.json', dict(**tr.state(y, lam, mu, 1e4, .0005, 12., 13),
-        parent='runs/scipy-bfgs-direct/result.json', parent_outer=saved['outer_total']))
+        parent=f'runs/{case}/result.json', seed_kind=seed_kind, parent_outer=saved['outer_total']))
     start, rows, stop = monotonic(), [], 'outer_limit'
     with gzip.open(folder / 'outer.jsonl.gz', 'wt') as log:
         for outer in range(600):
@@ -161,11 +170,11 @@ def continue_newton():
             log.flush()
             tr.write(folder / 'checkpoint.json', row)
             if outer % 25 == 0:
-                print(json.dumps(dict(name='newton', outer=outer+1, original_kkt=row['original_kkt'], elapsed=monotonic()-start)), flush=True)
+                print(json.dumps(dict(name=name, outer=outer+1, original_kkt=row['original_kkt'], elapsed=monotonic()-start)), flush=True)
             if max(row['original_kkt'].values()) <= 1e-6:
                 stop = 'kkt'
                 break
-    result = export(folder, model, original, y, lam, mu, source, .0005, 12., rows, stop, monotonic()-start, 'newton')
+    result = export(folder, model, original, y, lam, mu, source, .0005, 12., rows, stop, monotonic()-start, name, seed_kind)
     result['parent_outer'] = saved['outer_total']
     result['total_outer'] = saved['outer_total']+len(rows)
     result['total_seconds'] = saved['seconds']+result['seconds']

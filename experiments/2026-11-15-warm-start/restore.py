@@ -85,10 +85,14 @@ def restore(folder):
 
 
 if __name__ == '__main__':
-    folders = sorted((c.HERE / 'runs').glob('*'))
-    if (c.HERE / 'newton/result.json').exists():
-        folders.append(c.HERE / 'newton')
-    assert len(folders) in [6, 7]
-    assert not (c.HERE / 'restored').exists(), 'refuse to overwrite restorations'
+    import sys
+    default_only = sys.argv[1:] == ['--default-only']
+    assert not sys.argv[1:] or default_only
+    folders = sorted((c.HERE / 'runs').glob('*-default-direct' if default_only else '*'))
+    continuation = 'newton-default' if default_only else 'newton'
+    if (c.HERE / continuation / 'result.json').exists():
+        folders.append(c.HERE / continuation)
+    assert len(folders) in ([3, 4] if default_only else [6, 7])
+    assert all(not (c.HERE / 'restored' / f.name).exists() for f in folders), 'refuse to overwrite restorations'
     results = [restore(folder) for folder in folders]
-    c.tr.write(c.HERE / 'restoration-summary.json', results)
+    c.tr.write(c.HERE / ('default-restoration-summary.json' if default_only else 'restoration-summary.json'), results)

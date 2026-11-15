@@ -1,0 +1,235 @@
+[
+  {
+    "name": "rust-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/rust-direct",
+    "accepted": true,
+    "source_objective": 1.7777802076920628,
+    "source_original_kkt": {
+      "stat": 0.007415267393259921,
+      "feas": 2.935804405899663e-06,
+      "comp": 3.1368827766442564e-06,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 9,
+    "raw_kkt": {
+      "stat": 9.048636258628258e-12,
+      "feas": 1.5987211554602255e-15,
+      "comp": 9.479972409791159e-09,
+      "dual": 0.0
+    },
+    "objective": 1.779030001493694,
+    "time_change_seconds": 4.499257685872138,
+    "final_kkt": {
+      "stat": 9.048636258628258e-12,
+      "feas": 2.3822801641527198e-23,
+      "comp": 9.479972730963236e-09,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0062675526167908e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.04164995199244004
+  },
+  {
+    "name": "rust-homotopy",
+    "source": "experiments/2026-11-15-warm-start/runs/rust-homotopy",
+    "accepted": false,
+    "source_objective": 1.7621976378281532,
+    "source_original_kkt": {
+      "stat": 0.0009867334567559283,
+      "feas": 0.003090262302998735,
+      "comp": 0.00021247748266794986,
+      "dual": 0.0
+    },
+    "solver_status": "Infeasible_Problem_Detected",
+    "solver_success": false,
+    "iterations": 225,
+    "raw_kkt": {
+      "stat": 0.02778153651420065,
+      "feas": 0.49655316321971105,
+      "comp": 0.49655316321971105,
+      "dual": 0.0
+    },
+    "reason": "Infeasible_Problem_Detected",
+    "seconds": 0.11073895099980291
+  },
+  {
+    "name": "scipy-bfgs-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-bfgs-direct",
+    "accepted": true,
+    "source_objective": 1.7773991196340475,
+    "source_original_kkt": {
+      "stat": 3.4440673462526263e-07,
+      "feas": 2.8513311260012966e-06,
+      "comp": 3.362501388437522e-10,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 9,
+    "raw_kkt": {
+      "stat": 1.6764540253011556e-11,
+      "feas": 1.5987211554602255e-15,
+      "comp": 9.479972047777033e-09,
+      "dual": 0.0
+    },
+    "objective": 1.7790300014936533,
+    "time_change_seconds": 5.871174694580894,
+    "final_kkt": {
+      "stat": 1.6764540253011556e-11,
+      "feas": 7.993605777301127e-16,
+      "comp": 9.479973530323819e-09,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 4.163336342344337e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 4.163336342344337e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0062675526167908e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.03457324499322567
+  },
+  {
+    "name": "scipy-bfgs-homotopy",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-bfgs-homotopy",
+    "accepted": false,
+    "source_objective": 1.7567272833115917,
+    "source_original_kkt": {
+      "stat": 0.0015940037834777992,
+      "feas": 0.0037650776149443436,
+      "comp": 0.00040275981220716517,
+      "dual": 0.0
+    },
+    "solver_status": "Infeasible_Problem_Detected",
+    "solver_success": false,
+    "iterations": 120,
+    "raw_kkt": {
+      "stat": 0.02778263635531379,
+      "feas": 0.6069874610548133,
+      "comp": 0.6069874610548133,
+      "dual": 0.0
+    },
+    "reason": "Infeasible_Problem_Detected",
+    "seconds": 0.0644697840034496
+  },
+  {
+    "name": "scipy-lbfgs-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-lbfgs-direct",
+    "accepted": true,
+    "source_objective": 1.777472195425341,
+    "source_original_kkt": {
+      "stat": 0.003678438340261942,
+      "feas": 3.001566388119328e-06,
+      "comp": 2.659932803794618e-06,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 11,
+    "raw_kkt": {
+      "stat": 1.6838489597575919e-12,
+      "feas": 3.197442310920451e-15,
+      "comp": 9.47997210389016e-09,
+      "dual": 0.0
+    },
+    "objective": 1.7790300014936944,
+    "time_change_seconds": 5.608101846072344,
+    "final_kkt": {
+      "stat": 1.6838489597575919e-12,
+      "feas": 7.993605777301127e-16,
+      "comp": 9.47996953352093e-09,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.006267513758985e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.0288918790029129
+  },
+  {
+    "name": "scipy-lbfgs-homotopy",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-lbfgs-homotopy",
+    "accepted": false,
+    "source_objective": 1.7621558122910688,
+    "source_original_kkt": {
+      "stat": 0.0008916717820536884,
+      "feas": 0.0030903477603522822,
+      "comp": 0.00021257543161112835,
+      "dual": 0.0
+    },
+    "solver_status": "Infeasible_Problem_Detected",
+    "solver_success": false,
+    "iterations": 482,
+    "raw_kkt": {
+      "stat": 0.02778147220034064,
+      "feas": 0.5455477481082198,
+      "comp": 0.5455477481082198,
+      "dual": 0.0
+    },
+    "reason": "Infeasible_Problem_Detected",
+    "seconds": 0.13861595799971838
+  },
+  {
+    "name": "newton",
+    "source": "experiments/2026-11-15-warm-start/newton",
+    "accepted": true,
+    "source_objective": 1.7781734125376698,
+    "source_original_kkt": {
+      "stat": 9.642107617212502e-07,
+      "feas": 9.999948302353429e-07,
+      "comp": 7.556888448334576e-11,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 12,
+    "raw_kkt": {
+      "stat": 7.987346911928974e-13,
+      "feas": 1.5987211554602255e-15,
+      "comp": 9.479972175398402e-09,
+      "dual": 0.0
+    },
+    "objective": 1.7790300014936942,
+    "time_change_seconds": 3.083720241687704,
+    "final_kkt": {
+      "stat": 7.987346911928974e-13,
+      "feas": 1.1990408665951691e-15,
+      "comp": 9.479973530323819e-09,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 4.163336342344337e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 4.163336342344337e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0062675734334725e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.027113550997455604
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "rust-default-direct": {
+    "first_charging_segment": 1,
+    "prefix_tasks": [],
+    "prefix_task_stamps": [],
+    "distance_lower_bound_km": 0,
+    "battery_range_km": 14.4,
+    "excess_km": -14.4,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "rust-direct": {
+    "first_charging_segment": 4,
+    "prefix_tasks": [
+      0
+    ],
+    "prefix_task_stamps": [
+      2
+    ],
+    "distance_lower_bound_km": 3.744974993240943,
+    "battery_range_km": 14.4,
+    "excess_km": -10.655025006759058,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "rust-homotopy": {
+    "first_charging_segment": 16,
+    "prefix_tasks": [
+      0,
+      1,
+      2
+    ],
+    "prefix_task_stamps": [
+      1,
+      8,
+      15
+    ],
+    "distance_lower_bound_km": 16.436328976983635,
+    "battery_range_km": 14.4,
+    "excess_km": 2.0363289769836346,
+    "infeasible": true,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-bfgs-default-direct": {
+    "first_charging_segment": 1,
+    "prefix_tasks": [],
+    "prefix_task_stamps": [],
+    "distance_lower_bound_km": 0,
+    "battery_range_km": 14.4,
+    "excess_km": -14.4,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-bfgs-direct": {
+    "first_charging_segment": 4,
+    "prefix_tasks": [
+      0
+    ],
+    "prefix_task_stamps": [
+      2
+    ],
+    "distance_lower_bound_km": 3.744974993240943,
+    "battery_range_km": 14.4,
+    "excess_km": -10.655025006759058,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-bfgs-homotopy": {
+    "first_charging_segment": 14,
+    "prefix_tasks": [
+      0,
+      1,
+      2
+    ],
+    "prefix_task_stamps": [
+      2,
+      8,
+      11
+    ],
+    "distance_lower_bound_km": 16.436328976983635,
+    "battery_range_km": 14.4,
+    "excess_km": 2.0363289769836346,
+    "infeasible": true,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-lbfgs-default-direct": {
+    "first_charging_segment": 1,
+    "prefix_tasks": [],
+    "prefix_task_stamps": [],
+    "distance_lower_bound_km": 0,
+    "battery_range_km": 14.4,
+    "excess_km": -14.4,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-lbfgs-direct": {
+    "first_charging_segment": 4,
+    "prefix_tasks": [
+      0
+    ],
+    "prefix_task_stamps": [
+      2
+    ],
+    "distance_lower_bound_km": 3.744974993240943,
+    "battery_range_km": 14.4,
+    "excess_km": -10.655025006759058,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "scipy-lbfgs-homotopy": {
+    "first_charging_segment": 16,
+    "prefix_tasks": [
+      0,
+      1,
+      2
+    ],
+    "prefix_task_stamps": [
+      1,
+      8,
+      15
+    ],
+    "distance_lower_bound_km": 16.436328976983635,
+    "battery_range_km": 14.4,
+    "excess_km": 2.0363289769836346,
+    "infeasible": true,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "previous-rust": {
+    "first_charging_segment": 4,
+    "prefix_tasks": [
+      0
+    ],
+    "prefix_task_stamps": [
+      2
+    ],
+    "distance_lower_bound_km": 3.744974993240943,
+    "battery_range_km": 14.4,
+    "excess_km": -10.655025006759058,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "previous-scipy-lbfgs": {
+    "first_charging_segment": 4,
+    "prefix_tasks": [
+      0
+    ],
+    "prefix_task_stamps": [
+      2
+    ],
+    "distance_lower_bound_km": 3.744974993240943,
+    "battery_range_km": 14.4,
+    "excess_km": -10.655025006759058,
+    "infeasible": false,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  },
+  "previous-scipy-bfgs": {
+    "first_charging_segment": 16,
+    "prefix_tasks": [
+      0,
+      1,
+      2
+    ],
+    "prefix_task_stamps": [
+      3,
+      8,
+      14
+    ],
+    "distance_lower_bound_km": 16.436328976983635,
+    "battery_range_km": 14.4,
+    "excess_km": 2.0363289769836346,
+    "infeasible": true,
+    "scope": "fixed pure modes and task stamps, exact task restoration; not the full problem"
+  }
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "name": "rust-default-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/rust-default-direct",
+    "accepted": true,
+    "source_objective": 2.099491894031793,
+    "source_original_kkt": {
+      "stat": 0.0006344098063326142,
+      "feas": 3.0542766407367413e-06,
+      "comp": 4.754857343414187e-07,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 13,
+    "raw_kkt": {
+      "stat": 3.2958392959248073e-12,
+      "feas": 8.473222123939195e-14,
+      "comp": 1.009363822153849e-08,
+      "dual": 0.0
+    },
+    "objective": 2.1004732180109307,
+    "time_change_seconds": 3.5327663248954977,
+    "final_kkt": {
+      "stat": 3.2958392959248073e-12,
+      "feas": 7.993605777301127e-16,
+      "comp": 1.009363822153849e-08,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0076782422374642e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.045834791992092505
+  },
+  {
+    "name": "scipy-bfgs-default-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-bfgs-default-direct",
+    "accepted": true,
+    "source_objective": 2.099310503454552,
+    "source_original_kkt": {
+      "stat": 8.091602320550112e-07,
+      "feas": 3.0905973445524834e-06,
+      "comp": 1.2565521956275916e-09,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 10,
+    "raw_kkt": {
+      "stat": 6.375662985140442e-12,
+      "feas": 3.197442310920451e-15,
+      "comp": 3.055915091347098e-08,
+      "dual": 0.0
+    },
+    "objective": 2.1004732192885043,
+    "time_change_seconds": 4.185777002228797,
+    "final_kkt": {
+      "stat": 6.375662985140442e-12,
+      "feas": 1.5987211554602255e-15,
+      "comp": 3.055915091347098e-08,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 4.163336342344337e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 4.163336342344337e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0232473687810106e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.04129815200576559
+  },
+  {
+    "name": "scipy-lbfgs-default-direct",
+    "source": "experiments/2026-11-15-warm-start/runs/scipy-lbfgs-default-direct",
+    "accepted": true,
+    "source_objective": 2.0994311987605867,
+    "source_original_kkt": {
+      "stat": 0.0007299880785518673,
+      "feas": 2.9288226352652694e-06,
+      "comp": 4.101964599101393e-07,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 11,
+    "raw_kkt": {
+      "stat": 6.611976789272333e-11,
+      "feas": 3.197442310920451e-15,
+      "comp": 1.009363822153849e-08,
+      "dual": 0.0
+    },
+    "objective": 2.1004732180111385,
+    "time_change_seconds": 3.751269301986504,
+    "final_kkt": {
+      "stat": 6.611976442327638e-11,
+      "feas": 3.9968028886505636e-16,
+      "comp": 1.009363822153849e-08,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0076785753043715e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.041057558002648875
+  },
+  {
+    "name": "newton-default",
+    "source": "experiments/2026-11-15-warm-start/newton-default",
+    "accepted": true,
+    "source_objective": 2.1000805518377024,
+    "source_original_kkt": {
+      "stat": 9.423436142796948e-07,
+      "feas": 1.075757340928264e-06,
+      "comp": 1.0061285138363019e-11,
+      "dual": 0.0
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 11,
+    "raw_kkt": {
+      "stat": 1.259224159406297e-11,
+      "feas": 1.5987211554602255e-15,
+      "comp": 5.835583527513677e-08,
+      "dual": 0.0
+    },
+    "objective": 2.10047322102345,
+    "time_change_seconds": 1.4136090686907465,
+    "final_kkt": {
+      "stat": 1.259224159406297e-11,
+      "feas": 1.5987211554602255e-15,
+      "comp": 5.835583527513677e-08,
+      "dual": 0.0
+    },
+    "original_residuals": {
+      "viol": 2.7755575615628914e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 2.7755575615628914e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0443932732528971e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.04127506799704861
+  }
+]

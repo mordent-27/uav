@@ -17,14 +17,17 @@ def main():
     model, original = (c.tr.Model(0, 0, c.tr.LIBRARIES[k]) for k in ['normalized', 'original'])
     source, seed = c.load_seed(model)
     folders = sorted((c.HERE / 'runs').glob('*'))
-    if (c.HERE / 'newton').exists():
-        folders.append(c.HERE / 'newton')
+    for name in ['newton', 'newton-default']:
+        if (c.HERE / name).exists():
+            folders.append(c.HERE / name)
     checked = []
     for folder in folders:
         initial = json.loads((folder / 'initial.json').read_text())
         final = json.loads((folder / 'result.json').read_text())
-        if folder.name != 'newton':
-            np.testing.assert_array_equal(initial['y'], seed)
+        seed_kind = initial.get('seed_kind', 'good')
+        active_source, active_seed = c.load_seed(model, seed_kind)
+        if not folder.name.startswith('newton'):
+            close(initial['y'], active_seed, 1e-14)
             assert not any(initial['lam']) and not any(initial['mu'])
         else:
             parent = json.loads((c.HERE / initial['parent']).read_text())
@@ -41,7 +44,7 @@ def main():
             model.eval(y, old_lam, old_mu, 0.)
             close(lam, old_lam + 1e4*model.h)
             close(mu, np.maximum(0., old_mu + 1e4*model.g))
-            expected = c.assess(model, original, y, lam, mu, source, row['eps'], row['p'])
+            expected = c.assess(model, original, y, lam, mu, active_source, row['eps'], row['p'])
             for key in ['normalized_kkt', 'original_kkt']:
                 close(list(row[key].values()), list(expected[key].values()))
             close(row['objective'], expected['objective'])
@@ -53,7 +56,7 @@ def main():
         y, lam, mu = (np.array(final[k]) for k in ['y', 'lam', 'mu'])
         model.stage(final['eps'], final['p'])
         original.stage(final['eps'], final['p'])
-        mapped = c.tr.original_multipliers(model, y, source, mu)
+        mapped = c.tr.original_multipliers(model, y, active_source, mu)
         jac = original.jacobian(y)
         _, gf = original.eval(y, np.zeros(original.me), np.zeros(original.mi), 0.)
         gradient = gf + jac[:original.me].T@lam + jac[original.me:].T@mapped
@@ -62,6 +65,23 @@ def main():
         checked.append(dict(name=folder.name, rows=len(rows), independent_stationarity=float(max(abs(gradient)))))
     model.close()
     original.close()
+    proofs = json.loads((c.HERE / 'prefix-certificates.json').read_text())
+    prefix_failures = []
+    for name, proof in proofs.items():
+        if not proof['infeasible']:
+            continue
+        path = (c.HERE.parent / '2026-11-15-library-trace/runs' / name.removeprefix('previous-')) if name.startswith('previous-') else c.HERE / 'runs' / name
+        doc = json.loads((path / 'solution.json').read_text())
+        first = proof['first_charging_segment']
+        assert all(m < 0 for m in doc['modes'][:first])
+        stamps = [doc['task_stamp'][i] for i in proof['prefix_tasks']]
+        assert stamps == sorted(stamps) == proof['prefix_task_stamps'] and max(stamps) <= first
+        points = [doc['instance']['r0']] + [doc['instance']['tasks'][i] for i in proof['prefix_tasks']]
+        distance = sum(math.dist(points[i], points[i+1]) for i in range(len(points)-1))
+        p = doc['phys']
+        capacity = p['v_d']*(p['e_max']-p['e_min'])/p['zeta']
+        assert abs(distance-proof['distance_lower_bound_km']) < 1e-12 and distance > capacity
+        prefix_failures.append(name)
     physical = []
     for folder in sorted((c.HERE / 'restored').glob('*')):
         result = json.loads((folder / 'result.json').read_text())
@@ -84,7 +104,8 @@ def main():
         rawdoc = json.loads((c.ROOT / result['source'] / 'solution.json').read_text())
         assert doc['modes'] == rawdoc['modes'] and doc['task_stamp'] == rawdoc['task_stamp']
         physical.append(dict(name=folder.name, objective=sum(trajectory['s']), kkt=kkt))
-    c.tr.write(c.HERE / 'verification.json', dict(identical_good_seed=True, raw=checked, restored=physical,
+    c.tr.write(c.HERE / 'verification.json', dict(identical_seed_within_each_group=True, raw=checked, restored=physical,
+        prefix_infeasible_certificates=prefix_failures,
         original_jacobian_stationarity=True, al_updates=True, pure_battery_replay=True))
     print(json.dumps(dict(raw=len(checked), states=sum(r['rows'] for r in checked), restored=len(physical))))
 

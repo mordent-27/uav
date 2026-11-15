@@ -1,0 +1,151 @@
+{
+  "identical_seed_within_each_group": true,
+  "raw": [
+    {
+      "name": "rust-default-direct",
+      "rows": 150,
+      "independent_stationarity": 0.0006344098063326142
+    },
+    {
+      "name": "rust-direct",
+      "rows": 150,
+      "independent_stationarity": 0.007415267393259917
+    },
+    {
+      "name": "rust-homotopy",
+      "rows": 150,
+      "independent_stationarity": 0.000986733456759481
+    },
+    {
+      "name": "scipy-bfgs-default-direct",
+      "rows": 150,
+      "independent_stationarity": 8.091602320572246e-07
+    },
+    {
+      "name": "scipy-bfgs-direct",
+      "rows": 150,
+      "independent_stationarity": 3.444067346175528e-07
+    },
+    {
+      "name": "scipy-bfgs-homotopy",
+      "rows": 150,
+      "independent_stationarity": 0.00159400378348451
+    },
+    {
+      "name": "scipy-lbfgs-default-direct",
+      "rows": 150,
+      "independent_stationarity": 0.0007299880785518673
+    },
+    {
+      "name": "scipy-lbfgs-direct",
+      "rows": 150,
+      "independent_stationarity": 0.0036784383402619462
+    },
+    {
+      "name": "scipy-lbfgs-homotopy",
+      "rows": 150,
+      "independent_stationarity": 0.0008916717820497411
+    },
+    {
+      "name": "newton",
+      "rows": 567,
+      "independent_stationarity": 9.642107617197082e-07
+    },
+    {
+      "name": "newton-default",
+      "rows": 600,
+      "independent_stationarity": 9.423436142796948e-07
+    }
+  ],
+  "restored": [
+    {
+      "name": "newton",
+      "objective": 1.779030001493694,
+      "kkt": {
+        "stat": 7.987346911928974e-13,
+        "feas": 1.1990408665951691e-15,
+        "comp": 9.479973530323819e-09,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "newton-default",
+      "objective": 2.1004732210234502,
+      "kkt": {
+        "stat": 1.259224159406297e-11,
+        "feas": 1.5987211554602255e-15,
+        "comp": 5.835583527513677e-08,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "rust-default-direct",
+      "objective": 2.100473218010931,
+      "kkt": {
+        "stat": 3.2958392959248073e-12,
+        "feas": 7.993605777301127e-16,
+        "comp": 1.009363822153849e-08,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "rust-direct",
+      "objective": 1.779030001493694,
+      "kkt": {
+        "stat": 9.048636258628258e-12,
+        "feas": 2.3822801641527198e-23,
+        "comp": 9.479972730963236e-09,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "scipy-bfgs-default-direct",
+      "objective": 2.1004732192885047,
+      "kkt": {
+        "stat": 6.375662985140442e-12,
+        "feas": 1.5987211554602255e-15,
+        "comp": 3.055915091347098e-08,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "scipy-bfgs-direct",
+      "objective": 1.7790300014936529,
+      "kkt": {
+        "stat": 1.6764540253011556e-11,
+        "feas": 7.993605777301127e-16,
+        "comp": 9.479973530323819e-09,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "scipy-lbfgs-default-direct",
+      "objective": 2.1004732180111385,
+      "kkt": {
+        "stat": 6.611976442327638e-11,
+        "feas": 3.9968028886505636e-16,
+        "comp": 1.009363822153849e-08,
+        "dual": 0.0
+      }
+    },
+    {
+      "name": "scipy-lbfgs-direct",
+      "objective": 1.779030001493694,
+      "kkt": {
+        "stat": 1.6838489597575919e-12,
+        "feas": 7.993605777301127e-16,
+        "comp": 9.47996953352093e-09,
+        "dual": 0.0
+      }
+    }
+  ],
+  "prefix_infeasible_certificates": [
+    "rust-homotopy",
+    "scipy-bfgs-homotopy",
+    "scipy-lbfgs-homotopy",
+    "previous-scipy-bfgs"
+  ],
+  "original_jacobian_stationarity": true,
+  "al_updates": true,
+  "pure_battery_replay": true
+}
