@@ -1,0 +1,11 @@
+--- R2e/phase.py
++++ R2f/phase.py
+@@ -8,7 +8,7 @@
+ def main():
+     h.HERE.mkdir(parents=True,exist_ok=False)
+     m=h.fidelity.Variant('R')
+-    prior=json.loads((h.R2D/'cases/G'/h.CASE/'source.json').read_text())
++    prior=json.loads((h.INIT/'original-state.json').read_text())
+     np.testing.assert_array_equal(m.native.y,prior['y'])
+     if h.KIND=='original':
+         y=m.native.y.copy()

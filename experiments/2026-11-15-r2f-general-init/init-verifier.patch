@@ -1,0 +1,11 @@
+--- R2e/verify_init.py
++++ R2f/verify_init.py
+@@ -33,7 +33,7 @@
+             np.testing.assert_array_equal(y,source['y'])
+             assert source['lam']==[0.]*m.me and source['mu']==[0.]*m.mi and source['rho']==1e4
+             assert source['eps']==.0005 and source['p']==12.
+-            prior=json.loads((h.R2D/'cases/G'/h.CASE/'source.json').read_text())
++            prior=read('original-state.json')
+             np.testing.assert_array_equal(m.native.y,prior['y'])
+             np.testing.assert_array_equal(h.tr.decode(m,m.native.y,m.source)['r'],data['init']['r'])
+             assert all(document['solution']['r'][stamp]==task for stamp,task in zip(data['task_stamp'],data['instance']['tasks']))
