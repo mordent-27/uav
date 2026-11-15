@@ -1,0 +1,1254 @@
+{
+  "initializations_accepted": 13,
+  "solved_cases": 6,
+  "restored_cases": 2,
+  "newly_accepted": [],
+  "lost_acceptance": [],
+  "rows": [
+    {
+      "name": "fig1",
+      "initialization": {
+        "case": "fig1",
+        "accepted": true,
+        "initial_objective": 3.0595480271493187,
+        "initial_min_energy": 0.07527301307133782,
+        "stamps": 37,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 12,
+        "raw_kkt": {
+          "stat": 6.938893903907228e-18,
+          "feas": 2.3980817331903383e-15,
+          "comp": 9.375984004124877e-10,
+          "dual": 0.0
+        },
+        "objective": 2.533105942699229,
+        "final_kkt": {
+          "stat": 3.153368094955115e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 9.375947260023031e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0046333723257028e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.03359462899970822
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": false,
+        "raw_objective": 1.8825510425471623,
+        "seconds": 767.7141823270067,
+        "outer": 460,
+        "restored": true,
+        "objective": 1.8858540398108474,
+        "stop": "timeout",
+        "charging": [
+          0,
+          0,
+          5,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "final_common_kkt": {
+          "stat": 6.2240893550225e-08,
+          "feas": 5.009272167812856e-08,
+          "comp": 8.43554889917812e-11,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": false,
+        "raw_objective": 1.8794810648328322,
+        "seconds": 639.1623730730062,
+        "outer": 606,
+        "restored": true,
+        "objective": 1.8825894243839725,
+        "stop": "timeout",
+        "charging": [
+          0,
+          0,
+          3,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "final_common_kkt": {
+          "stat": 9.391340968778472e-08,
+          "feas": 3.938342867603438e-08,
+          "comp": 5.589321485814254e-11,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau1-seed0",
+      "initialization": {
+        "case": "tau1-seed0",
+        "accepted": true,
+        "initial_objective": 0.7259097861684513,
+        "initial_min_energy": 0.12876062105009667,
+        "stamps": 7,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 8,
+        "raw_kkt": {
+          "stat": 1.395857066144744e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 5.078486302687174e-10,
+          "dual": 0.0
+        },
+        "objective": 0.6722337275841692,
+        "final_kkt": {
+          "stat": 1.395857066144744e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 5.078456896453456e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 0.0,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 0.0,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0035267061780928e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.009014840004965663
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 0.5616796996709884,
+        "seconds": 7.337041390986997,
+        "outer": 86,
+        "restored": true,
+        "objective": 0.5617778335406254,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "final_common_kkt": {
+          "stat": 8.685992295790848e-09,
+          "feas": 7.85633937096502e-07,
+          "comp": 3.518299230644098e-12,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 0.5616796996706168,
+        "seconds": 6.969742957007838,
+        "outer": 86,
+        "restored": true,
+        "objective": 0.5617778335406407,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "final_common_kkt": {
+          "stat": 5.196103276045644e-09,
+          "feas": 7.856339370985619e-07,
+          "comp": 3.51833389182335e-12,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau1-seed1",
+      "initialization": {
+        "case": "tau1-seed1",
+        "accepted": true,
+        "initial_objective": 0.7267361708358362,
+        "initial_min_energy": 0.17618757636176563,
+        "stamps": 7,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "raw_kkt": {
+          "stat": 1.2632898245045631e-15,
+          "feas": 1.1191048088221578e-14,
+          "comp": 6.12700915325459e-10,
+          "dual": 0.0
+        },
+        "objective": 0.6347946556256038,
+        "final_kkt": {
+          "stat": 1.2702287184084703e-15,
+          "feas": 2.3822801641527198e-23,
+          "comp": 6.126882242992876e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0042547793354117e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.009835320001002401
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 0.5756425576619228,
+        "seconds": 8.03171392600052,
+        "outer": 84,
+        "restored": true,
+        "objective": 0.5757448313449116,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "final_common_kkt": {
+          "stat": 3.7233791975547583e-09,
+          "feas": 7.792019941300953e-07,
+          "comp": 3.552713678800501e-15,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau1-seed2",
+      "initialization": {
+        "case": "tau1-seed2",
+        "accepted": true,
+        "initial_objective": 0.5688270068393153,
+        "initial_min_energy": 0.1565852289650581,
+        "stamps": 7,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 8,
+        "raw_kkt": {
+          "stat": 6.938893903907228e-18,
+          "feas": 3.197442310920451e-15,
+          "comp": 5.696191861131286e-10,
+          "dual": 0.0
+        },
+        "objective": 0.5077054505082355,
+        "final_kkt": {
+          "stat": 7.73461586518141e-18,
+          "feas": 1.5987211554602255e-15,
+          "comp": 5.696186763711891e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0039556852525777e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.009577542994520627
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 0.4158701662971934,
+        "seconds": 11.51720250499784,
+        "outer": 705,
+        "restored": false,
+        "objective": null,
+        "stop": "outer_limit",
+        "charging": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final_common_kkt": {
+          "stat": 5.65661185168136,
+          "feas": 0.0015659664639171079,
+          "comp": 0.0015659664639171079,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 0.4158701662971935,
+        "seconds": 12.4775675819983,
+        "outer": 706,
+        "restored": false,
+        "objective": null,
+        "stop": "outer_limit",
+        "charging": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "final_common_kkt": {
+          "stat": 5.656611864129955,
+          "feas": 0.0015659664639235515,
+          "comp": 0.0015659664639131416,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau3-seed0",
+      "initialization": {
+        "case": "tau3-seed0",
+        "accepted": true,
+        "initial_objective": 2.0378885485610856,
+        "initial_min_energy": 0.20234962552718272,
+        "stamps": 17,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 14,
+        "raw_kkt": {
+          "stat": 3.1084866768631103e-15,
+          "feas": 4.908073947262892e-13,
+          "comp": 6.660000000949082e-10,
+          "dual": 0.0
+        },
+        "objective": 1.8250384245466418,
+        "final_kkt": {
+          "stat": 3.133419389541034e-15,
+          "feas": 1.5987211554602255e-15,
+          "comp": 6.655099712756934e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 1.3877787807814457e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.3877787807814457e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0046215970227479e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.0176295130077051
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 1.049881161718139,
+        "seconds": 71.7475929659995,
+        "outer": 118,
+        "restored": true,
+        "objective": 1.0498994338617502,
+        "stop": "kkt",
+        "charging": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "final_common_kkt": {
+          "stat": 2.693252636187804e-08,
+          "feas": 3.32612353420381e-08,
+          "comp": 1.8006641360455363e-12,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau3-seed1",
+      "initialization": {
+        "case": "tau3-seed1",
+        "accepted": true,
+        "initial_objective": 1.2071437263440732,
+        "initial_min_energy": 0.34350763992892874,
+        "stamps": 17,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 8,
+        "raw_kkt": {
+          "stat": 5.324549349972579e-15,
+          "feas": 2.3980817331903383e-15,
+          "comp": 6.660000049278664e-10,
+          "dual": 0.0
+        },
+        "objective": 0.9822411148580295,
+        "final_kkt": {
+          "stat": 5.324549349972579e-15,
+          "feas": 1.5987211554602255e-15,
+          "comp": 6.66002377391554e-10,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0046250165096637e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.014212994006811641
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 0.7828681255679324,
+        "seconds": 92.07191363000311,
+        "outer": 160,
+        "restored": true,
+        "objective": 0.7828698840035081,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "final_common_kkt": {
+          "stat": 7.225830281343271e-09,
+          "feas": 5.5358353591807886e-08,
+          "comp": 2.8179489991453366e-10,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau3-seed2",
+      "initialization": {
+        "case": "tau3-seed2",
+        "accepted": true,
+        "initial_objective": 1.2560691073785912,
+        "initial_min_energy": 0.14343205234449363,
+        "stamps": 17,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 13,
+        "raw_kkt": {
+          "stat": 6.938893903907228e-18,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.8660348754878395e-09,
+          "dual": 0.0
+        },
+        "objective": 1.0697603339117367,
+        "final_kkt": {
+          "stat": 1.4853713742561196e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.8660345338434794e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.004624983202973e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.01460231099918019
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 0.8372482431292203,
+        "seconds": 67.15805911499774,
+        "outer": 101,
+        "restored": true,
+        "objective": 0.8374871186340165,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "final_common_kkt": {
+          "stat": 8.585289243412397e-09,
+          "feas": 4.928600554954038e-07,
+          "comp": 3.8502832172548906e-10,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau5-seed0",
+      "initialization": {
+        "case": "tau5-seed0",
+        "accepted": true,
+        "initial_objective": 3.3270314462513824,
+        "initial_min_energy": 0.14728850435993002,
+        "stamps": 27,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 14,
+        "raw_kkt": {
+          "stat": 1.2910556775412272e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 3.1244437870031806e-09,
+          "dual": 0.0
+        },
+        "objective": 3.0394595173502506,
+        "final_kkt": {
+          "stat": 5.342539890718685e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 3.1244374329216817e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 1.3877787807814457e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.3877787807814457e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0044559961563948e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.020055759014212526
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 3.37034655893637,
+        "seconds": 277.66582588899473,
+        "outer": 579,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "final_common_kkt": {
+          "stat": 159180.98671397613,
+          "feas": 0.3001666571866456,
+          "comp": 0.3001666571866456,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 2.042363556389245,
+        "seconds": 537.0126839470031,
+        "outer": 147,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          0,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "final_common_kkt": {
+          "stat": 18.60218136922049,
+          "feas": 0.010695498370239599,
+          "comp": 0.010695498370235429,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau5-seed1",
+      "initialization": {
+        "case": "tau5-seed1",
+        "accepted": true,
+        "initial_objective": 2.8579598774611923,
+        "initial_min_energy": 0.1753772604397188,
+        "stamps": 27,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 11,
+        "raw_kkt": {
+          "stat": 6.230744175220807e-17,
+          "feas": 1.2789769243681804e-14,
+          "comp": 9.433458957011013e-09,
+          "dual": 0.0
+        },
+        "objective": 2.5577161957795584,
+        "final_kkt": {
+          "stat": 6.295385238204919e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 9.433446747897037e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 4.163336342344337e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 4.163336342344337e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0042453424397024e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.019289039002615027
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 1.9176219060852633,
+        "seconds": 455.14470934300334,
+        "outer": 670,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          1,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "final_common_kkt": {
+          "stat": 0.00013884705896372645,
+          "feas": 1.6106994173076326e-05,
+          "comp": 8.069178980818715e-06,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau5-seed2",
+      "initialization": {
+        "case": "tau5-seed2",
+        "accepted": true,
+        "initial_objective": 2.05308069315013,
+        "initial_min_energy": 0.14343205234449363,
+        "stamps": 27,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 37,
+        "raw_kkt": {
+          "stat": 1.1557059187753982e-12,
+          "feas": 1.694644424787839e-13,
+          "comp": 2.866034875335744e-09,
+          "dual": 0.0
+        },
+        "objective": 1.794089371445597,
+        "final_kkt": {
+          "stat": 1.1557059187753982e-12,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.8660361325646455e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0046262044483001e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.025964457003283314
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 1.379768068751096,
+        "seconds": 242.2959850069892,
+        "outer": 108,
+        "restored": true,
+        "objective": 1.3802788798661951,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          3,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        "final_common_kkt": {
+          "stat": 6.80894205254412e-09,
+          "feas": 8.95982101918125e-07,
+          "comp": 5.589094811964124e-10,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    },
+    {
+      "name": "tau7-seed0",
+      "initialization": {
+        "case": "tau7-seed0",
+        "accepted": true,
+        "initial_objective": 4.038016857955186,
+        "initial_min_energy": 0.14728850435993002,
+        "stamps": 37,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 14,
+        "raw_kkt": {
+          "stat": 1.2267826981127318e-14,
+          "feas": 1.921662828863191e-12,
+          "comp": 3.124443786998972e-09,
+          "dual": 0.0
+        },
+        "objective": 3.6230837071388486,
+        "final_kkt": {
+          "stat": 1.2373297314313545e-14,
+          "feas": 1.5987211554602255e-15,
+          "comp": 3.122856297698942e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0046139697905687e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.027973222997388802
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 2.6304913942076102,
+        "seconds": 553.0586802970065,
+        "outer": 362,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "final_common_kkt": {
+          "stat": 82798.75128743914,
+          "feas": 0.3003476159188635,
+          "comp": 0.3003476159188635,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 2.63036349215857,
+        "seconds": 537.283730287003,
+        "outer": 402,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "final_common_kkt": {
+          "stat": 41644.4271025043,
+          "feas": 0.3000960959480051,
+          "comp": 0.3000960959480051,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau7-seed1",
+      "initialization": {
+        "case": "tau7-seed1",
+        "accepted": true,
+        "initial_objective": 4.241368493521915,
+        "initial_min_energy": 0.0927223008914806,
+        "stamps": 37,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 13,
+        "raw_kkt": {
+          "stat": 5.5840671193400324e-15,
+          "feas": 8.760991931922035e-13,
+          "comp": 9.433104523053071e-09,
+          "dual": 0.0
+        },
+        "objective": 3.8751867243160802,
+        "final_kkt": {
+          "stat": 5.624400101466794e-15,
+          "feas": 2.3822801641527198e-23,
+          "comp": 9.433107819012085e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 4.163336342344337e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 4.163336342344337e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0030468455823893e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.025443953010835685
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 3.0215988708460957,
+        "seconds": 733.8007203120069,
+        "outer": 512,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          2,
+          5,
+          6,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        "final_common_kkt": {
+          "stat": 84.92882081738207,
+          "feas": 0.006547146023792383,
+          "comp": 0.006547146023790177,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": true,
+        "stage": 13,
+        "common": false,
+        "physical": false,
+        "raw_objective": 3.1844012263809707,
+        "seconds": 544.2532230020006,
+        "outer": 186,
+        "restored": false,
+        "objective": null,
+        "stop": "timeout",
+        "charging": [
+          0,
+          1,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5
+        ],
+        "final_common_kkt": {
+          "stat": 22732.77245916819,
+          "feas": 0.3003085595702998,
+          "comp": 0.3003085595702998,
+          "dual": 0.0
+        }
+      }
+    },
+    {
+      "name": "tau7-seed2",
+      "initialization": {
+        "case": "tau7-seed2",
+        "accepted": true,
+        "initial_objective": 2.816551539400368,
+        "initial_min_energy": -0.04317544567444731,
+        "stamps": 37,
+        "input_only": true,
+        "moving_geometry": false,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 13,
+        "raw_kkt": {
+          "stat": 3.391026942542819e-11,
+          "feas": 9.592326932761353e-15,
+          "comp": 2.8660349017568193e-09,
+          "dual": 0.0
+        },
+        "objective": 2.5633088955658443,
+        "final_kkt": {
+          "stat": 3.3910264881211636e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 2.8660233427953965e-09,
+          "dual": 0.0
+        },
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0008760265023398e-08,
+        "max_energy": 1.0,
+        "duration_correction": 0.0,
+        "same_full_initial_state": false,
+        "same_positions_and_modes": true,
+        "seconds": 0.024802250001812354
+      },
+      "baseline": {
+        "run": true,
+        "stage": 13,
+        "common": true,
+        "physical": true,
+        "raw_objective": 1.92029088941261,
+        "seconds": 419.81283508701017,
+        "outer": 101,
+        "restored": true,
+        "objective": 1.9207542481550708,
+        "stop": "kkt",
+        "charging": [
+          0,
+          0,
+          0,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "final_common_kkt": {
+          "stat": 1.0106963068936794e-08,
+          "feas": 6.374222987663236e-07,
+          "comp": 2.3482840671995575e-10,
+          "dual": 0.0
+        }
+      },
+      "changed": {
+        "run": false,
+        "restored": false
+      }
+    }
+  ],
+  "decision": {
+    "pilot_outcomes": [
+      [
+        "tau1-seed2",
+        0
+      ],
+      [
+        "tau5-seed0",
+        0
+      ],
+      [
+        "tau7-seed0",
+        0
+      ],
+      [
+        "tau7-seed1",
+        0
+      ],
+      [
+        "tau1-seed0",
+        0
+      ],
+      [
+        "fig1",
+        0
+      ]
+    ],
+    "newly_accepted_failed_cases": [],
+    "controls_pass_without_time_regression": true,
+    "expand": false
+  }
+}
