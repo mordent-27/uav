@@ -1,0 +1,12 @@
+warning: variable does not need to be mutable
+   --> src/auglag.rs:135:17
+    |
+135 |             let mut al = |y: &[f64], g: &mut [f64]| {
+    |                 ----^^
+    |                 |
+    |                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: `uav` (bin "uav") generated 1 warning (run `cargo fix --bin "uav" -p uav` to apply 1 suggestion)
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.00s

@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-15",
+  "base_commit": "5581585",
+  "plan_commit": "d5ee010",
+  "guard_plan_commit": "2df3c18",
+  "code_fix_commit": "7065fd4",
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "numpy": "2.5.1",
+  "scipy": "1.18.0",
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "external_source_hashes": {
+    "src/auglag.rs": "076fa3139fe1f73d78229b94be2be6666f63e12391a3060435171d0f869d4a4f",
+    "src/battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "src/instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "src/lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "src/main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "src/metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "src/model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "src/output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "src/params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "src/rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "src/solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2",
+    "experiments/2026-11-15-fidelity/run.py": "e66e58d8e8d53010c97ac2bbf1a03048b0a926cf24e43d4616749c9e0f4bada2",
+    "experiments/2026-11-15-fidelity/cases/R-expanded/outer.jsonl.gz": "1eff656bdd75182839673416edbb71bb10465b1d2857dddf91f06923ce9cd0b1",
+    "experiments/2026-11-15-fidelity/cases/R-expanded/stage02-end.json": "2c168b33742152b7856ecf1220514b89d28ef6e8ecf12614f2098ef5c8ad3101",
+    "experiments/2026-11-14-conditioning/newton_al.py": "e5a539e3975a2eea3bba0a9deb6f4b336e9e2a2a1ebb79f765ab9b9075b38fd0",
+    "experiments/2026-11-15-library-trace/trace.py": "e703c0dadacc9693e8492c228981c5c2596fb5cfc70c30d67e61b87f8751918e",
+    "experiments/2026-11-14-reproduction/independent_al.py": "68911419e6fa126ebd8fac7b8f76bbd1773104c2d642cb5f11810cdc3caafa44",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683"
+  },
+  "evaluation_library_source_commit": "5581585; unchanged model evaluator; AL outer iterations in Python",
+  "library_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "native_pilot_hashes": {
+    "before": "d347ab0f69219353d24c6293be917fe23dc8e85d8023c7f54ab06a0134150236",
+    "after": "4bd52b850888b8e84a69ec7be6fa75e4aad167cfdf0e3ceb24a2701e97f7cec8",
+    "current_release": "4bd52b850888b8e84a69ec7be6fa75e4aad167cfdf0e3ceb24a2701e97f7cec8"
+  },
+  "native_pilot_source_note": "after-pilot snapshot retained; later only cfg(test) complementarity fixture corrected; current release rebuilt",
+  "env": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "initial_metadata": "solution init metadata corrected from actual initial.json after solving; solution arrays and states unchanged",
+  "paper_reproduction": false,
+  "monte_carlo_rerun": false
+}

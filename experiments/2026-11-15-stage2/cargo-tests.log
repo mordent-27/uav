@@ -1,0 +1,30 @@
+   Compiling uav v0.1.0 (/home/mordent/robotech/3A/optimization/uav)
+warning: variable does not need to be mutable
+   --> src/auglag.rs:141:17
+    |
+141 |             let mut al = |y: &[f64], g: &mut [f64]| {
+    |                 ----^^
+    |                 |
+    |                 help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: `uav` (bin "uav" test) generated 1 warning (run `cargo fix --bin "uav" -p uav --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.11s
+     Running unittests src/main.rs (target/debug/deps/uav-957b0c4b30868373)
+
+running 11 tests
+test auglag::tests::stage2_feasible_point_does_not_raise_penalty_for_stationarity ... ok
+test auglag::tests::unsatisfied_complementarity_still_uses_progress_rule ... ok
+test battery::tests::continuous_across_threshold_for_any_sign_of_c ... ok
+test battery::tests::identity_at_zero_duration ... ok
+test battery::tests::negative_duration_inverts_charging ... ok
+test battery::tests::derivatives_match_finite_differences ... ok
+test battery::tests::semigroup ... ok
+test battery::tests::time_to_charge_inverts_charge ... ok
+test model::tests::smooth_min_bounds_and_gradient ... ok
+test lbfgs::tests::rosenbrock ... ok
+test model::tests::gradient_matches_finite_differences ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

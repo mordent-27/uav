@@ -8,6 +8,11 @@ from scipy.optimize import minimize
 import common as c
 
 
+def next_penalty(rho, violation, previous, passed, policy):
+    eligible = policy == 'adaptive' or (policy == 'guarded' and violation > 1e-6)
+    return min(1e8, rho*10) if eligible and not passed and violation > .25*previous else rho
+
+
 def inner(m, y, lam, mu, rho, method, deadline):
     last, evaluations, iterations = y.copy(), 0, 0
     def fg(point):
@@ -48,7 +53,9 @@ def export(folder, m, y, lam, mu, rho, records, stop, elapsed, name, final_requi
     c.write(folder/'result.json', result)
     q = np.ascontiguousarray(y*m.scale/m.reference.scale)
     doc = m.reference.solution(q)
-    doc['metrics'].update(converged=result['final_kkt_pass'], seconds=elapsed)
+    initial = json.loads((folder/'initial.json').read_text())
+    doc['init'] = c.fidelity.tr.decode(m, np.array(initial['y']), m.source)
+    doc['metrics'].update(converged=result['final_kkt_pass'], seconds=elapsed, init_objective=sum(doc['init']['s']))
     doc['experiment'] = dict(name=name, stage=m.current_stage, paper_algorithm=False, stop=stop,
         y_full_precision=q.tolist(), variant_y=y.tolist(), lam=lam.tolist(), mu=mu.tolist(), rho=rho,
         common_kkt=result['common_kkt'], paper_units_kkt=result['paper_units_kkt'])
@@ -66,8 +73,9 @@ def run(name):
     y, lam, mu = (np.array(saved[k]) for k in ['y', 'lam', 'mu'])
     rho = 1e5 if name == 'raised-bfgs' else 1e4
     method = 'newton' if name == 'fixed-newton' else 'bfgs'
+    policy = 'guarded' if name == 'guarded-bfgs' else ('adaptive' if name == 'adaptive-bfgs' else 'fixed')
     c.write(folder/'initial.json', dict(**c.state(y, lam, mu, rho), method=method,
-        policy='adaptive' if name == 'adaptive-bfgs' else 'fixed', parent_outer=100))
+        policy=policy, parent_outer=100))
     start, records, stop, previous = monotonic(), [], 'outer_limit', np.inf
     with gzip.open(folder/'outer.jsonl.gz', 'wt') as log:
         for extra in range(200):
@@ -86,7 +94,7 @@ def run(name):
             metrics = c.assess(m, y, lam, mu)
             violation = max(metrics['common_kkt']['feas'], metrics['common_kkt']['comp'])
             passed = max(metrics['common_kkt'].values()) <= 1e-6
-            next_rho = min(1e8, rho*10) if name == 'adaptive-bfgs' and not passed and violation > .25*previous else rho
+            next_rho = next_penalty(rho, violation, previous, passed, policy)
             row = dict(**c.state(y, lam, mu, rho), extra_outer=extra+1, phase_outer=101+extra,
                 **metrics, inner=info, rho_next=next_rho, previous_violation=None if not np.isfinite(previous) else previous,
                 violation=violation, elapsed=monotonic()-start)
@@ -105,18 +113,21 @@ def run(name):
     return result
 
 
-def follow_adaptive():
-    parent_path = c.HERE/'cases/adaptive-bfgs/result.json'
+def follow_adaptive(name='adaptive-bfgs'):
+    parent_path = c.HERE/'cases'/name/'result.json'
     parent = json.loads(parent_path.read_text())
     if not parent['target_kkt_pass']:
-        c.write(c.HERE/'follow-skipped.json', dict(reason='prespecified adaptive stage-2 continuation did not pass KKT'))
+        c.write(c.HERE/('follow-guarded-skipped.json' if name == 'guarded-bfgs' else 'follow-skipped.json'),
+            dict(reason='prespecified stage-2 continuation did not pass KKT', parent=name))
         return
-    folder = c.HERE/'follow'
+    policy = 'guarded' if name == 'guarded-bfgs' else 'adaptive'
+    label = 'follow-guarded' if name == 'guarded-bfgs' else 'follow'
+    folder = c.HERE/label
     folder.mkdir(exist_ok=False)
     y, lam, mu = (np.array(parent[k]) for k in ['y', 'lam', 'mu'])
     rho = parent['rho']
     m = c.model()
-    c.write(folder/'initial.json', dict(**c.state(y, lam, mu, rho), parent='cases/adaptive-bfgs/result.json'))
+    c.write(folder/'initial.json', dict(**c.state(y, lam, mu, rho), parent=f'cases/{name}/result.json', policy=policy))
     start, records, stage_summaries, stop = monotonic(), [], [], 'outer_limit'
     with gzip.open(folder/'outer.jsonl.gz', 'wt') as log:
         for stage in range(3, 14):
@@ -141,7 +152,7 @@ def follow_adaptive():
                 metrics = c.assess(m, y, lam, mu)
                 passed = max(metrics['common_kkt'].values()) <= 1e-6
                 violation = max(metrics['common_kkt']['feas'], metrics['common_kkt']['comp'])
-                next_rho = min(1e8, rho*10) if not passed and violation > .25*previous else rho
+                next_rho = next_penalty(rho, violation, previous, passed, policy)
                 row = dict(**c.state(y, lam, mu, rho, stage, eps, p), outer=outer+1, **metrics, inner=info,
                     rho_next=next_rho, previous_violation=None if not np.isfinite(previous) else previous,
                     violation=violation, elapsed=monotonic()-start)
@@ -156,21 +167,27 @@ def follow_adaptive():
             stage_summaries.append(dict(stage=stage, passed=passed, completed_outer=completed,
                 **m.metrics(y, lam, mu)))
             c.write(folder/f'stage{stage:02d}-end.json', dict(**c.state(y, lam, mu, rho, stage, eps, p), **c.assess(m, y, lam, mu)))
-            print(json.dumps(dict(name='follow', **stage_summaries[-1], elapsed=monotonic()-start)), flush=True)
+            print(json.dumps(dict(name=label, **stage_summaries[-1], elapsed=monotonic()-start)), flush=True)
             if not passed:
                 if stop != 'timeout':
                     stop = 'stage_limit'
                 break
             if stage == 13:
                 stop = 'kkt'
-    result = export(folder, m, y, lam, mu, rho, records, stop, monotonic()-start, 'follow', final_required=True)
+    result = export(folder, m, y, lam, mu, rho, records, stop, monotonic()-start, label, final_required=True)
     result['stages'] = stage_summaries
     c.write(folder/'result.json', result)
     m.close()
 
 
 if __name__ == '__main__':
-    assert not (c.HERE/'cases').exists(), 'refuse to overwrite a continuation'
-    for name in ['fixed-bfgs', 'fixed-newton', 'raised-bfgs', 'adaptive-bfgs']:
-        run(name)
-    follow_adaptive()
+    import sys
+    if sys.argv[1:] == ['--guarded']:
+        run('guarded-bfgs')
+        follow_adaptive('guarded-bfgs')
+    else:
+        assert not sys.argv[1:]
+        assert not (c.HERE/'cases').exists(), 'refuse to overwrite a continuation'
+        for name in ['fixed-bfgs', 'fixed-newton', 'raised-bfgs', 'adaptive-bfgs']:
+            run(name)
+        follow_adaptive()

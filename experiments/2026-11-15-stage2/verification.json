@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "name": "adaptive-bfgs",
+      "states": 200,
+      "target_kkt_pass": false,
+      "independent_common_stationarity": 0.00010274945179866582
+    },
+    {
+      "name": "fixed-bfgs",
+      "states": 87,
+      "target_kkt_pass": true,
+      "independent_common_stationarity": 8.746118279915824e-09
+    },
+    {
+      "name": "fixed-newton",
+      "states": 66,
+      "target_kkt_pass": false,
+      "independent_common_stationarity": 0.00011170639902734501
+    },
+    {
+      "name": "guarded-bfgs",
+      "states": 7,
+      "target_kkt_pass": true,
+      "independent_common_stationarity": 2.1721038228478262e-08
+    },
+    {
+      "name": "raised-bfgs",
+      "states": 10,
+      "target_kkt_pass": true,
+      "independent_common_stationarity": 2.9502429986418693e-08
+    },
+    {
+      "name": "follow-guarded",
+      "states": 200,
+      "target_kkt_pass": false,
+      "independent_common_stationarity": 5.672567456468561e-05
+    }
+  ],
+  "states": 570,
+  "first_five_states_identical": true,
+  "first_penalty_difference_at_extra_outer": 5,
+  "curvature_checks": true,
+  "native_pilots": [
+    {
+      "name": "tau1",
+      "before_objective": 0.567065081,
+      "after_objective": 0.567065081,
+      "before_violation": 1.8731853455022929e-06,
+      "after_violation": 1.8731853455022929e-06,
+      "same_trajectory": true
+    },
+    {
+      "name": "tau3",
+      "before_objective": 1.272887677,
+      "after_objective": 1.272887677,
+      "before_violation": 0.005688760952337655,
+      "after_violation": 0.005688760952337655,
+      "same_trajectory": true
+    },
+    {
+      "name": "fig1",
+      "before_objective": 1.958805102,
+      "after_objective": 1.958805102,
+      "before_violation": 2.963326830585089e-07,
+      "after_violation": 2.963326830585089e-07,
+      "same_trajectory": true
+    }
+  ]
+}

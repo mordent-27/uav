@@ -1,0 +1,136 @@
+{
+  "version": "before",
+  "binary_sha256": "d347ab0f69219353d24c6293be917fe23dc8e85d8023c7f54ab06a0134150236",
+  "auglag_source_sha256": "becba4b59f12e4902cee6f792427734e12654ac252a3315c13eccb2887c0b0d5",
+  "cases": [
+    {
+      "name": "tau1",
+      "command": [
+        "/tmp/uav-stage2-before",
+        "solve",
+        "--tau",
+        "1",
+        "--seed",
+        "0",
+        "--out",
+        "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-15-stage2/native/before/tau1.json"
+      ],
+      "status": "completed",
+      "wall_seconds": 1.1161083970073378,
+      "metrics": {
+        "objective": 0.567065081,
+        "init_objective": 0.725909786,
+        "viol": 1.8731853455022929e-06,
+        "viol_task": 1.8731853455022929e-06,
+        "viol_mode": 5.949017072293117e-07,
+        "viol_dyn": 1.348334277562202e-09,
+        "viol_speed": 2.5672726167158544e-09,
+        "viol_bounds": 0.0,
+        "thm_value_dev": 4.92748414324857e-26,
+        "thm_grad_dev": 3.177952421356454e-54,
+        "seconds": 1.097242,
+        "converged": false,
+        "stamps": 7
+      },
+      "final_stage": {
+        "eps": 0.0005,
+        "p": 12,
+        "outer": 30,
+        "inner": 60000,
+        "evals": 105849,
+        "rho": 100000000.0,
+        "f": 0.567065081,
+        "stat": 73.52659346655558,
+        "feas": 4.3897671275772154e-08,
+        "comp": 4.3897671275772154e-08,
+        "viol": 1.8731853455022929e-06,
+        "converged": false
+      }
+    },
+    {
+      "name": "tau3",
+      "command": [
+        "/tmp/uav-stage2-before",
+        "solve",
+        "--tau",
+        "3",
+        "--seed",
+        "0",
+        "--out",
+        "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-15-stage2/native/before/tau3.json"
+      ],
+      "status": "completed",
+      "wall_seconds": 2.4190234830020927,
+      "metrics": {
+        "objective": 1.272887677,
+        "init_objective": 2.037888549,
+        "viol": 0.005688760952337655,
+        "viol_task": 0.000278988469982977,
+        "viol_mode": 0.005688760952337655,
+        "viol_dyn": 6.976825924875918e-06,
+        "viol_speed": 0.0020073661274773724,
+        "viol_bounds": 5.386713817889799e-06,
+        "thm_value_dev": 1.0401382724861468e-32,
+        "thm_grad_dev": 1.0926725860863075e-68,
+        "seconds": 2.401072,
+        "converged": false,
+        "stamps": 17
+      },
+      "final_stage": {
+        "eps": 0.0005,
+        "p": 12,
+        "outer": 30,
+        "inner": 60000,
+        "evals": 68954,
+        "rho": 100000000.0,
+        "f": 1.272887677,
+        "stat": 4480.369569790375,
+        "feas": 0.005210691829615885,
+        "comp": 0.0012082346835112917,
+        "viol": 0.005688760952337655,
+        "converged": false
+      }
+    },
+    {
+      "name": "fig1",
+      "command": [
+        "/tmp/uav-stage2-before",
+        "solve",
+        "--fig1",
+        "--out",
+        "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-15-stage2/native/before/fig1.json"
+      ],
+      "status": "completed",
+      "wall_seconds": 7.5290750690037385,
+      "metrics": {
+        "objective": 1.958805102,
+        "init_objective": 3.059548027,
+        "viol": 2.963326830585089e-07,
+        "viol_task": 1.1112741837848716e-08,
+        "viol_mode": 2.963326830585089e-07,
+        "viol_dyn": 1.7001877683497923e-10,
+        "viol_speed": 3.418865190951692e-10,
+        "viol_bounds": 0.0,
+        "thm_value_dev": 3.2124784273439098e-27,
+        "thm_grad_dev": 8.569323222567815e-57,
+        "seconds": 7.51268,
+        "converged": false,
+        "stamps": 37
+      },
+      "final_stage": {
+        "eps": 0.0005,
+        "p": 12,
+        "outer": 30,
+        "inner": 60000,
+        "evals": 83970,
+        "rho": 100000000.0,
+        "f": 1.958805102,
+        "stat": 0.1447375495214929,
+        "feas": 2.448270886024062e-09,
+        "comp": 1.7342550405757593e-09,
+        "viol": 2.963326830585089e-07,
+        "converged": false
+      }
+    }
+  ]
+}
