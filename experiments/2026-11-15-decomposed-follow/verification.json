@@ -1,0 +1,117 @@
+{
+  "stages": [
+    {
+      "stage": 5,
+      "outer": 16,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 6,
+      "outer": 18,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 7,
+      "outer": 17,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 8,
+      "outer": 15,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 9,
+      "outer": 13,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 10,
+      "outer": 12,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 11,
+      "outer": 11,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 12,
+      "outer": 10,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 13,
+      "outer": 386,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "timeout"
+    }
+  ],
+  "completed_outer": 498,
+  "accepted_inner_points": 16754,
+  "interrupted_accepted_points": 0,
+  "original_jacobian_stationarity_verified": true,
+  "restoration": {
+    "accepted": true,
+    "source": "solution.json",
+    "source_objective": 1.8791322885689319,
+    "source_common_kkt": {
+      "stat": 9.774029696707487e-08,
+      "feas": 4.61264196054351e-08,
+      "comp": 7.596835344508303e-11,
+      "dual": 0.0
+    },
+    "source_paper_units_kkt": {
+      "stat": 3.2209861411391927e-06,
+      "feas": 4.61264196054351e-08,
+      "comp": 5.2755801003529885e-12,
+      "dual": 0.0
+    },
+    "solver_status": "Solved_To_Acceptable_Level",
+    "solver_success": true,
+    "iterations": 20,
+    "raw_kkt": {
+      "stat": 9.981656612367829e-10,
+      "feas": 3.1207356698814695e-10,
+      "comp": 4.915968384289616e-09,
+      "dual": 0.0
+    },
+    "objective": 1.8825894243738697,
+    "final_kkt": {
+      "stat": 9.981656612367829e-10,
+      "feas": 1.5987211554602255e-15,
+      "comp": 4.9159715539756046e-09,
+      "dual": 0.0
+    },
+    "time_change_seconds": 12.44568889777602,
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0000990813274768e-08,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.04961098499188665
+  }
+}

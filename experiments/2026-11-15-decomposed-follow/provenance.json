@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-15",
+  "base_commit": "651a5f1",
+  "plan_commit": "f667e36",
+  "recorded_head": "f667e3617add60254ea6474644b12a7c22a80cb4",
+  "main_source_changed": false,
+  "paper_reproduction": false,
+  "monte_carlo_rerun": false,
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0",
+    "casadi": "3.8.2"
+  },
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "dependency_hashes": {
+    "src/auglag.rs": "076fa3139fe1f73d78229b94be2be6666f63e12391a3060435171d0f869d4a4f",
+    "src/battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "src/instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "src/lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "src/main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "src/metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "src/model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "src/output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "src/params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "src/rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "src/solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2",
+    "experiments/2026-11-15-stage4-inner/cases/stalled/newton-decomposed/one-update-state.json": "6f7f2abb4b59530fc78787d49e5e2dc768df9fb0265a246f014a1ab9b48bf000",
+    "experiments/2026-11-15-stage4-inner/cases/stalled/newton-decomposed/initial.json": "06592cb84b03239a667dbd2e780792af2549c6f6a08181e8517c4bfcd1e7ed5b",
+    "experiments/2026-11-15-stage4-inner/cases/stalled/newton-decomposed/result.json": "f514bbb72e301204361f3f3c2ea1493ce6b75fd0c7104856abc0d9ae527edddd",
+    "experiments/2026-11-15-stage4-inner/support.py": "8b5f80c9a4fe242003c9620e6498238e4210d749473f8f709885aee142061f5a",
+    "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+    "experiments/2026-11-15-stage4-inner/curvature.py": "f01856d7798961127c3cc4f4734e854f733887a0e8a855f483d93b661af93f53",
+    "experiments/2026-11-15-stage2/common.py": "8bdf906be588d80a2da00377e7bc00b67dac8ee2eabdc88d18adc13ae2f32346",
+    "experiments/2026-11-15-fidelity/run.py": "e66e58d8e8d53010c97ac2bbf1a03048b0a926cf24e43d4616749c9e0f4bada2",
+    "experiments/2026-11-15-library-trace/trace.py": "e703c0dadacc9693e8492c228981c5c2596fb5cfc70c30d67e61b87f8751918e",
+    "experiments/2026-11-14-conditioning/newton_al.py": "e5a539e3975a2eea3bba0a9deb6f4b336e9e2a2a1ebb79f765ab9b9075b38fd0",
+    "experiments/2026-11-14-reproduction/independent_al.py": "68911419e6fa126ebd8fac7b8f76bbd1773104c2d642cb5f11810cdc3caafa44",
+    "experiments/2026-11-14-reproduction/bridge.rs": "d04c9a29b1608a9496573c00aed2927e16216fa7c30dcdb4412c572e147930de",
+    "experiments/2026-11-14-reproduction/bridge-speed.rs": "07c7b7977eeb2047a40460139675ab9d15306aef0c1f8de9e6f1082b7c8a9199",
+    "experiments/2026-11-14-reproduction/speed-model.rs": "2cf39018b494045fecc8aa9d65ad9a31d78ca6a3afef69736a7bc24453b3ed00",
+    "experiments/2026-11-14-resume/fixed-modes/default-fig1-fixed-modes.json": "dd5f6c7ae0061831998892345d5a3ee8f8ff20faed5a295673bba15e79fc34ae",
+    "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+    "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3"
+  },
+  "library_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "library_note": "Evaluators built at 5581585; model evaluator unchanged; AL and Newton outer logic in Python.",
+  "post_run_change": "Only the initial deadline guard was made safe; timeout checkpoint and unchanged normal fixed-AL output checked in timeout-check.json. No rerun of continuation.",
+  "timing_note": "480 seconds excludes upstream initialization/stages 1-4, preflight, restoration and verification.",
+  "paper_sha256": "3496a07b282720da68d11d13309569096d006e3db3d143fc36d243f9d22c4a5c",
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "c0bfec848a02b3e0b0a7c82b8ef871dad4cb63917cccd1d0dc342f6ef5cca7ac",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "b27900962f1ab6ef3b31b38590d06dc3a16084da5c6700d1357cf2abc08d6f2c",
+    "reproduction.md": "5c9d1ac56debf4e3070317179cdcac566a913d4ad7e8fa15a0737daa946e6e29",
+    "validation_plan.md": "e360185398148ace68e90282ea7e7af5551c158fbbf702dd1b9c51f84d7bf6f1"
+  }
+}
