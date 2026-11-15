@@ -1,0 +1,224 @@
+{
+  "date": "2026-11-15",
+  "base_commit": "be587e1",
+  "new_solves": false,
+  "note": "Geometry from rounded JSON; verify actual Rust Nearest full initial state before solving.",
+  "unchanged": [
+    "tau1-seed0",
+    "tau1-seed1",
+    "tau1-seed2"
+  ],
+  "cases": [
+    {
+      "name": "fig1",
+      "baseline_pass": true,
+      "nearest_order": [
+        2,
+        1,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "same_order": false,
+      "index_initial_km": 63.925246396586154,
+      "nearest_initial_km": 64.73637729905667,
+      "index_reconstruction_max_error_km": 8.881784197001252e-16,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/fig1/solution.json",
+      "source_sha256": "b8e7ec6932a427f846327e86590d9bb2aa775145263bd81e56d38dffb65d4bfc"
+    },
+    {
+      "name": "tau1-seed0",
+      "baseline_pass": true,
+      "nearest_order": [
+        0
+      ],
+      "same_order": true,
+      "index_initial_km": 20.57304998027762,
+      "nearest_initial_km": 20.57304998027762,
+      "index_reconstruction_max_error_km": 5.006139244254664e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed0/solution.json",
+      "source_sha256": "5c6e46cf18ef056bc942f7aece78b85aec11e5b53482ec7cc5d15f4d704da6b8"
+    },
+    {
+      "name": "tau1-seed1",
+      "baseline_pass": true,
+      "nearest_order": [
+        0
+      ],
+      "same_order": true,
+      "index_initial_km": 19.88173657401159,
+      "nearest_initial_km": 19.88173657401159,
+      "index_reconstruction_max_error_km": 1.729440727023385e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed1/solution.json",
+      "source_sha256": "ca684126ab4893516a47809e5446fb4730663751d89add1363b85e83bf024e33"
+    },
+    {
+      "name": "tau1-seed2",
+      "baseline_pass": false,
+      "nearest_order": [
+        0
+      ],
+      "same_order": true,
+      "index_initial_km": 16.761685959269265,
+      "nearest_initial_km": 16.761685959269265,
+      "index_reconstruction_max_error_km": 3.0993983824561674e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed2/solution.json",
+      "source_sha256": "4e2e269259767d93b66409598e574c10bfc849bea2e4224907c2b074a719650a"
+    },
+    {
+      "name": "tau3-seed0",
+      "baseline_pass": true,
+      "nearest_order": [
+        2,
+        0,
+        1
+      ],
+      "same_order": false,
+      "index_initial_km": 47.56326934683299,
+      "nearest_initial_km": 41.83897167641663,
+      "index_reconstruction_max_error_km": 5.006139244254664e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed0/solution.json",
+      "source_sha256": "e35dccd0698879e072a5fced7a5449c22c8d279152819d30b41f6bb8d09a5456"
+    },
+    {
+      "name": "tau3-seed1",
+      "baseline_pass": true,
+      "nearest_order": [
+        1,
+        0,
+        2
+      ],
+      "same_order": false,
+      "index_initial_km": 27.406055474146424,
+      "nearest_initial_km": 28.52213586734145,
+      "index_reconstruction_max_error_km": 4.317484835029117e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed1/solution.json",
+      "source_sha256": "7fae55ed85a50a45456858946eed6e1657d5f3c39565d1e06033255f348e1494"
+    },
+    {
+      "name": "tau3-seed2",
+      "baseline_pass": true,
+      "nearest_order": [
+        1,
+        0,
+        2
+      ],
+      "same_order": false,
+      "index_initial_km": 29.882713846633468,
+      "nearest_initial_km": 29.708629272059863,
+      "index_reconstruction_max_error_km": 6.724671751080963e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed2/solution.json",
+      "source_sha256": "8dcd0411c417f913890a5fdc631f0d627a5162b7d97e1b4fb58053d886207b7e"
+    },
+    {
+      "name": "tau5-seed0",
+      "baseline_pass": false,
+      "nearest_order": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      "same_order": false,
+      "index_initial_km": 75.91477668182904,
+      "nearest_initial_km": 51.51316876182597,
+      "index_reconstruction_max_error_km": 5.071338282207645e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed0/solution.json",
+      "source_sha256": "e528ca0813c2da630245c222e77b7f423c3a92a43f8576f86c1ce21ab1601e9e"
+    },
+    {
+      "name": "tau5-seed1",
+      "baseline_pass": false,
+      "nearest_order": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "same_order": false,
+      "index_initial_km": 64.21356873016502,
+      "nearest_initial_km": 54.78092127204206,
+      "index_reconstruction_max_error_km": 4.962771210306187e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed1/solution.json",
+      "source_sha256": "74c6bca60190a0f689963b1254c66fbed240cda361678f82610f9b1b27932e02"
+    },
+    {
+      "name": "tau5-seed2",
+      "baseline_pass": true,
+      "nearest_order": [
+        1,
+        0,
+        4,
+        2,
+        3
+      ],
+      "same_order": false,
+      "index_initial_km": 46.809139773914374,
+      "nearest_initial_km": 41.13556229767962,
+      "index_reconstruction_max_error_km": 6.724671751080963e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed2/solution.json",
+      "source_sha256": "eef7a409ac2d00b66bd6a0d9b274d61f09f284625f58315b3e6b903c0c3234b4"
+    },
+    {
+      "name": "tau7-seed0",
+      "baseline_pass": false,
+      "nearest_order": [
+        2,
+        5,
+        6,
+        0,
+        4,
+        1,
+        3
+      ],
+      "same_order": false,
+      "index_initial_km": 89.03306989256626,
+      "nearest_initial_km": 65.77871692540883,
+      "index_reconstruction_max_error_km": 5.071338282207645e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed0/solution.json",
+      "source_sha256": "082d318225187c49082837c1940ae5732d9f10403d4db9684fc90dc744e82ab9"
+    },
+    {
+      "name": "tau7-seed1",
+      "baseline_pass": false,
+      "nearest_order": [
+        6,
+        0,
+        4,
+        5,
+        1,
+        2,
+        3
+      ],
+      "same_order": false,
+      "index_initial_km": 94.76268325032778,
+      "nearest_initial_km": 68.35915382711455,
+      "index_reconstruction_max_error_km": 4.962771210306187e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed1/solution.json",
+      "source_sha256": "e58346d34893505c00c400e60cea5250d8c668b664494b80f657d707c8644a89"
+    },
+    {
+      "name": "tau7-seed2",
+      "baseline_pass": true,
+      "nearest_order": [
+        1,
+        0,
+        4,
+        5,
+        2,
+        3,
+        6
+      ],
+      "same_order": false,
+      "index_initial_km": 63.49126954602088,
+      "nearest_initial_km": 57.72787215744258,
+      "index_reconstruction_max_error_km": 6.724671751080963e-10,
+      "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed2/solution.json",
+      "source_sha256": "059f3f373178b5c719584f5a40418a0c9946e4cd573556421cd6e26dc4c73a35"
+    }
+  ]
+}
