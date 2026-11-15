@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "outer": 15,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 2,
+      "outer": 4,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 3,
+      "outer": 16,
+      "common_pass": false,
+      "physical_pass": false,
+      "stop": "timeout"
+    }
+  ],
+  "completed_outer": 35,
+  "accepted_inner_points": 8373,
+  "interrupted_accepted_points": 288,
+  "original_jacobian_stationarity_verified": true,
+  "restoration": null
+}

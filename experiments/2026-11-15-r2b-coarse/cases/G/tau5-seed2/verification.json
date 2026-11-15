@@ -1,0 +1,161 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "outer": 10,
+      "common_pass": false,
+      "physical_pass": false,
+      "stop": "outer_limit"
+    },
+    {
+      "stage": 2,
+      "outer": 10,
+      "common_pass": false,
+      "physical_pass": false,
+      "stop": "outer_limit"
+    },
+    {
+      "stage": 3,
+      "outer": 8,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 4,
+      "outer": 10,
+      "common_pass": false,
+      "physical_pass": false,
+      "stop": "outer_limit"
+    },
+    {
+      "stage": 5,
+      "outer": 8,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 6,
+      "outer": 9,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 7,
+      "outer": 10,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 8,
+      "outer": 8,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 9,
+      "outer": 7,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 10,
+      "outer": 7,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 11,
+      "outer": 8,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 12,
+      "outer": 7,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 13,
+      "outer": 6,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    }
+  ],
+  "completed_outer": 108,
+  "accepted_inner_points": 12270,
+  "interrupted_accepted_points": 0,
+  "original_jacobian_stationarity_verified": true,
+  "restoration": {
+    "accepted": true,
+    "source": "solution.json",
+    "source_objective": 1.379768068751096,
+    "source_common_kkt": {
+      "stat": 6.80894205254412e-09,
+      "feas": 8.95982101918125e-07,
+      "comp": 5.589094811964124e-10,
+      "dual": 0.0
+    },
+    "source_paper_units_kkt": {
+      "stat": 2.3415904526480347e-07,
+      "feas": 8.95982101918125e-07,
+      "comp": 1.552526336656701e-11,
+      "dual": 0.0
+    },
+    "limits": {
+      "residual": 1e-06,
+      "correction": 1e-06,
+      "kkt": 1e-06
+    },
+    "solver_status": "Solve_Succeeded",
+    "solver_success": true,
+    "iterations": 14,
+    "raw_kkt": {
+      "stat": 9.645718198510665e-17,
+      "feas": 3.197442310920451e-15,
+      "comp": 7.116359679315565e-08,
+      "dual": 0.0
+    },
+    "duration_correction": 0.0,
+    "objective": 1.3802788798661951,
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0075814516063986e-08,
+    "max_energy": 1.0,
+    "final_kkt": {
+      "stat": 9.645718198510665e-17,
+      "feas": 1.5987211554602255e-15,
+      "comp": 7.116359679315565e-08,
+      "dual": 0.0
+    },
+    "tasks_exact": true,
+    "checks": {
+      "correction": true,
+      "residual": true,
+      "energy": true,
+      "tasks": true,
+      "branch_kkt": true,
+      "dense_energy": true
+    },
+    "time_change_seconds": 1.8389200143567486,
+    "roundoff_time_correction": 0.0,
+    "seconds": 0.03310646901081782
+  }
+}
