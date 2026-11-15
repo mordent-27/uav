@@ -1,0 +1,66 @@
+{
+  "case": "tau1-seed3",
+  "tau": 1,
+  "seed": 3,
+  "stamps": 7,
+  "variables": 28,
+  "start": "uav_initial through the bridge, full precision",
+  "start_objective_hours": 0.8386877890000001,
+  "start_charging_segments": 2,
+  "instance": {
+    "r0": [
+      -3.5,
+      3.5
+    ],
+    "rf": [
+      -5,
+      -7
+    ],
+    "regions": [
+      {
+        "o": [
+          -3.5,
+          3.5
+        ],
+        "rho": 1.5
+      },
+      {
+        "o": [
+          1.5,
+          -2
+        ],
+        "rho": 2.5
+      },
+      {
+        "o": [
+          8,
+          -5
+        ],
+        "rho": 1.5
+      },
+      {
+        "o": [
+          -5,
+          -7
+        ],
+        "rho": 1.5
+      }
+    ],
+    "tasks": [
+      [
+        3.431489312,
+        2.530458121
+      ]
+    ]
+  },
+  "phase": "G",
+  "same_original_initial_state": true,
+  "smoothing": [
+    0.2,
+    2.0
+  ],
+  "initial_al_value": 25.71497302619557,
+  "initial_al_gradient_inf": 1.8976846162173069,
+  "independent_Jacobian_gradient_verified": true,
+  "baseline_source": "experiments/2026-11-15-r2d-fallback/cases/G/tau1-seed3/source.json"
+}

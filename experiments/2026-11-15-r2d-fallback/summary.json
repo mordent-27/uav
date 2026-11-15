@@ -1,0 +1,1693 @@
+{
+  "regression": {
+    "cases": 13,
+    "G_accepted": 8,
+    "fallback_attempts": 5,
+    "fallback_accepted": 5,
+    "accepted": 13,
+    "selected_both_scales_kkt": 12,
+    "selected_strict_original": 13,
+    "selected_G_outputs_unchanged": true
+  },
+  "diagnostic_holdout": {
+    "cases": 4,
+    "G_accepted": 2,
+    "fallback_attempts": 2,
+    "fallback_accepted": 1,
+    "accepted": 3,
+    "selected_both_scales_kkt": 3,
+    "selected_strict_original": 3,
+    "selected_G_outputs_unchanged": true
+  },
+  "regression_cases": [
+    {
+      "case": "fig1",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/fig1",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 6.2240893550225e-08,
+          "feas": 5.009272167812856e-08,
+          "comp": 8.43554889917812e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.168404098057408e-06,
+          "feas": 5.009272167812856e-08,
+          "comp": 5.858020068873695e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 1.249000902703301e-16,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.249000902703301e-16,
+            "viol_speed": 1.1102230246251565e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.07527301307133782,
+          "pure_mode_final_energy": 0.80625
+        },
+        "raw_hours": 1.8825510425471623,
+        "accepted": true,
+        "restored_hours": 1.8858540398108474,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0000999334236482e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 7,
+        "solver_seconds": 767.758680044004,
+        "al_seconds": 767.7141823270067,
+        "restoration_seconds": 0.04449771699728444,
+        "verified_outer": 460,
+        "verified_inner": 22176,
+        "interrupted_inner": 5
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 1.8858540398108474,
+      "selected_physical_kkt_pass": false,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/fig1/restored/solution.json",
+        "sha256": "6ac97b44eed430f95a8a4be8712831611b324de13b1f100734594ecdf7ff64a8"
+      },
+      "solver_seconds_sum": 767.758680044004,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau1-seed0",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed0",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 8.685992295790848e-09,
+          "feas": 7.85633937096502e-07,
+          "comp": 3.518299230644098e-12,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.1269572264847056e-07,
+          "feas": 7.85633937096502e-07,
+          "comp": 2.4868995751603507e-13,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.12876062105009667,
+          "pure_mode_final_energy": 0.12876062105009667
+        },
+        "raw_hours": 0.5616796996709884,
+        "accepted": true,
+        "restored_hours": 0.5617778335406254,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0076161571781483e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 1,
+        "solver_seconds": 7.349594525978318,
+        "al_seconds": 7.337041390986997,
+        "restoration_seconds": 0.012553134991321713,
+        "verified_outer": 86,
+        "verified_inner": 2260,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.5617778335406254,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed0/restored/solution.json",
+        "sha256": "8ac541a052bda868d429435199fe868d781f605adcee776db2e3b68dc4b37662"
+      },
+      "solver_seconds_sum": 7.349594525978318,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau1-seed1",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed1",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 3.7233791975547583e-09,
+          "feas": 7.792019941300953e-07,
+          "comp": 3.552713678800501e-15,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 1.340416511119713e-07,
+          "feas": 7.792019941300953e-07,
+          "comp": 3.552713678800501e-15,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 1.4069190257259834e-10,
+            "viol_task": 1.4069190257259834e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.1102230246251565e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.17618757636176563,
+          "pure_mode_final_energy": 0.17618757636176563
+        },
+        "raw_hours": 0.5756425576619228,
+        "accepted": true,
+        "restored_hours": 0.5757448313449116,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0076780743162317e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 1,
+        "solver_seconds": 8.044196948001627,
+        "al_seconds": 8.03171392600052,
+        "restoration_seconds": 0.012483022001106292,
+        "verified_outer": 84,
+        "verified_inner": 2454,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.5757448313449116,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed1/restored/solution.json",
+        "sha256": "76dbe0df23f825c0673e8662851b7d6fac8c0376b7c4c38d3480b86491efc271"
+      },
+      "solver_seconds_sum": 8.044196948001627,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau1-seed2",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed2",
+        "reused": true,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "outer_limit",
+        "common_kkt": {
+          "stat": 5.65661185168136,
+          "feas": 0.0015659664639171079,
+          "comp": 0.0015659664639171079,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 203.63802666052896,
+          "feas": 0.0008355905239225555,
+          "comp": 0.00015037920053373455,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 2.7280666614615257e-10,
+            "viol_task": 2.7280666614615257e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.1565852289650581,
+          "pure_mode_final_energy": 0.1565852289650581
+        },
+        "raw_hours": 0.4158701662971934,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 0,
+        "solver_seconds": 11.51720250499784,
+        "al_seconds": 11.51720250499784,
+        "restoration_seconds": 0.0,
+        "verified_outer": 705,
+        "verified_inner": 2282,
+        "interrupted_inner": 0
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 6.813186001486393e-09,
+          "feas": 9.715040659896874e-07,
+          "comp": 2.005432632457005e-09,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.446040305859043e-07,
+          "feas": 9.715040659896874e-07,
+          "comp": 5.570646201269458e-11,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 2.7280666614615257e-10,
+            "viol_task": 2.7280666614615257e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.1565852289650581,
+          "pure_mode_final_energy": 0.1565852289650581
+        },
+        "raw_hours": 0.4694034392126891,
+        "accepted": true,
+        "restored_hours": 0.4694345755915201,
+        "original_residual": 2.7755575615628914e-17,
+        "min_energy": 1.0069076683549838e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 2,
+        "solver_seconds": 0.37976653000805527,
+        "al_seconds": 0.36523488799866755,
+        "restoration_seconds": 0.014531642009387724,
+        "verified_outer": 6,
+        "verified_inner": 118,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 0.4694345755915201,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/restored/solution.json",
+        "sha256": "2fe26814f895d57d21a023cb4938e96b49da23282ccfb452931eed4e344fe410"
+      },
+      "solver_seconds_sum": 11.896969035005895,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau3-seed0",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed0",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 2.693252636187804e-08,
+          "feas": 3.32612353420381e-08,
+          "comp": 1.8006641360455363e-12,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 7.427243811086726e-07,
+          "feas": 3.32612353420381e-08,
+          "comp": 1.250461205587178e-13,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 2.220446049250313e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.20234962552718272,
+          "pure_mode_final_energy": 0.3365134011905526
+        },
+        "raw_hours": 1.049881161718139,
+        "accepted": true,
+        "restored_hours": 1.0498994338617502,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.005251096253268e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 2,
+        "solver_seconds": 71.76951073600503,
+        "al_seconds": 71.7475929659995,
+        "restoration_seconds": 0.021917770005529746,
+        "verified_outer": 118,
+        "verified_inner": 7354,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 1.0498994338617502,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed0/restored/solution.json",
+        "sha256": "81b7b1959438953af6bc62291e17aadfa85e0f6f3165037275d4f61d82b62654"
+      },
+      "solver_seconds_sum": 71.76951073600503,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau3-seed1",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed1",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 7.225830281343271e-09,
+          "feas": 5.5358353591807886e-08,
+          "comp": 2.8179489991453366e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.4103248752460615e-07,
+          "feas": 5.5358353591807886e-08,
+          "comp": 7.827636108737046e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 3.998517073000585e-10,
+            "viol_task": 3.998517073000585e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.34350763992892874,
+          "pure_mode_final_energy": 0.34350763992892874
+        },
+        "raw_hours": 0.7828681255679324,
+        "accepted": true,
+        "restored_hours": 0.7828698840035081,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.004696062456567e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 3,
+        "solver_seconds": 92.09808941399388,
+        "al_seconds": 92.07191363000311,
+        "restoration_seconds": 0.026175783990765922,
+        "verified_outer": 160,
+        "verified_inner": 9560,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.7828698840035081,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed1/restored/solution.json",
+        "sha256": "b3a70e91f96087b111d3c95780bad6f75039043c00ef28779e333d49612d30bb"
+      },
+      "solver_seconds_sum": 92.09808941399388,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau3-seed2",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed2",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 8.585289243412397e-09,
+          "feas": 4.928600554954038e-07,
+          "comp": 3.8502832172548906e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.1506985947716828e-07,
+          "feas": 4.928600554954038e-07,
+          "comp": 1.9015230797538245e-11,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.786491203390142e-10,
+            "viol_task": 4.786491203390142e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14343205234449363,
+          "pure_mode_final_energy": 0.3191398395545252
+        },
+        "raw_hours": 0.8372482431292203,
+        "accepted": true,
+        "restored_hours": 0.8374871186340165,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0074605816257076e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 2,
+        "solver_seconds": 67.17988148098812,
+        "al_seconds": 67.15805911499774,
+        "restoration_seconds": 0.021822365990374237,
+        "verified_outer": 101,
+        "verified_inner": 6927,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.8374871186340165,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau3-seed2/restored/solution.json",
+        "sha256": "c44e6ac32a0ee5b0cb0c0d1f6ca5278be3701450770f2bf6079c1000a2a61bc8"
+      },
+      "solver_seconds_sum": 67.17988148098812,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau5-seed0",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed0",
+        "reused": true,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 159180.98671397613,
+          "feas": 0.3001666571866456,
+          "comp": 0.3001666571866456,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2136853.212808363,
+          "feas": 0.008337962699629043,
+          "comp": 0.008337962699629043,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14728850435993002,
+          "pure_mode_final_energy": 0.18904083951705775
+        },
+        "raw_hours": 3.37034655893637,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 2,
+        "solver_seconds": 277.66582588899473,
+        "al_seconds": 277.66582588899473,
+        "restoration_seconds": 0.0,
+        "verified_outer": 579,
+        "verified_inner": 13380,
+        "interrupted_inner": 4
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 1.49839478533198e-08,
+          "feas": 7.397640717987045e-07,
+          "comp": 3.4728164094444125e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.4935580989502455e-07,
+          "feas": 7.397640717987045e-07,
+          "comp": 9.646712248456701e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14728850435993002,
+          "pure_mode_final_energy": 0.18904083951705775
+        },
+        "raw_hours": 2.5888337143517215,
+        "accepted": true,
+        "restored_hours": 2.5889528785154887,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0055587917889852e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 10,
+        "solver_seconds": 5.663122452999232,
+        "al_seconds": 5.4309948940062895,
+        "restoration_seconds": 0.2321275589929428,
+        "verified_outer": 7,
+        "verified_inner": 278,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 2.5889528785154887,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/restored/solution.json",
+        "sha256": "835bd46d5a0dc49ce354d6f71cc25a63cc457311d0942665e841d026cca083cb"
+      },
+      "solver_seconds_sum": 283.32894834199396,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau5-seed1",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed1",
+        "reused": true,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 0.00013884705896372645,
+          "feas": 1.6106994173076326e-05,
+          "comp": 8.069178980818715e-06,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 0.004998494122694153,
+          "feas": 1.6106994173076326e-05,
+          "comp": 5.603596514457441e-07,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.31118252208762e-10,
+            "viol_task": 4.31118252208762e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.1753772604397188,
+          "pure_mode_final_energy": 0.1753772604397188
+        },
+        "raw_hours": 1.9176219060852633,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 5,
+        "solver_seconds": 455.14470934300334,
+        "al_seconds": 455.14470934300334,
+        "restoration_seconds": 0.0,
+        "verified_outer": 670,
+        "verified_inner": 22465,
+        "interrupted_inner": 0
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+        "reused": false,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 8.414665896171334e-09,
+          "feas": 9.016222458251618e-07,
+          "comp": 1.0455628494340384e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.0292797226216805e-07,
+          "feas": 9.016222458251618e-07,
+          "comp": 7.260853121069712e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.31118252208762e-10,
+            "viol_task": 4.31118252208762e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.1753772604397188,
+          "pure_mode_final_energy": 0.1753772604397188
+        },
+        "raw_hours": 2.1456829059144704,
+        "accepted": true,
+        "restored_hours": 2.145959989828828,
+        "original_residual": 3.469446951953614e-17,
+        "min_energy": 1.0076785961210533e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 10,
+        "solver_seconds": 7.182937026984291,
+        "al_seconds": 7.145231400994817,
+        "restoration_seconds": 0.037705625989474356,
+        "verified_outer": 6,
+        "verified_inner": 308,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 2.145959989828828,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/restored/solution.json",
+        "sha256": "cdaefc00c219d3f754f108992f6ecfe74c3132329662d08872c8fdb23dba8317"
+      },
+      "solver_seconds_sum": 462.32764636998763,
+      "new_wall_seconds": 7.812542309999117,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau5-seed2",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed2",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 6.80894205254412e-09,
+          "feas": 8.95982101918125e-07,
+          "comp": 5.589094811964124e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.3415904526480347e-07,
+          "feas": 8.95982101918125e-07,
+          "comp": 1.552526336656701e-11,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.786491203390142e-10,
+            "viol_task": 4.786491203390142e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14343205234449363,
+          "pure_mode_final_energy": 0.21665221885931973
+        },
+        "raw_hours": 1.379768068751096,
+        "accepted": true,
+        "restored_hours": 1.3802788798661951,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0075814516063986e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 5,
+        "solver_seconds": 242.32909147600003,
+        "al_seconds": 242.2959850069892,
+        "restoration_seconds": 0.03310646901081782,
+        "verified_outer": 108,
+        "verified_inner": 12270,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 1.3802788798661951,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed2/restored/solution.json",
+        "sha256": "a3f77c43f7e65ef641b2e5c94a37aa876abce5e0075a7621a02d9cfb0fa9b318"
+      },
+      "solver_seconds_sum": 242.32909147600003,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau7-seed0",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed0",
+        "reused": true,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 82798.75128743914,
+          "feas": 0.3003476159188635,
+          "comp": 0.3003476159188635,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 1862126.930917194,
+          "feas": 0.00834298933107954,
+          "comp": 0.00834298933107954,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14728850435993002,
+          "pure_mode_final_energy": 0.32650599166829053
+        },
+        "raw_hours": 2.6304913942076102,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 2,
+        "solver_seconds": 553.0586802970065,
+        "al_seconds": 553.0586802970065,
+        "restoration_seconds": 0.0,
+        "verified_outer": 362,
+        "verified_inner": 16193,
+        "interrupted_inner": 47
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 9.922241771265217e-09,
+          "feas": 7.397634168407373e-07,
+          "comp": 3.472815784943961e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.519144724517531e-07,
+          "feas": 7.397634168407373e-07,
+          "comp": 9.646710513733225e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.777123141508355e-10,
+            "viol_task": 4.777123141508355e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.6653345369377348e-16,
+            "viol_speed": 4.440892098500626e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.14728850435993002,
+          "pure_mode_final_energy": 0.32650599166829053
+        },
+        "raw_hours": 3.0020602586616003,
+        "accepted": true,
+        "restored_hours": 3.0022296618070463,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0071601275196684e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 14,
+        "solver_seconds": 13.270371334001538,
+        "al_seconds": 13.234439430991188,
+        "restoration_seconds": 0.03593190301035065,
+        "verified_outer": 7,
+        "verified_inner": 379,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 3.0022296618070463,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/restored/solution.json",
+        "sha256": "00e7dc3d0c9aef13123e858f7650d4a584a6ca7436b12e1103d86ce94fac789b"
+      },
+      "solver_seconds_sum": 566.329051631008,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau7-seed1",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed1",
+        "reused": true,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 84.92882081738207,
+          "feas": 0.006547146023792383,
+          "comp": 0.006547146023790177,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2315.3585381217454,
+          "feas": 0.003268370658930069,
+          "comp": 0.0004546629183187623,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.31118252208762e-10,
+            "viol_task": 4.31118252208762e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.09272230089148059,
+          "pure_mode_final_energy": 0.09789316424579453
+        },
+        "raw_hours": 3.0215988708460957,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 7,
+        "solver_seconds": 733.8007203120069,
+        "al_seconds": 733.8007203120069,
+        "restoration_seconds": 0.0,
+        "verified_outer": 512,
+        "verified_inner": 23625,
+        "interrupted_inner": 4
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 8.987749839511894e-09,
+          "feas": 8.70881214362477e-07,
+          "comp": 2.2013020280271834e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.958515674666984e-07,
+          "feas": 8.70881214362477e-07,
+          "comp": 1.5286819639077662e-11,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.31118252208762e-10,
+            "viol_task": 4.31118252208762e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.09272230089148059,
+          "pure_mode_final_energy": 0.09789316424579453
+        },
+        "raw_hours": 3.2539303707704517,
+        "accepted": true,
+        "restored_hours": 3.254270328518145,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0065096367473103e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 14,
+        "solver_seconds": 12.898704887993517,
+        "al_seconds": 12.842374650004786,
+        "restoration_seconds": 0.056330237988731824,
+        "verified_outer": 7,
+        "verified_inner": 366,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 3.254270328518145,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/restored/solution.json",
+        "sha256": "8c995665f76c2518d49bb8fe0c77d1a744da6b74ba90910b800de5ec7dedf9b5"
+      },
+      "solver_seconds_sum": 746.6994252000004,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    },
+    {
+      "case": "tau7-seed2",
+      "group": "regression",
+      "G": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed2",
+        "reused": true,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 1.0106963068936794e-08,
+          "feas": 6.374222987663236e-07,
+          "comp": 2.3482840671995575e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 3.6385067048172464e-07,
+          "feas": 6.374222987663236e-07,
+          "comp": 7.901235221652314e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 0.04317544567444731,
+            "viol_task": 4.786491203390142e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 1.7763568394002505e-15,
+            "viol_bounds": 0.04317544567444731,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": -0.04317544567444731,
+          "pure_mode_final_energy": -0.04317544567444731
+        },
+        "raw_hours": 1.92029088941261,
+        "accepted": true,
+        "restored_hours": 1.9207542481550708,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0039567399644511e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 8,
+        "solver_seconds": 419.8509402990021,
+        "al_seconds": 419.81283508701017,
+        "restoration_seconds": 0.038105211991933174,
+        "verified_outer": 101,
+        "verified_inner": 12698,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 1.9207542481550708,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed2/restored/solution.json",
+        "sha256": "9e0f224fa5bf77d8c490f18304e45efd2406f119ba43415d49fd63a4dcd66979"
+      },
+      "solver_seconds_sum": 419.8509402990021,
+      "new_wall_seconds": null,
+      "new_wall_includes_G": false
+    }
+  ],
+  "diagnostic_holdout_cases": [
+    {
+      "case": "tau1-seed3",
+      "group": "diagnostic_holdout",
+      "G": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau1-seed3",
+        "reused": false,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 9.360744152031586e-09,
+          "feas": 7.792019944466823e-07,
+          "comp": 3.552713678800501e-15,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.594120893650853e-07,
+          "feas": 7.792019944466823e-07,
+          "comp": 3.552713678800501e-15,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 2.3829338502423525e-10,
+            "viol_task": 2.3829338502423525e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 2.7755575615628914e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.19016616168351208,
+          "pure_mode_final_energy": 0.19016616168351208
+        },
+        "raw_hours": 0.5959266257843551,
+        "accepted": true,
+        "restored_hours": 0.596028935864666,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0202396594216623e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 1,
+        "solver_seconds": 10.782943099009572,
+        "al_seconds": 10.766846269005327,
+        "restoration_seconds": 0.01609683000424411,
+        "verified_outer": 86,
+        "verified_inner": 3111,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.596028935864666,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau1-seed3/restored/solution.json",
+        "sha256": "f395efe8e847aa96eed79349d2b9855c74d316a08d7a0cc2ab592823368eadb5"
+      },
+      "solver_seconds_sum": 10.782943099009572,
+      "new_wall_seconds": 11.975032305999775,
+      "new_wall_includes_G": true
+    },
+    {
+      "case": "tau3-seed3",
+      "group": "diagnostic_holdout",
+      "G": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau3-seed3",
+        "reused": false,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 7.628435599254463e-09,
+          "feas": 9.201575758708202e-07,
+          "comp": 1.08775845640751e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.746236815731607e-07,
+          "feas": 9.201575758708202e-07,
+          "comp": 7.553878169496597e-12,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 4.672591202847798e-10,
+            "viol_task": 4.672591202847798e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.3877787807814457e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": 0.42065755585880943,
+          "pure_mode_final_energy": 0.4360738611321639
+        },
+        "raw_hours": 0.8834571965984297,
+        "accepted": true,
+        "restored_hours": 0.8838281937958864,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.0062047750558634e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 2,
+        "solver_seconds": 82.38661736101494,
+        "al_seconds": 82.36350548701012,
+        "restoration_seconds": 0.02311187400482595,
+        "verified_outer": 99,
+        "verified_inner": 8286,
+        "interrupted_inner": 0
+      },
+      "direct": null,
+      "selected_phase": "G",
+      "accepted": true,
+      "selected_hours": 0.8838281937958864,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau3-seed3/restored/solution.json",
+        "sha256": "4b6b59b33d4ba891834dcc8cf7ad45bd7f1fd0e8eb1d96b3f8ae82e58341ad2a"
+      },
+      "solver_seconds_sum": 82.38661736101494,
+      "new_wall_seconds": 84.72744673700072,
+      "new_wall_includes_G": true
+    },
+    {
+      "case": "tau5-seed3",
+      "group": "diagnostic_holdout",
+      "G": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau5-seed3",
+        "reused": false,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "outer_limit",
+        "common_kkt": {
+          "stat": 299.0247494522482,
+          "feas": 0.00813927256939167,
+          "comp": 0.005969154538260545,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 5476.048943527941,
+          "feas": 0.004051763693006366,
+          "comp": 0.0005900164343373149,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 4.991815849564318e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": -0.19675404958543197,
+          "pure_mode_final_energy": -0.006179064851958738
+        },
+        "raw_hours": 1.9296471765881402,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 6,
+        "solver_seconds": 274.84200047199556,
+        "al_seconds": 274.84200047199556,
+        "restoration_seconds": 0.0,
+        "verified_outer": 719,
+        "verified_inner": 14339,
+        "interrupted_inner": 0
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+        "reused": false,
+        "common_pass": true,
+        "physical_pass": true,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "kkt",
+        "common_kkt": {
+          "stat": 3.357306656986969e-08,
+          "feas": 1.763387393017516e-08,
+          "comp": 1.2206737031023058e-13,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 9.408885566219993e-07,
+          "feas": 1.763387393017516e-08,
+          "comp": 2.842170943040401e-14,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 4.991815849564318e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": -0.19675404958543197,
+          "pure_mode_final_energy": -0.006179064851958738
+        },
+        "raw_hours": 2.2525641210086067,
+        "accepted": true,
+        "restored_hours": 2.25211762369599,
+        "original_residual": 5.551115123125783e-17,
+        "min_energy": 1.001446403581241e-08,
+        "restoration_checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "strict_original_pass": true,
+        "charges": 10,
+        "solver_seconds": 12.241240411996841,
+        "al_seconds": 12.109936241002288,
+        "restoration_seconds": 0.13130417099455371,
+        "verified_outer": 70,
+        "verified_inner": 610,
+        "interrupted_inner": 0
+      },
+      "selected_phase": "direct",
+      "accepted": true,
+      "selected_hours": 2.25211762369599,
+      "selected_physical_kkt_pass": true,
+      "selected_strict_original_pass": true,
+      "adopted": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3/restored/solution.json",
+        "sha256": "0c796d755da2a826e69a83b9a3eeec0ffcaa8f69e1375afda07c1e17772cff62"
+      },
+      "solver_seconds_sum": 287.0832408839924,
+      "new_wall_seconds": 294.5759528380004,
+      "new_wall_includes_G": true
+    },
+    {
+      "case": "tau7-seed3",
+      "group": "diagnostic_holdout",
+      "G": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau7-seed3",
+        "reused": false,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 29081.043730333506,
+          "feas": 0.3002915052793056,
+          "comp": 0.3002915052793056,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 643914.2658019168,
+          "feas": 0.013148513132787313,
+          "comp": 0.008341430702202933,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 4.991815849564318e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": -0.19675404958543197,
+          "pure_mode_final_energy": 0.20779213804389385
+        },
+        "raw_hours": 2.43841452529412,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 4,
+        "solver_seconds": 652.2220259210007,
+        "al_seconds": 652.2220259210007,
+        "restoration_seconds": 0.0,
+        "verified_outer": 154,
+        "verified_inner": 23119,
+        "interrupted_inner": 78
+      },
+      "direct": {
+        "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau7-seed3",
+        "reused": false,
+        "common_pass": false,
+        "physical_pass": false,
+        "reached_final": true,
+        "last_stage": 13,
+        "stop": "timeout",
+        "common_kkt": {
+          "stat": 1.5966564150135691,
+          "feas": 0.009564259379400801,
+          "comp": 0.009564259379400801,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 57.47963094048849,
+          "feas": 0.0008264288496104286,
+          "comp": 0.00026567387165002225,
+          "dual": 0.0
+        },
+        "initial_audit": {
+          "original_residuals": {
+            "viol": 0.19675404958543197,
+            "viol_task": 4.991815849564318e-10,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 8.881784197001252e-16,
+            "viol_bounds": 0.19675404958543197,
+            "viol_endpoint": 0.0
+          },
+          "pure_mode_min_energy": -0.19675404958543197,
+          "pure_mode_final_energy": 0.20779213804389385
+        },
+        "raw_hours": 3.60232680418119,
+        "accepted": false,
+        "restored_hours": null,
+        "original_residual": null,
+        "min_energy": null,
+        "restoration_checks": null,
+        "strict_original_pass": false,
+        "charges": 13,
+        "solver_seconds": 120.03613449000113,
+        "al_seconds": 120.03613449000113,
+        "restoration_seconds": 0.0,
+        "verified_outer": 177,
+        "verified_inner": 4183,
+        "interrupted_inner": 14
+      },
+      "selected_phase": null,
+      "accepted": false,
+      "selected_hours": null,
+      "selected_physical_kkt_pass": false,
+      "selected_strict_original_pass": false,
+      "adopted": null,
+      "solver_seconds_sum": 772.2581604110019,
+      "new_wall_seconds": 780.0741115389974,
+      "new_wall_includes_G": true
+    }
+  ],
+  "new_verification": {
+    "phases": 7,
+    "outer": 1311,
+    "accepted_inner": 53956,
+    "interrupted_inner": 92,
+    "original_jacobian_stationarity_verified": true
+  },
+  "diagnostic_holdout_seed_families": 1,
+  "diagnostic_holdout_tasks_are_nested": true,
+  "execution": {
+    "workers": 5,
+    "blas_threads": 1,
+    "affinity_cpus": 16,
+    "seconds": 780.076624526002,
+    "jobs": [
+      {
+        "case": "tau5-seed1",
+        "group": "regression",
+        "attempts": [
+          {
+            "phase": "direct",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+            "returncode": 0,
+            "wall_seconds": 7.811507210004493
+          }
+        ],
+        "selected": {
+          "phase": "direct",
+          "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1"
+        },
+        "accepted": true,
+        "seconds": 7.812542309999117,
+        "error": null
+      },
+      {
+        "case": "tau1-seed3",
+        "group": "diagnostic_holdout",
+        "attempts": [
+          {
+            "phase": "G",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau1-seed3",
+            "returncode": 0,
+            "wall_seconds": 11.974677865000558
+          }
+        ],
+        "selected": {
+          "phase": "G",
+          "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau1-seed3"
+        },
+        "accepted": true,
+        "seconds": 11.975032305999775,
+        "error": null
+      },
+      {
+        "case": "tau3-seed3",
+        "group": "diagnostic_holdout",
+        "attempts": [
+          {
+            "phase": "G",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau3-seed3",
+            "returncode": 0,
+            "wall_seconds": 84.72707249999803
+          }
+        ],
+        "selected": {
+          "phase": "G",
+          "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau3-seed3"
+        },
+        "accepted": true,
+        "seconds": 84.72744673700072,
+        "error": null
+      },
+      {
+        "case": "tau5-seed3",
+        "group": "diagnostic_holdout",
+        "attempts": [
+          {
+            "phase": "G",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau5-seed3",
+            "returncode": 0,
+            "wall_seconds": 281.4918165889976
+          },
+          {
+            "phase": "direct",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3",
+            "returncode": 0,
+            "wall_seconds": 13.083355100010522
+          }
+        ],
+        "selected": {
+          "phase": "direct",
+          "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed3"
+        },
+        "accepted": true,
+        "seconds": 294.5759528380004,
+        "error": null
+      },
+      {
+        "case": "tau7-seed3",
+        "group": "diagnostic_holdout",
+        "attempts": [
+          {
+            "phase": "G",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/G/tau7-seed3",
+            "returncode": 0,
+            "wall_seconds": 658.0113998989982
+          },
+          {
+            "phase": "direct",
+            "path": "experiments/2026-11-15-r2d-fallback/cases/direct/tau7-seed3",
+            "returncode": 0,
+            "wall_seconds": 122.06204467800853
+          }
+        ],
+        "selected": null,
+        "accepted": false,
+        "seconds": 780.0741115389974,
+        "error": null
+      }
+    ]
+  },
+  "main_source_changed": false,
+  "monte_carlo_rerun": false,
+  "paper_reproduction": false
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "case": "tau1-seed3",
+    "initial_hours": 0.8386877892943094,
+    "min_initial_energy": 0.19016616168351208,
+    "original_audit": {
+      "original_residuals": {
+        "viol": 2.3829338502423525e-10,
+        "viol_task": 2.3829338502423525e-10,
+        "viol_mode": 0.0,
+        "viol_dyn": 2.7755575615628914e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "pure_mode_min_energy": 0.19016616168351208,
+      "pure_mode_final_energy": 0.19016616168351208
+    },
+    "flight_legs_exceeding_full_capacity": [],
+    "fixed_initial_geometry_infeasible": false,
+    "caveat": "changing battery and duration alone cannot fix an over-range flight leg; positions or modes must change"
+  },
+  {
+    "case": "tau3-seed3",
+    "initial_hours": 1.5897757623294388,
+    "min_initial_energy": 0.42065755585880943,
+    "original_audit": {
+      "original_residuals": {
+        "viol": 4.672591202847798e-10,
+        "viol_task": 4.672591202847798e-10,
+        "viol_mode": 0.0,
+        "viol_dyn": 1.3877787807814457e-16,
+        "viol_speed": 8.881784197001252e-16,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "pure_mode_min_energy": 0.42065755585880943,
+      "pure_mode_final_energy": 0.4360738611321639
+    },
+    "flight_legs_exceeding_full_capacity": [],
+    "fixed_initial_geometry_infeasible": false,
+    "caveat": "changing battery and duration alone cannot fix an over-range flight leg; positions or modes must change"
+  },
+  {
+    "case": "tau5-seed3",
+    "initial_hours": 2.8874367949445667,
+    "min_initial_energy": -0.19675404958543197,
+    "original_audit": {
+      "original_residuals": {
+        "viol": 0.19675404958543197,
+        "viol_task": 4.991815849564318e-10,
+        "viol_mode": 0.0,
+        "viol_dyn": 1.491862189340054e-16,
+        "viol_speed": 8.881784197001252e-16,
+        "viol_bounds": 0.19675404958543197,
+        "viol_endpoint": 0.0
+      },
+      "pure_mode_min_energy": -0.19675404958543197,
+      "pure_mode_final_energy": -0.006179064851958738
+    },
+    "flight_legs_exceeding_full_capacity": [
+      {
+        "segment": 20,
+        "distance_km": 15.793258314030222,
+        "capacity_km": 14.4,
+        "required_flight_energy": 1.0967540495854322,
+        "initial_start_energy": 0.9,
+        "initial_end_energy": -0.19675404958543197
+      }
+    ],
+    "fixed_initial_geometry_infeasible": true,
+    "caveat": "changing battery and duration alone cannot fix an over-range flight leg; positions or modes must change"
+  },
+  {
+    "case": "tau7-seed3",
+    "initial_hours": 4.14475693879245,
+    "min_initial_energy": -0.19675404958543197,
+    "original_audit": {
+      "original_residuals": {
+        "viol": 0.19675404958543197,
+        "viol_task": 4.991815849564318e-10,
+        "viol_mode": 0.0,
+        "viol_dyn": 1.491862189340054e-16,
+        "viol_speed": 8.881784197001252e-16,
+        "viol_bounds": 0.19675404958543197,
+        "viol_endpoint": 0.0
+      },
+      "pure_mode_min_energy": -0.19675404958543197,
+      "pure_mode_final_energy": 0.20779213804389385
+    },
+    "flight_legs_exceeding_full_capacity": [
+      {
+        "segment": 20,
+        "distance_km": 15.793258314030222,
+        "capacity_km": 14.4,
+        "required_flight_energy": 1.0967540495854322,
+        "initial_start_energy": 0.9,
+        "initial_end_energy": -0.19675404958543197
+      }
+    ],
+    "fixed_initial_geometry_infeasible": true,
+    "caveat": "changing battery and duration alone cannot fix an over-range flight leg; positions or modes must change"
+  }
+]

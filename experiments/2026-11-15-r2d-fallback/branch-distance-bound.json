@@ -1,0 +1,193 @@
+{
+  "case": "tau7-seed3",
+  "direct_stop": "timeout",
+  "direct_common_kkt": {
+    "stat": 1.5966564150135691,
+    "feas": 0.009564259379400801,
+    "comp": 0.009564259379400801,
+    "dual": 0.0
+  },
+  "initial_charges": 14,
+  "final_charges": 13,
+  "changed_modes": [
+    {
+      "segment": 19,
+      "before": 0,
+      "after": -1
+    }
+  ],
+  "necessary_distance_bounds": [
+    {
+      "previous_charge_segment": 1,
+      "next_charge_segment": 4,
+      "previous_region": 1,
+      "next_region": 1,
+      "task_index": 0,
+      "task_stamp": 3,
+      "task_position": [
+        3.431489312,
+        2.530458121
+      ],
+      "distances_to_regions_km": [
+        2.4250077917202413,
+        2.4250077917202413
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 4.850015483440482,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    },
+    {
+      "previous_charge_segment": 6,
+      "next_charge_segment": 9,
+      "previous_region": 0,
+      "next_region": 0,
+      "task_index": 1,
+      "task_stamp": 8,
+      "task_position": [
+        -5.071277281,
+        0.611309277
+      ],
+      "distances_to_regions_km": [
+        1.7883805112749673,
+        1.7883805112749673
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 3.576760922549935,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    },
+    {
+      "previous_charge_segment": 11,
+      "next_charge_segment": 14,
+      "previous_region": 1,
+      "next_region": 1,
+      "task_index": 2,
+      "task_stamp": 13,
+      "task_position": [
+        -1.357278698,
+        -1.808855479
+      ],
+      "distances_to_regions_km": [
+        0.3636650966816797,
+        0.3636650966816797
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 0.7273300933633594,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    },
+    {
+      "previous_charge_segment": 16,
+      "next_charge_segment": 21,
+      "previous_region": 0,
+      "next_region": 2,
+      "task_index": 3,
+      "task_stamp": 18,
+      "task_position": [
+        -5.216982675,
+        3.880344143
+      ],
+      "distances_to_regions_km": [
+        0.2586048940465733,
+        14.423226530115201
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 14.681831324161775,
+      "capacity_km": 14.4,
+      "exceeds_capacity": true
+    },
+    {
+      "previous_charge_segment": 24,
+      "next_charge_segment": 26,
+      "previous_region": 2,
+      "next_region": 1,
+      "task_index": 4,
+      "task_stamp": 25,
+      "task_position": [
+        7.961099576,
+        -5.488134082
+      ],
+      "distances_to_regions_km": [
+        0.0,
+        4.842539554200396
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 4.842539454200396,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    },
+    {
+      "previous_charge_segment": 26,
+      "next_charge_segment": 29,
+      "previous_region": 1,
+      "next_region": 1,
+      "task_index": 5,
+      "task_stamp": 28,
+      "task_position": [
+        7.620506034,
+        3.237771814
+      ],
+      "distances_to_regions_km": [
+        5.555733839183322,
+        5.555733839183322
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 11.111467578366645,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    },
+    {
+      "previous_charge_segment": 31,
+      "next_charge_segment": 34,
+      "previous_region": 1,
+      "next_region": 1,
+      "task_index": 6,
+      "task_stamp": 33,
+      "task_position": [
+        2.608128119,
+        4.58113686
+      ],
+      "distances_to_regions_km": [
+        4.173777813065786,
+        4.173777813065786
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 8.347555526131572,
+      "capacity_km": 14.4,
+      "exceeds_capacity": false
+    }
+  ],
+  "violated_bounds": [
+    {
+      "previous_charge_segment": 16,
+      "next_charge_segment": 21,
+      "previous_region": 0,
+      "next_region": 2,
+      "task_index": 3,
+      "task_stamp": 18,
+      "task_position": [
+        -5.216982675,
+        3.880344143
+      ],
+      "distances_to_regions_km": [
+        0.2586048940465733,
+        14.423226530115201
+      ],
+      "rounding_buffer_km": 1e-07,
+      "conservative_distance_lower_bound_km": 14.681831324161775,
+      "capacity_km": 14.4,
+      "exceeds_capacity": true
+    }
+  ],
+  "fixed_assignment_infeasible": true,
+  "unrestricted_NLP_infeasibility_proven": false,
+  "assumptions": [
+    "modes, regions and task stamps fixed to the failed direct point",
+    "battery at previous charge end is at most e_max",
+    "intervening segments are pure flight with c=0",
+    "s >= distance/v_d and energy drains at rate zeta during flight",
+    "travel via task must be at least distance(task, previous disk)+distance(task, next disk)"
+  ],
+  "explanation": "zeta*distance_lower_bound/v_d > e_max-e_min, even starting with a full battery"
+}
