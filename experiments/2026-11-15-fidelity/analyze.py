@@ -36,7 +36,8 @@ def main():
                 passed_stages=d['passed_stages'], total_outer=d['total_outer'], seconds=d['seconds'],
                 last_objective=d['objective'], common_stat=d['common_kkt']['stat'], common_feas=d['common_kkt']['feas'],
                 physical_stat=d['paper_units_kkt']['stat'], physical_feas=d['paper_units_kkt']['feas'],
-                final_kkt_pass=d['final_kkt_pass'], original_violation=audit['original_residuals']['viol'],
+                final_kkt_pass=d['final_kkt_pass'] if d['completed_schedule'] else None,
+                original_violation=audit['original_residuals']['viol'],
                 pure_min_energy=audit.get('pure_mode_min_energy'),
                 final_objective=d['objective'] if d['completed_schedule'] else None)
             rows.append(row)

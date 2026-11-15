@@ -24,7 +24,8 @@ def main():
         with gzip.open(folder/'outer.jsonl.gz', 'rt') as handle:
             rows = [json.loads(line) for line in handle]
         previous, current_stage, passed = initial, None, {}
-        for row in rows:
+        residual_log = gzip.open(folder/'replayed-residuals.jsonl.gz', 'wt')
+        for index, row in enumerate(rows):
             stage = row['stage']
             if stage != current_stage:
                 entry = json.loads((folder/f'stage{stage:02d}-start.json').read_text())
@@ -41,6 +42,8 @@ def main():
             close(max(abs(gradient)), row['inner']['gradient_inf'])
             close(lam, old_lam+1e4*model.h)
             close(mu, np.maximum(0., old_mu+1e4*model.g))
+            residual_log.write(json.dumps(dict(index=index, stage=stage, outer=row['outer'],
+                h=model.h.tolist(), g=model.g.tolist()), allow_nan=False)+'\n')
             metrics = model.metrics(y, lam, mu)
             for key in ['common_kkt', 'paper_units_kkt']:
                 close(list(metrics[key].values()), list(row[key].values()))
@@ -48,6 +51,7 @@ def main():
             assert [v['winner'] for v in selection['modes']] == [v['winner'] for v in row['selection']['modes']]
             previous = row
             passed[stage] = max(row['common_kkt'].values()) <= 1e-6
+        residual_log.close()
         assert len(rows) == result['total_outer']
         assert all(previous[k] == result[k] for k in ['y', 'lam', 'mu'])
         assert sum(s['completed_outer'] for s in result['stages']) == len(rows)
@@ -64,13 +68,36 @@ def main():
         gradient = gf+jac[:ref.me].T@le+jac[ref.me:].T@mi
         close(max(abs(gradient)), result['common_kkt']['stat'], 1e-8)
         close(max(abs(gradient/ref.scale)), result['paper_units_kkt']['stat'], 1e-8)
+        model.eval(y, lam, mu, 0.)
+        r.tr.write(folder/'final-constraint-audit.json', dict(variant_h=model.h.tolist(), variant_g=model.g.tolist(),
+            common_h=ref.h.tolist(), common_g=ref.g.tolist(),
+            physical_h=(ref.h*model.raw_h).tolist(), physical_g=(ref.g*model.raw_g).tolist(),
+            common_gradient=gradient.tolist(), physical_gradient=(gradient/ref.scale).tolist()))
         assert result['final_kkt_pass'] == (result['completed_schedule'] and max(result['common_kkt'].values()) <= 1e-6)
         checked.append(dict(case=folder.name, states=len(rows), final_stage=result['stage'], stop=result['stop'],
             independent_common_stationarity=float(max(abs(gradient))), independent_physical_stationarity=float(max(abs(gradient/ref.scale)))))
         model.close()
     assert len(checked) == 8
+    summary = json.loads((r.HERE/'summary.json').read_text())
+    excluded = []
+    for name, proof in summary['final_branch_prefix_checks'].items():
+        if not proof['infeasible']:
+            continue
+        doc = json.loads((r.HERE/'cases'/name/'solution.json').read_text())
+        first = proof['first_charging_segment']
+        assert all(m < 0 for m in doc['modes'][:first])
+        stamps = [doc['task_stamp'][i] for i in proof['prefix_tasks']]
+        assert stamps == sorted(stamps) == proof['prefix_stamps'] and max(stamps) <= first
+        points = [doc['instance']['r0']]+[doc['instance']['tasks'][i] for i in proof['prefix_tasks']]
+        import math
+        distance = sum(math.dist(a, b) for a, b in zip(points, points[1:]))
+        ph = doc['phys']
+        capacity = ph['v_d']*(ph['e_max']-ph['e_min'])/ph['zeta']
+        assert abs(distance-proof['lower_distance_km']) < 1e-12 and distance > capacity
+        excluded.append(name)
     r.tr.write(r.HERE/'verification.json', dict(same_initial_physical_point=True, rows=sum(c['states'] for c in checked),
-        cases=checked, al_updates=True, common_coordinate_kkt=True, physical_coordinate_kkt=True))
+        cases=checked, al_updates=True, common_coordinate_kkt=True, physical_coordinate_kkt=True,
+        prefix_excluded=excluded))
     print(json.dumps(dict(cases=len(checked), states=sum(c['states'] for c in checked))))
 
 

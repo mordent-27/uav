@@ -1,0 +1,77 @@
+{
+  "same_initial_physical_point": true,
+  "rows": 1817,
+  "cases": [
+    {
+      "case": "N-expanded",
+      "states": 262,
+      "final_stage": 4,
+      "stop": "timeout",
+      "independent_common_stationarity": 2.7552694308978498e-05,
+      "independent_physical_stationarity": 0.000991896995123226
+    },
+    {
+      "case": "N-short",
+      "states": 150,
+      "final_stage": 13,
+      "stop": "outer_limit",
+      "independent_common_stationarity": 0.0015976805239859004,
+      "independent_physical_stationarity": 0.055853889731523054
+    },
+    {
+      "case": "Q-expanded",
+      "states": 234,
+      "final_stage": 4,
+      "stop": "timeout",
+      "independent_common_stationarity": 4.1880514429354365e-07,
+      "independent_physical_stationarity": 1.5019867597915182e-05
+    },
+    {
+      "case": "Q-short",
+      "states": 148,
+      "final_stage": 13,
+      "stop": "outer_limit",
+      "independent_common_stationarity": 0.28905923082985463,
+      "independent_physical_stationarity": 9.451534314314046
+    },
+    {
+      "case": "R-expanded",
+      "states": 272,
+      "final_stage": 4,
+      "stop": "timeout",
+      "independent_common_stationarity": 6.579396964637163e-05,
+      "independent_physical_stationarity": 0.0023685829072693787
+    },
+    {
+      "case": "R-short",
+      "states": 145,
+      "final_stage": 13,
+      "stop": "outer_limit",
+      "independent_common_stationarity": 5.828134892749137e-08,
+      "independent_physical_stationarity": 1.37650999199046e-06
+    },
+    {
+      "case": "U-expanded",
+      "states": 456,
+      "final_stage": 6,
+      "stop": "timeout",
+      "independent_common_stationarity": 2.023532952311058e-08,
+      "independent_physical_stationarity": 7.284718628319808e-07
+    },
+    {
+      "case": "U-short",
+      "states": 150,
+      "final_stage": 13,
+      "stop": "outer_limit",
+      "independent_common_stationarity": 9.921074173302458e-08,
+      "independent_physical_stationarity": 3.5715867023888848e-06
+    }
+  ],
+  "al_updates": true,
+  "common_coordinate_kkt": true,
+  "physical_coordinate_kkt": true,
+  "prefix_excluded": [
+    "N-short",
+    "Q-short"
+  ]
+}
