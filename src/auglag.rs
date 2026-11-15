@@ -103,6 +103,12 @@ pub struct Outcome {
     pub converged: bool,
 }
 
+fn should_increase_penalty(violation: f64, previous: f64, o: &Opts) -> bool {
+    // Once feasibility/complementarity are acceptable, a stationarity failure is
+    // an inner-solve issue; a larger penalty can make that solve harder.
+    violation > o.tol_feas && violation > o.shrink * previous
+}
+
 pub fn solve(model: &Model, x: &mut [f64], st: &mut State, o: &Opts) -> Outcome {
     let mut out = Outcome::default();
     let n = x.len();
@@ -197,10 +203,38 @@ pub fn solve(model: &Model, x: &mut [f64], st: &mut State, o: &Opts) -> Outcome 
             break;
         }
         let viol = k.feas.max(k.comp);
-        if viol > o.shrink * prev_viol {
+        if should_increase_penalty(viol, prev_viol, o) {
             st.rho = (st.rho * o.rho_mult).min(o.rho_max);
         }
         prev_viol = viol;
     }
     out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn stage2_feasible_point_does_not_raise_penalty_for_stationarity() {
+        // Recorded adaptive stage-2 iteration 5: increasing rho here sent the
+        // solver to rho=1e8; keeping it at 1e6 reached KKT two iterations later.
+        let o = Opts::default();
+        let k = Kkt { stat: 1.156831326278492e-6, feas: 6.064224474661151e-7, comp: 5.772324482775093e-7 };
+        let previous = 1.9825603809892067e-6;
+        let violation = k.feas.max(k.comp);
+        assert!(k.stat > o.tol_stat);
+        assert!(violation > o.shrink * previous);
+        assert!(!should_increase_penalty(violation, previous, &o));
+        assert!(!should_increase_penalty(o.tol_feas, previous, &o));
+    }
+
+    #[test]
+    fn unsatisfied_complementarity_still_uses_progress_rule() {
+        let o = Opts::default();
+        let k = Kkt { stat: 1e-8, feas: 1e-8, comp: 2e-6 };
+        assert!(should_increase_penalty(k.feas.max(k.comp), 4e-6, &o));
+        assert!(!should_increase_penalty(k.feas.max(k.comp), 1e-5, &o));
+        assert!(!should_increase_penalty(k.feas.max(k.comp), f64::INFINITY, &o));
+    }
 }
