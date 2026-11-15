@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "problem": "after-raise",
+      "method": "newton",
+      "gradient_inf": 0.1371495548594977,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 107113
+    },
+    {
+      "problem": "after-raise",
+      "method": "rust",
+      "gradient_inf": 0.2461332275075554,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 2249
+    },
+    {
+      "problem": "after-raise",
+      "method": "scipy-bfgs",
+      "gradient_inf": 0.1340213045824227,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 1327
+    },
+    {
+      "problem": "after-raise",
+      "method": "scipy-lbfgs",
+      "gradient_inf": 0.17351132730663846,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 2269
+    },
+    {
+      "problem": "after-raise",
+      "method": "stable-bfgs",
+      "gradient_inf": 0.15140297363207428,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 1498
+    },
+    {
+      "problem": "before-raise",
+      "method": "newton",
+      "gradient_inf": 0.006649332424730786,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 107113
+    },
+    {
+      "problem": "before-raise",
+      "method": "rust",
+      "gradient_inf": 0.01281352376017321,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 2111
+    },
+    {
+      "problem": "before-raise",
+      "method": "scipy-bfgs",
+      "gradient_inf": 0.0010008951957838105,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 715
+    },
+    {
+      "problem": "before-raise",
+      "method": "scipy-lbfgs",
+      "gradient_inf": 0.0158020964571085,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 2123
+    },
+    {
+      "problem": "before-raise",
+      "method": "stable-bfgs",
+      "gradient_inf": 2.4709003422958746e-06,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 773
+    },
+    {
+      "problem": "stalled",
+      "method": "newton",
+      "gradient_inf": 2.4111430505266734e-06,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 107270
+    },
+    {
+      "problem": "stalled",
+      "method": "newton-decomposed",
+      "gradient_inf": 9.75674005415033e-07,
+      "inner_pass": false,
+      "one_update_common_pass": true,
+      "evaluations": 50
+    },
+    {
+      "problem": "stalled",
+      "method": "rust",
+      "gradient_inf": 2.0281606153773857e-05,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 146
+    },
+    {
+      "problem": "stalled",
+      "method": "scipy-bfgs",
+      "gradient_inf": 1.761696371118686e-05,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 62
+    },
+    {
+      "problem": "stalled",
+      "method": "scipy-lbfgs",
+      "gradient_inf": 1.9502094787501094e-05,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 10
+    },
+    {
+      "problem": "stalled",
+      "method": "stable-bfgs",
+      "gradient_inf": 1.7505960466424207e-05,
+      "inner_pass": false,
+      "one_update_common_pass": false,
+      "evaluations": 50
+    }
+  ],
+  "cases_checked": 16,
+  "logged_evaluations": 334879,
+  "hessian_direction_errors": {
+    "before-raise": 2.796506703451703e-05,
+    "after-raise": 2.9165289845637156e-05,
+    "stalled": 2.661911328937884e-05
+  },
+  "fixed_AL_inputs_and_duals": true,
+  "conditional_follow_skipped": true
+}

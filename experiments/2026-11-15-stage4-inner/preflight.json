@@ -1,0 +1,130 @@
+{
+  "reconstructions": [
+    {
+      "outer": 15,
+      "value": 1.6463353620297088,
+      "gradient_inf": 3.7943622859742334e-07
+    },
+    {
+      "outer": 200,
+      "value": 1.6726439322461562,
+      "gradient_inf": 6.142393424888067e-05
+    }
+  ],
+  "same_primal_dual_pair": true,
+  "stable_gradient_identical": true,
+  "checks": [
+    {
+      "name": "before-raise",
+      "samples": [
+        {
+          "distance": 0.0,
+          "ordinary": 1.6474289798332193,
+          "centered": 0.0,
+          "constant_error": 0.0
+        },
+        {
+          "distance": 0.001,
+          "ordinary": 1.841757631410851,
+          "centered": 0.1943286515776313,
+          "constant_error": 3.885780586188048e-16
+        },
+        {
+          "distance": -0.001,
+          "ordinary": 1.8493311697323807,
+          "centered": 0.20190218989916056,
+          "constant_error": 7.494005416219807e-16
+        },
+        {
+          "distance": 1e-05,
+          "ordinary": 1.647449312048928,
+          "centered": 2.033221570833057e-05,
+          "constant_error": 2.9885016445026225e-16
+        },
+        {
+          "distance": -1e-05,
+          "ordinary": 1.6474501299023936,
+          "centered": 2.1150069173334967e-05,
+          "constant_error": 9.122544841928815e-16
+        }
+      ],
+      "direction_fd": 388.577656083855,
+      "direction_gradient": 388.57765328145416
+    },
+    {
+      "name": "after-raise",
+      "samples": [
+        {
+          "distance": 0.0,
+          "ordinary": 1.652350259948741,
+          "centered": 0.0,
+          "constant_error": 0.0
+        },
+        {
+          "distance": 0.001,
+          "ordinary": 3.5947388915127396,
+          "centered": 1.942388631563998,
+          "constant_error": 6.661338147750939e-16
+        },
+        {
+          "distance": -0.001,
+          "ordinary": 3.670371795248392,
+          "centered": 2.0180215352996504,
+          "constant_error": 4.440892098500626e-16
+        },
+        {
+          "distance": 1e-05,
+          "ordinary": 1.6525454168636238,
+          "centered": 0.0001951569148824186,
+          "constant_error": 3.916951398647006e-16
+        },
+        {
+          "distance": -1e-05,
+          "ordinary": 1.6525531165107266,
+          "centered": 0.00020285656198462185,
+          "constant_error": 9.763511613775089e-16
+        }
+      ],
+      "direction_fd": 3884.824778775942,
+      "direction_gradient": 3884.8247508902277
+    },
+    {
+      "name": "stalled",
+      "samples": [
+        {
+          "distance": 0.0,
+          "ordinary": 1.6726439322461562,
+          "centered": 0.0,
+          "constant_error": 0.0
+        },
+        {
+          "distance": 0.001,
+          "ordinary": 3.613147775398353,
+          "centered": 1.9405038431521964,
+          "constant_error": 6.661338147750939e-16
+        },
+        {
+          "distance": -0.001,
+          "ordinary": 3.686310917083662,
+          "centered": 2.0136669848375055,
+          "constant_error": 4.440892098500626e-16
+        },
+        {
+          "distance": 1e-05,
+          "ordinary": 1.6728390486707547,
+          "centered": 0.00019511642459797368,
+          "constant_error": 6.000245873077903e-16
+        },
+        {
+          "distance": -1e-05,
+          "ordinary": 1.6728465200437064,
+          "centered": 0.0002025877975495857,
+          "constant_error": 6.386763947568985e-16
+        }
+      ],
+      "direction_fd": 3881.0400149402735,
+      "direction_gradient": 3881.0399984504943
+    }
+  ],
+  "longdouble_epsilon": 1.0842021724855044e-19
+}
