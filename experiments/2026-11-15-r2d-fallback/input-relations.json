@@ -1,0 +1,34 @@
+{
+  "seed": 3,
+  "independent_seed_families": 1,
+  "sizes": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "related_cases": [
+    {
+      "smaller_tau": 1,
+      "larger_tau": 3,
+      "prefix_tasks_equal": true,
+      "same_regions": true,
+      "same_endpoints": true
+    },
+    {
+      "smaller_tau": 3,
+      "larger_tau": 5,
+      "prefix_tasks_equal": true,
+      "same_regions": true,
+      "same_endpoints": true
+    },
+    {
+      "smaller_tau": 5,
+      "larger_tau": 7,
+      "prefix_tasks_equal": true,
+      "same_regions": true,
+      "same_endpoints": true
+    }
+  ],
+  "monte_carlo_seed_rule": "tau*10000+run; distinct from seed 3"
+}
