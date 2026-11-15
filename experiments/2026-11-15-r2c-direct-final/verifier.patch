@@ -1,0 +1,11 @@
+--- r2b/verify.py
++++ direct/verify.py
+@@ -71,7 +71,7 @@
+         initial = json.loads((folder/'initial.json').read_text())
+         result = json.loads((folder/'result.json').read_text())
+         assert initial['y'] == last_stage['y'] and (last_stage['stage'] == 0 or last_stage['stage_pass'] or h.advance_anyway(last_stage['stage'], last_stage['stop']))
+-        assert initial['stage'] == last_stage['stage']+1
++        assert initial['stage'] == (13 if last_stage['stage'] == 0 else last_stage['stage']+1)
+         assert initial['rho'] == 1e4 and not any(initial['lam']) and not any(initial['mu'])
+         previous, previous_v, expected_rho = initial, None, initial['rho']
+         saved = rows(folder/'outer.jsonl.gz')

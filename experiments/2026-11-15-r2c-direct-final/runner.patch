@@ -1,0 +1,11 @@
+--- r2b/run.py
++++ direct/run.py
+@@ -16,7 +16,7 @@
+     y = np.array(source['y'])
+     summaries, total_outer, start, stop = [], 0, monotonic(), 'stage_limit'
+     final = None
+-    for stage in range(1, 14):
++    for stage in range(13, 14):
+         folder = h.HERE/'stages'/f'stage{stage:02d}'
+         folder.mkdir(parents=True, exist_ok=False)
+         lam, mu = np.zeros(len(source['lam'])), np.zeros(len(source['mu']))
