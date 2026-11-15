@@ -1,0 +1,127 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "outer": 9,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 2,
+      "outer": 9,
+      "common_pass": true,
+      "physical_pass": true,
+      "stop": "kkt"
+    },
+    {
+      "stage": 3,
+      "outer": 17,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 4,
+      "outer": 21,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 5,
+      "outer": 20,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 6,
+      "outer": 21,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 7,
+      "outer": 16,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 8,
+      "outer": 19,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 9,
+      "outer": 14,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 10,
+      "outer": 12,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 11,
+      "outer": 11,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 12,
+      "outer": 10,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "kkt"
+    },
+    {
+      "stage": 13,
+      "outer": 452,
+      "common_pass": true,
+      "physical_pass": false,
+      "stop": "timeout"
+    }
+  ],
+  "completed_outer": 631,
+  "accepted_inner_points": 28966,
+  "interrupted_accepted_points": 6,
+  "original_jacobian_stationarity_verified": true,
+  "restoration": {
+    "accepted": false,
+    "source": "solution.json",
+    "source_objective": 1.8829248370584155,
+    "source_common_kkt": {
+      "stat": 1.031129849005108e-07,
+      "feas": 4.149432781392053e-08,
+      "comp": 5.850338540010426e-11,
+      "dual": 0.0
+    },
+    "source_paper_units_kkt": {
+      "stat": 2.402730000738984e-06,
+      "feas": 4.149432781392053e-08,
+      "comp": 4.062735097229463e-12,
+      "dual": 0.0
+    },
+    "solver_status": "Solved_To_Acceptable_Level",
+    "solver_success": true,
+    "iterations": 85,
+    "raw_kkt": {
+      "stat": 5.566749923325002e-09,
+      "feas": 1.2944757266097895e-08,
+      "comp": 4.273243684830656e-09,
+      "dual": 1.8248673590153104e-12
+    },
+    "reason": "",
+    "seconds": 0.061946525995153934
+  }
+}
