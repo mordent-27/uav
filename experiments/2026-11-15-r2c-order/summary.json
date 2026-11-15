@@ -1,0 +1,2035 @@
+{
+  "fig1": {
+    "preflight": {
+      "case": "fig1",
+      "stamps": 37,
+      "variables": 178,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "nearest_order": [
+        2,
+        1,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "route_km": {
+        "index": 50.088738468582434,
+        "nearest": 51.8645944464721,
+        "best": 50.088738468582434
+      },
+      "start_hours": {
+        "index": 3.0595480271493187,
+        "nearest": 3.0942585837865706
+      },
+      "start_charging_segments": {
+        "index": 14,
+        "nearest": 14
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": true,
+      "final_both": false,
+      "objective": 1.8825510425471623,
+      "charging": 7,
+      "charging_by_stage": [
+        0,
+        0,
+        5,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "stage_pass": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      "original_violation": 7.077798454242638e-06,
+      "pure_min_energy": -0.00043214482994524683,
+      "common_feas": 5.009272167812856e-08,
+      "max_multiplier": 4761.408995907123,
+      "task_stamps": [
+        3,
+        8,
+        12,
+        19,
+        23,
+        28,
+        35
+      ],
+      "final_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "total_outer": 460,
+      "seconds": 767.7141823270067,
+      "restored": true,
+      "restored_objective": 1.8858540398108474,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.9409542126493133,
+      "charging": 6,
+      "charging_by_stage": [
+        0,
+        0,
+        3,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "stage_pass": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true
+      ],
+      "original_violation": 7.698986181184322e-06,
+      "pure_min_energy": -0.00045726914647556405,
+      "common_feas": 5.927087518139626e-08,
+      "max_multiplier": 4361.706154081137,
+      "task_stamps": [
+        13,
+        8,
+        3,
+        18,
+        23,
+        28,
+        35
+      ],
+      "final_order": [
+        2,
+        1,
+        0,
+        3,
+        4,
+        5,
+        6
+      ],
+      "total_outer": 383,
+      "seconds": 688.1051725330035,
+      "restored": true,
+      "restored_objective": 1.9445763700166614,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau1-seed0": {
+    "preflight": {
+      "case": "tau1-seed0",
+      "stamps": 7,
+      "variables": 28,
+      "identical_start": true,
+      "index_order": [
+        0
+      ],
+      "nearest_order": [
+        0
+      ],
+      "route_km": {
+        "index": 18.745759282136095,
+        "nearest": 18.745759282136095,
+        "best": 18.745759282136095
+      },
+      "start_hours": {
+        "index": 0.7259097861684513,
+        "nearest": 0.7259097861684513
+      },
+      "start_charging_segments": {
+        "index": 2,
+        "nearest": 2
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.5616796996709884,
+      "charging": 1,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.718338095262394e-05,
+      "pure_min_energy": -0.0010080327139145862,
+      "common_feas": 7.85633937096502e-07,
+      "max_multiplier": 18.0115552371705,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 86,
+      "seconds": 7.337041390986997,
+      "restored": true,
+      "restored_objective": 0.5617778335406254,
+      "restored_residual": 2.7755575615628914e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.5616796996709884,
+      "charging": 1,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.718338095262394e-05,
+      "pure_min_energy": -0.0010080327139145862,
+      "common_feas": 7.85633937096502e-07,
+      "max_multiplier": 18.0115552371705,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 86,
+      "seconds": 7.337041390986997,
+      "restored": true,
+      "restored_objective": 0.5617778335406254,
+      "restored_residual": 2.7755575615628914e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": true
+  },
+  "tau1-seed1": {
+    "preflight": {
+      "case": "tau1-seed1",
+      "stamps": 7,
+      "variables": 28,
+      "identical_start": true,
+      "index_order": [
+        0
+      ],
+      "nearest_order": [
+        0
+      ],
+      "route_km": {
+        "index": 19.17285959293975,
+        "nearest": 19.17285959293975,
+        "best": 19.17285959293975
+      },
+      "start_hours": {
+        "index": 0.7267361708358362,
+        "nearest": 0.7267361708358362
+      },
+      "start_charging_segments": {
+        "index": 2,
+        "nearest": 2
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.5756425576619228,
+      "charging": 1,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.7108553691702786e-05,
+      "pure_min_energy": -0.0010056182348083809,
+      "common_feas": 7.792019941300953e-07,
+      "max_multiplier": 17.87752079306627,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 84,
+      "seconds": 8.03171392600052,
+      "restored": true,
+      "restored_objective": 0.5757448313449116,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.5756425576619228,
+      "charging": 1,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.7108553691702786e-05,
+      "pure_min_energy": -0.0010056182348083809,
+      "common_feas": 7.792019941300953e-07,
+      "max_multiplier": 17.87752079306627,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 84,
+      "seconds": 8.03171392600052,
+      "restored": true,
+      "restored_objective": 0.5757448313449116,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": true
+  },
+  "tau1-seed2": {
+    "preflight": {
+      "case": "tau1-seed2",
+      "stamps": 7,
+      "variables": 28,
+      "identical_start": true,
+      "index_order": [
+        0
+      ],
+      "nearest_order": [
+        0
+      ],
+      "route_km": {
+        "index": 14.971677849576935,
+        "nearest": 14.971677849576935,
+        "best": 14.971677849576935
+      },
+      "start_hours": {
+        "index": 0.5688270068393153,
+        "nearest": 0.5688270068393153
+      },
+      "start_charging_segments": {
+        "index": 2,
+        "nearest": 2
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "outer_limit",
+      "final_common": false,
+      "final_both": false,
+      "objective": 0.4158701662971934,
+      "charging": 0,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage_pass": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0012384676207280215,
+      "pure_min_energy": -0.0396754157429835,
+      "common_feas": 0.0015659664639171079,
+      "max_multiplier": 49726927.93851887,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 705,
+      "seconds": 11.51720250499784,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "outer_limit",
+      "final_common": false,
+      "final_both": false,
+      "objective": 0.4158701662971934,
+      "charging": 0,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "stage_pass": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0012384676207280215,
+      "pure_min_energy": -0.0396754157429835,
+      "common_feas": 0.0015659664639171079,
+      "max_multiplier": 49726927.93851887,
+      "task_stamps": [
+        3
+      ],
+      "final_order": [
+        0
+      ],
+      "total_outer": 705,
+      "seconds": 11.51720250499784,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O_reuses_G": true
+  },
+  "tau3-seed0": {
+    "preflight": {
+      "case": "tau3-seed0",
+      "stamps": 17,
+      "variables": 78,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2
+      ],
+      "nearest_order": [
+        2,
+        0,
+        1
+      ],
+      "route_km": {
+        "index": 30.756882845004593,
+        "nearest": 25.214482828175278,
+        "best": 22.43971868963275
+      },
+      "start_hours": {
+        "index": 2.0378885485610856,
+        "nearest": 1.9166231200694137
+      },
+      "start_charging_segments": {
+        "index": 6,
+        "nearest": 6
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.049881161718139,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 5.7673513549798845e-06,
+      "pure_min_energy": -0.0004636605700779617,
+      "common_feas": 3.32612353420381e-08,
+      "max_multiplier": 205.19897923812474,
+      "task_stamps": [
+        3,
+        8,
+        13
+      ],
+      "final_order": [
+        0,
+        1,
+        2
+      ],
+      "total_outer": 118,
+      "seconds": 71.7475929659995,
+      "restored": true,
+      "restored_objective": 1.0498994338617502,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.8046845891735677,
+      "charging": 1,
+      "charging_by_stage": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.9797366304402097e-05,
+      "pure_min_energy": -0.002652447062878094,
+      "common_feas": 8.870960991894583e-07,
+      "max_multiplier": 20.638684756924718,
+      "task_stamps": [
+        8,
+        13,
+        2
+      ],
+      "final_order": [
+        2,
+        0,
+        1
+      ],
+      "total_outer": 95,
+      "seconds": 57.11062414001208,
+      "restored": true,
+      "restored_objective": 0.8051014380048617,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau3-seed1": {
+    "preflight": {
+      "case": "tau3-seed1",
+      "stamps": 17,
+      "variables": 78,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2
+      ],
+      "nearest_order": [
+        1,
+        0,
+        2
+      ],
+      "route_km": {
+        "index": 24.639854664192313,
+        "nearest": 25.925754685864735,
+        "best": 24.639854664192313
+      },
+      "start_hours": {
+        "index": 1.2071437263440732,
+        "nearest": 1.2554082485568538
+      },
+      "start_charging_segments": {
+        "index": 6,
+        "nearest": 6
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.7828681255679324,
+      "charging": 3,
+      "charging_by_stage": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 7.44052539402595e-06,
+      "pure_min_energy": -0.0005308261396506087,
+      "common_feas": 5.5358353591807886e-08,
+      "max_multiplier": 101.93974501692053,
+      "task_stamps": [
+        5,
+        7,
+        12
+      ],
+      "final_order": [
+        0,
+        1,
+        2
+      ],
+      "total_outer": 160,
+      "seconds": 92.07191363000311,
+      "restored": true,
+      "restored_objective": 0.7828698840035081,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.8266715035340194,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.4053828385480286e-05,
+      "pure_min_energy": -0.00200609864943857,
+      "common_feas": 5.782522842938181e-07,
+      "max_multiplier": 27.37626880873286,
+      "task_stamps": [
+        6,
+        2,
+        12
+      ],
+      "final_order": [
+        1,
+        0,
+        2
+      ],
+      "total_outer": 104,
+      "seconds": 86.8015553150035,
+      "restored": true,
+      "restored_objective": 0.8269778318781577,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau3-seed2": {
+    "preflight": {
+      "case": "tau3-seed2",
+      "stamps": 17,
+      "variables": 78,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2
+      ],
+      "nearest_order": [
+        1,
+        0,
+        2
+      ],
+      "route_km": {
+        "index": 26.784559489530594,
+        "nearest": 26.280638469815667,
+        "best": 26.280638469815667
+      },
+      "start_hours": {
+        "index": 1.2560691073785912,
+        "nearest": 1.2475827299678377
+      },
+      "start_charging_segments": {
+        "index": 6,
+        "nearest": 6
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.8372482431292203,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.159214030950541e-05,
+      "pure_min_energy": -0.0021984762611823028,
+      "common_feas": 4.928600554954038e-07,
+      "max_multiplier": 22.86444569226993,
+      "task_stamps": [
+        3,
+        1,
+        13
+      ],
+      "final_order": [
+        1,
+        0,
+        2
+      ],
+      "total_outer": 101,
+      "seconds": 67.15805911499774,
+      "restored": true,
+      "restored_objective": 0.8374871186340165,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 0.837289688549598,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 1.8655477897939903e-05,
+      "pure_min_energy": -0.001897005818999209,
+      "common_feas": 3.708003609624805e-07,
+      "max_multiplier": 26.572427111419515,
+      "task_stamps": [
+        3,
+        1,
+        13
+      ],
+      "final_order": [
+        1,
+        0,
+        2
+      ],
+      "total_outer": 101,
+      "seconds": 64.40967066599114,
+      "restored": true,
+      "restored_objective": 0.8374871186340165,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau5-seed0": {
+    "preflight": {
+      "case": "tau5-seed0",
+      "stamps": 27,
+      "variables": 128,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "nearest_order": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      "route_km": {
+        "index": 52.98306797996846,
+        "nearest": 30.279260122402363,
+        "best": 29.154106695073345
+      },
+      "start_hours": {
+        "index": 3.3270314462513824,
+        "nearest": 2.436463856439619
+      },
+      "start_charging_segments": {
+        "index": 10,
+        "nearest": 10
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 3.37034655893637,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.008337962699629045,
+      "pure_min_energy": -0.49344560722839437,
+      "common_feas": 0.3001666571866456,
+      "max_multiplier": 266145442.75617588,
+      "task_stamps": [
+        3,
+        6,
+        13,
+        17,
+        23
+      ],
+      "final_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "total_outer": 579,
+      "seconds": 277.66582588899473,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "outer_limit",
+      "final_common": false,
+      "final_both": false,
+      "objective": 1.4134802656666818,
+      "charging": 3,
+      "charging_by_stage": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "stage_pass": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0003263925022885147,
+      "pure_min_energy": -0.029803066854285534,
+      "common_feas": 0.00010727570209565496,
+      "max_multiplier": 5778788.010695344,
+      "task_stamps": [
+        8,
+        22,
+        2,
+        25,
+        13
+      ],
+      "final_order": [
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      "total_outer": 714,
+      "seconds": 314.33327651199943,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O_reuses_G": false
+  },
+  "tau5-seed1": {
+    "preflight": {
+      "case": "tau5-seed1",
+      "stamps": 27,
+      "variables": 128,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "nearest_order": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "route_km": {
+        "index": 56.83950700829829,
+        "nearest": 38.919965012482486,
+        "best": 38.38328156322551
+      },
+      "start_hours": {
+        "index": 2.8579598774611923,
+        "nearest": 2.478327745512749
+      },
+      "start_charging_segments": {
+        "index": 10,
+        "nearest": 10
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 1.9176219060852633,
+      "charging": 5,
+      "charging_by_stage": [
+        0,
+        1,
+        4,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "stage_pass": [
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.00012793134656669517,
+      "pure_min_energy": -0.009345616600904785,
+      "common_feas": 1.6106994173076326e-05,
+      "max_multiplier": 886101.8658433389,
+      "task_stamps": [
+        22,
+        24,
+        9,
+        18,
+        23
+      ],
+      "final_order": [
+        2,
+        3,
+        0,
+        4,
+        1
+      ],
+      "total_outer": 670,
+      "seconds": 455.14470934300334,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.3232429993492947,
+      "charging": 3,
+      "charging_by_stage": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "stage_pass": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 3.13676331116174e-05,
+      "pure_min_energy": -0.00395356306770811,
+      "common_feas": 9.8296219235342e-07,
+      "max_multiplier": 22.864841633024753,
+      "task_stamps": [
+        10,
+        8,
+        23,
+        4,
+        14
+      ],
+      "final_order": [
+        3,
+        1,
+        0,
+        4,
+        2
+      ],
+      "total_outer": 103,
+      "seconds": 205.5877134219918,
+      "restored": true,
+      "restored_objective": 1.323929212344226,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau5-seed2": {
+    "preflight": {
+      "case": "tau5-seed2",
+      "stamps": 27,
+      "variables": 128,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "nearest_order": [
+        1,
+        0,
+        4,
+        2,
+        3
+      ],
+      "route_km": {
+        "index": 41.897159144204174,
+        "nearest": 31.04521793637431,
+        "best": 30.876027865750157
+      },
+      "start_hours": {
+        "index": 2.05308069315013,
+        "nearest": 1.8392231025242758
+      },
+      "start_charging_segments": {
+        "index": 10,
+        "nearest": 10
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.379768068751096,
+      "charging": 5,
+      "charging_by_stage": [
+        0,
+        0,
+        3,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "stage_pass": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.9102476584253853e-05,
+      "pure_min_energy": -0.005030240913544093,
+      "common_feas": 8.95982101918125e-07,
+      "max_multiplier": 16.874377449911293,
+      "task_stamps": [
+        3,
+        1,
+        18,
+        15,
+        23
+      ],
+      "final_order": [
+        1,
+        0,
+        3,
+        2,
+        4
+      ],
+      "total_outer": 108,
+      "seconds": 242.2959850069892,
+      "restored": true,
+      "restored_objective": 1.3802788798661951,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.0062479401558,
+      "charging": 3,
+      "charging_by_stage": [
+        0,
+        0,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "stage_pass": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.7571619146230193e-05,
+      "pure_min_energy": -0.004522663383289327,
+      "common_feas": 7.876198883071664e-07,
+      "max_multiplier": 18.05205064331903,
+      "task_stamps": [
+        4,
+        7,
+        18,
+        20,
+        13
+      ],
+      "final_order": [
+        0,
+        1,
+        4,
+        2,
+        3
+      ],
+      "total_outer": 105,
+      "seconds": 220.83063108900387,
+      "restored": true,
+      "restored_objective": 1.0067960771547402,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O_reuses_G": false
+  },
+  "tau7-seed0": {
+    "preflight": {
+      "case": "tau7-seed0",
+      "stamps": 37,
+      "variables": 178,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "nearest_order": [
+        2,
+        5,
+        6,
+        0,
+        4,
+        1,
+        3
+      ],
+      "route_km": {
+        "index": 65.51767753695621,
+        "nearest": 44.24585800276033,
+        "best": 43.12070457543131
+      },
+      "start_hours": {
+        "index": 4.038016857955186,
+        "nearest": 3.166821316549576
+      },
+      "start_charging_segments": {
+        "index": 14,
+        "nearest": 14
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 2.6304913942076102,
+      "charging": 2,
+      "charging_by_stage": [
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "stage_pass": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.00834298933107954,
+      "pure_min_energy": -0.28465502802843834,
+      "common_feas": 0.3003476159188635,
+      "max_multiplier": 81389111.28110537,
+      "task_stamps": [
+        3,
+        18,
+        6,
+        17,
+        23,
+        29,
+        33
+      ],
+      "final_order": [
+        0,
+        2,
+        3,
+        1,
+        4,
+        5,
+        6
+      ],
+      "total_outer": 362,
+      "seconds": 553.0586802970065,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 1.903329920712825,
+      "charging": 4,
+      "charging_by_stage": [
+        0,
+        0,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "stage_pass": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0003116930234461955,
+      "pure_min_energy": -0.029833194845667335,
+      "common_feas": 9.536106742178419e-05,
+      "max_multiplier": 152713.136084516,
+      "task_stamps": [
+        18,
+        29,
+        1,
+        35,
+        23,
+        7,
+        12
+      ],
+      "final_order": [
+        2,
+        5,
+        6,
+        0,
+        4,
+        1,
+        3
+      ],
+      "total_outer": 142,
+      "seconds": 687.9171568989987,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O_reuses_G": false
+  },
+  "tau7-seed1": {
+    "preflight": {
+      "case": "tau7-seed1",
+      "stamps": 37,
+      "variables": 178,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "nearest_order": [
+        6,
+        0,
+        4,
+        5,
+        1,
+        2,
+        3
+      ],
+      "route_km": {
+        "index": 67.98730044719174,
+        "nearest": 49.4827979372365,
+        "best": 44.88089395094743
+      },
+      "start_hours": {
+        "index": 4.241368493521915,
+        "nearest": 3.2297242939634323
+      },
+      "start_charging_segments": {
+        "index": 14,
+        "nearest": 14
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 3.0215988708460957,
+      "charging": 7,
+      "charging_by_stage": [
+        0,
+        2,
+        5,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "stage_pass": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0037350525328414116,
+      "pure_min_energy": -0.24109803191815332,
+      "common_feas": 0.006547146023792383,
+      "max_multiplier": 126522295.43543456,
+      "task_stamps": [
+        5,
+        23,
+        8,
+        18,
+        25,
+        28,
+        33
+      ],
+      "final_order": [
+        0,
+        2,
+        3,
+        1,
+        4,
+        5,
+        6
+      ],
+      "total_outer": 512,
+      "seconds": 733.8007203120069,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 1.5938001023709236,
+      "charging": 3,
+      "charging_by_stage": [
+        0,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "stage_pass": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0036939681438609797,
+      "pure_min_energy": -0.540265245674768,
+      "common_feas": 0.006464309457110218,
+      "max_multiplier": 155608790.41422358,
+      "task_stamps": [
+        20,
+        22,
+        23,
+        33,
+        14,
+        18,
+        3
+      ],
+      "final_order": [
+        6,
+        4,
+        5,
+        0,
+        1,
+        2,
+        3
+      ],
+      "total_outer": 607,
+      "seconds": 464.60795752600825,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O_reuses_G": false
+  },
+  "tau7-seed2": {
+    "preflight": {
+      "case": "tau7-seed2",
+      "stamps": 37,
+      "variables": 178,
+      "identical_start": false,
+      "index_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "nearest_order": [
+        1,
+        0,
+        4,
+        5,
+        2,
+        3,
+        6
+      ],
+      "route_km": {
+        "index": 56.33125778928147,
+        "nearest": 44.31867535252442,
+        "best": 41.52339730097556
+      },
+      "start_hours": {
+        "index": 2.816551539400368,
+        "nearest": 2.565916074553121
+      },
+      "start_charging_segments": {
+        "index": 14,
+        "nearest": 14
+      },
+      "matches_main_binary_nearest_init": true
+    },
+    "G": {
+      "last_stage": 13,
+      "stop": "kkt",
+      "final_common": true,
+      "final_both": true,
+      "objective": 1.92029088941261,
+      "charging": 8,
+      "charging_by_stage": [
+        0,
+        0,
+        0,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "stage_pass": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "original_violation": 2.446734789347317e-05,
+      "pure_min_energy": -0.004610209395709275,
+      "common_feas": 6.374222987663236e-07,
+      "max_multiplier": 26.678592478132117,
+      "task_stamps": [
+        4,
+        1,
+        15,
+        13,
+        23,
+        29,
+        33
+      ],
+      "final_order": [
+        1,
+        0,
+        3,
+        2,
+        4,
+        5,
+        6
+      ],
+      "total_outer": 101,
+      "seconds": 419.81283508701017,
+      "restored": true,
+      "restored_objective": 1.9207542481550708,
+      "restored_residual": 5.551115123125783e-17,
+      "restored_strict": true
+    },
+    "O": {
+      "last_stage": 13,
+      "stop": "timeout",
+      "final_common": false,
+      "final_both": false,
+      "objective": 1.9762702886889947,
+      "charging": 7,
+      "charging_by_stage": [
+        0,
+        0,
+        3,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ],
+      "stage_pass": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "original_violation": 0.0014614803065681242,
+      "pure_min_energy": -0.026606144826837763,
+      "common_feas": 0.0019976089994387714,
+      "max_multiplier": 39185784.29109524,
+      "task_stamps": [
+        4,
+        7,
+        27,
+        26,
+        15,
+        21,
+        33
+      ],
+      "final_order": [
+        0,
+        1,
+        4,
+        5,
+        3,
+        2,
+        6
+      ],
+      "total_outer": 495,
+      "seconds": 618.7909970130131,
+      "restored": false,
+      "restored_objective": null,
+      "restored_residual": null,
+      "restored_strict": false
+    },
+    "O_reuses_G": false
+  }
+}
