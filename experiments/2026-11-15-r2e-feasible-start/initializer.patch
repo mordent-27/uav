@@ -1,0 +1,10 @@
+--- R2e-1/initialize.py
++++ R2e-2/initialize.py
+@@ -29,6 +29,7 @@
+         stamps=m.stamps, initial_modes=data['modes'], initial_task_stamps=data['task_stamp'])
+     try:
+         model = fb.FixedBranch(data, moving=True)
++        model.x0 = h.load_from(h.BASE, 'construct').build(data, model)
+         solver = ca.nlpsol('position_init', 'ipopt', dict(x=model.v,f=model.objective,g=model.constraints), restoration.OPTIONS)
+         answer = solver(x0=model.x0,lbx=model.lb,ubx=model.ub,
+             lbg=np.r_[np.zeros(model.me),np.full(model.mi,-np.inf)],ubg=np.zeros(model.me+model.mi))
