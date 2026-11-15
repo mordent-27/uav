@@ -30,6 +30,9 @@ class RepairTests(unittest.TestCase):
             self.assertEqual(output[key],data[key])
         self.assertGreater(min(output['solution']['e']),0)
         self.assertEqual(len(output['solution']['r']),len(data['solution']['r']))
+        self.assertEqual(output['metrics']['objective'],sum(output['solution']['s']))
+        self.assertEqual(output['metrics']['viol'],repair.audit(output)['original_residuals']['viol'])
+        self.assertFalse(output['metrics']['converged'])
 
     def test_fixed_task_endpoints_cannot_be_moved_to_hide_overrange_flight(self):
         data=self.fixture('tau7-seed3')

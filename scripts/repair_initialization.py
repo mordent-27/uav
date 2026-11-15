@@ -116,6 +116,11 @@ def repair(data, charge_fraction=.99, interior_margin=.001, energy_buffer=1e-8):
         if not checked['accepted']:
             report['reason']='constructed_physical_checks'
             return None,report
+        # The caller may serialize the returned document directly. Do not leave
+        # the old objective/residuals attached to a newly constructed trajectory.
+        output['metrics']=dict(objective=sum(durations),init_objective=sum(data['solution']['s']),
+            converged=False,stamps=len(r),**checked['original_residuals'])
+        output['stages']=[]
         return output,report
     except (ValueError,OverflowError) as error:
         return None,dict(report,reason=str(error))
