@@ -1,0 +1,251 @@
+{
+  "rule": "first two negative-battery inputs per fixed seed range",
+  "ranges": [
+    {
+      "tau": 5,
+      "start": 200,
+      "end": 399
+    },
+    {
+      "tau": 7,
+      "start": 400,
+      "end": 599
+    }
+  ],
+  "scanned": 8,
+  "selected": [
+    "tau5-seed203",
+    "tau5-seed205",
+    "tau7-seed400",
+    "tau7-seed401"
+  ],
+  "rows": [
+    {
+      "case": "tau5-seed200",
+      "tau": 5,
+      "seed": 200,
+      "minimum_stored_energy": 0.0077766942164650965,
+      "audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 4.440892098500626e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.5265566588595902e-16,
+          "viol_speed": 4.440892098500626e-16,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.0077766942164650965,
+        "max_energy": 1,
+        "dense_min_energy": 0.0077766942164650965,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": false,
+      "selected": false,
+      "initial_y_sha256": "61a2a636ed5cacf20acab63a0bc4f915d73d2afb356ee5ab8c7a1bc42359e856"
+    },
+    {
+      "case": "tau5-seed201",
+      "tau": 5,
+      "seed": 201,
+      "minimum_stored_energy": 0.13842092643517778,
+      "audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.7763568394002505e-15,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.1102230246251565e-16,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.13842092643517778,
+        "max_energy": 1,
+        "dense_min_energy": 0.13842092643517778,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": false,
+      "selected": false,
+      "initial_y_sha256": "a64989699aa35b556097d8843cfa6789437489a2770acb49840f35eeb1c44173"
+    },
+    {
+      "case": "tau5-seed202",
+      "tau": 5,
+      "seed": 202,
+      "minimum_stored_energy": 0.10019082492683828,
+      "audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.7763568394002505e-15,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.1102230246251565e-16,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.10019082492683828,
+        "max_energy": 1,
+        "dense_min_energy": 0.10019082492683828,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": false,
+      "selected": false,
+      "initial_y_sha256": "5113b61259d7121b7445de1b24da1f66ed4da0fc4ad2601bf7c6e73853d2647e"
+    },
+    {
+      "case": "tau5-seed203",
+      "tau": 5,
+      "seed": 203,
+      "minimum_stored_energy": -0.03566228413069439,
+      "audit": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.03566228413069439,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.03566228413069439,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.03566228413069439,
+        "max_energy": 1,
+        "dense_min_energy": -0.03566228413069439,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 4.336808689942018e-19,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": true,
+      "selected": true,
+      "initial_y_sha256": "06e5a2412a8f1ef38963acc84db75b44633c0c39e578ce25b8f4d8f64d4ead72"
+    },
+    {
+      "case": "tau5-seed204",
+      "tau": 5,
+      "seed": 204,
+      "minimum_stored_energy": 0.010415360669355112,
+      "audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 8.881784197001252e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.1102230246251565e-16,
+          "viol_speed": 8.881784197001252e-16,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.010415360669355112,
+        "max_energy": 1,
+        "dense_min_energy": 0.010415360669355112,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": false,
+      "selected": false,
+      "initial_y_sha256": "7aefd4b3ace0b158d662ecff856d8916c0609130452eec4164530e7b5430cde9"
+    },
+    {
+      "case": "tau5-seed205",
+      "tau": 5,
+      "seed": 205,
+      "minimum_stored_energy": -0.03145243590005553,
+      "audit": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.03145243590005553,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.3877787807814457e-16,
+          "viol_speed": 4.440892098500626e-16,
+          "viol_bounds": 0.03145243590005553,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.03145243590005553,
+        "max_energy": 1,
+        "dense_min_energy": -0.03145243590005553,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": true,
+      "selected": true,
+      "initial_y_sha256": "7196df085f0f7c304e5a127b1aa80dd086058fb806d1eaa733690c660349ea9c"
+    },
+    {
+      "case": "tau7-seed400",
+      "tau": 7,
+      "seed": 400,
+      "minimum_stored_energy": -0.16157610499609898,
+      "audit": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.16157610499609898,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.16157610499609898,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.16157610499609898,
+        "max_energy": 1,
+        "dense_min_energy": -0.16157610499609898,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 2.220446049250313e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": true,
+      "selected": true,
+      "initial_y_sha256": "6db1f338c666245f90956b956ed0a10399923cc15888fd4e970e9bb9d0eaa7f6"
+    },
+    {
+      "case": "tau7-seed401",
+      "tau": 7,
+      "seed": 401,
+      "minimum_stored_energy": -0.06693193274013687,
+      "audit": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.06693193274013687,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.942890293094024e-16,
+          "viol_speed": 8.881784197001252e-16,
+          "viol_bounds": 0.06693193274013687,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.06693193274013687,
+        "max_energy": 1,
+        "dense_min_energy": -0.06693193274013687,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "negative_battery": true,
+      "selected": true,
+      "initial_y_sha256": "bea27ae7a2a191d28285b2ab1df504db6b79bcc0ecc03e85d4991d9999eb946a"
+    }
+  ],
+  "seconds": 0.02957804199832026,
+  "conditional_cohort": true,
+  "repairability_not_used_for_selection": true
+}
