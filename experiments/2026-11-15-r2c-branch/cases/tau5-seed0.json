@@ -1,0 +1,92 @@
+{
+  "case": "tau5-seed0",
+  "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau5-seed0",
+  "source_objective": 3.37034655893637,
+  "source_common_kkt": {
+    "stat": 159180.98671397613,
+    "feas": 0.3001666571866456,
+    "comp": 0.3001666571866456,
+    "dual": 0.0
+  },
+  "modes": [
+    -1,
+    -1,
+    -1,
+    -1,
+    0,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    3,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "task_stamp": [
+    3,
+    6,
+    13,
+    17,
+    23
+  ],
+  "charging_segments": 2,
+  "route": {
+    "index_order_km": 52.98306797996846,
+    "best_order_km": 29.154106695073345,
+    "range_km": 14.4
+  },
+  "solver_status": "Infeasible_Problem_Detected",
+  "solver_success": false,
+  "iterations": 538,
+  "raw_kkt": {
+    "stat": 0.027782515619880238,
+    "feas": 1.3897134220242793,
+    "comp": 1.3897134220242793,
+    "dual": 0.0
+  },
+  "accepted": false,
+  "returned_point": {
+    "duration_correction": 0.03860318868828748,
+    "objective": 3.3704654430862275,
+    "original_residuals": {
+      "viol": 0.49364216449113185,
+      "viol_task": 0.0,
+      "viol_mode": 2.3268210469495898e-07,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 4.440892098500626e-16,
+      "viol_bounds": 0.49364216449113185,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": -0.49364216449113185,
+    "max_energy": 1.0,
+    "final_kkt": {
+      "stat": 0.02777934443773715,
+      "feas": 7.1084473126723,
+      "comp": 7.1084473126723,
+      "dual": 0.0
+    },
+    "tasks_exact": true,
+    "checks": {
+      "correction": false,
+      "residual": false,
+      "energy": false,
+      "tasks": true,
+      "branch_kkt": false
+    }
+  },
+  "seconds": 0.1332159750018036
+}

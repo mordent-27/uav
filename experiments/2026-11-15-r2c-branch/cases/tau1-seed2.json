@@ -1,0 +1,69 @@
+{
+  "case": "tau1-seed2",
+  "source": "experiments/2026-11-15-r2b-coarse/cases/G/tau1-seed2",
+  "source_objective": 0.4158701662971934,
+  "source_common_kkt": {
+    "stat": 5.65661185168136,
+    "feas": 0.0015659664639171079,
+    "comp": 0.0015659664639171079,
+    "dual": 0.0
+  },
+  "modes": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ],
+  "task_stamp": [
+    3
+  ],
+  "charging_segments": 0,
+  "route": {
+    "index_order_km": 14.971677849576935,
+    "best_order_km": 14.971677849576935,
+    "range_km": 14.4
+  },
+  "no_charging_branch_infeasible_by_bound": true,
+  "solver_status": "Maximum_Iterations_Exceeded",
+  "solver_success": false,
+  "iterations": 1500,
+  "raw_kkt": {
+    "stat": 0.0001417709538759156,
+    "feas": 30.31085810785653,
+    "comp": 30.31085810785653,
+    "dual": 0.0
+  },
+  "accepted": false,
+  "returned_point": {
+    "duration_correction": 0.8419682968466902,
+    "objective": 2.256639254502653,
+    "original_residuals": {
+      "viol": 4.641598136256632,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 3.3306690738754696e-16,
+      "viol_speed": 0.0,
+      "viol_bounds": 4.641598136256632,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": -4.641598136256632,
+    "max_energy": 1.0,
+    "final_kkt": {
+      "stat": 0.00014177095387591564,
+      "feas": 66.8390133060955,
+      "comp": 66.8390133060955,
+      "dual": 0.0
+    },
+    "tasks_exact": true,
+    "checks": {
+      "correction": false,
+      "residual": false,
+      "energy": false,
+      "tasks": true,
+      "branch_kkt": false
+    }
+  },
+  "seconds": 0.2417695170006482
+}
