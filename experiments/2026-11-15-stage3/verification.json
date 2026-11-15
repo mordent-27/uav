@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "name": "dual-carry_rho-carry_gated",
+      "states": 37,
+      "passed": true,
+      "independent_stationarity": 2.1579142504835058e-07,
+      "stop": "kkt"
+    },
+    {
+      "name": "dual-carry_rho-carry_plain",
+      "states": 200,
+      "passed": false,
+      "independent_stationarity": 5.672567456468561e-05,
+      "stop": "outer_limit"
+    },
+    {
+      "name": "dual-carry_rho-reset_gated",
+      "states": 49,
+      "passed": true,
+      "independent_stationarity": 9.727985166400888e-07,
+      "stop": "kkt"
+    },
+    {
+      "name": "dual-carry_rho-reset_plain",
+      "states": 200,
+      "passed": false,
+      "independent_stationarity": 0.00014525348728015983,
+      "stop": "outer_limit"
+    },
+    {
+      "name": "dual-reset_rho-carry_gated",
+      "states": 23,
+      "passed": true,
+      "independent_stationarity": 7.785247491502723e-07,
+      "stop": "kkt"
+    },
+    {
+      "name": "dual-reset_rho-carry_plain",
+      "states": 200,
+      "passed": false,
+      "independent_stationarity": 0.0004841975147288195,
+      "stop": "outer_limit"
+    },
+    {
+      "name": "dual-reset_rho-reset_gated",
+      "states": 36,
+      "passed": true,
+      "independent_stationarity": 8.496241581737451e-07,
+      "stop": "kkt"
+    },
+    {
+      "name": "dual-reset_rho-reset_plain",
+      "states": 200,
+      "passed": false,
+      "independent_stationarity": 0.0010354590628018148,
+      "stop": "outer_limit"
+    },
+    {
+      "name": "stage04",
+      "states": 200,
+      "passed": false,
+      "independent_stationarity": 6.142393481680525e-05,
+      "stop": "outer_limit"
+    }
+  ],
+  "states": 1145,
+  "all_eight_initial_primals_and_constraints_identical": true,
+  "first_two_gate_control_states_identical": true,
+  "old_baseline_all_200_states_identical": true,
+  "old_baseline_first_y_max_difference": 0.0,
+  "old_baseline_last_y_max_difference": 0.0,
+  "old_baseline_rho_sequence_identical": true
+}

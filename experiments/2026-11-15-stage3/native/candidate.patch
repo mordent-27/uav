@@ -1,0 +1,11 @@
+--- src/auglag.rs
++++ candidate/auglag.rs
+@@ -203,7 +203,7 @@
+             break;
+         }
+         let viol = k.feas.max(k.comp);
+-        if should_increase_penalty(viol, prev_viol, o) {
++        if res.gnorm.is_finite() && res.gnorm <= o.tol_stat && should_increase_penalty(viol, prev_viol, o) {
+             st.rho = (st.rho * o.rho_mult).min(o.rho_max);
+         }
+         prev_viol = viol;

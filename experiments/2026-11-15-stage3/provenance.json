@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-15",
+  "base_commit": "713eaf1",
+  "plan_commit": "303a7c1",
+  "native_plan_commit": "fb5da5d",
+  "recorded_git_head": "fb5da5d93baa6dbdfa70ac760fba2b3398039967",
+  "main_source_change": false,
+  "monte_carlo_rerun": false,
+  "paper_reproduction": false,
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "matplotlib": "3.11.0"
+  },
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "source_hashes": {
+    "experiments/2026-11-14-conditioning/newton_al.py": "e5a539e3975a2eea3bba0a9deb6f4b336e9e2a2a1ebb79f765ab9b9075b38fd0",
+    "experiments/2026-11-14-reproduction/bridge-speed.rs": "07c7b7977eeb2047a40460139675ab9d15306aef0c1f8de9e6f1082b7c8a9199",
+    "experiments/2026-11-14-reproduction/bridge.rs": "d04c9a29b1608a9496573c00aed2927e16216fa7c30dcdb4412c572e147930de",
+    "experiments/2026-11-14-reproduction/independent_al.py": "68911419e6fa126ebd8fac7b8f76bbd1773104c2d642cb5f11810cdc3caafa44",
+    "experiments/2026-11-14-resume/fixed-modes/default-fig1-fixed-modes.json": "dd5f6c7ae0061831998892345d5a3ee8f8ff20faed5a295673bba15e79fc34ae",
+    "experiments/2026-11-15-fidelity/run.py": "e66e58d8e8d53010c97ac2bbf1a03048b0a926cf24e43d4616749c9e0f4bada2",
+    "experiments/2026-11-15-library-trace/trace.py": "e703c0dadacc9693e8492c228981c5c2596fb5cfc70c30d67e61b87f8751918e",
+    "experiments/2026-11-15-stage2/common.py": "8bdf906be588d80a2da00377e7bc00b67dac8ee2eabdc88d18adc13ae2f32346",
+    "experiments/2026-11-15-stage2/continue_al.py": "2cbefc5aca3638b73a35fe883050c7e0bcf6f6dc3a8f4268ccf8a4517a1e86c0",
+    "experiments/2026-11-15-stage2/follow-guarded/outer.jsonl.gz": "aea470b610e9ccf875f256fdaffc3846f9158bcd12dad5ab630e1cc1f1da609f",
+    "experiments/2026-11-15-stage2/follow-guarded/stage03-start.json": "3e17644fa577990168242ce822e11d92f2b431af1b38a6aea8b37213ace73644",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e",
+    "src/auglag.rs": "076fa3139fe1f73d78229b94be2be6666f63e12391a3060435171d0f869d4a4f",
+    "src/battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708",
+    "src/instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "src/lbfgs.rs": "4828d4a7a9c027f7f38c53fc984bbccda03279d5ad88e8b9886cb79173b0b31d",
+    "src/main.rs": "ce499ec09518147cf563e31d4fd85ab542a8ea8c5d78ece32724e9db9366ff3a",
+    "src/metrics.rs": "51e4f052ba82fe4a75e9ddefbb0565ebda850fbc08f8d7b7291988569dbc89b5",
+    "src/model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "src/output.rs": "5559eb1f2f014448360ed7ba84886337966ce1adf1260a706a5eb873454269ee",
+    "src/params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "src/rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "src/solver.rs": "47d69f450768698c36a72ce3061237b5957984195b654dd6da04b2a5204012e2"
+  },
+  "library_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "library_note": "Built at 5581585; model evaluator unchanged; AL updates are Python. Rebuild with the two recorded bridge.rs files.",
+  "paper_sha256": "3496a07b282720da68d11d13309569096d006e3db3d143fc36d243f9d22c4a5c",
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "2b55acfdc4c37b0b01dc1fcdcbd7584f7cf554f797c5e32d17ea5aa9e9fe98a8",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "5a58bf6fcae3e4779a3338f81c7247496a9aa5cd1df756965d2f236dfd549b1a",
+    "reproduction.md": "b542929c63e26fe221856f1538ff037b484ffc93e3d4adf3dfca09bd2f55a86f",
+    "validation_plan.md": "e360185398148ace68e90282ea7e7af5551c158fbbf702dd1b9c51f84d7bf6f1"
+  }
+}
