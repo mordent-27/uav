@@ -1,13 +1,13 @@
 # R2g：原実行可能点の保持規則と、初期点の電池が負の新規入力での条件付き評価
 
-求解は2026-11-15、検証と集計は2026-11-16（下書き）。
+求解は2026-11-15、検証・集計と記録の確定は2026-11-16。中断時の下書きは[REPORT_DRAFT.md](REPORT_DRAFT.md)に保存した。
 
 **保持規則は、最後の復元が既に受理されていた出力を1バイトも変えずに返し、規則の設計に使ったtau5-seed3でだけ、前処理で得ていた原実行可能点を返した。**
 **初期点の電池が負の新規4入力では、対照（修復なし）も修復側も最後の復元が4例とも受理され、証明による採用・物理点の退避・分岐不一致の拒否は一度も起きなかった。**
 
-つまり今回確かめられたのは「規則が既存の出力を変えないこと」までである。
-規則が復元の失敗を補った場面は設計例の1件だけで、新規入力の実データでは補う場面が現れていない。
-修復の有無による復元受理の差も、この4入力では出ていない。
+保持規則について、新規の実データで確認できたのは受理済み出力の無変更である。
+保持が復元の失敗を補った場面は設計例の1件だけで、新規入力では現れていない。
+一方、負電池の新規4入力では一般化した初期修復も全件を通せた。ただし対照も全件が通り、修復による復元受理の改善は示していない。
 
 結果は3つの区分に分け、合算しない。
 
@@ -50,15 +50,18 @@
 
 ## 実行したコマンド
 
-求解時のコマンド行・インタープリタ・依存の版は、`driver.log`にも`execution.json`にも保存されていない。
-保存物から分かるのは次の範囲。
+中断時の下書きでは求解コマンドを未確認としていたが、今回の会話に保存された実際のツール呼出しから確認した。
+2026-11-16に[launch-record.json](launch-record.json)へ追記した記録であり、求解時に作ったログとは区別する。
+実際の呼出しはcwd=`uav`、下記のPythonと環境指定で`driver.py`を起動し、`driver.log`へ出力した。
 
-- `driver.py`（aec1831）は各ジョブを`sys.executable <script>.py`で起動し、`UAV_R2_CASE`、`UAV_R2F_KIND`と
-  `OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=MKL_NUM_THREADS=1`を渡す。回帰は`replay`、新規は`guard`→`phase`（対照）→`initialize`→`phase`（修復側）の順。
-- `execution.json`：8ワーカー、BLAS 1スレッド、使用可能CPU 16、壁時計17.85秒。25ジョブ全て`error`がnull、全ステップの終了コード0。
-- `screen.py`と`precheck.py`の出力は`screening.json`と`reuse-preflight.json`（R2fの来歴にある314ソースと評価ライブラリ2本のhash一致、保存済み21例）。
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-15-r2g-incumbent/driver.py > experiments/2026-11-15-r2g-incumbent/driver.log
+```
 
-R2fの[README.md](../2026-11-15-r2f-general-init/README.md)と同じ環境指定で起動したと推測するが、記録は無い。
+Python実行ファイルのパスは確認できたが、求解時のPython/依存パッケージのバージョン文字列は出力していない。
+`provenance.json`のバージョン値は検証時の値として残す。
+`execution.json`は8ワーカー・BLAS各1スレッド・使用可能CPU16・壁時計17.85秒、25ジョブの全ステップ終了0を記録する。
+`reuse-preflight.json`は求解前に314ソースと評価ライブラリ2本のhash一致を確認した記録である。
 
 今回の検証・照合・集計で実行したコマンド（cwdは`uav`。求解はしていない）。
 
@@ -117,7 +120,8 @@ PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=（1と同じ） <同じpython> experiments
 | (iii) 修復側 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 4 |
 
 証明による採用は設計例の1件だけ。物理点の退避、分岐不一致の拒否、missing経路（構成や初期化が不受理のとき）は0件で、実データでは一度も通っていない。
-この3つは`scripts/test_feasible_incumbent.py`で、設計例のデータを書き換えた入力に対して検査しているだけである。
+異なる入力・分岐の拒否と無効な物理点の拒否は、設計例のデータを使う単体検査で確認している。
+物理点を時間最小で退避する選択や`missing.py`の全経路が検査済みとは主張しない。
 
 元の最終復元が受理されていた回帰の20出力は、`regression/*/selected.json`と読み元の`restored/solution.json`のsha256が20件とも一致した（PLAN.md 26行）。
 新規8フェーズも8件とも一致。29件の`selected.json`は`result.json`に記録されたsha256とも一致する（`summary.json`の`preservation`）。
@@ -271,9 +275,9 @@ PLAN.md 28行は、R2fの不受理結果の「理由／参照先／hash」を採
   採用は`restoration`を優先するので、選択結果は変わっていない。
 - **保存フラグ**：PLAN.md 21行は「保存フラグを信用せず再評価する」。`retain.py` 27行は再計算したKKTに加えて保存済みの`solver_success`も要求する。PLANより厳しい側。
 - **不受理結果の理由とhash**：PLAN.md 28行の3項目のうち、出力にあるのは参照先だけ。上のとおり集計で補った。
-- **求解時の環境とコマンド**：保存されていない。来歴には今回の検証時の環境を記録した。
+- **求解時の環境とコマンド**：当日の実験ファイルには未保存。再開時に会話の実際のツール呼出しからコマンドを確認し、`launch-record.json`へ事後記録した。バージョン文字列は検証時の値と区別する。
 - **異なる入力・分岐の拒否**（PLAN.md 54行）：単体検査で確認しただけで、実データでの発動は0件。
-- 外部human文書のスナップショット（PLAN.md 59行）は、この下書きの時点では作っていない。
+- 外部human文書のスナップショット（PLAN.md 59行）は下書き時点では未作成だった。記録確定時に`human-notes.tar.gz`を作成し、hashを来歴へ記録した。
 
 ## 限界と、確かめられなかったこと
 
@@ -284,9 +288,18 @@ PLAN.md 28行は、R2fの不受理結果の「理由／参照先／hash」を採
 - 回帰20件は既見の保存結果の再評価で、新しい求解ではない。規則が既存出力を変えないことの確認にとどまる。
 - 再計算は求解時と同じ評価ライブラリ（`/tmp/uav-fidelity-*.so`。hashはR2fの来歴と一致）を使った。別実装による確認はRust照合の範囲（出力の原残差と目的値）だけ。
 - 評価ライブラリは`/tmp`にあり、リポジトリには無い。
-- 求解時のPython・依存の版は不明。
+- 求解に使った実行ファイルと環境指定は会話のツール呼出しから確認したが、当日のバージョン文字列は未保存。
 - Gとの組合せ、900本、本体Rustへの採用は未実施。今回の結果を著者の性能分布の再現とはしない。
 
 保存物：`summary.json`（区分別の集計、費用、入力の関係、PLAN 28行の補足）、[comparison.md](comparison.md)、`reverification.json`、`retention-recheck.json`、
-`output-verification.json`、`rust-validation.log`、`provenance.json`、`artifact-index.json`、`local-inner-manifest.json`。
+`output-verification.json`、`rust-validation.log`、`provenance.json`、`artifact-index.json`、`local-inner-manifest.json`、`launch-record.json`、`human-notes.tar.gz`。
 内側ログ56本（`cases/*/*/stages/*/inner*.jsonl.gz`）は`.gitignore`で管理外とし、hashを`local-inner-manifest.json`に残した。
+
+## 次の段階
+
+R2gでは保存点を保持する規則を用意できたが、新規4例は対照も全件受理された。
+保持による失敗補完が未知入力でも働くか、また論文に近い短い時間を安定して得られるかは未検証。
+次はR2hとして、参照のGで原制約復元を受理した場合はその出力を保持し、未受理時だけ
+入力監査・必要な修復・直接開始・原実行可能点保持へ進む規則を一つの入口へまとめる。
+既存のGの良い目的値を保つこと、両尺度KKT・原実行可能点・最後の復元を分けること、
+Gからの総費用を含めることを事前計画に固定する。今回Gや900本の追加求解は行っていない。

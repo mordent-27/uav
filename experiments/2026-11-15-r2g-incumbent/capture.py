@@ -1,9 +1,6 @@
-"""Record sources, the verification-time environment and the saved files of R2g. Reads only.
+"""Record verification-time versions, the recovered launch command, and human notes.
 
-The environment of the solve (driver.py, 2026-11-15) was not recorded anywhere, so the Python,
-package and rustc versions written here are those of this post-run verification, and are labelled so.
-Derived files of this script (provenance.json, local-inner-manifest.json, artifact-index.json) are
-regenerated on every run; run it last, after REPORT.md. No archive of the external human notes is made.
+No numerical solve is launched. Run last after documents have been finalized.
 """
 import hashlib
 import importlib.metadata
@@ -11,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import tarfile
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -79,13 +77,20 @@ def main():
             files={str(path.relative_to(ROOT)): sha(path) for path in paths},
             git_status=git('status', '--porcelain', '--', result['solver_source'], result['initialization_source']))
     status = git('status', '--short')
+    launch = json.loads((HERE/'launch-record.json').read_text())
+    notes = sorted((ROOT.parent/'human').glob('*.md'))
+    with tarfile.open(HERE/'human-notes.tar.gz', 'w:gz') as archive:
+        for path in notes:
+            archive.add(path, arcname='human/'+path.name)
     provenance = dict(
         date_of_solve='2026-11-15', date_of_this_verification='2026-11-16',
         base_commit='d56963d', plan_commit='a044da9', implementation_commit='aec1831', screened_targets_commit='30d3095',
         recorded_head=git('rev-parse', 'HEAD'),
         tracked_files_modified_at_capture=[line for line in status.splitlines() if not line.startswith('??')],
-        solve_time_environment=dict(recorded=False,
-            note='driver.log and execution.json hold job rows only; neither the command line, the interpreter nor package versions of the solve were saved',
+        solve_time_environment=dict(recorded_in_experiment_files_at_execution=False,
+            launch_recovered_from_conversation=launch,
+            version_strings_at_execution_saved=False,
+            note='The actual command and executable path were recovered from the conversation on 2026-11-16; package/version strings below are verification-time measurements',
             known_from_saved_files=dict(workers=json.loads((HERE/'execution.json').read_text())['workers'],
                 blas_threads=json.loads((HERE/'execution.json').read_text())['blas_threads'],
                 affinity_cpus=json.loads((HERE/'execution.json').read_text())['affinity_cpus'],
@@ -100,7 +105,7 @@ def main():
         source_hashes={str(path.relative_to(ROOT)): sha(path) for path in sorted(set(files))},
         reused_regression_sources=reused,
         solves_launched_by_verification=False, main_source_changed=False, monte_carlo_rerun=False, paper_reproduction=False,
-        human_notes_archive='not created here')
+        human_notes_archive='human-notes.tar.gz', human_notes={path.name: sha(path) for path in notes})
     (HERE/'provenance.json').write_text(json.dumps(provenance, indent=2)+'\n')
     local = sorted((HERE/'cases').glob('*/*/stages/*/inner*.jsonl.gz'))
     ignored = git('ls-files', '--others', '--ignored', '--exclude-standard', '--', str(HERE.relative_to(ROOT))).splitlines()

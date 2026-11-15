@@ -5,11 +5,40 @@
   "plan_commit": "a044da9",
   "implementation_commit": "aec1831",
   "screened_targets_commit": "30d3095",
-  "recorded_head": "30d3095dde22cce837cbdada57bba4f280bd3f18",
-  "tracked_files_modified_at_capture": [],
+  "recorded_head": "8f7cc0492912d2a5d89eda59d668511897f5d7c9",
+  "tracked_files_modified_at_capture": [
+    "M README.md",
+    " M ROADMAP.md",
+    " M WORK_LOG.md",
+    " M experiments/2026-11-15-r2g-incumbent/REPORT.md",
+    " M experiments/2026-11-15-r2g-incumbent/capture.py"
+  ],
   "solve_time_environment": {
-    "recorded": false,
-    "note": "driver.log and execution.json hold job rows only; neither the command line, the interpreter nor package versions of the solve were saved",
+    "recorded_in_experiment_files_at_execution": false,
+    "launch_recovered_from_conversation": {
+      "recorded_date": "2026-11-16",
+      "execution_date": "2026-11-15",
+      "evidence": "functions.exec -> tools.exec_command in the current conversation; returned exec session 57677",
+      "recorded_after_execution": true,
+      "cwd": "/home/mordent/robotech/3A/optimization/uav",
+      "environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages"
+      },
+      "argv": [
+        "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+        "experiments/2026-11-15-r2g-incumbent/driver.py"
+      ],
+      "shell_command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-15-r2g-incumbent/driver.py > experiments/2026-11-15-r2g-incumbent/driver.log",
+      "interpreter_path_known": true,
+      "solve_time_version_output_saved": false,
+      "note": "Recovered from the actual tool call, not inferred from result files; solve-time Python/package version strings were not printed by that call."
+    },
+    "version_strings_at_execution_saved": false,
+    "note": "The actual command and executable path were recovered from the conversation on 2026-11-16; package/version strings below are verification-time measurements",
     "known_from_saved_files": {
       "workers": 8,
       "blas_threads": 1,
@@ -123,7 +152,7 @@
     "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
     "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
     "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
-    "experiments/2026-11-15-r2g-incumbent/capture.py": "1a0cb08bdd1dfc387e737d3de062f64dc8a54dc65107c41c6de3e082fc071d29",
+    "experiments/2026-11-15-r2g-incumbent/capture.py": "f938292ce5d12a42cec7f8c331a6983e4752f2a36a2e158b81b0c2a618694aa2",
     "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
     "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
     "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
@@ -594,5 +623,13 @@
   "main_source_changed": false,
   "monte_carlo_rerun": false,
   "paper_reproduction": false,
-  "human_notes_archive": "not created here"
+  "human_notes_archive": "human-notes.tar.gz",
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "c0bfec848a02b3e0b0a7c82b8ef871dad4cb63917cccd1d0dc342f6ef5cca7ac",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "341919749dad3c82f443ee2addd171ba42ca797440dfdabbd460f75cdd66869e",
+    "reproduction.md": "57a7caaad19423795c790b8c3434e44f5172a84ebd801976c0cdba42fb6b0858",
+    "validation_plan.md": "39660fb8b6af112b6c2d1f94f4b62cab459ced81cf1a07ba2fdd44e6f3b3708a"
+  }
 }
