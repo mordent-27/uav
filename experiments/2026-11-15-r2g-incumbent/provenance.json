@@ -1,0 +1,598 @@
+{
+  "date_of_solve": "2026-11-15",
+  "date_of_this_verification": "2026-11-16",
+  "base_commit": "d56963d",
+  "plan_commit": "a044da9",
+  "implementation_commit": "aec1831",
+  "screened_targets_commit": "30d3095",
+  "recorded_head": "30d3095dde22cce837cbdada57bba4f280bd3f18",
+  "tracked_files_modified_at_capture": [],
+  "solve_time_environment": {
+    "recorded": false,
+    "note": "driver.log and execution.json hold job rows only; neither the command line, the interpreter nor package versions of the solve were saved",
+    "known_from_saved_files": {
+      "workers": 8,
+      "blas_threads": 1,
+      "affinity_cpus": 16,
+      "dependency_precheck": "reuse-preflight.json: 314 source hashes and 2 evaluator hashes equal to the R2f provenance at solve time"
+    }
+  },
+  "verification_time_environment": {
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "packages": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "casadi": "3.8.2",
+      "matplotlib": "3.11.0"
+    },
+    "system_python3": "Python 3.14.9",
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+    "note": "reverify.py, recheck_retention.py and capture.py ran with `executable`; audit_outputs.py, analyze.py and the unit tests with system python3"
+  },
+  "verification_commands": [
+    {
+      "step": "1 reverification of the 8 new phases with the existing verifier",
+      "cwd": "uav",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-15-r2g-incumbent/reverify.py",
+      "outputs": [
+        "reverification.json",
+        "reverification/"
+      ]
+    },
+    {
+      "step": "1b retention rule re-run on saved states into a temporary folder",
+      "cwd": "uav",
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages TMPDIR=<scratchpad> UAV_R2_CASE=fig1 /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-15-r2g-incumbent/recheck_retention.py",
+      "outputs": [
+        "retention-recheck.json"
+      ]
+    },
+    {
+      "step": "2 Rust cross-check",
+      "cwd": "uav",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/2026-11-15-r2g-incumbent/audit_outputs.py",
+      "outputs": [
+        "rust-validation.log",
+        "output-verification.json"
+      ]
+    },
+    {
+      "step": "3 unit tests",
+      "cwd": "uav",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_feasible_incumbent.py -v",
+      "outputs": [
+        "unit-test-feasible-incumbent.log"
+      ]
+    },
+    {
+      "step": "4 aggregation",
+      "cwd": "uav",
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 experiments/2026-11-15-r2g-incumbent/analyze.py",
+      "outputs": [
+        "summary.json",
+        "comparison.md"
+      ]
+    },
+    {
+      "step": "5 provenance",
+      "cwd": "uav",
+      "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-15-r2g-incumbent/capture.py",
+      "outputs": [
+        "provenance.json",
+        "local-inner-manifest.json",
+        "artifact-index.json"
+      ]
+    }
+  ],
+  "dependencies_recheck_at_verification": {
+    "source": "experiments/2026-11-15-r2f-general-init/provenance.json",
+    "source_hashes": 314,
+    "source_hashes_equal_now": 314,
+    "source_hashes_different_now": [],
+    "evaluator_hashes": {
+      "/tmp/uav-fidelity-original.so": {
+        "recorded": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+        "exists": true,
+        "equal_now": true
+      },
+      "/tmp/uav-fidelity-speed.so": {
+        "recorded": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b",
+        "exists": true,
+        "equal_now": true
+      }
+    },
+    "solve_time_precheck": {
+      "source_hashes_verified": 314,
+      "evaluator_hashes_verified": 2,
+      "cached_cases": 21
+    }
+  },
+  "source_hashes": {
+    "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "experiments/2026-11-15-r2-cases/helpers.py": "1b03603420929d2e97f83a5b748041790587bddf5995688d841883bb561bbd26",
+    "experiments/2026-11-15-r2-cases/restore.py": "d8f8c6afdaffc40bb3bc1b4974fd6a9c9ae0936190dcfeec5425bd09aa2bc5ae",
+    "experiments/2026-11-15-r2c-direct-final/helpers.py": "ec91969fec1c1d472b1cf3b835d27e566afa3a5072cba1fb8fa76083593898e2",
+    "experiments/2026-11-15-r2c-direct-final/run.py": "33bdeaec36823d2b2cae06a7198388cb6b9c9ffed2a37465cb610ad0b567808f",
+    "experiments/2026-11-15-r2c-direct-final/verify.py": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+    "experiments/2026-11-15-r2f-general-init/guard.py": "62e3dd03c29fc6ea5b5b258d852753a1ec7ab686f75d912a6ad73b198c7a5352",
+    "experiments/2026-11-15-r2f-general-init/helpers.py": "5b9a31f624b2ba6d462ca797743d10e096a4ecc82c7fbff0b5f8e03064cc2c98",
+    "experiments/2026-11-15-r2f-general-init/initialize.py": "80ecaec59cb0256a997751acb9a25bed9451e757418df2edaec32df84d7eba31",
+    "experiments/2026-11-15-r2f-general-init/phase.py": "b3e66a65a1ff01e1e767e717906f5142dd763b7ae75f7beb9e0cd6b5cd67b34d",
+    "experiments/2026-11-15-r2f-general-init/summary.json": "c2e3072aec43ddf232de1afc4fb15c117f0991913dc354cc2b0193049d783fb7",
+    "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
+    "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
+    "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
+    "experiments/2026-11-15-r2g-incumbent/capture.py": "1a0cb08bdd1dfc387e737d3de062f64dc8a54dc65107c41c6de3e082fc071d29",
+    "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
+    "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
+    "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
+    "experiments/2026-11-15-r2g-incumbent/initialize.py": "161b94eeb4201b8326d282a7655e43ecf211ed4235b761dfc9e2495ae15148e2",
+    "experiments/2026-11-15-r2g-incumbent/missing.py": "faf2a490be99e4463dddee0ebf9d1f1bce5ebaf227b2581e0960ebb5f8698728",
+    "experiments/2026-11-15-r2g-incumbent/phase.py": "a74a7d3da0d53aab7f7d0f833e25155d5b1f3d7f87ab00f015e6c0a6d321d962",
+    "experiments/2026-11-15-r2g-incumbent/precheck.py": "67d3d89774bcd6907b517adca709cb2ecaa70820756043151adb94416b64a13b",
+    "experiments/2026-11-15-r2g-incumbent/recheck_retention.py": "6ecaf3c365d71245bc3e0617ab9487689b112384551b998c3b1559f4b228569f",
+    "experiments/2026-11-15-r2g-incumbent/replay.py": "0cbda52121f6a5102cf7c34200ad00b790bf09be6a876fa4782acf5852bf0d6b",
+    "experiments/2026-11-15-r2g-incumbent/retain.py": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+    "experiments/2026-11-15-r2g-incumbent/reverify.py": "9c789c2c375e666d097ac9776272b4f1e60eccb3f599fe4d53747b744e953bda",
+    "experiments/2026-11-15-r2g-incumbent/screen.py": "419e3dd0c09396039963d3113c85e412321948c9494d4aded7aadb37ca177f43",
+    "experiments/2026-11-15-r2g-incumbent/verify_init.py": "32607681e4cba2d1b603924ae84f74a1b4cb0ccaa1adb3ed83788e62387bc808",
+    "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+    "scripts/feasible_incumbent.py": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+    "scripts/repair_initialization.py": "83f7c7d6bbbf57f4800d05ac83d8ad1775141cc3b2df8490f4355aa17bd06766",
+    "scripts/test_feasible_incumbent.py": "642c27434f567bd201bffa03c574c50c144e1215233d335b7ad3381251ff6ed8",
+    "scripts/test_repair_initialization.py": "300cffd1cdad9bb74c2a3e42aafd71a3ba6e543fed2d19743c35e7a6e5a8401d",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e"
+  },
+  "reused_regression_sources": {
+    "fig1": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/fig1",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/initial.json": "10c1072db15fb02200cdf218c60b366558bbc8566cbe40a62a126436aa17d532",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/preflight.json": "4b41f016c44caaab5dc7be6a4f06d72df1e7aab2aa61f83bba862035586b8ca9",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/result.json": "bdd311fa1e3a05bf68ad6655f6ad8cba628297529dc45f1d7c012309797b0fb8",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/solution.json": "f6674cb9655e651db04131852d0d3793a0d8240e08d9b8b4be299153bd127f7d",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/source.json": "10c1072db15fb02200cdf218c60b366558bbc8566cbe40a62a126436aa17d532",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/verification.json": "1935ebfecc2a8aebe90361484e8217628cf7aecca82c0154bb4047e1341e83e6",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/restored/result.json": "d307ddbe8e4c515f53395310528a8155be554b866582fdf35620a8ad91309854",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/restored/solution.json": "7e49be95c95fdc3702c7f10729e24ca08162ea19ba899164e5eb86dc9a058333",
+        "experiments/2026-11-15-r2c-direct-final/cases/fig1/restored/solver.json": "3ee173b11d4e850e802eb1b8ec883c7741b7a335d92673b1a4d7fe264b9763a9",
+        "experiments/2026-11-15-r2f-general-init/initializations/fig1/guard.json": "7a8f9d57a8a54faadd58e858bdd32ce652e5448f348f3401c54a0d5eed81ada4",
+        "experiments/2026-11-15-r2f-general-init/initializations/fig1/input.json": "18bd1b9155bfbf089b40f5254a0dc9fc69787a22d727bb9d444b2802a9b1c5f0",
+        "experiments/2026-11-15-r2f-general-init/initializations/fig1/original-state.json": "219b83792f33a032f5fcff3b5171ffe3db5b58e9c8a3a0de2bac888edf9dd77b"
+      },
+      "git_status": ""
+    },
+    "tau1-seed0": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed0",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/initial.json": "56834a2e77c538301d8302bb209a127de7513c785b9fc1bb208862b7eda7e3e1",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/preflight.json": "a18faf8de8f14d9d23f75e67e863997168d16737faa5b43269f5d4fc6e3daec1",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/result.json": "9df017fd8e8163b7924c3abc1d18fd0aff55a04da112c7aec06c8161fef4ac45",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/solution.json": "4a99007b2670a5cff35f3404f54f16b6df1c0fbefa58b8302089f70c6909b1de",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/source.json": "56834a2e77c538301d8302bb209a127de7513c785b9fc1bb208862b7eda7e3e1",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/verification.json": "72c356cc2d5ec68a9261fd31fbbf40fb55e05e9562c4c7fb6fe6e59248808100",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/restored/result.json": "9ee4f22a278ff18eb81e42a3d61c49fe5b3a9f63e3b5cd3a9711abf479e76b5a",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/restored/solution.json": "81bd1b17183be6e7c69feb6a49ea279633ec77cf8d2b88841a557444812c2134",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0/restored/solver.json": "b9643481fa642b26419d81335b222e40c0bb4e1c6a72cde1c5a0722a292e2337",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed0/guard.json": "a2febdb9ea4561e48611155d01919fbcbf5bbc1a88f2614a1a88b09f1fe67bb8",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed0/input.json": "1c7e894a497b1cd9c0d8e0bd0c2227f38858aa1f7b9db23904a9bf940b3ba72d",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed0/original-state.json": "9951d630d787b71d78abb41444d19bf772527afa86d8f22d9d089dff9d2054a2"
+      },
+      "git_status": ""
+    },
+    "tau1-seed1": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed1",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/initial.json": "ce8e0df23df75c641044ddeb96d399328d6e8ab39ee94fd4ef50174e6b1dfab7",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/preflight.json": "7e85f8f34aa8ad5126e61b433f0a27a33a32ca2e16fa73ceebdb8c86ca914714",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/result.json": "d666643b271f1203d5ceb34034b2838211937aad57f4f81e0df917ca42495fca",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/solution.json": "5ee6a103825569193cd8896d497e8e30900154d8065fb501b7f8cc8f5c9043fd",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/source.json": "ce8e0df23df75c641044ddeb96d399328d6e8ab39ee94fd4ef50174e6b1dfab7",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/verification.json": "28b69ad7537af4fc1516c44e5fbda54e916e504e19bbae17c59bea95220414a8",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/restored/result.json": "2f76216aeb1ce8c7e25cbd4410869d5458e2387902bae46fd0d4ac09d23f2908",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/restored/solution.json": "daf329ef3a43d02a23262ee1db8f30451143a65f7a9105e6074558e1d1c8da9e",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1/restored/solver.json": "3e0e35b48cba30b0f0c1b8bb2c97dc9d3c2bcc9cdfa77b392668a182f19b9941",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed1/guard.json": "700bc269b54629f8c953b4e3889848819c465e2735aa2446051ad9814bbb6179",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed1/input.json": "431f8ef2b7c60bf35a218f574aa81759fb54351e0b0301f0e01dcbe9e80c72dd",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed1/original-state.json": "332a2a46c0907925f5006dc4384fea6e5e0ad181cae25d46b7f31fd3f7157944"
+      },
+      "git_status": ""
+    },
+    "tau1-seed101": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed101",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/initial.json": "5f291b547cb6b77a6271f1d70760311d64fe676704b9eaf9751b4e269ef6e3e5",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/preflight.json": "6e77d802c468ec32656e6570f4632dac3f58d49e158f9443ca41f36431232354",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/result.json": "80aaefb39277645127bfacc5d51a62eb5e1f78419eeb33cdbe6d6f7097231bb1",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/solution.json": "f1c56d1906dd8d044d524f2eb26d89833f082d4342496de32e37f1309a495252",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/source.json": "5f291b547cb6b77a6271f1d70760311d64fe676704b9eaf9751b4e269ef6e3e5",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/verification.json": "7cc8bc8fae097940c7b8714f3ad4ec2f669db3fe7a073d64aa1ca74739c744b7",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/restored/result.json": "05ffb1e32c3b8f1f942e9bc3cfcb1cdefeb1407fdd6ed2af92aa7ede0d902a9b",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/restored/solution.json": "74154e8bd6e8688c4c9ecf53c08486325131f5e49f4e169af4bfa645da31fd69",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101/restored/solver.json": "dedc4b1ec70e083abf67fc900414ae8f74952244a432775af2b2552b7439d090",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed101/guard.json": "8e0d4538af4ed81159d1bff5d93d8ee40c9bfccb1a33a4d2d62004c91248c984",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed101/input.json": "90f53772f36117e0bbd06547e0b06dce859b6ec489906fecb92e2f5ff0e0c2c7",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed101/original-state.json": "df4ba9e9d0ba8bf77a2d6db9b8e5f5f40b3a4875547e20a879c5c4efcabe8014"
+      },
+      "git_status": ""
+    },
+    "tau1-seed2": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed2",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/initial.json": "8b2c47c8865d8209ac7889b3082f7bd74b2eff27abcadb2ca9f6c5f2916396b8",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/preflight.json": "89a8720babfca2145a4d48534452308ba33cd043fac8d3ae851984fa6685d1ab",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/result.json": "a943165ab1cace82a9b2a36df2df8213bcd57b12682c4371210a8b0a4674cfa5",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/solution.json": "9e6c074ae121d2940a88f700b3cc20b5bad54aa6abdefa40ca2da0cf31447fe3",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/source.json": "8b2c47c8865d8209ac7889b3082f7bd74b2eff27abcadb2ca9f6c5f2916396b8",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/verification.json": "d621c5cf04cadc1cc27f32d5b0d2d6ba4a7003835b0ee6cb6d42f8be92185fcb",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/restored/result.json": "7f07e874ffd65b8bd1f2b8420a7ae550bd941df55896127824643880205fa829",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/restored/solution.json": "2fe26814f895d57d21a023cb4938e96b49da23282ccfb452931eed4e344fe410",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2/restored/solver.json": "4efbde11d6ae95187379de4b5a090d6625f7259631f129f1e07ef7e8237ed24d",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed2/guard.json": "3ba88af35e0d04b42e2fce14901de5f535f5b712f6c511814d6e95ca551f8bff",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed2/input.json": "c4ad140fcb8baafd8f8745ae13d625ff8409a2d206e426e01516f1a4ee416d78",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed2/original-state.json": "fabbd424286c09bde9affe416d9aa104e41811e831a1543d67d6fe515ac691f1"
+      },
+      "git_status": ""
+    },
+    "tau1-seed3": {
+      "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed3",
+      "files": {
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/initial.json": "f941791d58de5bba0da03193325006d3ce3da40d91ad7005a92394e82974c514",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/preflight.json": "3ea71c200f9d2b2e6582a49c91d3755792a412d169f89526a86f5aa02cc80d57",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/result.json": "4754ff57f6df6806fefd1827015462e36bff7ee18f7ab2b2e38f140c239a536d",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/solution.json": "a78cdec8a097b6a7c1ba72670be2c589d22cbdd09271d7a1ff743b6960dd540c",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/source.json": "f941791d58de5bba0da03193325006d3ce3da40d91ad7005a92394e82974c514",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/verification.json": "1a5c035f87d209fac562b82e51038516b61462add88f9d075533519e8dc73ed1",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/restored/result.json": "83c6add8206f34f3d206ea50adeb6bbc43ad10221ec8ac76cc42936fcac2d763",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/restored/solution.json": "422b3f57979b2ea17e62a403a029f43439517db0d810144a1bb4c8a7eb0ab297",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3/restored/solver.json": "63399d0a6f2248409dc9a010e7467d7efe7c1353d815ebe1353b055fd8fb6277",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed3/guard.json": "669f6af6763aa6c85109a4d0b9788df1b4214dd2559de9be3ba0e7d9acb7ffd2",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed3/input.json": "fb17b7c2e9fb3f3c7dd37b87b34a9f3dc80f92b411be2f9928a40d8e96ec5a53",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed3/original-state.json": "b06e7b413a55db7d6afad289b3ff2d563c87cf82b9bbe6e0ca4b86ed0e49a2e2"
+      },
+      "git_status": ""
+    },
+    "tau3-seed0": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed0",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/initial.json": "40de42f1568ccb65c3320acf2e598fe4812add8989be610253e78b8784de1975",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/preflight.json": "e20e95e927431ae57a0212267ffe19808db52089a87bcd16c761bef48f42b03e",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/result.json": "3cfd013ec5c74691627553db9665e428b1ab3ba7a94076e3bb978b34bdc7a0da",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/solution.json": "a093e18f54d910be60b80567a365b620f594c7afa1e2607438be18e5163165c4",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/source.json": "40de42f1568ccb65c3320acf2e598fe4812add8989be610253e78b8784de1975",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/verification.json": "f53ca55a3512af3d86b69daddaf57f27f3a6463d42039a5a3021bf503e09f4fd",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/restored/result.json": "b3adfe0482111de2e3d7805fd8045167580e7e1fa3583c2b29cef96a88aed593",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/restored/solution.json": "a3a23551b70b392252dc0b3b6c96992afe3d4ff26e3f253065e1572c2d71f16b",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0/restored/solver.json": "6c8b20e02d820e6d604869348d875dc0030394c6c5f9123da24e9903bf11adf7",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed0/guard.json": "d40ce16758dd0836cbd15fa766a6530329825f0e9344051e6212d630b72596ec",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed0/input.json": "046af1581ac77eba671bd56a24f13a1f23f253cee6ebf5c58787cb4256c738f7",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed0/original-state.json": "22d747f0eb9aa144a77a28c363616b4080672c13306087334bd72d2edd9b75bb"
+      },
+      "git_status": ""
+    },
+    "tau3-seed1": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed1",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/initial.json": "4755a26b0a5d7885ab0b39268a341ff8b680c7b577cc39d54120b8fcea7a3e17",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/preflight.json": "2ceaa29d98cd9c2b15d917a9f2deb762d247f3dd4d9e83377619e357fdc36c6c",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/result.json": "f1ccfef09df6d64da976effd03f53b5aea52691ec7eb34b9201eaff0ef073bc5",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/solution.json": "84a0103d93406b67be53300e8d65cadb5a24284acb60425e46978c1cf57fb567",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/source.json": "4755a26b0a5d7885ab0b39268a341ff8b680c7b577cc39d54120b8fcea7a3e17",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/verification.json": "8fd0ed075fe97c99ecd46ef9e5ef17bab7d747f8523b7326586e05dcf4b494fe",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/restored/result.json": "4927253551401a746bc3b6e669d658cfd96b03d853ee59079c3a22407722b91d",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/restored/solution.json": "b57bb98d930654139b4df36b9deea7dd137a7b052c411d72fdec71b6e8874eec",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1/restored/solver.json": "e5204737502a56ce7509d577c1291e1ad247b3cba0d42e85cdcc798be55559a6",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed1/guard.json": "2b607e29035862bc562c755c7789d164aafa76bd4f0bff445e1ab465aee2e3ad",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed1/input.json": "8b52bdd683c3365abb0638279f693928f45208c8c3f7ec28d2778d7a3fea9eaf",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed1/original-state.json": "4bafe5d8ba02a0af69a6d776e26f7135b6dccfc8d8f5b9d55abd68dcb023720c"
+      },
+      "git_status": ""
+    },
+    "tau3-seed103": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed103",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/initial.json": "f5e8854e44854e2ebfc3256bf50d467dfa807d6fc86ff845a128abc83b368616",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/preflight.json": "e1bda64e6fb7f748c64d09c3975a39ea27c246e70cdd4a6ecf70f61482a4e6de",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/result.json": "4d624c5aa9e5754000f63cc5c7633809b3c8b4105acd8e8aefa7efb5afdf731f",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/solution.json": "3c82945a92e84513f31711e767e214851111d1ef914b857709476e4934858398",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/source.json": "f5e8854e44854e2ebfc3256bf50d467dfa807d6fc86ff845a128abc83b368616",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/verification.json": "f9d8281b8f162ec4108ed4c00dd111f525b1963880ee86172daf90337aaff3d6",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/restored/result.json": "231315d97c8562b66b071c0ea37cc7c2e59e4dc79d72a3bbd3dde9e3f3d2c9e8",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/restored/solution.json": "53a28c66a909c3f225edf58adaa7f683e08f690ad0209734a78b7f6fb5945e50",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103/restored/solver.json": "707eaba85193358033cd413ac894460e3ebd911e585c54afe0eecae9ac6230f8",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed103/guard.json": "912765e60b5d8468b2774f91493a75fb5c69de7f72660880f42b1d284937e251",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed103/input.json": "1b5a04b18d9e864fea489935e68fca4ca574e9d9633e3eee2584e0b07c33cb69",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed103/original-state.json": "336dcf2da8bbba54d4057ea31e365e9d55aba830a9657521e2799977aa64ffa4"
+      },
+      "git_status": ""
+    },
+    "tau3-seed2": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed2",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/initial.json": "8ef4de78e067f673084667a34b6b413077f593816e6e3f14ddab9f5f94057e17",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/preflight.json": "25927261e5cc750e85bb6acdf4288bf05ddeeb82b130329a677cc473104ec81e",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/result.json": "3278ded144652a0f2f326144d3e94d5eda6f20cfb894fa52e88accd3498317ca",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/solution.json": "ef79e301362715b06050ea4904583f40a30f947a55fb530bf67f60ec3ca67b14",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/source.json": "8ef4de78e067f673084667a34b6b413077f593816e6e3f14ddab9f5f94057e17",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/verification.json": "ddf3cac2daf7f86e085a71199d229f591dbd7bd7097904664972d4f7dd63c77e",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/restored/result.json": "a0dc32976a364047590f8f4282a17faac98ec99d359669d843ecae40c7e359bb",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/restored/solution.json": "64702c4f3b99a6a3bb2373c640afc9fec30e0b72649961e7e267c6bdac7deefc",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2/restored/solver.json": "0616ba0c3afed0d6be34111e8ee8650a348b986fae66430430e0b744e6b27b9b",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed2/guard.json": "58c4254a81ec5de3eccee5883f586d4a2a31ae441baed9e7a9e6eff204368d4f",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed2/input.json": "7d155dab1aabb8e8879a4fca11a2f19e8c9058fd1b0285c3f1b60ee6c4038a0d",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed2/original-state.json": "c1af68b362245ec16c819d0efa645a41d0736376bd0b839bd1468532e12e2cbc"
+      },
+      "git_status": ""
+    },
+    "tau3-seed3": {
+      "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed3",
+      "files": {
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/initial.json": "1cf16fcd6c70e0b398e2fc818d02ccb6da1f2bafed3a6010b1a958b828fedabf",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/preflight.json": "5e8ec649af13854a03b1762b8e7dfb74646fcf4a85a5d5c6be0948b8b0a5d11d",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/result.json": "964ba75715798542e18848fef6b945b071cc4933345923293896c074b06cf03a",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/solution.json": "7357272d4d3e5525e2149b8055844faa766e38f8c422a6c8b61ac179adadb419",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/source.json": "1cf16fcd6c70e0b398e2fc818d02ccb6da1f2bafed3a6010b1a958b828fedabf",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/verification.json": "2e65276ccaf6a9a897da76e2eed5bece338825486dbcc98ab755cfc148b4ba86",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/restored/result.json": "0853995c2c264bc2701a4cdfd50e4eb33b45a3b0e545bbb9144358a1a264025b",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/restored/solution.json": "5538db594d413f5d20f0b9539587529d98bc59678a501f0d81caf93913a05af6",
+        "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3/restored/solver.json": "a7116e073598755f7a40c7655024f133fcddf58f2c11806812d053af51f130cf",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed3/guard.json": "3e9591e52b837754165e779f9ace07e34b8f6a202bcacd891336895e0e288a03",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed3/input.json": "c42047b35aa1c786114e56009a9faa653d5abaad243e528cdbe1171ae5cbc644",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed3/original-state.json": "e343fc66a91aa44f917780d18cb62a2256923b8c8d85df97fee34067599246e2"
+      },
+      "git_status": ""
+    },
+    "tau5-seed0": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed0",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/initial.json": "28f60066039d3e77c844d2fb9c17ddb86c170bc94fdd519d7d89d2d3a7a551a4",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/preflight.json": "17a0c408b40ae5f77f909144d0d3f8d67e235f7a11c461658c2f105bde93504d",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/result.json": "a84bdce40696b6609942de5a3e9fe73b1c973d958ecaa692f2f5ba14d1847aac",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/solution.json": "9ec621590a0250ba5da1f0236aa9dd09cf9b4d794d6f1062d41eb8a873b2747f",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/source.json": "28f60066039d3e77c844d2fb9c17ddb86c170bc94fdd519d7d89d2d3a7a551a4",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/verification.json": "3612c954bb4cbc7c2270ee24473a11578f0a95db11a4062148e0572d18d588bb",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/restored/result.json": "c9e0721cbee4c8c8d65b2a6a65b52a4148824bf916297dd5b0ae618b3660e6ce",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/restored/solution.json": "835bd46d5a0dc49ce354d6f71cc25a63cc457311d0942665e841d026cca083cb",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0/restored/solver.json": "d63948f9d0e971570435e22f9d976b1afa51afd2d5f98afd019d4f467df73ece",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed0/guard.json": "c05ef0934c10ecca216b33a148766639b0984117eaa7c318964a96e97a9045fd",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed0/input.json": "861f4c5723b6ddbff0828fe8d2254a861cc02ee8d1dbe96fcfed63b2b772adc6",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed0/original-state.json": "77d7b7645e943cfcaf64f42ecd6f52a12c199fdfe204b98d8302a67291ee0e93"
+      },
+      "git_status": ""
+    },
+    "tau5-seed1": {
+      "solver_source": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed1",
+      "files": {
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/initial.json": "9903759d497274e90abd9b65b0ba179630ead86f34da68f59df362c9290348e8",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/preflight.json": "e93926901cbb963fef601ebf76af3d85f334ddf915031ab1d09e70ff946e0ae8",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/result.json": "781bed7685ca75ee9ade6b949cda3ee9b5ee9ea2cd035f91790431bdab8d2a20",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/solution.json": "1a7da6c4125bcab235767b6f8dc35951889d3606a24b99d9e10862d2399e8d40",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/source.json": "9903759d497274e90abd9b65b0ba179630ead86f34da68f59df362c9290348e8",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/verification.json": "a095c5b7413bb7599fe9da4a6304f34e77650fd5d74e15c0a2fd29acf3ecb822",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/restored/result.json": "c1df308c78ab2da6c9e0e64a40534de76310a79982c56f4df48f2467dbb932f7",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/restored/solution.json": "cdaefc00c219d3f754f108992f6ecfe74c3132329662d08872c8fdb23dba8317",
+        "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1/restored/solver.json": "aa9a14c0203d60eae2fdc2e871950243dd5e7acfc3b012b263022be042f64aea",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed1/guard.json": "f4af81890bdc4fa060a771fbeed7ebe8ebf509632ed265ef23ad8b339191a2d6",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed1/input.json": "5cacf8d7c6db569815c3b7bbab9a03adf40db393f1ada1266c5e73be1b8e1f46",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed1/original-state.json": "60937a067d03419037157cf40e2df61b6a8f5414d97026ab51b7aa341fc7fdef"
+      },
+      "git_status": ""
+    },
+    "tau5-seed105": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed105",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/initial.json": "9a633737c75cad8c5b4a591ea3a03186016ec96008797cf74885d3bf3d619978",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/preflight.json": "dfec91c1739c21cf0cde5e4003b71954297c256eb438225d05a8aefb684c5e46",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/result.json": "50900c6a467b7e725f19f9a87beb87859a1352ed5ae2d7bd4223bcdf2fae36a0",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/solution.json": "bb158766d1865b6b8e24a79bdab852946395dc7dab5ab7383a869b807018f5dd",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/source.json": "9a633737c75cad8c5b4a591ea3a03186016ec96008797cf74885d3bf3d619978",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/verification.json": "a4dba8d8a65b7bae7c397eea4de2b45339ae32566c0d954e84a65e78246ea1fc",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/restored/result.json": "608c467ae51653ed38da5016ec701d60434582a8c194add60219dc4558cc3b91",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/restored/solution.json": "f6c66ac9455a3616335a7bf9776e2e6a9ad79d586b75ffdb5219ec732e8b0a9a",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105/restored/solver.json": "df45f702bdab8dd3cb854c8eea84f655b0b699c84b24cb6cedf1cb921709c581",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed105/guard.json": "691660836462fb8789410b272a809f76eb7deb7cd83be8baf87d0012286482b9",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed105/input.json": "52f429dd1378d10cf4bfb5a803b72a7939abe1dc1af3a781d996db9067260a10",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed105/original-state.json": "7529dd059fdb987905bd6098ae5cf87fefb5c778a49e42971d769be07170a6be"
+      },
+      "git_status": ""
+    },
+    "tau5-seed2": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed2",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/initial.json": "5244c2fb70244d037284745cdb8fff3f2417b0a9b43156035f6679df1d8bf496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/preflight.json": "2ae611e61457426027c76fbd16205c2bb28930ad90b1f265340f9e089dc19937",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/result.json": "c87b805d25c639e5665ad8b2a6624a534aa4d78c87ac2138dbbdd1866976f7a1",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/solution.json": "dfa6a72a6bdfbeb0043aa2dec47ee59f1b307a903347e343f30a1f680e4f15a0",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/source.json": "5244c2fb70244d037284745cdb8fff3f2417b0a9b43156035f6679df1d8bf496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/verification.json": "e550d0682e5a7cd52045cdf53607b765051a04eb49280e397e0501211bb251bb",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/restored/result.json": "539bf4f911d7a817abe822ee29a83a893d46c5d2a4fcce0d4598c546ea4a1c57",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/restored/solution.json": "71afb0b1a2d4f45a897bf7c51accb8d32d979dd7c395b50dc398d560d9410c8b",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2/restored/solver.json": "fdc72c9a9700496c11696042acce68abbfeddaa1bd419337d32c99fecf83ccdd",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed2/guard.json": "f0f80621dbf7e452b00c94efd6a8223a067d1a2ca7103a63421540ec218e20b5",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed2/input.json": "53e2028a24755218e8e3288653b2303df755e232f3fb8b22e59fc038df5bf315",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed2/original-state.json": "5b44bce1ef37dd75df8f7cfa528e393329d86196d933c356be6becba91cd3807"
+      },
+      "git_status": ""
+    },
+    "tau5-seed3": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/initial.json": "693b54f370ca47e203616fb58e3a24587c7989391fce8ffab3d53bc7deb9cac4",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/preflight.json": "47724c6f4274afdc5bc76c7698f3d34f3f91a0fe2396dc9b612e64a9c176d5a8",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/result.json": "e76facb130b3081519ee0960e9649413429f39631fed181d6442a1c84ac03972",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/solution.json": "301f3ba9a3ba402419f574b70ff34c794ad427838fa5231f2aa64bba5e94d61f",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/source.json": "693b54f370ca47e203616fb58e3a24587c7989391fce8ffab3d53bc7deb9cac4",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/verification.json": "68efd70ba75a4c1d3c952fc9c172a3f4958b66940c3c146c178a71a05a4e05eb",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/restored/result.json": "cf724b08c2b428d5502380a89890a4b8d0fa46b934938a6687089cada6e2cb3b",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/restored/solver.json": "db887fe3e001688b47e829c4b5fcc351190f9de3a412e66b8a82fc0b9962a37f",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/guard.json": "ad91e0a18582095464dfb7b3adce5751629001577e756bdda1f6b3aeab64747b",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/input.json": "95a104fc8714806d8b2bfdb7c306e7074683dac0993cb0858dcff62b3529ff1e",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/nlp-started.json": "d1180595d683521ecf8af384873c78f5c01ca06d462f5bc24651d25093343fad",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/original-state.json": "0fcda8c01f3baa85d4acb5e258589ee09ced1e84a685a27cbfd665b80e84c841",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/result.json": "3547edb591ff6084d4dd1040de30af9afd36b52f5ef365083b67395ce2d388aa",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/solution.json": "eee395b03099e748a552aa5b3573c79011cdbb23c3289023a1a7df857d03ff04",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/solver.json": "256e0ad299b706f1c52f217029ca5f57e969406971a21a3b91c1c16ce7aac114",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/source.json": "4083888fd9c7aa1e4c943b8ba9ac035a4dbcf2224d304ac4f0f5554e8b4cfafc",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/starting-point.json": "254ca4ff2badaed2246982216e9de90b188c0e74200f4ce9421364ad5a760cbc",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/verification.json": "043077810eb938ea87a83bfb487a4c84ddf20bbbcdac87fee76310f41208cda5",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3/witness.json": "0249190087060ba1fd74277fe4bee2a90e02050663d347c490d2f567a4cf4bc0"
+      },
+      "git_status": ""
+    },
+    "tau7-seed0": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed0",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/initial.json": "68597a4436a06c81611046a8d68315d2d02cd21d2a8c6d4d59ce390332d6a3c6",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/preflight.json": "c5655b554644640d7f72d2f16f2446f03af0caa647214521c7fab9cf19cbbf86",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/result.json": "fce12448df6a2445b696d94320b1b2beabae0cc29ebc48690825072ae6105612",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/solution.json": "617c8965d599443d46e794a83e197203ef5b39c88633fab3ffff7c23107e8f0f",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/source.json": "68597a4436a06c81611046a8d68315d2d02cd21d2a8c6d4d59ce390332d6a3c6",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/verification.json": "4f3853f0eedb5707437a660dab58a54b993b11e1f7f62c75224fa07bfa105156",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/restored/result.json": "e144d23ba9323a4cc14c44b16b8a75ac38c34f5cbed0190ae5ec88de781ef1d5",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/restored/solution.json": "00e7dc3d0c9aef13123e858f7650d4a584a6ca7436b12e1103d86ce94fac789b",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0/restored/solver.json": "c5a02582792e25e8d49ea1ee98521d33768482118cbf8ce523dab3cd6367e765",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed0/guard.json": "26ac989e8c163463ed53057297d5405bd21502015cf2242ef1da495b171383ad",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed0/input.json": "dd664b7fe6181b5d0e5c6854e11723378029692c01eefe8387f91850eb714045",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed0/original-state.json": "73272a16fab925aaf77e81aa7d3caef0f7e7c532dfedad1f210ff75ef28ada1b"
+      },
+      "git_status": ""
+    },
+    "tau7-seed1": {
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1",
+      "files": {
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/initial.json": "3f1dcf888b68866693f356a0de8a8f2e18858e0124be042d18f57c16f0ad0143",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/preflight.json": "aa1e47edfb1104dd86ace609b48c9e77be9680452587284bad475fd3d4da97a9",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/result.json": "4dbf365c94815e6f2d1e6ce92d3fc008d2a29b0aa60d1fa1ec634793c46081bd",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/solution.json": "ee7f84bf8571facc747472d599f4890c6ec51d8fc81d341a9adb773a56717f68",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/source.json": "3f1dcf888b68866693f356a0de8a8f2e18858e0124be042d18f57c16f0ad0143",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/verification.json": "d712116883a5fad086f2202be0db7fcc33d038ebd90fd1aaec53cabb28db2093",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/restored/result.json": "f1601e76e198d964a5af105642cd66316bf46e8f2d51bc62503e0e8d4425b8f0",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/restored/solution.json": "8c995665f76c2518d49bb8fe0c77d1a744da6b74ba90910b800de5ec7dedf9b5",
+        "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1/restored/solver.json": "94339c6b38c32f0b0ea0afdb68747f222b80cdbd752c258d41853a0022f91f27",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1/guard.json": "88127fd922631b6be6007f57bbac06608f1eaa869e1dba1f9382860f5e007b00",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1/input.json": "8baaf50f0b05d9345b746c801c101190a0643c10cc1183ad83503df6289d9f27",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1/original-state.json": "5c8658ad76efc0baf16274506049bdb8999bddae8144d34aa4b1efdfa1d948de"
+      },
+      "git_status": ""
+    },
+    "tau7-seed107": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed107",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/initial.json": "f6648dda44afbf4a28bcbd8619abe69750c8824067a4de5b18140cf0c028f02c",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/preflight.json": "47a5393ca92a89fe6dab4347a869dafe9e98f9611954aff51775da05b0eeda5f",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/result.json": "a9a8843f04a835a498a7c42bf2ea546f17da031d6206cdd1eb20040c21a35ab7",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/solution.json": "51ac768fe94b65c150db698d4996ad5a2ea237d6c81607efe93b506abd80952d",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/source.json": "f6648dda44afbf4a28bcbd8619abe69750c8824067a4de5b18140cf0c028f02c",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/verification.json": "7494ae68e3a3284b253bc198f4fc8cae40be6c8350309e0c451d28464be4dfee",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/restored/result.json": "c500b5ad78413e001b026e329eac579feb94c7cf51a5c0921e762d0b63c412c0",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/restored/solution.json": "bb05ffbb10a197673b5bd2aa6c8ac4151324bcdedf8baa0ac0fa4dbe1283da68",
+        "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107/restored/solver.json": "4bb13d35083733404550165ae9d681bd09d2e5e47c1809a2864e08cde962407c",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed107/guard.json": "3eef774a414f4f0f8aa73d69b998dca8fb910c168dbde1739043a38fbf058f0d",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed107/input.json": "818e616de919ee930242282156d94dffd66aa8f7c95a6dff187d8ff3092aebb3",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed107/original-state.json": "a31cb49f92e311355f69bc4d87d9e8726768c7a389c91c5cea942c2f4864dfdc"
+      },
+      "git_status": ""
+    },
+    "tau7-seed2": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/initial.json": "0ed7e139c75355b8837c9c3ba423c1e5b703f0ff699cee429300523f8918ed7f",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/preflight.json": "bceccbed0ed15f273de0a115a931ce73fe4b38e24fa63f01351262c14c09dc80",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/result.json": "4f5affdaff1734e586b905cc5f32c54a0a19c63e16002e48b18026c70ee930f2",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/solution.json": "94a3a37d6dc9343c235d50acad07d6d7aa8bdcd1093a63ad263e1e4de31639d9",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/source.json": "0ed7e139c75355b8837c9c3ba423c1e5b703f0ff699cee429300523f8918ed7f",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/verification.json": "bb317ce71d2823705d20ce8ddbfadbbf3ab5fff72a881ad1ff9e9f2df2e084c2",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/restored/result.json": "fba318ab1364d279346bc38ca6d89a492fd913c6b7b7a1a4de6ca90a0fdfdd65",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/restored/solution.json": "61316f453ab00e65e15f399ca9d3ff7c2e22c4ee921fddb1f261e25c8ffc92cd",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2/restored/solver.json": "7603b43b510635f0f321f43bc45d1658a42891c3c739db74d5af3cfcf72358c4",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/guard.json": "1468b048d344cc0a7c08e250233330d7826cd9dee00af380bdc3edd8841e75af",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/input.json": "eb3817cad159d5207f43764765462702046baae04dac19adbb386002d44b61cc",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/nlp-started.json": "81def2f4300a0065df7322b501f5cebf1e1b2d232b037c072e835280945c6926",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/original-state.json": "da301352c3b9139636e92193415f0105bfa4d54c0a33de9c7b38538350ccba5d",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/result.json": "aeb346b479f2a5c924f67c406015c365633bf8f330dc624bf976bb9cff050f1f",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/solution.json": "d0a4fb84e970cee61b38f8832229de56b0d2515704c61195e3ea5658e0e547f4",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/solver.json": "8927a814be7ba78b8f32575b5927c125d820f80a053273fe22583ac0bc148861",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/source.json": "44755a828d0b2101c4422b4b31ba666d666d0969ec0c7da2953977b8caaedde3",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/starting-point.json": "8ffe7e41c52e30b845e3d928ddf3b87955d981e9f4b9e910eb9eb3778801e2b9",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/verification.json": "1ee64f9878f72f2b921e56eeff57f2f6e47068f0f6f058a660a1d19cab73f4e8",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2/witness.json": "e2f600521ddac223c1fd96e5dd03ea60c9810b5900a8a6a7d97b255aceb19d8d"
+      },
+      "git_status": ""
+    },
+    "tau7-seed3": {
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3",
+      "files": {
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/initial.json": "5d6cd93f53c7b77592987093b18cb2310cdc11a6b26fe8fda6433dbff195c560",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/preflight.json": "2dd58e248c73ec86ef60546ca0de3365d305c68ccd3e63f26011526f53880538",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/result.json": "2d02018073bf23d8271161638aafdf4bd002255e0d807a87d2a89f7d8104cb87",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/solution.json": "a33a8b311ce310b924f8c073c647161c494d0a92977f0492bfd378884ca2696b",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/source.json": "5d6cd93f53c7b77592987093b18cb2310cdc11a6b26fe8fda6433dbff195c560",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/steps.json": "e45007140a5b4861ca9e4edb3aee88e9ac2e9e577839d10fc4162fb6658ab496",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/verification.json": "7fb8cc007ee67579d6c2738fa541d904dcd6d8f1c3d94910ccf05cd9d3d52c80",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/restored/result.json": "e67347ecdd59bdea35bc16784950727bc2114926d50813f013454dc55b9ca119",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/restored/solution.json": "a0ca0dca526444a8fa58a7dea2504e6780f0d72bb024de7885dba55c2882fb92",
+        "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3/restored/solver.json": "10ddbb6e56fdc2de0ced6ce1c147d590078d960b2f5e1db666a7f11982d4fd8a",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/guard.json": "61795e3e0b15539e4de01f2c5d698dfb3f386b7a390fdcfcb12ecd109b1490ff",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/input.json": "73338034f65e0d283fc97029fcdde77296b4c81229c07867cb340925af0b4b57",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/nlp-started.json": "7060fb8cacd75c29776f394c963f4e92e620452d8eed4c5a34316ee456cf39d6",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/original-state.json": "898bcf6f943b93b7a3d233715541aeed9f57f74ca35814d8a0b39b13da08dd1e",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/result.json": "7c58479bdd5c32be2b6bb8546319c21dda115eeb0fd08c0ab1c92418c7bcccc5",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/solution.json": "edddb2f7631ea1296e50393f11483f5bed1cc34e4dbbc10d3f27a5f79c575646",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/solver.json": "e1cfb81c263c2d8a8bdaa2c5687de7d00525b289bf93f03a77c4f523642d7521",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/source.json": "4b56781b923d09a289db3c9b1c1e4502d0733798bb46f43c3ae24c458f385519",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/starting-point.json": "6ef59ac877f939e6822b65b971a9f72bb6e81f6557ede1d0b9ef2fc9e7629eb2",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/verification.json": "94f8512687725782d9f1373254f29fdab3b79ff818c2799295f0c5de377f1de6",
+        "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3/witness.json": "12daaef03b315dc53894fb74ffb726a92f1bd6d6aa7be793835a0779edc5c3f9"
+      },
+      "git_status": ""
+    }
+  },
+  "solves_launched_by_verification": false,
+  "main_source_changed": false,
+  "monte_carlo_rerun": false,
+  "paper_reproduction": false,
+  "human_notes_archive": "not created here"
+}

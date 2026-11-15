@@ -1,0 +1,13 @@
+$ PYTHONDONTWRITEBYTECODE=1 python3 scripts/test_feasible_incumbent.py -v   (cwd: uav)
+Python 3.14.9
+test_accepted_output_is_kept_even_if_backup_is_faster (__main__.IncumbentTests.test_accepted_output_is_kept_even_if_backup_is_faster) ... ok
+test_different_input_and_forged_flags_are_not_accepted (__main__.IncumbentTests.test_different_input_and_forged_flags_are_not_accepted) ... ok
+test_other_assignment_cannot_reuse_a_certificate (__main__.IncumbentTests.test_other_assignment_cannot_reuse_a_certificate) ... ok
+test_recomputed_certificate_can_be_returned_after_solver_failure (__main__.IncumbentTests.test_recomputed_certificate_can_be_returned_after_solver_failure) ... ok
+test_truncated_mode_vector_is_rejected (__main__.IncumbentTests.test_truncated_mode_vector_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.022s
+
+OK
+returncode=0

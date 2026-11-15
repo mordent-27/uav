@@ -1,0 +1,326 @@
+{
+  "optimizer_launched": false,
+  "phases": 8,
+  "reports_written": 8,
+  "workers": 8,
+  "blas_threads": 1,
+  "seconds": 0.718414984003175,
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "runs": [
+    {
+      "case": "tau5-seed203",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.5574629540060414
+    },
+    {
+      "case": "tau5-seed205",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.7059343060100218
+    },
+    {
+      "case": "tau7-seed400",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.622467052002321
+    },
+    {
+      "case": "tau7-seed401",
+      "kind": "original",
+      "returncode": 0,
+      "seconds": 0.637095298996428
+    },
+    {
+      "case": "tau5-seed203",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.5333981120056706
+    },
+    {
+      "case": "tau5-seed205",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.6776153420069022
+    },
+    {
+      "case": "tau7-seed400",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.7133224190038163
+    },
+    {
+      "case": "tau7-seed401",
+      "kind": "repaired",
+      "returncode": 0,
+      "seconds": 0.7102041759935673
+    }
+  ],
+  "existing_verifier": {
+    "script": "experiments/2026-11-15-r2c-direct-final/verify.py",
+    "checks_al_multiplier_update": true,
+    "checks_rho_update_rule": true,
+    "passed": 8,
+    "recomputed_equals_saved_verification": 8,
+    "completed_outer": 56,
+    "accepted_inner_points": 1586,
+    "interrupted_accepted_points": 0,
+    "comparisons": {
+      "audit_inner:28: close(value, log[1]['value'])": {
+        "calls": 56,
+        "compared_values": 56,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "audit_inner:29: close(max(abs(gradient)), log[1]['gradient_inf'])": {
+        "calls": 56,
+        "compared_values": 56,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "audit_inner:35: close(next_value, entry['value'])": {
+        "calls": 1586,
+        "compared_values": 1586,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "audit_inner:36: close(max(abs(next_gradient)), entry['gradient_inf'], 1e-8)": {
+        "calls": 1586,
+        "compared_values": 1586,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-08
+      },
+      "audit_inner:43: close((value-next_value)/entry['prediction'], entry['ratio'], 1e-8)": {
+        "calls": 1448,
+        "compared_values": 1448,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-08
+      },
+      "audit_inner:50: close(max(abs(gradient)), completed['inner']['gradient_inf'], 1e-8)": {
+        "calls": 56,
+        "compared_values": 56,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-08
+      },
+      "main:85: close(value, row['inner']['value'])": {
+        "calls": 56,
+        "compared_values": 56,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "main:86: close(row['lam'], f.lam+row['rho']*f.m.h)": {
+        "calls": 56,
+        "compared_values": 3808,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "main:87: close(row['mu'], np.maximum(0., f.mu+row['rho']*f.m.g))": {
+        "calls": 56,
+        "compared_values": 10416,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "main:90: close(list(measured[key].values()), list(row[key].values()))": {
+        "calls": 112,
+        "compared_values": 448,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "audit_inner:41: close(entry['ratio'], 1.)": {
+        "calls": 138,
+        "compared_values": 138,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "independent_stationarity:63: close(max(abs(gradient)), saved['common_kkt']['stat'], 1e-8)": {
+        "calls": 8,
+        "compared_values": 8,
+        "max_abs_difference": 1.1564823724632456e-17,
+        "max_relative_difference": 1.102529482293745e-09,
+        "tolerance": 1e-08
+      },
+      "independent_stationarity:64: close(max(abs(gradient/ref.scale)), saved['paper_units_kkt']['stat'], 1e-8)": {
+        "calls": 8,
+        "compared_values": 8,
+        "max_abs_difference": 4.163336342344337e-16,
+        "max_relative_difference": 1.102529429721045e-09,
+        "tolerance": 1e-08
+      },
+      "main:136: close(list(measured.values()), list(restored['raw_kkt'].values()))": {
+        "calls": 8,
+        "compared_values": 32,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-09
+      },
+      "main:140: close(replay, data['solution']['e'], 1e-12)": {
+        "calls": 8,
+        "compared_values": 256,
+        "max_abs_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "tolerance": 1e-12
+      }
+    },
+    "max_abs_difference_all_comparisons": 4.163336342344337e-16
+  },
+  "added": {
+    "note": "not part of the existing verifier; recomputed from saved states in reverify.py",
+    "passed": 8,
+    "max_initial_al_value_difference": 0.0,
+    "max_initial_al_gradient_difference": 0.0,
+    "max_initial_gradient_minus_jacobian_form": 1.4210854715202004e-14,
+    "max_final_common_kkt": 8.293308901477893e-07,
+    "max_final_paper_units_kkt": 8.293308901477893e-07,
+    "max_final_kkt_difference_from_saved": 0.0,
+    "max_original_jacobian_stationarity_difference": 4.163336342344337e-16
+  },
+  "outer_log_tally": {
+    "rows": 56,
+    "rho_increases": 24,
+    "inner_log_files": 56
+  },
+  "existing_files_hashed": 272,
+  "existing_files_unchanged": 8,
+  "phase_rows": [
+    {
+      "case": "tau5-seed203",
+      "kind": "original",
+      "completed_outer": 7,
+      "accepted_inner_points": 251,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 24.765475090759992,
+      "final_common_kkt_max": 8.293308901473556e-07,
+      "final_paper_units_kkt_max": 8.293308901473556e-07,
+      "max_abs_difference": 5.551115123125783e-17,
+      "seconds": 0.2210527790011838
+    },
+    {
+      "case": "tau5-seed205",
+      "kind": "original",
+      "completed_outer": 7,
+      "accepted_inner_points": 317,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 21.841969375038563,
+      "final_common_kkt_max": 7.290982645372264e-07,
+      "final_paper_units_kkt_max": 7.290982645372264e-07,
+      "max_abs_difference": 0.0,
+      "seconds": 0.2807233159983298
+    },
+    {
+      "case": "tau7-seed400",
+      "kind": "original",
+      "completed_outer": 7,
+      "accepted_inner_points": 357,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 112.2056284695132,
+      "final_common_kkt_max": 8.025721957406013e-07,
+      "final_paper_units_kkt_max": 8.025721957406013e-07,
+      "max_abs_difference": 3.0531122589279964e-16,
+      "seconds": 0.2790807230048813
+    },
+    {
+      "case": "tau7-seed401",
+      "kind": "original",
+      "completed_outer": 7,
+      "accepted_inner_points": 307,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 46.48050884731728,
+      "final_common_kkt_max": 7.920662569960938e-07,
+      "final_paper_units_kkt_max": 7.920662569960938e-07,
+      "max_abs_difference": 1.3877793101770377e-16,
+      "seconds": 0.2724845960037783
+    },
+    {
+      "case": "tau5-seed203",
+      "kind": "repaired",
+      "completed_outer": 7,
+      "accepted_inner_points": 64,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 0.48985860951203697,
+      "final_common_kkt_max": 8.293308901477893e-07,
+      "final_paper_units_kkt_max": 8.293308901477893e-07,
+      "max_abs_difference": 8.326672684688674e-17,
+      "seconds": 0.18620280300092418
+    },
+    {
+      "case": "tau5-seed205",
+      "kind": "repaired",
+      "completed_outer": 7,
+      "accepted_inner_points": 109,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 0.5085539125540481,
+      "final_common_kkt_max": 7.29098264538419e-07,
+      "final_paper_units_kkt_max": 7.29098264538419e-07,
+      "max_abs_difference": 8.326672684688674e-17,
+      "seconds": 0.25649844099825714
+    },
+    {
+      "case": "tau7-seed400",
+      "kind": "repaired",
+      "completed_outer": 7,
+      "accepted_inner_points": 95,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 0.5262690471024996,
+      "final_common_kkt_max": 8.025721952148717e-07,
+      "final_paper_units_kkt_max": 8.025721952148717e-07,
+      "max_abs_difference": 1.6653345369377348e-16,
+      "seconds": 0.2958569990005344
+    },
+    {
+      "case": "tau7-seed401",
+      "kind": "repaired",
+      "completed_outer": 7,
+      "accepted_inner_points": 86,
+      "interrupted_accepted_points": 0,
+      "existing_verifier_passed": true,
+      "recomputed_equals_saved_verification": true,
+      "rho_increases": 3,
+      "rho_last": 10000000.0,
+      "initial_al_gradient_inf": 0.5109957624891294,
+      "final_common_kkt_max": 7.920662569921907e-07,
+      "final_paper_units_kkt_max": 7.920662569921907e-07,
+      "max_abs_difference": 4.163336342344337e-16,
+      "seconds": 0.28406608500517905
+    }
+  ]
+}

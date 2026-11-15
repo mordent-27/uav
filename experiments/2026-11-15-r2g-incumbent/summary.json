@@ -1,0 +1,3407 @@
+{
+  "note": "diagnostic path (R-scale direct final stage, fixed-branch Ipopt restoration); not the 900-run measurement and not a reproduction of the paper",
+  "paper_reproduction": false,
+  "main_source_changed": false,
+  "solves_launched_by_this_analysis": false,
+  "commits": {
+    "base": "d56963d",
+    "plan": "a044da9",
+    "implementation": "aec1831",
+    "screened_targets": "30d3095",
+    "head_at_analysis": "30d3095dde22cce837cbdada57bba4f280bd3f18"
+  },
+  "execution": {
+    "jobs": 25,
+    "errors": 0,
+    "nonzero_returncodes": 0,
+    "regression_replay_jobs": 21,
+    "new_input_jobs": 4,
+    "new_phases": 8,
+    "new_phase_steps_all_ok": 8,
+    "evaluations": 29
+  },
+  "indicator_definitions": {
+    "final_common_kkt": "final smoothed AL point, common scale, max KKT <= 1e-6",
+    "final_both_scales_kkt": "same final AL point, also physical-variable scale <= 1e-6",
+    "last_restoration_solver_accepted": "the last fixed-branch Ipopt restoration was accepted",
+    "physical_point_available": "a returnable original-feasible point exists (original residual <= 1e-6, battery strictly in [0,1], assigned stamps and modes)",
+    "selected_same_final_branch_kkt": "fixed-branch KKT <= 1e-6 at the returned point; km-scaled measure of fixed_branch.py with a 1e-8 battery margin, a different measure from the two AL KKT columns",
+    "both_scales_kkt_and_final_certificate": "conjunction of two different points: smoothed KKT at the final AL point (not original-feasible) and the fixed-branch certificate at the returned point"
+  },
+  "strata_are_not_added": true,
+  "strata": {
+    "regression_unchanged": {
+      "evaluations": 20,
+      "independent": false,
+      "note": "all seen before; includes the 4 R2f holdout inputs (seeds 101, 103, 105, 107), which are not independent here; replay only, no solve",
+      "indicators": {
+        "final_common_kkt": 20,
+        "final_both_scales_kkt": 20,
+        "last_restoration_solver_accepted": 20,
+        "physical_point_available": 20,
+        "selected_same_final_branch_kkt": 20,
+        "both_scales_kkt_and_final_certificate": 20
+      },
+      "retention_rule": {
+        "evaluations": 20,
+        "accepted_restoration_returned_unchanged": 20,
+        "returned_by_reevaluated_certificate": 0,
+        "physical_point_fallback_minimum_time": 0,
+        "no_returnable_point": 0,
+        "certificate_refused_for_different_branch": 0,
+        "missing_route": 0,
+        "byproduct_initialization_certificate_valid": 2,
+        "byproduct_certificate_files_written": 2
+      }
+    },
+    "design_case": {
+      "case": "tau5-seed3",
+      "in_any_denominator": false,
+      "note": "the retention rule was designed on this case (PLAN.md:27)",
+      "indicators": {
+        "final_common_kkt": true,
+        "final_both_scales_kkt": true,
+        "last_restoration_solver_accepted": false,
+        "physical_point_available": true,
+        "selected_same_final_branch_kkt": true,
+        "both_scales_kkt_and_final_certificate": true
+      },
+      "retention_rule": {
+        "evaluations": 1,
+        "accepted_restoration_returned_unchanged": 0,
+        "returned_by_reevaluated_certificate": 1,
+        "physical_point_fallback_minimum_time": 0,
+        "no_returnable_point": 0,
+        "certificate_refused_for_different_branch": 0,
+        "missing_route": 0,
+        "byproduct_initialization_certificate_valid": 1,
+        "byproduct_certificate_files_written": 1
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.3605908778079539,
+        "max_coordinate_difference_km": 0.2626042948539222,
+        "returned_minus_final_al_seconds": 0.8955673198757452
+      },
+      "returned_point_satisfies_smoothed_kkt": "not evaluated and not implied; the smoothed KKT holds at the final AL point, the certificate at the returned point"
+    },
+    "negative_battery_cohort": {
+      "inputs": 4,
+      "conditional_sample": true,
+      "note": "inputs selected because the initial battery is negative; counts, not a population rate",
+      "control": {
+        "evaluations": 4,
+        "indicators": {
+          "final_common_kkt": 4,
+          "final_both_scales_kkt": 4,
+          "last_restoration_solver_accepted": 4,
+          "physical_point_available": 4,
+          "selected_same_final_branch_kkt": 4,
+          "both_scales_kkt_and_final_certificate": 4
+        },
+        "retention_rule": {
+          "evaluations": 4,
+          "accepted_restoration_returned_unchanged": 4,
+          "returned_by_reevaluated_certificate": 0,
+          "physical_point_fallback_minimum_time": 0,
+          "no_returnable_point": 0,
+          "certificate_refused_for_different_branch": 0,
+          "missing_route": 0,
+          "byproduct_initialization_certificate_valid": 0,
+          "byproduct_certificate_files_written": 0
+        }
+      },
+      "repaired": {
+        "evaluations": 4,
+        "indicators": {
+          "final_common_kkt": 4,
+          "final_both_scales_kkt": 4,
+          "last_restoration_solver_accepted": 4,
+          "physical_point_available": 4,
+          "selected_same_final_branch_kkt": 4,
+          "both_scales_kkt_and_final_certificate": 4
+        },
+        "retention_rule": {
+          "evaluations": 4,
+          "accepted_restoration_returned_unchanged": 4,
+          "returned_by_reevaluated_certificate": 0,
+          "physical_point_fallback_minimum_time": 0,
+          "no_returnable_point": 0,
+          "certificate_refused_for_different_branch": 0,
+          "missing_route": 0,
+          "byproduct_initialization_certificate_valid": 4,
+          "byproduct_certificate_files_written": 4
+        }
+      },
+      "guard_accepted": 4,
+      "initialization_nlp_accepted": 4,
+      "restoration_gained_by_repair": 0,
+      "restoration_lost_by_repair": 0
+    }
+  },
+  "final_al_point_versus_returned_point": {
+    "note": "the returned point is never the final AL point: it is the output of the fixed-branch restoration, or for the design case the re-evaluated initialization point; the conjunction column therefore joins judgments about two points in every evaluation",
+    "evaluations": 29,
+    "min_max_position_distance_km": 0.0011847497968733127,
+    "max_max_position_distance_km": 2.358033077063282,
+    "design_case_max_position_distance_km": 0.3605908778079539,
+    "design_case_max_coordinate_difference_km": 0.2626042948539222,
+    "evaluations_farther_than_design_case": 11,
+    "final_al_points_original_feasible_at_1e_6": 0
+  },
+  "preservation": {
+    "regression_outputs_with_accepted_restoration": 20,
+    "regression_selected_sha256_equals_source_restored_solution": 20,
+    "regression_max_abs_selected_hours_minus_r2f_candidate_hours": 8.881784197001252e-16,
+    "new_phases_with_accepted_restoration": 8,
+    "new_phase_selected_sha256_equals_restored_solution": 8,
+    "all_selected_sha256_match_result_json": 29,
+    "not_preserved": [
+      "tau5-seed3"
+    ]
+  },
+  "plan28_supplement": {
+    "supplemented_after_the_run_by": "analyze.py",
+    "saved_outputs_changed": false,
+    "plan_line": "PLAN.md:28 asks for reason/reference/hash of the unaccepted R2f result in the adopted result",
+    "saved_reference": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+    "saved_validation_restoration_certificate": {
+      "accepted": false,
+      "reason": "not_available"
+    },
+    "saved_reason_is_misleading": "not_available is the initial value in retain.py; the restoration was attempted and not accepted",
+    "source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3/restored/result.json",
+    "source_sha256": "cf724b08c2b428d5502380a89890a4b8d0fa46b934938a6687089cada6e2cb3b",
+    "source_solver_json_sha256": "db887fe3e001688b47e829c4b5fcc351190f9de3a412e66b8a82fc0b9962a37f",
+    "source_git_tracked": true,
+    "source_git_unmodified_vs_head": true,
+    "source_git_blob": "5c5ab68ff27a5861f679a7660e0501444e3012a4",
+    "head_git_blob": "5c5ab68ff27a5861f679a7660e0501444e3012a4",
+    "accepted": false,
+    "solver_status": "Maximum_Iterations_Exceeded",
+    "solver_success": false,
+    "iterations": 1500,
+    "raw_kkt": {
+      "stat": 2.477836822960787e-05,
+      "feas": 1.07715384991954,
+      "comp": 1.07715384991954,
+      "dual": 0.0
+    },
+    "reason": "solver flag or fixed-branch KKT of the returned point",
+    "seconds": 0.4922652150125941
+  },
+  "screening": {
+    "rule": "first two negative-battery inputs per fixed seed range",
+    "audited": 8,
+    "selected": 4,
+    "negative_frequency_not_estimable": "the scan stops at the second negative-battery input of each range, so 4 of 8 is produced by the stopping rule",
+    "ranges": [
+      {
+        "tau": 5,
+        "seed_start": 200,
+        "seed_end": 399,
+        "seeds_in_range": 200,
+        "audited": 6,
+        "audited_seeds": [
+          200,
+          201,
+          202,
+          203,
+          204,
+          205
+        ],
+        "negative_battery": 2,
+        "selected": 2,
+        "stopped_at_second_negative": true
+      },
+      {
+        "tau": 7,
+        "seed_start": 400,
+        "seed_end": 599,
+        "seeds_in_range": 200,
+        "audited": 2,
+        "audited_seeds": [
+          400,
+          401
+        ],
+        "negative_battery": 2,
+        "selected": 2,
+        "stopped_at_second_negative": true
+      }
+    ],
+    "rows": [
+      {
+        "order": 1,
+        "case": "tau5-seed200",
+        "tau": 5,
+        "seed": 200,
+        "original_residual": 4.440892098500626e-16,
+        "minimum_battery": 0.0077766942164650965,
+        "minimum_stored_battery": 0.0077766942164650965,
+        "negative_battery": false,
+        "selected": false,
+        "initial_y_sha256": "61a2a636ed5cacf20acab63a0bc4f915d73d2afb356ee5ab8c7a1bc42359e856"
+      },
+      {
+        "order": 2,
+        "case": "tau5-seed201",
+        "tau": 5,
+        "seed": 201,
+        "original_residual": 1.7763568394002505e-15,
+        "minimum_battery": 0.13842092643517778,
+        "minimum_stored_battery": 0.13842092643517778,
+        "negative_battery": false,
+        "selected": false,
+        "initial_y_sha256": "a64989699aa35b556097d8843cfa6789437489a2770acb49840f35eeb1c44173"
+      },
+      {
+        "order": 3,
+        "case": "tau5-seed202",
+        "tau": 5,
+        "seed": 202,
+        "original_residual": 1.7763568394002505e-15,
+        "minimum_battery": 0.10019082492683828,
+        "minimum_stored_battery": 0.10019082492683828,
+        "negative_battery": false,
+        "selected": false,
+        "initial_y_sha256": "5113b61259d7121b7445de1b24da1f66ed4da0fc4ad2601bf7c6e73853d2647e"
+      },
+      {
+        "order": 4,
+        "case": "tau5-seed203",
+        "tau": 5,
+        "seed": 203,
+        "original_residual": 0.03566228413069439,
+        "minimum_battery": -0.03566228413069439,
+        "minimum_stored_battery": -0.03566228413069439,
+        "negative_battery": true,
+        "selected": true,
+        "initial_y_sha256": "06e5a2412a8f1ef38963acc84db75b44633c0c39e578ce25b8f4d8f64d4ead72"
+      },
+      {
+        "order": 5,
+        "case": "tau5-seed204",
+        "tau": 5,
+        "seed": 204,
+        "original_residual": 8.881784197001252e-16,
+        "minimum_battery": 0.010415360669355112,
+        "minimum_stored_battery": 0.010415360669355112,
+        "negative_battery": false,
+        "selected": false,
+        "initial_y_sha256": "7aefd4b3ace0b158d662ecff856d8916c0609130452eec4164530e7b5430cde9"
+      },
+      {
+        "order": 6,
+        "case": "tau5-seed205",
+        "tau": 5,
+        "seed": 205,
+        "original_residual": 0.03145243590005553,
+        "minimum_battery": -0.03145243590005553,
+        "minimum_stored_battery": -0.03145243590005553,
+        "negative_battery": true,
+        "selected": true,
+        "initial_y_sha256": "7196df085f0f7c304e5a127b1aa80dd086058fb806d1eaa733690c660349ea9c"
+      },
+      {
+        "order": 7,
+        "case": "tau7-seed400",
+        "tau": 7,
+        "seed": 400,
+        "original_residual": 0.16157610499609898,
+        "minimum_battery": -0.16157610499609898,
+        "minimum_stored_battery": -0.16157610499609898,
+        "negative_battery": true,
+        "selected": true,
+        "initial_y_sha256": "6db1f338c666245f90956b956ed0a10399923cc15888fd4e970e9bb9d0eaa7f6"
+      },
+      {
+        "order": 8,
+        "case": "tau7-seed401",
+        "tau": 7,
+        "seed": 401,
+        "original_residual": 0.06693193274013687,
+        "minimum_battery": -0.06693193274013687,
+        "minimum_stored_battery": -0.06693193274013687,
+        "negative_battery": true,
+        "selected": true,
+        "initial_y_sha256": "bea27ae7a2a191d28285b2ab1df504db6b79bcc0ecc03e85d4991d9999eb946a"
+      }
+    ],
+    "selected_input_checks": [
+      {
+        "case": "tau5-seed203",
+        "screened_state_hash_matches_screening": true,
+        "same_y_in_initializations": true,
+        "same_y_in_control_source": true,
+        "same_input_document": true
+      },
+      {
+        "case": "tau5-seed205",
+        "screened_state_hash_matches_screening": true,
+        "same_y_in_initializations": true,
+        "same_y_in_control_source": true,
+        "same_input_document": true
+      },
+      {
+        "case": "tau7-seed400",
+        "screened_state_hash_matches_screening": true,
+        "same_y_in_initializations": true,
+        "same_y_in_control_source": true,
+        "same_input_document": true
+      },
+      {
+        "case": "tau7-seed401",
+        "screened_state_hash_matches_screening": true,
+        "same_y_in_initializations": true,
+        "same_y_in_control_source": true,
+        "same_input_document": true
+      }
+    ],
+    "seconds": 0.02957804199832026
+  },
+  "objective": {
+    "new_cohort": [
+      {
+        "case": "tau5-seed203",
+        "original_minimum_battery": -0.03566228413069439,
+        "original_initial_hours_infeasible": 3.9388039065541136,
+        "constructed_witness_hours": 5.234419868417084,
+        "construction_position_changes": 0,
+        "initialization_nlp_accepted": true,
+        "initialization_nlp_hours": 3.197853362951668,
+        "initialization_nlp_iterations": 16,
+        "control_selected": "restoration",
+        "control_hours": 3.1978533629812285,
+        "control_final_al_hours": 3.197652843806969,
+        "repaired_selected": "restoration",
+        "repaired_hours": 3.1978533629812285,
+        "repaired_final_al_hours": 3.197652843806969,
+        "repaired_minus_control_hours": 0.0,
+        "repaired_minus_control_seconds": 0.0,
+        "repaired_minus_initialization_nlp_seconds": 1.0641727499205444e-07,
+        "control_minus_initialization_nlp_seconds": 1.0641727499205444e-07,
+        "control_and_repaired_selected_sha256_equal": false,
+        "control_and_repaired_same_modes": true,
+        "control_and_repaired_same_task_stamps": true,
+        "control_charging_segments": 10,
+        "repaired_charging_segments": 10,
+        "control_to_repaired_max_position_distance_km": 9.930136612989092e-16,
+        "repaired_and_initialization_same_modes": true,
+        "repaired_to_initialization_nlp_max_position_distance_km": 4.719567660346516e-10,
+        "control_inner_accepted": 251,
+        "repaired_inner_accepted": 64
+      },
+      {
+        "case": "tau5-seed205",
+        "original_minimum_battery": -0.03145243590005553,
+        "original_initial_hours_infeasible": 3.193223444511399,
+        "constructed_witness_hours": 4.346635456397725,
+        "construction_position_changes": 1,
+        "initialization_nlp_accepted": true,
+        "initialization_nlp_hours": 2.4816675630221945,
+        "initialization_nlp_iterations": 17,
+        "control_selected": "restoration",
+        "control_hours": 2.481667563011467,
+        "control_final_al_hours": 2.481484683399334,
+        "repaired_selected": "restoration",
+        "repaired_hours": 2.481667563011467,
+        "repaired_final_al_hours": 2.4814846834002173,
+        "repaired_minus_control_hours": 0.0,
+        "repaired_minus_control_seconds": 0.0,
+        "repaired_minus_initialization_nlp_seconds": -3.8618708231297205e-08,
+        "control_minus_initialization_nlp_seconds": -3.8618708231297205e-08,
+        "control_and_repaired_selected_sha256_equal": false,
+        "control_and_repaired_same_modes": true,
+        "control_and_repaired_same_task_stamps": true,
+        "control_charging_segments": 10,
+        "repaired_charging_segments": 10,
+        "control_to_repaired_max_position_distance_km": 3.747862519618739e-05,
+        "repaired_and_initialization_same_modes": true,
+        "repaired_to_initialization_nlp_max_position_distance_km": 0.0002800564961813584,
+        "control_inner_accepted": 317,
+        "repaired_inner_accepted": 109
+      },
+      {
+        "case": "tau7-seed400",
+        "original_minimum_battery": -0.16157610499609898,
+        "original_initial_hours_infeasible": 4.724674733898628,
+        "constructed_witness_hours": 6.321235705401456,
+        "construction_position_changes": 2,
+        "initialization_nlp_accepted": true,
+        "initialization_nlp_hours": 3.776999175894713,
+        "initialization_nlp_iterations": 958,
+        "control_selected": "restoration",
+        "control_hours": 3.7779349613190267,
+        "control_final_al_hours": 3.7775236650037254,
+        "repaired_selected": "restoration",
+        "repaired_hours": 3.7769991759641313,
+        "repaired_final_al_hours": 3.776616512409572,
+        "repaired_minus_control_hours": -0.0009357853548954687,
+        "repaired_minus_control_seconds": -3.368827277623687,
+        "repaired_minus_initialization_nlp_seconds": 2.499056961369206e-07,
+        "control_minus_initialization_nlp_seconds": 3.3688275275293833,
+        "control_and_repaired_selected_sha256_equal": false,
+        "control_and_repaired_same_modes": false,
+        "control_and_repaired_same_task_stamps": true,
+        "control_charging_segments": 13,
+        "repaired_charging_segments": 14,
+        "control_to_repaired_max_position_distance_km": 3.217219474603152,
+        "repaired_and_initialization_same_modes": true,
+        "repaired_to_initialization_nlp_max_position_distance_km": 1.9576814306838253e-07,
+        "control_inner_accepted": 357,
+        "repaired_inner_accepted": 95
+      },
+      {
+        "case": "tau7-seed401",
+        "original_minimum_battery": -0.06693193274013687,
+        "original_initial_hours_infeasible": 4.105867273431724,
+        "constructed_witness_hours": 5.8773802280393515,
+        "construction_position_changes": 0,
+        "initialization_nlp_accepted": true,
+        "initialization_nlp_hours": 3.147305937665675,
+        "initialization_nlp_iterations": 71,
+        "control_selected": "restoration",
+        "control_hours": 3.1473059375588917,
+        "control_final_al_hours": 3.1469977329475034,
+        "repaired_selected": "restoration",
+        "repaired_hours": 3.1473059375588917,
+        "repaired_final_al_hours": 3.1469977329475043,
+        "repaired_minus_control_hours": 0.0,
+        "repaired_minus_control_seconds": 0.0,
+        "repaired_minus_initialization_nlp_seconds": -3.844204954361885e-07,
+        "control_minus_initialization_nlp_seconds": -3.844204954361885e-07,
+        "control_and_repaired_selected_sha256_equal": false,
+        "control_and_repaired_same_modes": true,
+        "control_and_repaired_same_task_stamps": true,
+        "control_charging_segments": 14,
+        "repaired_charging_segments": 14,
+        "control_to_repaired_max_position_distance_km": 1.0034011737966424e-05,
+        "repaired_and_initialization_same_modes": true,
+        "repaired_to_initialization_nlp_max_position_distance_km": 9.906385580294055e-06,
+        "control_inner_accepted": 307,
+        "repaired_inner_accepted": 86
+      }
+    ],
+    "regression": [
+      {
+        "case": "fig1",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 2.1004732180111385,
+        "r2f_control_hours": 2.1004732180111385,
+        "r2f_candidate_hours": 2.1004732180111385,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau1-seed0",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.6103067649714039,
+        "r2f_control_hours": 0.610306764971404,
+        "r2f_candidate_hours": 0.610306764971404,
+        "r2g_minus_r2f_control_seconds": -3.9968028886505635e-13,
+        "r2g_minus_r2f_candidate_seconds": -3.9968028886505635e-13,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau1-seed1",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.5807349470488428,
+        "r2f_control_hours": 0.5807349470488428,
+        "r2f_candidate_hours": 0.5807349470488428,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau1-seed2",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.4694345755915201,
+        "r2f_control_hours": 0.4694345755915201,
+        "r2f_candidate_hours": 0.4694345755915201,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau1-seed3",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.6561979912523659,
+        "r2f_control_hours": 0.6561979912523659,
+        "r2f_candidate_hours": 0.6561979912523659,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau3-seed0",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 1.5683572222133957,
+        "r2f_control_hours": 1.5683572222133957,
+        "r2f_candidate_hours": 1.5683572222133957,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau3-seed1",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.826416716856892,
+        "r2f_control_hours": 0.8264167168568919,
+        "r2f_candidate_hours": 0.8264167168568919,
+        "r2g_minus_r2f_control_seconds": 3.9968028886505635e-13,
+        "r2g_minus_r2f_candidate_seconds": 3.9968028886505635e-13,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau3-seed2",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.9415408355047374,
+        "r2f_control_hours": 0.9415408355047373,
+        "r2f_candidate_hours": 0.9415408355047373,
+        "r2g_minus_r2f_control_seconds": 3.9968028886505635e-13,
+        "r2g_minus_r2f_candidate_seconds": 3.9968028886505635e-13,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau3-seed3",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 1.085727316479826,
+        "r2f_control_hours": 1.085727316479826,
+        "r2f_candidate_hours": 1.085727316479826,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau5-seed0",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 2.588952878515488,
+        "r2f_control_hours": 2.5889528785154887,
+        "r2f_candidate_hours": 2.5889528785154887,
+        "r2g_minus_r2f_control_seconds": -3.197442310920451e-12,
+        "r2g_minus_r2f_candidate_seconds": -3.197442310920451e-12,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau5-seed1",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 2.145959989828828,
+        "r2f_control_hours": 2.145959989828828,
+        "r2f_candidate_hours": 2.145959989828828,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau5-seed2",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 1.5409196338208038,
+        "r2f_control_hours": 1.540919633820804,
+        "r2f_candidate_hours": 1.540919633820804,
+        "r2g_minus_r2f_control_seconds": -7.993605777301127e-13,
+        "r2g_minus_r2f_candidate_seconds": -7.993605777301127e-13,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau5-seed3",
+        "r2f_group": "regression",
+        "r2f_action": "repair",
+        "selected": "certificate",
+        "r2g_hours": 2.2500213670302482,
+        "r2f_control_hours": 2.25211762369599,
+        "r2f_candidate_hours": null,
+        "r2g_minus_r2f_control_seconds": -7.546523996670729,
+        "r2g_minus_r2f_candidate_seconds": null,
+        "r2f_candidate_minus_control_seconds": null
+      },
+      {
+        "case": "tau7-seed0",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 3.0022296618070463,
+        "r2f_control_hours": 3.0022296618070463,
+        "r2f_candidate_hours": 3.0022296618070463,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau7-seed1",
+        "r2f_group": "regression",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 3.2542703285181447,
+        "r2f_control_hours": 3.254270328518145,
+        "r2f_candidate_hours": 3.254270328518145,
+        "r2g_minus_r2f_control_seconds": -1.5987211554602254e-12,
+        "r2g_minus_r2f_candidate_seconds": -1.5987211554602254e-12,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau7-seed2",
+        "r2f_group": "regression",
+        "r2f_action": "repair",
+        "selected": "restoration",
+        "r2g_hours": 2.1195534671629557,
+        "r2f_control_hours": 2.1160714865610144,
+        "r2f_candidate_hours": 2.119553467162956,
+        "r2g_minus_r2f_control_seconds": 12.535130166988573,
+        "r2g_minus_r2f_candidate_seconds": -1.5987211554602254e-12,
+        "r2f_candidate_minus_control_seconds": 12.535130166990172
+      },
+      {
+        "case": "tau7-seed3",
+        "r2f_group": "regression",
+        "r2f_action": "repair",
+        "selected": "restoration",
+        "r2g_hours": 3.1058377154198586,
+        "r2f_control_hours": null,
+        "r2f_candidate_hours": 3.105837715419858,
+        "r2g_minus_r2f_control_seconds": null,
+        "r2g_minus_r2f_candidate_seconds": 1.5987211554602254e-12,
+        "r2f_candidate_minus_control_seconds": null
+      },
+      {
+        "case": "tau1-seed101",
+        "r2f_group": "holdout",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 0.6001179960673875,
+        "r2f_control_hours": 0.6001179960673875,
+        "r2f_candidate_hours": 0.6001179960673875,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau3-seed103",
+        "r2f_group": "holdout",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 1.4190120718802424,
+        "r2f_control_hours": 1.4190120718802424,
+        "r2f_candidate_hours": 1.4190120718802424,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau5-seed105",
+        "r2f_group": "holdout",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 2.0952585851225436,
+        "r2f_control_hours": 2.0952585851225436,
+        "r2f_candidate_hours": 2.0952585851225436,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      },
+      {
+        "case": "tau7-seed107",
+        "r2f_group": "holdout",
+        "r2f_action": "keep_original",
+        "selected": "restoration",
+        "r2g_hours": 3.8113850344809466,
+        "r2f_control_hours": 3.8113850344809466,
+        "r2f_candidate_hours": 3.8113850344809466,
+        "r2g_minus_r2f_control_seconds": 0.0,
+        "r2g_minus_r2f_candidate_seconds": 0.0,
+        "r2f_candidate_minus_control_seconds": 0.0
+      }
+    ],
+    "regression_longer_than_r2f_control": [
+      {
+        "case": "tau7-seed2",
+        "seconds": 12.535130166988573
+      }
+    ],
+    "new_cohort_repaired_longer_than_control": [],
+    "design_case": {
+      "case": "tau5-seed3",
+      "r2g_hours": 2.2500213670302482,
+      "source": "re-evaluated initialization NLP point (preprocessing), not a result of the final AL",
+      "r2f_initialization_nlp_hours": 2.2500213670302482,
+      "equals_r2f_initialization_nlp_hours": true,
+      "r2f_control_hours": 2.25211762369599,
+      "minus_r2f_control_seconds": -7.546523996670729
+    }
+  },
+  "cost": {
+    "this_run": {
+      "note": "wall-clock of driver.py; the 21 regression jobs only replay saved results",
+      "driver_wall": 17.845223133990658,
+      "workers": 8,
+      "blas_threads": 1,
+      "job_wall_sum_new_inputs": 54.667955012992024,
+      "job_wall_sum_regression_replay": 12.506636301011895,
+      "input_audit_internal": {
+        "seconds": 0.02957804199832026,
+        "inputs": 8,
+        "process_wall": "not recorded"
+      },
+      "construction": {
+        "guard_step_wall": 2.537870022992138,
+        "guard_internal_audit_and_construction": 0.5346251009905245,
+        "note": "guard.json seconds covers the audit of the original input and the construction together"
+      },
+      "initialization": {
+        "initialize_step_wall": 2.215916016983101,
+        "nlp_internal": 0.5029768219974358
+      },
+      "direct_start": {
+        "control_al": 35.065747408996685,
+        "repaired_al": 9.273690719011938,
+        "control_phase_step_wall": 38.1456128340069,
+        "repaired_phase_step_wall": 11.764953464007704
+      },
+      "restoration": {
+        "control": 0.14650899199477863,
+        "repaired": 0.17733844999747816
+      },
+      "retention_check": {
+        "new_control": 0.13198508298955858,
+        "new_repaired": 0.24490838103520218,
+        "regression_internal": 2.830406740991748,
+        "regression_replay_step_wall": 12.506636301011895
+      },
+      "unitemized_in_phase_steps": {
+        "control": 2.8013713500258746,
+        "repaired": 2.069015913963085,
+        "note": "process start, model build, preflight, existing verifier and file output; no separate record"
+      },
+      "not_recorded": [
+        "precheck.py (reuse-preflight.json has no time)",
+        "screen.py process wall-clock",
+        "existing verifier and preflight inside each phase step"
+      ],
+      "per_input": [
+        {
+          "case": "tau5-seed203",
+          "job_wall": 9.624420688996906,
+          "guard_step_wall": 0.6972654309938662,
+          "guard_internal_audit_and_construction": 0.15038566499424633,
+          "initialize_step_wall": 0.5013687829923583,
+          "initialization_nlp_internal": 0.03807970399793703,
+          "control_phase_step_wall": 6.461312015002477,
+          "control_direct_start_al": 5.679116223996971,
+          "control_restoration": 0.03299245401285589,
+          "control_retention_check": 0.02949444499972742,
+          "repaired_phase_step_wall": 1.9636846380017232,
+          "repaired_direct_start_al": 1.344585302998894,
+          "repaired_restoration": 0.0473900649958523,
+          "repaired_retention_check": 0.048035134008387104,
+          "control_phase_unitemized": 0.7197088919929229,
+          "repaired_phase_unitemized": 0.5236741359985899
+        },
+        {
+          "case": "tau5-seed205",
+          "job_wall": 11.657579887993052,
+          "guard_step_wall": 0.7023954930045875,
+          "guard_internal_audit_and_construction": 0.15449647199420724,
+          "initialize_step_wall": 0.5405214659986086,
+          "initialization_nlp_internal": 0.04910244100028649,
+          "control_phase_step_wall": 7.6719200130028185,
+          "control_direct_start_al": 6.885715458993218,
+          "control_restoration": 0.03317727199464571,
+          "control_retention_check": 0.02699234799365513,
+          "repaired_phase_step_wall": 2.741894313003286,
+          "repaired_direct_start_al": 2.1505735910031945,
+          "repaired_restoration": 0.033278082992183045,
+          "repaired_retention_check": 0.05276590101129841,
+          "control_phase_unitemized": 0.7260349340212997,
+          "repaired_phase_unitemized": 0.5052767379966099
+        },
+        {
+          "case": "tau7-seed400",
+          "job_wall": 17.84313925600145,
+          "guard_step_wall": 0.4959589189966209,
+          "guard_internal_audit_and_construction": 0.10265895401244052,
+          "initialize_step_wall": 0.7634647379891248,
+          "initialization_nlp_internal": 0.36260806099744514,
+          "control_phase_step_wall": 13.02286453700799,
+          "control_direct_start_al": 12.271354199008783,
+          "control_restoration": 0.03837624499283265,
+          "control_retention_check": 0.03903629200067371,
+          "repaired_phase_step_wall": 3.5601870179962134,
+          "repaired_direct_start_al": 2.873328223009594,
+          "repaired_restoration": 0.0578557590051787,
+          "repaired_retention_check": 0.08181351301027462,
+          "control_phase_unitemized": 0.6740978010057006,
+          "repaired_phase_unitemized": 0.5471895229711663
+        },
+        {
+          "case": "tau7-seed401",
+          "job_wall": 15.542815180000616,
+          "guard_step_wall": 0.6422501799970632,
+          "guard_internal_audit_and_construction": 0.12708400998963043,
+          "initialize_step_wall": 0.41056103000300936,
+          "initialization_nlp_internal": 0.053186616001767106,
+          "control_phase_step_wall": 10.989516268993611,
+          "control_direct_start_al": 10.229561526997713,
+          "control_restoration": 0.04196302099444438,
+          "control_retention_check": 0.036461997995502315,
+          "repaired_phase_step_wall": 3.499187495006481,
+          "repaired_direct_start_al": 2.905203602000256,
+          "repaired_restoration": 0.038814543004264124,
+          "repaired_retention_check": 0.06229383300524205,
+          "control_phase_unitemized": 0.6815297230059514,
+          "repaired_phase_unitemized": 0.49287551699671894
+        }
+      ]
+    },
+    "reused_past_not_in_this_wall_clock": {
+      "note": "read from the reused sources; not added to this run",
+      "cases": 21,
+      "direct_start_al": 106.49975428495964,
+      "restoration": 1.896122251971974,
+      "guard_internal": 0.616686180990655,
+      "initialization_nlp_internal": 0.3062170850025723,
+      "initialization_nlp_cases": 3,
+      "per_case": [
+        {
+          "case": "fig1",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+          "direct_start_al": 11.596689714991953,
+          "restoration": 0.05252617399673909,
+          "guard_internal": 0.01404634999926202,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau1-seed0",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+          "direct_start_al": 0.3829198329913197,
+          "restoration": 0.016793820992461406,
+          "guard_internal": 0.007751632991130464,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau1-seed1",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+          "direct_start_al": 0.628120082008536,
+          "restoration": 0.01627481599280145,
+          "guard_internal": 0.0035427109978627414,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau1-seed2",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+          "direct_start_al": 0.36523488799866755,
+          "restoration": 0.014531642009387724,
+          "guard_internal": 0.0061420269921654835,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau1-seed3",
+          "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+          "direct_start_al": 0.3705051309952978,
+          "restoration": 0.012565084995003417,
+          "guard_internal": 0.0037884560006204993,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau3-seed0",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+          "direct_start_al": 2.8600493199919583,
+          "restoration": 0.04076147101295646,
+          "guard_internal": 0.006037621002178639,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau3-seed1",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+          "direct_start_al": 3.3866763709957013,
+          "restoration": 0.03021056299621705,
+          "guard_internal": 0.010424206004245207,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau3-seed2",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+          "direct_start_al": 4.566082493998692,
+          "restoration": 0.24778722699556965,
+          "guard_internal": 0.01208459799818229,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau3-seed3",
+          "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+          "direct_start_al": 1.6484661079884972,
+          "restoration": 0.02066468099656049,
+          "guard_internal": 0.008747697997023351,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau5-seed0",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+          "direct_start_al": 5.4309948940062895,
+          "restoration": 0.2321275589929428,
+          "guard_internal": 0.01194772899907548,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau5-seed1",
+          "solver_source": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+          "direct_start_al": 7.145231400994817,
+          "restoration": 0.037705625989474356,
+          "guard_internal": 0.020829309010878205,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau5-seed2",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+          "direct_start_al": 9.855036241991911,
+          "restoration": 0.32968869399337564,
+          "guard_internal": 0.01783384299778845,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau5-seed3",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+          "direct_start_al": 1.4983218150009634,
+          "restoration": 0.4922652150125941,
+          "guard_internal": 0.11570175299129914,
+          "initialization_nlp_internal": 0.04555429700121749
+        },
+        {
+          "case": "tau7-seed0",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+          "direct_start_al": 13.234439430991188,
+          "restoration": 0.03593190301035065,
+          "guard_internal": 0.016926586991758086,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau7-seed1",
+          "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+          "direct_start_al": 12.842374650004786,
+          "restoration": 0.056330237988731824,
+          "guard_internal": 0.016676213999744505,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau7-seed2",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+          "direct_start_al": 4.022568694999791,
+          "restoration": 0.05131153599359095,
+          "guard_internal": 0.12197578200721182,
+          "initialization_nlp_internal": 0.18893869999737944
+        },
+        {
+          "case": "tau7-seed3",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+          "direct_start_al": 3.7149800570041407,
+          "restoration": 0.04713018800248392,
+          "guard_internal": 0.16738101800729055,
+          "initialization_nlp_internal": 0.07172408800397534
+        },
+        {
+          "case": "tau1-seed101",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+          "direct_start_al": 0.7227411479980219,
+          "restoration": 0.023487578000640497,
+          "guard_internal": 0.006242357005248778,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau3-seed103",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+          "direct_start_al": 2.103605060998234,
+          "restoration": 0.0608475759945577,
+          "guard_internal": 0.01276558599784039,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau5-seed105",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+          "direct_start_al": 7.731046607004828,
+          "restoration": 0.03029776900075376,
+          "guard_internal": 0.02002263300528284,
+          "initialization_nlp_internal": null
+        },
+        {
+          "case": "tau7-seed107",
+          "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+          "direct_start_al": 12.393670342004043,
+          "restoration": 0.046882890004781075,
+          "guard_internal": 0.01581806999456603,
+          "initialization_nlp_internal": null
+        }
+      ]
+    },
+    "post_run_verification": {
+      "note": "this verification, separate from the solve cost; script-internal times",
+      "reverification_wall": 0.718414984003175,
+      "rust_check": 0.5543254149961285,
+      "retention_recheck": 0.8759164369985228,
+      "unit_test": 0.022,
+      "analyze": 0.14405515301041305
+    }
+  },
+  "input_relations": {
+    "new_inputs": [
+      "tau5-seed203",
+      "tau5-seed205",
+      "tau7-seed400",
+      "tau7-seed401"
+    ],
+    "regression_inputs": 21,
+    "pairs_compared": 90,
+    "pairs_sharing_a_task_point": 0,
+    "max_common_prefix": 0,
+    "tolerance_km": 1e-09,
+    "same_regions_and_endpoints_in_all_inputs": true,
+    "task_counts": {
+      "tau5-seed203": 5,
+      "tau5-seed205": 5,
+      "tau7-seed400": 7,
+      "tau7-seed401": 7
+    },
+    "not_checked": "the 4 audited but unselected inputs (tau5 seeds 200, 201, 202, 204) were not saved as input files",
+    "sharing_pairs": [],
+    "r2f_regression_note": {
+      "holdout_cases": [
+        "tau1-seed101",
+        "tau3-seed103",
+        "tau5-seed105",
+        "tau7-seed107"
+      ],
+      "distinct_seed_families": 4,
+      "no_shared_task_prefix": true,
+      "holdout_repair_needed": 0,
+      "holdout_repair_effect_not_evaluated": true,
+      "regression_random_seed_families": 4,
+      "regression_sizes_share_prefixes": true,
+      "figure1_separate": true
+    }
+  },
+  "verification": {
+    "reverification": {
+      "optimizer_launched": false,
+      "phases": 8,
+      "reports_written": 8,
+      "workers": 8,
+      "blas_threads": 1,
+      "seconds": 0.718414984003175,
+      "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+      "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "existing_verifier": {
+        "script": "experiments/2026-11-15-r2c-direct-final/verify.py",
+        "checks_al_multiplier_update": true,
+        "checks_rho_update_rule": true,
+        "passed": 8,
+        "recomputed_equals_saved_verification": 8,
+        "completed_outer": 56,
+        "accepted_inner_points": 1586,
+        "interrupted_accepted_points": 0,
+        "comparisons": {
+          "audit_inner:28: close(value, log[1]['value'])": {
+            "calls": 56,
+            "compared_values": 56,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "audit_inner:29: close(max(abs(gradient)), log[1]['gradient_inf'])": {
+            "calls": 56,
+            "compared_values": 56,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "audit_inner:35: close(next_value, entry['value'])": {
+            "calls": 1586,
+            "compared_values": 1586,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "audit_inner:36: close(max(abs(next_gradient)), entry['gradient_inf'], 1e-8)": {
+            "calls": 1586,
+            "compared_values": 1586,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-08
+          },
+          "audit_inner:43: close((value-next_value)/entry['prediction'], entry['ratio'], 1e-8)": {
+            "calls": 1448,
+            "compared_values": 1448,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-08
+          },
+          "audit_inner:50: close(max(abs(gradient)), completed['inner']['gradient_inf'], 1e-8)": {
+            "calls": 56,
+            "compared_values": 56,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-08
+          },
+          "main:85: close(value, row['inner']['value'])": {
+            "calls": 56,
+            "compared_values": 56,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "main:86: close(row['lam'], f.lam+row['rho']*f.m.h)": {
+            "calls": 56,
+            "compared_values": 3808,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "main:87: close(row['mu'], np.maximum(0., f.mu+row['rho']*f.m.g))": {
+            "calls": 56,
+            "compared_values": 10416,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "main:90: close(list(measured[key].values()), list(row[key].values()))": {
+            "calls": 112,
+            "compared_values": 448,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "audit_inner:41: close(entry['ratio'], 1.)": {
+            "calls": 138,
+            "compared_values": 138,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "independent_stationarity:63: close(max(abs(gradient)), saved['common_kkt']['stat'], 1e-8)": {
+            "calls": 8,
+            "compared_values": 8,
+            "max_abs_difference": 1.1564823724632456e-17,
+            "max_relative_difference": 1.102529482293745e-09,
+            "tolerance": 1e-08
+          },
+          "independent_stationarity:64: close(max(abs(gradient/ref.scale)), saved['paper_units_kkt']['stat'], 1e-8)": {
+            "calls": 8,
+            "compared_values": 8,
+            "max_abs_difference": 4.163336342344337e-16,
+            "max_relative_difference": 1.102529429721045e-09,
+            "tolerance": 1e-08
+          },
+          "main:136: close(list(measured.values()), list(restored['raw_kkt'].values()))": {
+            "calls": 8,
+            "compared_values": 32,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-09
+          },
+          "main:140: close(replay, data['solution']['e'], 1e-12)": {
+            "calls": 8,
+            "compared_values": 256,
+            "max_abs_difference": 0.0,
+            "max_relative_difference": 0.0,
+            "tolerance": 1e-12
+          }
+        },
+        "max_abs_difference_all_comparisons": 4.163336342344337e-16
+      },
+      "added": {
+        "note": "not part of the existing verifier; recomputed from saved states in reverify.py",
+        "passed": 8,
+        "max_initial_al_value_difference": 0.0,
+        "max_initial_al_gradient_difference": 0.0,
+        "max_initial_gradient_minus_jacobian_form": 1.4210854715202004e-14,
+        "max_final_common_kkt": 8.293308901477893e-07,
+        "max_final_paper_units_kkt": 8.293308901477893e-07,
+        "max_final_kkt_difference_from_saved": 0.0,
+        "max_original_jacobian_stationarity_difference": 4.163336342344337e-16
+      },
+      "outer_log_tally": {
+        "rows": 56,
+        "rho_increases": 24,
+        "inner_log_files": 56
+      },
+      "existing_files_hashed": 272,
+      "existing_files_unchanged": 8,
+      "phase_rows": [
+        {
+          "case": "tau5-seed203",
+          "kind": "original",
+          "completed_outer": 7,
+          "accepted_inner_points": 251,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 24.765475090759992,
+          "final_common_kkt_max": 8.293308901473556e-07,
+          "final_paper_units_kkt_max": 8.293308901473556e-07,
+          "max_abs_difference": 5.551115123125783e-17,
+          "seconds": 0.2210527790011838
+        },
+        {
+          "case": "tau5-seed205",
+          "kind": "original",
+          "completed_outer": 7,
+          "accepted_inner_points": 317,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 21.841969375038563,
+          "final_common_kkt_max": 7.290982645372264e-07,
+          "final_paper_units_kkt_max": 7.290982645372264e-07,
+          "max_abs_difference": 0.0,
+          "seconds": 0.2807233159983298
+        },
+        {
+          "case": "tau7-seed400",
+          "kind": "original",
+          "completed_outer": 7,
+          "accepted_inner_points": 357,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 112.2056284695132,
+          "final_common_kkt_max": 8.025721957406013e-07,
+          "final_paper_units_kkt_max": 8.025721957406013e-07,
+          "max_abs_difference": 3.0531122589279964e-16,
+          "seconds": 0.2790807230048813
+        },
+        {
+          "case": "tau7-seed401",
+          "kind": "original",
+          "completed_outer": 7,
+          "accepted_inner_points": 307,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 46.48050884731728,
+          "final_common_kkt_max": 7.920662569960938e-07,
+          "final_paper_units_kkt_max": 7.920662569960938e-07,
+          "max_abs_difference": 1.3877793101770377e-16,
+          "seconds": 0.2724845960037783
+        },
+        {
+          "case": "tau5-seed203",
+          "kind": "repaired",
+          "completed_outer": 7,
+          "accepted_inner_points": 64,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 0.48985860951203697,
+          "final_common_kkt_max": 8.293308901477893e-07,
+          "final_paper_units_kkt_max": 8.293308901477893e-07,
+          "max_abs_difference": 8.326672684688674e-17,
+          "seconds": 0.18620280300092418
+        },
+        {
+          "case": "tau5-seed205",
+          "kind": "repaired",
+          "completed_outer": 7,
+          "accepted_inner_points": 109,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 0.5085539125540481,
+          "final_common_kkt_max": 7.29098264538419e-07,
+          "final_paper_units_kkt_max": 7.29098264538419e-07,
+          "max_abs_difference": 8.326672684688674e-17,
+          "seconds": 0.25649844099825714
+        },
+        {
+          "case": "tau7-seed400",
+          "kind": "repaired",
+          "completed_outer": 7,
+          "accepted_inner_points": 95,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 0.5262690471024996,
+          "final_common_kkt_max": 8.025721952148717e-07,
+          "final_paper_units_kkt_max": 8.025721952148717e-07,
+          "max_abs_difference": 1.6653345369377348e-16,
+          "seconds": 0.2958569990005344
+        },
+        {
+          "case": "tau7-seed401",
+          "kind": "repaired",
+          "completed_outer": 7,
+          "accepted_inner_points": 86,
+          "interrupted_accepted_points": 0,
+          "existing_verifier_passed": true,
+          "recomputed_equals_saved_verification": true,
+          "rho_increases": 3,
+          "rho_last": 10000000.0,
+          "initial_al_gradient_inf": 0.5109957624891294,
+          "final_common_kkt_max": 7.920662569921907e-07,
+          "final_paper_units_kkt_max": 7.920662569921907e-07,
+          "max_abs_difference": 4.163336342344337e-16,
+          "seconds": 0.28406608500517905
+        }
+      ]
+    },
+    "rust": {
+      "solver_launched": false,
+      "command": [
+        "/usr/bin/python3",
+        "scripts/verify_solutions.py",
+        "<68 paths below>"
+      ],
+      "cwd": "/home/mordent/robotech/3A/optimization/uav",
+      "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+      "python": "3.14.9 (main, Oct 25 2026, 14:52:47) [GCC 16.2.1 20260810]",
+      "returncode": 0,
+      "seconds": 0.5543254149961285,
+      "files_found": 68,
+      "files_checked": 68,
+      "files_not_checkable": [],
+      "printed_lines": 68,
+      "rust_metrics_agree": 68,
+      "strict_1e_10_applicable": 52,
+      "strict_1e_10_passed": 52,
+      "rust_original_violation_le_1e_6": 52,
+      "note": "1e-6 is counted from the printed Rust values (3 significant digits); smoothed AL points are not original-feasible and have no strict check",
+      "by_kind": [
+        {
+          "kind": "final smoothed AL point",
+          "pattern": "cases/*/*/solution.json",
+          "files": 8,
+          "checked": 8,
+          "with_diagnostic_key": 0,
+          "rust_metrics_agree": 8,
+          "rust_original_violation_le_1e_6": 0,
+          "max_rust_original_violation": 2.789e-05,
+          "strict_1e_10_applicable": 0,
+          "strict_1e_10_passed": 0
+        },
+        {
+          "kind": "stage smoothed AL point",
+          "pattern": "cases/*/*/stages/*/solution.json",
+          "files": 8,
+          "checked": 8,
+          "with_diagnostic_key": 0,
+          "rust_metrics_agree": 8,
+          "rust_original_violation_le_1e_6": 0,
+          "max_rust_original_violation": 2.789e-05,
+          "strict_1e_10_applicable": 0,
+          "strict_1e_10_passed": 0
+        },
+        {
+          "kind": "last restoration output",
+          "pattern": "cases/*/*/restored/solution.json",
+          "files": 8,
+          "checked": 8,
+          "with_diagnostic_key": 8,
+          "rust_metrics_agree": 8,
+          "rust_original_violation_le_1e_6": 8,
+          "max_rust_original_violation": 0.0,
+          "strict_1e_10_applicable": 8,
+          "strict_1e_10_passed": 8
+        },
+        {
+          "kind": "initialization NLP output",
+          "pattern": "initializations/*/solution.json",
+          "files": 4,
+          "checked": 4,
+          "with_diagnostic_key": 4,
+          "rust_metrics_agree": 4,
+          "rust_original_violation_le_1e_6": 4,
+          "max_rust_original_violation": 0.0,
+          "strict_1e_10_applicable": 4,
+          "strict_1e_10_passed": 4
+        },
+        {
+          "kind": "constructed witness",
+          "pattern": "initializations/*/witness.json",
+          "files": 4,
+          "checked": 4,
+          "with_diagnostic_key": 4,
+          "rust_metrics_agree": 4,
+          "rust_original_violation_le_1e_6": 4,
+          "max_rust_original_violation": 1.776e-15,
+          "strict_1e_10_applicable": 4,
+          "strict_1e_10_passed": 4
+        },
+        {
+          "kind": "regression selected",
+          "pattern": "regression/*/selected.json",
+          "files": 21,
+          "checked": 21,
+          "with_diagnostic_key": 21,
+          "rust_metrics_agree": 21,
+          "rust_original_violation_le_1e_6": 21,
+          "max_rust_original_violation": 0.0,
+          "strict_1e_10_applicable": 21,
+          "strict_1e_10_passed": 21
+        },
+        {
+          "kind": "regression re-evaluated certificate",
+          "pattern": "regression/*/certificate.json",
+          "files": 3,
+          "checked": 3,
+          "with_diagnostic_key": 3,
+          "rust_metrics_agree": 3,
+          "rust_original_violation_le_1e_6": 3,
+          "max_rust_original_violation": 0.0,
+          "strict_1e_10_applicable": 3,
+          "strict_1e_10_passed": 3
+        },
+        {
+          "kind": "new-cohort selected",
+          "pattern": "evaluations/*/*/selected.json",
+          "files": 8,
+          "checked": 8,
+          "with_diagnostic_key": 8,
+          "rust_metrics_agree": 8,
+          "rust_original_violation_le_1e_6": 8,
+          "max_rust_original_violation": 0.0,
+          "strict_1e_10_applicable": 8,
+          "strict_1e_10_passed": 8
+        },
+        {
+          "kind": "new-cohort re-evaluated certificate",
+          "pattern": "evaluations/*/*/certificate.json",
+          "files": 4,
+          "checked": 4,
+          "with_diagnostic_key": 4,
+          "rust_metrics_agree": 4,
+          "rust_original_violation_le_1e_6": 4,
+          "max_rust_original_violation": 4.441e-16,
+          "strict_1e_10_applicable": 4,
+          "strict_1e_10_passed": 4
+        }
+      ]
+    },
+    "retention_recheck": {
+      "optimizer_launched": false,
+      "function": "retain.finalize (unchanged) with a temporary destination",
+      "temporary_destination": "/tmp/claude-1000/-home-mordent-robotech-3A-optimization/578b8fda-54d9-4869-ab1e-47c957fd29db/scratchpad/uav-r2g-retention-recheck-dq5sin_0",
+      "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+      "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "evaluations": 29,
+      "recomputed": 29,
+      "all_equal": 29,
+      "inputs_unchanged": 29,
+      "retain_sha256": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+      "feasible_incumbent_sha256": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+      "seconds": 0.8759164369985228
+    },
+    "unit_test": {
+      "log": "unit-test-feasible-incumbent.log",
+      "tests": 5,
+      "unittest_seconds": 0.022,
+      "ok": true,
+      "returncode_zero": true,
+      "independent": false,
+      "note": "the tests are built on the tau5-seed3 data (the design case); not an independent validation"
+    }
+  },
+  "rows": [
+    {
+      "case": "fig1",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/fig1",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.1004732180111385,
+      "selected_sha256": "7e49be95c95fdc3702c7f10729e24ca08162ea19ba899164e5eb86dc9a058333",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 3.0595480271493187,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.1004732180111385,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/fig1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/fig1",
+      "final_al": {
+        "objective_hours": 2.1002904431387135,
+        "common_kkt_max": 7.055392080825224e-07,
+        "physical_kkt_max": 7.055392080825224e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 11.596689714991953,
+        "original_residual": 2.550369842607058e-05,
+        "pure_mode_min_energy": -0.0035624058652677093
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 9,
+        "objective_hours": 2.1004732180111385,
+        "seconds": 0.05252617399673909,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.16332262790452373,
+        "max_coordinate_difference_km": 0.1466894834463055,
+        "returned_minus_final_al_seconds": 0.657989540730064
+      },
+      "retention_seconds": 0.1168427230004454
+    },
+    {
+      "case": "tau1-seed0",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau1-seed0",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.6103067649714039,
+      "selected_sha256": "81bd1b17183be6e7c69feb6a49ea279633ec77cf8d2b88841a557444812c2134",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 0.7259097861684513,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.6103067649714039,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed0",
+      "final_al": {
+        "objective_hours": 0.610262602800747,
+        "common_kkt_max": 9.742008080489487e-07,
+        "physical_kkt_max": 9.742008080489487e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 0.3829198329913197,
+        "original_residual": 3.0186093950454044e-05,
+        "pure_mode_min_energy": -0.0008596676887497878
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "objective_hours": 0.610306764971404,
+        "seconds": 0.016793820992461406,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0012788099771243679,
+        "max_coordinate_difference_km": 0.0012400090127604457,
+        "returned_minus_final_al_seconds": 0.1589838143650102
+      },
+      "retention_seconds": 0.10826678900048137
+    },
+    {
+      "case": "tau1-seed1",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau1-seed1",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.5807349470488428,
+      "selected_sha256": "daf329ef3a43d02a23262ee1db8f30451143a65f7a9105e6074558e1d1c8da9e",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 0.7267361708358362,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.5807349470488428,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed1",
+      "final_al": {
+        "objective_hours": 0.5806776529329909,
+        "common_kkt_max": 7.901206148328704e-07,
+        "physical_kkt_max": 7.901206148328704e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 0.628120082008536,
+        "original_residual": 2.710855369193829e-05,
+        "pure_mode_min_energy": -0.0009958184894804933
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "objective_hours": 0.5807349470488428,
+        "seconds": 0.01627481599280145,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 2.358033077063282,
+        "max_coordinate_difference_km": 1.7953281304915942,
+        "returned_minus_final_al_seconds": 0.206258817066729
+      },
+      "retention_seconds": 0.08792235200235154
+    },
+    {
+      "case": "tau1-seed2",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau1-seed2",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.4694345755915201,
+      "selected_sha256": "2fe26814f895d57d21a023cb4938e96b49da23282ccfb452931eed4e344fe410",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 0.5688270068393153,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.4694345755915201,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau1-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed2",
+      "final_al": {
+        "objective_hours": 0.4694034392126891,
+        "common_kkt_max": 9.715040659896874e-07,
+        "physical_kkt_max": 9.715040659896874e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 0.36523488799866755,
+        "original_residual": 3.000126342201145e-05,
+        "pure_mode_min_energy": -0.0008160349900336872
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "objective_hours": 0.4694345755915201,
+        "seconds": 0.014531642009387724,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0013326601160206276,
+        "max_coordinate_difference_km": 0.001307983656031908,
+        "returned_minus_final_al_seconds": 0.11209096379143357
+      },
+      "retention_seconds": 0.09288958700199146
+    },
+    {
+      "case": "tau1-seed3",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau1-seed3",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.6561979912523659,
+      "selected_sha256": "422b3f57979b2ea17e62a403a029f43439517db0d810144a1bb4c8a7eb0ab297",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 0.8386877892943094,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.6561979912523659,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau1-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed3",
+      "final_al": {
+        "objective_hours": 0.6561488495438901,
+        "common_kkt_max": 9.222198450361532e-07,
+        "physical_kkt_max": 9.222198450361532e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 0.3705051309952978,
+        "original_residual": 2.897943981595026e-05,
+        "pure_mode_min_energy": -0.0010611832551644662
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 5,
+        "objective_hours": 0.6561979912523659,
+        "seconds": 0.012565084995003417,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.014327013935709208,
+        "max_coordinate_difference_km": 0.01073073905631669,
+        "returned_minus_final_al_seconds": 0.17691015051291004
+      },
+      "retention_seconds": 0.10157140999217518
+    },
+    {
+      "case": "tau3-seed0",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau3-seed0",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 1.5683572222133957,
+      "selected_sha256": "a3a23551b70b392252dc0b3b6c96992afe3d4ff26e3f253065e1572c2d71f16b",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 2.0378885485610856,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 1.5683572222133957,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed0",
+      "final_al": {
+        "objective_hours": 1.5682941701455957,
+        "common_kkt_max": 7.397517240996694e-07,
+        "physical_kkt_max": 7.397517240996694e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 2.8600493199919583,
+        "original_residual": 2.620225597860412e-05,
+        "pure_mode_min_energy": -0.0021996643406590466
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 9,
+        "objective_hours": 1.5683572222133957,
+        "seconds": 0.04076147101295646,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0011847497968733127,
+        "max_coordinate_difference_km": 0.0011099416093260928,
+        "returned_minus_final_al_seconds": 0.2269874440799846
+      },
+      "retention_seconds": 0.15152960699924733
+    },
+    {
+      "case": "tau3-seed1",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau3-seed1",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.826416716856892,
+      "selected_sha256": "b57bb98d930654139b4df36b9deea7dd137a7b052c411d72fdec71b6e8874eec",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 1.2071437263440732,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.826416716856892,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed1",
+      "final_al": {
+        "objective_hours": 0.8262464501889102,
+        "common_kkt_max": 8.505092607998107e-07,
+        "physical_kkt_max": 8.505092607998107e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 3.3866763709957013,
+        "original_residual": 2.7978431503098608e-05,
+        "pure_mode_min_energy": -0.0027238411278391883
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 11,
+        "objective_hours": 0.8264167168568919,
+        "seconds": 0.03021056299621705,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.5294327721030873,
+        "max_coordinate_difference_km": 0.3747902053089357,
+        "returned_minus_final_al_seconds": 0.6129600047345196
+      },
+      "retention_seconds": 0.1465620619856054
+    },
+    {
+      "case": "tau3-seed2",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau3-seed2",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.9415408355047374,
+      "selected_sha256": "64702c4f3b99a6a3bb2373c640afc9fec30e0b72649961e7e267c6bdac7deefc",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 1.2560691073785912,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.9415408355047374,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed2",
+      "final_al": {
+        "objective_hours": 0.9413611337573815,
+        "common_kkt_max": 9.000242109780251e-07,
+        "physical_kkt_max": 9.000242109780251e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 4.566082493998692,
+        "original_residual": 2.8979442300942116e-05,
+        "pure_mode_min_energy": -0.0028199624752945907
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 574,
+        "objective_hours": 0.9415408355047373,
+        "seconds": 0.24778722699556965,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 1.3060032964148733,
+        "max_coordinate_difference_km": 0.9322562470316536,
+        "returned_minus_final_al_seconds": 0.6469262904813533
+      },
+      "retention_seconds": 0.10762689099647105
+    },
+    {
+      "case": "tau3-seed3",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau3-seed3",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 1.085727316479826,
+      "selected_sha256": "5538db594d413f5d20f0b9539587529d98bc59678a501f0d81caf93913a05af6",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 1.5897757623294388,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 1.085727316479826,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2e-position-init/cases/original/tau3-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed3",
+      "final_al": {
+        "objective_hours": 1.085631947758035,
+        "common_kkt_max": 9.194335992643993e-07,
+        "physical_kkt_max": 9.194335992643993e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 1.6484661079884972,
+        "original_residual": 2.9055481712852867e-05,
+        "pure_mode_min_energy": -0.003005955023003659
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "objective_hours": 1.085727316479826,
+        "seconds": 0.02066468099656049,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0013247722911472934,
+        "max_coordinate_difference_km": 0.0012054430085384205,
+        "returned_minus_final_al_seconds": 0.34332739844780136
+      },
+      "retention_seconds": 0.11460035499476362
+    },
+    {
+      "case": "tau5-seed0",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau5-seed0",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.588952878515488,
+      "selected_sha256": "835bd46d5a0dc49ce354d6f71cc25a63cc457311d0942665e841d026cca083cb",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 3.3270314462513824,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.588952878515488,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau5-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed0",
+      "final_al": {
+        "objective_hours": 2.5888337143517215,
+        "common_kkt_max": 7.397640717987045e-07,
+        "physical_kkt_max": 7.397640717987045e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 5.4309948940062895,
+        "original_residual": 2.620248854118391e-05,
+        "pure_mode_min_energy": -0.0030771765724412203
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 942,
+        "objective_hours": 2.5889528785154887,
+        "seconds": 0.2321275589929428,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.14475953772083472,
+        "max_coordinate_difference_km": 0.13107248398336413,
+        "returned_minus_final_al_seconds": 0.42899098955881954
+      },
+      "retention_seconds": 0.23325813699921127
+    },
+    {
+      "case": "tau5-seed1",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau5-seed1",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.145959989828828,
+      "selected_sha256": "cdaefc00c219d3f754f108992f6ecfe74c3132329662d08872c8fdb23dba8317",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 2.8579598774611923,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.145959989828828,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2d-fallback/cases/direct/tau5-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed1",
+      "final_al": {
+        "objective_hours": 2.1456829059144704,
+        "common_kkt_max": 9.016222458251618e-07,
+        "physical_kkt_max": 9.016222458251618e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 7.145231400994817,
+        "original_residual": 2.886871204108511e-05,
+        "pure_mode_min_energy": -0.00443795011275383
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 12,
+        "objective_hours": 2.145959989828828,
+        "seconds": 0.037705625989474356,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 1.2114621720610714,
+        "max_coordinate_difference_km": 0.8576032769322142,
+        "returned_minus_final_al_seconds": 0.9975020916879629
+      },
+      "retention_seconds": 0.11747246301092673
+    },
+    {
+      "case": "tau5-seed2",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau5-seed2",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 1.5409196338208038,
+      "selected_sha256": "71afb0b1a2d4f45a897bf7c51accb8d32d979dd7c395b50dc398d560d9410c8b",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 2.05308069315013,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 1.5409196338208038,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed2",
+      "final_al": {
+        "objective_hours": 1.5405834254074222,
+        "common_kkt_max": 8.957954562428642e-07,
+        "physical_kkt_max": 8.957954562428642e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 9.855036241991911,
+        "original_residual": 2.9099110509575273e-05,
+        "pure_mode_min_energy": -0.004833342057487977
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 1287,
+        "objective_hours": 1.540919633820804,
+        "seconds": 0.32968869399337564,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 2.1614225840892782,
+        "max_coordinate_difference_km": 1.7922923916499554,
+        "returned_minus_final_al_seconds": 1.2103502881736006
+      },
+      "retention_seconds": 0.17284719200688414
+    },
+    {
+      "case": "tau5-seed3",
+      "stratum": "design",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau5-seed3",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": false,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "certificate",
+      "selected_hours": 2.2500213670302482,
+      "selected_sha256": "c2988f3e8716f67917c1cac14768b66d09791d7a8a75ac3417aad9b2707a7246",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": false,
+      "selected_equals_restored_solution_sha256": false,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": "not_available",
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 2.8874367949445667,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 4.115653693834488,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 2.2500213670302482,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 2.2500213670302482,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau5-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed3",
+      "final_al": {
+        "objective_hours": 2.2497725983302828,
+        "common_kkt_max": 8.067278059473507e-07,
+        "physical_kkt_max": 8.067278059473507e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 1.4983218150009634,
+        "original_residual": 2.7888405121721446e-05,
+        "pure_mode_min_energy": -0.002452698779452256
+      },
+      "last_restoration": {
+        "accepted": false,
+        "solver_status": "Maximum_Iterations_Exceeded",
+        "iterations": 1500,
+        "objective_hours": null,
+        "seconds": 0.4922652150125941,
+        "reason": "solver flag or fixed-branch KKT of the returned point"
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.3605908778079539,
+        "max_coordinate_difference_km": 0.2626042948539222,
+        "returned_minus_final_al_seconds": 0.8955673198757452
+      },
+      "retention_seconds": 0.12574655500066
+    },
+    {
+      "case": "tau7-seed0",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau7-seed0",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.0022296618070463,
+      "selected_sha256": "00e7dc3d0c9aef13123e858f7650d4a584a6ca7436b12e1103d86ce94fac789b",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 4.038016857955186,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.0022296618070463,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed0",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed0",
+      "final_al": {
+        "objective_hours": 3.0020602586616003,
+        "common_kkt_max": 7.397634168407373e-07,
+        "physical_kkt_max": 7.397634168407373e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 13.234439430991188,
+        "original_residual": 2.6202478467728634e-05,
+        "pure_mode_min_energy": -0.004542711320066617
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 10,
+        "objective_hours": 3.0022296618070463,
+        "seconds": 0.03593190301035065,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.2677304357648164,
+        "max_coordinate_difference_km": 0.239604216538425,
+        "returned_minus_final_al_seconds": 0.6098513236056036
+      },
+      "retention_seconds": 0.12913622800260782
+    },
+    {
+      "case": "tau7-seed1",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau7-seed1",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.2542703285181447,
+      "selected_sha256": "8c995665f76c2518d49bb8fe0c77d1a744da6b74ba90910b800de5ec7dedf9b5",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 4.241368493521915,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.2542703285181447,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1",
+      "final_al": {
+        "objective_hours": 3.2539303707704517,
+        "common_kkt_max": 8.70881214362477e-07,
+        "physical_kkt_max": 8.70881214362477e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 12.842374650004786,
+        "original_residual": 2.952354396836656e-05,
+        "pure_mode_min_energy": -0.003104626853085435
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 93,
+        "objective_hours": 3.254270328518145,
+        "seconds": 0.056330237988731824,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.7534811508112502,
+        "max_coordinate_difference_km": 0.5333952832430562,
+        "returned_minus_final_al_seconds": 1.2238478916948736
+      },
+      "retention_seconds": 0.1716440200107172
+    },
+    {
+      "case": "tau7-seed2",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau7-seed2",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.1195534671629557,
+      "selected_sha256": "61316f453ab00e65e15f399ca9d3ff7c2e22c4ee921fddb1f261e25c8ffc92cd",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 2.816551539400368,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 4.468538049843284,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 2.119553467201268,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.1195534671629557,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 2.1195534672128944,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed2",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed2",
+      "final_al": {
+        "objective_hours": 2.1193283545951833,
+        "common_kkt_max": 6.374861619910365e-07,
+        "physical_kkt_max": 6.374861619910365e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 4.022568694999791,
+        "original_residual": 2.446885196461066e-05,
+        "pure_mode_min_energy": -0.004464398103590395
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 88,
+        "objective_hours": 2.119553467162956,
+        "seconds": 0.05131153599359095,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.07032154106132968,
+        "max_coordinate_difference_km": 0.050198208761919716,
+        "returned_minus_final_al_seconds": 0.8104052439804832
+      },
+      "retention_seconds": 0.16766756698780227
+    },
+    {
+      "case": "tau7-seed3",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau7-seed3",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.1058377154198586,
+      "selected_sha256": "a0ca0dca526444a8fa58a7dea2504e6780f0d72bb024de7885dba55c2882fb92",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 4.14475693879245,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 5.874915410487512,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 3.1058377155525303,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.1058377154198586,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 3.1058377155525303,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/repaired/tau7-seed3",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed3",
+      "final_al": {
+        "objective_hours": 3.105498691447325,
+        "common_kkt_max": 7.60542099029443e-07,
+        "physical_kkt_max": 7.60542099029443e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 3.7149800570041407,
+        "original_residual": 2.704712806130721e-05,
+        "pure_mode_min_energy": -0.0031327710293750366
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 8,
+        "objective_hours": 3.105837715419858,
+        "seconds": 0.04713018800248392,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.21625098296947276,
+        "max_coordinate_difference_km": 0.15745095694805755,
+        "returned_minus_final_al_seconds": 1.220486301120971
+      },
+      "retention_seconds": 0.18271236000873614
+    },
+    {
+      "case": "tau1-seed101",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau1-seed101",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 0.6001179960673875,
+      "selected_sha256": "74154e8bd6e8688c4c9ecf53c08486325131f5e49f4e169af4bfa645da31fd69",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 0.7161911138480814,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 0.6001179960673875,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau1-seed101",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau1-seed101",
+      "final_al": {
+        "objective_hours": 0.6000726969225989,
+        "common_kkt_max": 9.94269164817426e-07,
+        "physical_kkt_max": 9.94269164817426e-07,
+        "stop": "kkt",
+        "total_outer": 6,
+        "elapsed_seconds": 0.7227411479980219,
+        "original_residual": 3.0466359562759618e-05,
+        "pure_mode_min_energy": -0.0008675844656494958
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 7,
+        "objective_hours": 0.6001179960673875,
+        "seconds": 0.023487578000640497,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.001296863382293953,
+        "max_coordinate_difference_km": 0.0012954698517519958,
+        "returned_minus_final_al_seconds": 0.1630769212388472
+      },
+      "retention_seconds": 0.09796846300014295
+    },
+    {
+      "case": "tau3-seed103",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau3-seed103",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 1.4190120718802424,
+      "selected_sha256": "53a28c66a909c3f225edf58adaa7f683e08f690ad0209734a78b7f6fb5945e50",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 1.717189346433233,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 1.4190120718802424,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau3-seed103",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau3-seed103",
+      "final_al": {
+        "objective_hours": 1.418812827255473,
+        "common_kkt_max": 7.167646044310911e-07,
+        "physical_kkt_max": 7.167646044310911e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 2.103605060998234,
+        "original_residual": 2.6240247133437e-05,
+        "pure_mode_min_energy": -0.0022393424192005407
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 183,
+        "objective_hours": 1.4190120718802424,
+        "seconds": 0.0608475759945577,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.11110507869636128,
+        "max_coordinate_difference_km": 0.09465459986666414,
+        "returned_minus_final_al_seconds": 0.7172806491698047
+      },
+      "retention_seconds": 0.1070012290001614
+    },
+    {
+      "case": "tau5-seed105",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau5-seed105",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.0952585851225436,
+      "selected_sha256": "f6c66ac9455a3616335a7bf9776e2e6a9ad79d586b75ffdb5219ec732e8b0a9a",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 2.7942408169964073,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.0952585851225436,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau5-seed105",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau5-seed105",
+      "final_al": {
+        "objective_hours": 2.0951341112465762,
+        "common_kkt_max": 6.636752179560142e-07,
+        "physical_kkt_max": 6.636752179560142e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 7.731046607004828,
+        "original_residual": 2.4604012303292625e-05,
+        "pure_mode_min_energy": -0.003729616843878958
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 8,
+        "objective_hours": 2.0952585851225436,
+        "seconds": 0.03029776900075376,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.40720696885115043,
+        "max_coordinate_difference_km": 0.2987228307570018,
+        "returned_minus_final_al_seconds": 0.4481059534825249
+      },
+      "retention_seconds": 0.14390552199620288
+    },
+    {
+      "case": "tau7-seed107",
+      "stratum": "regression_unchanged",
+      "kind": "replay",
+      "folder": "experiments/2026-11-15-r2g-incumbent/regression/tau7-seed107",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.8113850344809466,
+      "selected_sha256": "bb05ffbb10a197673b5bd2aa6c8ac4151324bcdedf8baa0ac0fa4dbe1283da68",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": true,
+          "objective_hours": 4.926105545424894,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.8113850344809466,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2f-general-init/cases/original/tau7-seed107",
+      "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed107",
+      "final_al": {
+        "objective_hours": 3.8110702633053877,
+        "common_kkt_max": 7.153219455612297e-07,
+        "physical_kkt_max": 7.153219455612297e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 12.393670342004043,
+        "original_residual": 2.624024684347981e-05,
+        "pure_mode_min_energy": -0.004329389269095096
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 21,
+        "objective_hours": 3.8113850344809466,
+        "seconds": 0.046882890004781075,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.1527730078594262,
+        "max_coordinate_difference_km": 0.12658880071053602,
+        "returned_minus_final_al_seconds": 1.133176232012012
+      },
+      "retention_seconds": 0.15323522899416275
+    },
+    {
+      "case": "tau5-seed203",
+      "stratum": "negative_battery_cohort",
+      "kind": "control",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/original/tau5-seed203",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.1978533629812285,
+      "selected_sha256": "9f1a578484d97ecbcead5137583881b62fa732f2e78c69320f58b26765ea9657",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 3.9388039065541136,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.1978533629812285,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/original/tau5-seed203",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau5-seed203",
+      "final_al": {
+        "objective_hours": 3.197652843806969,
+        "common_kkt_max": 8.293308901473556e-07,
+        "physical_kkt_max": 8.293308901473556e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 5.679116223996971,
+        "original_residual": 2.7888453729777943e-05,
+        "pure_mode_min_energy": -0.0019029059378150581
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 9,
+        "objective_hours": 3.1978533629812285,
+        "seconds": 0.03299245401285589,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0012273585314973596,
+        "max_coordinate_difference_km": 0.0011939621512078724,
+        "returned_minus_final_al_seconds": 0.7218690273344208
+      },
+      "retention_seconds": 0.02949444499972742
+    },
+    {
+      "case": "tau5-seed205",
+      "stratum": "negative_battery_cohort",
+      "kind": "control",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/original/tau5-seed205",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.481667563011467,
+      "selected_sha256": "7892f906924dac3b39f18edc068ab0abcc7a5ee5c92dea4b652f3425fb7fda32",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 3.193223444511399,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.481667563011467,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/original/tau5-seed205",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau5-seed205",
+      "final_al": {
+        "objective_hours": 2.481484683399334,
+        "common_kkt_max": 7.290982645372264e-07,
+        "physical_kkt_max": 7.290982645372264e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 6.885715458993218,
+        "original_residual": 2.5999756070989636e-05,
+        "pure_mode_min_energy": -0.002747370898017465
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 12,
+        "objective_hours": 2.481667563011467,
+        "seconds": 0.03317727199464571,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.5245797437843069,
+        "max_coordinate_difference_km": 0.47474948917693105,
+        "returned_minus_final_al_seconds": 0.6583666036789282
+      },
+      "retention_seconds": 0.02699234799365513
+    },
+    {
+      "case": "tau7-seed400",
+      "stratum": "negative_battery_cohort",
+      "kind": "control",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/original/tau7-seed400",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.7779349613190267,
+      "selected_sha256": "ac9f6daa36315aed95c43ffe5b9ff366e885aeee47ffe7a303a4db9826610e28",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 4.724674733898628,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.7779349613190267,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/original/tau7-seed400",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau7-seed400",
+      "final_al": {
+        "objective_hours": 3.7775236650037254,
+        "common_kkt_max": 8.025721957406013e-07,
+        "physical_kkt_max": 8.025721957406013e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 12.271354199008783,
+        "original_residual": 2.7396961369074046e-05,
+        "pure_mode_min_energy": -0.0035707868512446783
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 12,
+        "objective_hours": 3.7779349613190267,
+        "seconds": 0.03837624499283265,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 2.050557847315395,
+        "max_coordinate_difference_km": 1.8030286437234204,
+        "returned_minus_final_al_seconds": 1.4806667350848457
+      },
+      "retention_seconds": 0.03903629200067371
+    },
+    {
+      "case": "tau7-seed401",
+      "stratum": "negative_battery_cohort",
+      "kind": "control",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/original/tau7-seed401",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": false,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.1473059375588917,
+      "selected_sha256": "d307bee9d562dd81a788830d64f4876b46f0fc0eb711c3d93b770a198c4e51d2",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": false,
+      "initialization_certificate_reason": "not_available",
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 4.105867273431724,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.1473059375588917,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/original/tau7-seed401",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau7-seed401",
+      "final_al": {
+        "objective_hours": 3.1469977329475034,
+        "common_kkt_max": 7.920662569960938e-07,
+        "physical_kkt_max": 7.920662569960938e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 10.229561526997713,
+        "original_residual": 2.757300973604476e-05,
+        "pure_mode_min_energy": -0.0037719268902991487
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 16,
+        "objective_hours": 3.1473059375588903,
+        "seconds": 0.04196302099444438,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 1.2819709347652346,
+        "max_coordinate_difference_km": 1.0756999363973065,
+        "returned_minus_final_al_seconds": 1.109536600997707
+      },
+      "retention_seconds": 0.036461997995502315
+    },
+    {
+      "case": "tau5-seed203",
+      "stratum": "negative_battery_cohort",
+      "kind": "repaired",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/repaired/tau5-seed203",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.1978533629812285,
+      "selected_sha256": "34e530288e9f2a4a745dc7a71b931e87125e35df487664f4592edefe5bc903bb",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 3.9388039065541136,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 5.234419868417084,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 3.197853362951669,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.1978533629812285,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 3.1978533629540116,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/repaired/tau5-seed203",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau5-seed203",
+      "final_al": {
+        "objective_hours": 3.197652843806969,
+        "common_kkt_max": 8.293308901477893e-07,
+        "physical_kkt_max": 8.293308901477893e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 1.344585302998894,
+        "original_residual": 2.788845372974017e-05,
+        "pure_mode_min_energy": -0.001902905937814947
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 9,
+        "objective_hours": 3.197853362981228,
+        "seconds": 0.0473900649958523,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.0012273585344152924,
+        "max_coordinate_difference_km": 0.001193962154675765,
+        "returned_minus_final_al_seconds": 0.7218690273344208
+      },
+      "retention_seconds": 0.048035134008387104
+    },
+    {
+      "case": "tau5-seed205",
+      "stratum": "negative_battery_cohort",
+      "kind": "repaired",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/repaired/tau5-seed205",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 2.481667563011467,
+      "selected_sha256": "a152a8516f2735f27332985aa34489470936e44b9c1d1ac39c1cf142dd975b4a",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 3.193223444511399,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 4.346635456397725,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 2.481667563022195,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 2.481667563011467,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 2.4816675630294505,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/repaired/tau5-seed205",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau5-seed205",
+      "final_al": {
+        "objective_hours": 2.4814846834002173,
+        "common_kkt_max": 7.29098264538419e-07,
+        "physical_kkt_max": 7.29098264538419e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 2.1505735910031945,
+        "original_residual": 2.5999756071024554e-05,
+        "pure_mode_min_energy": -0.0027473708924742324
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 10,
+        "objective_hours": 2.4816675630114675,
+        "seconds": 0.033278082992183045,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.34855929750124187,
+        "max_coordinate_difference_km": 0.315463054790345,
+        "returned_minus_final_al_seconds": 0.6583666004990718
+      },
+      "retention_seconds": 0.05276590101129841
+    },
+    {
+      "case": "tau7-seed400",
+      "stratum": "negative_battery_cohort",
+      "kind": "repaired",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/repaired/tau7-seed400",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.7769991759641313,
+      "selected_sha256": "c268cc525d42ac69992e6cee9a6c3ab32d93115292c136acc0e9bc633c5fa81c",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 4.724674733898628,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 6.321235705401456,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 3.7769991758947135,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.7769991759641313,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 3.776999175910141,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/repaired/tau7-seed400",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau7-seed400",
+      "final_al": {
+        "objective_hours": 3.776616512409572,
+        "common_kkt_max": 8.025721952148717e-07,
+        "physical_kkt_max": 8.025721952148717e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 2.873328223009594,
+        "original_residual": 2.7396961366159995e-05,
+        "pure_mode_min_energy": -0.003567018507411479
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 9,
+        "objective_hours": 3.7769991759641317,
+        "seconds": 0.0578557590051787,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.1620826499814073,
+        "max_coordinate_difference_km": 0.14749404879865846,
+        "returned_minus_final_al_seconds": 1.3775887964138533
+      },
+      "retention_seconds": 0.08181351301027462
+    },
+    {
+      "case": "tau7-seed401",
+      "stratum": "negative_battery_cohort",
+      "kind": "repaired",
+      "folder": "experiments/2026-11-15-r2g-incumbent/evaluations/repaired/tau7-seed401",
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "both_scales_kkt_and_final_certificate": true,
+      "initialization_certificate_valid": true,
+      "restoration_attempted": true,
+      "selected": "restoration",
+      "selected_hours": 3.1473059375588917,
+      "selected_sha256": "b21affab6edcf1fafa822964d513db4a976e8e3e9dee8b56d23369dac9a6ccc1",
+      "selected_sha256_matches_result": true,
+      "restored_solution_exists": true,
+      "selected_equals_restored_solution_sha256": true,
+      "certificate_file_written": true,
+      "initialization_certificate_reason": null,
+      "restoration_certificate_reason": null,
+      "candidates": {
+        "original": {
+          "accepted": false,
+          "objective_hours": 4.105867273431724,
+          "reason": null
+        },
+        "constructed": {
+          "accepted": true,
+          "objective_hours": 5.8773802280393515,
+          "reason": null
+        },
+        "initialization": {
+          "accepted": true,
+          "objective_hours": 3.147305937665675,
+          "reason": null
+        },
+        "restoration": {
+          "accepted": true,
+          "objective_hours": 3.1473059375588917,
+          "reason": null
+        },
+        "certificate": {
+          "accepted": true,
+          "objective_hours": 3.147305937665675,
+          "reason": null
+        }
+      },
+      "solver_source": "experiments/2026-11-15-r2g-incumbent/cases/repaired/tau7-seed401",
+      "initialization_source": "experiments/2026-11-15-r2g-incumbent/initializations/tau7-seed401",
+      "final_al": {
+        "objective_hours": 3.1469977329475043,
+        "common_kkt_max": 7.920662569921907e-07,
+        "physical_kkt_max": 7.920662569921907e-07,
+        "stop": "kkt",
+        "total_outer": 7,
+        "elapsed_seconds": 2.905203602000256,
+        "original_residual": 2.7573009736076876e-05,
+        "pure_mode_min_energy": -0.0037719268902873804
+      },
+      "last_restoration": {
+        "accepted": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 11,
+        "objective_hours": 3.147305937558892,
+        "seconds": 0.038814543004264124,
+        "reason": null
+      },
+      "final_al_to_returned_point": {
+        "max_position_distance_km": 0.6312236956676789,
+        "max_coordinate_difference_km": 0.5296588507177784,
+        "returned_minus_final_al_seconds": 1.1095366009945096
+      },
+      "retention_seconds": 0.06229383300524205
+    }
+  ]
+}

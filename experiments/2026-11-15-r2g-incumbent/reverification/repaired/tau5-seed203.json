@@ -1,0 +1,265 @@
+{
+  "case": "tau5-seed203",
+  "kind": "repaired",
+  "optimizer_launched": false,
+  "verifier": "experiments/2026-11-15-r2c-direct-final/verify.py",
+  "verifier_sha256": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+  "existing_verifier_passed": true,
+  "existing_verifier_comparisons": {
+    "audit_inner:28: close(value, log[1]['value'])": {
+      "calls": 7,
+      "compared_values": 7,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "audit_inner:29: close(max(abs(gradient)), log[1]['gradient_inf'])": {
+      "calls": 7,
+      "compared_values": 7,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "audit_inner:35: close(next_value, entry['value'])": {
+      "calls": 64,
+      "compared_values": 64,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "audit_inner:36: close(max(abs(next_gradient)), entry['gradient_inf'], 1e-8)": {
+      "calls": 64,
+      "compared_values": 64,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-08
+    },
+    "audit_inner:43: close((value-next_value)/entry['prediction'], entry['ratio'], 1e-8)": {
+      "calls": 55,
+      "compared_values": 55,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-08
+    },
+    "audit_inner:50: close(max(abs(gradient)), completed['inner']['gradient_inf'], 1e-8)": {
+      "calls": 7,
+      "compared_values": 7,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-08
+    },
+    "main:85: close(value, row['inner']['value'])": {
+      "calls": 7,
+      "compared_values": 7,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "main:86: close(row['lam'], f.lam+row['rho']*f.m.h)": {
+      "calls": 7,
+      "compared_values": 399,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "main:87: close(row['mu'], np.maximum(0., f.mu+row['rho']*f.m.g))": {
+      "calls": 7,
+      "compared_values": 1092,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "main:90: close(list(measured[key].values()), list(row[key].values()))": {
+      "calls": 14,
+      "compared_values": 56,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "audit_inner:41: close(entry['ratio'], 1.)": {
+      "calls": 9,
+      "compared_values": 9,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "independent_stationarity:63: close(max(abs(gradient)), saved['common_kkt']['stat'], 1e-8)": {
+      "calls": 1,
+      "compared_values": 1,
+      "max_abs_difference": 2.312964083182001e-18,
+      "max_relative_difference": 3.1416088782490657e-10,
+      "tolerance": 1e-08
+    },
+    "independent_stationarity:64: close(max(abs(gradient/ref.scale)), saved['paper_units_kkt']['stat'], 1e-8)": {
+      "calls": 1,
+      "compared_values": 1,
+      "max_abs_difference": 8.326672684688674e-17,
+      "max_relative_difference": 3.141609627267169e-10,
+      "tolerance": 1e-08
+    },
+    "main:136: close(list(measured.values()), list(restored['raw_kkt'].values()))": {
+      "calls": 1,
+      "compared_values": 4,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-09
+    },
+    "main:140: close(replay, data['solution']['e'], 1e-12)": {
+      "calls": 1,
+      "compared_values": 27,
+      "max_abs_difference": 0.0,
+      "max_relative_difference": 0.0,
+      "tolerance": 1e-12
+    }
+  },
+  "recomputed_verification": {
+    "stages": [
+      {
+        "stage": 13,
+        "outer": 7,
+        "common_pass": true,
+        "physical_pass": true,
+        "stop": "kkt"
+      }
+    ],
+    "completed_outer": 7,
+    "accepted_inner_points": 64,
+    "interrupted_accepted_points": 0,
+    "original_jacobian_stationarity_verified": true,
+    "restoration": {
+      "accepted": true,
+      "source": "solution.json",
+      "source_objective": 3.197652843806969,
+      "source_common_kkt": {
+        "stat": 7.362355317989492e-09,
+        "feas": 8.293308901477893e-07,
+        "comp": 2.915226809951932e-10,
+        "dual": 0.0
+      },
+      "source_paper_units_kkt": {
+        "stat": 2.650447914476217e-07,
+        "feas": 8.293308901477893e-07,
+        "comp": 1.318767317570746e-11,
+        "dual": 0.0
+      },
+      "limits": {
+        "residual": 1e-06,
+        "correction": 1e-06,
+        "kkt": 1e-06
+      },
+      "solver_status": "Solve_Succeeded",
+      "solver_success": true,
+      "iterations": 9,
+      "raw_kkt": {
+        "stat": 1.5057399771478686e-15,
+        "feas": 2.5579538487363607e-14,
+        "comp": 9.15596887196557e-09,
+        "dual": 0.0
+      },
+      "duration_correction": 0.0,
+      "objective": 3.197853362981228,
+      "original_residuals": {
+        "viol": 4.163336342344337e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 4.163336342344337e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 1.0029409192036098e-08,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 1.5057399771478686e-15,
+        "feas": 1.5987211554602255e-15,
+        "comp": 9.15596887196557e-09,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      },
+      "time_change_seconds": 0.7218690273328221,
+      "roundoff_time_correction": 0.0,
+      "seconds": 0.0473900649958523
+    }
+  },
+  "recomputed_equals_saved_verification": true,
+  "saved_verification_sha256": "2c7055789626e62367da91328785e79541b630fe7dee038dfaab5fc6687de6e4",
+  "counts": {
+    "completed_outer": 7,
+    "accepted_inner_points": 64,
+    "interrupted_accepted_points": 0
+  },
+  "saved_counts": {
+    "completed_outer": 7,
+    "accepted_inner_points": 64,
+    "interrupted_accepted_points": 0
+  },
+  "outer_log_tally": {
+    "rows": 7,
+    "rho_first": 10000.0,
+    "rho_last_next": 10000000.0,
+    "rho_increases": 3,
+    "inner_log_files": 7
+  },
+  "added": {
+    "initial_al": {
+      "value": 3.1989549486602833,
+      "gradient_inf": 0.48985860951203697,
+      "saved_value": 3.1989549486602833,
+      "saved_gradient_inf": 0.48985860951203697,
+      "value_difference": 0.0,
+      "gradient_inf_difference": 0.0,
+      "gradient_minus_jacobian_form_inf": 5.551115123125783e-17,
+      "saved_inner0001_input_gradient_inf": 0.48985860951203697
+    },
+    "final_point": {
+      "common_kkt": {
+        "stat": 7.362355317989492e-09,
+        "feas": 8.293308901477893e-07,
+        "comp": 2.915226809951932e-10,
+        "dual": 0.0
+      },
+      "paper_units_kkt": {
+        "stat": 2.650447914476217e-07,
+        "feas": 8.293308901477893e-07,
+        "comp": 1.318767317570746e-11,
+        "dual": 0.0
+      },
+      "saved_common_kkt": {
+        "stat": 7.362355317989492e-09,
+        "feas": 8.293308901477893e-07,
+        "comp": 2.915226809951932e-10,
+        "dual": 0.0
+      },
+      "saved_paper_units_kkt": {
+        "stat": 2.650447914476217e-07,
+        "feas": 8.293308901477893e-07,
+        "comp": 1.318767317570746e-11,
+        "dual": 0.0
+      },
+      "max_common_kkt": 8.293308901477893e-07,
+      "max_paper_units_kkt": 8.293308901477893e-07,
+      "max_difference_from_saved": 0.0,
+      "original_jacobian_stationarity": {
+        "common": 7.3623553156765276e-09,
+        "paper_units": 2.65044791364355e-07
+      },
+      "original_jacobian_stationarity_difference": 8.326672684688674e-17,
+      "common_pass_recomputed": true,
+      "both_scales_pass_recomputed": true,
+      "saved_final_common_pass": true,
+      "saved_final_both_scales_pass": true
+    },
+    "passed": true
+  },
+  "existing_files_hashed": 34,
+  "existing_files_unchanged": true,
+  "seconds": 0.18620280300092418
+}
