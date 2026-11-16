@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-16",
+  "plan_commit": "0fcbdb8",
+  "exec_session": 42330,
+  "environment": "execution.json",
+  "commands": [
+    "driver.py > driver.log 2>&1",
+    "verify.py",
+    "analyze.py",
+    "audit_tr.py",
+    "capture.py"
+  ],
+  "python_executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "numeric_environment": "same PYTHONPATH/BLAS environment recorded in execution.json for driver/verify/analyze/audit/capture",
+  "new_frozen_inner_solves": 2,
+  "saved_reference_solves": 4,
+  "outer_solver_launched": false,
+  "monte_carlo_rerun": false,
+  "corrected_tr_optimizer_launched": false
+}
