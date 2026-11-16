@@ -1,0 +1,100 @@
+{
+  "case": "tau6-seed6000002",
+  "stage": 13,
+  "variables": 153,
+  "source": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/initial.json",
+  "source_sha256": "01db4a92869fc1b248f8629c9fec1c229f472f07e885c6cc338f78d936316e84",
+  "source_unchanged": true,
+  "kkt_reproduced": true,
+  "warmup": 1,
+  "repetitions": 5,
+  "blas_threads": 1,
+  "rows": [
+    {
+      "scalar_seconds": 8.118301047943532e-05,
+      "hessian_seconds": 0.04672057298012078,
+      "hessian_eval_seconds": 0.04172366508282721,
+      "hessian_constraint_jacobian_seconds": 0.003836461022729054,
+      "hessian_other_seconds": 0.0011604468745645136,
+      "eigen_seconds": 0.0015379030082840472,
+      "trust_step_seconds": 0.0002160270232707262,
+      "trial_seconds": 0.0001369889941997826,
+      "counters": {
+        "gradient_calls": 307,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 1.4699135804374652e-07
+    },
+    {
+      "scalar_seconds": 9.697300265543163e-05,
+      "hessian_seconds": 0.027257918991381302,
+      "hessian_eval_seconds": 0.022450681310147047,
+      "hessian_constraint_jacobian_seconds": 0.0038714770053047687,
+      "hessian_other_seconds": 0.0009357606759294868,
+      "eigen_seconds": 0.0014149310009088367,
+      "trust_step_seconds": 0.00018197300960309803,
+      "trial_seconds": 0.00010137099889107049,
+      "counters": {
+        "gradient_calls": 307,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 1.4699135804374652e-07
+    },
+    {
+      "scalar_seconds": 9.074099943973124e-05,
+      "hessian_seconds": 0.027274478983599693,
+      "hessian_eval_seconds": 0.022570019209524617,
+      "hessian_constraint_jacobian_seconds": 0.003840849007247016,
+      "hessian_other_seconds": 0.0008636107668280602,
+      "eigen_seconds": 0.0014347379910759628,
+      "trust_step_seconds": 0.00017494001076556742,
+      "trial_seconds": 0.00016279701958410442,
+      "counters": {
+        "gradient_calls": 307,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 1.4699135804374652e-07
+    },
+    {
+      "scalar_seconds": 0.0001040159841068089,
+      "hessian_seconds": 0.02731689900974743,
+      "hessian_eval_seconds": 0.02244815425365232,
+      "hessian_constraint_jacobian_seconds": 0.003818247001618147,
+      "hessian_other_seconds": 0.0010504977544769645,
+      "eigen_seconds": 0.0015297269856091589,
+      "trust_step_seconds": 0.00020197199773974717,
+      "trial_seconds": 0.00011783299851231277,
+      "counters": {
+        "gradient_calls": 307,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 1.4699135804374652e-07
+    },
+    {
+      "scalar_seconds": 0.00012440502177923918,
+      "hessian_seconds": 0.02734990097815171,
+      "hessian_eval_seconds": 0.022608830011449754,
+      "hessian_constraint_jacobian_seconds": 0.0038387749809771776,
+      "hessian_other_seconds": 0.000902295985724777,
+      "eigen_seconds": 0.0014170339854899794,
+      "trust_step_seconds": 0.00019869502284564078,
+      "trial_seconds": 0.00015533299301750958,
+      "counters": {
+        "gradient_calls": 307,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 1.4699135804374652e-07
+    }
+  ],
+  "medians": {
+    "scalar_seconds": 9.697300265543163e-05,
+    "hessian_seconds": 0.02731689900974743,
+    "hessian_eval_seconds": 0.022570019209524617,
+    "hessian_constraint_jacobian_seconds": 0.0038387749809771776,
+    "hessian_other_seconds": 0.0009357606759294868,
+    "eigen_seconds": 0.0014347379910759628,
+    "trust_step_seconds": 0.00019869502284564078,
+    "trial_seconds": 0.0001369889941997826
+  },
+  "optimizer_launched": false
+}

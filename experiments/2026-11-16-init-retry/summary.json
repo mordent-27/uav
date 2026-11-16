@@ -1,0 +1,346 @@
+{
+  "new_conditional_inputs": 4,
+  "cohort": "first two original-negative seeds in each prespecified range",
+  "screening_audited": 9,
+  "nlp_solves": 4,
+  "baseline_accepted": 4,
+  "retries": 0,
+  "retry_accepted": 0,
+  "certified_outputs": 4,
+  "physical_points": 4,
+  "successful_default_outputs_preserved": 4,
+  "new_retry_rescue_observed": false,
+  "all_executed_points_rechecked": true,
+  "optimizer_launched_by_verification": false,
+  "execution_seconds": 0.6327759309788235,
+  "rows": [
+    {
+      "case": "tau4-seed4100",
+      "selected": "baseline",
+      "retried": false,
+      "result": {
+        "case": "tau4-seed4100",
+        "arm": "baseline",
+        "stratum": "new_original_negative",
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 203,
+        "raw_kkt": {
+          "stat": 5.943016421091024e-12,
+          "feas": 4.7961634663806766e-15,
+          "comp": 3.711634637451158e-09,
+          "dual": 0.0
+        },
+        "accepted": true,
+        "seconds": 0.06798986200010404,
+        "checks": {
+          "duration_correction": 0.0,
+          "objective": 2.6284394078738256,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 1.0029410080214518e-08,
+          "max_energy": 1.0,
+          "final_kkt": {
+            "stat": 5.943016421091024e-12,
+            "feas": 0.0,
+            "comp": 3.711631726110668e-09,
+            "dual": 0.0
+          },
+          "tasks_exact": true,
+          "checks": {
+            "correction": true,
+            "residual": true,
+            "energy": true,
+            "tasks": true,
+            "branch_kkt": true,
+            "dense_energy": true
+          }
+        },
+        "provided_start_violation": 1.0283566445199531e-15,
+        "first_iterate_violation": 0.009999999999999966,
+        "first_minus_provided_inf": 0.010000000000000009,
+        "first_position_delta_km_inf": 0.0,
+        "first_energy_delta_inf": 0.0,
+        "first_duration_delta_seconds_inf": 1.0000000000000009,
+        "callback_calls": 204,
+        "source": "experiments/2026-11-16-init-retry/initializations/tau4-seed4100",
+        "starting_point_sha256": "9da58c6fd2fa5c47e3793bcc69544da9e11c32a3e175b94b339854c3de41129e",
+        "paper_reproduction": false
+      },
+      "physical_point_available": true,
+      "branch_kkt_pass": true,
+      "output_kind": "baseline",
+      "calls": [
+        {
+          "arm": "baseline",
+          "returncode": 0
+        }
+      ],
+      "seconds": 0.6139030609920155,
+      "source": "experiments/2026-11-16-init-retry/cases/baseline/tau4-seed4100/solution.json",
+      "selected_sha256": "70a9ed21c9968186f858aa51de2e4f8e3ebd5d0d8ec892c4201f65b73a9feac9",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau4-seed4103",
+      "selected": "baseline",
+      "retried": false,
+      "result": {
+        "case": "tau4-seed4103",
+        "arm": "baseline",
+        "stratum": "new_original_negative",
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 18,
+        "raw_kkt": {
+          "stat": 2.3483568351041336e-11,
+          "feas": 3.836930773104541e-14,
+          "comp": 3.47155402202759e-07,
+          "dual": 0.0
+        },
+        "accepted": true,
+        "seconds": 0.018077869986882433,
+        "checks": {
+          "duration_correction": 0.0,
+          "objective": 2.5455192899694223,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 1.0061840582942239e-08,
+          "max_energy": 1.0,
+          "final_kkt": {
+            "stat": 2.3483568351041336e-11,
+            "feas": 2.3822801641527198e-23,
+            "comp": 3.47155402202759e-07,
+            "dual": 0.0
+          },
+          "tasks_exact": true,
+          "checks": {
+            "correction": true,
+            "residual": true,
+            "energy": true,
+            "tasks": true,
+            "branch_kkt": true,
+            "dense_energy": true
+          }
+        },
+        "provided_start_violation": 1.042730787815904e-15,
+        "first_iterate_violation": 0.06727760276206496,
+        "first_minus_provided_inf": 0.06727760276206496,
+        "first_position_delta_km_inf": 0.0,
+        "first_energy_delta_inf": 0.004672055747365622,
+        "first_duration_delta_seconds_inf": 0.0,
+        "callback_calls": 19,
+        "source": "experiments/2026-11-16-init-retry/initializations/tau4-seed4103",
+        "starting_point_sha256": "4828e4193109b50c22ac2daba74814a0a09df3f027ec0d433bcc3af83e06976c",
+        "paper_reproduction": false
+      },
+      "physical_point_available": true,
+      "branch_kkt_pass": true,
+      "output_kind": "baseline",
+      "calls": [
+        {
+          "arm": "baseline",
+          "returncode": 0
+        }
+      ],
+      "seconds": 0.5627833089965861,
+      "source": "experiments/2026-11-16-init-retry/cases/baseline/tau4-seed4103/solution.json",
+      "selected_sha256": "7d6131e8e516f03f3ba5397c905468dcb9d4d02744085cf54ec113351eb4d116",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau9-seed9103",
+      "selected": "baseline",
+      "retried": false,
+      "result": {
+        "case": "tau9-seed9103",
+        "arm": "baseline",
+        "stratum": "new_original_negative",
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 75,
+        "raw_kkt": {
+          "stat": 6.2230914865679665e-12,
+          "feas": 4.7258197355404265e-12,
+          "comp": 5.303557092727728e-09,
+          "dual": 0.0
+        },
+        "accepted": true,
+        "seconds": 0.053746828984003514,
+        "checks": {
+          "duration_correction": 0.0,
+          "objective": 3.9214040501063776,
+          "original_residuals": {
+            "viol": 2.7755575615628914e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 2.7755575615628914e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 1.0056112498268988e-08,
+          "max_energy": 1.0,
+          "final_kkt": {
+            "stat": 6.2230914865679665e-12,
+            "feas": 1.5987211554602255e-15,
+            "comp": 5.295938811633253e-09,
+            "dual": 0.0
+          },
+          "tasks_exact": true,
+          "checks": {
+            "correction": true,
+            "residual": true,
+            "energy": true,
+            "tasks": true,
+            "branch_kkt": true,
+            "dense_energy": true
+          }
+        },
+        "provided_start_violation": 1.5987211554602255e-15,
+        "first_iterate_violation": 0.009999999999999966,
+        "first_minus_provided_inf": 0.010000000000000009,
+        "first_position_delta_km_inf": 0.0,
+        "first_energy_delta_inf": 0.0,
+        "first_duration_delta_seconds_inf": 1.0000000000000009,
+        "callback_calls": 76,
+        "source": "experiments/2026-11-16-init-retry/initializations/tau9-seed9103",
+        "starting_point_sha256": "9d802a019a67945a6e94b5471fdb41d27d3b69790168a97b8b7a9f1f45f82e9e",
+        "paper_reproduction": false
+      },
+      "physical_point_available": true,
+      "branch_kkt_pass": true,
+      "output_kind": "baseline",
+      "calls": [
+        {
+          "arm": "baseline",
+          "returncode": 0
+        }
+      ],
+      "seconds": 0.6232198250072543,
+      "source": "experiments/2026-11-16-init-retry/cases/baseline/tau9-seed9103/solution.json",
+      "selected_sha256": "479fd2893af05982001e63805f81830ff5ac2900f273a436ca7e2c5843ade683",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau9-seed9104",
+      "selected": "baseline",
+      "retried": false,
+      "result": {
+        "case": "tau9-seed9104",
+        "arm": "baseline",
+        "stratum": "new_original_negative",
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 29,
+        "raw_kkt": {
+          "stat": 5.2909066017292616e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.951369430329957e-08,
+          "dual": 0.0
+        },
+        "accepted": true,
+        "seconds": 0.0363607760227751,
+        "checks": {
+          "duration_correction": 0.0,
+          "objective": 5.015119983001151,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 1.005830330136348e-08,
+          "max_energy": 1.0,
+          "final_kkt": {
+            "stat": 5.2909066017292616e-17,
+            "feas": 1.5987211554602255e-15,
+            "comp": 2.951369430329957e-08,
+            "dual": 0.0
+          },
+          "tasks_exact": true,
+          "checks": {
+            "correction": true,
+            "residual": true,
+            "energy": true,
+            "tasks": true,
+            "branch_kkt": true,
+            "dense_energy": true
+          }
+        },
+        "provided_start_violation": 1.5987211554602255e-15,
+        "first_iterate_violation": 0.08997056479132919,
+        "first_minus_provided_inf": 0.08997056479132937,
+        "first_position_delta_km_inf": 0.0,
+        "first_energy_delta_inf": 0.006247955888286761,
+        "first_duration_delta_seconds_inf": 0.0,
+        "callback_calls": 30,
+        "source": "experiments/2026-11-16-init-retry/initializations/tau9-seed9104",
+        "starting_point_sha256": "055f007f7561cd6ed30a6fecc978b79ff395fbefecf88ed47458de889b1f8db4",
+        "paper_reproduction": false
+      },
+      "physical_point_available": true,
+      "branch_kkt_pass": true,
+      "output_kind": "baseline",
+      "calls": [
+        {
+          "arm": "baseline",
+          "returncode": 0
+        }
+      ],
+      "seconds": 0.602148947014939,
+      "source": "experiments/2026-11-16-init-retry/cases/baseline/tau9-seed9104/solution.json",
+      "selected_sha256": "9411a5da007088cfe794915a44ad6fd405a4bd2b51129f0696cefe1eb7ba40f1",
+      "paper_reproduction": false
+    }
+  ],
+  "retrospective": [
+    {
+      "case": "tau4-seed4000001",
+      "selected": "small_push",
+      "retried": true,
+      "selected_sha256": "ae9998e319ccefca3072141373754591f6ccc0e3b2512b4989cdc2b540d3d313",
+      "design_regression_only": true
+    },
+    {
+      "case": "tau9-seed9000001",
+      "selected": "small_push",
+      "retried": true,
+      "selected_sha256": "09431c5f66ed8f344d91c58fc54f2d20e618b9bfcac41a626aa635359eb423e0",
+      "design_regression_only": true
+    },
+    {
+      "case": "tau3-seed3002",
+      "selected": "baseline",
+      "retried": false,
+      "selected_sha256": "1dc186acc16438805d815f263d60c1d3927018cd34da42bd64413414423d8f6e",
+      "design_regression_only": true
+    },
+    {
+      "case": "tau7-seed7002",
+      "selected": "baseline",
+      "retried": false,
+      "selected_sha256": "a1f9c4811dbc49ddaac44d247c022c2daa471ddb3cb365283ceffe9ccb678c7b",
+      "design_regression_only": true
+    }
+  ],
+  "design_regression_not_in_new_denominator": true,
+  "paper_reproduction": false
+}

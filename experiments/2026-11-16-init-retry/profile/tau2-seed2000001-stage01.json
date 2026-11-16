@@ -1,0 +1,100 @@
+{
+  "case": "tau2-seed2000001",
+  "stage": 1,
+  "variables": 53,
+  "source": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage01/initial.json",
+  "source_sha256": "b7ecb79d792f10fbcc85c3e009b7b59f52627fbc50663a2ff4d0eadf243bce52",
+  "source_unchanged": true,
+  "kkt_reproduced": true,
+  "warmup": 1,
+  "repetitions": 5,
+  "blas_threads": 1,
+  "rows": [
+    {
+      "scalar_seconds": 6.759801181033254e-05,
+      "hessian_seconds": 0.007228343019960448,
+      "hessian_eval_seconds": 0.006512308056699112,
+      "hessian_constraint_jacobian_seconds": 0.00044010099372826517,
+      "hessian_other_seconds": 0.0002759339695330709,
+      "eigen_seconds": 0.0002955579839181155,
+      "trust_step_seconds": 0.00014412199379876256,
+      "trial_seconds": 7.999097579158843e-05,
+      "counters": {
+        "gradient_calls": 107,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 5.329070518200751e-07
+    },
+    {
+      "scalar_seconds": 6.939101149328053e-05,
+      "hessian_seconds": 0.006483308010501787,
+      "hessian_eval_seconds": 0.005818164965603501,
+      "hessian_constraint_jacobian_seconds": 0.0004403910133987665,
+      "hessian_other_seconds": 0.00022475203149951994,
+      "eigen_seconds": 0.00027172299451194704,
+      "trust_step_seconds": 0.00013451400445774198,
+      "trial_seconds": 6.830898928456008e-05,
+      "counters": {
+        "gradient_calls": 107,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 5.329070518200751e-07
+    },
+    {
+      "scalar_seconds": 6.346000009216368e-05,
+      "hessian_seconds": 0.006624673987971619,
+      "hessian_eval_seconds": 0.005965859891148284,
+      "hessian_constraint_jacobian_seconds": 0.00043074297718703747,
+      "hessian_other_seconds": 0.00022807111963629723,
+      "eigen_seconds": 0.00027024999144487083,
+      "trust_step_seconds": 0.0001337429857812822,
+      "trial_seconds": 7.300800643861294e-05,
+      "counters": {
+        "gradient_calls": 107,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 5.329070518200751e-07
+    },
+    {
+      "scalar_seconds": 6.474199471995234e-05,
+      "hessian_seconds": 0.0257565549982246,
+      "hessian_eval_seconds": 0.025049469171790406,
+      "hessian_constraint_jacobian_seconds": 0.00043270699097774923,
+      "hessian_other_seconds": 0.0002743788354564458,
+      "eigen_seconds": 0.0003179199993610382,
+      "trust_step_seconds": 0.00014499301323667169,
+      "trial_seconds": 7.429099059663713e-05,
+      "counters": {
+        "gradient_calls": 107,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 5.329070518200751e-07
+    },
+    {
+      "scalar_seconds": 6.639500497840345e-05,
+      "hessian_seconds": 0.006680148973828182,
+      "hessian_eval_seconds": 0.005946448916802183,
+      "hessian_constraint_jacobian_seconds": 0.0004921290092170238,
+      "hessian_other_seconds": 0.00024157104780897498,
+      "eigen_seconds": 0.0002831849851645529,
+      "trust_step_seconds": 0.00013841100735589862,
+      "trial_seconds": 7.003298378549516e-05,
+      "counters": {
+        "gradient_calls": 107,
+        "jacobian_calls": 1
+      },
+      "max_asymmetry": 5.329070518200751e-07
+    }
+  ],
+  "medians": {
+    "scalar_seconds": 6.639500497840345e-05,
+    "hessian_seconds": 0.006680148973828182,
+    "hessian_eval_seconds": 0.005965859891148284,
+    "hessian_constraint_jacobian_seconds": 0.00044010099372826517,
+    "hessian_other_seconds": 0.00024157104780897498,
+    "eigen_seconds": 0.0002831849851645529,
+    "trust_step_seconds": 0.00013841100735589862,
+    "trial_seconds": 7.300800643861294e-05
+  },
+  "optimizer_launched": false
+}

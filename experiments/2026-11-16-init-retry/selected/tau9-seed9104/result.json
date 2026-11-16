@@ -1,0 +1,74 @@
+{
+  "case": "tau9-seed9104",
+  "selected": "baseline",
+  "retried": false,
+  "result": {
+    "case": "tau9-seed9104",
+    "arm": "baseline",
+    "stratum": "new_original_negative",
+    "solver_success": true,
+    "solver_status": "Solve_Succeeded",
+    "iterations": 29,
+    "raw_kkt": {
+      "stat": 5.2909066017292616e-17,
+      "feas": 1.5987211554602255e-15,
+      "comp": 2.951369430329957e-08,
+      "dual": 0.0
+    },
+    "accepted": true,
+    "seconds": 0.0363607760227751,
+    "checks": {
+      "duration_correction": 0.0,
+      "objective": 5.015119983001151,
+      "original_residuals": {
+        "viol": 5.551115123125783e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 5.551115123125783e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 1.005830330136348e-08,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 5.2909066017292616e-17,
+        "feas": 1.5987211554602255e-15,
+        "comp": 2.951369430329957e-08,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      }
+    },
+    "provided_start_violation": 1.5987211554602255e-15,
+    "first_iterate_violation": 0.08997056479132919,
+    "first_minus_provided_inf": 0.08997056479132937,
+    "first_position_delta_km_inf": 0.0,
+    "first_energy_delta_inf": 0.006247955888286761,
+    "first_duration_delta_seconds_inf": 0.0,
+    "callback_calls": 30,
+    "source": "experiments/2026-11-16-init-retry/initializations/tau9-seed9104",
+    "starting_point_sha256": "055f007f7561cd6ed30a6fecc978b79ff395fbefecf88ed47458de889b1f8db4",
+    "paper_reproduction": false
+  },
+  "physical_point_available": true,
+  "branch_kkt_pass": true,
+  "output_kind": "baseline",
+  "calls": [
+    {
+      "arm": "baseline",
+      "returncode": 0
+    }
+  ],
+  "seconds": 0.602148947014939,
+  "source": "experiments/2026-11-16-init-retry/cases/baseline/tau9-seed9104/solution.json",
+  "selected_sha256": "9411a5da007088cfe794915a44ad6fd405a4bd2b51129f0696cefe1eb7ba40f1",
+  "paper_reproduction": false
+}
