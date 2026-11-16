@@ -1,0 +1,78 @@
+{
+  "case": "tau2-seed2000001",
+  "gradient_checks": {
+    "x0": {
+      "gradient_inf_100": 9.211310617242346e-10,
+      "difference_from_80_inf": 0.0,
+      "agrees": true
+    },
+    "x1": {
+      "gradient_inf_100": 0.0006302769267912828,
+      "difference_from_80_inf": 0.0,
+      "agrees": true
+    },
+    "x3": {
+      "gradient_inf_100": 1.0686892289675911e+20,
+      "difference_from_80_inf": 2.2598206260516135e-26,
+      "agrees": true
+    },
+    "x1r": {
+      "gradient_inf_100": 0.0006302767340601146,
+      "difference_from_80_inf": 0.0,
+      "agrees": true
+    },
+    "x3r": {
+      "gradient_inf_100": 1.0686892289675913e+20,
+      "difference_from_80_inf": 2.2598206525331502e-26,
+      "agrees": true
+    }
+  },
+  "all_gradients_agree": true,
+  "verdicts_100": {
+    "x1": "high_precision_point_not_reached",
+    "x3": "high_precision_point_not_reached"
+  },
+  "curvatures": [
+    {
+      "name": "low0",
+      "q100": "1.0646217380220879951347233644035374497358E-12",
+      "identical": true,
+      "classification": true
+    },
+    {
+      "name": "low1",
+      "q100": "3.886018759413658150249704325053189308642E-13",
+      "identical": true,
+      "classification": true
+    },
+    {
+      "name": "low2",
+      "q100": "9.715697033102775767938580017234310501414E-13",
+      "identical": true,
+      "classification": true
+    },
+    {
+      "name": "low3",
+      "q100": "8.01916017765417876583078481003057652872E-14",
+      "identical": true,
+      "classification": true
+    },
+    {
+      "name": "low4",
+      "q100": "9.35154744818122408537615941572748799762E-14",
+      "identical": true,
+      "classification": true
+    },
+    {
+      "name": "max",
+      "q100": "4894163.4126222961545054329430120286147546089078892199659099",
+      "identical": true,
+      "classification": true
+    }
+  ],
+  "floors_reproduced": true,
+  "rounded_points_reproduced": true,
+  "state_outputs_unchanged": true,
+  "scalar_evaluations": 543,
+  "optimizer_launched": false
+}

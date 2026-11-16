@@ -1,0 +1,87 @@
+{
+  "case": "tau6-seed6000002",
+  "planned": false,
+  "optimizer_launched": false,
+  "nearest_to_switch_at_x0": [
+    {
+      "index": 185,
+      "kind": "charge_nonnegative[30]",
+      "shifted": -1.5768197326924605e-09,
+      "mu": 9.845130125463109e-11,
+      "active": false
+    },
+    {
+      "index": 114,
+      "kind": "s_min[21]",
+      "shifted": 0.0002026331188645061,
+      "mu": 0.00020188843291579772,
+      "active": true
+    },
+    {
+      "index": 115,
+      "kind": "s_min[22]",
+      "shifted": 0.00020263349166621845,
+      "mu": 0.00020188818892694083,
+      "active": true
+    }
+  ],
+  "newton_path": {
+    "x1": {
+      "switched_from_x0": [
+        "charge_nonnegative[30]"
+      ]
+    },
+    "x2": {
+      "switched_from_x0": [],
+      "switched_from_previous": [
+        "charge_nonnegative[30]"
+      ]
+    },
+    "x3": {
+      "switched_from_x0": [
+        "charge_nonnegative[30]"
+      ],
+      "switched_from_previous": [
+        "charge_nonnegative[30]"
+      ]
+    },
+    "x1r": {
+      "switched_from_x0": [
+        "charge_nonnegative[30]"
+      ]
+    },
+    "x3r": {
+      "switched_from_x0": [
+        "charge_nonnegative[30]"
+      ]
+    }
+  },
+  "step2_plus_step3_over_step2": 3.830876628247364e-06,
+  "low_direction_switches": [
+    {
+      "name": "low0",
+      "switched_at_1e_10": []
+    },
+    {
+      "name": "low1",
+      "switched_at_1e_10": []
+    },
+    {
+      "name": "low2",
+      "switched_at_1e_10": []
+    },
+    {
+      "name": "low3",
+      "switched_at_1e_10": []
+    },
+    {
+      "name": "low4",
+      "switched_at_1e_10": []
+    },
+    {
+      "name": "max",
+      "switched_at_1e_10": []
+    }
+  ],
+  "scalar_evaluations": 18
+}

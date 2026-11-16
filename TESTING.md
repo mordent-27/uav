@@ -110,3 +110,17 @@ python -m unittest discover -s experiments/2026-11-16-precise-inner -p 'test_*.p
 
 実問題では206成分を80/100桁と2幅で照合してから4内側求解を実施し、全入力/受理8点を100桁で再検査した。
 高精度にしても大きい例は未収束。テストと到達精度、2ノルムと∞ノルム、時間切れを分けて記録している。
+
+## 低曲率方向と点の丸めの診断
+
+[低曲率方向/点の丸め](experiments/2026-11-16-curvature-rounding/REPORT.md)には、Decimal点の素通し、binary64へ丸めない摂動、
+2階差分と二次式のHessian作用の既知解、pinvの打切りと射影、二次式でのNewton 1回到達、最近点への丸め（偶数丸め）、
+丸め下限の手計算、step長のulp換算、分類規則の10件がある。計測前に通過した。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-curvature-rounding -p 'test_*.py' -v
+```
+
+`precise-inner`の参照モジュールは、他の実験フォルダの同名ファイルと取り違えないよう、ファイルの場所を指定して読む。
+初回の読込みで別実験の`curvature.py`を拾ったため、モジュール名を`lowcurv.py`へ変えて計測前に直した。
+実データでは判定に使う勾配と曲率を別プロセスで100桁再計算した。`posthoc.py`は計画外の事後診断で、単体検査の対象外。
