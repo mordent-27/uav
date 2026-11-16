@@ -4,6 +4,8 @@
 #             -> reverify.py -> audit_outputs.py -> aggregate.py.
 # Stops at the first failing step. Already finished inputs are never re-run; partial outputs block all launches (see USAGE.md).
 # Launch records and logs are never overwritten: a repeated attempt for the same batch gets an -attemptNN suffix.
+# Safe stop: create experiments/2026-11-16-r3s-cohort/STOP; the loop exits before starting the next batch (delete it to resume).
+# Catch-up: on start, a batch whose driver completed but whose reverify/audit is missing gets them first (e.g. after only this loop was killed).
 set -euo pipefail
 N=${1:-1}
 cd "$(dirname "$0")/../.."
@@ -18,7 +20,22 @@ fresh() {  # fresh <path-without-ext> <ext>: first free name, never an existing 
   echo "$f"
 }
 
+catch_up() {
+  local ran=0 b a status
+  for a in $D/batches/[0-9][0-9][0-9]; do
+    b=$(basename $a)
+    ls $a/attempt*.json >/dev/null 2>&1 || continue
+    status=$("$PY" -c "import glob,json,sys;print(json.load(open(sorted(glob.glob(sys.argv[1]+'/attempt*.json'))[-1])).get('status'))" $a)
+    [ "$status" = complete ] || continue
+    if [ ! -f $a/reverification.json ]; then echo "== catch-up reverify $b"; UAV_R3_BATCH=$b "$PY" $D/reverify.py > "$(fresh $a/reverify .log)" 2>&1; ran=1; fi
+    if [ ! -f $a/output-verification.json ]; then echo "== catch-up audit $b"; UAV_R3_BATCH=$b "$PY" $D/audit_outputs.py > "$(fresh $a/audit .log)" 2>&1; ran=1; fi
+  done
+  if [ $ran = 1 ]; then "$PY" $D/aggregate.py > "$(fresh $D/aggregate-catch-up .log)" 2>&1; fi
+}
+
+catch_up
 for i in $(seq 1 "$N"); do
+  if [ -e $D/STOP ]; then echo "== STOP file found, not starting another batch $(date -Iseconds)"; break; fi
   "$PY" $D/restore_evaluators.py
   NEXT=$("$PY" -c "import sys;sys.path.insert(0,'$D');import driver as d;t=d.read(d.BASE/'targets.json');s=d.case_states(d.BASE,t['cases'],d.CARRY);b,n=d.choose_batch(t['cases'],s);print('' if b is None else f'{b:03d}')")
   if [ -z "$NEXT" ]; then echo "no pending batch"; break; fi
