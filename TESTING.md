@@ -172,3 +172,14 @@ python -m unittest discover -s experiments/2026-11-16-stuck-trials -p 'test_*.py
 
 Decimalの参照は、nativeと同じ問題（全桁のタスク座標）で作り、現在点の値の相対差1e-12で事前に照合する。9桁のJSONタスクでは照合に落ちる。
 再検証は第1回、Decimal 80桁、Decimal 100桁の3通りで再生をやり直し、全試行の記録と一致させた。
+
+## 受理規則と停止基準を切り替える内側ループ
+
+[受理規則と停止基準の2×2](experiments/2026-11-16-accept-stop/REPORT.md)には、旧方式のときに`inner.py`の`solve`と試行列・結果まで一致すること、
+正確な実減少の受理規則の境界、大きな定数を含む値でも収束すること、丸め下限の停止基準の式と停止の5件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-accept-stop -p 'test_*.py' -v
+```
+
+実データでは旧方式の受理点が前回の記録と完全に一致することも確かめた。

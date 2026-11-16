@@ -1,0 +1,387 @@
+{
+  "date": "2026-11-16",
+  "recorded_head": "e51ca382306318134d1a4081bb4f1b3045ff374e",
+  "launch": {
+    "date": "2026-11-16",
+    "plan_commit": "e51ca38",
+    "cwd": "/home/mordent/robotech/3A/optimization/uav",
+    "commands": [
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python -m unittest discover -s experiments/2026-11-16-accept-stop -p 'test_*.py' -v > experiments/2026-11-16-accept-stop/tests.log 2>&1",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-accept-stop/driver.py > experiments/2026-11-16-accept-stop/driver.log 2>&1",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-accept-stop/verify.py > experiments/2026-11-16-accept-stop/verification.log 2>&1",
+      "python3 experiments/2026-11-16-accept-stop/analyze.py",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-accept-stop/capture.py"
+    ],
+    "recorded_by": "the launching session itself, at the time of the run",
+    "model_note": "planned and run with Opus",
+    "unit_tests": 5,
+    "inner_solves": 12,
+    "outer_solver_launched": false
+  },
+  "execution": {
+    "started_utc": "2026-11-16T09:49:26.784333+00:00",
+    "head": "e51ca382306318134d1a4081bb4f1b3045ff374e",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-accept-stop/driver.py"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "seconds_per_inner": 30,
+    "outer_solver_launched": false,
+    "optimizer": "frozen_inner_tr",
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:50:03.873004+00:00",
+    "seconds": 37.08869111700915,
+    "runs": [
+      {
+        "case": "tau6-seed6000000",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 4.713198126992211
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 8.943641105986899
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 4.8730013569875155
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 8.682744252000703
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 1.692410137009574
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 2.2402015639818273
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 1.7174509589967784
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 1.9664309499785304
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 0.48775896002189256
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 0.49501428499934264
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 0.5949076359975152
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 0.6787364270130638
+      }
+    ],
+    "inner_solves": 12
+  },
+  "targets": {
+    "states": [
+      {
+        "case": "tau6-seed6000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+        "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829",
+        "role": "acceptance_stuck",
+        "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+      },
+      {
+        "case": "tau6-seed6000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+        "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e",
+        "role": "floor_stuck",
+        "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+      },
+      {
+        "case": "tau2-seed2000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/result.json",
+        "result_sha256": "0c4908c023b5612ace47305d6f45b648de49d7209b8102a6c82e500c36fc34d3",
+        "role": "control",
+        "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1"
+      }
+    ],
+    "arms": [
+      "A0",
+      "B0",
+      "A1",
+      "B1"
+    ],
+    "hessian_step": 1e-07,
+    "seconds": 30,
+    "tolerance": 1e-08,
+    "floor_factor": 2.0,
+    "digits": 80,
+    "gradient_step": "1e-20",
+    "reference_digits": 100,
+    "reference_step": "1e-24",
+    "gradient_agreement_inf": 1e-10,
+    "decimal_value_gap": 1e-12,
+    "previous_a0": {
+      "case_dir": "experiments/2026-11-16-switch-onesided/inner",
+      "method": "old"
+    },
+    "reused_modules": {
+      "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+      "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+      "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+      "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+      "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+      "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+      "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+      "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725"
+    }
+  },
+  "source_hashes": {
+    "experiments/2026-11-14-conditioning/newton_al.py": "e5a539e3975a2eea3bba0a9deb6f4b336e9e2a2a1ebb79f765ab9b9075b38fd0",
+    "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "experiments/2026-11-15-decomposed-follow/newton.py": "4bd3aff8dce024a589d54824b18a19f63b314f894f46fbda4af01ac60ce8b977",
+    "experiments/2026-11-15-r2-cases/helpers.py": "1b03603420929d2e97f83a5b748041790587bddf5995688d841883bb561bbd26",
+    "experiments/2026-11-15-r2-cases/restore.py": "d8f8c6afdaffc40bb3bc1b4974fd6a9c9ae0936190dcfeec5425bd09aa2bc5ae",
+    "experiments/2026-11-15-r2b-coarse/case.py": "e5d70951a6947fe8776db508c4450dce57ee3659b363c657f2363e6b5a29939d",
+    "experiments/2026-11-15-r2b-coarse/helpers.py": "40a25c9ce94653e5cea33c924214fb3c1128e210dda7bef39315ad5b53ffa18a",
+    "experiments/2026-11-15-r2b-coarse/run.py": "a62d7fa532b0bba543548624bec9e639a2143a23b60c516f024236c0e53c347c",
+    "experiments/2026-11-15-r2b-coarse/verify.py": "ba7195dfb166477b7584b9ae306490bf8bb86fdae7d6d2a9f742e04d475271bc",
+    "experiments/2026-11-15-r2c-direct-final/helpers.py": "ec91969fec1c1d472b1cf3b835d27e566afa3a5072cba1fb8fa76083593898e2",
+    "experiments/2026-11-15-r2c-direct-final/run.py": "33bdeaec36823d2b2cae06a7198388cb6b9c9ffed2a37465cb610ad0b567808f",
+    "experiments/2026-11-15-r2c-direct-final/verify.py": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+    "experiments/2026-11-15-r2f-general-init/guard.py": "62e3dd03c29fc6ea5b5b258d852753a1ec7ab686f75d912a6ad73b198c7a5352",
+    "experiments/2026-11-15-r2f-general-init/helpers.py": "5b9a31f624b2ba6d462ca797743d10e096a4ecc82c7fbff0b5f8e03064cc2c98",
+    "experiments/2026-11-15-r2f-general-init/initialize.py": "80ecaec59cb0256a997751acb9a25bed9451e757418df2edaec32df84d7eba31",
+    "experiments/2026-11-15-r2f-general-init/phase.py": "b3e66a65a1ff01e1e767e717906f5142dd763b7ae75f7beb9e0cd6b5cd67b34d",
+    "experiments/2026-11-15-r2f-general-init/summary.json": "c2e3072aec43ddf232de1afc4fb15c117f0991913dc354cc2b0193049d783fb7",
+    "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
+    "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
+    "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
+    "experiments/2026-11-15-r2g-incumbent/capture.py": "f938292ce5d12a42cec7f8c331a6983e4752f2a36a2e158b81b0c2a618694aa2",
+    "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
+    "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
+    "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
+    "experiments/2026-11-15-r2g-incumbent/initialize.py": "161b94eeb4201b8326d282a7655e43ecf211ed4235b761dfc9e2495ae15148e2",
+    "experiments/2026-11-15-r2g-incumbent/missing.py": "faf2a490be99e4463dddee0ebf9d1f1bce5ebaf227b2581e0960ebb5f8698728",
+    "experiments/2026-11-15-r2g-incumbent/phase.py": "a74a7d3da0d53aab7f7d0f833e25155d5b1f3d7f87ab00f015e6c0a6d321d962",
+    "experiments/2026-11-15-r2g-incumbent/precheck.py": "67d3d89774bcd6907b517adca709cb2ecaa70820756043151adb94416b64a13b",
+    "experiments/2026-11-15-r2g-incumbent/recheck_retention.py": "6ecaf3c365d71245bc3e0617ab9487689b112384551b998c3b1559f4b228569f",
+    "experiments/2026-11-15-r2g-incumbent/replay.py": "0cbda52121f6a5102cf7c34200ad00b790bf09be6a876fa4782acf5852bf0d6b",
+    "experiments/2026-11-15-r2g-incumbent/retain.py": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+    "experiments/2026-11-15-r2g-incumbent/reverify.py": "9c789c2c375e666d097ac9776272b4f1e60eccb3f599fe4d53747b744e953bda",
+    "experiments/2026-11-15-r2g-incumbent/screen.py": "419e3dd0c09396039963d3113c85e412321948c9494d4aded7aadb37ca177f43",
+    "experiments/2026-11-15-r2g-incumbent/verify_init.py": "32607681e4cba2d1b603924ae84f74a1b4cb0ccaa1adb3ed83788e62387bc808",
+    "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+    "experiments/2026-11-16-accept-stop/analyze.py": "330f261ff9a360a7f82e4a9192e9b04f66f56a1b51ae555265579245d7a3021a",
+    "experiments/2026-11-16-accept-stop/capture.py": "f98b817f35705b3525b06fe039963824f531d19a9460c2f177a921d745b46066",
+    "experiments/2026-11-16-accept-stop/driver.py": "79b5f9830c135dd1670740721da78364052194d62b1bc5626e9521ba321a1fa2",
+    "experiments/2026-11-16-accept-stop/helpers.py": "6831a253c3dfada164d409769800b5a01c8524b981e64bd5970bb960ae7db375",
+    "experiments/2026-11-16-accept-stop/loop.py": "0af02f6e1b87df0f1d28a1bb2d6f2de3d46d7a66524a0fe52ac67e854f38d170",
+    "experiments/2026-11-16-accept-stop/test_loop.py": "e450b0e739d168b47f581e55dd2de958982bf8e4cf4acf7e4f8f5e12345c0c26",
+    "experiments/2026-11-16-accept-stop/verify.py": "4d365831b4729fd8744bb4f8590342e545b6a0d370bf72543b7f55b4f6a55d26",
+    "experiments/2026-11-16-accept-stop/worker.py": "4cd91e8cbde0cecf1ce92d3c4c82bec11100571dc10a66e890939b72bdaf90c3",
+    "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725",
+    "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+    "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+    "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+    "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+    "experiments/2026-11-16-r2h-g-first/analyze.py": "342c7b9dd20d99b62107158ed21d6c7b1b5bc8a30e3bd7e7d9891860aef3ccdc",
+    "experiments/2026-11-16-r2h-g-first/audit_outputs.py": "d7807551f38279c5264f07837a287cfcdcb55ead02a8a1033f1b05857bf62e79",
+    "experiments/2026-11-16-r2h-g-first/capture.py": "af01e97d01a386ff38b58a2b26cd4ecec84da983701231995a4873342d19a2a5",
+    "experiments/2026-11-16-r2h-g-first/catalog.py": "adabfc98895c26fb2d672d918b60d2fb3c6a058d184acfa42e1fb37540741f95",
+    "experiments/2026-11-16-r2h-g-first/driver.py": "c148aa153932cc59352912ffbbfd53dc8ed5da0361b7a962844595a74e3d864f",
+    "experiments/2026-11-16-r2h-g-first/evaluate.py": "f375c01e8865d5b4e41072d76759b23c0a5491d2cec12dcf95926f1887151424",
+    "experiments/2026-11-16-r2h-g-first/fallback_phase.py": "2398f163eceeea838a1528dd21d5590c67ac6513b4faa22764eff87c72bdf2e3",
+    "experiments/2026-11-16-r2h-g-first/g_case.py": "e1695be1f5c6a3a88e464e71e6a90593ec46cd44d25932aaefa58017c68ba635",
+    "experiments/2026-11-16-r2h-g-first/guard.py": "954efe67c51029c80cdb8ffd6dd8d6d99f5481ecdbbd9d510a9f4ba686ffc730",
+    "experiments/2026-11-16-r2h-g-first/helpers.py": "6eb9f47ae8fd0a50200a9992877f8aeed4f89111cc60afff6ae43e033e258559",
+    "experiments/2026-11-16-r2h-g-first/initialize.py": "65ac855ea78f1f827bd7d2562b3f3dffdea49c04cae72a16e765393c1e4bf4d7",
+    "experiments/2026-11-16-r2h-g-first/prepare.py": "2766c2857e0d01f8806994d66638db1bb23ecee5eec81943d9ab8263dac90193",
+    "experiments/2026-11-16-r2h-g-first/reverify.py": "0aee5e2dcbcb3104b38b91f21f4953aa81b9c80c34b26c9a8e6584acc627fe5a",
+    "experiments/2026-11-16-r2h-g-first/solve.py": "056aa8b67068a922c6605f9013e06119c77db60736ed18b2088ebab57addb420",
+    "experiments/2026-11-16-r2h-g-first/verify_init.py": "0678f1e17e4054e1e8e5a4df919aa837af59084511e7e26c1e1ab9e4324c4e88",
+    "experiments/2026-11-16-r3a-cohort/driver.py": "363df46c214f433bf895b8b77a38d404d1bb306ae0187b2cf507c571aa4caa08",
+    "experiments/2026-11-16-r3a-cohort/solve.py": "7397db0d11e6540eaaad7b384a20f9e693cf478dec68a2f23abc1871b672deda",
+    "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+    "scripts/feasible_incumbent.py": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+    "scripts/g_first_policy.py": "4df18796f465ef0be98be1c5605b74dff81d87da292bfae2cac2055af4016d08",
+    "scripts/repair_initialization.py": "83f7c7d6bbbf57f4800d05ac83d8ad1775141cc3b2df8490f4355aa17bd06766",
+    "scripts/test_feasible_incumbent.py": "642c27434f567bd201bffa03c574c50c144e1215233d335b7ad3381251ff6ed8",
+    "scripts/test_g_first_policy.py": "f2665f57c5e789ec4b00934d13a07e2d5726977f64b00ffb8d8561a54981cf71",
+    "scripts/test_repair_initialization.py": "300cffd1cdad9bb74c2a3e42aafd71a3ba6e543fed2d19743c35e7a6e5a8401d",
+    "scripts/test_tr_acceptance.py": "91c26ffbccac33bb353f9a0e30268123b4bce185ebf3d7f1a5bf8cd77ca53303",
+    "scripts/test_trust_region.py": "fea096010ea67449451a4e616e9cc7fc3d35d8a2c0b94697882bb4cf9c5138f2",
+    "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+    "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e"
+  },
+  "evaluator_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "casadi": "3.8.2"
+  },
+  "verification": "5 unit tests passed before measurement; all accepted points of the 12 inner solves re-evaluated natively, all B Decimal decreases recomputed at 80 digits, floor thresholds recomputed, final Decimal gradients recomputed at 100 digits/1e-24 with zero difference; A0 traces identical to switch-onesided old; inputs and outputs unchanged",
+  "previous_artifacts": {
+    "experiments/2026-11-16-r3a-cohort/batches/000/artifact-index.json": {
+      "files": 816,
+      "all_unchanged": true,
+      "index_sha256": "18bf09fd0a60e5ae7b5caab5e7fbf09a873981714e52325f3d6438f28eaae7d0"
+    },
+    "experiments/2026-11-16-r3a-cohort/batches/001/artifact-index.json": {
+      "files": 750,
+      "all_unchanged": true,
+      "index_sha256": "9fc078a00f082adc09a07fc86403992e5e4c6131d373534c2bde6750dfb34ca2"
+    },
+    "experiments/2026-11-16-r3a-cohort/batches/002/artifact-index.json": {
+      "files": 841,
+      "all_unchanged": true,
+      "index_sha256": "0ed82bd87a5eda9c1dcd4fda4d71e0b474ae13bc5498587add2f71464e94e0fb"
+    },
+    "experiments/2026-11-16-nlp-bound-push/artifact-index.json": {
+      "files": 67,
+      "all_unchanged": true,
+      "index_sha256": "6b7eb8d44584b2fc6f970e5674f432a8c8a64fadb2fa021f81298f05facb23ad"
+    },
+    "experiments/2026-11-16-init-retry/artifact-index.json": {
+      "files": 113,
+      "all_unchanged": true,
+      "index_sha256": "1603beb9483f0d18198f050657d8ef9617a8d32c591152ff24487004c3af20d6"
+    },
+    "experiments/2026-11-16-hvp/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "07900be027f18434d6401a54b5da07e78b84d144022bc65a6dfd6d2270160aec"
+    },
+    "experiments/2026-11-16-hvp-high-rho/artifact-index.json": {
+      "files": 66,
+      "all_unchanged": true,
+      "index_sha256": "ca1993b02fe2892472dd2caaa6ebb2239386139a38e23eea91ceb4ec51c6a5a8"
+    },
+    "experiments/2026-11-16-dense-cg/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "9d1b66dd4abaabcd7423d223a7dd8a9ae109c20492eb17534d67bf4610de3082"
+    },
+    "experiments/2026-11-16-tr-boundary-fix/artifact-index.json": {
+      "files": 35,
+      "all_unchanged": true,
+      "index_sha256": "f4f41a43663723ba7b9d2bfc8f14fb57d346604f90b890378168dbe321c39f9a"
+    },
+    "experiments/2026-11-16-tr-acceptance/artifact-index.json": {
+      "files": 28,
+      "all_unchanged": true,
+      "index_sha256": "ae54e4414d5c15aa9080e90f19ccaec73162ace81c08dc83798e215bb455e958"
+    },
+    "experiments/2026-11-16-directional-precision/artifact-index.json": {
+      "files": 31,
+      "all_unchanged": true,
+      "index_sha256": "16513554b9dcf346d8f3c907371a6c3c274a96e7f2e376a94e1bdc118ddadd0f"
+    },
+    "experiments/2026-11-16-component-reference/artifact-index.json": {
+      "files": 31,
+      "all_unchanged": true,
+      "index_sha256": "668d2d8f46b84ce51eb935c0a71b01208b02d19fd3865dd0f62991a34e96ec6a"
+    },
+    "experiments/2026-11-16-full-reference/artifact-index.json": {
+      "files": 37,
+      "all_unchanged": true,
+      "index_sha256": "b7d9253829aa4d70a86b64ed4b102aaa921bc030f4c7d0049b3507b76a391224"
+    },
+    "experiments/2026-11-16-precise-inner/artifact-index.json": {
+      "files": 49,
+      "all_unchanged": true,
+      "index_sha256": "0dce5b18c4f60d0b73782f957433dc3f158b7d768e41a04a6fb05be78df8c632"
+    },
+    "experiments/2026-11-16-curvature-rounding/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "45f93c1b2fe552b2172e6af7fe8e89230c4a4b0222db1c2e4aa0aa630fcfcf67"
+    },
+    "experiments/2026-11-16-kink-sides/artifact-index.json": {
+      "files": 105,
+      "all_unchanged": true,
+      "index_sha256": "fe822dfc919d54dbcf63adf1daedf8f72a502935ef2cf7b1de12c41b96a5787f"
+    },
+    "experiments/2026-11-16-switch-hessian/artifact-index.json": {
+      "files": 101,
+      "all_unchanged": true,
+      "index_sha256": "a713c37270fe070935a1330be8ee48e70c1983c3a8a4f4be105a677652f057af"
+    },
+    "experiments/2026-11-16-switch-onesided/artifact-index.json": {
+      "files": 50,
+      "all_unchanged": true,
+      "index_sha256": "97687201366c47294fbc4ae280ee6efe9e9cc79ac6deb238f0c9d7099c00d923"
+    },
+    "experiments/2026-11-16-stuck-trials/artifact-index.json": {
+      "files": 43,
+      "all_unchanged": true,
+      "index_sha256": "03ba773c3c698cbf35096b1d49e27bc57d24c1faf95aac8d6c43e5509eb8daab"
+    }
+  },
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "c0bfec848a02b3e0b0a7c82b8ef871dad4cb63917cccd1d0dc342f6ef5cca7ac",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "4f9d60f11759e3159d948d4c173af2f04bfce33f7f445d680ee501cd58b7b6bf",
+    "reproduction.md": "8de650b6aaf9e7b7323e310996f9d87d7d7a3ffbda56e91e6780026f475c4b30",
+    "validation_plan.md": "75323143e4679eb44d9e88e8aab29b191e722cafbeecdcb8e300304b69a4de21"
+  },
+  "optimizer_launched": true,
+  "frozen_inner_solves": 12,
+  "outer_solver_launched": false,
+  "monte_carlo_results_changed": false,
+  "paper_reproduction": false
+}

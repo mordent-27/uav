@@ -1,0 +1,409 @@
+{
+  "plan_commit": "e51ca38",
+  "targets": {
+    "states": [
+      {
+        "case": "tau6-seed6000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+        "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829",
+        "role": "acceptance_stuck",
+        "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+      },
+      {
+        "case": "tau6-seed6000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+        "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e",
+        "role": "floor_stuck",
+        "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+      },
+      {
+        "case": "tau2-seed2000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/result.json",
+        "result_sha256": "0c4908c023b5612ace47305d6f45b648de49d7209b8102a6c82e500c36fc34d3",
+        "role": "control",
+        "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+        "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1"
+      }
+    ],
+    "arms": [
+      "A0",
+      "B0",
+      "A1",
+      "B1"
+    ],
+    "hessian_step": 1e-07,
+    "seconds": 30,
+    "tolerance": 1e-08,
+    "floor_factor": 2.0,
+    "digits": 80,
+    "gradient_step": "1e-20",
+    "reference_digits": 100,
+    "reference_step": "1e-24",
+    "gradient_agreement_inf": 1e-10,
+    "decimal_value_gap": 1e-12,
+    "previous_a0": {
+      "case_dir": "experiments/2026-11-16-switch-onesided/inner",
+      "method": "old"
+    },
+    "reused_modules": {
+      "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+      "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+      "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+      "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+      "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+      "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+      "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+      "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725"
+    }
+  },
+  "execution": {
+    "started_utc": "2026-11-16T09:49:26.784333+00:00",
+    "head": "e51ca382306318134d1a4081bb4f1b3045ff374e",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-accept-stop/driver.py"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "seconds_per_inner": 30,
+    "outer_solver_launched": false,
+    "optimizer": "frozen_inner_tr",
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:50:03.873004+00:00",
+    "seconds": 37.08869111700915,
+    "runs": [
+      {
+        "case": "tau6-seed6000000",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 4.713198126992211
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 8.943641105986899
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 4.8730013569875155
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 8.682744252000703
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 1.692410137009574
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 2.2402015639818273
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 1.7174509589967784
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 1.9664309499785304
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "A0",
+        "returncode": 0,
+        "seconds": 0.48775896002189256
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "B0",
+        "returncode": 0,
+        "seconds": 0.49501428499934264
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "A1",
+        "returncode": 0,
+        "seconds": 0.5949076359975152
+      },
+      {
+        "case": "tau2-seed2000001",
+        "method": "B1",
+        "returncode": 0,
+        "seconds": 0.6787364270130638
+      }
+    ],
+    "inner_solves": 12
+  },
+  "rows": [
+    {
+      "case": "tau6-seed6000000",
+      "role": "acceptance_stuck",
+      "verdict": {
+        "acceptance": "B_better",
+        "stop_A": "no_change",
+        "stop_B": "saved_work"
+      },
+      "al_decrease_max_relative_spread": 2.6914389786757054e-08,
+      "arms": {
+        "A0": {
+          "status": "stuck",
+          "accepted": 155,
+          "iterations": 155,
+          "trials": 256,
+          "gradient_inf": 0.0001642640887035264,
+          "decimal_gradient_inf": 0.00016424356680814898,
+          "decimal_gradient_norm": 0.0003837135334090641,
+          "decimal_al_decrease": 4301.034260420802,
+          "seconds": 3.133056718012085,
+          "decimal_calls": 0,
+          "stop": {},
+          "final_floor": 4.39806310583677e-07,
+          "decimal_value_gap_at_start": 1.92446415818593e-16
+        },
+        "B0": {
+          "status": "stuck",
+          "accepted": 279,
+          "iterations": 279,
+          "trials": 425,
+          "gradient_inf": 5.056499503552914e-07,
+          "decimal_gradient_inf": 5.20867303964511e-07,
+          "decimal_gradient_norm": 7.216147123240428e-07,
+          "decimal_al_decrease": 4301.034376180514,
+          "seconds": 7.372302492993185,
+          "decimal_calls": 426,
+          "stop": {},
+          "final_floor": 4.3980631062070376e-07,
+          "decimal_value_gap_at_start": 1.92446415818593e-16
+        },
+        "A1": {
+          "status": "stuck",
+          "accepted": 155,
+          "iterations": 155,
+          "trials": 256,
+          "gradient_inf": 0.0001642640887035264,
+          "decimal_gradient_inf": 0.00016424356680814898,
+          "decimal_gradient_norm": 0.0003837135334090641,
+          "decimal_al_decrease": 4301.034260420802,
+          "seconds": 3.217224324995186,
+          "decimal_calls": 0,
+          "stop": {},
+          "final_floor": 4.39806310583677e-07,
+          "decimal_value_gap_at_start": 1.92446415818593e-16
+        },
+        "B1": {
+          "status": "converged_floor",
+          "accepted": 265,
+          "iterations": 265,
+          "trials": 404,
+          "gradient_inf": 5.395268090069294e-07,
+          "decimal_gradient_inf": 5.238198734547908e-07,
+          "decimal_gradient_norm": 8.953394858979446e-07,
+          "decimal_al_decrease": 4301.034376180514,
+          "seconds": 7.158397110004444,
+          "decimal_calls": 405,
+          "stop": {
+            "floor": 4.398063106204673e-07,
+            "threshold": 8.796126212409346e-07
+          },
+          "final_floor": 4.398063106204673e-07,
+          "decimal_value_gap_at_start": 1.92446415818593e-16
+        }
+      }
+    },
+    {
+      "case": "tau6-seed6000002",
+      "role": "floor_stuck",
+      "verdict": {
+        "acceptance": "mixed",
+        "stop_A": "saved_work",
+        "stop_B": "saved_work"
+      },
+      "al_decrease_max_relative_spread": 5.134488414237329e-11,
+      "arms": {
+        "A0": {
+          "status": "stuck",
+          "accepted": 6,
+          "iterations": 6,
+          "trials": 33,
+          "gradient_inf": 2.3307075025513768e-07,
+          "decimal_gradient_inf": 2.498155250744123e-07,
+          "decimal_gradient_norm": 4.882634979829398e-07,
+          "decimal_al_decrease": 3.718325483352787e-07,
+          "seconds": 0.1547208899864927,
+          "decimal_calls": 0,
+          "stop": {},
+          "final_floor": 2.7006442419501693e-07,
+          "decimal_value_gap_at_start": 5.372534381939676e-15
+        },
+        "B0": {
+          "status": "stuck",
+          "accepted": 13,
+          "iterations": 13,
+          "trials": 35,
+          "gradient_inf": 2.9366492526605725e-07,
+          "decimal_gradient_inf": 2.5695237092504564e-07,
+          "decimal_gradient_norm": 3.79042506253191e-07,
+          "decimal_al_decrease": 3.7183254833531556e-07,
+          "seconds": 0.4828834109939635,
+          "decimal_calls": 36,
+          "stop": {},
+          "final_floor": 2.7006442419505737e-07,
+          "decimal_value_gap_at_start": 5.372534381939676e-15
+        },
+        "A1": {
+          "status": "converged_floor",
+          "accepted": 3,
+          "iterations": 3,
+          "trials": 7,
+          "gradient_inf": 2.3309257812798023e-07,
+          "decimal_gradient_inf": 2.4112262257805744e-07,
+          "decimal_gradient_norm": 5.024240492061353e-07,
+          "decimal_al_decrease": 3.718325483278957e-07,
+          "seconds": 0.0913494440028444,
+          "decimal_calls": 0,
+          "stop": {
+            "floor": 2.700644241950068e-07,
+            "threshold": 5.401288483900136e-07
+          },
+          "final_floor": 2.700644241950068e-07,
+          "decimal_value_gap_at_start": 5.372534381939676e-15
+        },
+        "B1": {
+          "status": "converged_floor",
+          "accepted": 3,
+          "iterations": 3,
+          "trials": 8,
+          "gradient_inf": 1.9802246242761612e-07,
+          "decimal_gradient_inf": 2.2300329953701638e-07,
+          "decimal_gradient_norm": 4.368472817503959e-07,
+          "decimal_al_decrease": 3.71832548316187e-07,
+          "seconds": 0.1289281600038521,
+          "decimal_calls": 9,
+          "stop": {
+            "floor": 2.7006442419503736e-07,
+            "threshold": 5.401288483900747e-07
+          },
+          "final_floor": 2.7006442419503736e-07,
+          "decimal_value_gap_at_start": 5.372534381939676e-15
+        }
+      }
+    },
+    {
+      "case": "tau2-seed2000001",
+      "role": "control",
+      "verdict": {
+        "acceptance": "mixed",
+        "stop_A": "no_change",
+        "stop_B": "no_change",
+        "control": "no_effect"
+      },
+      "al_decrease_max_relative_spread": 0.0,
+      "arms": {
+        "A0": {
+          "status": "converged",
+          "accepted": 4,
+          "iterations": 4,
+          "trials": 19,
+          "gradient_inf": 9.244118144569047e-10,
+          "decimal_gradient_inf": 9.211310617242346e-10,
+          "decimal_gradient_norm": 2.271197726436177e-09,
+          "decimal_al_decrease": 9.49528376417279e-08,
+          "seconds": 0.02157943998463452,
+          "decimal_calls": 0,
+          "stop": {},
+          "final_floor": 5.411481327884524e-10,
+          "decimal_value_gap_at_start": 0.0
+        },
+        "B0": {
+          "status": "converged",
+          "accepted": 4,
+          "iterations": 4,
+          "trials": 19,
+          "gradient_inf": 9.244118144569047e-10,
+          "decimal_gradient_inf": 9.211310617242346e-10,
+          "decimal_gradient_norm": 2.271197726436177e-09,
+          "decimal_al_decrease": 9.49528376417279e-08,
+          "seconds": 0.04800048199831508,
+          "decimal_calls": 20,
+          "stop": {},
+          "final_floor": 5.411481327884524e-10,
+          "decimal_value_gap_at_start": 0.0
+        },
+        "A1": {
+          "status": "converged",
+          "accepted": 4,
+          "iterations": 4,
+          "trials": 19,
+          "gradient_inf": 9.244118144569047e-10,
+          "decimal_gradient_inf": 9.211310617242346e-10,
+          "decimal_gradient_norm": 2.271197726436177e-09,
+          "decimal_al_decrease": 9.49528376417279e-08,
+          "seconds": 0.022869248990900815,
+          "decimal_calls": 0,
+          "stop": {},
+          "final_floor": 5.411481327884524e-10,
+          "decimal_value_gap_at_start": 0.0
+        },
+        "B1": {
+          "status": "converged",
+          "accepted": 4,
+          "iterations": 4,
+          "trials": 19,
+          "gradient_inf": 9.244118144569047e-10,
+          "decimal_gradient_inf": 9.211310617242346e-10,
+          "decimal_gradient_norm": 2.271197726436177e-09,
+          "decimal_al_decrease": 9.49528376417279e-08,
+          "seconds": 0.07871724999858998,
+          "decimal_calls": 20,
+          "stop": {},
+          "final_floor": 5.411481327884524e-10,
+          "decimal_value_gap_at_start": 0.0
+        }
+      }
+    }
+  ],
+  "previous_a0": {
+    "tau6-seed6000000": {
+      "identical_to_switch_onesided_old": true,
+      "rows": 156
+    },
+    "tau6-seed6000002": {
+      "identical_to_switch_onesided_old": true,
+      "rows": 7
+    }
+  },
+  "unit_tests": 5,
+  "inner_solves": 12,
+  "outer_solver_launched": false,
+  "monte_carlo_changed": false
+}
