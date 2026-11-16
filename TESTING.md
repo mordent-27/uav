@@ -124,3 +124,15 @@ python -m unittest discover -s experiments/2026-11-16-curvature-rounding -p 'tes
 `precise-inner`の参照モジュールは、他の実験フォルダの同名ファイルと取り違えないよう、ファイルの場所を指定して読む。
 初回の読込みで別実験の`curvature.py`を拾ったため、モジュール名を`lowcurv.py`へ変えて計測前に直した。
 実データでは判定に使う勾配と曲率を別プロセスで100桁再計算した。`posthoc.py`は計画外の事後診断で、単体検査の対象外。
+
+## 折れ目の片側問題と格子探索
+
+[折れ目の両側/丸め下限](experiments/2026-11-16-kink-sides/REPORT.md)には、片側ALの各側での一致とs=0での値/勾配の連続、
+共有評価の勾配と`precise-inner`の一致、一次元の区分二次での側の選択、格子の座標走査、二進の桁上がりをまたぐ格子移動、判定規則の7件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-kink-sides -p 'test_*.py' -v
+```
+
+格子の検査は当初、2のべき乗の点では下向きの間隔が半分になることを見落として失敗した。走査後に実際の移動量でモデル残差を再計算するよう、計測前に直した。
+`posthoc_battery.py`は計画外の事後診断で、単体検査の対象外。

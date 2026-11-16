@@ -1,0 +1,632 @@
+{
+  "date": "2026-11-16",
+  "recorded_head": "6f72c61d7d05223837b016b8cf19135854afeb44",
+  "launch": {
+    "date": "2026-11-16",
+    "plan_commit": "6f72c61",
+    "cwd": "/home/mordent/robotech/3A/optimization/uav",
+    "commands": [
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python -m unittest discover -s experiments/2026-11-16-kink-sides -p 'test_*.py' -v > experiments/2026-11-16-kink-sides/tests.log 2>&1",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-kink-sides/driver.py > experiments/2026-11-16-kink-sides/driver.log 2>&1",
+      "UAV_R2_CASE=tau6-seed6000002 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-kink-sides/posthoc_battery.py > experiments/2026-11-16-kink-sides/posthoc-battery.log 2>&1  # not in PLAN.md",
+      "UAV_R2_CASE=tau6-seed6000002 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python -c \"import sys; sys.path.insert(0,'experiments/2026-11-16-kink-sides'); import posthoc_battery as p; p.curvature_along_newton_step()\"  # not in PLAN.md",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-kink-sides/verify.py > experiments/2026-11-16-kink-sides/verification.log 2>&1",
+      "python3 experiments/2026-11-16-kink-sides/analyze.py",
+      "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-kink-sides/capture.py"
+    ],
+    "recorded_by": "the launching session itself, at the time of the run",
+    "model_note": "planned and run with Opus",
+    "unit_tests": 7,
+    "optimizer_launched": false,
+    "outer_solver_launched": false,
+    "posthoc_planned": false
+  },
+  "execution": {
+    "started_utc": "2026-11-16T09:10:39.632434+00:00",
+    "head": "6f72c61d7d05223837b016b8cf19135854afeb44",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-kink-sides/driver.py"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "optimizer_launched": false,
+    "outer_solver_launched": false,
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:11:03.642853+00:00",
+    "seconds": 24.010438774013892,
+    "floor_seconds": 6.905206365976483,
+    "floor_skipped": [],
+    "runs": [
+      {
+        "script": "worker_side.py",
+        "case": "tau6-seed6000002",
+        "returncode": 0,
+        "seconds": 17.10357059998205
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau1-seed1000000",
+        "returncode": 0,
+        "seconds": 0.2510992120078299
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau1-seed1000001",
+        "returncode": 0,
+        "seconds": 0.23890554698300548
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau1-seed1000002",
+        "returncode": 0,
+        "seconds": 0.24918076500762254
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau2-seed2000000",
+        "returncode": 0,
+        "seconds": 0.24835367701598443
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau2-seed2000001",
+        "returncode": 0,
+        "seconds": 0.25233692399342544
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau2-seed2000002",
+        "returncode": 0,
+        "seconds": 0.2479406030033715
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau3-seed3000000",
+        "returncode": 0,
+        "seconds": 0.26877366300323047
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau3-seed3000001",
+        "returncode": 0,
+        "seconds": 0.27818579401355237
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau4-seed4000000",
+        "returncode": 0,
+        "seconds": 0.30284365999978036
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau4-seed4000001",
+        "returncode": 0,
+        "seconds": 0.2899971090082545
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau4-seed4000002",
+        "returncode": 0,
+        "seconds": 0.2819530050037429
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau5-seed5000000",
+        "returncode": 0,
+        "seconds": 0.2945238249958493
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau5-seed5000001",
+        "returncode": 0,
+        "seconds": 0.2953235220047645
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau6-seed6000000",
+        "returncode": 0,
+        "seconds": 0.2772791580064222
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau6-seed6000001",
+        "returncode": 0,
+        "seconds": 0.3006193920155056
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau6-seed6000002",
+        "returncode": 0,
+        "seconds": 0.2913973449904006
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau7-seed7000000",
+        "returncode": 0,
+        "seconds": 0.3203885949915275
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau7-seed7000001",
+        "returncode": 0,
+        "seconds": 0.2997008009988349
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau8-seed8000000",
+        "returncode": 0,
+        "seconds": 0.28102171400678344
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau8-seed8000001",
+        "returncode": 0,
+        "seconds": 0.31964765398879535
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau8-seed8000002",
+        "returncode": 0,
+        "seconds": 0.32644625499960966
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau9-seed9000000",
+        "returncode": 0,
+        "seconds": 0.3228137739934027
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau9-seed9000001",
+        "returncode": 0,
+        "seconds": 0.3068934849870857
+      },
+      {
+        "script": "worker_floor.py",
+        "case": "tau9-seed9000002",
+        "returncode": 0,
+        "seconds": 0.35590287201921456
+      }
+    ]
+  },
+  "targets": {
+    "side": {
+      "context": {
+        "case": "tau6-seed6000002",
+        "samples": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/samples.npz",
+        "samples_sha256": "aef8ccbd0606d83a5872bd21292e5d699d6da5ed894325efa553c91c1da5abfc",
+        "result": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/result.json",
+        "result_sha256": "31383b2f1b400fc951f8984239aff4fe2ebc44ec43b3353a98c0fe2b572dc5fc",
+        "metadata_source": "experiments/2026-11-16-full-reference/cases/tau6-seed6000002/result.json",
+        "metadata_sha256": "a80daecf31091f582e15748f047a4c868fe787cdcd25a987666ac2fcf0298713",
+        "precise_inner_gradient_check": "experiments/2026-11-16-precise-inner/gradient-checks/tau6-seed6000002.json",
+        "precise_inner_gradient_check_sha256": "fccb8f419ddb792846a4f985ebb575e60aebd235e1bf63bdee821fdd729838cb"
+      },
+      "index": 185,
+      "expected_kind": "charge_nonnegative[30]",
+      "equalities": 68,
+      "inequalities": 186,
+      "modes": [
+        "inactive",
+        "active"
+      ],
+      "newton_steps": 5,
+      "pinv_rcond": 1e-15,
+      "digits": 80,
+      "gradient_step": "1e-20",
+      "reference_digits": 100,
+      "reference_step": "1e-24",
+      "gradient_agreement_inf": 1e-10,
+      "gradient_inf_target": 1e-08,
+      "lattice": {
+        "limit": 8,
+        "sweeps": 5
+      },
+      "seconds": 300
+    },
+    "floors": {
+      "states": [
+        {
+          "case": "tau1-seed1000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "36a2e9f8868eb30f0b23504057f8305d3f3f6a40ba5beb1df908fd59ffbae1a9",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000000/stages/stage13/result.json",
+          "result_sha256": "f989f286580ccf76fbef3d904dd6f68c591256f3520c4563734f48bcec62e523"
+        },
+        {
+          "case": "tau1-seed1000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "904a4c9e4f54910a6903d8d964aee6233e4b29bb87f424455fc3aa5bc6992fe4",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000001/stages/stage13/result.json",
+          "result_sha256": "3d9500912f6986ec02da696bd7bba42c197c542b72ab903de6d7bf73d155f28d"
+        },
+        {
+          "case": "tau1-seed1000002",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000002/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "3bf732cfb14ad2e1a9e616c517ae7ed8b7e3a91e951b5d300187367c819d3757",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000002/stages/stage13/result.json",
+          "result_sha256": "81b421c0ac2435c83f78b6822a1df9e1237026f5e507503d2879755571117848"
+        },
+        {
+          "case": "tau2-seed2000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "3578fb8ff1e1ce13c1d89c342e114170615996cb576cd264b705380f1e1f11a6",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000000/stages/stage13/result.json",
+          "result_sha256": "d4c626be0a7d49c42293bf4d53ce88ebfc78aedfb6bff6637cfb049075b96a49"
+        },
+        {
+          "case": "tau2-seed2000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/result.json",
+          "result_sha256": "0c4908c023b5612ace47305d6f45b648de49d7209b8102a6c82e500c36fc34d3"
+        },
+        {
+          "case": "tau2-seed2000002",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000002/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "1d2896aba779aba3b0b983721da45cc439f5ef19af2bcfe956fe3cf5b679c9e2",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000002/stages/stage13/result.json",
+          "result_sha256": "099e7f309032173e482c0a43f86f3bb07ba870c40e790b90e6e5eb14aeec368a"
+        },
+        {
+          "case": "tau3-seed3000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "1ab3b0eee548776bb1253f6f25bf9da4d309634779cd29bff0ca6f6320935c67",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000000/stages/stage13/result.json",
+          "result_sha256": "92eddf5678ed1285eedb110394e57f4637b354435e7528b976d4b26903d61e74"
+        },
+        {
+          "case": "tau3-seed3000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "d0324b0370e1a11c15d261afac007a338e4e7a07c61e9872ecab1e7c5b7380a5",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000001/stages/stage13/result.json",
+          "result_sha256": "de78b5b5beb0848af4f937c71a0731564cbff1cdb2968def12b63200bb03d649"
+        },
+        {
+          "case": "tau4-seed4000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "6fd226552186b010ab04a28e002e30c4764e355ea87b066d020baf639452c0dc",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000000/stages/stage13/result.json",
+          "result_sha256": "19cae25f2f867e51e74cd29be01e446cf11ea676a03d841eee68731702e5c8dd"
+        },
+        {
+          "case": "tau4-seed4000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "e6fb550fa383e746ddc385afb9c920ac0148a507005c0707e87242ca9195b95d",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000001/stages/stage13/result.json",
+          "result_sha256": "5510a21c0dbb60e8c7c56ad516a46d0e000026e1384e742290fba2998cd2c96d"
+        },
+        {
+          "case": "tau4-seed4000002",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000002/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "bc322ded10092ca7452db18db59f07f17dd236c547dddc82d9d25aa74acaf1d0",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000002/stages/stage13/result.json",
+          "result_sha256": "09df1402939e6a83eeaef5fb14d250cd8cc382c959f61584c3f2a5f1d68b2823"
+        },
+        {
+          "case": "tau5-seed5000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "6a45dfca859b91d1e17777846d85eea1fd03bdf0fbade57d389406a8ecf68271",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000000/stages/stage13/result.json",
+          "result_sha256": "fdc040d0f0ee6417d26a0b5488a168c662514019804c612112839af9994e487c"
+        },
+        {
+          "case": "tau5-seed5000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "e64cae370a8a1416a7b8b82603560800603a813d2019d53fa878c63deb7c800d",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000001/stages/stage13/result.json",
+          "result_sha256": "10902c7766d63e41bba08690609c579d8e058018634b9ab0bb59f0afbcc2aeaa"
+        },
+        {
+          "case": "tau6-seed6000000",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+          "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829"
+        },
+        {
+          "case": "tau6-seed6000001",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "12331a3917e70d8c0f2c8a9ba2518619d77355fbb036e9488d4636f872a04e13",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/result.json",
+          "result_sha256": "f55e21dd50e599bc81d58d33d19589c5425135b0d17d5c2418a1f1aab9640b7e"
+        },
+        {
+          "case": "tau6-seed6000002",
+          "stage": "stage13",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+          "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+          "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e"
+        },
+        {
+          "case": "tau7-seed7000000",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000000/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "9862667dba65c0e761a9b11c6410693f88b86aa8a2b5541321848194e91abf1b",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000000/stages/stage01/result.json",
+          "result_sha256": "ab15d13c4d21e8173c83a0bd7b978e6e80bdf49640fa42aa7ca582f09a53498c"
+        },
+        {
+          "case": "tau7-seed7000001",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000001/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "6bf29b49a4eb49b69ebe4ccd60be318183c1bbf643a05b5ca855e72050e8f9f3",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000001/stages/stage01/result.json",
+          "result_sha256": "0c99b53f053e1be72c0de5ff89e86e662a174b1b158ecadf7d7d0fa7dfad71a2"
+        },
+        {
+          "case": "tau8-seed8000000",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000000/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "18d3eb9461dff50698df769289721d7cd47792c82ad5b867708b5e06778f4b0d",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000000/stages/stage01/result.json",
+          "result_sha256": "d21e27ee813194cff656068f33885e40a7439d940a69c047d6270b77dfc596f3"
+        },
+        {
+          "case": "tau8-seed8000001",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000001/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "647ac0f2650d2c9926ea24981fd9768070e5d5efbc62b92ab3b4d5c2b70824f7",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000001/stages/stage01/result.json",
+          "result_sha256": "c52747e72cd76115cc75850943e8121588b59cb5df0efbca9300c64f8413daa0"
+        },
+        {
+          "case": "tau8-seed8000002",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000002/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "599b063ce153ad5d0e3c33e7a79b5b3ae1985c357137d39ae231cb8fdc973499",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000002/stages/stage01/result.json",
+          "result_sha256": "40b245495227f205d439cb1a69f179705922b1da749f661c27e54be31c3e14bb"
+        },
+        {
+          "case": "tau9-seed9000000",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000000/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "0043f23f4aa3ef3b96713c7772179cd3d0d37d9a5b54c3ddad43d7fc0ffea0ad",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000000/stages/stage01/result.json",
+          "result_sha256": "9a7e25a5a601cc48d061cf5e999478be1a3403c0ccfd46fb09423745407c27d9"
+        },
+        {
+          "case": "tau9-seed9000001",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000001/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "4b2036da6e9d2a18d01361eee8c4fbefa9a4f34eadaea507ba3e42d45a2072e0",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000001/stages/stage01/result.json",
+          "result_sha256": "6fcea3a2b9279adfff8245cba5f3a34297db776fc1e11712f99bc82fe624894d"
+        },
+        {
+          "case": "tau9-seed9000002",
+          "stage": "stage01",
+          "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000002/stages/stage01/checkpoint.json",
+          "checkpoint_sha256": "c281f9fdd6c0be3464b4405364d579104714afd28cb29d6761b648447eeabd6f",
+          "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000002/stages/stage01/result.json",
+          "result_sha256": "7b55aa4c8d1c4f6270ab7795c3bd8f028c42bb1ec474872be109ffd72c07b391"
+        }
+      ],
+      "hessian_step": 1e-07,
+      "threshold": 1e-08,
+      "seconds": 300
+    },
+    "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+    "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1",
+    "reused_modules": {
+      "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+      "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+      "experiments/2026-11-16-precise-inner/battery_reference.py": "ee4280e080b594b29db76e4b2c5ae7bc443809d1e9a16a0aba7300a17201848c",
+      "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725"
+    }
+  },
+  "source_hashes": {
+    "experiments/2026-11-14-conditioning/newton_al.py": "e5a539e3975a2eea3bba0a9deb6f4b336e9e2a2a1ebb79f765ab9b9075b38fd0",
+    "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "experiments/2026-11-15-decomposed-follow/newton.py": "4bd3aff8dce024a589d54824b18a19f63b314f894f46fbda4af01ac60ce8b977",
+    "experiments/2026-11-15-r2-cases/helpers.py": "1b03603420929d2e97f83a5b748041790587bddf5995688d841883bb561bbd26",
+    "experiments/2026-11-15-r2-cases/restore.py": "d8f8c6afdaffc40bb3bc1b4974fd6a9c9ae0936190dcfeec5425bd09aa2bc5ae",
+    "experiments/2026-11-15-r2b-coarse/case.py": "e5d70951a6947fe8776db508c4450dce57ee3659b363c657f2363e6b5a29939d",
+    "experiments/2026-11-15-r2b-coarse/helpers.py": "40a25c9ce94653e5cea33c924214fb3c1128e210dda7bef39315ad5b53ffa18a",
+    "experiments/2026-11-15-r2b-coarse/run.py": "a62d7fa532b0bba543548624bec9e639a2143a23b60c516f024236c0e53c347c",
+    "experiments/2026-11-15-r2b-coarse/verify.py": "ba7195dfb166477b7584b9ae306490bf8bb86fdae7d6d2a9f742e04d475271bc",
+    "experiments/2026-11-15-r2c-direct-final/helpers.py": "ec91969fec1c1d472b1cf3b835d27e566afa3a5072cba1fb8fa76083593898e2",
+    "experiments/2026-11-15-r2c-direct-final/run.py": "33bdeaec36823d2b2cae06a7198388cb6b9c9ffed2a37465cb610ad0b567808f",
+    "experiments/2026-11-15-r2c-direct-final/verify.py": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+    "experiments/2026-11-15-r2f-general-init/guard.py": "62e3dd03c29fc6ea5b5b258d852753a1ec7ab686f75d912a6ad73b198c7a5352",
+    "experiments/2026-11-15-r2f-general-init/helpers.py": "5b9a31f624b2ba6d462ca797743d10e096a4ecc82c7fbff0b5f8e03064cc2c98",
+    "experiments/2026-11-15-r2f-general-init/initialize.py": "80ecaec59cb0256a997751acb9a25bed9451e757418df2edaec32df84d7eba31",
+    "experiments/2026-11-15-r2f-general-init/phase.py": "b3e66a65a1ff01e1e767e717906f5142dd763b7ae75f7beb9e0cd6b5cd67b34d",
+    "experiments/2026-11-15-r2f-general-init/summary.json": "c2e3072aec43ddf232de1afc4fb15c117f0991913dc354cc2b0193049d783fb7",
+    "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
+    "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
+    "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
+    "experiments/2026-11-15-r2g-incumbent/capture.py": "f938292ce5d12a42cec7f8c331a6983e4752f2a36a2e158b81b0c2a618694aa2",
+    "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
+    "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
+    "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
+    "experiments/2026-11-15-r2g-incumbent/initialize.py": "161b94eeb4201b8326d282a7655e43ecf211ed4235b761dfc9e2495ae15148e2",
+    "experiments/2026-11-15-r2g-incumbent/missing.py": "faf2a490be99e4463dddee0ebf9d1f1bce5ebaf227b2581e0960ebb5f8698728",
+    "experiments/2026-11-15-r2g-incumbent/phase.py": "a74a7d3da0d53aab7f7d0f833e25155d5b1f3d7f87ab00f015e6c0a6d321d962",
+    "experiments/2026-11-15-r2g-incumbent/precheck.py": "67d3d89774bcd6907b517adca709cb2ecaa70820756043151adb94416b64a13b",
+    "experiments/2026-11-15-r2g-incumbent/recheck_retention.py": "6ecaf3c365d71245bc3e0617ab9487689b112384551b998c3b1559f4b228569f",
+    "experiments/2026-11-15-r2g-incumbent/replay.py": "0cbda52121f6a5102cf7c34200ad00b790bf09be6a876fa4782acf5852bf0d6b",
+    "experiments/2026-11-15-r2g-incumbent/retain.py": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+    "experiments/2026-11-15-r2g-incumbent/reverify.py": "9c789c2c375e666d097ac9776272b4f1e60eccb3f599fe4d53747b744e953bda",
+    "experiments/2026-11-15-r2g-incumbent/screen.py": "419e3dd0c09396039963d3113c85e412321948c9494d4aded7aadb37ca177f43",
+    "experiments/2026-11-15-r2g-incumbent/verify_init.py": "32607681e4cba2d1b603924ae84f74a1b4cb0ccaa1adb3ed83788e62387bc808",
+    "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+    "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725",
+    "experiments/2026-11-16-kink-sides/analyze.py": "5ca7ac372c90a38a36271375382d18e7da2babd351a6d18ab8232152d18b19b8",
+    "experiments/2026-11-16-kink-sides/capture.py": "cf8cfaa12ffd80bf51f9c241897a6188ecbd92f697f02c7e368169528fc91e7d",
+    "experiments/2026-11-16-kink-sides/driver.py": "fc79b1a421df1227b53b3241f9ac9c5c29898279dc1679ef8329325513b19def",
+    "experiments/2026-11-16-kink-sides/helpers.py": "6831a253c3dfada164d409769800b5a01c8524b981e64bd5970bb960ae7db375",
+    "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+    "experiments/2026-11-16-kink-sides/posthoc_battery.py": "b91e29c3576727417005b31da8978fa212e69513c0d82e94981e507dc61ece3f",
+    "experiments/2026-11-16-kink-sides/test_kink.py": "4b5e28edf12f2c29b5b8da4f34c5ad9a9d68e812f69e8f929a4d769488b5a98b",
+    "experiments/2026-11-16-kink-sides/verify.py": "59daa4a6d1b465899d4e311c531f6d23429aca50777977a29a03e2d565e76d75",
+    "experiments/2026-11-16-kink-sides/worker_floor.py": "70e645a86c7bbaaac366e528d48fa657ae9b956337651e628c9abd94cb3b9cd8",
+    "experiments/2026-11-16-kink-sides/worker_side.py": "91b271329bc7749ccbfe2b7ea1930a111f55b6d684f1470a553970c23ec92e8e",
+    "experiments/2026-11-16-precise-inner/battery_reference.py": "ee4280e080b594b29db76e4b2c5ae7bc443809d1e9a16a0aba7300a17201848c",
+    "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+    "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+    "experiments/2026-11-16-r2h-g-first/analyze.py": "342c7b9dd20d99b62107158ed21d6c7b1b5bc8a30e3bd7e7d9891860aef3ccdc",
+    "experiments/2026-11-16-r2h-g-first/audit_outputs.py": "d7807551f38279c5264f07837a287cfcdcb55ead02a8a1033f1b05857bf62e79",
+    "experiments/2026-11-16-r2h-g-first/capture.py": "af01e97d01a386ff38b58a2b26cd4ecec84da983701231995a4873342d19a2a5",
+    "experiments/2026-11-16-r2h-g-first/catalog.py": "adabfc98895c26fb2d672d918b60d2fb3c6a058d184acfa42e1fb37540741f95",
+    "experiments/2026-11-16-r2h-g-first/driver.py": "c148aa153932cc59352912ffbbfd53dc8ed5da0361b7a962844595a74e3d864f",
+    "experiments/2026-11-16-r2h-g-first/evaluate.py": "f375c01e8865d5b4e41072d76759b23c0a5491d2cec12dcf95926f1887151424",
+    "experiments/2026-11-16-r2h-g-first/fallback_phase.py": "2398f163eceeea838a1528dd21d5590c67ac6513b4faa22764eff87c72bdf2e3",
+    "experiments/2026-11-16-r2h-g-first/g_case.py": "e1695be1f5c6a3a88e464e71e6a90593ec46cd44d25932aaefa58017c68ba635",
+    "experiments/2026-11-16-r2h-g-first/guard.py": "954efe67c51029c80cdb8ffd6dd8d6d99f5481ecdbbd9d510a9f4ba686ffc730",
+    "experiments/2026-11-16-r2h-g-first/helpers.py": "6eb9f47ae8fd0a50200a9992877f8aeed4f89111cc60afff6ae43e033e258559",
+    "experiments/2026-11-16-r2h-g-first/initialize.py": "65ac855ea78f1f827bd7d2562b3f3dffdea49c04cae72a16e765393c1e4bf4d7",
+    "experiments/2026-11-16-r2h-g-first/prepare.py": "2766c2857e0d01f8806994d66638db1bb23ecee5eec81943d9ab8263dac90193",
+    "experiments/2026-11-16-r2h-g-first/reverify.py": "0aee5e2dcbcb3104b38b91f21f4953aa81b9c80c34b26c9a8e6584acc627fe5a",
+    "experiments/2026-11-16-r2h-g-first/solve.py": "056aa8b67068a922c6605f9013e06119c77db60736ed18b2088ebab57addb420",
+    "experiments/2026-11-16-r2h-g-first/verify_init.py": "0678f1e17e4054e1e8e5a4df919aa837af59084511e7e26c1e1ab9e4324c4e88",
+    "experiments/2026-11-16-r3a-cohort/driver.py": "363df46c214f433bf895b8b77a38d404d1bb306ae0187b2cf507c571aa4caa08",
+    "experiments/2026-11-16-r3a-cohort/solve.py": "7397db0d11e6540eaaad7b384a20f9e693cf478dec68a2f23abc1871b672deda",
+    "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+    "scripts/feasible_incumbent.py": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+    "scripts/g_first_policy.py": "4df18796f465ef0be98be1c5605b74dff81d87da292bfae2cac2055af4016d08",
+    "scripts/repair_initialization.py": "83f7c7d6bbbf57f4800d05ac83d8ad1775141cc3b2df8490f4355aa17bd06766",
+    "scripts/test_feasible_incumbent.py": "642c27434f567bd201bffa03c574c50c144e1215233d335b7ad3381251ff6ed8",
+    "scripts/test_g_first_policy.py": "f2665f57c5e789ec4b00934d13a07e2d5726977f64b00ffb8d8561a54981cf71",
+    "scripts/test_repair_initialization.py": "300cffd1cdad9bb74c2a3e42aafd71a3ba6e543fed2d19743c35e7a6e5a8401d",
+    "scripts/test_tr_acceptance.py": "91c26ffbccac33bb353f9a0e30268123b4bce185ebf3d7f1a5bf8cd77ca53303",
+    "scripts/test_trust_region.py": "fea096010ea67449451a4e616e9cc7fc3d35d8a2c0b94697882bb4cf9c5138f2",
+    "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+    "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e"
+  },
+  "evaluator_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "casadi": "3.8.2"
+  },
+  "verification": "7 unit tests passed before measurement; both one-sided x5 gradients recomputed at 100 digits/1e-24 in a separate process (max difference 1.9e-16), verdicts reproduced; all 24 Hessians rebuilt with identical hashes and floors; inputs and outputs unchanged. posthoc_battery.py is a post-hoc diagnostic not in PLAN.md",
+  "previous_artifacts": {
+    "experiments/2026-11-16-r3a-cohort/batches/000/artifact-index.json": {
+      "files": 816,
+      "all_unchanged": true,
+      "index_sha256": "18bf09fd0a60e5ae7b5caab5e7fbf09a873981714e52325f3d6438f28eaae7d0"
+    },
+    "experiments/2026-11-16-r3a-cohort/batches/001/artifact-index.json": {
+      "files": 750,
+      "all_unchanged": true,
+      "index_sha256": "9fc078a00f082adc09a07fc86403992e5e4c6131d373534c2bde6750dfb34ca2"
+    },
+    "experiments/2026-11-16-r3a-cohort/batches/002/artifact-index.json": {
+      "files": 841,
+      "all_unchanged": true,
+      "index_sha256": "0ed82bd87a5eda9c1dcd4fda4d71e0b474ae13bc5498587add2f71464e94e0fb"
+    },
+    "experiments/2026-11-16-nlp-bound-push/artifact-index.json": {
+      "files": 67,
+      "all_unchanged": true,
+      "index_sha256": "6b7eb8d44584b2fc6f970e5674f432a8c8a64fadb2fa021f81298f05facb23ad"
+    },
+    "experiments/2026-11-16-init-retry/artifact-index.json": {
+      "files": 113,
+      "all_unchanged": true,
+      "index_sha256": "1603beb9483f0d18198f050657d8ef9617a8d32c591152ff24487004c3af20d6"
+    },
+    "experiments/2026-11-16-hvp/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "07900be027f18434d6401a54b5da07e78b84d144022bc65a6dfd6d2270160aec"
+    },
+    "experiments/2026-11-16-hvp-high-rho/artifact-index.json": {
+      "files": 66,
+      "all_unchanged": true,
+      "index_sha256": "ca1993b02fe2892472dd2caaa6ebb2239386139a38e23eea91ceb4ec51c6a5a8"
+    },
+    "experiments/2026-11-16-dense-cg/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "9d1b66dd4abaabcd7423d223a7dd8a9ae109c20492eb17534d67bf4610de3082"
+    },
+    "experiments/2026-11-16-tr-boundary-fix/artifact-index.json": {
+      "files": 35,
+      "all_unchanged": true,
+      "index_sha256": "f4f41a43663723ba7b9d2bfc8f14fb57d346604f90b890378168dbe321c39f9a"
+    },
+    "experiments/2026-11-16-tr-acceptance/artifact-index.json": {
+      "files": 28,
+      "all_unchanged": true,
+      "index_sha256": "ae54e4414d5c15aa9080e90f19ccaec73162ace81c08dc83798e215bb455e958"
+    },
+    "experiments/2026-11-16-directional-precision/artifact-index.json": {
+      "files": 31,
+      "all_unchanged": true,
+      "index_sha256": "16513554b9dcf346d8f3c907371a6c3c274a96e7f2e376a94e1bdc118ddadd0f"
+    },
+    "experiments/2026-11-16-component-reference/artifact-index.json": {
+      "files": 31,
+      "all_unchanged": true,
+      "index_sha256": "668d2d8f46b84ce51eb935c0a71b01208b02d19fd3865dd0f62991a34e96ec6a"
+    },
+    "experiments/2026-11-16-full-reference/artifact-index.json": {
+      "files": 37,
+      "all_unchanged": true,
+      "index_sha256": "b7d9253829aa4d70a86b64ed4b102aaa921bc030f4c7d0049b3507b76a391224"
+    },
+    "experiments/2026-11-16-precise-inner/artifact-index.json": {
+      "files": 49,
+      "all_unchanged": true,
+      "index_sha256": "0dce5b18c4f60d0b73782f957433dc3f158b7d768e41a04a6fb05be78df8c632"
+    },
+    "experiments/2026-11-16-curvature-rounding/artifact-index.json": {
+      "files": 36,
+      "all_unchanged": true,
+      "index_sha256": "45f93c1b2fe552b2172e6af7fe8e89230c4a4b0222db1c2e4aa0aa630fcfcf67"
+    }
+  },
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "c0bfec848a02b3e0b0a7c82b8ef871dad4cb63917cccd1d0dc342f6ef5cca7ac",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "38adb00fb1895cf3e9af731ff60ee0c4d562d081e167fcb2a320f1ad9d7416d6",
+    "reproduction.md": "687987bc4898bb797ecd12b0c27a10029f89b0119142e9f64f8be347452e85e4",
+    "validation_plan.md": "75323143e4679eb44d9e88e8aab29b191e722cafbeecdcb8e300304b69a4de21"
+  },
+  "optimizer_launched": false,
+  "fixed_states": 1,
+  "floor_states": 24,
+  "newton_steps": 5,
+  "decimal_precisions": [
+    80,
+    100
+  ],
+  "outer_solver_launched": false,
+  "posthoc_planned": false,
+  "monte_carlo_results_changed": false,
+  "paper_reproduction": false
+}
