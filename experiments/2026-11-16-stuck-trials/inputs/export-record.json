@@ -1,0 +1,14 @@
+{
+  "command": "rustc --edition=2021 -O experiments/2026-11-16-stuck-trials/export_tasks.rs -o <scratchpad>/stuck-export && <scratchpad>/stuck-export > experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+  "source_hashes": {
+    "experiments/2026-11-16-stuck-trials/export_tasks.rs": "dc83150e7003d7d74c09c73e51d71aaf15347b688d50477b98c50df8d6ccfb66",
+    "src/params.rs": "42633938fd4f03866b3a050302d740424be02aedc0d9213070fa39d6eba2c343",
+    "src/rng.rs": "86d2ac875256f58e88e65da2567f19af92fb2dd03d166e8972e371d57d495aad",
+    "src/instance.rs": "38c64126f659f49fe8654f566bdb45536b1ab20c2112f69366332350de0e8cb1",
+    "src/model.rs": "5688a67a7da23aab70041aa42607a8f97b2138f7dbd59c333d2fade80f578709",
+    "src/battery.rs": "7d14c8f2fa088e4821993ea285aa99a11b9cb269540136584864fcc25fa2a708"
+  },
+  "output_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa",
+  "tau6_seed6000002_matches_full_reference": true,
+  "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+}

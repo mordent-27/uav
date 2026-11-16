@@ -12,13 +12,13 @@ BASE=Path(__file__).resolve().parent
 kink=replay.onesided.fixh.kink
 
 
-def native_metadata(frozen,state):
-    """Decimal metadata for the same problem the native model solves (its own task coordinates)."""
+def native_metadata(frozen,state,tasks=None):
+    """Decimal metadata from the native model; tasks=None keeps f.m.source (first run), else full-precision tasks (addendum)."""
     m=frozen.m;ns=m.stamps-1
     if not (np.all(m.ratio==1.) and np.all(m.wh[ns:]==1.)):return None
     ph=dict(m.source['phys']);ph.update(range=ph['v_d']/ph['zeta'],sigma=(ph['e_max']-ph['e_th'])/ph['kappa'],span=ph['e_max']-ph['e_th'])
     return dict(phys=ph,scale=m.scale.tolist(),wh=m.wh.tolist(),wg=m.wg.tolist(),n_segments=ns,lam=state['lam'],mu=state['mu'],rho=state['rho'],
-        eps=state['eps'],p=state['p'],smoothing_delta=1e-3,instance=m.source['instance'])
+        eps=state['eps'],p=state['p'],smoothing_delta=1e-3,instance=m.source['instance'] if tasks is None else dict(m.source['instance'],tasks=tasks))
 
 
 def main():
@@ -34,7 +34,12 @@ def main():
         if monotonic()>=deadline:raise TimeoutError()
         v,g=frozen.eval(point);return v,np.array(g,dtype=float).copy()
     f,g=evaluate(y);np.testing.assert_allclose(f,solved['value'],rtol=0,atol=0);stable0,_=frozen.eval(y,stable=True)
-    metadata=native_metadata(frozen,state);digits=targets['digits'];decimal=None;gap=None
+    tasks=None;out=BASE/'replays'
+    if os.environ.get('UAV_STUCK_FULL_TASKS'):
+        rows_=[json.loads(x) for x in (h.ROOT/targets['addendum']['full_precision_tasks']).read_text().splitlines()]
+        tasks=next(r['tasks'] for r in rows_ if r['case']==T['case']);out=BASE/'replays-decimal'
+        np.testing.assert_allclose(tasks,frozen.m.source['instance']['tasks'],atol=5.1e-10,rtol=0.)
+    metadata=native_metadata(frozen,state,tasks);digits=targets['digits'];decimal=None;gap=None
     if metadata is not None:
         value=lambda p:kink.piece_al(kink.reference.evaluate(kink.lowcurv.to_decimal(p),metadata,digits),metadata,digits)
         decimal0=value(y);gap=replay.relative_gap(float(decimal0),f);decimal=value if gap<=targets['decimal_value_gap'] else None
@@ -54,7 +59,8 @@ def main():
         verdict=replay.verdict(rows),fallback_trials=sum(r['fallback'] for r in rows),nonpositive_predictions=sum(r['prediction']<=0 for r in rows),
         precise_accepting_trials=sum(r['precise_ratio'] is not None and r['precise_ratio']>1e-4 for r in rows),
         rule_at_point=sorted(rule(y)),seconds=monotonic()-start,optimizer_launched=False)
-    frozen.close();(BASE/'replays'/f'{name}.json').write_text(json.dumps(result,indent=2)+'\n')
+    result['full_precision_tasks']=tasks is not None
+    frozen.close();(out/f'{name}.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps({k:result[k] for k in ['name','verdict','trials','fallback_trials','precise_accepting_trials','decimal_available','decimal_value_gap','value','seconds']}),flush=True)
 
 
