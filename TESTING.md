@@ -216,3 +216,12 @@ cd experiments/2026-11-16-stall-e2e && python3 -m unittest test_e2e -v
 ```
 
 返却点ファイルには復元の経過秒（`metrics.seconds`）が入るので、ファイル全体のhashでは実行ごとに必ず食い違う。比較では経過秒を除く。
+
+## R3sの入口と再開
+
+[R3s](experiments/2026-11-16-r3s-cohort/REPORT.md)には、入口の段階ループと`g_case`が`stall-e2e`で比べた版とバイト単位で同じこと、`solve.py`が既定値だけ違うこと、
+R3と同じ再開の規則（失敗は終端、部分出力は全起動を拒否、中断の記録）と、R3から引き継いだ件を解き直さず、自分の部分出力を引き継ぎで隠さないことの7件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-r3s-cohort -p 'test_*.py' -v
+```
