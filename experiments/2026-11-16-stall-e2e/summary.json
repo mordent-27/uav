@@ -1,0 +1,1605 @@
+{
+  "plan_commit": "e8d5781",
+  "targets": {
+    "cases": [
+      "tau1-seed1000002",
+      "tau2-seed2000002",
+      "tau3-seed3000000",
+      "tau4-seed4000000",
+      "tau4-seed4000001",
+      "tau4-seed4000002",
+      "tau5-seed5000001",
+      "tau6-seed6000000",
+      "tau6-seed6000002",
+      "tau2-seed2000001",
+      "tau6-seed6000001"
+    ],
+    "g_failing": [
+      "tau1-seed1000002",
+      "tau2-seed2000002",
+      "tau3-seed3000000",
+      "tau4-seed4000000",
+      "tau4-seed4000001",
+      "tau4-seed4000002",
+      "tau5-seed5000001",
+      "tau6-seed6000000",
+      "tau6-seed6000002"
+    ],
+    "g_passing": [
+      "tau2-seed2000001",
+      "tau6-seed6000001"
+    ],
+    "workers": 8,
+    "stall": {
+      "K": 20,
+      "delta": 0.1
+    },
+    "reused_modules": {
+      "experiments/2026-11-16-r3a-cohort/solve.py": "7397db0d11e6540eaaad7b384a20f9e693cf478dec68a2f23abc1871b672deda",
+      "experiments/2026-11-15-r2b-coarse/run.py": "a62d7fa532b0bba543548624bec9e639a2143a23b60c516f024236c0e53c347c",
+      "experiments/2026-11-16-r2h-g-first/g_case.py": "e1695be1f5c6a3a88e464e71e6a90593ec46cd44d25932aaefa58017c68ba635",
+      "experiments/2026-11-16-outer-stall/stall.py": "498a5ddc2f1e7592240a3e94b83b6b3eab92b99da3c3a2bfa516d5579ab821d0",
+      "experiments/2026-11-16-r2h-g-first/helpers.py": "6eb9f47ae8fd0a50200a9992877f8aeed4f89111cc60afff6ae43e033e258559",
+      "scripts/g_first_policy.py": "4df18796f465ef0be98be1c5605b74dff81d87da292bfae2cac2055af4016d08",
+      "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+      "experiments/2026-11-15-r2-cases/helpers.py": "1b03603420929d2e97f83a5b748041790587bddf5995688d841883bb561bbd26",
+      "experiments/2026-11-15-r2-cases/restore.py": "d8f8c6afdaffc40bb3bc1b4974fd6a9c9ae0936190dcfeec5425bd09aa2bc5ae",
+      "experiments/2026-11-15-r2b-coarse/case.py": "e5d70951a6947fe8776db508c4450dce57ee3659b363c657f2363e6b5a29939d",
+      "experiments/2026-11-15-r2b-coarse/helpers.py": "40a25c9ce94653e5cea33c924214fb3c1128e210dda7bef39315ad5b53ffa18a",
+      "experiments/2026-11-15-r2b-coarse/verify.py": "ba7195dfb166477b7584b9ae306490bf8bb86fdae7d6d2a9f742e04d475271bc",
+      "experiments/2026-11-15-r2c-direct-final/helpers.py": "ec91969fec1c1d472b1cf3b835d27e566afa3a5072cba1fb8fa76083593898e2",
+      "experiments/2026-11-15-r2c-direct-final/run.py": "33bdeaec36823d2b2cae06a7198388cb6b9c9ffed2a37465cb610ad0b567808f",
+      "experiments/2026-11-15-r2c-direct-final/verify.py": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+      "experiments/2026-11-15-r2f-general-init/guard.py": "62e3dd03c29fc6ea5b5b258d852753a1ec7ab686f75d912a6ad73b198c7a5352",
+      "experiments/2026-11-15-r2f-general-init/helpers.py": "5b9a31f624b2ba6d462ca797743d10e096a4ecc82c7fbff0b5f8e03064cc2c98",
+      "experiments/2026-11-15-r2f-general-init/initialize.py": "80ecaec59cb0256a997751acb9a25bed9451e757418df2edaec32df84d7eba31",
+      "experiments/2026-11-15-r2f-general-init/phase.py": "b3e66a65a1ff01e1e767e717906f5142dd763b7ae75f7beb9e0cd6b5cd67b34d",
+      "experiments/2026-11-15-r2f-general-init/summary.json": "c2e3072aec43ddf232de1afc4fb15c117f0991913dc354cc2b0193049d783fb7",
+      "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
+      "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
+      "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
+      "experiments/2026-11-15-r2g-incumbent/capture.py": "f938292ce5d12a42cec7f8c331a6983e4752f2a36a2e158b81b0c2a618694aa2",
+      "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
+      "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
+      "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
+      "experiments/2026-11-15-r2g-incumbent/initialize.py": "161b94eeb4201b8326d282a7655e43ecf211ed4235b761dfc9e2495ae15148e2",
+      "experiments/2026-11-15-r2g-incumbent/missing.py": "faf2a490be99e4463dddee0ebf9d1f1bce5ebaf227b2581e0960ebb5f8698728",
+      "experiments/2026-11-15-r2g-incumbent/phase.py": "a74a7d3da0d53aab7f7d0f833e25155d5b1f3d7f87ab00f015e6c0a6d321d962",
+      "experiments/2026-11-15-r2g-incumbent/precheck.py": "67d3d89774bcd6907b517adca709cb2ecaa70820756043151adb94416b64a13b",
+      "experiments/2026-11-15-r2g-incumbent/recheck_retention.py": "6ecaf3c365d71245bc3e0617ab9487689b112384551b998c3b1559f4b228569f",
+      "experiments/2026-11-15-r2g-incumbent/replay.py": "0cbda52121f6a5102cf7c34200ad00b790bf09be6a876fa4782acf5852bf0d6b",
+      "experiments/2026-11-15-r2g-incumbent/retain.py": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+      "experiments/2026-11-15-r2g-incumbent/reverify.py": "9c789c2c375e666d097ac9776272b4f1e60eccb3f599fe4d53747b744e953bda",
+      "experiments/2026-11-15-r2g-incumbent/screen.py": "419e3dd0c09396039963d3113c85e412321948c9494d4aded7aadb37ca177f43",
+      "experiments/2026-11-15-r2g-incumbent/verify_init.py": "32607681e4cba2d1b603924ae84f74a1b4cb0ccaa1adb3ed83788e62387bc808",
+      "experiments/2026-11-16-r2h-g-first/analyze.py": "342c7b9dd20d99b62107158ed21d6c7b1b5bc8a30e3bd7e7d9891860aef3ccdc",
+      "experiments/2026-11-16-r2h-g-first/audit_outputs.py": "d7807551f38279c5264f07837a287cfcdcb55ead02a8a1033f1b05857bf62e79",
+      "experiments/2026-11-16-r2h-g-first/capture.py": "af01e97d01a386ff38b58a2b26cd4ecec84da983701231995a4873342d19a2a5",
+      "experiments/2026-11-16-r2h-g-first/catalog.py": "adabfc98895c26fb2d672d918b60d2fb3c6a058d184acfa42e1fb37540741f95",
+      "experiments/2026-11-16-r2h-g-first/driver.py": "c148aa153932cc59352912ffbbfd53dc8ed5da0361b7a962844595a74e3d864f",
+      "experiments/2026-11-16-r2h-g-first/evaluate.py": "f375c01e8865d5b4e41072d76759b23c0a5491d2cec12dcf95926f1887151424",
+      "experiments/2026-11-16-r2h-g-first/fallback_phase.py": "2398f163eceeea838a1528dd21d5590c67ac6513b4faa22764eff87c72bdf2e3",
+      "experiments/2026-11-16-r2h-g-first/guard.py": "954efe67c51029c80cdb8ffd6dd8d6d99f5481ecdbbd9d510a9f4ba686ffc730",
+      "experiments/2026-11-16-r2h-g-first/initialize.py": "65ac855ea78f1f827bd7d2562b3f3dffdea49c04cae72a16e765393c1e4bf4d7",
+      "experiments/2026-11-16-r2h-g-first/prepare.py": "2766c2857e0d01f8806994d66638db1bb23ecee5eec81943d9ab8263dac90193",
+      "experiments/2026-11-16-r2h-g-first/reverify.py": "0aee5e2dcbcb3104b38b91f21f4953aa81b9c80c34b26c9a8e6584acc627fe5a",
+      "experiments/2026-11-16-r2h-g-first/solve.py": "056aa8b67068a922c6605f9013e06119c77db60736ed18b2088ebab57addb420",
+      "experiments/2026-11-16-r2h-g-first/verify_init.py": "0678f1e17e4054e1e8e5a4df919aa837af59084511e7e26c1e1ab9e4324c4e88",
+      "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3",
+      "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+      "scripts/feasible_incumbent.py": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+      "scripts/repair_initialization.py": "83f7c7d6bbbf57f4800d05ac83d8ad1775141cc3b2df8490f4355aa17bd06766",
+      "scripts/test_feasible_incumbent.py": "642c27434f567bd201bffa03c574c50c144e1215233d335b7ad3381251ff6ed8",
+      "scripts/test_g_first_policy.py": "f2665f57c5e789ec4b00934d13a07e2d5726977f64b00ffb8d8561a54981cf71",
+      "scripts/test_repair_initialization.py": "300cffd1cdad9bb74c2a3e42aafd71a3ba6e543fed2d19743c35e7a6e5a8401d",
+      "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e",
+      "experiments/2026-11-16-r3a-cohort/driver.py": "363df46c214f433bf895b8b77a38d404d1bb306ae0187b2cf507c571aa4caa08"
+    },
+    "r3_records": {
+      "tau1-seed1000002": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau1-seed1000002/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau1-seed1000002/result.json",
+        "selected_sha256": "9ac780332d6b9e44b7c30f58d1959c38dd975e554184cd1b43080efa13690ce8",
+        "result_sha256": "4649759669ec1e9f4cb29a2d702026d12e615bf2e6714b441800fc0d399da56f"
+      },
+      "tau2-seed2000002": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau2-seed2000002/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau2-seed2000002/result.json",
+        "selected_sha256": "fa61d5375fcee3fccece898cc7c19a78b52a2c2effb893136936641329fb5d9f",
+        "result_sha256": "5fbd969540994c36f3bc388eb8c1a657335cbda207d00b82bd3c1a949556003c"
+      },
+      "tau3-seed3000000": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau3-seed3000000/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau3-seed3000000/result.json",
+        "selected_sha256": "44fc581c96a408a36b29614e7024db884dfa2613487fc574014a5c398b43939c",
+        "result_sha256": "d2fc0a177adca6646da9c34411f930269aa09332768a6c2b2f47f5914840c021"
+      },
+      "tau4-seed4000000": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000000/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000000/result.json",
+        "selected_sha256": "822f9d1d3e5cad9b124a54935beb480d9945bd3c6eaa34166f21769acd986e1b",
+        "result_sha256": "f6f451b1fe54393fae9cb357b5ba73b310150de0e5fb3a2fccf2358ac36c4e28"
+      },
+      "tau4-seed4000001": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000001/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000001/result.json",
+        "selected_sha256": "c401defd91a1897f21e9f66968a0a28c3a141e55350d387b5cb43367f4db7444",
+        "result_sha256": "f709c1fbe8af99eaf89fe214c64c1244efe4fa75e1dac763d2476e7b31c85691"
+      },
+      "tau4-seed4000002": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000002/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau4-seed4000002/result.json",
+        "selected_sha256": "08c659a1802f955e70c538c3144ba6fb30cd384bd1b45fdbacd2f55bd47113b9",
+        "result_sha256": "4436870fc7647aef107d2b9d8582f38c876c7e182f5731bd04d53485f2848be0"
+      },
+      "tau5-seed5000001": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau5-seed5000001/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau5-seed5000001/result.json",
+        "selected_sha256": "ff886cbe574672ea68a784da288a74dc3ce9f70d456dd08762cc02b0777cf228",
+        "result_sha256": "f5d4cacc299d673e2939929f158068c55ab260c73269abf50222325d6b23f511"
+      },
+      "tau6-seed6000000": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000000/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000000/result.json",
+        "selected_sha256": "ba29e354389843e106cfb24445bfe16472442cbecd7779fb67201cae36b46d03",
+        "result_sha256": "226308e9564abded3c4e2b8e5ac15fa7c2438c5b67340dfcf982e7718854c211"
+      },
+      "tau6-seed6000002": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000002/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000002/result.json",
+        "selected_sha256": "979c7c428ca7e7c0a3e096b94dadf676c42827836ffcacb42f8cd6ec71d4fec6",
+        "result_sha256": "9bd5be29e83be5213123e97cf9e7c4b75cd4ee067dd7f522a073263fcfa479b8"
+      },
+      "tau2-seed2000001": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau2-seed2000001/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau2-seed2000001/result.json",
+        "selected_sha256": "b9c0ddc097b0aecc848c57665076f0d874de45e3da196042d9cfafd4d5263a15",
+        "result_sha256": "9b15f05a79af50ecd6e76102d597c39b6d83a297bcb3c25266a595664e9074c8"
+      },
+      "tau6-seed6000001": {
+        "selected": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000001/selected.json",
+        "result": "experiments/2026-11-16-r3a-cohort/runs/tau6-seed6000001/result.json",
+        "selected_sha256": "13397238b333c9ac0f5dd1ca45527274eb995cbbbb0f1f205e5b60554542b949",
+        "result_sha256": "a779d8ac51e8e7ca342ac31fb69da431bc87116ccdacdaf5b0a145e3a02fedee"
+      }
+    },
+    "evaluator_hashes": {
+      "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+      "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+    }
+  },
+  "execution": {
+    "started_utc": "2026-11-16T10:23:00.239094+00:00",
+    "head": "e8d57812ef9bd387c2b5b128e371b56481f9562f",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-stall-e2e/driver.py"
+    ],
+    "workers": 8,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "cases": [
+      "tau1-seed1000002",
+      "tau2-seed2000002",
+      "tau3-seed3000000",
+      "tau4-seed4000000",
+      "tau4-seed4000001",
+      "tau4-seed4000002",
+      "tau5-seed5000001",
+      "tau6-seed6000000",
+      "tau6-seed6000002",
+      "tau2-seed2000001",
+      "tau6-seed6000001"
+    ],
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "finished_utc": "2026-11-16T10:40:42.051117+00:00",
+    "seconds": 1061.812042423,
+    "results": [
+      {
+        "case": "tau1-seed1000002",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 11.661613164993469
+      },
+      {
+        "case": "tau1-seed1000002",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 22.22382275099517
+      },
+      {
+        "case": "tau2-seed2000002",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 39.2033332560095
+      },
+      {
+        "case": "tau2-seed2000002",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 65.76011689502047
+      },
+      {
+        "case": "tau3-seed3000000",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 76.23264595400542
+      },
+      {
+        "case": "tau3-seed3000000",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 100.22581163098221
+      },
+      {
+        "case": "tau4-seed4000000",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 197.20667695702286
+      },
+      {
+        "case": "tau4-seed4000002",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 155.77962992098765
+      },
+      {
+        "case": "tau4-seed4000001",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 228.28116163998493
+      },
+      {
+        "case": "tau4-seed4000000",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 324.24989992400515
+      },
+      {
+        "case": "tau4-seed4000002",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 308.62086751201423
+      },
+      {
+        "case": "tau2-seed2000001",
+        "arm": "control",
+        "route": "G",
+        "error": null,
+        "seconds": 26.409452499006875
+      },
+      {
+        "case": "tau2-seed2000001",
+        "arm": "stall",
+        "route": "G",
+        "error": null,
+        "seconds": 25.098523154010763
+      },
+      {
+        "case": "tau4-seed4000001",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 390.0905269480136
+      },
+      {
+        "case": "tau6-seed6000000",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 510.1951119629957
+      },
+      {
+        "case": "tau6-seed6000000",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 567.9667326970084
+      },
+      {
+        "case": "tau5-seed5000001",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 706.964163577999
+      },
+      {
+        "case": "tau5-seed5000001",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 791.2045608060143
+      },
+      {
+        "case": "tau6-seed6000001",
+        "arm": "stall",
+        "route": "G",
+        "error": null,
+        "seconds": 530.3328467870015
+      },
+      {
+        "case": "tau6-seed6000001",
+        "arm": "control",
+        "route": "G",
+        "error": null,
+        "seconds": 542.5035540100071
+      },
+      {
+        "case": "tau6-seed6000002",
+        "arm": "control",
+        "route": "fallback",
+        "error": null,
+        "seconds": 806.0063724140055
+      },
+      {
+        "case": "tau6-seed6000002",
+        "arm": "stall",
+        "route": "fallback",
+        "error": null,
+        "seconds": 737.5544964729925
+      }
+    ],
+    "software_errors": 0
+  },
+  "rows": [
+    {
+      "case": "tau1-seed1000002",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau1-seed1000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.47114654789721977,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau1-seed1000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau1-seed1000002",
+          "allow_repair_backups": true,
+          "seconds": 0.14539902500109747,
+          "selected_sha256": "a6da327c95eec2e7ea8ffbc9aafb44333854e9d135a63ac16e6f92a2f43f777d",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 22.22382275099517,
+        "step_seconds": {
+          "prepare-G": 0.4706651149899699,
+          "g_case-G": 17.977978773007635,
+          "evaluate-G": 0.6672816670034081,
+          "guard-fallback": 0.6619131950137671,
+          "fallback_phase-fallback": 1.729742701019859,
+          "evaluate-fallback": 0.7091375410091132
+        },
+        "g_case_seconds": 17.977978773007635,
+        "selected_sha256": "a6da327c95eec2e7ea8ffbc9aafb44333854e9d135a63ac16e6f92a2f43f777d",
+        "g_stage13": {
+          "stop": "outer_limit",
+          "completed_outer": 600,
+          "stage_pass": false,
+          "seconds": 8.20090411201818
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau1-seed1000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.47114654789721977,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau1-seed1000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau1-seed1000002",
+          "allow_repair_backups": true,
+          "seconds": 0.12060272501548752,
+          "selected_sha256": "e05ac1c84743192a3c60e4672ffb0404825cc64270f72cd02ddd3f37500dc394",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 11.661613164993469,
+        "step_seconds": {
+          "prepare-G": 0.34757794300094247,
+          "g_case-G": 8.252915041986853,
+          "evaluate-G": 0.548635514016496,
+          "guard-fallback": 0.3803068169800099,
+          "fallback_phase-fallback": 1.3437992230174132,
+          "evaluate-fallback": 0.7809614609868731
+        },
+        "g_case_seconds": 8.252915041986853,
+        "selected_sha256": "e05ac1c84743192a3c60e4672ffb0404825cc64270f72cd02ddd3f37500dc394",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 0.6873049899877515
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 9.267068496736642e-05,
+          "seconds": 0.6844022180011962
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 10.5622095860017
+    },
+    {
+      "case": "tau2-seed2000002",
+      "g_passing_in_r3": false,
+      "verdict": "same_result_faster",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau2-seed2000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": false,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "original",
+          "selected_hours": 1.484762701099975,
+          "selected_same_final_branch_kkt": false,
+          "common_kkt_and_final_certificate": false,
+          "both_scales_kkt_and_final_certificate": false,
+          "successful_restoration_preserved_exactly": null,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau2-seed2000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau2-seed2000002",
+          "allow_repair_backups": true,
+          "seconds": 0.1418791679898277,
+          "selected_sha256": "fa61d5375fcee3fccece898cc7c19a78b52a2c2effb893136936641329fb5d9f",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 65.76011689502047,
+        "step_seconds": {
+          "prepare-G": 0.38973615801660344,
+          "g_case-G": 60.31734139000764,
+          "evaluate-G": 0.652085306996014,
+          "guard-fallback": 0.5038613780052401,
+          "fallback_phase-fallback": 3.172835086006671,
+          "evaluate-fallback": 0.7166119439934846
+        },
+        "g_case_seconds": 60.31734139000764,
+        "selected_sha256": "fa61d5375fcee3fccece898cc7c19a78b52a2c2effb893136936641329fb5d9f",
+        "g_stage13": {
+          "stop": "outer_limit",
+          "completed_outer": 600,
+          "stage_pass": false,
+          "seconds": 26.59289942297619
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau2-seed2000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": false,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "original",
+          "selected_hours": 1.484762701099975,
+          "selected_same_final_branch_kkt": false,
+          "common_kkt_and_final_certificate": false,
+          "both_scales_kkt_and_final_certificate": false,
+          "successful_restoration_preserved_exactly": null,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau2-seed2000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau2-seed2000002",
+          "allow_repair_backups": true,
+          "seconds": 0.13764999498380348,
+          "selected_sha256": "fa61d5375fcee3fccece898cc7c19a78b52a2c2effb893136936641329fb5d9f",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 39.2033332560095,
+        "step_seconds": {
+          "prepare-G": 0.5248799950059038,
+          "g_case-G": 33.302405817987164,
+          "evaluate-G": 0.7503535959986039,
+          "guard-fallback": 0.6087216020096093,
+          "fallback_phase-fallback": 3.349758597993059,
+          "evaluate-fallback": 0.6596847600012552
+        },
+        "g_case_seconds": 33.302405817987164,
+        "selected_sha256": "fa61d5375fcee3fccece898cc7c19a78b52a2c2effb893136936641329fb5d9f",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 2.398800924012903
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.024150741467924598,
+          "seconds": 2.39495292500942
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": true,
+      "stall_matches_r3": true,
+      "saved_seconds": 26.556783639010973
+    },
+    {
+      "case": "tau3-seed3000000",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau3-seed3000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.7841216211414004,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau3-seed3000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau3-seed3000000",
+          "allow_repair_backups": true,
+          "seconds": 0.150856259977445,
+          "selected_sha256": "206f4a00185ac89dd13baf1525f74e211228a640e40054014476fe32eb50ec4b",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 100.22581163098221,
+        "step_seconds": {
+          "prepare-G": 0.5158865610137582,
+          "g_case-G": 92.43994849000592,
+          "evaluate-G": 0.44832588100689463,
+          "guard-fallback": 0.5064458679989912,
+          "fallback_phase-fallback": 5.644872629025485,
+          "evaluate-fallback": 0.6641055810032412
+        },
+        "g_case_seconds": 92.43994849000592,
+        "selected_sha256": "206f4a00185ac89dd13baf1525f74e211228a640e40054014476fe32eb50ec4b",
+        "g_stage13": {
+          "stop": "outer_limit",
+          "completed_outer": 600,
+          "stage_pass": false,
+          "seconds": 20.383335727994563
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau3-seed3000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.7841216211414004,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau3-seed3000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau3-seed3000000",
+          "allow_repair_backups": true,
+          "seconds": 0.17515809900942259,
+          "selected_sha256": "b462ca6d7eb7660e4111260235f2bb149d6039b602527194c27462846ff3b2b7",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 76.23264595400542,
+        "step_seconds": {
+          "prepare-G": 0.35982764800428413,
+          "g_case-G": 66.90584885000135,
+          "evaluate-G": 0.4948491299874149,
+          "guard-fallback": 0.3899420649977401,
+          "fallback_phase-fallback": 7.326859558001161,
+          "evaluate-fallback": 0.7485342979780398
+        },
+        "g_case_seconds": 66.90584885000135,
+        "selected_sha256": "b462ca6d7eb7660e4111260235f2bb149d6039b602527194c27462846ff3b2b7",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 2.1498589370166883
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.006588580284933399,
+          "seconds": 2.142934633011464
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 23.993165676976787
+    },
+    {
+      "case": "tau4-seed4000000",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.241423703848915,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau4-seed4000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau4-seed4000000",
+          "allow_repair_backups": true,
+          "seconds": 0.11912619697977789,
+          "selected_sha256": "877039abb601223bdeb74367468dcdcb16f34001864b9dc90ab40c036bb737ba",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 324.24989992400515,
+        "step_seconds": {
+          "prepare-G": 0.35910233299364336,
+          "g_case-G": 316.6229476199951,
+          "evaluate-G": 0.4965208840148989,
+          "guard-fallback": 0.5444000450079329,
+          "fallback_phase-fallback": 5.723786111018853,
+          "evaluate-fallback": 0.4959366539842449
+        },
+        "g_case_seconds": 316.6229476199951,
+        "selected_sha256": "877039abb601223bdeb74367468dcdcb16f34001864b9dc90ab40c036bb737ba",
+        "g_stage13": {
+          "stop": "timeout",
+          "completed_outer": 494,
+          "stage_pass": false,
+          "seconds": 120.01596061798045
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.241423703848915,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau4-seed4000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau4-seed4000000",
+          "allow_repair_backups": true,
+          "seconds": 0.12129304200061597,
+          "selected_sha256": "705b514d06c3997a8993428e514a14a2c298c87c96df5f2a695da85488efc966",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 197.20667695702286,
+        "step_seconds": {
+          "prepare-G": 0.5216356869786978,
+          "g_case-G": 190.50552566998522,
+          "evaluate-G": 0.483500036993064,
+          "guard-fallback": 0.3721296539879404,
+          "fallback_phase-fallback": 4.785859805997461,
+          "evaluate-fallback": 0.5326065330009442
+        },
+        "g_case_seconds": 190.50552566998522,
+        "selected_sha256": "705b514d06c3997a8993428e514a14a2c298c87c96df5f2a695da85488efc966",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 13.842623423988698
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.0011892001522169214,
+          "seconds": 13.834141183004249
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 127.04322296698228
+    },
+    {
+      "case": "tau4-seed4000001",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000001",
+          "final_common_kkt": false,
+          "final_both_scales_kkt": false,
+          "last_restoration_solver_accepted": false,
+          "restoration_attempted": false,
+          "physical_point_available": true,
+          "selected": "constructed",
+          "selected_hours": 4.085548213504488,
+          "selected_same_final_branch_kkt": false,
+          "common_kkt_and_final_certificate": false,
+          "both_scales_kkt_and_final_certificate": false,
+          "successful_restoration_preserved_exactly": null,
+          "initialization_certificate_valid": false,
+          "solver_source": null,
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau4-seed4000001",
+          "allow_repair_backups": true,
+          "seconds": 0.09361883701058105,
+          "selected_sha256": "10a3cd86dd426fc4912151eee4c55f77658f01214ff7cc33c332da16e983e82c",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 390.0905269480136,
+        "step_seconds": {
+          "prepare-G": 0.45234197299578227,
+          "g_case-G": 386.42113086002064,
+          "evaluate-G": 0.6625591269985307,
+          "guard-fallback": 0.7188688180176541,
+          "initialize-fallback": 1.2858978009899147,
+          "evaluate-fallback": 0.5434234279964585
+        },
+        "g_case_seconds": 386.42113086002064,
+        "selected_sha256": "10a3cd86dd426fc4912151eee4c55f77658f01214ff7cc33c332da16e983e82c",
+        "g_stage13": {
+          "stop": "outer_limit",
+          "completed_outer": 600,
+          "stage_pass": false,
+          "seconds": 108.87425730901305
+        },
+        "stall": null,
+        "rule_on_log": 46,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000001",
+          "final_common_kkt": false,
+          "final_both_scales_kkt": false,
+          "last_restoration_solver_accepted": false,
+          "restoration_attempted": false,
+          "physical_point_available": true,
+          "selected": "constructed",
+          "selected_hours": 4.085548213504488,
+          "selected_same_final_branch_kkt": false,
+          "common_kkt_and_final_certificate": false,
+          "both_scales_kkt_and_final_certificate": false,
+          "successful_restoration_preserved_exactly": null,
+          "initialization_certificate_valid": false,
+          "solver_source": null,
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau4-seed4000001",
+          "allow_repair_backups": true,
+          "seconds": 0.13810336001915857,
+          "selected_sha256": "fb79498c486682233e29a4f81bb28f75b88726368466eb933f4d1b338f7ffd21",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 228.28116163998493,
+        "step_seconds": {
+          "prepare-G": 0.41907136800000444,
+          "g_case-G": 225.04651106300298,
+          "evaluate-G": 0.4645712900091894,
+          "guard-fallback": 0.614890477998415,
+          "initialize-fallback": 1.068744087999221,
+          "evaluate-fallback": 0.6611373230116442
+        },
+        "g_case_seconds": 225.04651106300298,
+        "selected_sha256": "fb79498c486682233e29a4f81bb28f75b88726368466eb933f4d1b338f7ffd21",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 46,
+          "stage_pass": false,
+          "seconds": 11.243184157006908
+        },
+        "stall": {
+          "trigger": 46,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.0025475593024260708,
+          "seconds": 11.235956252989126
+        },
+        "rule_on_log": 46,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 161.80936530802865
+    },
+    {
+      "case": "tau4-seed4000002",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 1.2923843755312032,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau4-seed4000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau4-seed4000002",
+          "allow_repair_backups": true,
+          "seconds": 0.1643142260145396,
+          "selected_sha256": "23105fa1640da664173d2fe3c7d327de50e1ef7dcee46150b20c4edfcb96166f",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 308.62086751201423,
+        "step_seconds": {
+          "prepare-G": 0.5492252889962401,
+          "g_case-G": 297.64090068099904,
+          "evaluate-G": 0.6836938179912977,
+          "guard-fallback": 0.5485844170034397,
+          "fallback_phase-fallback": 8.520779260987183,
+          "evaluate-fallback": 0.6709723430103622
+        },
+        "g_case_seconds": 297.64090068099904,
+        "selected_sha256": "23105fa1640da664173d2fe3c7d327de50e1ef7dcee46150b20c4edfcb96166f",
+        "g_stage13": {
+          "stop": "timeout",
+          "completed_outer": 497,
+          "stage_pass": false,
+          "seconds": 120.01130080301664
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau4-seed4000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 1.2923843755312032,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau4-seed4000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau4-seed4000002",
+          "allow_repair_backups": true,
+          "seconds": 0.12076172500383109,
+          "selected_sha256": "0717ef4f2c67d136fd7378c441decc1be639bc7924330f2b5e9ce101bf8322dd",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 155.77962992098765,
+        "step_seconds": {
+          "prepare-G": 0.5779304250027053,
+          "g_case-G": 148.09463468100876,
+          "evaluate-G": 0.45749989798059687,
+          "guard-fallback": 0.37837629398563877,
+          "fallback_phase-fallback": 5.766157845995622,
+          "evaluate-fallback": 0.4993628550146241
+        },
+        "g_case_seconds": 148.09463468100876,
+        "selected_sha256": "0717ef4f2c67d136fd7378c441decc1be639bc7924330f2b5e9ce101bf8322dd",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 8.604541956010507
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.16266082592364245,
+          "seconds": 8.597382837004261
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 152.84123759102658
+    },
+    {
+      "case": "tau5-seed5000001",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau5-seed5000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.027682658857673,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": true,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau5-seed5000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau5-seed5000001",
+          "allow_repair_backups": true,
+          "seconds": 0.1444032010040246,
+          "selected_sha256": "45e4bb8801480f07bfa530d025f338189860f07b608ad300be199bf7ade861ba",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 791.2045608060143,
+        "step_seconds": {
+          "prepare-G": 0.5129676089854911,
+          "g_case-G": 785.3574764020159,
+          "evaluate-G": 0.4898110379872378,
+          "guard-fallback": 0.515878619014984,
+          "initialize-fallback": 0.5261325530009344,
+          "fallback_phase-fallback": 3.32472292802413,
+          "evaluate-fallback": 0.47104636501171626
+        },
+        "g_case_seconds": 785.3574764020159,
+        "selected_sha256": "45e4bb8801480f07bfa530d025f338189860f07b608ad300be199bf7ade861ba",
+        "g_stage13": {
+          "stop": "timeout",
+          "completed_outer": 126,
+          "stage_pass": false,
+          "seconds": 120.00539938602014
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau5-seed5000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.027682658857673,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": true,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau5-seed5000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau5-seed5000001",
+          "allow_repair_backups": true,
+          "seconds": 0.16673003800678998,
+          "selected_sha256": "1bc8ae75ce571208f145521e46353f2e48d09c52aa0c2ae58c893f1547a62d61",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 706.964163577999,
+        "step_seconds": {
+          "prepare-G": 0.49538400798337534,
+          "g_case-G": 700.4723836890189,
+          "evaluate-G": 0.5617418189940508,
+          "guard-fallback": 0.4876657400163822,
+          "initialize-fallback": 0.7278375409950968,
+          "fallback_phase-fallback": 3.6265167130040936,
+          "evaluate-fallback": 0.5861074069980532
+        },
+        "g_case_seconds": 700.4723836890189,
+        "selected_sha256": "1bc8ae75ce571208f145521e46353f2e48d09c52aa0c2ae58c893f1547a62d61",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 53.97780625100131
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.0024709816274335328,
+          "seconds": 53.965119714994216
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 84.24039722801535
+    },
+    {
+      "case": "tau6-seed6000000",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau6-seed6000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.837853030334881,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau6-seed6000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau6-seed6000000",
+          "allow_repair_backups": true,
+          "seconds": 0.1297845230146777,
+          "selected_sha256": "6c4ff812853f7cdb50549f9fbf55534df11eb7eca37dd97c1db27ecb9dfaab45",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 567.9667326970084,
+        "step_seconds": {
+          "prepare-G": 0.5327573830145411,
+          "g_case-G": 551.6950220639992,
+          "evaluate-G": 0.598210633994313,
+          "guard-fallback": 0.5077015010174364,
+          "fallback_phase-fallback": 14.138076483999612,
+          "evaluate-fallback": 0.4886886849999428
+        },
+        "g_case_seconds": 551.6950220639992,
+        "selected_sha256": "6c4ff812853f7cdb50549f9fbf55534df11eb7eca37dd97c1db27ecb9dfaab45",
+        "g_stage13": {
+          "stop": "timeout",
+          "completed_outer": 88,
+          "stage_pass": false,
+          "seconds": 120.03123192201019
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau6-seed6000000",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.837853030334881,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau6-seed6000000",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau6-seed6000000",
+          "allow_repair_backups": true,
+          "seconds": 0.1637062719964888,
+          "selected_sha256": "af2164d8ed1c9ede705fa7adfbc8d9dc2a3f336cb856b9a320d2e3f12850391e",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 510.1951119629957,
+        "step_seconds": {
+          "prepare-G": 0.3736042719974648,
+          "g_case-G": 496.7956073740206,
+          "evaluate-G": 0.5691993870132137,
+          "guard-fallback": 0.4154880489804782,
+          "fallback_phase-fallback": 11.283913135004696,
+          "evaluate-fallback": 0.7513889860128984
+        },
+        "g_case_seconds": 496.7956073740206,
+        "selected_sha256": "af2164d8ed1c9ede705fa7adfbc8d9dc2a3f336cb856b9a320d2e3f12850391e",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 39.55725214397535
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.10679853788247827,
+          "seconds": 39.54571158598992
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 57.771620734012686
+    },
+    {
+      "case": "tau6-seed6000002",
+      "g_passing_in_r3": false,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau6-seed6000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.564306964701776,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/fallback/tau6-seed6000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/initializations/tau6-seed6000002",
+          "allow_repair_backups": true,
+          "seconds": 0.08840792000410147,
+          "selected_sha256": "12c90c0bb6aee3a535586b9993137208128cd1b25d1b9f4d18dafc82a4b79a6d",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 806.0063724140055,
+        "step_seconds": {
+          "prepare-G": 0.6751139580155723,
+          "g_case-G": 795.0163189799932,
+          "evaluate-G": 0.3330619309854228,
+          "guard-fallback": 0.2788740349933505,
+          "fallback_phase-fallback": 9.37043155200081,
+          "evaluate-fallback": 0.32740322200697847
+        },
+        "g_case_seconds": 795.0163189799932,
+        "selected_sha256": "12c90c0bb6aee3a535586b9993137208128cd1b25d1b9f4d18dafc82a4b79a6d",
+        "g_stage13": {
+          "stop": "timeout",
+          "completed_outer": 388,
+          "stage_pass": false,
+          "seconds": 120.01361891100532
+        },
+        "stall": null,
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "fallback",
+        "outcome": {
+          "case": "tau6-seed6000002",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 2.564306964701776,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/fallback/tau6-seed6000002",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau6-seed6000002",
+          "allow_repair_backups": true,
+          "seconds": 0.08075217599980533,
+          "selected_sha256": "6118e9af7c2441bd0b243d4c89d93a6bfa033a3cc1e224df2d3bdcf98f18c008",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 737.5544964729925,
+        "step_seconds": {
+          "prepare-G": 0.5204897790099494,
+          "g_case-G": 726.8718333730067,
+          "evaluate-G": 0.37192608800251037,
+          "guard-fallback": 0.2733515159925446,
+          "fallback_phase-fallback": 9.185521350998897,
+          "evaluate-fallback": 0.32703717501135543
+        },
+        "g_case_seconds": 726.8718333730067,
+        "selected_sha256": "6118e9af7c2441bd0b243d4c89d93a6bfa033a3cc1e224df2d3bdcf98f18c008",
+        "g_stage13": {
+          "stop": "stalled",
+          "completed_outer": 45,
+          "stage_pass": false,
+          "seconds": 34.17750699800672
+        },
+        "stall": {
+          "trigger": 45,
+          "K": 20,
+          "delta": 0.1,
+          "violation": 0.0004931120449933158,
+          "seconds": 34.17005817301106
+        },
+        "rule_on_log": 45,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 68.45187594101299
+    },
+    {
+      "case": "tau2-seed2000001",
+      "g_passing_in_r3": true,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "G",
+        "outcome": {
+          "case": "tau2-seed2000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.3815466228652794,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/G/tau2-seed2000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/inputs/tau2-seed2000001",
+          "allow_repair_backups": false,
+          "seconds": 0.16693123301956803,
+          "selected_sha256": "3f32aea4f4d85f9ed4fcc7f68951104f2807c954d7eb89623ab46c6a4d403c3b",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 26.409452499006875,
+        "step_seconds": {
+          "prepare-G": 0.523686425993219,
+          "g_case-G": 24.992085108999163,
+          "evaluate-G": 0.8910801880119834
+        },
+        "g_case_seconds": 24.992085108999163,
+        "selected_sha256": "3f32aea4f4d85f9ed4fcc7f68951104f2807c954d7eb89623ab46c6a4d403c3b",
+        "g_stage13": {
+          "stop": "kkt",
+          "completed_outer": 4,
+          "stage_pass": true,
+          "seconds": 0.37691624002764
+        },
+        "stall": null,
+        "rule_on_log": null,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "G",
+        "outcome": {
+          "case": "tau2-seed2000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 0.3815466228652794,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/G/tau2-seed2000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/inputs/tau2-seed2000001",
+          "allow_repair_backups": false,
+          "seconds": 0.1578508960083127,
+          "selected_sha256": "2b7e819d5daf9be1677926e02f71d8de05680885918657532e08e1935b425e3a",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 25.098523154010763,
+        "step_seconds": {
+          "prepare-G": 0.58713725200505,
+          "g_case-G": 23.824794752988964,
+          "evaluate-G": 0.6841131410037633
+        },
+        "g_case_seconds": 23.824794752988964,
+        "selected_sha256": "2b7e819d5daf9be1677926e02f71d8de05680885918657532e08e1935b425e3a",
+        "g_stage13": {
+          "stop": "kkt",
+          "completed_outer": 4,
+          "stage_pass": true,
+          "seconds": 0.34730490698711947
+        },
+        "stall": null,
+        "rule_on_log": null,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 1.3109293449961115
+    },
+    {
+      "case": "tau6-seed6000001",
+      "g_passing_in_r3": true,
+      "verdict": "result_changed",
+      "control": {
+        "error": null,
+        "route": "G",
+        "outcome": {
+          "case": "tau6-seed6000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 1.6600484982638355,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/control/cases/G/tau6-seed6000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/control/inputs/tau6-seed6000001",
+          "allow_repair_backups": false,
+          "seconds": 0.0990665010176599,
+          "selected_sha256": "e91a58be3512edbe4ef9ab6903b9518cced264ad17afaf10f89c572e09b576fd",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 542.5035540100071,
+        "step_seconds": {
+          "prepare-G": 0.5482980459928513,
+          "g_case-G": 541.5679699730244,
+          "evaluate-G": 0.3844140020082705
+        },
+        "g_case_seconds": 541.5679699730244,
+        "selected_sha256": "e91a58be3512edbe4ef9ab6903b9518cced264ad17afaf10f89c572e09b576fd",
+        "g_stage13": {
+          "stop": "kkt",
+          "completed_outer": 159,
+          "stage_pass": true,
+          "seconds": 60.002910492010415
+        },
+        "stall": null,
+        "rule_on_log": null,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "stall": {
+        "error": null,
+        "route": "G",
+        "outcome": {
+          "case": "tau6-seed6000001",
+          "final_common_kkt": true,
+          "final_both_scales_kkt": true,
+          "last_restoration_solver_accepted": true,
+          "restoration_attempted": true,
+          "physical_point_available": true,
+          "selected": "restoration",
+          "selected_hours": 1.6600484982638355,
+          "selected_same_final_branch_kkt": true,
+          "common_kkt_and_final_certificate": true,
+          "both_scales_kkt_and_final_certificate": true,
+          "successful_restoration_preserved_exactly": true,
+          "initialization_certificate_valid": false,
+          "solver_source": "experiments/2026-11-16-stall-e2e/stall/cases/G/tau6-seed6000001",
+          "initialization_source": "experiments/2026-11-16-stall-e2e/stall/inputs/tau6-seed6000001",
+          "allow_repair_backups": false,
+          "seconds": 0.10500913500436582,
+          "selected_sha256": "4c8c6b276f5aa84e58954abf474cb0fb551796ed616604351345c5bf9f5cafe2",
+          "returned_point_smoothing_kkt_not_inferred": true,
+          "paper_reproduction": false
+        },
+        "seconds": 530.3328467870015,
+        "step_seconds": {
+          "prepare-G": 0.5353103310044389,
+          "g_case-G": 529.3649267049914,
+          "evaluate-G": 0.4299916359886993
+        },
+        "g_case_seconds": 529.3649267049914,
+        "selected_sha256": "4c8c6b276f5aa84e58954abf474cb0fb551796ed616604351345c5bf9f5cafe2",
+        "g_stage13": {
+          "stop": "kkt",
+          "completed_outer": 159,
+          "stage_pass": true,
+          "seconds": 62.0354540469998
+        },
+        "stall": null,
+        "rule_on_log": null,
+        "g_steps": {
+          "run": "ok",
+          "restore": "ok",
+          "verify": "ok"
+        }
+      },
+      "control_matches_r3": false,
+      "stall_matches_r3": false,
+      "saved_seconds": 12.170707223005593
+    }
+  ],
+  "verdicts": {
+    "same_result_faster": 1,
+    "same_result_not_faster": 0,
+    "result_changed": 10,
+    "false_stop": 0
+  },
+  "total_seconds": {
+    "control": 3945.261718087073,
+    "stall": 3218.5102028480032
+  }
+}

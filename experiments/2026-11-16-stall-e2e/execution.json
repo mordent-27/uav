@@ -1,0 +1,190 @@
+{
+  "started_utc": "2026-11-16T10:23:00.239094+00:00",
+  "head": "e8d57812ef9bd387c2b5b128e371b56481f9562f",
+  "command": [
+    "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "experiments/2026-11-16-stall-e2e/driver.py"
+  ],
+  "workers": 8,
+  "blas_threads": 1,
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "cases": [
+    "tau1-seed1000002",
+    "tau2-seed2000002",
+    "tau3-seed3000000",
+    "tau4-seed4000000",
+    "tau4-seed4000001",
+    "tau4-seed4000002",
+    "tau5-seed5000001",
+    "tau6-seed6000000",
+    "tau6-seed6000002",
+    "tau2-seed2000001",
+    "tau6-seed6000001"
+  ],
+  "environment": {
+    "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "finished_utc": "2026-11-16T10:40:42.051117+00:00",
+  "seconds": 1061.812042423,
+  "results": [
+    {
+      "case": "tau1-seed1000002",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 11.661613164993469
+    },
+    {
+      "case": "tau1-seed1000002",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 22.22382275099517
+    },
+    {
+      "case": "tau2-seed2000002",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 39.2033332560095
+    },
+    {
+      "case": "tau2-seed2000002",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 65.76011689502047
+    },
+    {
+      "case": "tau3-seed3000000",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 76.23264595400542
+    },
+    {
+      "case": "tau3-seed3000000",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 100.22581163098221
+    },
+    {
+      "case": "tau4-seed4000000",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 197.20667695702286
+    },
+    {
+      "case": "tau4-seed4000002",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 155.77962992098765
+    },
+    {
+      "case": "tau4-seed4000001",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 228.28116163998493
+    },
+    {
+      "case": "tau4-seed4000000",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 324.24989992400515
+    },
+    {
+      "case": "tau4-seed4000002",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 308.62086751201423
+    },
+    {
+      "case": "tau2-seed2000001",
+      "arm": "control",
+      "route": "G",
+      "error": null,
+      "seconds": 26.409452499006875
+    },
+    {
+      "case": "tau2-seed2000001",
+      "arm": "stall",
+      "route": "G",
+      "error": null,
+      "seconds": 25.098523154010763
+    },
+    {
+      "case": "tau4-seed4000001",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 390.0905269480136
+    },
+    {
+      "case": "tau6-seed6000000",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 510.1951119629957
+    },
+    {
+      "case": "tau6-seed6000000",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 567.9667326970084
+    },
+    {
+      "case": "tau5-seed5000001",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 706.964163577999
+    },
+    {
+      "case": "tau5-seed5000001",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 791.2045608060143
+    },
+    {
+      "case": "tau6-seed6000001",
+      "arm": "stall",
+      "route": "G",
+      "error": null,
+      "seconds": 530.3328467870015
+    },
+    {
+      "case": "tau6-seed6000001",
+      "arm": "control",
+      "route": "G",
+      "error": null,
+      "seconds": 542.5035540100071
+    },
+    {
+      "case": "tau6-seed6000002",
+      "arm": "control",
+      "route": "fallback",
+      "error": null,
+      "seconds": 806.0063724140055
+    },
+    {
+      "case": "tau6-seed6000002",
+      "arm": "stall",
+      "route": "fallback",
+      "error": null,
+      "seconds": 737.5544964729925
+    }
+  ],
+  "software_errors": 0
+}

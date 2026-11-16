@@ -1,0 +1,139 @@
+{
+  "cases": {
+    "tau1-seed1000002": {
+      "control": {
+        "rows": 600,
+        "stop": "outer_limit",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau2-seed2000002": {
+      "control": {
+        "rows": 600,
+        "stop": "outer_limit",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau3-seed3000000": {
+      "control": {
+        "rows": 600,
+        "stop": "outer_limit",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau4-seed4000000": {
+      "control": {
+        "rows": 494,
+        "stop": "timeout",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau4-seed4000001": {
+      "control": {
+        "rows": 600,
+        "stop": "outer_limit",
+        "rule_trigger": 46
+      },
+      "stall": {
+        "rows": 46,
+        "stop": "stalled",
+        "rule_trigger": 46
+      }
+    },
+    "tau4-seed4000002": {
+      "control": {
+        "rows": 497,
+        "stop": "timeout",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau5-seed5000001": {
+      "control": {
+        "rows": 126,
+        "stop": "timeout",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau6-seed6000000": {
+      "control": {
+        "rows": 88,
+        "stop": "timeout",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau6-seed6000002": {
+      "control": {
+        "rows": 388,
+        "stop": "timeout",
+        "rule_trigger": 45
+      },
+      "stall": {
+        "rows": 45,
+        "stop": "stalled",
+        "rule_trigger": 45
+      }
+    },
+    "tau2-seed2000001": {
+      "control": {
+        "rows": 4,
+        "stop": "kkt",
+        "rule_trigger": null
+      },
+      "stall": {
+        "rows": 4,
+        "stop": "kkt",
+        "rule_trigger": null
+      }
+    },
+    "tau6-seed6000001": {
+      "control": {
+        "rows": 159,
+        "stop": "kkt",
+        "rule_trigger": null
+      },
+      "stall": {
+        "rows": 159,
+        "stop": "kkt",
+        "rule_trigger": null
+      }
+    }
+  },
+  "selected_hashes_reread": true,
+  "g_steps_ok": true,
+  "stall_triggers_reproduced": true
+}

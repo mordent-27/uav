@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-16",
+  "plan_commit": "e8d5781",
+  "cwd": "/home/mordent/robotech/3A/optimization/uav",
+  "commands": [
+    "cd experiments/2026-11-16-stall-e2e && python3 -m unittest test_e2e -v > tests.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stall-e2e/driver.py > experiments/2026-11-16-stall-e2e/driver.log 2>&1  # background",
+    "python3 experiments/2026-11-16-stall-e2e/analyze.py",
+    "python3 experiments/2026-11-16-stall-e2e/posthoc_content.py  # not in PLAN.md",
+    "cd experiments/2026-11-16-stall-e2e && python3 verify.py > verification.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stall-e2e/capture.py"
+  ],
+  "recorded_by": "the launching session itself, at the time of the run",
+  "model_note": "planned and run with Opus",
+  "unit_tests": 4,
+  "runs": 22,
+  "workers": 8
+}

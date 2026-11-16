@@ -205,3 +205,14 @@ python3 -m unittest discover -s experiments/2026-11-16-outer-stall -p 'test_*.py
 ```
 
 実データは保存済みの外側ログ38本の再生だけで、別プロセスで再計算して一致させた。
+
+## 打ち切り規則を入れた入口
+
+[打ち切り規則の端から端までの比較](experiments/2026-11-16-stall-e2e/REPORT.md)には、`run_stall.py`が`run.py`に規則のブロックを足しただけであること、
+入口の差分が`g_case`の差し替えだけであること、`g_case_stall.py`が段階ループの読み元だけを替えたこと、足した判定が最初に成立した行で止まることの4件がある。
+
+```bash
+cd experiments/2026-11-16-stall-e2e && python3 -m unittest test_e2e -v
+```
+
+返却点ファイルには復元の経過秒（`metrics.seconds`）が入るので、ファイル全体のhashでは実行ごとに必ず食い違う。比較では経過秒を除く。

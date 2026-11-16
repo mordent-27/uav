@@ -1,0 +1,77 @@
+{
+  "case": "tau4-seed4000001",
+  "route": "fallback",
+  "outcome": {
+    "case": "tau4-seed4000001",
+    "final_common_kkt": false,
+    "final_both_scales_kkt": false,
+    "last_restoration_solver_accepted": false,
+    "restoration_attempted": false,
+    "physical_point_available": true,
+    "selected": "constructed",
+    "selected_hours": 4.085548213504488,
+    "selected_same_final_branch_kkt": false,
+    "common_kkt_and_final_certificate": false,
+    "both_scales_kkt_and_final_certificate": false,
+    "successful_restoration_preserved_exactly": null,
+    "initialization_certificate_valid": false,
+    "solver_source": null,
+    "initialization_source": "experiments/2026-11-16-stall-e2e/stall/initializations/tau4-seed4000001",
+    "allow_repair_backups": true,
+    "seconds": 0.13810336001915857,
+    "selected_sha256": "fb79498c486682233e29a4f81bb28f75b88726368466eb933f4d1b338f7ffd21",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": true,
+  "g_source": "experiments/2026-11-16-stall-e2e/stall/cases/G/tau4-seed4000001",
+  "g_reused": false,
+  "fallback_cache_used": false,
+  "seconds": 228.28116163998493,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.41907136800000444,
+      "returncode": 0
+    },
+    {
+      "script": "g_case",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 225.04651106300298,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.4645712900091894,
+      "returncode": 0
+    },
+    {
+      "script": "guard",
+      "phase": "fallback",
+      "kind": "original",
+      "seconds": 0.614890477998415,
+      "returncode": 0
+    },
+    {
+      "script": "initialize",
+      "phase": "fallback",
+      "kind": "repaired",
+      "seconds": 1.068744087999221,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "fallback",
+      "kind": "repaired",
+      "seconds": 0.6611373230116442,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}
