@@ -183,3 +183,14 @@ python -m unittest discover -s experiments/2026-11-16-accept-stop -p 'test_*.py'
 ```
 
 実データでは旧方式の受理点が前回の記録と完全に一致することも確かめた。
+
+## 外側ALの段階ループ
+
+[外側ALでの比較](experiments/2026-11-16-outer-b1/REPORT.md)には、`r2b-coarse/run.py`の段階ループを写した`stage.py`について、
+合成のAL問題での乗数更新と合格判定、rhoの増加規則、内側の時間切れで乗数を更新しないことの3件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-outer-b1 -p 'test_*.py' -v
+```
+
+実データでは全外側行の乗数更新・指標・rhoの規則を前の行の文脈から別プロセスで再計算し、ビット単位で一致させた。内側ログは大きいので管理外にし、hashを残した。
