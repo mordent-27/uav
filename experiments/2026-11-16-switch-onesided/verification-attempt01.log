@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-switch-onesided/verify.py", line 52, in <module>
+    if __name__=='__main__':one() if '--one' in sys.argv else main()
+                                                              ^^^^^^
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-switch-onesided/verify.py", line 47, in main
+    assert all(v['traces_identical'] for v in controls.values() if v['role']=='control')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

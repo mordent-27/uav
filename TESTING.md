@@ -148,3 +148,15 @@ python -m unittest discover -s experiments/2026-11-16-switch-hessian -p 'test_*.
 
 書き始めの検査には矛盾した行が残っており、期待値を既定の28桁で計算していたため1件失敗した。計測前に書き直して80桁で計算した。
 実データでは作り直した2列を別プロセスで再計算してビット単位で一致させ、判定に使う4点の勾配を100桁で再計算した。
+
+## 片側差分Hessianの一因子比較
+
+[片側差分Hessianの内側比較](experiments/2026-11-16-switch-onesided/REPORT.md)には、合成の区分二次関数で中央差分が両側の平均・片側差分が点の側の値になること、
+該当なしでHがビット単位で一致すること、向きの選び方の4件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-switch-onesided -p 'test_*.py' -v
+```
+
+書き始めの検査は差し替えない成分を1と厳密比較して失敗したので、旧方式の値と比べるよう計測前に直した。
+初回の検証は対照の軌道をtraceの文字列で比べ、各行の経過秒の違いで失敗した（`verification-attempt01.log`）。経過秒を除いた受理点で比べて再実行した。

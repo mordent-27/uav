@@ -1,0 +1,279 @@
+{
+  "plan_commit": "9d63cf5",
+  "targets": {
+    "states": [
+      {
+        "case": "tau6-seed6000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+        "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e",
+        "role": "straddling"
+      },
+      {
+        "case": "tau6-seed6000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+        "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829",
+        "role": "straddling"
+      },
+      {
+        "case": "tau6-seed6000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "12331a3917e70d8c0f2c8a9ba2518619d77355fbb036e9488d4636f872a04e13",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/result.json",
+        "result_sha256": "f55e21dd50e599bc81d58d33d19589c5425135b0d17d5c2418a1f1aab9640b7e",
+        "role": "control"
+      }
+    ],
+    "methods": [
+      "old",
+      "onesided"
+    ],
+    "hessian_step": 1e-07,
+    "seconds": 30,
+    "max_iterations": 300,
+    "gradient_inf_tolerance": 1e-08,
+    "initial_radius": 1.0,
+    "reused_modules": {
+      "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+      "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+      "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+      "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+      "experiments/2026-11-15-stage4-inner/support.py": "8b5f80c9a4fe242003c9620e6498238e4210d749473f8f709885aee142061f5a",
+      "experiments/2026-11-16-switch-hessian/fixh.py": "9cdde774849a2fad8fa93965e756f4a2007d9ca418b88b27a5d6744f1a3f2c4a",
+      "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187"
+    }
+  },
+  "execution": {
+    "started_utc": "2026-11-16T09:31:33.074392+00:00",
+    "head": "9d63cf5be9a0f77f0e1fd5081c18f72665245cab",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-switch-onesided/driver.py"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "seconds_per_inner": 30,
+    "outer_solver_launched": false,
+    "optimizer": "frozen_inner_tr",
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:31:39.700386+00:00",
+    "seconds": 6.626012519991491,
+    "runs": [
+      {
+        "case": "tau6-seed6000002",
+        "method": "old",
+        "returncode": 0,
+        "seconds": 0.5265538130188361
+      },
+      {
+        "case": "tau6-seed6000002",
+        "method": "onesided",
+        "returncode": 0,
+        "seconds": 0.4485033880046103
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "old",
+        "returncode": 0,
+        "seconds": 3.4882761659973767
+      },
+      {
+        "case": "tau6-seed6000000",
+        "method": "onesided",
+        "returncode": 0,
+        "seconds": 1.2737898960185703
+      },
+      {
+        "case": "tau6-seed6000001",
+        "method": "old",
+        "returncode": 0,
+        "seconds": 0.4324783910124097
+      },
+      {
+        "case": "tau6-seed6000001",
+        "method": "onesided",
+        "returncode": 0,
+        "seconds": 0.45445807397481985
+      }
+    ],
+    "inner_solves": 6
+  },
+  "rows": [
+    {
+      "case": "tau6-seed6000002",
+      "role": "straddling",
+      "verdict": "mixed",
+      "trace_identical": false,
+      "old": {
+        "status": "stuck",
+        "accepted": 6,
+        "iterations": 6,
+        "trials": 33,
+        "gradient_inf": 2.3307075025513768e-07,
+        "final_gradient_norm": 4.2814691887582775e-07,
+        "al_decrease": 3.715370709243888e-07,
+        "seconds": 0.17222355300327763,
+        "hessian_stats": {
+          "builds": 7,
+          "triggered": 0,
+          "max_coordinates": 0
+        },
+        "hessian_gradient_calls": 2149,
+        "rule_at_start": [
+          76,
+          139
+        ],
+        "rule_at_end": [
+          76,
+          139
+        ],
+        "initial_gradient_inf": 0.7118062428780831
+      },
+      "onesided": {
+        "status": "stuck",
+        "accepted": 7,
+        "iterations": 7,
+        "trials": 34,
+        "gradient_inf": 2.923698048107326e-07,
+        "final_gradient_norm": 3.7089680102996555e-07,
+        "al_decrease": 3.7143099401833624e-07,
+        "seconds": 0.1739718170138076,
+        "hessian_stats": {
+          "builds": 8,
+          "triggered": 8,
+          "max_coordinates": 2
+        },
+        "hessian_gradient_calls": 2512,
+        "rule_at_start": [
+          76,
+          139
+        ],
+        "rule_at_end": [
+          76,
+          139
+        ],
+        "initial_gradient_inf": 0.7118062428780831
+      }
+    },
+    {
+      "case": "tau6-seed6000000",
+      "role": "straddling",
+      "verdict": "mixed",
+      "trace_identical": false,
+      "old": {
+        "status": "stuck",
+        "accepted": 155,
+        "iterations": 155,
+        "trials": 256,
+        "gradient_inf": 0.0001642640887035264,
+        "final_gradient_norm": 0.00038371333503563356,
+        "al_decrease": 4301.034260419865,
+        "seconds": 3.18658769200556,
+        "hessian_stats": {
+          "builds": 156,
+          "triggered": 0,
+          "max_coordinates": 0
+        },
+        "hessian_gradient_calls": 47892,
+        "rule_at_start": [
+          73,
+          136
+        ],
+        "rule_at_end": [
+          68,
+          73,
+          131,
+          136
+        ],
+        "initial_gradient_inf": 15387.699754977391
+      },
+      "onesided": {
+        "status": "stuck",
+        "accepted": 45,
+        "iterations": 45,
+        "trials": 91,
+        "gradient_inf": 0.0001415428188112047,
+        "final_gradient_norm": 0.000327764878165104,
+        "al_decrease": 4301.034242578144,
+        "seconds": 0.9832064990187064,
+        "hessian_stats": {
+          "builds": 46,
+          "triggered": 30,
+          "max_coordinates": 4
+        },
+        "hessian_gradient_calls": 14461,
+        "rule_at_start": [
+          73,
+          136
+        ],
+        "rule_at_end": [
+          68,
+          73,
+          131,
+          136
+        ],
+        "initial_gradient_inf": 15387.699754977391
+      }
+    },
+    {
+      "case": "tau6-seed6000001",
+      "role": "control",
+      "verdict": "same",
+      "trace_identical": true,
+      "old": {
+        "status": "stuck",
+        "accepted": 6,
+        "iterations": 6,
+        "trials": 33,
+        "gradient_inf": 3.689389316891617e-08,
+        "final_gradient_norm": 1.1418074427216618e-07,
+        "al_decrease": 2.3784064312547546e-10,
+        "seconds": 0.15139237299445085,
+        "hessian_stats": {
+          "builds": 7,
+          "triggered": 0,
+          "max_coordinates": 0
+        },
+        "hessian_gradient_calls": 2149,
+        "rule_at_start": [],
+        "rule_at_end": [],
+        "initial_gradient_inf": 0.00019455561951172567
+      },
+      "onesided": {
+        "status": "stuck",
+        "accepted": 6,
+        "iterations": 6,
+        "trials": 33,
+        "gradient_inf": 3.689389316891617e-08,
+        "final_gradient_norm": 1.1418074427216618e-07,
+        "al_decrease": 2.3784064312547546e-10,
+        "seconds": 0.1574828150041867,
+        "hessian_stats": {
+          "builds": 7,
+          "triggered": 0,
+          "max_coordinates": 0
+        },
+        "hessian_gradient_calls": 2149,
+        "rule_at_start": [],
+        "rule_at_end": [],
+        "initial_gradient_inf": 0.00019455561951172567
+      }
+    }
+  ],
+  "unit_tests": 4,
+  "inner_solves": 6,
+  "outer_solver_launched": false,
+  "monte_carlo_changed": false
+}
