@@ -1,0 +1,37 @@
+# R3sの実行手順（固定900の残り876件）
+
+R3と同じ900件・順序・予算で、G経路のstage13に外側停滞の打ち切り規則を入れた入口で解く。条件は[PLAN.md](PLAN.md)。
+R3のバッチ000〜002（24件）は旧入口の結果を引き継ぐので解き直さない。次に解くのはバッチ003から。
+
+## 実行
+
+`uav/`から実行する。1バッチは最大8件・8並列で、R3では1バッチ数分〜13分ほどだった。876件は110バッチで、R3の見積もり（残り約16.5時間）から、
+規則で約2割短くなる見込み（11状態の比較で18%短縮。全体でも同じだけ短くなるとは限らない）。
+
+```bash
+cd ~/robotech/3A/optimization/uav
+# 1バッチだけ（解く→再評価→Rust照合→途中集計）
+experiments/2026-11-16-r3s-cohort/run_batches.sh 1
+# まとめて（例：10バッチ＝80件）。失敗した段階でその場で止まる
+nohup experiments/2026-11-16-r3s-cohort/run_batches.sh 10 > experiments/2026-11-16-r3s-cohort/run.log 2>&1 &
+# 残り全部
+nohup experiments/2026-11-16-r3s-cohort/run_batches.sh 110 > experiments/2026-11-16-r3s-cohort/run.log 2>&1 &
+```
+
+- Pythonと環境は`UAV_PYTHON`・`UAV_PYTHONPATH`で替えられる（既定はR3と同じuvのPython 3.12）。
+- 評価ライブラリ`/tmp/uav-fidelity-{original,speed}.so`が必要。再起動などで消えたら、R3の`runtime-evaluators.tar.gz`からhashを確かめて同じパスへ戻す（R3の`USAGE.md`）。
+- 他の数値計算と同時に走らせない（`driver.lock`で重複起動は拒否されるが、別の実験の計算は止められない）。8並列の時間予算なので、負荷が増えると時間切れの位置が変わる。
+
+## 途中で止めたとき
+
+- 実行中の`driver.py`を止めると、そのバッチの解きかけの入力に部分出力が残る。次の起動は全て拒否される。
+- プロセスが残っていないことを確かめてから、`interruptions/<case>.json`に
+  `{"confirmed_no_live_processes": true, "audited_utc": "...", "reason": "...", "evidence": "..."}`を書くと、その入力は「中断」のまま残して後続へ進める。
+  部分出力の削除や同じ入力の解き直しはしない（R3と同じ規則）。
+- 止めた後に再開するときも、同じ`run_batches.sh`を実行すればよい。
+
+## 終わったら
+
+- `aggregate.py`の途中集計は`summary.json`と`comparison.md`。旧入口の24件（`origin`が`2026-11-16-r3a-cohort`）と規則入りの件は合算されているので、分けて読む。
+- 各バッチの来歴（文書のsnapshotとhash）は、文書を確定した後に`UAV_R3_BATCH=NNN python experiments/2026-11-16-r3s-cohort/capture_batch.py`で保存する。
+- 900件そろう前の数は各100本の最終分布ではない。返却点を比べるときは復元の経過秒`metrics.seconds`を除く。
