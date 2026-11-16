@@ -1,0 +1,68 @@
+{
+  "contexts": [
+    {
+      "case": "tau2-seed2000001",
+      "samples": "experiments/2026-11-16-directional-precision/states/tau2-seed2000001/samples.npz",
+      "samples_sha256": "b7ec09186505be0bab23f04db217bf1a47aac64691f4f7d88bf1b333acac3f4d",
+      "result": "experiments/2026-11-16-directional-precision/states/tau2-seed2000001/result.json",
+      "result_sha256": "6f0b9beee08207e3f0d8ac173329a82cc5285470d89a550863e0cf1226ffe29b",
+      "metadata_source": "experiments/2026-11-16-full-reference/cases/tau2-seed2000001/result.json",
+      "metadata_sha256": "d2aee0ad703f27d381857fe118c55706addba23edba6786ad365d5ed4622ba92",
+      "precise_inner_gradient_check": "experiments/2026-11-16-precise-inner/gradient-checks/tau2-seed2000001.json",
+      "precise_inner_gradient_check_sha256": "2ab77a0db3cee41afa2d6c2b03faa4047a7361a5bcde597a8a3152753d13987a"
+    },
+    {
+      "case": "tau6-seed6000002",
+      "samples": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/samples.npz",
+      "samples_sha256": "aef8ccbd0606d83a5872bd21292e5d699d6da5ed894325efa553c91c1da5abfc",
+      "result": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/result.json",
+      "result_sha256": "31383b2f1b400fc951f8984239aff4fe2ebc44ec43b3353a98c0fe2b572dc5fc",
+      "metadata_source": "experiments/2026-11-16-full-reference/cases/tau6-seed6000002/result.json",
+      "metadata_sha256": "a80daecf31091f582e15748f047a4c868fe787cdcd25a987666ac2fcf0298713",
+      "precise_inner_gradient_check": "experiments/2026-11-16-precise-inner/gradient-checks/tau6-seed6000002.json",
+      "precise_inner_gradient_check_sha256": "fccb8f419ddb792846a4f985ebb575e60aebd235e1bf63bdee821fdd729838cb"
+    }
+  ],
+  "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+  "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1",
+  "reused_modules": {
+    "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+    "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+    "experiments/2026-11-16-precise-inner/battery_reference.py": "ee4280e080b594b29db76e4b2c5ae7bc443809d1e9a16a0aba7300a17201848c"
+  },
+  "hessian_step": 1e-07,
+  "curvature": {
+    "low_eigenvectors": 5,
+    "control": "largest_eigenvector",
+    "digits": 80,
+    "value_widths": [
+      "1e-4",
+      "1e-6",
+      "1e-8",
+      "1e-10",
+      "1e-14",
+      "1e-20"
+    ],
+    "reference_digits": 100,
+    "reference_width": "1e-24",
+    "agreement_relative": "1e-20",
+    "near_zero": 1e-12,
+    "hv_width": "1e-10",
+    "gradient_step": "1e-20"
+  },
+  "rounding": {
+    "pinv_rcond": 1e-15,
+    "newton_steps": 3,
+    "gradient_inf_target": 1e-08,
+    "digits": 80,
+    "gradient_step": "1e-20",
+    "reference_digits": 100,
+    "reference_step": "1e-24",
+    "gradient_agreement_inf": 1e-10,
+    "rounded_points": [
+      "x1",
+      "x3"
+    ]
+  },
+  "seconds_per_state": 300
+}
