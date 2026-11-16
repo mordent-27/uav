@@ -71,7 +71,9 @@ def main():
                 f'same numeric Python/environment as launch-record.json, UAV_R3_BATCH={OUT.name}: reverify.py',
                 'PYTHONDONTWRITEBYTECODE=1 python3 experiments/2026-11-16-r3a-cohort/aggregate.py',
                 f'PYTHONDONTWRITEBYTECODE=1 UAV_R3_BATCH={OUT.name} python3 experiments/2026-11-16-r3a-cohort/audit_outputs.py',
-                f'same numeric Python/environment as launch-record.json, UAV_R3_BATCH={OUT.name}: capture_batch.py'],
+                f'same numeric Python/environment as launch-record.json, UAV_R3_BATCH={OUT.name}: capture_batch.py']+
+                ([f'same numeric Python/environment as launch-record.json, UAV_R2_CASE=fig1 UAV_R3_BATCH={OUT.name}: diagnose_initializations.py']
+                 if (OUT/'initialization-diagnosis.json').exists() else []),
             human_notes={p.name:sha(p) for p in notes},human_notes_archive='human-notes.tar.gz',
             population_distribution_complete=read(BASE/'summary.json')['final_distribution_complete'],paper_reproduction=False))
         numeric_folders=[BASE/sub/case for sub in ['inputs','initializations','cases/G','cases/fallback','evaluations/G','evaluations/fallback','runs','logs'] for case in cases]

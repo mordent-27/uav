@@ -1,0 +1,76 @@
+{
+  "optimizer_launched": false,
+  "outputs_changed": false,
+  "cases": [
+    {
+      "case": "tau4-seed4000001",
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "iterations": 1500,
+      "numerically_feasible_start_confirmed": true,
+      "recomputed_start_violation": 1.5987211554602255e-15,
+      "returned_point_KKT": {
+        "stat": 6.928810200207414e-05,
+        "feas": 455.8052041736085,
+        "comp": 455.8052041736085,
+        "dual": 0.0
+      },
+      "witness_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.04348812924326473,
+        "max_energy": 1,
+        "dense_min_energy": 0.04348812924326473,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "source_files_unchanged": true,
+      "fixed_assignment_infeasibility_proven": false,
+      "interpretation": "The input NLP start meets its bounds and constraints within 1e-6. Its failed solver point does not prove infeasibility."
+    },
+    {
+      "case": "tau9-seed9000001",
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "iterations": 1500,
+      "numerically_feasible_start_confirmed": true,
+      "recomputed_start_violation": 3.087959713342839e-15,
+      "returned_point_KKT": {
+        "stat": 0.03426893979590718,
+        "feas": 214.58595388525626,
+        "comp": 214.58595388525626,
+        "dual": 0.0
+      },
+      "witness_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.7763568394002505e-15,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 4.85722573273506e-17,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.031245676951343282,
+        "max_energy": 1,
+        "dense_min_energy": 0.031245676951343282,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "source_files_unchanged": true,
+      "fixed_assignment_infeasibility_proven": false,
+      "interpretation": "The input NLP start meets its bounds and constraints within 1e-6. Its failed solver point does not prove infeasibility."
+    }
+  ]
+}
