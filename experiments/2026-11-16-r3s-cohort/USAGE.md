@@ -19,7 +19,9 @@ nohup experiments/2026-11-16-r3s-cohort/run_batches.sh 110 > experiments/2026-11
 ```
 
 - Pythonと環境は`UAV_PYTHON`・`UAV_PYTHONPATH`で替えられる（既定はR3と同じuvのPython 3.12）。
-- 評価ライブラリ`/tmp/uav-fidelity-{original,speed}.so`が必要。再起動などで消えたら、R3の`runtime-evaluators.tar.gz`からhashを確かめて同じパスへ戻す（R3の`USAGE.md`）。
+- 評価ライブラリ`/tmp/uav-fidelity-{original,speed}.so`が必要。`run_batches.sh`は各バッチの前に`restore_evaluators.py`を呼び、
+  無ければこのフォルダの`runtime-evaluators.tar.gz`から取り出してprotocolのhashと照合してから置く。hashの違うファイルが既にあれば上書きせずに止まる。
+  実行する環境の`/tmp`へ書き込めることが必要（2026-11-16の最初の起動は、実行した環境の`/tmp`にライブラリが無く、求解前の照合で止まった）。
 - 他の数値計算と同時に走らせない（`driver.lock`で重複起動は拒否されるが、別の実験の計算は止められない）。8並列の時間予算なので、負荷が増えると時間切れの位置が変わる。
 
 ## 途中で止めたとき
@@ -28,7 +30,9 @@ nohup experiments/2026-11-16-r3s-cohort/run_batches.sh 110 > experiments/2026-11
 - プロセスが残っていないことを確かめてから、`interruptions/<case>.json`に
   `{"confirmed_no_live_processes": true, "audited_utc": "...", "reason": "...", "evidence": "..."}`を書くと、その入力は「中断」のまま残して後続へ進める。
   部分出力の削除や同じ入力の解き直しはしない（R3と同じ規則）。
-- 止めた後に再開するときも、同じ`run_batches.sh`を実行すればよい。
+- 止めた後に再開するときも、同じ`run_batches.sh`を実行すればよい。同じバッチの起動記録とログは上書きされず、`-attempt01`などの番号が付く。
+- `driver.py`が終わった後の再評価・Rust照合・途中集計で止まった場合、次の起動は次のバッチへ進むので、止まったバッチの後処理は
+  `UAV_R3_BATCH=NNN`を付けて`reverify.py`、`audit_outputs.py`、`aggregate.py`を手で実行する（コマンドは`run_batches.sh`と同じ）。
 
 ## 終わったら
 

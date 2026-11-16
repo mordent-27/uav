@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-r3s-cohort/driver.py", line 132, in <module>
+    if __name__=='__main__':sys.exit(main())
+                                     ^^^^^^
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-r3s-cohort/driver.py", line 102, in main
+    assert dependencies()==read(BASE/'protocol.json')['dependencies'],'frozen source/configuration changed'
+           ^^^^^^^^^^^^^^
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-r3s-cohort/driver.py", line 80, in dependencies
+    evaluators={p:sha(Path(p)) for p in prior['evaluator_hashes']}
+                  ^^^^^^^^^^^^
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-r3s-cohort/driver.py", line 24, in sha
+    def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+                                        ^^^^^^^^^^^^^^^^^
+  File "/home/mordent/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/mordent/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/uav-fidelity-original.so'

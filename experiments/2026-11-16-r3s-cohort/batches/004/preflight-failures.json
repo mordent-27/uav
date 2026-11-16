@@ -1,0 +1,23 @@
+{
+  "batch": "004",
+  "attempts": [
+    {
+      "when": "2026-11-16T20:20 JST",
+      "step": "driver.py dependency check",
+      "error": "FileNotFoundError: /tmp/uav-fidelity-original.so",
+      "log": "batch004.log",
+      "cause": "the evaluator libraries were not present in the /tmp of the environment that ran run_batches.sh"
+    },
+    {
+      "when": "2026-11-16T20:20 JST",
+      "step": "run_batches.sh launch record",
+      "error": "FileExistsError: batches/004/launch-record.json (left by the first attempt)",
+      "log": "run.log",
+      "cause": "run_batches.sh refused to overwrite the record of the first attempt; fixed by numbering later records"
+    }
+  ],
+  "solves_started": false,
+  "partial_case_outputs": false,
+  "launch_record_json_is_from": "the first failed attempt",
+  "fix": "run_batches.sh now restores missing evaluators from runtime-evaluators.tar.gz after checking the protocol hashes, and numbers repeated launch records and logs"
+}
