@@ -1,0 +1,16 @@
+test_regression_nonzero_lowest_component (__main__.TestTrustRegion.test_regression_nonzero_lowest_component) ... FAIL
+
+======================================================================
+FAIL: test_regression_nonzero_lowest_component (__main__.TestTrustRegion.test_regression_nonzero_lowest_component)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/scripts/test_trust_region.py", line 50, in test_regression_nonzero_lowest_component
+    self.contract(H,g,delta,p,b)
+  File "/home/mordent/robotech/3A/optimization/uav/scripts/test_trust_region.py", line 30, in contract
+    self.assertLessEqual(norm,delta*(1+tol)+1e-15)
+AssertionError: 1.093201800259843 not less than or equal to 1.0000000002000011
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=1)
