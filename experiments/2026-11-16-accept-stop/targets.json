@@ -1,0 +1,67 @@
+{
+  "states": [
+    {
+      "case": "tau6-seed6000000",
+      "stage": "stage13",
+      "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+      "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+      "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+      "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829",
+      "role": "acceptance_stuck",
+      "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+      "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+    },
+    {
+      "case": "tau6-seed6000002",
+      "stage": "stage13",
+      "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+      "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+      "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+      "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e",
+      "role": "floor_stuck",
+      "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+      "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+    },
+    {
+      "case": "tau2-seed2000001",
+      "stage": "stage13",
+      "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+      "checkpoint_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+      "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/result.json",
+      "result_sha256": "0c4908c023b5612ace47305d6f45b648de49d7209b8102a6c82e500c36fc34d3",
+      "role": "control",
+      "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+      "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1"
+    }
+  ],
+  "arms": [
+    "A0",
+    "B0",
+    "A1",
+    "B1"
+  ],
+  "hessian_step": 1e-07,
+  "seconds": 30,
+  "tolerance": 1e-08,
+  "floor_factor": 2.0,
+  "digits": 80,
+  "gradient_step": "1e-20",
+  "reference_digits": 100,
+  "reference_step": "1e-24",
+  "gradient_agreement_inf": 1e-10,
+  "decimal_value_gap": 1e-12,
+  "previous_a0": {
+    "case_dir": "experiments/2026-11-16-switch-onesided/inner",
+    "method": "old"
+  },
+  "reused_modules": {
+    "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+    "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+    "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+    "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+    "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+    "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+    "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+    "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725"
+  }
+}
