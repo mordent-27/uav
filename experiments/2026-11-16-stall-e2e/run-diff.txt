@@ -1,0 +1,32 @@
+--- 2026-11-15-r2b-coarse/run.py	2026-11-15 14:44:30.487577107 +0900
++++ 2026-11-16-stall-e2e/run_stall.py	2026-11-16 19:21:39.687729759 +0900
+@@ -1,4 +1,4 @@
+-"""R1 run.py with the tolerance, the outer limit and the advance rule taken from helpers (PLAN.md)."""
++"""Copy of 2026-11-15-r2b-coarse/run.py with the stage-13 outer-stall stop rule (stall-e2e PLAN.md). Nothing else changed."""
+ import gzip
+ import json
+ from time import monotonic
+@@ -6,6 +6,11 @@
+ import numpy as np
+ import helpers as h
+ newton = h.load("newton")  # the previous Newton file, unchanged
++import importlib.util as _u
++from pathlib import Path as _P
++_spec = _u.spec_from_file_location('outer_stall_rule', _P(__file__).resolve().parent.parent/'2026-11-16-outer-stall'/'stall.py')
++stall = _u.module_from_spec(_spec); _spec.loader.exec_module(stall)
++STALL_K, STALL_DELTA = 20, 0.1
+ 
+ 
+ def main():
+@@ -84,6 +89,11 @@
+                 if passed:
+                     stop = 'kkt'
+                     break
++                if stage == 13 and stall.first_trigger(records, STALL_K, STALL_DELTA, h.tolerance(stage), 1e8) == len(records):
++                    stop = 'stalled'
++                    h.write(folder/'stall.json', dict(trigger=len(records), K=STALL_K, delta=STALL_DELTA,
++                        violation=records[-1]['violation'], seconds=records[-1]['seconds']))
++                    break
+         context = h.state(y, lam, mu, rho, stage)
+         f = h.stage4.Frozen(context)
+         f.m.current_stage = stage

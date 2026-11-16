@@ -1,0 +1,34 @@
+--- 2026-11-16-r3a-cohort/solve.py	2026-11-16 11:37:45.445459590 +0900
++++ 2026-11-16-stall-e2e/entry.py	2026-11-16 19:21:39.687849669 +0900
+@@ -1,4 +1,4 @@
+-"""Single-input G-first entry. Child steps share no numerical mutable state."""
++"""Copy of r3a-cohort/solve.py; with stall=True only the g_case child is replaced by g_case_stall.py (stall-e2e PLAN.md)."""
+ import argparse
+ from datetime import datetime, timezone
+ import hashlib
+@@ -13,6 +13,7 @@
+ 
+ ENTRY=Path(__file__).resolve().parent
+ CODE=ENTRY.parent/'2026-11-16-r2h-g-first'
++STALL_CODE=ENTRY
+ ROOT=CODE.parents[1]
+ sys.path.insert(0,str(ROOT/'scripts'))
+ import g_first_policy
+@@ -23,7 +24,7 @@
+     path.write_text(json.dumps(value,indent=2)+'\n')
+ 
+ 
+-def solve_case(case,entry,out=ENTRY):
++def solve_case(case,entry,out=ENTRY,stall=False):
+     assert re.fullmatch(r'fig1|tau[1-9]-seed[0-9]+',case),case
+     out=Path(out).resolve();out.relative_to(ROOT)
+     destination=out/'runs'/case;destination.mkdir(parents=True,exist_ok=False)
+@@ -39,7 +40,7 @@
+             env.pop(name,None)
+         env.update(extra or {})
+         index=len(steps);label=f'{index:02d}-{phase}-{script}'
+-        command=[sys.executable,str(CODE/(script+'.py'))]
++        command=[sys.executable,str(STALL_CODE/'g_case_stall.py' if stall and script=='g_case' else CODE/(script+'.py'))]
+         launch=dict(command=command,cwd=str(ROOT),started_utc=datetime.now(timezone.utc).isoformat(),
+             environment={key:value for key,value in env.items() if key.startswith('UAV_') or key in
+                 ['PYTHONPATH','OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS','PYTHONDONTWRITEBYTECODE']})

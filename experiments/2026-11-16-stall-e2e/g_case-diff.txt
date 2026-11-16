@@ -1,0 +1,24 @@
+--- 2026-11-16-r2h-g-first/g_case.py	2026-11-16 10:35:54.875652057 +0900
++++ 2026-11-16-stall-e2e/g_case_stall.py	2026-11-16 19:21:39.687803520 +0900
+@@ -1,7 +1,11 @@
+-"""Original condition-G start/run/restore/verify with a fully checked input and new outputs."""
++"""Copy of r2h g_case.py; only the G stage loop is loaded from run_stall.py (stall-e2e PLAN.md)."""
+ import json
++from pathlib import Path
++import sys
+ import traceback
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'2026-11-16-r2h-g-first'))
+ import helpers as h
++HERE_STALL=Path(__file__).resolve().parent
+ 
+ 
+ def main():
+@@ -9,7 +13,7 @@
+     assert json.loads(h.SOURCE.read_text())['y']==json.loads((h.INPUT/'original-state.json').read_text())['y']
+     steps={}
+     try:
+-        for name,action in [('run',lambda:h.load_from(h.R2B,'run').main()),
++        for name,action in [('run',lambda:h.load_from(HERE_STALL,'run_stall').main()),
+                             ('restore',lambda:h.load_from(h.R2A,'restore').main()),
+                             ('verify',lambda:h.load_from(h.R2B,'verify').main())]:
+             try:action();steps[name]='ok'
