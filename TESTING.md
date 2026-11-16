@@ -60,3 +60,16 @@ UAV_TEST_TR_IMPL=legacy python scripts/test_trust_region.py TestTrustRegion.test
 受理判定は[scripts/tr_acceptance.py](scripts/tr_acceptance.py)、テストは[scripts/test_tr_acceptance.py](scripts/test_tr_acceptance.py)。
 既存規則が目的値増加を許す場合や、定数加算で分岐が変わる場合も、隠さずテストで可視化している。
 これらの通過は、その仕様が望ましいことの証明ではない。変更時は独立の改善比較を行う。
+
+## AL値差の内訳計算
+
+[固定点精度診断](experiments/2026-11-16-directional-precision/REPORT.md)の内訳計算には、
+解析的な二次問題・PHR切替・ゼロ変化・線形制約の丸め増幅の5テストを追加した。
+通常のscriptsの34件とは別に、NumPy環境で次を実行する。
+
+```bash
+python experiments/2026-11-16-directional-precision/test_ledger.py -v
+```
+
+これらは内訳計算の契約を調べるテストで、元カーネルの倍精度評価が微小幅まで正確という保証ではない。
+次は線形上下限の差と電池写像の差を、解析例/高精度参照と照合して補強する。
