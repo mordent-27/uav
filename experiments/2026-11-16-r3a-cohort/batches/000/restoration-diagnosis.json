@@ -1,0 +1,112 @@
+{
+  "optimizer_launched": false,
+  "outputs_changed": false,
+  "cases": [
+    {
+      "case": "tau8-seed8000000",
+      "selected": "original",
+      "fixed_branch_infeasibility_proven": false,
+      "initial_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 8.881784197001252e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 8.881784197001252e-16,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.09307190388236586,
+        "max_energy": 1,
+        "dense_min_energy": 0.09307190388236586,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "same_branch_as_original_with_problem_tolerance_1e_9": false,
+      "same_modes_exact": true,
+      "same_task_stamps_exact": false,
+      "solver_status": "Solved_To_Acceptable_Level",
+      "solver_success": true,
+      "iterations": 505,
+      "reason": "failed checks: energy",
+      "recomputed_raw_kkt": {
+        "stat": 2.8176374852259673e-12,
+        "feas": 6.186269784436149e-07,
+        "comp": 3.070704071461705e-07,
+        "dual": 0.0
+      },
+      "recomputed_acceptance": false,
+      "recomputed_checks": {
+        "duration_correction": 0.0,
+        "objective": 3.678064393733212,
+        "original_residuals": {
+          "viol": 2.427849937758353e-08,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 2.427849937758353e-08,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -2.427849937758353e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 2.5312512926165974e-09,
+          "feas": 4.936103910372029e-07,
+          "comp": 4.936103910372029e-07,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": false,
+          "tasks": true,
+          "branch_kkt": true
+        }
+      },
+      "energy_buffer": 1e-08,
+      "observation": "KKT/residual tolerance does not by itself imply strict nonnegative replay energy"
+    },
+    {
+      "case": "tau9-seed9000000",
+      "selected": "original",
+      "fixed_branch_infeasibility_proven": false,
+      "initial_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.7763568394002505e-15,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 1.7763568394002505e-15,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.15730993854852082,
+        "max_energy": 1,
+        "dense_min_energy": 0.15730993854852082,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "same_branch_as_original_with_problem_tolerance_1e_9": false,
+      "same_modes_exact": true,
+      "same_task_stamps_exact": false,
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "solver_success": false,
+      "iterations": 1500,
+      "reason": "solver flag or fixed-branch KKT of the returned point",
+      "recomputed_raw_kkt": {
+        "stat": 8.338141019378685e-10,
+        "feas": 0.05604515010583242,
+        "comp": 3.3275092414797314e-07,
+        "dual": 0.0
+      }
+    }
+  ]
+}
