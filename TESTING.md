@@ -85,3 +85,16 @@ python experiments/2026-11-16-component-reference/test_reference.py -v
 
 実データ14点では80/100桁の成分値差も照合した。他の制約や勾配まで高精度化したという保証ではない。
 今後、タスクを含む参照を作る場合は、9桁に丸められたJSON座標を全精度入力として使わず、元seedから全桁で再構成する。
+
+## 全制約のDecimal参照と微小摂動の回帰検査
+
+[全制約参照](experiments/2026-11-16-full-reference/REPORT.md)は、電池の7検査を再利用し、
+psiの境界、負冪minの解析解/同次性、全制約の既知値、速度符号、AL差分、Decimal摂動保持の計14検査を通した。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-full-reference -p 'test_*.py' -v
+```
+
+微小摂動が途中のfloat変換で消えるミスを実データ評価前に検出した。失敗ログと修正後のログを保持している。
+参照入力のタスク座標は元のRust生成器から全桁で書き出して保存し、AL値差/方向微分を80/100桁と別プロセスで照合した。
+方向微分3本の一致は、全勾配や求解性能の保証とは区別する。

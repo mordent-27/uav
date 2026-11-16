@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-16",
+  "plan_and_inputs_commit": "8e1d859",
+  "cwd": "/home/mordent/robotech/3A/optimization/uav",
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python -m unittest discover -s experiments/2026-11-16-full-reference -p 'test_*.py' -v",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-full-reference/driver.py > experiments/2026-11-16-full-reference/driver.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-full-reference/driver.py --verify > experiments/2026-11-16-full-reference/verification.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-full-reference/capture.py"
+  ],
+  "export": "inputs/export-record.json",
+  "unit_tests": 14,
+  "reference_points": 14,
+  "additional_decimal_derivative_points": 24,
+  "derivative_pairs": 12,
+  "precisions": [
+    80,
+    100
+  ],
+  "optimizer_launched": false,
+  "full_gradient_high_precision": false
+}
