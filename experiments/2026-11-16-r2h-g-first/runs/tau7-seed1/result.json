@@ -1,0 +1,56 @@
+{
+  "case": "tau7-seed1",
+  "route": "fallback",
+  "outcome": {
+    "case": "tau7-seed1",
+    "final_common_kkt": true,
+    "final_both_scales_kkt": true,
+    "last_restoration_solver_accepted": true,
+    "restoration_attempted": true,
+    "physical_point_available": true,
+    "selected": "restoration",
+    "selected_hours": 3.2542703285181447,
+    "selected_same_final_branch_kkt": true,
+    "common_kkt_and_final_certificate": true,
+    "both_scales_kkt_and_final_certificate": true,
+    "successful_restoration_preserved_exactly": true,
+    "initialization_certificate_valid": false,
+    "solver_source": "experiments/2026-11-15-r2c-direct-final/cases/tau7-seed1",
+    "initialization_source": "experiments/2026-11-15-r2f-general-init/initializations/tau7-seed1",
+    "allow_repair_backups": true,
+    "seconds": 0.16438855699379928,
+    "selected_sha256": "8c995665f76c2518d49bb8fe0c77d1a744da6b74ba90910b800de5ec7dedf9b5",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": true,
+  "g_source": "experiments/2026-11-15-r2b-coarse/cases/G/tau7-seed1",
+  "g_reused": true,
+  "fallback_cache_used": true,
+  "seconds": 1.7192756599979475,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.4533896160137374,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.5910823110025376,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "fallback",
+      "kind": "original",
+      "seconds": 0.6722395419783425,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}

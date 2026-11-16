@@ -1,0 +1,56 @@
+{
+  "case": "tau7-seed400",
+  "route": "G",
+  "outcome": {
+    "case": "tau7-seed400",
+    "final_common_kkt": true,
+    "final_both_scales_kkt": false,
+    "last_restoration_solver_accepted": true,
+    "restoration_attempted": true,
+    "physical_point_available": true,
+    "selected": "restoration",
+    "selected_hours": 2.9480135244811065,
+    "selected_same_final_branch_kkt": true,
+    "common_kkt_and_final_certificate": true,
+    "both_scales_kkt_and_final_certificate": false,
+    "successful_restoration_preserved_exactly": true,
+    "initialization_certificate_valid": false,
+    "solver_source": "experiments/2026-11-16-r2h-g-first/cases/G/tau7-seed400",
+    "initialization_source": "experiments/2026-11-16-r2h-g-first/inputs/tau7-seed400",
+    "allow_repair_backups": false,
+    "seconds": 0.0972069049894344,
+    "selected_sha256": "c89820ed685ec3b66e27103e60f0d6336c7525874cc03464f410d7c6f6021d50",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": false,
+  "g_source": "experiments/2026-11-16-r2h-g-first/cases/G/tau7-seed400",
+  "g_reused": false,
+  "fallback_cache_used": false,
+  "seconds": 603.2398716839962,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.48141367398784496,
+      "returncode": 0
+    },
+    {
+      "script": "g_case",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 602.3743908480101,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.3815901659836527,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}
