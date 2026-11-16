@@ -40,6 +40,9 @@ def main():
         solver_status=stats['return_status'],iterations=stats['iter_count'],raw_kkt=kkt,accepted=bool(accepted),
         seconds=seconds,checks=checks,provided_start_violation=violation(model,x0),
         first_iterate_violation=violation(model,observer.point),first_minus_provided_inf=float(max(abs(observer.point-x0))),
+        first_position_delta_km_inf=float(max(abs(observer.point[:model.nr]-x0[:model.nr]),default=0.)),
+        first_energy_delta_inf=float(max(abs(observer.point[model.nr:model.nr+model.ns]-x0[model.nr:model.nr+model.ns]))/model.range),
+        first_duration_delta_seconds_inf=float(max(abs(observer.point[model.nr+model.ns:]-x0[model.nr+model.ns:]))/model.p['v_d']*3600.),
         callback_calls=observer.calls,source=str(folder.relative_to(h.ROOT)),
         starting_point_sha256=sha(folder/'starting-point.json'),paper_reproduction=False)
     serial_options={k:v for k,v in options.items() if k!='iteration_callback'}
