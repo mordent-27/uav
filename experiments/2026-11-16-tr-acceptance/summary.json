@@ -1,0 +1,226 @@
+{
+  "cases": 2,
+  "trials": 52,
+  "python_tests": 34,
+  "new_tests": 11,
+  "optimizer_launched": false,
+  "counterfactual_is_on_recorded_trajectory_only": true,
+  "seconds": 0.8142778020119295,
+  "rows": [
+    {
+      "case": "tau2-seed2000001",
+      "source": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+      "source_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+      "rho": 1000000.0,
+      "trials": 19,
+      "accepted": 4,
+      "rejected": 15,
+      "fallback_trials": 8,
+      "fallback_accepted": 1,
+      "nonpositive_prediction": 0,
+      "stable_same_policy_decision_changes": 0,
+      "stable_ratio_decision_changes": 0,
+      "stable_positive_legacy_rejected": [],
+      "final_gradient_inf": 9.244118144569047e-10,
+      "saved_trajectory_reproduced": true,
+      "optimizer_launched": false,
+      "accepted_with_stable_al_increase": [],
+      "positive_prediction_without_fallback_accept_changes": 0,
+      "max_difference_of_decreases": 1.1541296391905732e-16,
+      "changed_witnesses": [],
+      "last_four_trials": [
+        {
+          "index": 16,
+          "prediction": 3.005594697492025e-16,
+          "ordinary_decrease": -1.0001444117335723e-12,
+          "stable_decrease": -1.0000630074865926e-12,
+          "radius": 2.384185782562201e-07,
+          "accepted": false,
+          "gradient_norm": 1.3071211468685247e-06,
+          "trial_gradient_norm": 3.929027657652818e-05
+        },
+        {
+          "index": 17,
+          "prediction": 2.9919190249420733e-16,
+          "ordinary_decrease": -5.928590951498336e-14,
+          "stable_decrease": -5.918941230555393e-14,
+          "radius": 5.960464456404451e-08,
+          "accepted": false,
+          "gradient_norm": 1.3071211468685247e-06,
+          "trial_gradient_norm": 9.581759872321173e-06
+        },
+        {
+          "index": 18,
+          "prediction": 2.9881398295884715e-16,
+          "ordinary_decrease": -2.0539125955565396e-15,
+          "stable_decrease": -2.0272049849851215e-15,
+          "radius": 1.4901161141007814e-08,
+          "accepted": false,
+          "gradient_norm": 1.3071211468685247e-06,
+          "trial_gradient_norm": 1.8928442819703249e-06
+        },
+        {
+          "index": 19,
+          "prediction": 2.9851250125494476e-16,
+          "ordinary_decrease": 1.6653345369377348e-16,
+          "stable_decrease": 2.819464176128308e-16,
+          "radius": 3.7252902852507664e-09,
+          "accepted": true,
+          "gradient_norm": 1.3071211468685247e-06,
+          "trial_gradient_norm": 2.4849542632238816e-09
+        }
+      ]
+    },
+    {
+      "case": "tau6-seed6000002",
+      "source": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+      "source_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+      "rho": 100000000.0,
+      "trials": 33,
+      "accepted": 6,
+      "rejected": 27,
+      "fallback_trials": 30,
+      "fallback_accepted": 5,
+      "nonpositive_prediction": 1,
+      "stable_same_policy_decision_changes": 0,
+      "stable_ratio_decision_changes": 7,
+      "stable_positive_legacy_rejected": [
+        28,
+        31,
+        32,
+        33
+      ],
+      "final_gradient_inf": 2.3307075025513768e-07,
+      "saved_trajectory_reproduced": true,
+      "optimizer_launched": false,
+      "accepted_with_stable_al_increase": [
+        6,
+        15,
+        29
+      ],
+      "positive_prediction_without_fallback_accept_changes": 7,
+      "max_difference_of_decreases": 1.0801587686551865e-11,
+      "changed_witnesses": [
+        {
+          "index": 6,
+          "prediction": 1.067603476497127e-12,
+          "ordinary_decrease": -1.1641532182693481e-10,
+          "stable_decrease": -1.1048899604297246e-10,
+          "gradient_norm": 0.000566301530670209,
+          "trial_gradient_norm": 0.0004913297328963754,
+          "gradient_fallback": true,
+          "accepted": true,
+          "stable_ratio_without_fallback_accepted": false
+        },
+        {
+          "index": 15,
+          "prediction": 7.488523753691607e-18,
+          "ordinary_decrease": -1.8917489796876907e-10,
+          "stable_decrease": -1.9140871404043909e-10,
+          "gradient_norm": 5.222112098100154e-07,
+          "trial_gradient_norm": 4.900080823434057e-07,
+          "gradient_fallback": true,
+          "accepted": true,
+          "stable_ratio_without_fallback_accepted": false
+        },
+        {
+          "index": 28,
+          "prediction": 3.2442349816346825e-20,
+          "ordinary_decrease": 1.4551915228366852e-10,
+          "stable_decrease": 1.3932459489880333e-10,
+          "gradient_norm": 4.76903127242478e-07,
+          "trial_gradient_norm": 5.394967605408704e-07,
+          "gradient_fallback": true,
+          "accepted": false,
+          "stable_ratio_without_fallback_accepted": true
+        },
+        {
+          "index": 29,
+          "prediction": 1.0012298481196909e-20,
+          "ordinary_decrease": -5.093170329928398e-11,
+          "stable_decrease": -4.6556507708323675e-11,
+          "gradient_norm": 4.76903127242478e-07,
+          "trial_gradient_norm": 4.2814691887582775e-07,
+          "gradient_fallback": true,
+          "accepted": true,
+          "stable_ratio_without_fallback_accepted": false
+        },
+        {
+          "index": 31,
+          "prediction": 4.001399210251469e-21,
+          "ordinary_decrease": 2.1827872842550278e-10,
+          "stable_decrease": 2.074771407389509e-10,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 5.468474468735815e-07,
+          "gradient_fallback": true,
+          "accepted": false,
+          "stable_ratio_without_fallback_accepted": true
+        },
+        {
+          "index": 32,
+          "prediction": 1.1959056585419362e-21,
+          "ordinary_decrease": 1.0913936421275139e-10,
+          "stable_decrease": 1.0872422588393649e-10,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 5.000655604120217e-07,
+          "gradient_fallback": true,
+          "accepted": false,
+          "stable_ratio_without_fallback_accepted": true
+        },
+        {
+          "index": 33,
+          "prediction": 4.722011357357286e-22,
+          "ordinary_decrease": 1.3096723705530167e-10,
+          "stable_decrease": 1.223179420958432e-10,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 4.760945030898073e-07,
+          "gradient_fallback": true,
+          "accepted": false,
+          "stable_ratio_without_fallback_accepted": true
+        }
+      ],
+      "last_four_trials": [
+        {
+          "index": 30,
+          "prediction": 1.4459699837456415e-20,
+          "ordinary_decrease": 0.0,
+          "stable_decrease": -3.4129099298973e-12,
+          "radius": 9.094923790778431e-13,
+          "accepted": false,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 4.904750860378831e-07
+        },
+        {
+          "index": 31,
+          "prediction": 4.001399210251469e-21,
+          "ordinary_decrease": 2.1827872842550278e-10,
+          "stable_decrease": 2.074771407389509e-10,
+          "radius": 2.2737309476936885e-13,
+          "accepted": false,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 5.468474468735815e-07
+        },
+        {
+          "index": 32,
+          "prediction": 1.1959056585419362e-21,
+          "ordinary_decrease": 1.0913936421275139e-10,
+          "stable_decrease": 1.0872422588393649e-10,
+          "radius": 5.6843273692335997e-14,
+          "accepted": false,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 5.000655604120217e-07
+        },
+        {
+          "index": 33,
+          "prediction": 4.722011357357286e-22,
+          "ordinary_decrease": 1.3096723705530167e-10,
+          "stable_decrease": 1.223179420958432e-10,
+          "radius": 1.4210818423083045e-14,
+          "accepted": false,
+          "gradient_norm": 4.2814691887582775e-07,
+          "trial_gradient_norm": 4.760945030898073e-07
+        }
+      ]
+    }
+  ]
+}

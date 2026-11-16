@@ -9,8 +9,8 @@ cargo test -j8
 python -m unittest discover -s scripts -p 'test_*.py' -v
 ```
 
-2026-11-16時点でRust11件、Python23件が通過。
-使用したPython環境と実行記録は[TR修正版の実験](experiments/2026-11-16-tr-boundary-fix/REPORT.md)に保存している。
+2026-11-16時点でRust11件（前回）、Python34件が通過。
+使用したPython環境と実行記録は[直近の受理判定診断](experiments/2026-11-16-tr-acceptance/REPORT.md)に保存している。
 通常の単体テストは900入力の求解を起動しない。
 
 ## 今回追加したTRの契約
@@ -51,8 +51,12 @@ UAV_TEST_TR_IMPL=legacy python scripts/test_trust_region.py TestTrustRegion.test
 | 対象 | 現状 | 次の検査 |
 |---|---|---|
 | TR部分問題 | 新規11テストと2状態の半径監査 | 発見例を回帰ケースへ追加 |
-| 受理判定・半径更新 | 実問題の全受理点を事後再評価 | 小さい二次問題で受理/棄却/fallbackを単体検査。大きな定数項・微小な予測減少の影響を分離 |
+| 受理判定・半径更新 | 新規11テストと保存52試行で既存の採否/半径を再現 | 値差・方向微分・Hessianモデルの尺度を照合。定数への依存と非単調な勾配fallbackも既存仕様として明記 |
 | AL/PHRと微分 | Rustの小問題・勾配照合、別実験の固定状態診断 | 活性切替の両側/境界と大小rhoを明示した数理契約 |
 | 物理モデル・返却方針 | Rustの電池/モデル、Pythonの修復・解保持・G優先の既存テスト | 新しい失敗が見つかった箇所に最小反例を追加 |
 
 テスト項目を増やすこと自体を目的にせず、収束診断で疑わしくなった計算と、結果の解釈を左右する契約を優先する。
+
+受理判定は[scripts/tr_acceptance.py](scripts/tr_acceptance.py)、テストは[scripts/test_tr_acceptance.py](scripts/test_tr_acceptance.py)。
+既存規則が目的値増加を許す場合や、定数加算で分岐が変わる場合も、隠さずテストで可視化している。
+これらの通過は、その仕様が望ましいことの証明ではない。変更時は独立の改善比較を行う。
