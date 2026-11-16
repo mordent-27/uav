@@ -1,18 +1,18 @@
 # R3の途中集計
 
-計画 900、着手 32、終端記録 32、未実行 868。各100本の最終分布ではない。
+計画 900、着手 72、終端記録 72、未実行 828。各100本の最終分布ではない。
 
 | tau | 計画 | 着手 | 未実行 | 共通KKT | 追加物理KKT | 最後の復元 | 原実行可能点 | 固定分岐KKT |
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 100 | 3 | 97 | 3 | 3 | 3 | 3 | 3 |
-| 2 | 100 | 4 | 96 | 4 | 4 | 3 | 4 | 3 |
-| 3 | 100 | 3 | 97 | 3 | 3 | 3 | 3 | 3 |
-| 4 | 100 | 4 | 96 | 3 | 3 | 3 | 4 | 3 |
-| 5 | 100 | 3 | 97 | 3 | 3 | 3 | 3 | 3 |
-| 6 | 100 | 4 | 96 | 4 | 4 | 4 | 4 | 4 |
-| 7 | 100 | 3 | 97 | 2 | 2 | 2 | 3 | 2 |
-| 8 | 100 | 4 | 96 | 4 | 4 | 3 | 4 | 3 |
-| 9 | 100 | 4 | 96 | 2 | 1 | 1 | 4 | 1 |
+| 1 | 100 | 8 | 92 | 8 | 8 | 8 | 8 | 8 |
+| 2 | 100 | 8 | 92 | 8 | 8 | 6 | 8 | 6 |
+| 3 | 100 | 8 | 92 | 8 | 8 | 8 | 8 | 8 |
+| 4 | 100 | 8 | 92 | 7 | 7 | 7 | 8 | 7 |
+| 5 | 100 | 8 | 92 | 8 | 8 | 8 | 8 | 8 |
+| 6 | 100 | 8 | 92 | 8 | 8 | 8 | 8 | 8 |
+| 7 | 100 | 8 | 92 | 7 | 7 | 7 | 8 | 7 |
+| 8 | 100 | 8 | 92 | 8 | 8 | 6 | 8 | 7 |
+| 9 | 100 | 8 | 92 | 6 | 2 | 3 | 8 | 4 |
 
 共通/追加物理KKTはAL終点、原実行可能点/固定分岐KKTは別の返却点。未実行を成功/失敗へ数えない。
 
@@ -50,3 +50,43 @@
 | tau6-seed6000003 | finished | fallback | 3.467359655 | ○ | ○ |
 | tau8-seed8000003 | finished | fallback | 3.949821886 | ○ | ○ |
 | tau9-seed9000003 | finished | fallback | 9.211305681 | ○ | × |
+| tau1-seed1000003 | finished | G | 0.378843581 | ○ | ○ |
+| tau3-seed3000003 | finished | G | 0.764893250 | ○ | ○ |
+| tau5-seed5000003 | finished | G | 0.967568638 | ○ | ○ |
+| tau7-seed7000003 | finished | fallback | 2.772578401 | ○ | ○ |
+| tau2-seed2000004 | finished | fallback | 1.821255266 | ○ | × |
+| tau4-seed4000004 | finished | fallback | 1.305171855 | ○ | ○ |
+| tau6-seed6000004 | finished | fallback | 3.104970547 | ○ | ○ |
+| tau8-seed8000004 | finished | fallback | 2.710431529 | ○ | ○ |
+| tau9-seed9000004 | finished | fallback | 6.248408906 | ○ | ○ |
+| tau1-seed1000004 | finished | G | 0.325699316 | ○ | ○ |
+| tau3-seed3000004 | finished | G | 1.378359272 | ○ | ○ |
+| tau5-seed5000004 | finished | fallback | 2.338518873 | ○ | ○ |
+| tau7-seed7000004 | finished | fallback | 3.466527248 | ○ | ○ |
+| tau2-seed2000005 | finished | G | 0.904913563 | ○ | ○ |
+| tau4-seed4000005 | finished | fallback | 2.216683588 | ○ | ○ |
+| tau6-seed6000005 | finished | fallback | 3.655502444 | ○ | ○ |
+| tau8-seed8000005 | finished | fallback | 3.980779560 | ○ | ○ |
+| tau9-seed9000005 | finished | fallback | 3.991574851 | ○ | ○ |
+| tau1-seed1000005 | finished | G | 0.295713276 | ○ | ○ |
+| tau3-seed3000005 | finished | G | 1.162201558 | ○ | ○ |
+| tau5-seed5000005 | finished | fallback | 2.510870651 | ○ | ○ |
+| tau7-seed7000005 | finished | G | 2.531384777 | ○ | ○ |
+| tau2-seed2000006 | finished | G | 0.722113929 | ○ | ○ |
+| tau4-seed4000006 | finished | G | 1.096307788 | ○ | ○ |
+| tau6-seed6000006 | finished | fallback | 3.567349759 | ○ | ○ |
+| tau8-seed8000006 | finished | fallback | 2.637247266 | ○ | ○ |
+| tau9-seed9000006 | finished | fallback | 3.717012503 | ○ | ○ |
+| tau1-seed1000006 | finished | fallback | 0.436688359 | ○ | ○ |
+| tau3-seed3000006 | finished | G | 1.386327482 | ○ | ○ |
+| tau5-seed5000006 | finished | G | 1.137886802 | ○ | ○ |
+| tau7-seed7000006 | finished | fallback | 3.558748552 | ○ | ○ |
+| tau2-seed2000007 | finished | G | 1.347131535 | ○ | ○ |
+| tau4-seed4000007 | finished | fallback | 1.143065664 | ○ | ○ |
+| tau6-seed6000007 | finished | fallback | 2.853839781 | ○ | ○ |
+| tau8-seed8000007 | finished | fallback | 3.588910092 | ○ | ○ |
+| tau9-seed9000007 | finished | fallback | 5.567071804 | ○ | × |
+| tau1-seed1000007 | finished | G | 0.361611002 | ○ | ○ |
+| tau3-seed3000007 | finished | G | 0.548354743 | ○ | ○ |
+| tau5-seed5000007 | finished | G | 1.400147429 | ○ | ○ |
+| tau7-seed7000007 | finished | fallback | 4.066958728 | ○ | ○ |
