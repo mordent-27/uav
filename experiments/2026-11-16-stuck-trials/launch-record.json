@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-16",
+  "plan_commit": "990ccde",
+  "addendum_commit": "1f3eeca",
+  "cwd": "/home/mordent/robotech/3A/optimization/uav",
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python -m unittest discover -s experiments/2026-11-16-stuck-trials -p 'test_*.py' -v > experiments/2026-11-16-stuck-trials/tests.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stuck-trials/driver.py > experiments/2026-11-16-stuck-trials/driver.log 2>&1",
+    "rustc --edition=2021 -O experiments/2026-11-16-stuck-trials/export_tasks.rs -o <scratchpad>/stuck-export && <scratchpad>/stuck-export > experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stuck-trials/driver.py --full-tasks > experiments/2026-11-16-stuck-trials/driver-decimal.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stuck-trials/verify.py > experiments/2026-11-16-stuck-trials/verification.log 2>&1",
+    "python3 experiments/2026-11-16-stuck-trials/analyze.py",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages /home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python experiments/2026-11-16-stuck-trials/capture.py"
+  ],
+  "recorded_by": "the launching session itself, at the time of the run",
+  "model_note": "planned and run with Opus",
+  "unit_tests": 4,
+  "optimizer_launched": false
+}

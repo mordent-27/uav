@@ -39,7 +39,8 @@ def main():
         rows_=[json.loads(x) for x in (h.ROOT/targets['addendum']['full_precision_tasks']).read_text().splitlines()]
         tasks=next(r['tasks'] for r in rows_ if r['case']==T['case']);out=BASE/'replays-decimal'
         np.testing.assert_allclose(tasks,frozen.m.source['instance']['tasks'],atol=5.1e-10,rtol=0.)
-    metadata=native_metadata(frozen,state,tasks);digits=targets['digits'];decimal=None;gap=None
+    if os.environ.get('UAV_STUCK_OUT_DIR'):out=Path(os.environ['UAV_STUCK_OUT_DIR'])  # verification only; default unchanged
+    metadata=native_metadata(frozen,state,tasks);digits=int(os.environ.get('UAV_STUCK_DIGITS',targets['digits']));decimal=None;gap=None
     if metadata is not None:
         value=lambda p:kink.piece_al(kink.reference.evaluate(kink.lowcurv.to_decimal(p),metadata,digits),metadata,digits)
         decimal0=value(y);gap=replay.relative_gap(float(decimal0),f);decimal=value if gap<=targets['decimal_value_gap'] else None

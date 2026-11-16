@@ -1,0 +1,335 @@
+{
+  "plan_commit": "990ccde",
+  "addendum_commit": "1f3eeca",
+  "targets": {
+    "targets": [
+      {
+        "name": "tau6-seed6000000-old",
+        "case": "tau6-seed6000000",
+        "method": "old",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000000-old/result.json",
+        "result_sha256": "56a3f66d29f8d367f10112df31c2a1ac36dce741dc05e87a99b877bb3be3e2c0",
+        "trace": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000000-old/trace.jsonl",
+        "trace_sha256": "28facfb6fdd1611f4d422dc96badfd40ee39f2c67ba1efb8a8bc5f93471ee78c"
+      },
+      {
+        "name": "tau6-seed6000000-onesided",
+        "case": "tau6-seed6000000",
+        "method": "onesided",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000000-onesided/result.json",
+        "result_sha256": "9e1db6ffcb5995646a7b0f426fecc1ac4a83aa8954d7a2d2f411326d78d8008e",
+        "trace": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000000-onesided/trace.jsonl",
+        "trace_sha256": "4af78bb70a139fb56d283f37f44c9d77e7c887845fac795f6cd3a07e3dfa8cc7"
+      },
+      {
+        "name": "tau6-seed6000002-old",
+        "case": "tau6-seed6000002",
+        "method": "old",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+        "result": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000002-old/result.json",
+        "result_sha256": "0f4b264ddffcd6725ccb0cedac8f0ee27c7897fa3c1006d00e80548707414cd5",
+        "trace": "experiments/2026-11-16-switch-onesided/inner/tau6-seed6000002-old/trace.jsonl",
+        "trace_sha256": "f5c278c15577efb0efe569dc30d7307be0b2c7a37b2186c34892f6074527b0fa"
+      }
+    ],
+    "hessian_step": 1e-07,
+    "max_trials": 60,
+    "digits": 80,
+    "decimal_value_gap": 1e-12,
+    "ratio_threshold": 0.0001,
+    "seconds": 60,
+    "reused_modules": {
+      "scripts/trust_region.py": "7014cd4bf8c2ce7407837489de1a3a4eb3a3b3472363b38a78992aede2cbff86",
+      "scripts/tr_acceptance.py": "ddde0fcc291b1bdaddeb593f17f7c95b4e62e486ebd5b38f6f5f262401e41b0a",
+      "experiments/2026-11-16-precise-inner/inner.py": "49d8e8adfdc1a2df5ffc6141b2d28915239e34080f300216712e521fdbff8c25",
+      "experiments/2026-11-16-switch-onesided/onesided.py": "af9a9ff53db833008b024dbf28ef101671a2f0f531befe3a35b57b8c141dc355",
+      "experiments/2026-11-15-stage4-inner/decomposition.py": "4f519b915adc28a71894a2378af1c06d5203aa63dd4d6002b365317596d1ff2f",
+      "experiments/2026-11-16-switch-hessian/fixh.py": "9cdde774849a2fad8fa93965e756f4a2007d9ca418b88b27a5d6744f1a3f2c4a",
+      "experiments/2026-11-16-kink-sides/kink.py": "97d52303cd916892ff7415a2858a588620e5d5584cf29d3e9a8469198397c187",
+      "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+      "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014"
+    },
+    "addendum": {
+      "plan": "experiments/2026-11-16-stuck-trials/PLAN-addendum.md",
+      "plan_sha256": "c84f59c5af8b9a0d3aa307d09292d2fffff4e8d7dc60ddd2e8ef7f6a22dc6b13",
+      "full_precision_tasks": "experiments/2026-11-16-stuck-trials/inputs/full-precision-tasks.jsonl",
+      "full_precision_tasks_sha256": "f6e913b1ad50c646d050e798d0c0a4615df5f8f1624a82b517d66d2ff0df30aa"
+    }
+  },
+  "execution": {
+    "started_utc": "2026-11-16T09:39:32.423930+00:00",
+    "head": "990ccde0449893f9e80e3cf8c92125d13664a9c2",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-stuck-trials/driver.py"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "optimizer_launched": false,
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:39:33.417919+00:00",
+    "seconds": 0.9940108149894513,
+    "runs": [
+      {
+        "name": "tau6-seed6000000-old",
+        "returncode": 0,
+        "seconds": 0.3455750159919262
+      },
+      {
+        "name": "tau6-seed6000000-onesided",
+        "returncode": 0,
+        "seconds": 0.30402280000271276
+      },
+      {
+        "name": "tau6-seed6000002-old",
+        "returncode": 0,
+        "seconds": 0.34207576798507944
+      }
+    ]
+  },
+  "execution_decimal": {
+    "started_utc": "2026-11-16T09:41:51.106196+00:00",
+    "head": "1f3eeca0c48d6babc23f0285fa8a8dd24fe8b391",
+    "command": [
+      "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+      "experiments/2026-11-16-stuck-trials/driver.py",
+      "--full-tasks"
+    ],
+    "workers": 1,
+    "blas_threads": 1,
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "optimizer_launched": false,
+    "environment": {
+      "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "finished_utc": "2026-11-16T09:41:52.143630+00:00",
+    "seconds": 1.037455436977325,
+    "runs": [
+      {
+        "name": "tau6-seed6000000-old",
+        "returncode": 0,
+        "seconds": 0.3524626469879877
+      },
+      {
+        "name": "tau6-seed6000000-onesided",
+        "returncode": 0,
+        "seconds": 0.3682270110002719
+      },
+      {
+        "name": "tau6-seed6000002-old",
+        "returncode": 0,
+        "seconds": 0.3147838079894427
+      }
+    ]
+  },
+  "rows": [
+    {
+      "name": "tau6-seed6000000-old",
+      "value": 2415392.1843791436,
+      "value_ulp": 4.656612873077393e-10,
+      "fallback_threshold": 2.415392184379144e-07,
+      "gradient_inf": 0.0001642640887035264,
+      "start_radius": 2.9103830453141123e-11,
+      "trials": 6,
+      "fallback_trials": 6,
+      "prediction_max": 1.1167492342501495e-14,
+      "prediction_min": 1.0905785174121117e-17,
+      "decimal_ratio_min": 0.9977850795960544,
+      "decimal_ratio_max": 1.0065768771995538,
+      "first_run": {
+        "decimal_available": false,
+        "decimal_value_gap": 1.6797135985471446e-10,
+        "verdict": "acceptance_rule",
+        "stable_ratio_min": -1521971.0793931352,
+        "stable_ratio_max": 28521301.58811865
+      },
+      "addendum": {
+        "decimal_available": true,
+        "decimal_value_gap": 1.9278910080080168e-16,
+        "verdict": "acceptance_rule",
+        "precise_accepting_trials": 6
+      },
+      "gradient_norm_increase": [
+        3.857698891774654e-10,
+        2.1863168431701316e-10,
+        1.71776331819775e-10,
+        1.9263297321202646e-10,
+        1.5099480964609474e-11,
+        1.3401283571355324e-10
+      ]
+    },
+    {
+      "name": "tau6-seed6000000-onesided",
+      "value": 2415392.184396986,
+      "value_ulp": 4.656612873077393e-10,
+      "fallback_threshold": 2.415392184396986e-07,
+      "gradient_inf": 0.0001415428188112047,
+      "start_radius": 1.907348632630554e-06,
+      "trials": 14,
+      "fallback_trials": 14,
+      "prediction_max": 6.251608607724686e-10,
+      "prediction_min": 9.31563556760076e-18,
+      "decimal_ratio_min": 0.9998599010504914,
+      "decimal_ratio_max": 1.0040867058661693,
+      "first_run": {
+        "decimal_available": false,
+        "decimal_value_gap": 1.6797155264257448e-10,
+        "verdict": "acceptance_rule",
+        "stable_ratio_min": -2660445.718819418,
+        "stable_ratio_max": 7908110.005915639
+      },
+      "addendum": {
+        "decimal_available": true,
+        "decimal_value_gap": 1.9278910079937757e-16,
+        "verdict": "acceptance_rule",
+        "precise_accepting_trials": 14
+      },
+      "gradient_norm_increase": [
+        2.7436830666574194e-10,
+        7.719660717955823e-11,
+        1.7444416945027255e-10,
+        2.224319201591697e-10,
+        2.97943621543114e-10,
+        7.390993193986603e-11,
+        5.511771236903912e-11,
+        3.0189014265866176e-12,
+        1.1417839677202446e-10,
+        8.588690750353095e-11,
+        9.717997429990397e-11,
+        8.514704853733804e-11,
+        3.319893199325158e-11,
+        1.0176469682123684e-10
+      ]
+    },
+    {
+      "name": "tau6-seed6000002-old",
+      "value": 33857.194281354714,
+      "value_ulp": 7.275957614183426e-12,
+      "fallback_threshold": 3.3857194281354715e-09,
+      "gradient_inf": 2.3307075025513768e-07,
+      "start_radius": 9.094923790778431e-13,
+      "trials": 4,
+      "fallback_trials": 4,
+      "prediction_max": 1.4459699837456415e-20,
+      "prediction_min": 4.722011357357286e-22,
+      "decimal_ratio_min": 0.5264561716684892,
+      "decimal_ratio_max": 0.9241789005946061,
+      "first_run": {
+        "decimal_available": false,
+        "decimal_value_gap": 1.8203008240726237e-09,
+        "verdict": "acceptance_rule",
+        "stable_ratio_min": -236029099.37704903,
+        "stable_ratio_max": 259037797326.05194
+      },
+      "addendum": {
+        "decimal_available": true,
+        "decimal_value_gap": 3.4384220044791242e-15,
+        "verdict": "acceptance_rule",
+        "precise_accepting_trials": 4
+      },
+      "gradient_norm_increase": [
+        6.232816716205532e-08,
+        1.187005279977537e-07,
+        7.191864153619395e-08,
+        4.7947584213979554e-08
+      ]
+    }
+  ],
+  "reverification": {
+    "report": {
+      "first": {
+        "tau6-seed6000000-old": {
+          "trials": 6,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true
+        },
+        "tau6-seed6000000-onesided": {
+          "trials": 14,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true
+        },
+        "tau6-seed6000002-old": {
+          "trials": 4,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true
+        }
+      },
+      "decimal80": {
+        "tau6-seed6000000-old": {
+          "trials": 6,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 1.9278910080080168e-16,
+          "decimal_identical": true
+        },
+        "tau6-seed6000000-onesided": {
+          "trials": 14,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 1.9278910079937757e-16,
+          "decimal_identical": true
+        },
+        "tau6-seed6000002-old": {
+          "trials": 4,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 3.4384220044791242e-15,
+          "decimal_identical": true
+        }
+      },
+      "decimal100": {
+        "tau6-seed6000000-old": {
+          "trials": 6,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 1.9278910080080168e-16
+        },
+        "tau6-seed6000000-onesided": {
+          "trials": 14,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 1.9278910079937757e-16
+        },
+        "tau6-seed6000002-old": {
+          "trials": 4,
+          "same_trials": true,
+          "verdict": "acceptance_rule",
+          "verdict_same": true,
+          "max_relative_decimal_difference": 0.0,
+          "decimal_value_gap": 3.4384220044791242e-15
+        }
+      }
+    },
+    "outputs_unchanged": true,
+    "optimizer_launched": false
+  },
+  "optimizer_launched": false,
+  "unit_tests": 4
+}

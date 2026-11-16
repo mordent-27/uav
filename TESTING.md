@@ -160,3 +160,15 @@ python -m unittest discover -s experiments/2026-11-16-switch-onesided -p 'test_*
 
 書き始めの検査は差し替えない成分を1と厳密比較して失敗したので、旧方式の値と比べるよう計測前に直した。
 初回の検証は対照の軌道をtraceの文字列で比べ、各行の経過秒の違いで失敗した（`verification-attempt01.log`）。経過秒を除いた受理点で比べて再実行した。
+
+## 止まったTR反復の再生
+
+[止まった試行の再生](experiments/2026-11-16-stuck-trials/REPORT.md)には、合成の二次問題で再生ループが`inner.py`の`solve`と同じ試行順・判定になること、
+半径が潰れるまで拒否が続く例、比と判定、相対差の4件がある。
+
+```bash
+python -m unittest discover -s experiments/2026-11-16-stuck-trials -p 'test_*.py' -v
+```
+
+Decimalの参照は、nativeと同じ問題（全桁のタスク座標）で作り、現在点の値の相対差1e-12で事前に照合する。9桁のJSONタスクでは照合に落ちる。
+再検証は第1回、Decimal 80桁、Decimal 100桁の3通りで再生をやり直し、全試行の記録と一致させた。
