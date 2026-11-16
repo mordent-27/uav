@@ -1,0 +1,59 @@
+{
+  "contexts": [
+    {
+      "case": "tau2-seed2000001",
+      "samples": "experiments/2026-11-16-directional-precision/states/tau2-seed2000001/samples.npz",
+      "samples_sha256": "b7ec09186505be0bab23f04db217bf1a47aac64691f4f7d88bf1b333acac3f4d",
+      "result": "experiments/2026-11-16-directional-precision/states/tau2-seed2000001/result.json",
+      "result_sha256": "6f0b9beee08207e3f0d8ac173329a82cc5285470d89a550863e0cf1226ffe29b",
+      "metadata_source": "experiments/2026-11-16-full-reference/cases/tau2-seed2000001/result.json",
+      "metadata_sha256": "d2aee0ad703f27d381857fe118c55706addba23edba6786ad365d5ed4622ba92"
+    },
+    {
+      "case": "tau6-seed6000002",
+      "samples": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/samples.npz",
+      "samples_sha256": "aef8ccbd0606d83a5872bd21292e5d699d6da5ed894325efa553c91c1da5abfc",
+      "result": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/result.json",
+      "result_sha256": "31383b2f1b400fc951f8984239aff4fe2ebc44ec43b3353a98c0fe2b572dc5fc",
+      "metadata_source": "experiments/2026-11-16-full-reference/cases/tau6-seed6000002/result.json",
+      "metadata_sha256": "a80daecf31091f582e15748f047a4c868fe787cdcd25a987666ac2fcf0298713"
+    }
+  ],
+  "direction": "last_tr_step",
+  "widths": [
+    1e-08,
+    1e-10,
+    1e-12
+  ],
+  "precisions": [
+    80,
+    100
+  ],
+  "derivative_directions": [
+    "negative_gradient",
+    "last_tr_step",
+    "max_gradient_coordinate"
+  ],
+  "decimal_displacements": [
+    "1e-16",
+    "1e-20"
+  ],
+  "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+  "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1",
+  "gradient_check": {
+    "digits": 80,
+    "step": "1e-20",
+    "reference_digits": 100,
+    "reference_step": "1e-24",
+    "max_inf_difference": 1e-10
+  },
+  "inner": {
+    "methods": [
+      "native",
+      "decimal"
+    ],
+    "seconds": 30,
+    "iterations": 300,
+    "gradient_inf_tolerance": 1e-08
+  }
+}
