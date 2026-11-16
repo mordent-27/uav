@@ -1,0 +1,142 @@
+{
+  "case": "tau6-seed6000002",
+  "stage": 13,
+  "variables": 153,
+  "source": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+  "source_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+  "rho": 100000000.0,
+  "lambda_inf": 8314167.097793441,
+  "mu_inf": 918116.849469491,
+  "rows": [
+    {
+      "direction": "negative_gradient",
+      "absolute_error": 1.246098928126724,
+      "normalized_error": 4.083846370913277e-09,
+      "reference_norm": 305128747.4969478,
+      "reference_step_sensitivity": 7.7747379348473e-10,
+      "reference_curvature": 236404519.63603187,
+      "candidate_curvature": 236404519.07951197,
+      "curvature_error": 0.5565198957920074,
+      "curvature_sign_equal": true,
+      "passes": true
+    },
+    {
+      "direction": "random1",
+      "absolute_error": 2.0047352650122843,
+      "normalized_error": 9.184686314072382e-09,
+      "reference_norm": 218269323.1385284,
+      "reference_step_sensitivity": 5.926340462334168e-09,
+      "reference_curvature": 109847986.4440714,
+      "candidate_curvature": 109847986.4516338,
+      "curvature_error": 0.007562398910522461,
+      "curvature_sign_equal": true,
+      "passes": true
+    },
+    {
+      "direction": "random2",
+      "absolute_error": 2.4854677317239178,
+      "normalized_error": 1.1042380687518772e-08,
+      "reference_norm": 225084409.06527045,
+      "reference_step_sensitivity": 3.3899708697341367e-09,
+      "reference_curvature": 101146926.94491364,
+      "candidate_curvature": 101146927.26154381,
+      "curvature_error": 0.31663016974925995,
+      "curvature_sign_equal": true,
+      "passes": true
+    },
+    {
+      "direction": "min_eigenvector",
+      "absolute_error": 5.256942234245317e-06,
+      "normalized_error": 5.256942234245317e-06,
+      "reference_norm": 1.5196557427767272e-07,
+      "reference_step_sensitivity": 7.7319335414936e-08,
+      "reference_curvature": 6.680932672482889e-09,
+      "candidate_curvature": 6.00987459055454e-13,
+      "curvature_error": 6.680331685023833e-09,
+      "curvature_sign_equal": true,
+      "passes": true
+    }
+  ],
+  "symmetry_error": 1.1392265303849486e-08,
+  "additivity_error": 2.3445654109074397e-08,
+  "comparison_passed": true,
+  "raw_hessian_max_asymmetry": 0.331503552733011,
+  "half_step_max_asymmetry": 0.44266926124691963,
+  "min_reference_eigenvalue": -4.230398598746121e-08,
+  "timings": [
+    {
+      "dense_construction": 0.018073512008413672,
+      "setup": 0.00244543599546887,
+      "query": 0.00010793875117087737,
+      "dense_query": 8.174675167538226e-07
+    },
+    {
+      "dense_construction": 0.017168222984764725,
+      "setup": 0.002429075015243143,
+      "query": 0.00010646599548636004,
+      "dense_query": 8.180949953384697e-07
+    },
+    {
+      "dense_construction": 0.01725995700689964,
+      "setup": 0.002465252997353673,
+      "query": 0.0001077210035873577,
+      "dense_query": 7.998350338311866e-07
+    },
+    {
+      "dense_construction": 0.01654760300880298,
+      "setup": 0.0025745299935806543,
+      "query": 0.00010992500028805807,
+      "dense_query": 7.997599459486082e-07
+    },
+    {
+      "dense_construction": 0.017106698011048138,
+      "setup": 0.0025654729979578406,
+      "query": 0.000106145249446854,
+      "dense_query": 7.955024921102449e-07
+    }
+  ],
+  "medians": {
+    "dense_construction": 0.017168222984764725,
+    "setup": 0.002465252997353673,
+    "query": 0.0001077210035873577,
+    "dense_query": 7.998350338311866e-07
+  },
+  "budgets": [
+    {
+      "queries": 1,
+      "dense_seconds": 0.017169022819798554,
+      "directional_seconds": 0.0025729740009410307
+    },
+    {
+      "queries": 5,
+      "dense_seconds": 0.01717222215993388,
+      "directional_seconds": 0.0030038580152904615
+    },
+    {
+      "queries": 10,
+      "dense_seconds": 0.017176221335103038,
+      "directional_seconds": 0.00354246303322725
+    },
+    {
+      "queries": 25,
+      "dense_seconds": 0.017188218860610505,
+      "directional_seconds": 0.0051582780870376155
+    },
+    {
+      "queries": 50,
+      "dense_seconds": 0.017208214736456284,
+      "directional_seconds": 0.007851303176721558
+    },
+    {
+      "queries": 100,
+      "dense_seconds": 0.017248206488147844,
+      "directional_seconds": 0.013237353356089443
+    }
+  ],
+  "warmup": 1,
+  "repetitions": 5,
+  "dense_gradient_calls_per_construction": 307,
+  "directional_gradient_calls_per_query": 2,
+  "constraint_jacobian_calls_per_setup": 1,
+  "optimizer_launched": false
+}

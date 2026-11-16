@@ -1,0 +1,42 @@
+[
+  {
+    "case": "spd",
+    "step": [
+      -1.0,
+      -0.5
+    ],
+    "boundary": false,
+    "iterations": 2,
+    "reason": "residual"
+  },
+  {
+    "case": "negative",
+    "step": [
+      -1.0,
+      0.0
+    ],
+    "boundary": true,
+    "iterations": 1,
+    "reason": "nonpositive_curvature"
+  },
+  {
+    "case": "boundary",
+    "step": [
+      -0.5,
+      0.0
+    ],
+    "boundary": true,
+    "iterations": 1,
+    "reason": "boundary"
+  },
+  {
+    "case": "zero",
+    "step": [
+      0.0,
+      0.0
+    ],
+    "boundary": false,
+    "iterations": 0,
+    "reason": "zero_gradient"
+  }
+]

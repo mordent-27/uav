@@ -1,0 +1,40 @@
+{
+  "started_utc": "2026-11-16T06:23:10.368435+00:00",
+  "command": [
+    "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "experiments/2026-11-16-hvp-high-rho/inner_driver.py"
+  ],
+  "head": "794f7f292501518645602868ee92942ff96c99f7",
+  "workers": 1,
+  "blas_threads": 1,
+  "seconds_per_solve": 30,
+  "max_iterations": 300,
+  "gradient_inf_tolerance": 1e-08,
+  "frozen_al_only": true,
+  "outer_solver_launched": false,
+  "analytic_checks_passed": 4,
+  "finished_utc": "2026-11-16T06:23:12.840653+00:00",
+  "seconds": 2.4722432199923787,
+  "runs": [
+    {
+      "case": "tau2-seed2000001",
+      "method": "dense",
+      "returncode": 0
+    },
+    {
+      "case": "tau2-seed2000001",
+      "method": "cg",
+      "returncode": 0
+    },
+    {
+      "case": "tau6-seed6000002",
+      "method": "dense",
+      "returncode": 0
+    },
+    {
+      "case": "tau6-seed6000002",
+      "method": "cg",
+      "returncode": 0
+    }
+  ]
+}
