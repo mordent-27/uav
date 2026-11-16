@@ -73,3 +73,15 @@ python experiments/2026-11-16-directional-precision/test_ledger.py -v
 
 これらは内訳計算の契約を調べるテストで、元カーネルの倍精度評価が微小幅まで正確という保証ではない。
 次は線形上下限の差と電池写像の差を、解析例/高精度参照と照合して補強する。
+
+## 電池・線形上下限のDecimal参照
+
+[独立参照](experiments/2026-11-16-component-reference/REPORT.md)の充電恒等性、CC直線、CV指数、符号付き逆写像、
+PHR差分、制約配置/上下限の既知値、指数上限の7テストが通過した。標準ライブラリだけで実行できる。
+
+```bash
+python experiments/2026-11-16-component-reference/test_reference.py -v
+```
+
+実データ14点では80/100桁の成分値差も照合した。他の制約や勾配まで高精度化したという保証ではない。
+今後、タスクを含む参照を作る場合は、9桁に丸められたJSON座標を全精度入力として使わず、元seedから全桁で再構成する。
