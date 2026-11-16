@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-16",
+  "plan_commit": "11ac55a",
+  "cwd": "/home/mordent/robotech/3A/optimization/uav",
+  "commands": [
+    "python3 -m unittest discover -s experiments/2026-11-16-outer-stall -p 'test_*.py' -v > experiments/2026-11-16-outer-stall/tests.log 2>&1",
+    "cd experiments/2026-11-16-outer-stall && python3 replay.py",
+    "cd experiments/2026-11-16-outer-stall && python3 replay.py --check",
+    "OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=<uv env> <uv python> experiments/2026-11-16-outer-stall/capture.py"
+  ],
+  "recorded_by": "the launching session itself, at the time of the run",
+  "model_note": "planned and run with Opus",
+  "unit_tests": 5,
+  "replayed_logs": 38,
+  "optimizer_launched": false
+}

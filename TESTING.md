@@ -194,3 +194,14 @@ python -m unittest discover -s experiments/2026-11-16-outer-b1 -p 'test_*.py' -v
 ```
 
 実データでは全外側行の乗数更新・指標・rhoの規則を前の行の文脈から別プロセスで再計算し、ビット単位で一致させた。内側ログは大きいので管理外にし、hashを残した。
+
+## 外側停滞の打ち切り規則
+
+[外側停滞の停止基準](experiments/2026-11-16-outer-stall/REPORT.md)には、違反一定で2K行目に成立、速く下がると不成立、許容以下で不成立、
+rhoが上限でない行を含むと不成立、合格前の成立を誤停止と数えることの5件がある（標準ライブラリのみ）。
+
+```bash
+python3 -m unittest discover -s experiments/2026-11-16-outer-stall -p 'test_*.py' -v
+```
+
+実データは保存済みの外側ログ38本の再生だけで、別プロセスで再計算して一致させた。
