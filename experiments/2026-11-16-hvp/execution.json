@@ -1,0 +1,47 @@
+{
+  "started_utc": "2026-11-16T05:50:47.676677+00:00",
+  "command": [
+    "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "experiments/2026-11-16-hvp/driver.py"
+  ],
+  "head": "80acae3973fff3fc502566798fdbe5214024ea82",
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "casadi": "3.8.2"
+  },
+  "workers": 1,
+  "blas_threads": 1,
+  "optimizer_launched": false,
+  "environment": {
+    "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "finished_utc": "2026-11-16T05:50:49.818263+00:00",
+  "seconds": 2.1417514579952694,
+  "runs": [
+    {
+      "case": "tau2-seed2000001",
+      "stage": 1,
+      "returncode": 0
+    },
+    {
+      "case": "tau2-seed2000001",
+      "stage": 13,
+      "returncode": 0
+    },
+    {
+      "case": "tau6-seed6000002",
+      "stage": 1,
+      "returncode": 0
+    },
+    {
+      "case": "tau6-seed6000002",
+      "stage": 13,
+      "returncode": 0
+    }
+  ]
+}
