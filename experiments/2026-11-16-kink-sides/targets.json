@@ -1,0 +1,243 @@
+{
+  "side": {
+    "context": {
+      "case": "tau6-seed6000002",
+      "samples": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/samples.npz",
+      "samples_sha256": "aef8ccbd0606d83a5872bd21292e5d699d6da5ed894325efa553c91c1da5abfc",
+      "result": "experiments/2026-11-16-directional-precision/states/tau6-seed6000002/result.json",
+      "result_sha256": "31383b2f1b400fc951f8984239aff4fe2ebc44ec43b3353a98c0fe2b572dc5fc",
+      "metadata_source": "experiments/2026-11-16-full-reference/cases/tau6-seed6000002/result.json",
+      "metadata_sha256": "a80daecf31091f582e15748f047a4c868fe787cdcd25a987666ac2fcf0298713",
+      "precise_inner_gradient_check": "experiments/2026-11-16-precise-inner/gradient-checks/tau6-seed6000002.json",
+      "precise_inner_gradient_check_sha256": "fccb8f419ddb792846a4f985ebb575e60aebd235e1bf63bdee821fdd729838cb"
+    },
+    "index": 185,
+    "expected_kind": "charge_nonnegative[30]",
+    "equalities": 68,
+    "inequalities": 186,
+    "modes": [
+      "inactive",
+      "active"
+    ],
+    "newton_steps": 5,
+    "pinv_rcond": 1e-15,
+    "digits": 80,
+    "gradient_step": "1e-20",
+    "reference_digits": 100,
+    "reference_step": "1e-24",
+    "gradient_agreement_inf": 1e-10,
+    "gradient_inf_target": 1e-08,
+    "lattice": {
+      "limit": 8,
+      "sweeps": 5
+    },
+    "seconds": 300
+  },
+  "floors": {
+    "states": [
+      {
+        "case": "tau1-seed1000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "36a2e9f8868eb30f0b23504057f8305d3f3f6a40ba5beb1df908fd59ffbae1a9",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000000/stages/stage13/result.json",
+        "result_sha256": "f989f286580ccf76fbef3d904dd6f68c591256f3520c4563734f48bcec62e523"
+      },
+      {
+        "case": "tau1-seed1000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "904a4c9e4f54910a6903d8d964aee6233e4b29bb87f424455fc3aa5bc6992fe4",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000001/stages/stage13/result.json",
+        "result_sha256": "3d9500912f6986ec02da696bd7bba42c197c542b72ab903de6d7bf73d155f28d"
+      },
+      {
+        "case": "tau1-seed1000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "3bf732cfb14ad2e1a9e616c517ae7ed8b7e3a91e951b5d300187367c819d3757",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau1-seed1000002/stages/stage13/result.json",
+        "result_sha256": "81b421c0ac2435c83f78b6822a1df9e1237026f5e507503d2879755571117848"
+      },
+      {
+        "case": "tau2-seed2000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "3578fb8ff1e1ce13c1d89c342e114170615996cb576cd264b705380f1e1f11a6",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000000/stages/stage13/result.json",
+        "result_sha256": "d4c626be0a7d49c42293bf4d53ce88ebfc78aedfb6bff6637cfb049075b96a49"
+      },
+      {
+        "case": "tau2-seed2000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8cf37aae4b2bcafb0534d4fdb64102c5bdbf0dc2bf78268963423f8eaf67adb4",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000001/stages/stage13/result.json",
+        "result_sha256": "0c4908c023b5612ace47305d6f45b648de49d7209b8102a6c82e500c36fc34d3"
+      },
+      {
+        "case": "tau2-seed2000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "1d2896aba779aba3b0b983721da45cc439f5ef19af2bcfe956fe3cf5b679c9e2",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau2-seed2000002/stages/stage13/result.json",
+        "result_sha256": "099e7f309032173e482c0a43f86f3bb07ba870c40e790b90e6e5eb14aeec368a"
+      },
+      {
+        "case": "tau3-seed3000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "1ab3b0eee548776bb1253f6f25bf9da4d309634779cd29bff0ca6f6320935c67",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000000/stages/stage13/result.json",
+        "result_sha256": "92eddf5678ed1285eedb110394e57f4637b354435e7528b976d4b26903d61e74"
+      },
+      {
+        "case": "tau3-seed3000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "d0324b0370e1a11c15d261afac007a338e4e7a07c61e9872ecab1e7c5b7380a5",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau3-seed3000001/stages/stage13/result.json",
+        "result_sha256": "de78b5b5beb0848af4f937c71a0731564cbff1cdb2968def12b63200bb03d649"
+      },
+      {
+        "case": "tau4-seed4000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "6fd226552186b010ab04a28e002e30c4764e355ea87b066d020baf639452c0dc",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000000/stages/stage13/result.json",
+        "result_sha256": "19cae25f2f867e51e74cd29be01e446cf11ea676a03d841eee68731702e5c8dd"
+      },
+      {
+        "case": "tau4-seed4000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "e6fb550fa383e746ddc385afb9c920ac0148a507005c0707e87242ca9195b95d",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000001/stages/stage13/result.json",
+        "result_sha256": "5510a21c0dbb60e8c7c56ad516a46d0e000026e1384e742290fba2998cd2c96d"
+      },
+      {
+        "case": "tau4-seed4000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "bc322ded10092ca7452db18db59f07f17dd236c547dddc82d9d25aa74acaf1d0",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000002/stages/stage13/result.json",
+        "result_sha256": "09df1402939e6a83eeaef5fb14d250cd8cc382c959f61584c3f2a5f1d68b2823"
+      },
+      {
+        "case": "tau5-seed5000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "6a45dfca859b91d1e17777846d85eea1fd03bdf0fbade57d389406a8ecf68271",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000000/stages/stage13/result.json",
+        "result_sha256": "fdc040d0f0ee6417d26a0b5488a168c662514019804c612112839af9994e487c"
+      },
+      {
+        "case": "tau5-seed5000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "e64cae370a8a1416a7b8b82603560800603a813d2019d53fa878c63deb7c800d",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau5-seed5000001/stages/stage13/result.json",
+        "result_sha256": "10902c7766d63e41bba08690609c579d8e058018634b9ab0bb59f0afbcc2aeaa"
+      },
+      {
+        "case": "tau6-seed6000000",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "b2c5508995de1ad0fd7347a7c347953753d2aafafe2145bf1db120e8933ce234",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000000/stages/stage13/result.json",
+        "result_sha256": "b824cc14821bbe98d6e6407de9ad4705d31a037949e8831d43fcf9fdb3d3e829"
+      },
+      {
+        "case": "tau6-seed6000001",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "12331a3917e70d8c0f2c8a9ba2518619d77355fbb036e9488d4636f872a04e13",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000001/stages/stage13/result.json",
+        "result_sha256": "f55e21dd50e599bc81d58d33d19589c5425135b0d17d5c2418a1f1aab9640b7e"
+      },
+      {
+        "case": "tau6-seed6000002",
+        "stage": "stage13",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/checkpoint.json",
+        "checkpoint_sha256": "8b5ae540746b7ab85a9f7a8bdf524a78699493fbedaff7935f12a3aa2a0d078c",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau6-seed6000002/stages/stage13/result.json",
+        "result_sha256": "9eeecf7f40aaa326c8ef127e0a9d361193dc13c8ef127e5205553fd3057e6c9e"
+      },
+      {
+        "case": "tau7-seed7000000",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000000/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "9862667dba65c0e761a9b11c6410693f88b86aa8a2b5541321848194e91abf1b",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000000/stages/stage01/result.json",
+        "result_sha256": "ab15d13c4d21e8173c83a0bd7b978e6e80bdf49640fa42aa7ca582f09a53498c"
+      },
+      {
+        "case": "tau7-seed7000001",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000001/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "6bf29b49a4eb49b69ebe4ccd60be318183c1bbf643a05b5ca855e72050e8f9f3",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau7-seed7000001/stages/stage01/result.json",
+        "result_sha256": "0c99b53f053e1be72c0de5ff89e86e662a174b1b158ecadf7d7d0fa7dfad71a2"
+      },
+      {
+        "case": "tau8-seed8000000",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000000/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "18d3eb9461dff50698df769289721d7cd47792c82ad5b867708b5e06778f4b0d",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000000/stages/stage01/result.json",
+        "result_sha256": "d21e27ee813194cff656068f33885e40a7439d940a69c047d6270b77dfc596f3"
+      },
+      {
+        "case": "tau8-seed8000001",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000001/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "647ac0f2650d2c9926ea24981fd9768070e5d5efbc62b92ab3b4d5c2b70824f7",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000001/stages/stage01/result.json",
+        "result_sha256": "c52747e72cd76115cc75850943e8121588b59cb5df0efbca9300c64f8413daa0"
+      },
+      {
+        "case": "tau8-seed8000002",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000002/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "599b063ce153ad5d0e3c33e7a79b5b3ae1985c357137d39ae231cb8fdc973499",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau8-seed8000002/stages/stage01/result.json",
+        "result_sha256": "40b245495227f205d439cb1a69f179705922b1da749f661c27e54be31c3e14bb"
+      },
+      {
+        "case": "tau9-seed9000000",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000000/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "0043f23f4aa3ef3b96713c7772179cd3d0d37d9a5b54c3ddad43d7fc0ffea0ad",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000000/stages/stage01/result.json",
+        "result_sha256": "9a7e25a5a601cc48d061cf5e999478be1a3403c0ccfd46fb09423745407c27d9"
+      },
+      {
+        "case": "tau9-seed9000001",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000001/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "4b2036da6e9d2a18d01361eee8c4fbefa9a4f34eadaea507ba3e42d45a2072e0",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000001/stages/stage01/result.json",
+        "result_sha256": "6fcea3a2b9279adfff8245cba5f3a34297db776fc1e11712f99bc82fe624894d"
+      },
+      {
+        "case": "tau9-seed9000002",
+        "stage": "stage01",
+        "checkpoint": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000002/stages/stage01/checkpoint.json",
+        "checkpoint_sha256": "c281f9fdd6c0be3464b4405364d579104714afd28cb29d6761b648447eeabd6f",
+        "result": "experiments/2026-11-16-r3a-cohort/cases/G/tau9-seed9000002/stages/stage01/result.json",
+        "result_sha256": "7b55aa4c8d1c4f6270ab7795c3bd8f028c42bb1ec474872be109ffd72c07b391"
+      }
+    ],
+    "hessian_step": 1e-07,
+    "threshold": 1e-08,
+    "seconds": 300
+  },
+  "full_precision_tasks": "experiments/2026-11-16-full-reference/inputs/full-precision-tasks.jsonl",
+  "full_precision_tasks_sha256": "707f98ff9575ea5c0aed886f91c78950526560a89687afcc098ddbbd25f140d1",
+  "reused_modules": {
+    "experiments/2026-11-16-precise-inner/reference.py": "2267a38ee5ca121c39136770ffcafa7d6ca4e67253ac1a3c4e7c9fa47a7d8fa1",
+    "experiments/2026-11-16-precise-inner/precision.py": "d7a0ea88df05aea07fa3611730391a12e139e89e81e48b3027fc86e12ab16014",
+    "experiments/2026-11-16-precise-inner/battery_reference.py": "ee4280e080b594b29db76e4b2c5ae7bc443809d1e9a16a0aba7300a17201848c",
+    "experiments/2026-11-16-curvature-rounding/lowcurv.py": "98ae0ed56b04e478f314962801f1e44267491c573270d36d43853b57ffce9725"
+  }
+}
