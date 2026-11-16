@@ -1,0 +1,77 @@
+{
+  "case": "tau4-seed4000002",
+  "route": "fallback",
+  "outcome": {
+    "case": "tau4-seed4000002",
+    "final_common_kkt": true,
+    "final_both_scales_kkt": true,
+    "last_restoration_solver_accepted": true,
+    "restoration_attempted": true,
+    "physical_point_available": true,
+    "selected": "restoration",
+    "selected_hours": 1.2923843755312032,
+    "selected_same_final_branch_kkt": true,
+    "common_kkt_and_final_certificate": true,
+    "both_scales_kkt_and_final_certificate": true,
+    "successful_restoration_preserved_exactly": true,
+    "initialization_certificate_valid": false,
+    "solver_source": "experiments/2026-11-16-r3a-cohort/cases/fallback/tau4-seed4000002",
+    "initialization_source": "experiments/2026-11-16-r3a-cohort/initializations/tau4-seed4000002",
+    "allow_repair_backups": true,
+    "seconds": 0.11256107399822213,
+    "selected_sha256": "08c659a1802f955e70c538c3144ba6fb30cd384bd1b45fdbacd2f55bd47113b9",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": true,
+  "g_source": "experiments/2026-11-16-r3a-cohort/cases/G/tau4-seed4000002",
+  "g_reused": false,
+  "fallback_cache_used": false,
+  "seconds": 270.5695810710022,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.6032745920238085,
+      "returncode": 0
+    },
+    {
+      "script": "g_case",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 262.96071724698413,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.4622685519861989,
+      "returncode": 0
+    },
+    {
+      "script": "guard",
+      "phase": "fallback",
+      "kind": "original",
+      "seconds": 0.3666746100061573,
+      "returncode": 0
+    },
+    {
+      "script": "fallback_phase",
+      "phase": "fallback",
+      "kind": "original",
+      "seconds": 5.698256725008832,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "fallback",
+      "kind": "original",
+      "seconds": 0.4714498220128007,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}

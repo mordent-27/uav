@@ -1,0 +1,73 @@
+{
+  "planning_only": true,
+  "started": 24,
+  "remaining": 876,
+  "full_batches": 3,
+  "observed_batch_seconds": [
+    473.19870580901625,
+    374.2645837489981,
+    774.5200323769823
+  ],
+  "remaining_blocks": 110,
+  "block_schedule_hours": {
+    "mean": 16.52020050118978,
+    "observed_min": 11.435862281219388,
+    "observed_max": 23.66588987818557
+  },
+  "pooled_case_time_divided_by_8_hours": 6.0795750367320744,
+  "pooled_note": "An optimistic work-conversion reference for a continuously occupied 8-worker queue, not a bound or a prediction; the frozen driver does not use this schedule.",
+  "by_tau": {
+    "1": {
+      "cases": 3,
+      "mean_case_seconds": 21.23941077433604,
+      "max_case_seconds": 24.553405550017487
+    },
+    "2": {
+      "cases": 3,
+      "mean_case_seconds": 39.8442016276725,
+      "max_case_seconds": 54.11549148100312
+    },
+    "3": {
+      "cases": 2,
+      "mean_case_seconds": 86.22103466300177,
+      "max_case_seconds": 97.46691017501871
+    },
+    "4": {
+      "cases": 3,
+      "mean_case_seconds": 268.1591927876677,
+      "max_case_seconds": 290.8152213799767
+    },
+    "5": {
+      "cases": 2,
+      "mean_case_seconds": 405.9128013005102,
+      "max_case_seconds": 604.486802843021
+    },
+    "6": {
+      "cases": 3,
+      "mean_case_seconds": 540.6490451629992,
+      "max_case_seconds": 774.5063188530039
+    },
+    "7": {
+      "cases": 2,
+      "mean_case_seconds": 134.7102632400056,
+      "max_case_seconds": 139.8852935800096
+    },
+    "8": {
+      "cases": 3,
+      "mean_case_seconds": 144.3315337706687,
+      "max_case_seconds": 149.79191921598976
+    },
+    "9": {
+      "cases": 3,
+      "mean_case_seconds": 166.89206625133133,
+      "max_case_seconds": 245.47278078299132
+    }
+  },
+  "caveats": [
+    "Only a small prefix of the frozen cohort has been observed.",
+    "The remaining task mix, convergence paths and timeouts differ.",
+    "Batch tails leave workers idle; phase walltimes are not CPU time.",
+    "Verification, agent work and documentation outside the driver are additional.",
+    "No scheduling or numerical setting was changed for this calculation."
+  ]
+}

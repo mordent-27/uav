@@ -1,0 +1,386 @@
+{
+  "optimizer_launched_by_verification": false,
+  "cases": 4,
+  "solves": 8,
+  "all_points_rechecked": true,
+  "source_files_unchanged": true,
+  "only_option_change": "ipopt.bound_push: default 0.01 -> 1e-8",
+  "arms": {
+    "baseline": {
+      "accepted": 2,
+      "failure_cases_accepted": 0,
+      "controls_accepted": 2
+    },
+    "small_push": {
+      "accepted": 3,
+      "failure_cases_accepted": 2,
+      "controls_accepted": 1
+    }
+  },
+  "execution_seconds": 1.2336697510036174,
+  "rows": [
+    {
+      "case": "tau4-seed4000001",
+      "arm": "baseline",
+      "stratum": "failure",
+      "solver_success": false,
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "iterations": 1500,
+      "raw_kkt": {
+        "stat": 6.928810200207414e-05,
+        "feas": 455.8052041736085,
+        "comp": 455.8052041736085,
+        "dual": 0.0
+      },
+      "accepted": false,
+      "seconds": 0.4329895020055119,
+      "checks": null,
+      "provided_start_violation": 1.5987211554602255e-15,
+      "first_iterate_violation": 0.009999999999999966,
+      "first_minus_provided_inf": 0.010000000000000009,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 1.0000000000000009,
+      "callback_calls": 1502,
+      "source": "experiments/2026-11-16-r3a-cohort/initializations/tau4-seed4000001",
+      "starting_point_sha256": "ea671b70da8e082f02f0fb46a341f65a43c8c0305caa25c5842b3426d3892e64",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau4-seed4000001",
+      "arm": "small_push",
+      "stratum": "failure",
+      "solver_success": true,
+      "solver_status": "Solve_Succeeded",
+      "iterations": 1403,
+      "raw_kkt": {
+        "stat": 2.6921535718299607e-11,
+        "feas": 2.1438850694721624e-12,
+        "comp": 2.0351009681776926e-08,
+        "dual": 0.0
+      },
+      "accepted": true,
+      "seconds": 0.4724719939986244,
+      "checks": {
+        "duration_correction": 0.0,
+        "objective": 2.4674991721997808,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.007613620318537e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 2.6921535718299607e-11,
+          "feas": 2.3822801641527198e-23,
+          "comp": 2.0351010401020395e-08,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        }
+      },
+      "provided_start_violation": 1.5987211554602255e-15,
+      "first_iterate_violation": 9.999999228682556e-09,
+      "first_minus_provided_inf": 9.999999994736442e-09,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 9.999999994736442e-07,
+      "callback_calls": 1421,
+      "source": "experiments/2026-11-16-r3a-cohort/initializations/tau4-seed4000001",
+      "starting_point_sha256": "ea671b70da8e082f02f0fb46a341f65a43c8c0305caa25c5842b3426d3892e64",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau9-seed9000001",
+      "arm": "baseline",
+      "stratum": "failure",
+      "solver_success": false,
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "iterations": 1500,
+      "raw_kkt": {
+        "stat": 0.03426893979590718,
+        "feas": 214.58595388525626,
+        "comp": 214.58595388525626,
+        "dual": 0.0
+      },
+      "accepted": false,
+      "seconds": 0.68895012800931,
+      "checks": null,
+      "provided_start_violation": 3.087959713342839e-15,
+      "first_iterate_violation": 0.009999999999999966,
+      "first_minus_provided_inf": 0.010000000000000009,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 1.0000000000000009,
+      "callback_calls": 1510,
+      "source": "experiments/2026-11-16-r3a-cohort/initializations/tau9-seed9000001",
+      "starting_point_sha256": "a361674341c0022c560fb1e7ec91975f2ae49289951fb844650c606a481d359a",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau9-seed9000001",
+      "arm": "small_push",
+      "stratum": "failure",
+      "solver_success": true,
+      "solver_status": "Solve_Succeeded",
+      "iterations": 684,
+      "raw_kkt": {
+        "stat": 8.148603831159477e-11,
+        "feas": 3.197442310920451e-15,
+        "comp": 3.142614138821356e-08,
+        "dual": 0.0
+      },
+      "accepted": true,
+      "seconds": 0.31658172301831655,
+      "checks": {
+        "duration_correction": 0.0,
+        "objective": 3.0706062918829007,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0076785871004912e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 8.148603831159477e-11,
+          "feas": 7.993605777301127e-16,
+          "comp": 3.1426142412504746e-08,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        }
+      },
+      "provided_start_violation": 3.087959713342839e-15,
+      "first_iterate_violation": 9.999999228682556e-09,
+      "first_minus_provided_inf": 9.999999994736442e-09,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 9.999999994736442e-07,
+      "callback_calls": 687,
+      "source": "experiments/2026-11-16-r3a-cohort/initializations/tau9-seed9000001",
+      "starting_point_sha256": "a361674341c0022c560fb1e7ec91975f2ae49289951fb844650c606a481d359a",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau3-seed3002",
+      "arm": "baseline",
+      "stratum": "control",
+      "solver_success": true,
+      "solver_status": "Solve_Succeeded",
+      "iterations": 33,
+      "raw_kkt": {
+        "stat": 2.0816681711721685e-17,
+        "feas": 3.197442310920451e-15,
+        "comp": 2.655517468790506e-09,
+        "dual": 0.0
+      },
+      "accepted": true,
+      "seconds": 0.028168831020593643,
+      "checks": {
+        "duration_correction": 0.0,
+        "objective": 2.0300844135640923,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.005668515130509e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 2.0816681711721685e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.655517330174226e-09,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        }
+      },
+      "provided_start_violation": 1.078221754152322e-15,
+      "first_iterate_violation": 0.009999999999999966,
+      "first_minus_provided_inf": 0.010000000000000009,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 1.0000000000000009,
+      "callback_calls": 34,
+      "source": "experiments/2026-11-16-r2i-fresh-entry/initializations/tau3-seed3002",
+      "starting_point_sha256": "1c3ef523b56aec6aef099dfc97629fabd668179db31074590e3da6a529cd2fd2",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau3-seed3002",
+      "arm": "small_push",
+      "stratum": "control",
+      "solver_success": true,
+      "solver_status": "Solve_Succeeded",
+      "iterations": 33,
+      "raw_kkt": {
+        "stat": 7.632783294297951e-17,
+        "feas": 3.197442310920451e-15,
+        "comp": 2.6646966412723788e-09,
+        "dual": 0.0
+      },
+      "accepted": true,
+      "seconds": 0.01999063597759232,
+      "checks": {
+        "duration_correction": 0.0,
+        "objective": 2.0300844135650946,
+        "original_residuals": {
+          "viol": 3.469446951953614e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 3.469446951953614e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0056881105668936e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 7.632783294297951e-17,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.6646955883277073e-09,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        }
+      },
+      "provided_start_violation": 1.078221754152322e-15,
+      "first_iterate_violation": 9.999999228682556e-09,
+      "first_minus_provided_inf": 9.999999994736442e-09,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 9.999999994736442e-07,
+      "callback_calls": 34,
+      "source": "experiments/2026-11-16-r2i-fresh-entry/initializations/tau3-seed3002",
+      "starting_point_sha256": "1c3ef523b56aec6aef099dfc97629fabd668179db31074590e3da6a529cd2fd2",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau7-seed7002",
+      "arm": "baseline",
+      "stratum": "control",
+      "solver_success": true,
+      "solver_status": "Solve_Succeeded",
+      "iterations": 98,
+      "raw_kkt": {
+        "stat": 2.574664483348532e-11,
+        "feas": 3.197442310920451e-15,
+        "comp": 2.7820830579557373e-08,
+        "dual": 0.0
+      },
+      "accepted": true,
+      "seconds": 0.06581681600073352,
+      "checks": {
+        "duration_correction": 0.0,
+        "objective": 3.120687869510029,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0075254630592667e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 2.574664483348532e-11,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.782083476008356e-08,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        }
+      },
+      "provided_start_violation": 1.5987211554602255e-15,
+      "first_iterate_violation": 0.009999999999999966,
+      "first_minus_provided_inf": 0.010000000000000009,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 1.0000000000000009,
+      "callback_calls": 99,
+      "source": "experiments/2026-11-16-r2i-fresh-entry/initializations/tau7-seed7002",
+      "starting_point_sha256": "dda4f53c599723de426d090f9628078fe6ea073180791346789f23987bfad47b",
+      "paper_reproduction": false
+    },
+    {
+      "case": "tau7-seed7002",
+      "arm": "small_push",
+      "stratum": "control",
+      "solver_success": false,
+      "solver_status": "Maximum_Iterations_Exceeded",
+      "iterations": 1500,
+      "raw_kkt": {
+        "stat": 0.0544198516062872,
+        "feas": 19.526300132771944,
+        "comp": 19.526300132771944,
+        "dual": 0.004276667127422421
+      },
+      "accepted": false,
+      "seconds": 0.5835981020063628,
+      "checks": null,
+      "provided_start_violation": 1.5987211554602255e-15,
+      "first_iterate_violation": 9.999999228682556e-09,
+      "first_minus_provided_inf": 9.999999994736442e-09,
+      "first_position_delta_km_inf": 0.0,
+      "first_energy_delta_inf": 0.0,
+      "first_duration_delta_seconds_inf": 9.999999994736442e-07,
+      "callback_calls": 1509,
+      "source": "experiments/2026-11-16-r2i-fresh-entry/initializations/tau7-seed7002",
+      "starting_point_sha256": "dda4f53c599723de426d090f9628078fe6ea073180791346789f23987bfad47b",
+      "paper_reproduction": false
+    }
+  ],
+  "conclusion": "Input bound adjustment changes the starting point and convergence path. Two failures recover but one successful control regresses; do not adopt globally or change the frozen 900 protocol.",
+  "paper_reproduction": false
+}

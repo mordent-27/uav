@@ -1,0 +1,43 @@
+{
+  "optimizer_launched": false,
+  "outputs_changed": false,
+  "cases": [
+    {
+      "case": "tau2-seed2000002",
+      "selected": "original",
+      "fixed_branch_infeasibility_proven": false,
+      "initial_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.3877787807814457e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.3877787807814457e-16,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.2083248014925131,
+        "max_energy": 1,
+        "dense_min_energy": 0.2083248014925131,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "same_branch_as_original_with_problem_tolerance_1e_9": true,
+      "same_modes_exact": true,
+      "same_task_stamps_exact": true,
+      "solver_status": "Solve_Succeeded",
+      "solver_success": true,
+      "iterations": 10,
+      "reason": "solver flag or fixed-branch KKT of the returned point",
+      "recomputed_raw_kkt": {
+        "stat": 2.015537776351513e-13,
+        "feas": 1.5987211554602255e-15,
+        "comp": 3.034003146495934e-06,
+        "dual": 0.0
+      }
+    }
+  ]
+}

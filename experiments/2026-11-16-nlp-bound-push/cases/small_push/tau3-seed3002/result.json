@@ -1,0 +1,56 @@
+{
+  "case": "tau3-seed3002",
+  "arm": "small_push",
+  "stratum": "control",
+  "solver_success": true,
+  "solver_status": "Solve_Succeeded",
+  "iterations": 33,
+  "raw_kkt": {
+    "stat": 7.632783294297951e-17,
+    "feas": 3.197442310920451e-15,
+    "comp": 2.6646966412723788e-09,
+    "dual": 0.0
+  },
+  "accepted": true,
+  "seconds": 0.01999063597759232,
+  "checks": {
+    "duration_correction": 0.0,
+    "objective": 2.0300844135650946,
+    "original_residuals": {
+      "viol": 3.469446951953614e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 3.469446951953614e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 1.0056881105668936e-08,
+    "max_energy": 1.0,
+    "final_kkt": {
+      "stat": 7.632783294297951e-17,
+      "feas": 1.5987211554602255e-15,
+      "comp": 2.6646955883277073e-09,
+      "dual": 0.0
+    },
+    "tasks_exact": true,
+    "checks": {
+      "correction": true,
+      "residual": true,
+      "energy": true,
+      "tasks": true,
+      "branch_kkt": true,
+      "dense_energy": true
+    }
+  },
+  "provided_start_violation": 1.078221754152322e-15,
+  "first_iterate_violation": 9.999999228682556e-09,
+  "first_minus_provided_inf": 9.999999994736442e-09,
+  "first_position_delta_km_inf": 0.0,
+  "first_energy_delta_inf": 0.0,
+  "first_duration_delta_seconds_inf": 9.999999994736442e-07,
+  "callback_calls": 34,
+  "source": "experiments/2026-11-16-r2i-fresh-entry/initializations/tau3-seed3002",
+  "starting_point_sha256": "1c3ef523b56aec6aef099dfc97629fabd668179db31074590e3da6a529cd2fd2",
+  "paper_reproduction": false
+}
