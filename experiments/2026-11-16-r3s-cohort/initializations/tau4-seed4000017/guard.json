@@ -1,0 +1,81 @@
+{
+  "accepted": true,
+  "action": "repair",
+  "original_audit": {
+    "accepted": false,
+    "original_residuals": {
+      "viol": 0.14054444718295522,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 8.881784197001252e-16,
+      "viol_bounds": 0.14054444718295522,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": -0.14054444718295522,
+    "max_energy": 1,
+    "dense_min_energy": -0.14054444718295522,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 0,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "charge_fraction": 0.99,
+  "interior_margin": 0.001,
+  "energy_buffer": 1e-08,
+  "changes": [
+    {
+      "stamp": 5,
+      "region": 0,
+      "before": [
+        -4.467252974784892,
+        4.441765195136122
+      ],
+      "after": [
+        -2.373707832789126,
+        2.5108251145123863
+      ]
+    },
+    {
+      "stamp": 10,
+      "region": 2,
+      "before": [
+        6.745171983406294,
+        -5.497902248208931
+      ],
+      "after": [
+        6.812694098250881,
+        -4.084955905067023
+      ]
+    }
+  ],
+  "unrestricted_infeasibility_proven": false,
+  "final_audit": {
+    "accepted": true,
+    "original_residuals": {
+      "viol": 8.881784197001252e-16,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 8.881784197001252e-16,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 0.009618087526988006,
+    "max_energy": 1,
+    "dense_min_energy": 0.009618087526988006,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 0,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "objective_hours": 4.2666363854772555,
+  "same_modes": true,
+  "same_task_stamps": true,
+  "same_stamps": true,
+  "case": "tau4-seed4000017",
+  "seconds": 0.08645730902208015,
+  "baseline_y_verified": false,
+  "native_stamps": 22,
+  "native_variables": 103
+}

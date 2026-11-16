@@ -1,0 +1,64 @@
+{
+  "batch": 41,
+  "cases": [
+    "tau9-seed9000036",
+    "tau1-seed1000036",
+    "tau3-seed3000036",
+    "tau5-seed5000036",
+    "tau7-seed7000036",
+    "tau2-seed2000037",
+    "tau4-seed4000037",
+    "tau6-seed6000037"
+  ],
+  "status": "complete",
+  "started_utc": "2026-11-16T17:33:48.484244+00:00",
+  "command": [
+    "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "experiments/2026-11-16-r3s-cohort/driver.py",
+    "--batch",
+    "41"
+  ],
+  "cwd": "/home/mordent/robotech/3A/optimization/uav",
+  "head": "195ecf952c85eedd57679558dcd33585d2d08265",
+  "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.0",
+    "casadi": "3.8.2"
+  },
+  "workers": 8,
+  "blas_threads": 1,
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "pid": 68016,
+  "environment": {
+    "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "cache_reuse": false,
+  "protocol_sha256": "35edf8ac05e9fdc23e7688d65abb293ff417995ef2439257672671fc2c2e8231",
+  "targets_sha256": "6b1f6382879b28d2cd7135f027b6f6b0c12435be930b1a47dae1cb851e1e2dfa",
+  "finished_utc": "2026-11-16T17:43:39.872491+00:00",
+  "seconds": 591.3882616020273,
+  "completed": 8,
+  "software_errors": 0
+}

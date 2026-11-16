@@ -1,0 +1,93 @@
+{
+  "accepted": true,
+  "action": "repair",
+  "original_audit": {
+    "accepted": false,
+    "original_residuals": {
+      "viol": 0.24384736954378672,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 1.491862189340054e-16,
+      "viol_speed": 2.220446049250313e-16,
+      "viol_bounds": 0.24384736954378672,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": -0.24384736954378672,
+    "max_energy": 1,
+    "dense_min_energy": -0.24384736954378672,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 1.1102230246251565e-16,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "charge_fraction": 0.99,
+  "interior_margin": 0.001,
+  "energy_buffer": 1e-08,
+  "changes": [
+    {
+      "stamp": 1,
+      "region": 2,
+      "before": [
+        7.976159897626726,
+        -6.349789483407998
+      ],
+      "after": [
+        6.794539963941978,
+        -4.109007799435375
+      ]
+    },
+    {
+      "stamp": 5,
+      "region": 2,
+      "before": [
+        7.976159897626726,
+        -6.349789483407998
+      ],
+      "after": [
+        6.795649566430085,
+        -4.107508524881073
+      ]
+    },
+    {
+      "stamp": 10,
+      "region": 0,
+      "before": [
+        -4.573949839157364,
+        4.318004732855424
+      ],
+      "after": [
+        -2.344070237233283,
+        2.5456272302972587
+      ]
+    }
+  ],
+  "unrestricted_infeasibility_proven": false,
+  "final_audit": {
+    "accepted": true,
+    "original_residuals": {
+      "viol": 5.551115123125783e-17,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 0.0,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 0.010122383973497184,
+    "max_energy": 1,
+    "dense_min_energy": 0.010122383973497184,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 0,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "objective_hours": 8.147727123579903,
+  "same_modes": true,
+  "same_task_stamps": true,
+  "same_stamps": true,
+  "case": "tau9-seed9000068",
+  "seconds": 0.1504270640143659,
+  "baseline_y_verified": false,
+  "native_stamps": 47,
+  "native_variables": 228
+}

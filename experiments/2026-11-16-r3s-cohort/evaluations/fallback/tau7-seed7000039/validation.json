@@ -1,0 +1,137 @@
+{
+  "selection": {
+    "feasible_available": true,
+    "selected": "certificate",
+    "candidates": {
+      "original": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.1109248899592078,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.1109248899592078,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.1109248899592078,
+        "max_energy": 1,
+        "dense_min_energy": -0.1109248899592078,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 4.713350558253302,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "constructed": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.06220008200286087,
+        "max_energy": 1,
+        "dense_min_energy": 0.06220008200286087,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 6.401569729046713,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "initialization": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 3.469446951953614e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 3.469446951953614e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0013057605284814e-08,
+        "max_energy": 1,
+        "dense_min_energy": 1.0013057605284814e-08,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 3.786523482848087,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "certificate": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 3.469446951953614e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 3.469446951953614e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0009890805129373e-08,
+        "max_energy": 1,
+        "dense_min_energy": 1.0009890805129373e-08,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 3.786523482877664,
+        "max_task_coordinate_difference_km": 5.753096943935104e-10
+      }
+    },
+    "optimization_convergence_not_inferred": true
+  },
+  "restoration_certificate": {
+    "accepted": false,
+    "reason": "not_available"
+  },
+  "initialization_certificate": {
+    "accepted": true,
+    "additional_optimization": false,
+    "raw_kkt": {
+      "stat": 1.595100653140888e-11,
+      "feas": 2.4363077901640494e-10,
+      "comp": 3.877544323517411e-08,
+      "dual": 0.0
+    },
+    "checks": {
+      "duration_correction": 7.677386504312267e-12,
+      "objective": 3.786523482877664,
+      "original_residuals": {
+        "viol": 3.469446951953614e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 3.469446951953614e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 1.0009890805129373e-08,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 1.595100653140888e-11,
+        "feas": 1.5987211554602255e-15,
+        "comp": 3.8586141406204636e-08,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      }
+    }
+  }
+}

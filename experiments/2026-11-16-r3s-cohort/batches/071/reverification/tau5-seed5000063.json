@@ -1,0 +1,37 @@
+{
+  "case": "tau5-seed5000063",
+  "optimizer_launched": false,
+  "phases": [
+    {
+      "route": "G",
+      "kind": "original",
+      "verifier_sha256": "ba7195dfb166477b7584b9ae306490bf8bb86fdae7d6d2a9f742e04d475271bc",
+      "existing_verifier_passed": true,
+      "saved_verification_reproduced": true,
+      "stages": 13,
+      "counts": {
+        "completed_outer": 165,
+        "accepted_inner_points": 19872,
+        "interrupted_accepted_points": 0
+      },
+      "comparison_calls": 60962,
+      "compared_values": 96767,
+      "max_abs_difference": 1.0477378964424133e-09,
+      "added_initial_AL": {
+        "input_state_exactly_verified": true,
+        "value": 299.2188787169036,
+        "gradient_inf": 86.13231043980686,
+        "gradient_minus_jacobian_form_inf": 5.995204332975845e-15
+      },
+      "passed": true
+    }
+  ],
+  "initialization": {
+    "passed": true,
+    "saved_verification_reproduced": true,
+    "accepted": false
+  },
+  "existing_files_hashed": 251,
+  "existing_files_unchanged": true,
+  "seconds": 5.40390017000027
+}

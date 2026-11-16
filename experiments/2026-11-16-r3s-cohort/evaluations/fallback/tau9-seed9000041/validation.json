@@ -1,0 +1,194 @@
+{
+  "selection": {
+    "feasible_available": true,
+    "selected": "restoration",
+    "candidates": {
+      "original": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.13975881794293132,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.5265566588595902e-16,
+          "viol_speed": 4.440892098500626e-16,
+          "viol_bounds": 0.13975881794293132,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.1397588179429312,
+        "max_energy": 1,
+        "dense_min_energy": -0.1397588179429312,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 2.220446049250313e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 6.127122280935842,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "constructed": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.008193048851610985,
+        "max_energy": 1,
+        "dense_min_energy": 0.008193048851610985,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 8.310767043207363,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "initialization": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 3.469446951953614e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 3.469446951953614e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0057631394388977e-08,
+        "max_energy": 1,
+        "dense_min_energy": 1.0057631394388977e-08,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 4.847144569116861,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "restoration": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.005763150541128e-08,
+        "max_energy": 1,
+        "dense_min_energy": 1.005763150541128e-08,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 4.847144569024587,
+        "max_task_coordinate_difference_km": 6.726148470600019e-10
+      },
+      "certificate": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 3.469446951953614e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 3.469446951953614e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0057631394388977e-08,
+        "max_energy": 1,
+        "dense_min_energy": 1.0057631394388977e-08,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 4.847144569121404,
+        "max_task_coordinate_difference_km": 6.726148470600019e-10
+      }
+    },
+    "optimization_convergence_not_inferred": true
+  },
+  "restoration_certificate": {
+    "accepted": true,
+    "additional_optimization": false,
+    "raw_kkt": {
+      "stat": 5.103511967834253e-12,
+      "feas": 8.7865714704094e-12,
+      "comp": 2.2336113192142762e-08,
+      "dual": 0.0
+    },
+    "checks": {
+      "duration_correction": 0.0,
+      "objective": 4.847144569024588,
+      "original_residuals": {
+        "viol": 5.551115123125783e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 5.551115123125783e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 1.005763150541128e-08,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 5.103511967834253e-12,
+        "feas": 7.993605777301127e-16,
+        "comp": 2.2332830708881805e-08,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      }
+    }
+  },
+  "initialization_certificate": {
+    "accepted": true,
+    "additional_optimization": false,
+    "raw_kkt": {
+      "stat": 1.8215129031457464e-11,
+      "feas": 8.442482490983743e-11,
+      "comp": 2.2336110454036127e-08,
+      "dual": 0.0
+    },
+    "checks": {
+      "duration_correction": 2.3451518504913338e-12,
+      "objective": 4.847144569121405,
+      "original_residuals": {
+        "viol": 3.469446951953614e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 3.469446951953614e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 1.0057631394388977e-08,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 1.8215129031457464e-11,
+        "feas": 1.5987211554602255e-15,
+        "comp": 2.233605532945239e-08,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      }
+    }
+  }
+}
