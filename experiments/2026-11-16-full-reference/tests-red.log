@@ -1,0 +1,14 @@
+test_decimal_perturbation_is_not_rounded_to_binary64 (__main__.TestFullReference.test_decimal_perturbation_is_not_rounded_to_binary64) ... FAIL
+
+======================================================================
+FAIL: test_decimal_perturbation_is_not_rounded_to_binary64 (__main__.TestFullReference.test_decimal_perturbation_is_not_rounded_to_binary64)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-16-full-reference/test_full_reference.py", line 52, in test_decimal_perturbation_is_not_rounded_to_binary64
+    self.assertEqual(battery,D('1.5')+D('2e-30'))
+AssertionError: Decimal('1.50') != Decimal('1.500000000000000000000000000002')
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)
