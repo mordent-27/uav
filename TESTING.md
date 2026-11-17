@@ -261,3 +261,15 @@ PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-stage01/verify.py --
 
 Python標準ライブラリのみ。後者は全900件/6,982内側記録を生ログから再読し、分類/残差/外側回数/評価カウンタ/rho更新/中断点不採用を別コードで検算する。代表3例6トレースは保存コピーの生点まで照合し、REPORTの件数表も確認する。
 成果物は上書きせず、入力と追加コピーのhashを再確認する。新しい求解・KKT数値再計算は起動しない。
+
+## 保存3状態の1反復の費用分解
+
+時間区間の加算/二重計上の拒否/負時間の拒否を3単体検査にした。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s experiments/2026-11-17-r3s-step-profile -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-step-profile/verify.py --check-only
+```
+
+後者はNumPyが必要。入力hash、保存3状態/受理点/Hessian、全63計測行の独立順序統計・加算・比率、BLAS1スレッドの記録、REPORTの数値表を検算する。モデルも求解も起動しない。
+元コードと計測版の一致は全72組（9warmup+63計測）で実行時assertし、独立保存点照合は3点である。profile_step.pyの計測を再実行する場合は新しい出力先で計画する。

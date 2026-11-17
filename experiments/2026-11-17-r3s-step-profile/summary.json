@@ -1,0 +1,327 @@
+{
+  "cases": [
+    {
+      "case": "tau9-seed9000035",
+      "variables": 228,
+      "measurements": 21,
+      "original_ns": {
+        "n": 21,
+        "min": 37733527,
+        "median": 38035237,
+        "max": 44690223,
+        "total": 808310670
+      },
+      "profiled_ns": {
+        "n": 21,
+        "min": 37436526,
+        "median": 37855588,
+        "max": 39616776,
+        "total": 797892634
+      },
+      "parts": {
+        "initial_eval_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 63991,
+            "median": 71065,
+            "max": 80603,
+            "total": 1449460
+          },
+          "share": 0.0018166103285520493
+        },
+        "hessian_setup_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 67948,
+            "median": 68840,
+            "max": 77947,
+            "total": 1457381
+          },
+          "share": 0.001826537729385781
+        },
+        "jacobian_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 6203874,
+            "median": 6232868,
+            "max": 6348857,
+            "total": 131072884
+          },
+          "share": 0.16427383637182444
+        },
+        "curvature_fd_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 27468960,
+            "median": 27784776,
+            "max": 28973623,
+            "total": 585941816
+          },
+          "share": 0.7343617311799873
+        },
+        "hessian_assembly_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 351825,
+            "median": 401178,
+            "max": 466652,
+            "total": 8362714
+          },
+          "share": 0.010481001633109449
+        },
+        "eigh_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 2031378,
+            "median": 2073719,
+            "max": 2104026,
+            "total": 43518141
+          },
+          "share": 0.05454134948186525
+        },
+        "search_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 1172275,
+            "median": 1217651,
+            "max": 1657843,
+            "total": 25973484
+          },
+          "share": 0.03255260531707077
+        },
+        "other_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 4079,
+            "median": 5771,
+            "max": 7325,
+            "total": 116754
+          },
+          "share": 0.0001463279582049632
+        }
+      },
+      "hessian_share": 0.9109431069143069,
+      "trials": [
+        7
+      ],
+      "profiled_to_original_median_ratio": 0.9952767745340985
+    },
+    {
+      "case": "tau8-seed8000006",
+      "variables": 203,
+      "measurements": 21,
+      "original_ns": {
+        "n": 21,
+        "min": 31053422,
+        "median": 31260104,
+        "max": 31667404,
+        "total": 656969074
+      },
+      "profiled_ns": {
+        "n": 21,
+        "min": 30952923,
+        "median": 31207224,
+        "max": 32850189,
+        "total": 657092841
+      },
+      "parts": {
+        "initial_eval_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 59242,
+            "median": 61106,
+            "max": 138382,
+            "total": 1414513
+          },
+          "share": 0.002152683626635342
+        },
+        "hessian_setup_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 62037,
+            "median": 63741,
+            "max": 140395,
+            "total": 1417098
+          },
+          "share": 0.002156617621709867
+        },
+        "jacobian_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 4685283,
+            "median": 4716963,
+            "max": 4801653,
+            "total": 99148010
+          },
+          "share": 0.15088889090483942
+        },
+        "curvature_fd_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 22578828,
+            "median": 22790769,
+            "max": 24461035,
+            "total": 479866060
+          },
+          "share": 0.7302865440897415
+        },
+        "hessian_assembly_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 298023,
+            "median": 330404,
+            "max": 429191,
+            "total": 7003765
+          },
+          "share": 0.010658714511850844
+        },
+        "eigh_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 1715311,
+            "median": 1743525,
+            "max": 1851780,
+            "total": 36724791
+          },
+          "share": 0.0558898053798763
+        },
+        "search_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 1443048,
+            "median": 1493733,
+            "max": 1608820,
+            "total": 31412501
+          },
+          "share": 0.047805270488405764
+        },
+        "other_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 3336,
+            "median": 5000,
+            "max": 6933,
+            "total": 106103
+          },
+          "share": 0.00016147337694096106
+        }
+      },
+      "hessian_share": 0.8939907671281416,
+      "trials": [
+        9
+      ],
+      "profiled_to_original_median_ratio": 0.9983083869458655
+    },
+    {
+      "case": "tau8-seed8000062",
+      "variables": 203,
+      "measurements": 21,
+      "original_ns": {
+        "n": 21,
+        "min": 30072360,
+        "median": 30487183,
+        "max": 36092906,
+        "total": 654970253
+      },
+      "profiled_ns": {
+        "n": 21,
+        "min": 29979864,
+        "median": 30481132,
+        "max": 31699425,
+        "total": 642571792
+      },
+      "parts": {
+        "initial_eval_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 59232,
+            "median": 66425,
+            "max": 102073,
+            "total": 1413110
+          },
+          "share": 0.002199147266645032
+        },
+        "hessian_setup_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 62849,
+            "median": 64031,
+            "max": 82005,
+            "total": 1371013
+          },
+          "share": 0.0021336339644364593
+        },
+        "jacobian_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 4667911,
+            "median": 4718206,
+            "max": 5060673,
+            "total": 99587252
+          },
+          "share": 0.1549822965151262
+        },
+        "curvature_fd_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 22496784,
+            "median": 22833050,
+            "max": 23782843,
+            "total": 482109108
+          },
+          "share": 0.7502805351903776
+        },
+        "hessian_assembly_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 305868,
+            "median": 357966,
+            "max": 397791,
+            "total": 7401207
+          },
+          "share": 0.011518101311238387
+        },
+        "eigh_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 1748925,
+            "median": 1772990,
+            "max": 1888448,
+            "total": 37438086
+          },
+          "share": 0.05826288434398004
+        },
+        "search_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 593863,
+            "median": 613350,
+            "max": 763022,
+            "total": 13138710
+          },
+          "share": 0.020447069360305815
+        },
+        "other_ns": {
+          "timing_ns": {
+            "n": 21,
+            "min": 3879,
+            "median": 5269,
+            "max": 6723,
+            "total": 113306
+          },
+          "share": 0.0001763320478904558
+        }
+      },
+      "hessian_share": 0.9189145669811787,
+      "trials": [
+        4
+      ],
+      "profiled_to_original_median_ratio": 0.9998015231515487
+    }
+  ],
+  "measured_pairs": 63,
+  "warmup_pairs": 9,
+  "single_process": true,
+  "full_solves": 0,
+  "returned_points_changed": 0
+}
