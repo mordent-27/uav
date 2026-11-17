@@ -19,7 +19,7 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 - 最終未達2点は、現在の割当のままでは原実行不能と証明。初回充電までの飛行距離下界20.31/24.68kmが、航続距離14.4kmを超える。制約672行の別実装もRustと最大差7.11e-15で一致。
 - 次は成功対照の途中の割当も同じ下界で追い、回復する例を誤って止めないか確認する。共有入口への高速化適用は引き続き保留。
 
-[最終未達の分岐診断](experiments/2026-11-17-r3s-final-branches/REPORT.md)・[図](experiments/2026-11-17-r3s-final-branches/infeasible-flight-blocks.png)、
+[最終未達の分岐診断](experiments/2026-11-17-r3s-final-branches/REPORT.md)・[図](experiments/2026-11-17-r3s-final-branches/infeasible-flight-blocks.png)・[成功例の分岐回復](experiments/2026-11-17-r3s-branch-recovery/REPORT.md)、
 [入口から返却までの対照](experiments/2026-11-17-r3s-gradient-e2e/REPORT.md)、
 [勾配専用経路の比較](experiments/2026-11-17-r3s-gradient-only/REPORT.md)、
 [1反復の費用分解](experiments/2026-11-17-r3s-step-profile/REPORT.md)、
