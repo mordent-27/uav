@@ -225,3 +225,15 @@ R3と同じ再開の規則（失敗は終端、部分出力は全起動を拒否
 ```bash
 python -m unittest discover -s experiments/2026-11-16-r3s-cohort -p 'test_*.py' -v
 ```
+
+## R3/R3sと図3の分布比較
+
+欠測を消さない中央値範囲、既知分位点、非有限値の拒否、分母100のECDF、ミッション時間と求解時間の区別を6単体検査にした。
+
+```bash
+python experiments/2026-11-17-r3s-paper-comparison/test_metrics.py -v
+python experiments/2026-11-17-r3s-paper-comparison/verify.py --check-only
+```
+
+NumPy/SciPy環境で実行。後者は保存済み成果物を書き換えず、900行と、独立な順序統計/ECDF積分による分布の検算、入力hashを照合する。
+図の生成にはMatplotlibを使用し、PNG2枚を目視確認した。新しい求解は起動しない。

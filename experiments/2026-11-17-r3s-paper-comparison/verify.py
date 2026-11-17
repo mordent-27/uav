@@ -4,6 +4,7 @@ import json
 import math
 from pathlib import Path
 import statistics
+import sys
 from analyze import ROOT,BASE,COHORT,read,verify_sources
 
 
@@ -29,6 +30,8 @@ def main():
     for row in cases:
         source=originals[row['case']];present=row['physical_point_available']=='True'
         assert present==source['physical_point_available']
+        assert row['origin']==source['origin'] and row['route']==source['route']
+        assert (row['selected'] or None)==source['selected']
         assert (row['fixed_branch_kkt']=='True')==source['selected_same_final_branch_kkt']
         if present:assert float(row['objective_h'])==source['selected_hours']
         else:assert row['objective_h']==''
@@ -38,7 +41,12 @@ def main():
         a=[float(r['objective_h']) for r in own if r['objective_h']]
         b=[float(r['value']) for r in paper if int(r['tau'])==tau and r['quantity']=='objective_h' and r['method']=='NLP']
         cert=[float(r['objective_h']) for r in own if r['objective_h'] and r['fixed_branch_kkt']=='True']
+        assert group['total']==len(own) and group['returned']==len(a) and group['missing']==100-len(a) and group['certified']==len(cert)
         check_distribution(a,group['selected']);check_distribution(cert,group['certified_objective'])
+        for section,field in [('by_origin','origin'),('by_route','route'),('by_selected','selected')]:
+            for category,reported in group[section].items():
+                values=[float(r['objective_h']) for r in own if r['objective_h'] and r[field]==category]
+                check_distribution(values,reported)
         assert math.isclose(statistics.median(a)/statistics.median(b),group['median_ratio'],abs_tol=1e-12)
         missing=100-len(a)
         assert statistics.median([*a,*([0.]*missing)])==group['missing_median_lower_h']
@@ -51,10 +59,11 @@ def main():
             values=[float(r['value']) for r in paper if int(r['tau'])==tau and r['quantity']=='objective_h' and r['method']==method]
             check_distribution(values,group['paper'][method])
     verify_sources()
-    out=BASE/'verification.json';assert not out.exists()
-    out.write_text(json.dumps(dict(cases=900,available=894,missing=6,tau_groups=9,quantiles='independent linear order statistics',
-        distances='independent ECDF step functions and integral',all_checks_passed=True,optimizer_launched=False),indent=2)+'\n')
-    print(out.read_text())
+    result=dict(cases=900,available=894,missing=6,tau_groups=9,quantiles='independent linear order statistics',
+        distances='independent ECDF step functions and integral',all_checks_passed=True,optimizer_launched=False)
+    if '--check-only' not in sys.argv:
+        out=BASE/'verification.json';assert not out.exists();out.write_text(json.dumps(result,indent=2)+'\n')
+    print(json.dumps(result))
 
 
 if __name__=='__main__':main()

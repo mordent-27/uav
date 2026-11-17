@@ -62,7 +62,10 @@ def main():
     fig.subplots_adjust(top=.93,bottom=.105,left=.075,right=.98,wspace=.16,hspace=.3)
     fig.text(.075,.025,'Unreturned cases have mass at +infinity, so the orange curve may stop below 1.\nPaper points are all plotted NLP objectives; their feasibility is not linked to this panel. Input instances are not paired.',fontsize=9)
     for ext in ['png','svg']:fig.savefig(BASE/f'objective-ecdf.{ext}',dpi=180,metadata={'Date':None} if ext=='svg' else None)
-    plt.close(fig);verify_sources()
+    plt.close(fig)
+    for svg in BASE.glob('objective-*.svg'):
+        svg.write_text('\n'.join(line.rstrip() for line in svg.read_text().splitlines())+'\n')
+    verify_sources()
 
 
 if __name__=='__main__':main()
