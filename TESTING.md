@@ -284,3 +284,12 @@ PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-gradient-only/verify
 ```
 
 後者は保存NPZの全1,271点の両勾配と3組のHessian/キャッシュをbytes比較し、全63計測行とREPORTの表を独立検算する。モデル/求解は起動しない。
+
+## 勾配専用経路の入口対照
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s experiments/2026-11-17-r3s-gradient-e2e -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-gradient-e2e/verify.py --check-only
+```
+
+Gだけの差し替え/元入口の維持を2単体検査にした。後者は標準ライブラリだけで8返却点を原制約監査し、G検証記録/保存KKT/採用点hash/CSV/入力hashを照合する。新規求解は起動しない。

@@ -1,0 +1,56 @@
+{
+  "case": "tau7-seed7000005",
+  "route": "G",
+  "outcome": {
+    "case": "tau7-seed7000005",
+    "final_common_kkt": true,
+    "final_both_scales_kkt": true,
+    "last_restoration_solver_accepted": true,
+    "restoration_attempted": true,
+    "physical_point_available": true,
+    "selected": "restoration",
+    "selected_hours": 2.5313847765609574,
+    "selected_same_final_branch_kkt": true,
+    "common_kkt_and_final_certificate": true,
+    "both_scales_kkt_and_final_certificate": true,
+    "successful_restoration_preserved_exactly": true,
+    "initialization_certificate_valid": false,
+    "solver_source": "experiments/2026-11-17-r3s-gradient-e2e/original/cases/G/tau7-seed7000005",
+    "initialization_source": "experiments/2026-11-17-r3s-gradient-e2e/original/inputs/tau7-seed7000005",
+    "allow_repair_backups": false,
+    "seconds": 0.10338237701216713,
+    "selected_sha256": "fa2e57b6f5892f1a057781aafeb2d19b7928924ac5e81d4657e3c250d136e143",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": false,
+  "g_source": "experiments/2026-11-17-r3s-gradient-e2e/original/cases/G/tau7-seed7000005",
+  "g_reused": false,
+  "fallback_cache_used": false,
+  "seconds": 404.5271816079912,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.3247686089889612,
+      "returncode": 0
+    },
+    {
+      "script": "g_case",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 403.81804521600134,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.38244069600477815,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}
