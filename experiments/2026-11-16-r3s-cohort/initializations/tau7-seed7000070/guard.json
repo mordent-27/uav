@@ -1,0 +1,81 @@
+{
+  "accepted": true,
+  "action": "repair",
+  "original_audit": {
+    "accepted": false,
+    "original_residuals": {
+      "viol": 0.13187552713445927,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 1.5265566588595902e-16,
+      "viol_speed": 1.7763568394002505e-15,
+      "viol_bounds": 0.13187552713445927,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": -0.13187552713445927,
+    "max_energy": 1,
+    "dense_min_energy": -0.13187552713445927,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 1.1102230246251565e-16,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "charge_fraction": 0.99,
+  "interior_margin": 0.001,
+  "energy_buffer": 1e-08,
+  "changes": [
+    {
+      "stamp": 10,
+      "region": 3,
+      "before": [
+        -6.34885337184141,
+        -7.055628960731434
+      ],
+      "after": [
+        -3.5477180499200296,
+        -6.628680545255276
+      ]
+    },
+    {
+      "stamp": 15,
+      "region": 2,
+      "before": [
+        8.090450647493654,
+        -3.6530335266355074
+      ],
+      "after": [
+        6.519143249361891,
+        -5.232517276969996
+      ]
+    }
+  ],
+  "unrestricted_infeasibility_proven": false,
+  "final_audit": {
+    "accepted": true,
+    "original_residuals": {
+      "viol": 2.220446049250313e-16,
+      "viol_task": 0.0,
+      "viol_mode": 0.0,
+      "viol_dyn": 5.551115123125783e-17,
+      "viol_speed": 2.220446049250313e-16,
+      "viol_bounds": 0.0,
+      "viol_endpoint": 0.0
+    },
+    "min_energy": 0.09466118580441218,
+    "max_energy": 1,
+    "dense_min_energy": 0.09466118580441218,
+    "dense_max_energy": 1.0,
+    "stored_replay_gap": 0,
+    "tasks_exact": true,
+    "assigned_modes_valid": true
+  },
+  "objective_hours": 5.969562302388318,
+  "same_modes": true,
+  "same_task_stamps": true,
+  "same_stamps": true,
+  "case": "tau7-seed7000070",
+  "seconds": 0.11229560201172717,
+  "baseline_y_verified": false,
+  "native_stamps": 37,
+  "native_variables": 178
+}

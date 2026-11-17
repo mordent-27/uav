@@ -1,0 +1,56 @@
+{
+  "case": "tau2-seed2000082",
+  "route": "G",
+  "outcome": {
+    "case": "tau2-seed2000082",
+    "final_common_kkt": true,
+    "final_both_scales_kkt": true,
+    "last_restoration_solver_accepted": true,
+    "restoration_attempted": true,
+    "physical_point_available": true,
+    "selected": "restoration",
+    "selected_hours": 0.616241116407866,
+    "selected_same_final_branch_kkt": true,
+    "common_kkt_and_final_certificate": true,
+    "both_scales_kkt_and_final_certificate": true,
+    "successful_restoration_preserved_exactly": true,
+    "initialization_certificate_valid": false,
+    "solver_source": "experiments/2026-11-16-r3s-cohort/cases/G/tau2-seed2000082",
+    "initialization_source": "experiments/2026-11-16-r3s-cohort/inputs/tau2-seed2000082",
+    "allow_repair_backups": false,
+    "seconds": 0.0924204490147531,
+    "selected_sha256": "c227a78220fbf5305d29192e6db90424a8a5e8119ca65ee1ca52149662d07b4c",
+    "returned_point_smoothing_kkt_not_inferred": true,
+    "paper_reproduction": false
+  },
+  "fallback_called": false,
+  "g_source": "experiments/2026-11-16-r3s-cohort/cases/G/tau2-seed2000082",
+  "g_reused": false,
+  "fallback_cache_used": false,
+  "seconds": 29.07831730900216,
+  "steps": [
+    {
+      "script": "prepare",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.46712947299238294,
+      "returncode": 0
+    },
+    {
+      "script": "g_case",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 28.21188498599804,
+      "returncode": 0
+    },
+    {
+      "script": "evaluate",
+      "phase": "G",
+      "kind": "original",
+      "seconds": 0.39615755499107763,
+      "returncode": 0
+    }
+  ],
+  "error": null,
+  "paper_reproduction": false
+}
