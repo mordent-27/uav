@@ -1,0 +1,95 @@
+{
+  "selection": {
+    "feasible_available": true,
+    "selected": "restoration",
+    "candidates": {
+      "original": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 1.3877787807814457e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.3877787807814457e-16,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.09064327881474787,
+        "max_energy": 1,
+        "dense_min_energy": 0.09064327881474787,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 2.48493731474319,
+        "max_task_coordinate_difference_km": 0.0
+      },
+      "restoration": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 9.926720001551814e-09,
+        "max_energy": 1,
+        "dense_min_energy": 9.926720001551814e-09,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true,
+        "objective_hours": 1.7746704252755912,
+        "max_task_coordinate_difference_km": 5.504369699365255e-10
+      }
+    },
+    "optimization_convergence_not_inferred": true
+  },
+  "restoration_certificate": {
+    "accepted": true,
+    "additional_optimization": false,
+    "raw_kkt": {
+      "stat": 1.2902640172065248e-09,
+      "feas": 1.1944605304847755e-09,
+      "comp": 4.278352783160244e-09,
+      "dual": 0.0
+    },
+    "checks": {
+      "duration_correction": 0.0,
+      "objective": 1.7746704252755914,
+      "original_residuals": {
+        "viol": 2.7755575615628914e-17,
+        "viol_task": 0.0,
+        "viol_mode": 0.0,
+        "viol_dyn": 2.7755575615628914e-17,
+        "viol_speed": 0.0,
+        "viol_bounds": 0.0,
+        "viol_endpoint": 0.0
+      },
+      "min_energy": 9.926720001551814e-09,
+      "max_energy": 1.0,
+      "final_kkt": {
+        "stat": 1.2902640172065248e-09,
+        "feas": 1.0552319776538941e-09,
+        "comp": 4.278352783160244e-09,
+        "dual": 0.0
+      },
+      "tasks_exact": true,
+      "checks": {
+        "correction": true,
+        "residual": true,
+        "energy": true,
+        "tasks": true,
+        "branch_kkt": true,
+        "dense_energy": true
+      }
+    }
+  },
+  "initialization_certificate": {
+    "accepted": false,
+    "reason": "not_available"
+  }
+}

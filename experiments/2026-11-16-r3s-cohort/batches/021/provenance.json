@@ -1,0 +1,302 @@
+{
+  "date": "2026-11-16",
+  "recorded_head": "5c22a53b29b9f2e9980fa55f68bb7bd2f6647f1c",
+  "protocol_targets_commit": "d134003",
+  "protocol_sha256": "35edf8ac05e9fdc23e7688d65abb293ff417995ef2439257672671fc2c2e8231",
+  "targets_sha256": "6b1f6382879b28d2cd7135f027b6f6b0c12435be930b1a47dae1cb851e1e2dfa",
+  "fixed_numerical_sources_equal": 62,
+  "launch": {
+    "date": "2026-11-16T14:40:06+00:00",
+    "cwd": "/home/mordent/robotech/3A/optimization/uav",
+    "head": "195ecf952c85eedd57679558dcd33585d2d08265",
+    "command": "run_batches.sh: driver.py --batch 21 -> reverify.py -> audit_outputs.py -> aggregate.py",
+    "python": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "pythonpath": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+    "recorded_before_completion": true,
+    "retry_allowed": false,
+    "cached_solves": 0
+  },
+  "attempts": [
+    {
+      "batch": 21,
+      "cases": [
+        "tau3-seed3000018",
+        "tau5-seed5000018",
+        "tau7-seed7000018",
+        "tau2-seed2000019",
+        "tau4-seed4000019",
+        "tau6-seed6000019",
+        "tau8-seed8000019",
+        "tau9-seed9000019"
+      ],
+      "status": "complete",
+      "started_utc": "2026-11-16T14:40:06.658441+00:00",
+      "command": [
+        "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+        "experiments/2026-11-16-r3s-cohort/driver.py",
+        "--batch",
+        "21"
+      ],
+      "cwd": "/home/mordent/robotech/3A/optimization/uav",
+      "head": "195ecf952c85eedd57679558dcd33585d2d08265",
+      "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+      "packages": {
+        "numpy": "2.5.1",
+        "scipy": "1.18.0",
+        "casadi": "3.8.2"
+      },
+      "workers": 8,
+      "blas_threads": 1,
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pid": 61161,
+      "environment": {
+        "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "cache_reuse": false,
+      "protocol_sha256": "35edf8ac05e9fdc23e7688d65abb293ff417995ef2439257672671fc2c2e8231",
+      "targets_sha256": "6b1f6382879b28d2cd7135f027b6f6b0c12435be930b1a47dae1cb851e1e2dfa",
+      "finished_utc": "2026-11-16T14:52:31.110274+00:00",
+      "seconds": 744.4518541489961,
+      "completed": 8,
+      "software_errors": 0
+    }
+  ],
+  "source_hashes": {
+    "experiments/2026-11-14-restoration/fixed_branch.py": "5fd800129a0259015c5901ee8cfc92f71cc6de1bc04492ab9aa1886269a1d93a",
+    "experiments/2026-11-15-r2-cases/helpers.py": "1b03603420929d2e97f83a5b748041790587bddf5995688d841883bb561bbd26",
+    "experiments/2026-11-15-r2-cases/restore.py": "d8f8c6afdaffc40bb3bc1b4974fd6a9c9ae0936190dcfeec5425bd09aa2bc5ae",
+    "experiments/2026-11-15-r2b-coarse/case.py": "e5d70951a6947fe8776db508c4450dce57ee3659b363c657f2363e6b5a29939d",
+    "experiments/2026-11-15-r2b-coarse/helpers.py": "40a25c9ce94653e5cea33c924214fb3c1128e210dda7bef39315ad5b53ffa18a",
+    "experiments/2026-11-15-r2b-coarse/run.py": "a62d7fa532b0bba543548624bec9e639a2143a23b60c516f024236c0e53c347c",
+    "experiments/2026-11-15-r2b-coarse/verify.py": "ba7195dfb166477b7584b9ae306490bf8bb86fdae7d6d2a9f742e04d475271bc",
+    "experiments/2026-11-15-r2c-direct-final/helpers.py": "ec91969fec1c1d472b1cf3b835d27e566afa3a5072cba1fb8fa76083593898e2",
+    "experiments/2026-11-15-r2c-direct-final/run.py": "33bdeaec36823d2b2cae06a7198388cb6b9c9ffed2a37465cb610ad0b567808f",
+    "experiments/2026-11-15-r2c-direct-final/verify.py": "c33f12c40a12af25c536e4cfa84d45b1444dc93a8c01e868855e2f328ea6c8b8",
+    "experiments/2026-11-15-r2f-general-init/guard.py": "62e3dd03c29fc6ea5b5b258d852753a1ec7ab686f75d912a6ad73b198c7a5352",
+    "experiments/2026-11-15-r2f-general-init/helpers.py": "5b9a31f624b2ba6d462ca797743d10e096a4ecc82c7fbff0b5f8e03064cc2c98",
+    "experiments/2026-11-15-r2f-general-init/initialize.py": "80ecaec59cb0256a997751acb9a25bed9451e757418df2edaec32df84d7eba31",
+    "experiments/2026-11-15-r2f-general-init/phase.py": "b3e66a65a1ff01e1e767e717906f5142dd763b7ae75f7beb9e0cd6b5cd67b34d",
+    "experiments/2026-11-15-r2f-general-init/summary.json": "c2e3072aec43ddf232de1afc4fb15c117f0991913dc354cc2b0193049d783fb7",
+    "experiments/2026-11-15-r2f-general-init/verify_init.py": "84ff6c01a78002d31041bd32f253a19cb3e8dad1be96df97fd2a5883652212b9",
+    "experiments/2026-11-15-r2g-incumbent/analyze.py": "3c0aa9a5d6b00ca1db8da37c32099adb5995b1dbac4073e18723ce4bef9cdae2",
+    "experiments/2026-11-15-r2g-incumbent/audit_outputs.py": "9f87473b8f8753758ed9c3b636ae5ed160df7f72a5d63047a03eab61fb7ead7c",
+    "experiments/2026-11-15-r2g-incumbent/capture.py": "f938292ce5d12a42cec7f8c331a6983e4752f2a36a2e158b81b0c2a618694aa2",
+    "experiments/2026-11-15-r2g-incumbent/driver.py": "33f65981d3c66c19b217c0d352a07b0b8947ce5aab8810197a854d1e8e864d3a",
+    "experiments/2026-11-15-r2g-incumbent/guard.py": "b735ff989ae84947e360dad5708d51b9eab7a094d0791f32f4683ca8a2ce969a",
+    "experiments/2026-11-15-r2g-incumbent/helpers.py": "40a16fbd6899fc29cc0d27d61a27bdce9e27aec97f263a36c6ba55e07f55de09",
+    "experiments/2026-11-15-r2g-incumbent/initialize.py": "161b94eeb4201b8326d282a7655e43ecf211ed4235b761dfc9e2495ae15148e2",
+    "experiments/2026-11-15-r2g-incumbent/missing.py": "faf2a490be99e4463dddee0ebf9d1f1bce5ebaf227b2581e0960ebb5f8698728",
+    "experiments/2026-11-15-r2g-incumbent/phase.py": "a74a7d3da0d53aab7f7d0f833e25155d5b1f3d7f87ab00f015e6c0a6d321d962",
+    "experiments/2026-11-15-r2g-incumbent/precheck.py": "67d3d89774bcd6907b517adca709cb2ecaa70820756043151adb94416b64a13b",
+    "experiments/2026-11-15-r2g-incumbent/recheck_retention.py": "6ecaf3c365d71245bc3e0617ab9487689b112384551b998c3b1559f4b228569f",
+    "experiments/2026-11-15-r2g-incumbent/replay.py": "0cbda52121f6a5102cf7c34200ad00b790bf09be6a876fa4782acf5852bf0d6b",
+    "experiments/2026-11-15-r2g-incumbent/retain.py": "4a1c5f8fbffacb2a260d85e9b377a46ab1b13e1996f706a9003b96bb5761d323",
+    "experiments/2026-11-15-r2g-incumbent/reverify.py": "9c789c2c375e666d097ac9776272b4f1e60eccb3f599fe4d53747b744e953bda",
+    "experiments/2026-11-15-r2g-incumbent/screen.py": "419e3dd0c09396039963d3113c85e412321948c9494d4aded7aadb37ca177f43",
+    "experiments/2026-11-15-r2g-incumbent/verify_init.py": "32607681e4cba2d1b603924ae84f74a1b4cb0ccaa1adb3ed83788e62387bc808",
+    "experiments/2026-11-16-outer-stall/stall.py": "498a5ddc2f1e7592240a3e94b83b6b3eab92b99da3c3a2bfa516d5579ab821d0",
+    "experiments/2026-11-16-r2h-g-first/analyze.py": "342c7b9dd20d99b62107158ed21d6c7b1b5bc8a30e3bd7e7d9891860aef3ccdc",
+    "experiments/2026-11-16-r2h-g-first/audit_outputs.py": "d7807551f38279c5264f07837a287cfcdcb55ead02a8a1033f1b05857bf62e79",
+    "experiments/2026-11-16-r2h-g-first/capture.py": "af01e97d01a386ff38b58a2b26cd4ecec84da983701231995a4873342d19a2a5",
+    "experiments/2026-11-16-r2h-g-first/catalog.py": "adabfc98895c26fb2d672d918b60d2fb3c6a058d184acfa42e1fb37540741f95",
+    "experiments/2026-11-16-r2h-g-first/driver.py": "c148aa153932cc59352912ffbbfd53dc8ed5da0361b7a962844595a74e3d864f",
+    "experiments/2026-11-16-r2h-g-first/evaluate.py": "f375c01e8865d5b4e41072d76759b23c0a5491d2cec12dcf95926f1887151424",
+    "experiments/2026-11-16-r2h-g-first/fallback_phase.py": "2398f163eceeea838a1528dd21d5590c67ac6513b4faa22764eff87c72bdf2e3",
+    "experiments/2026-11-16-r2h-g-first/g_case.py": "e1695be1f5c6a3a88e464e71e6a90593ec46cd44d25932aaefa58017c68ba635",
+    "experiments/2026-11-16-r2h-g-first/guard.py": "954efe67c51029c80cdb8ffd6dd8d6d99f5481ecdbbd9d510a9f4ba686ffc730",
+    "experiments/2026-11-16-r2h-g-first/helpers.py": "6eb9f47ae8fd0a50200a9992877f8aeed4f89111cc60afff6ae43e033e258559",
+    "experiments/2026-11-16-r2h-g-first/initialize.py": "65ac855ea78f1f827bd7d2562b3f3dffdea49c04cae72a16e765393c1e4bf4d7",
+    "experiments/2026-11-16-r2h-g-first/prepare.py": "2766c2857e0d01f8806994d66638db1bb23ecee5eec81943d9ab8263dac90193",
+    "experiments/2026-11-16-r2h-g-first/reverify.py": "0aee5e2dcbcb3104b38b91f21f4953aa81b9c80c34b26c9a8e6584acc627fe5a",
+    "experiments/2026-11-16-r2h-g-first/solve.py": "056aa8b67068a922c6605f9013e06119c77db60736ed18b2088ebab57addb420",
+    "experiments/2026-11-16-r2h-g-first/verify_init.py": "0678f1e17e4054e1e8e5a4df919aa837af59084511e7e26c1e1ab9e4324c4e88",
+    "experiments/2026-11-16-r2i-fresh-entry/analyze.py": "dd68439142e84a9fe8d831b45aba412f2b51f34e51a1b4813e0ba88a62b1e797",
+    "experiments/2026-11-16-r3a-cohort/protocol.json": "77b1938102a5342992c23b308d875113d9d03991efa53a3f7b1b6d735ce9f5b3",
+    "experiments/2026-11-16-r3s-cohort/aggregate.py": "92f757cb04d86c91f51db91b05c7b5fc321d60d4d6b1ff572b64053465e57453",
+    "experiments/2026-11-16-r3s-cohort/audit_outputs.py": "5fa44564410789b2bd148f39d20bceff42571097c04df7c584401eb029371574",
+    "experiments/2026-11-16-r3s-cohort/capture.py": "22ca693bf7b74dc8105967025a750a937a9398e344c0e3f9346541d299f8937b",
+    "experiments/2026-11-16-r3s-cohort/capture_batch.py": "5369fa51a497301674c9736d60332c539d6b59de0bebcdfd54f1859d1b14ee5c",
+    "experiments/2026-11-16-r3s-cohort/cost_budget.py": "249984e817bc7d825d96a342bebba1d10454da96a1b69c8e152c9e0d663447df",
+    "experiments/2026-11-16-r3s-cohort/diagnose_initializations.py": "45de3f3f2310c3f22ed17c3bd673cb680e065727059dfb5dde02c8d864e2eef8",
+    "experiments/2026-11-16-r3s-cohort/diagnose_restoration.py": "ee3ae4e9cdc6e68b3d536245418ca1bdad7736c2150f1388d61d6903c0bdf2f4",
+    "experiments/2026-11-16-r3s-cohort/driver.py": "c0f8e4e60feee0be3cba442ca0eb9eb048fc96bf617af13e5d07320fc5a5af55",
+    "experiments/2026-11-16-r3s-cohort/g_case_stall.py": "f5798e3f089ea821d38cdf55995e3a56b049960dcda945c76b60d05c4d270f54",
+    "experiments/2026-11-16-r3s-cohort/helpers.py": "01b50e98d228078d7730c0809be126151f658a555f32012226014c52eb6b4a38",
+    "experiments/2026-11-16-r3s-cohort/restore_evaluators.py": "93382c6e162465d40839225f3fd845728fd4bb255d015fa18ea9279453ff3356",
+    "experiments/2026-11-16-r3s-cohort/reverify.py": "341c0328829b8124794e48aab51229640b7c13bce522a441339dfc466a253db8",
+    "experiments/2026-11-16-r3s-cohort/run_stall.py": "9fec89d16c6615e77b79b6e997f28624e3e57e2277d2ae55202f2f080d3ed54b",
+    "experiments/2026-11-16-r3s-cohort/solve.py": "c0511101445bfd0a3d68d418e1a65312491413b0a54ac0c90b48ffe5a87599a7",
+    "experiments/2026-11-16-r3s-cohort/test_audit.py": "c17459ac288793ad2230689bece37555a5b0099df33fc7820ca77517b3b9b9b5",
+    "experiments/2026-11-16-r3s-cohort/test_entry.py": "ad0c0c8462d57e91b90bd743d8cc2352a19b4f403005563eb4008859d15729bb",
+    "experiments/2026-11-16-r3s-cohort/test_restore.py": "4044d0958ec1fd4fc420c9663b0a7305619819deecdfbf7d7e7c2067c8252942",
+    "experiments/2026-11-16-r3s-cohort/test_resume.py": "62ce7e11d438be0c4cf7d581cfa0636921ede0270ee28c9a063746a1b8d47c8b",
+    "scripts/carrier_certificate.py": "5c608b893a964e22117a1d8853c636b435d80af2e3021090d68d463a6962e9b3",
+    "scripts/diagnose_solution.py": "12a1a292ab4c6201e4e6f303af78c019b0837ceb397300a6a866f92ed32cd683",
+    "scripts/feasible_incumbent.py": "6027e80edf34baf0d7ef80db4ec4f36505e6ff2560d1a0197d44cd0492d61141",
+    "scripts/g_first_policy.py": "4df18796f465ef0be98be1c5605b74dff81d87da292bfae2cac2055af4016d08",
+    "scripts/repair_initialization.py": "83f7c7d6bbbf57f4800d05ac83d8ad1775141cc3b2df8490f4355aa17bd06766",
+    "scripts/test_feasible_incumbent.py": "642c27434f567bd201bffa03c574c50c144e1215233d335b7ad3381251ff6ed8",
+    "scripts/test_g_first_policy.py": "f2665f57c5e789ec4b00934d13a07e2d5726977f64b00ffb8d8561a54981cf71",
+    "scripts/test_repair_initialization.py": "300cffd1cdad9bb74c2a3e42aafd71a3ba6e543fed2d19743c35e7a6e5a8401d",
+    "scripts/verify_solutions.py": "233bb61e07fba923084c23b82e6b6bfa14689025ee4004c100cd83465cce7d0e"
+  },
+  "evaluator_hashes": {
+    "/tmp/uav-fidelity-original.so": "7d5babc79adecf054922887e78f96f937b2484c0845298edc4b54cbcf00f30a8",
+    "/tmp/uav-fidelity-speed.so": "3476d7f8c4837b6fba2e6ffedf3e862d0b953ab074182c639b44fb74faad588b"
+  },
+  "runtime_archive": "runtime-evaluators.tar.gz",
+  "runtime_archive_sha256": "5cfef32d29e3632194f29c0d370f47872f9cdde622485cbf5cf2258dbfbf9d52",
+  "fresh_run_evidence": {
+    "tau3-seed3000018": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau3-seed3000018/00-G-prepare-launch.json": "7d530b0f8d647f35cfff90f637f8431c50dcc5ef8aebc60387a71469121e82cf",
+        "logs/tau3-seed3000018/01-G-g_case-launch.json": "d1b1b255cac54a01e0a4ecc5fa1ee2e624bdaf8bde0c89a198267c75e3c8b6db",
+        "logs/tau3-seed3000018/02-G-evaluate-launch.json": "93ebfb366fd3806096fd9eb781df8d1ede73ddac3019ce9cce9234ac32291ec3",
+        "logs/tau3-seed3000018/03-fallback-guard-launch.json": "8473dd58fbc14f11d12af54e5e4c3f89f6692e8429d7672093e801d3115089fb",
+        "logs/tau3-seed3000018/04-fallback-fallback_phase-launch.json": "5d8ad65865372ebd3a6789ee57a6a55f6e026a57ed045535214edc956fde0f99",
+        "logs/tau3-seed3000018/05-fallback-evaluate-launch.json": "305b8bc71a595380af54cd83921e52e360b2ceb56731b760478349806bb3c5ce"
+      }
+    },
+    "tau5-seed5000018": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau5-seed5000018/00-G-prepare-launch.json": "eee4c98629b6401a5aa476869df5a746aad1cf4536c59f775ace805eea26c060",
+        "logs/tau5-seed5000018/01-G-g_case-launch.json": "33d0a6271b257da7e358d2ac58eec3f94cf5fd0314b08d2701d9dba1cfd457c2",
+        "logs/tau5-seed5000018/02-G-evaluate-launch.json": "8b8e8ed228a73e3e84f12e0235187346803e1f2b66757fe1d438e14da49b5fba"
+      }
+    },
+    "tau7-seed7000018": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau7-seed7000018/00-G-prepare-launch.json": "2e657aff04d44c87cf35a7e9e6b56c8a9d9e9c46a2f7b545b089ab6c360032e4",
+        "logs/tau7-seed7000018/01-G-g_case-launch.json": "0ffc189d659bf0cda2f7ffc6d8b67432a83ab1a6f1cffb613350eabddec762af",
+        "logs/tau7-seed7000018/02-G-evaluate-launch.json": "0bcc7af4bee7150238d4c13d119106fea307ef6d0d6277ad3992b90a21e86629",
+        "logs/tau7-seed7000018/03-fallback-guard-launch.json": "456e7e91617a99995621f7e2e14c1483331176390d1218583a13d37f4a6e1b6f",
+        "logs/tau7-seed7000018/04-fallback-fallback_phase-launch.json": "0343d4b6a3b4b2d4288074c18105536c77f542dfa9125593d2c488b84e46ef32",
+        "logs/tau7-seed7000018/05-fallback-evaluate-launch.json": "f237b1a101ed46894fda96b821adf18022f7b4e40067b78745659c9ce30be294"
+      }
+    },
+    "tau2-seed2000019": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau2-seed2000019/00-G-prepare-launch.json": "5446433fe8beda07443f79959528bd1e9721c52d7d320c5747871f8d0175028f",
+        "logs/tau2-seed2000019/01-G-g_case-launch.json": "1498cab552edd938d9b7d8fe893c2fb730999a900c7522766fe7091837c0a873",
+        "logs/tau2-seed2000019/02-G-evaluate-launch.json": "7c79220840bfa9eb10c4b8dbe102f381ea660239a60083c2b5ebfaf41ce9a06f"
+      }
+    },
+    "tau4-seed4000019": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau4-seed4000019/00-G-prepare-launch.json": "e66a93d66241b81838c4dea68f122ab41d870c0bad296b5f23d083cf88e06b59",
+        "logs/tau4-seed4000019/01-G-g_case-launch.json": "57756b0d8f7030dd92dd6a34c663844eef759f7f7472577aa6d2d8daf06f239f",
+        "logs/tau4-seed4000019/02-G-evaluate-launch.json": "baa0be10baa52d59b93bc2be255d5fe5796273c64c0d0ba90dff7aa7ea1b153b",
+        "logs/tau4-seed4000019/03-fallback-guard-launch.json": "b2628c4f05bb04987190152add829386f693db5c40ab1a5c01bae182b23d8f64",
+        "logs/tau4-seed4000019/04-fallback-fallback_phase-launch.json": "b9fc43b74cafc19d060c19dad572a101dd936c08c14544f7568622acffb9b1c6",
+        "logs/tau4-seed4000019/05-fallback-evaluate-launch.json": "7a2d910653290a6c28cbc7ff858833ae3ef14bffc926b8e6a341029323920b77"
+      }
+    },
+    "tau6-seed6000019": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau6-seed6000019/00-G-prepare-launch.json": "69180f8f0bc57beb14e0123e11602f514952773ff3d212d324516a7992c06f92",
+        "logs/tau6-seed6000019/01-G-g_case-launch.json": "19817be32238261643144161fdfbc36f0c0569d4880191c012f0cf673fc40412",
+        "logs/tau6-seed6000019/02-G-evaluate-launch.json": "cf81ec38185152f33cbd69bf5ac654dedb2842b40e6977ec70d2ab0dd268b8a3",
+        "logs/tau6-seed6000019/03-fallback-guard-launch.json": "4dc8c5615217608c2acf74085a016a3dc716ecb4b02dfbd8329540b18f2625be",
+        "logs/tau6-seed6000019/04-fallback-fallback_phase-launch.json": "be763609f9a670b3a7e0e3386ccfaaaffcd4d0167f5a71e61effa3436816f209",
+        "logs/tau6-seed6000019/05-fallback-evaluate-launch.json": "f17202e1fd5eb37437576d51bf169f27c4672be635133c3f1a897dc8efa964d3"
+      }
+    },
+    "tau8-seed8000019": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau8-seed8000019/00-G-prepare-launch.json": "bb534b664a20bcc1ae2b7c21a8c90db2c65e319228427ca651ce6f5b2326d17f",
+        "logs/tau8-seed8000019/01-G-g_case-launch.json": "da4aa41a3cb6efb2a6fb72c6468b182bb7bd6b60d933fefa49cdc48e47cc6e98",
+        "logs/tau8-seed8000019/02-G-evaluate-launch.json": "6ba371e6438508983a92382b38f2366f7bb5b75fcd5e1e95f9b5a0f51a5a8830",
+        "logs/tau8-seed8000019/03-fallback-guard-launch.json": "e408caecc68ad787d5ce3b6250ab38f3aa43c478fffcd3f96a151717a080ee73",
+        "logs/tau8-seed8000019/04-fallback-initialize-launch.json": "f0dcc2f4667e5e6d684cbff2737f52f3f9f188608362e75d25d71d886d48c2f5",
+        "logs/tau8-seed8000019/05-fallback-fallback_phase-launch.json": "5074c344492816c16505c6ea80a059511cde85c2d512089640551c7107d6f188",
+        "logs/tau8-seed8000019/06-fallback-evaluate-launch.json": "d7e01e98e38600059325d24a0ab7354c438a20bc1670749edf3f9438ae48b433"
+      }
+    },
+    "tau9-seed9000019": {
+      "error": null,
+      "g_reused": false,
+      "fallback_cache_used": false,
+      "launch_records": {
+        "logs/tau9-seed9000019/00-G-prepare-launch.json": "39dbbe1b283566b0717200e467828948a92e69109c88aac9739f58eb7f5d82e4",
+        "logs/tau9-seed9000019/01-G-g_case-launch.json": "e611663d47425d10957a9bfc55e43f1bb5e78be7bef519942e2bdbc433fbdf13",
+        "logs/tau9-seed9000019/02-G-evaluate-launch.json": "8a5428579bd3fa2345c0f81fa9d9a9e76bb0c80eb92e634067eb6cf2187005c5",
+        "logs/tau9-seed9000019/03-fallback-guard-launch.json": "401079794ca44d87aafa054cb6483c341db413c1be0dd1a94277177e9f6beeb2",
+        "logs/tau9-seed9000019/04-fallback-initialize-launch.json": "72b81d577a510de468d3f6f132ec1ccac47048f54c3295d7bb12b7269a71c6d7",
+        "logs/tau9-seed9000019/05-fallback-fallback_phase-launch.json": "bcd597db1c6abf406988d8c332d6694f2469ebe3eaf701c924ada5265b150dd4",
+        "logs/tau9-seed9000019/06-fallback-evaluate-launch.json": "063a875b7af40a237088c9cd33d6e873f8125da0a292581ac03788cd3dbdf972"
+      }
+    }
+  },
+  "cache_reuse": false,
+  "solves_launched_by_verification": false,
+  "main_Rust_changed": false,
+  "verification_environment": {
+    "executable": "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+    "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+    "packages": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.0",
+      "casadi": "3.8.2"
+    },
+    "rustc": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+  },
+  "verification_commands": [
+    "same numeric Python/environment as launch-record.json, UAV_R3_BATCH=021: reverify.py",
+    "PYTHONDONTWRITEBYTECODE=1 python3 experiments/2026-11-16-r3s-cohort/aggregate.py",
+    "PYTHONDONTWRITEBYTECODE=1 UAV_R3_BATCH=021 python3 experiments/2026-11-16-r3s-cohort/audit_outputs.py",
+    "same numeric Python/environment as launch-record.json, UAV_R3_BATCH=021: capture_batch.py"
+  ],
+  "human_notes": {
+    "carrier_model.md": "884388e1c5d755b0b6b92bb1ca72a727b0de0fdcab71c6f83c6ddff8e0fe2c76",
+    "critical_review.md": "c0bfec848a02b3e0b0a7c82b8ef871dad4cb63917cccd1d0dc342f6ef5cca7ac",
+    "question2_notes.md": "6cd7d33dec917925fb60b656b85c7cad156eaead98ff41bff234ad4b623dcee4",
+    "report.md": "0e3bec909f7fe32efb5b43a8985289b324c623eff4e2de0453a27ebe852ad99d",
+    "reproduction.md": "5f4dadcd233bf622a204bde695efe0a588749d3008f13d17b50069b564ce5e19",
+    "validation_plan.md": "75323143e4679eb44d9e88e8aab29b191e722cafbeecdcb8e300304b69a4de21"
+  },
+  "human_notes_archive": "human-notes.tar.gz",
+  "population_distribution_complete": true,
+  "paper_reproduction": false
+}

@@ -1,0 +1,663 @@
+{
+  "batch": "112",
+  "cases": [
+    "tau1-seed1000099",
+    "tau3-seed3000099",
+    "tau5-seed5000099",
+    "tau7-seed7000099"
+  ],
+  "attempts": [
+    {
+      "batch": 112,
+      "cases": [
+        "tau1-seed1000099",
+        "tau3-seed3000099",
+        "tau5-seed5000099",
+        "tau7-seed7000099"
+      ],
+      "status": "complete",
+      "started_utc": "2026-11-17T05:42:27.364401+00:00",
+      "command": [
+        "/home/mordent/.local/share/uv/python/cpython-3.12-linux-x86_64-gnu/bin/python",
+        "experiments/2026-11-16-r3s-cohort/driver.py",
+        "--batch",
+        "112"
+      ],
+      "cwd": "/home/mordent/robotech/3A/optimization/uav",
+      "head": "5c22a53b29b9f2e9980fa55f68bb7bd2f6647f1c",
+      "python": "3.12.13 (main, Jun 23 2026, 15:18:55) [Clang 22.1.3 ]",
+      "packages": {
+        "numpy": "2.5.1",
+        "scipy": "1.18.0",
+        "casadi": "3.8.2"
+      },
+      "workers": 8,
+      "blas_threads": 1,
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "pid": 92468,
+      "environment": {
+        "PYTHONPATH": "/home/mordent/.cache/uv/archive-v0/IH8olt7ky0AxR5WV:/home/mordent/.cache/uv/environments-v2/sys-id-chirp-1714f8f5f4d59f0e/lib/python3.12/site-packages",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "cache_reuse": false,
+      "protocol_sha256": "35edf8ac05e9fdc23e7688d65abb293ff417995ef2439257672671fc2c2e8231",
+      "targets_sha256": "6b1f6382879b28d2cd7135f027b6f6b0c12435be930b1a47dae1cb851e1e2dfa",
+      "finished_utc": "2026-11-17T05:48:00.471596+00:00",
+      "seconds": 333.10722343000816,
+      "completed": 4,
+      "software_errors": 0
+    }
+  ],
+  "planned": 4,
+  "started": 4,
+  "terminal": 4,
+  "finished": 4,
+  "carried_over": 0,
+  "pending": 0,
+  "software_errors": 0,
+  "unreadable_results": 0,
+  "interrupted": 0,
+  "partial_unresolved": 0,
+  "indicators": {
+    "final_common_kkt": 4,
+    "final_both_scales_kkt": 4,
+    "last_restoration_solver_accepted": 4,
+    "physical_point_available": 4,
+    "selected_same_final_branch_kkt": 4
+  },
+  "routes": {
+    "G": 2,
+    "fallback": 2
+  },
+  "feasible_objective_hours": {
+    "observations": 4,
+    "median": 1.3064316469860464,
+    "min": 0.7083013850919646,
+    "max": 3.227450500751643
+  },
+  "final_distribution_complete": true,
+  "rows": [
+    {
+      "case": "tau1-seed1000099",
+      "state": "finished",
+      "origin": "2026-11-16-r3s-cohort",
+      "route": "fallback",
+      "error": null,
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "selected": "restoration",
+      "selected_hours": 0.7083013850919646,
+      "driver_seconds": 7.827211226016516,
+      "G": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/G/tau1-seed1000099",
+        "stage": 13,
+        "stop": "stalled",
+        "common": false,
+        "both_scales": false,
+        "common_kkt": {
+          "stat": 38.58314718998736,
+          "feas": 0.013688157942116811,
+          "comp": 0.013688157942115992,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 1048.598466515961,
+          "feas": 0.0067887785256167295,
+          "comp": 0.001561893784383983,
+          "dual": 0.0
+        },
+        "AL_seconds": 4.623414056986803,
+        "AL_outer": 159,
+        "accepted_inner": 1335,
+        "interrupted_inner": 0,
+        "verification_available": true,
+        "restoration_attempted": false,
+        "restoration_accepted": false,
+        "restoration_seconds": 0.0,
+        "restoration_status": null,
+        "restoration_reason": null,
+        "final_AL_objective_hours": 0.5091510014375402
+      },
+      "fallback": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/fallback/tau1-seed1000099",
+        "stage": 13,
+        "stop": "kkt",
+        "common": true,
+        "both_scales": true,
+        "common_kkt": {
+          "stat": 5.890944941732022e-09,
+          "feas": 9.686669640957771e-07,
+          "comp": 3.808785986877447e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.120740179023528e-07,
+          "feas": 9.686669640957771e-07,
+          "comp": 2.644990268664894e-12,
+          "dual": 0.0
+        },
+        "AL_seconds": 0.43287001698627137,
+        "AL_outer": 6,
+        "accepted_inner": 150,
+        "interrupted_inner": 0,
+        "verification_available": true,
+        "restoration_attempted": true,
+        "restoration_accepted": true,
+        "restoration_seconds": 0.012497818999690935,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "final_AL_objective_hours": 0.7082336597362058
+      },
+      "guard": {
+        "accepted": true,
+        "action": "keep_original",
+        "original_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 0.0,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 0.0,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.3497662605089732,
+          "max_energy": 1,
+          "dense_min_energy": 0.3497662605089732,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 0.0,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 0.0,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.3497662605089732,
+          "max_energy": 1,
+          "dense_min_energy": 0.3497662605089732,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "same_full_trajectory": true,
+        "same_original_y": true,
+        "case": "tau1-seed1000099",
+        "seconds": 0.004452508001122624,
+        "baseline_y_verified": false,
+        "native_stamps": 7,
+        "native_variables": 28
+      },
+      "initialization": null,
+      "original_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 0.0,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 0.0,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.3497662605089732,
+        "max_energy": 1,
+        "dense_min_energy": 0.3497662605089732,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 0,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      }
+    },
+    {
+      "case": "tau3-seed3000099",
+      "state": "finished",
+      "origin": "2026-11-16-r3s-cohort",
+      "route": "G",
+      "error": null,
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "selected": "restoration",
+      "selected_hours": 1.3004092910390745,
+      "driver_seconds": 59.39334096899256,
+      "G": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/G/tau3-seed3000099",
+        "stage": 13,
+        "stop": "kkt",
+        "common": true,
+        "both_scales": true,
+        "common_kkt": {
+          "stat": 8.874227186428385e-09,
+          "feas": 5.033558604245749e-07,
+          "comp": 3.4475716031989734e-10,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 2.2804133692488904e-07,
+          "feas": 5.033558604245749e-07,
+          "comp": 9.576587786663815e-12,
+          "dual": 0.0
+        },
+        "AL_seconds": 56.85248124299687,
+        "AL_outer": 98,
+        "accepted_inner": 6400,
+        "interrupted_inner": 0,
+        "verification_available": true,
+        "restoration_attempted": true,
+        "restoration_accepted": true,
+        "restoration_seconds": 0.02053991099819541,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "final_AL_objective_hours": 1.3002563609677011
+      },
+      "fallback": null,
+      "guard": null,
+      "initialization": null,
+      "original_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 5.551115123125783e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 5.551115123125783e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.09752626633734485,
+        "max_energy": 1,
+        "dense_min_energy": 0.09752626633734485,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.3877787807814457e-17,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      }
+    },
+    {
+      "case": "tau5-seed5000099",
+      "state": "finished",
+      "origin": "2026-11-16-r3s-cohort",
+      "route": "G",
+      "error": null,
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "selected": "restoration",
+      "selected_hours": 1.3124540029330185,
+      "driver_seconds": 249.27043159800814,
+      "G": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/G/tau5-seed5000099",
+        "stage": 13,
+        "stop": "kkt",
+        "common": true,
+        "both_scales": true,
+        "common_kkt": {
+          "stat": 3.291456684290095e-08,
+          "feas": 2.506356149131663e-08,
+          "comp": 6.210032488240813e-13,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 9.933139637485766e-07,
+          "feas": 2.506356149131663e-08,
+          "comp": 3.9258312355261624e-14,
+          "dual": 0.0
+        },
+        "AL_seconds": 243.3815630179888,
+        "AL_outer": 128,
+        "accepted_inner": 11378,
+        "interrupted_inner": 0,
+        "verification_available": true,
+        "restoration_attempted": true,
+        "restoration_accepted": true,
+        "restoration_seconds": 0.06010263500502333,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "final_AL_objective_hours": 1.3125240438951726
+      },
+      "fallback": null,
+      "guard": null,
+      "initialization": null,
+      "original_audit": {
+        "accepted": true,
+        "original_residuals": {
+          "viol": 4.440892098500626e-16,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 4.440892098500626e-16,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 0.08014290567627058,
+        "max_energy": 1,
+        "dense_min_energy": 0.08014290567627058,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 1.1102230246251565e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      }
+    },
+    {
+      "case": "tau7-seed7000099",
+      "state": "finished",
+      "origin": "2026-11-16-r3s-cohort",
+      "route": "fallback",
+      "error": null,
+      "final_common_kkt": true,
+      "final_both_scales_kkt": true,
+      "last_restoration_solver_accepted": true,
+      "physical_point_available": true,
+      "selected_same_final_branch_kkt": true,
+      "selected": "restoration",
+      "selected_hours": 3.227450500751643,
+      "driver_seconds": 333.09755534899887,
+      "G": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/G/tau7-seed7000099",
+        "stage": 3,
+        "stop": "timeout",
+        "common": false,
+        "both_scales": false,
+        "common_kkt": {
+          "stat": 0.00037508075270991585,
+          "feas": 0.0012771730934434261,
+          "comp": 0.0005579183170753843,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 0.013502907097556971,
+          "feas": 0.0012771730934434261,
+          "comp": 4.38957151231989e-05,
+          "dual": 0.0
+        },
+        "AL_seconds": 317.5455351569981,
+        "AL_outer": 29,
+        "accepted_inner": 7898,
+        "interrupted_inner": 27,
+        "verification_available": true,
+        "restoration_attempted": false,
+        "restoration_accepted": false,
+        "restoration_seconds": 0.0,
+        "restoration_status": null,
+        "restoration_reason": null,
+        "final_AL_objective_hours": 2.4441116864635193
+      },
+      "fallback": {
+        "folder": "experiments/2026-11-16-r3s-cohort/cases/fallback/tau7-seed7000099",
+        "stage": 13,
+        "stop": "kkt",
+        "common": true,
+        "both_scales": true,
+        "common_kkt": {
+          "stat": 1.2431969034467883e-08,
+          "feas": 7.42427524751902e-07,
+          "comp": 6.366323466030877e-11,
+          "dual": 0.0
+        },
+        "physical_kkt": {
+          "stat": 4.475508852408438e-07,
+          "feas": 7.42427524751902e-07,
+          "comp": 7.077005648170598e-12,
+          "dual": 0.0
+        },
+        "AL_seconds": 7.600340976001462,
+        "AL_outer": 7,
+        "accepted_inner": 135,
+        "interrupted_inner": 0,
+        "verification_available": true,
+        "restoration_attempted": true,
+        "restoration_accepted": true,
+        "restoration_seconds": 0.29087600999628194,
+        "restoration_status": "Solve_Succeeded",
+        "restoration_reason": null,
+        "final_AL_objective_hours": 3.227136990733223
+      },
+      "guard": {
+        "accepted": true,
+        "action": "repair",
+        "original_audit": {
+          "accepted": false,
+          "original_residuals": {
+            "viol": 0.04065324003492554,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 1.491862189340054e-16,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.04065324003492554,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": -0.04065324003492554,
+          "max_energy": 1,
+          "dense_min_energy": -0.04065324003492554,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 2.220446049250313e-16,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "charge_fraction": 0.99,
+        "interior_margin": 0.001,
+        "energy_buffer": 1e-08,
+        "changes": [
+          {
+            "stamp": 1,
+            "region": 2,
+            "before": [
+              7.7026699629774456,
+              -6.3168503518183705
+            ],
+            "after": [
+              6.794539963941978,
+              -4.109007799435375
+            ]
+          }
+        ],
+        "unrestricted_infeasibility_proven": false,
+        "final_audit": {
+          "accepted": true,
+          "original_residuals": {
+            "viol": 5.551115123125783e-17,
+            "viol_task": 0.0,
+            "viol_mode": 0.0,
+            "viol_dyn": 5.551115123125783e-17,
+            "viol_speed": 0.0,
+            "viol_bounds": 0.0,
+            "viol_endpoint": 0.0
+          },
+          "min_energy": 0.04934675996507443,
+          "max_energy": 1,
+          "dense_min_energy": 0.04934675996507443,
+          "dense_max_energy": 1.0,
+          "stored_replay_gap": 0,
+          "tasks_exact": true,
+          "assigned_modes_valid": true
+        },
+        "objective_hours": 5.802376587729725,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "same_stamps": true,
+        "case": "tau7-seed7000099",
+        "seconds": 0.15310451100231148,
+        "baseline_y_verified": false,
+        "native_stamps": 37,
+        "native_variables": 178
+      },
+      "initialization": {
+        "case": "tau7-seed7000099",
+        "accepted": true,
+        "input_only": true,
+        "moving_geometry": true,
+        "initial_objective": 4.180488703339889,
+        "initial_min_energy": -0.04065324003492554,
+        "initial_modes": [
+          -1,
+          2,
+          -1,
+          -1,
+          2,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1
+        ],
+        "initial_task_stamps": [
+          3,
+          8,
+          13,
+          18,
+          21,
+          28,
+          33
+        ],
+        "stamps": 37,
+        "solver_success": true,
+        "solver_status": "Solve_Succeeded",
+        "iterations": 219,
+        "raw_kkt": {
+          "stat": 5.049245223901158e-11,
+          "feas": 1.9184653865522706e-14,
+          "comp": 2.5188668867994592e-08,
+          "dual": 0.0
+        },
+        "duration_correction": 0.0,
+        "objective": 3.2274505008057743,
+        "original_residuals": {
+          "viol": 2.7755575615628914e-17,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 2.7755575615628914e-17,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.0,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": 1.0073970213575478e-08,
+        "max_energy": 1.0,
+        "final_kkt": {
+          "stat": 5.049245223901158e-11,
+          "feas": 1.5987211554602255e-15,
+          "comp": 2.5188647891616015e-08,
+          "dual": 0.0
+        },
+        "tasks_exact": true,
+        "checks": {
+          "correction": true,
+          "residual": true,
+          "energy": true,
+          "tasks": true,
+          "branch_kkt": true,
+          "dense_energy": true
+        },
+        "max_position_change_km": 2.7348261585453906,
+        "same_modes": true,
+        "same_task_stamps": true,
+        "seconds": 0.1907052129972726
+      },
+      "original_audit": {
+        "accepted": false,
+        "original_residuals": {
+          "viol": 0.04065324003492554,
+          "viol_task": 0.0,
+          "viol_mode": 0.0,
+          "viol_dyn": 1.491862189340054e-16,
+          "viol_speed": 0.0,
+          "viol_bounds": 0.04065324003492554,
+          "viol_endpoint": 0.0
+        },
+        "min_energy": -0.04065324003492554,
+        "max_energy": 1,
+        "dense_min_energy": -0.04065324003492554,
+        "dense_max_energy": 1.0,
+        "stored_replay_gap": 2.220446049250313e-16,
+        "tasks_exact": true,
+        "assigned_modes_valid": true
+      },
+      "selected_minus_initialization_seconds": -1.9487291780251326e-07
+    }
+  ],
+  "AL_phases": 6,
+  "completed_outer": 427,
+  "accepted_inner": 27296,
+  "interrupted_inner": 27,
+  "original_negative_battery": 1,
+  "repairs_attempted": 1,
+  "repairs_accepted": 1,
+  "initializations_attempted": 1,
+  "initializations_accepted": 1,
+  "costs": {
+    "G_AL_seconds": 622.4029934749706,
+    "fallback_AL_seconds": 8.033210992987733,
+    "restoration_seconds": 0.3840163749991916,
+    "initialization_seconds": 0.1907052129972726,
+    "guard_seconds": 0.1575570190034341,
+    "driver_wall_seconds": 333.10722343000816,
+    "walltime_complete": true
+  }
+}
