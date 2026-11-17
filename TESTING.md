@@ -237,3 +237,15 @@ python experiments/2026-11-17-r3s-paper-comparison/verify.py --check-only
 
 NumPy/SciPy環境で実行。後者は保存済み成果物を書き換えず、900行と、独立な順序統計/ECDF積分による分布の検算、入力hashを照合する。
 図の生成にはMatplotlibを使用し、PNG2枚を目視確認した。新しい求解は起動しない。
+
+## R3/R3sの段階別目的値診断
+
+原入力の古いmetricsを目的値に使わないこと、秒換算と1秒分類、実行可能baselineの欠測を改善へ数えないこと、非有限時間の拒否を4単体検査にした。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s experiments/2026-11-17-r3s-stage-objectives -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-stage-objectives/verify.py --check-only
+```
+
+Python標準ライブラリだけで実行できる。後者は入力10,748ファイルhash、全900行と前回分布比較との一致、独立のCSV順序統計、初期化受理202点との軌道/時間の対応を検算し、成果物は上書きしない。
+`analyze.py`と`inspect_initialization.py`は生成済み出力があると停止する。再生成は別ディレクトリで計画する。図だけMatplotlibが必要。

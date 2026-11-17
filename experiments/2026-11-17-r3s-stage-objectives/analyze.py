@@ -202,7 +202,7 @@ def main():
     assert not (BASE / 'summary.json').exists()
     for name, data in [('cases.csv', rows), ('points.csv', points)]:
         with (BASE / name).open('w') as stream:
-            writer = csv.DictWriter(stream, fieldnames=list(data[0])); writer.writeheader(); writer.writerows(data)
+            writer = csv.DictWriter(stream, fieldnames=list(data[0]), lineterminator='\n'); writer.writeheader(); writer.writerows(data)
     result = summarize(rows, points, paper)
     write(BASE / 'summary.json', result)
     write(BASE / 'execution.json', dict(seconds=monotonic() - start, sources=len(sources), new_optimization=False))

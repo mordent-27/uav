@@ -11,9 +11,11 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 - 診断用の入口で固定900件を完了。原実行可能な返却点894、返却点の固定分岐KKT830。AL終点の共通KKT863・追加物理KKT779は別の点の指標。
 - 24件は旧入口、876件は外側停滞の打切り規則入り。著者MATLAB/L-BFGSと同じ実装ではない。
 - 図3との目的値分布比較では、中央値比は1タスク1.067倍、7/8/9タスク2.230/2.387/2.553倍。証明付き返却点だけでも差が残り、著者の数値再現は未達。
-- 次は同じ900入力内で初期軌道・初期化・AL・返却の目的値を照合し、差が生じる段階を調べる。
+- 同じ900入力の段階別診断を完了。両端が原実行可能な857組で591短縮・266件は差1秒以内。修復後の初期化受理202件は全て返却までの短縮が1秒未満で、多タスク側は前処理への依存が強い。
+- 次は規則入り876件中のG stage01時間切れ219件を保存ログで診断し、分岐への依存と数値的な未達を分ける。
 
-[直近の比較レポート](experiments/2026-11-17-r3s-paper-comparison/REPORT.md)・[分布図](experiments/2026-11-17-r3s-paper-comparison/objective-distributions.png)、
+[段階別診断](experiments/2026-11-17-r3s-stage-objectives/REPORT.md)・[図](experiments/2026-11-17-r3s-stage-objectives/stage-objectives.png)、
+[図3との比較](experiments/2026-11-17-r3s-paper-comparison/REPORT.md)・[分布図](experiments/2026-11-17-r3s-paper-comparison/objective-distributions.png)、
 [900件の求解レポート](experiments/2026-11-16-r3s-cohort/REPORT.md)・[実行手順](experiments/2026-11-16-r3s-cohort/USAGE.md)。
 課題2〜4の草稿は[human/report.md](../human/report.md)。本体`src/`と診断用`experiments/`の成果は区別する。
 

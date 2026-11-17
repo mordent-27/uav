@@ -26,6 +26,11 @@ def read_csv(path):
 
 
 def main():
+    for index, root in [('analysis-dependencies.json', ROOT), ('artifact-index.json', BASE)]:
+        path = BASE / index
+        if path.exists():
+            for name, digest in json.loads(path.read_text()).items():
+                assert hashlib.sha256((root / name).read_bytes()).hexdigest() == digest, name
     sources = json.loads((BASE / 'source-index.json').read_text())
     for name, digest in sources.items():
         assert hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == digest, name
@@ -77,10 +82,31 @@ def main():
             selection = [r for r in paired if r['route'] == route]
             assert stats['n'] == len(selection)
             assert stats['counts'] == {name: sum(r['change'] == name for r in selection) for name in counts}
+    with (BASE / 'initialization-pairs.csv').open() as stream:
+        init_pairs = list(csv.DictReader(stream))
+    inspected = json.loads((BASE / 'initialization-inspection.json').read_text())
+    assert len(init_pairs) == inspected['n'] == 202
+    assert {r['case'] for r in init_pairs} == {r['case'] for r in rows if r['initialization_h']}
+    for pair in init_pairs:
+        ps = by_case[pair['case']]
+        initial = json.loads((ROOT / ps['initialization']['source']).read_text())
+        returned = json.loads((ROOT / ps['returned']['source']).read_text())
+        close(float(pair['returned_minus_init_seconds']),
+              3600 * (sum(returned['solution']['s']) - sum(initial['solution']['s'])))
+        assert pair['same_modes'] == str(initial['modes'] == returned['modes']) == 'True'
+        assert pair['same_task_stamps'] == str(initial['task_stamp'] == returned['task_stamp']) == 'True'
+        close(float(pair['max_position_difference_km']), max(math.dist(x, y) for x, y in
+              zip(initial['solution']['r'], returned['solution']['r'])))
+        close(float(pair['max_duration_difference_seconds']), 3600 * max(abs(x-y) for x, y in
+              zip(initial['solution']['s'], returned['solution']['s'])))
+    for key in ['returned_minus_init_seconds', 'AL_minus_init_seconds']:
+        close(min(float(p[key]) for p in init_pairs), inspected[key]['min'])
+        close(max(float(p[key]) for p in init_pairs), inspected[key]['max'])
+    assert all(abs(float(p['returned_minus_init_seconds'])) < 1 for p in init_pairs)
     verification = dict(passed=True, input_hashes=len(sources), cases=900, points=len(points),
                         returned=sum(bool(r['returned_h']) for r in rows), paired_counts=counts,
                         independent_csv_order_statistics=True, prior_900_cases_match=True,
-                        kkt_recomputed=False, new_optimization=False)
+                        initialization_pairs_verified=202, kkt_recomputed=False, new_optimization=False)
     if '--check-only' not in sys.argv:
         assert not (BASE / 'verification.json').exists()
         (BASE / 'verification.json').write_text(json.dumps(verification, indent=2) + '\n')
