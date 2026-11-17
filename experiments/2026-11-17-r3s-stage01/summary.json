@@ -1,0 +1,3139 @@
+{
+  "total": 900,
+  "current": 876,
+  "targets": {
+    "n": 219,
+    "stage_stops": {
+      "timeout": 219
+    },
+    "variables": {
+      "n": 219,
+      "min": 178,
+      "median": 203,
+      "max": 228,
+      "mean": 210.76255707762556,
+      "total": 46157
+    },
+    "completed_outer": {
+      "n": 219,
+      "min": 4,
+      "median": 7,
+      "max": 9,
+      "mean": 6.598173515981735,
+      "total": 1445
+    },
+    "stage_seconds": {
+      "n": 219,
+      "min": 120.00698230302078,
+      "median": 120.03364715600037,
+      "max": 120.09679334101384,
+      "mean": 120.03590110767105,
+      "total": 26287.86234257996
+    },
+    "final_rho": {
+      "10000.0": 204,
+      "100000.0": 12,
+      "1000000.0": 3
+    },
+    "rho_increases": 18,
+    "kkt_blockers": {
+      "stat": 204,
+      "feas": 219,
+      "comp": 219,
+      "dual": 0
+    },
+    "final_kkt": {
+      "stat": {
+        "n": 219,
+        "min": 2.900773475589258e-10,
+        "median": 0.07484112602067584,
+        "max": 5.567688542158776,
+        "mean": 0.36763108258162946,
+        "total": 80.51120708537685
+      },
+      "feas": {
+        "n": 219,
+        "min": 9.62209567870187e-06,
+        "median": 0.001453890832519178,
+        "max": 0.07020515019443685,
+        "mean": 0.0027016784797433066,
+        "total": 0.5916675870637842
+      },
+      "comp": {
+        "n": 219,
+        "min": 4.848009980275292e-06,
+        "median": 0.001451416150393646,
+        "max": 0.014299512264988316,
+        "mean": 0.0016505034958776083,
+        "total": 0.3614602655971962
+      },
+      "dual": {
+        "n": 219,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "total": 0.0
+      }
+    },
+    "inner_status": {
+      "max_iter": 1420,
+      "timeout": 219,
+      "converged": 25
+    },
+    "inner_status_by_case": {
+      "converged": 16,
+      "max_iter": 219,
+      "stuck": 0
+    },
+    "inner_total": 1664,
+    "completed_inner_high_gradient": 1420,
+    "last_completed_inner": {
+      "max_iter": 204,
+      "converged": 15
+    },
+    "interrupted_cases": 219,
+    "interrupted_with_steps": 217,
+    "interrupted_seconds": {
+      "n": 219,
+      "min": 0.04404614100349136,
+      "median": 8.761359724012436,
+      "max": 21.208441841008607,
+      "mean": 8.739217109549084,
+      "total": 1913.8885469912493
+    },
+    "interrupted_accepted_total": 34699,
+    "inner_seconds": {
+      "n": 219,
+      "min": 119.7607201510109,
+      "median": 119.90079088998027,
+      "max": 119.97498525903211,
+      "mean": 119.90211232475787,
+      "total": 26258.56259912197
+    },
+    "hessian_builds": {
+      "n": 219,
+      "min": 1485,
+      "median": 2111,
+      "max": 2987,
+      "mean": 2120.109589041096,
+      "total": 464304
+    },
+    "hessian_gradient_calls": {
+      "n": 219,
+      "min": 678645,
+      "median": 886123,
+      "max": 1066359,
+      "mean": 884126.1552511415,
+      "total": 193623628
+    },
+    "accepted_steps": {
+      "n": 219,
+      "min": 1484,
+      "median": 2110,
+      "max": 2986,
+      "mean": 2119.109589041096,
+      "total": 464085
+    },
+    "seconds_per_hessian_build": {
+      "n": 219,
+      "min": 0.04012666515497616,
+      "median": 0.056783565672670705,
+      "max": 0.08077052478519384,
+      "mean": 0.05813745220553245,
+      "total": 12.732102033011607
+    },
+    "inner_accepted_per_build": {
+      "n": 1664,
+      "min": 0.0,
+      "median": 1.0,
+      "max": 1.0,
+      "mean": 0.9968952025695178,
+      "total": 1658.8336170756777
+    }
+  },
+  "controls": {
+    "n": 657,
+    "stage_stops": {
+      "kkt": 454,
+      "outer_limit": 203
+    },
+    "variables": {
+      "n": 657,
+      "min": 28,
+      "median": 103,
+      "max": 203,
+      "mean": 100.4124809741248,
+      "total": 65971
+    },
+    "completed_outer": {
+      "n": 657,
+      "min": 3,
+      "median": 9,
+      "max": 10,
+      "mean": 7.8173515981735155,
+      "total": 5136
+    },
+    "stage_seconds": {
+      "n": 657,
+      "min": 1.1720391100097913,
+      "median": 32.99952939900686,
+      "max": 119.952116475004,
+      "mean": 42.274727153994526,
+      "total": 27774.495740174403
+    },
+    "final_rho": {
+      "10000.0": 124,
+      "1000000.0": 140,
+      "100000.0": 335,
+      "10000000.0": 45,
+      "100000000.0": 13
+    },
+    "rho_increases": 802,
+    "kkt_blockers": {
+      "stat": 91,
+      "feas": 191,
+      "comp": 164,
+      "dual": 0
+    },
+    "final_kkt": {
+      "stat": {
+        "n": 657,
+        "min": 7.33194061020015e-12,
+        "median": 9.747705941032248e-10,
+        "max": 12.36294382915929,
+        "mean": 0.18151498252384551,
+        "total": 119.2553435181665
+      },
+      "feas": {
+        "n": 657,
+        "min": 1.486338829792544e-12,
+        "median": 3.0344948628857615e-07,
+        "max": 0.0064473467077650615,
+        "mean": 9.321843541803274e-05,
+        "total": 0.06124451206964751
+      },
+      "comp": {
+        "n": 657,
+        "min": 2.578492974691926e-14,
+        "median": 3.3721560256660954e-07,
+        "max": 0.002702770052096521,
+        "mean": 4.501818480938253e-05,
+        "total": 0.02957694741976432
+      },
+      "dual": {
+        "n": 657,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "total": 0.0
+      }
+    },
+    "inner_status": {
+      "max_iter": 3303,
+      "converged": 1798,
+      "stuck": 35
+    },
+    "inner_status_by_case": {
+      "converged": 636,
+      "max_iter": 657,
+      "stuck": 27
+    },
+    "inner_total": 5136,
+    "completed_inner_high_gradient": 3297,
+    "last_completed_inner": {
+      "converged": 543,
+      "stuck": 22,
+      "max_iter": 92
+    },
+    "interrupted_cases": 0,
+    "interrupted_with_steps": 0,
+    "interrupted_seconds": {
+      "n": 0,
+      "min": null,
+      "median": null,
+      "max": null,
+      "mean": null,
+      "total": 0
+    },
+    "interrupted_accepted_total": 0,
+    "inner_seconds": {
+      "n": 657,
+      "min": 1.157288295973558,
+      "median": 32.90886259204126,
+      "max": 119.7906498600205,
+      "mean": 42.18839539999687,
+      "total": 27717.775777797942
+    },
+    "hessian_builds": {
+      "n": 657,
+      "min": 359,
+      "median": 1842,
+      "max": 3000,
+      "mean": 1779.3835616438357,
+      "total": 1169055
+    },
+    "hessian_gradient_calls": {
+      "n": 657,
+      "min": 20463,
+      "median": 376740,
+      "max": 1071000,
+      "mean": 419233.08219178085,
+      "total": 275436135
+    },
+    "accepted_steps": {
+      "n": 657,
+      "min": 359,
+      "median": 1842,
+      "max": 3000,
+      "mean": 1779.3302891933029,
+      "total": 1169020
+    },
+    "seconds_per_hessian_build": {
+      "n": 657,
+      "min": 0.0028196393752618234,
+      "median": 0.01698024453137219,
+      "max": 0.054377947477800975,
+      "mean": 0.019728590566819113,
+      "total": 12.961684002400157
+    },
+    "inner_accepted_per_build": {
+      "n": 5136,
+      "min": 0.75,
+      "median": 1.0,
+      "max": 1.0,
+      "mean": 0.999734344573747,
+      "total": 5134.635593730764
+    }
+  },
+  "carried": {
+    "n": 24,
+    "stage_stops": {
+      "kkt": 11,
+      "outer_limit": 5,
+      "timeout": 8
+    },
+    "variables": {
+      "n": 24,
+      "min": 28,
+      "median": 128.0,
+      "max": 228,
+      "mean": 128,
+      "total": 3072
+    },
+    "completed_outer": {
+      "n": 24,
+      "min": 3,
+      "median": 7.5,
+      "max": 10,
+      "mean": 7.25,
+      "total": 174
+    },
+    "stage_seconds": {
+      "n": 24,
+      "min": 2.0646158030140214,
+      "median": 57.22939586300345,
+      "max": 120.04085963001125,
+      "mean": 65.13706136554174,
+      "total": 1563.2894727730018
+    },
+    "final_rho": {
+      "100000.0": 17,
+      "10000.0": 7
+    },
+    "rho_increases": 17,
+    "kkt_blockers": {
+      "stat": 8,
+      "feas": 13,
+      "comp": 11,
+      "dual": 0
+    },
+    "final_kkt": {
+      "stat": {
+        "n": 24,
+        "min": 4.9447649678550455e-11,
+        "median": 4.058366804074454e-09,
+        "max": 2.0807670847609923,
+        "mean": 0.14695033838752597,
+        "total": 3.5268081213006237
+      },
+      "feas": {
+        "n": 24,
+        "min": 1.3857381908621846e-10,
+        "median": 1.3025876484662469e-06,
+        "max": 0.0028975817712964813,
+        "mean": 0.0005471263342470146,
+        "total": 0.01313103202192835
+      },
+      "comp": {
+        "n": 24,
+        "min": 7.397760654059837e-09,
+        "median": 8.208049861041511e-07,
+        "max": 0.00279027311869489,
+        "mean": 0.0005019251126289898,
+        "total": 0.012046202703095754
+      },
+      "dual": {
+        "n": 24,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "total": 0.0
+      }
+    },
+    "inner_status": {
+      "max_iter": 133,
+      "converged": 40,
+      "stuck": 1,
+      "timeout": 8
+    },
+    "inner_status_by_case": {
+      "converged": 17,
+      "max_iter": 24,
+      "stuck": 1
+    },
+    "inner_total": 182,
+    "completed_inner_high_gradient": 133,
+    "last_completed_inner": {
+      "converged": 16,
+      "max_iter": 8
+    },
+    "interrupted_cases": 8,
+    "interrupted_with_steps": 8,
+    "interrupted_seconds": {
+      "n": 8,
+      "min": 1.0496106820064597,
+      "median": 7.864164624494151,
+      "max": 16.79051609200542,
+      "mean": 7.958502155372116,
+      "total": 63.66801724297693
+    },
+    "interrupted_accepted_total": 1197,
+    "inner_seconds": {
+      "n": 24,
+      "min": 2.049202157999389,
+      "median": 57.10107969948149,
+      "max": 119.91736129394849,
+      "mean": 65.0342437102845,
+      "total": 1560.821849046828
+    },
+    "hessian_builds": {
+      "n": 24,
+      "min": 539,
+      "median": 1926.5,
+      "max": 2890,
+      "mean": 1873.25,
+      "total": 44958
+    },
+    "hessian_gradient_calls": {
+      "n": 24,
+      "min": 30723,
+      "median": 571662.0,
+      "max": 1031730,
+      "mean": 542827.3333333334,
+      "total": 13027856
+    },
+    "accepted_steps": {
+      "n": 24,
+      "min": 539,
+      "median": 1925.5,
+      "max": 2889,
+      "mean": 1872.875,
+      "total": 44949
+    },
+    "seconds_per_hessian_build": {
+      "n": 24,
+      "min": 0.003588795373028702,
+      "median": 0.027203360757397207,
+      "max": 0.0692363517863444,
+      "mean": 0.030573321515429568,
+      "total": 0.7337597163703096
+    },
+    "inner_accepted_per_build": {
+      "n": 182,
+      "min": 0.9333333333333333,
+      "median": 1.0,
+      "max": 1.0,
+      "mean": 0.9991384075907177,
+      "total": 181.84319018151064
+    }
+  },
+  "by_tau": [
+    {
+      "tau": 1,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 97,
+        "stage_stops": {
+          "kkt": 96,
+          "outer_limit": 1
+        },
+        "variables": {
+          "n": 97,
+          "min": 28,
+          "median": 28,
+          "max": 28,
+          "mean": 28,
+          "total": 2716
+        },
+        "completed_outer": {
+          "n": 97,
+          "min": 3,
+          "median": 4,
+          "max": 10,
+          "mean": 4.144329896907217,
+          "total": 402
+        },
+        "stage_seconds": {
+          "n": 97,
+          "min": 1.1720391100097913,
+          "median": 2.4434023019857705,
+          "max": 10.784399789001327,
+          "mean": 2.7675762134430135,
+          "total": 268.4548927039723
+        },
+        "final_rho": {
+          "100000.0": 67,
+          "1000000.0": 9,
+          "10000.0": 18,
+          "10000000.0": 2,
+          "100000000.0": 1
+        },
+        "rho_increases": 95,
+        "kkt_blockers": {
+          "stat": 1,
+          "feas": 1,
+          "comp": 1,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 97,
+            "min": 7.33194061020015e-12,
+            "median": 1.7073180832068619e-10,
+            "max": 5.9329106678755274e-05,
+            "mean": 6.128367502896352e-07,
+            "total": 5.9445164778094616e-05
+          },
+          "feas": {
+            "n": 97,
+            "min": 3.739369924815605e-12,
+            "median": 8.354985914227342e-08,
+            "max": 0.0004195135722259158,
+            "mean": 4.520085436805393e-06,
+            "total": 0.00043844828737012317
+          },
+          "comp": {
+            "n": 97,
+            "min": 2.578492974691926e-14,
+            "median": 6.678222980865955e-08,
+            "max": 0.0001307682829158885,
+            "mean": 1.571027345699249e-06,
+            "total": 0.00015238965253282715
+          },
+          "dual": {
+            "n": 97,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 139,
+          "converged": 257,
+          "stuck": 6
+        },
+        "inner_status_by_case": {
+          "converged": 97,
+          "max_iter": 97,
+          "stuck": 2
+        },
+        "inner_total": 402,
+        "completed_inner_high_gradient": 139,
+        "last_completed_inner": {
+          "converged": 96,
+          "stuck": 1
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 97,
+          "min": 1.157288295973558,
+          "median": 2.426475923974067,
+          "max": 10.730999202962266,
+          "mean": 2.7477322850495183,
+          "total": 266.5300316498033
+        },
+        "hessian_builds": {
+          "n": 97,
+          "min": 359,
+          "median": 621,
+          "max": 2222,
+          "mean": 676.3711340206186,
+          "total": 65608
+        },
+        "hessian_gradient_calls": {
+          "n": 97,
+          "min": 20463,
+          "median": 35397,
+          "max": 126654,
+          "mean": 38553.154639175256,
+          "total": 3739656
+        },
+        "accepted_steps": {
+          "n": 97,
+          "min": 359,
+          "median": 621,
+          "max": 2222,
+          "mean": 676.3092783505155,
+          "total": 65602
+        },
+        "seconds_per_hessian_build": {
+          "n": 97,
+          "min": 0.0028196393752618234,
+          "median": 0.004092911581015346,
+          "max": 0.005709107106372972,
+          "mean": 0.004067658001955317,
+          "total": 0.3945628261896657
+        },
+        "inner_accepted_per_build": {
+          "n": 402,
+          "min": 0.75,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9976020322118222,
+          "total": 401.03601694915255
+        }
+      }
+    },
+    {
+      "tau": 2,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 97,
+        "stage_stops": {
+          "kkt": 93,
+          "outer_limit": 4
+        },
+        "variables": {
+          "n": 97,
+          "min": 53,
+          "median": 53,
+          "max": 53,
+          "mean": 53,
+          "total": 5141
+        },
+        "completed_outer": {
+          "n": 97,
+          "min": 4,
+          "median": 5,
+          "max": 10,
+          "mean": 5.958762886597938,
+          "total": 578
+        },
+        "stage_seconds": {
+          "n": 97,
+          "min": 4.076040862011723,
+          "median": 8.43935101601528,
+          "max": 21.856438253016677,
+          "mean": 9.371071017228461,
+          "total": 908.9938886711607
+        },
+        "final_rho": {
+          "100000.0": 54,
+          "10000000.0": 5,
+          "10000.0": 19,
+          "1000000.0": 14,
+          "100000000.0": 5
+        },
+        "rho_increases": 117,
+        "kkt_blockers": {
+          "stat": 4,
+          "feas": 3,
+          "comp": 2,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 97,
+            "min": 7.610415769798706e-12,
+            "median": 3.649543662078949e-10,
+            "max": 2.044210412745205,
+            "mean": 0.031834504351214474,
+            "total": 3.087946922067804
+          },
+          "feas": {
+            "n": 97,
+            "min": 1.486338829792544e-12,
+            "median": 1.4045050385214086e-07,
+            "max": 1.0701529923551334e-05,
+            "mean": 4.941302162281022e-07,
+            "total": 4.793063097412592e-05
+          },
+          "comp": {
+            "n": 97,
+            "min": 2.362485207463294e-13,
+            "median": 8.575480703321148e-08,
+            "max": 1.0701529923551334e-05,
+            "mean": 4.1294196120093385e-07,
+            "total": 4.005537023649058e-05
+          },
+          "dual": {
+            "n": 97,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 285,
+          "converged": 284,
+          "stuck": 9
+        },
+        "inner_status_by_case": {
+          "converged": 97,
+          "max_iter": 97,
+          "stuck": 7
+        },
+        "inner_total": 578,
+        "completed_inner_high_gradient": 283,
+        "last_completed_inner": {
+          "converged": 85,
+          "stuck": 7,
+          "max_iter": 5
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 97,
+          "min": 4.055428805964766,
+          "median": 8.407073876034701,
+          "max": 21.796184356993763,
+          "mean": 9.331769862431269,
+          "total": 905.1816766558331
+        },
+        "hessian_builds": {
+          "n": 97,
+          "min": 626,
+          "median": 1058,
+          "max": 2815,
+          "mean": 1158.0515463917525,
+          "total": 112331
+        },
+        "hessian_gradient_calls": {
+          "n": 97,
+          "min": 66982,
+          "median": 113206,
+          "max": 301205,
+          "mean": 123911.51546391753,
+          "total": 12019417
+        },
+        "accepted_steps": {
+          "n": 97,
+          "min": 626,
+          "median": 1058,
+          "max": 2815,
+          "mean": 1157.958762886598,
+          "total": 112322
+        },
+        "seconds_per_hessian_build": {
+          "n": 97,
+          "min": 0.005236956428670319,
+          "median": 0.007784754577570081,
+          "max": 0.01084738433538161,
+          "mean": 0.008100541710635081,
+          "total": 0.7857525459316029
+        },
+        "inner_accepted_per_build": {
+          "n": 578,
+          "min": 0.96,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9998612017909285,
+          "total": 577.9197746351567
+        }
+      }
+    },
+    {
+      "tau": 3,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 98,
+        "stage_stops": {
+          "kkt": 79,
+          "outer_limit": 19
+        },
+        "variables": {
+          "n": 98,
+          "min": 78,
+          "median": 78.0,
+          "max": 78,
+          "mean": 78,
+          "total": 7644
+        },
+        "completed_outer": {
+          "n": 98,
+          "min": 4,
+          "median": 7.0,
+          "max": 10,
+          "mean": 7.540816326530612,
+          "total": 739
+        },
+        "stage_seconds": {
+          "n": 98,
+          "min": 10.818425769015448,
+          "median": 20.008417855002335,
+          "max": 36.88047228800133,
+          "mean": 20.64950868502237,
+          "total": 2023.651851132192
+        },
+        "final_rho": {
+          "10000.0": 16,
+          "100000.0": 45,
+          "1000000.0": 22,
+          "10000000.0": 9,
+          "100000000.0": 6
+        },
+        "rho_increases": 140,
+        "kkt_blockers": {
+          "stat": 14,
+          "feas": 14,
+          "comp": 10,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 98,
+            "min": 1.4346038246237924e-11,
+            "median": 9.75996869261031e-10,
+            "max": 3.9637124246464333,
+            "mean": 0.2496632732480076,
+            "total": 24.467000778304744
+          },
+          "feas": {
+            "n": 98,
+            "min": 4.837398606682974e-10,
+            "median": 2.3210749675386944e-07,
+            "max": 0.0009677150818071453,
+            "mean": 2.094446496700684e-05,
+            "total": 0.0020525575667666705
+          },
+          "comp": {
+            "n": 98,
+            "min": 9.995860389411249e-11,
+            "median": 1.686602452075081e-07,
+            "max": 0.0009677150818071453,
+            "mean": 1.2289620029958938e-05,
+            "total": 0.001204382762935976
+          },
+          "dual": {
+            "n": 98,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 428,
+          "converged": 304,
+          "stuck": 7
+        },
+        "inner_status_by_case": {
+          "converged": 97,
+          "max_iter": 98,
+          "stuck": 6
+        },
+        "inner_total": 739,
+        "completed_inner_high_gradient": 427,
+        "last_completed_inner": {
+          "converged": 80,
+          "max_iter": 14,
+          "stuck": 4
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 98,
+          "min": 10.771522101975279,
+          "median": 19.955877031985437,
+          "max": 36.80122789499001,
+          "mean": 20.586458445788296,
+          "total": 2017.472927687253
+        },
+        "hessian_builds": {
+          "n": 98,
+          "min": 934,
+          "median": 1480.5,
+          "max": 3000,
+          "mean": 1626.9183673469388,
+          "total": 159438
+        },
+        "hessian_gradient_calls": {
+          "n": 98,
+          "min": 146638,
+          "median": 232438.5,
+          "max": 471000,
+          "mean": 255426.18367346938,
+          "total": 25031766
+        },
+        "accepted_steps": {
+          "n": 98,
+          "min": 934,
+          "median": 1480.5,
+          "max": 3000,
+          "mean": 1626.8469387755101,
+          "total": 159431
+        },
+        "seconds_per_hessian_build": {
+          "n": 98,
+          "min": 0.00892965167056698,
+          "median": 0.012464980798203573,
+          "max": 0.01696250196401844,
+          "mean": 0.012774437464468127,
+          "total": 1.2518948715178764
+        },
+        "inner_accepted_per_build": {
+          "n": 739,
+          "min": 0.9666666666666667,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9999003803996763,
+          "total": 738.9263811153609
+        }
+      }
+    },
+    {
+      "tau": 4,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 97,
+        "stage_stops": {
+          "kkt": 72,
+          "outer_limit": 25
+        },
+        "variables": {
+          "n": 97,
+          "min": 103,
+          "median": 103,
+          "max": 103,
+          "mean": 103,
+          "total": 9991
+        },
+        "completed_outer": {
+          "n": 97,
+          "min": 6,
+          "median": 9,
+          "max": 10,
+          "mean": 8.670103092783505,
+          "total": 841
+        },
+        "stage_seconds": {
+          "n": 97,
+          "min": 20.46144049501163,
+          "median": 34.35075731299003,
+          "max": 60.60556508999434,
+          "mean": 35.38741808602096,
+          "total": 3432.5795543440327
+        },
+        "final_rho": {
+          "1000000.0": 27,
+          "100000.0": 40,
+          "10000.0": 18,
+          "10000000.0": 12
+        },
+        "rho_increases": 130,
+        "kkt_blockers": {
+          "stat": 15,
+          "feas": 21,
+          "comp": 21,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 97,
+            "min": 9.318164295724074e-12,
+            "median": 1.3239659021890837e-09,
+            "max": 12.36294382915929,
+            "mean": 0.439603154184675,
+            "total": 42.64150595591347
+          },
+          "feas": {
+            "n": 97,
+            "min": 2.345299579542548e-10,
+            "median": 2.326520822243383e-07,
+            "max": 0.000961956359602549,
+            "mean": 4.412242505759845e-05,
+            "total": 0.004279875230587049
+          },
+          "comp": {
+            "n": 97,
+            "min": 4.444444812179427e-12,
+            "median": 2.29025030752672e-07,
+            "max": 0.000961956359602549,
+            "mean": 1.9479396803299448e-05,
+            "total": 0.0018895014899200464
+          },
+          "dual": {
+            "n": 97,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 539,
+          "converged": 294,
+          "stuck": 8
+        },
+        "inner_status_by_case": {
+          "converged": 96,
+          "max_iter": 97,
+          "stuck": 7
+        },
+        "inner_total": 841,
+        "completed_inner_high_gradient": 538,
+        "last_completed_inner": {
+          "converged": 76,
+          "max_iter": 15,
+          "stuck": 6
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 97,
+          "min": 20.403574577037944,
+          "median": 34.27268482497311,
+          "max": 60.49244642499252,
+          "mean": 35.29953175964981,
+          "total": 3424.054580686032
+        },
+        "hessian_builds": {
+          "n": 97,
+          "min": 1088,
+          "median": 1896,
+          "max": 3000,
+          "mean": 1973.5154639175257,
+          "total": 191431
+        },
+        "hessian_gradient_calls": {
+          "n": 97,
+          "min": 225216,
+          "median": 392472,
+          "max": 621000,
+          "mean": 408517.7010309278,
+          "total": 39626217
+        },
+        "accepted_steps": {
+          "n": 97,
+          "min": 1088,
+          "median": 1896,
+          "max": 3000,
+          "mean": 1973.4329896907216,
+          "total": 191423
+        },
+        "seconds_per_hessian_build": {
+          "n": 97,
+          "min": 0.01319003423007597,
+          "median": 0.017921398108563795,
+          "max": 0.023355340041209025,
+          "mean": 0.01788971647367052,
+          "total": 1.7353024979460403
+        },
+        "inner_accepted_per_build": {
+          "n": 841,
+          "min": 0.96875,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9998882616849095,
+          "total": 840.906028077009
+        }
+      }
+    },
+    {
+      "tau": 5,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 98,
+        "stage_stops": {
+          "kkt": 52,
+          "outer_limit": 46
+        },
+        "variables": {
+          "n": 98,
+          "min": 128,
+          "median": 128.0,
+          "max": 128,
+          "mean": 128,
+          "total": 12544
+        },
+        "completed_outer": {
+          "n": 98,
+          "min": 7,
+          "median": 10.0,
+          "max": 10,
+          "mean": 9.46938775510204,
+          "total": 928
+        },
+        "stage_seconds": {
+          "n": 98,
+          "min": 34.17350211998564,
+          "median": 56.34626432400546,
+          "max": 79.44816459499998,
+          "mean": 57.06921339735754,
+          "total": 5592.782912941038
+        },
+        "final_rho": {
+          "1000000.0": 29,
+          "100000.0": 44,
+          "10000.0": 14,
+          "10000000.0": 11
+        },
+        "rho_increases": 135,
+        "kkt_blockers": {
+          "stat": 15,
+          "feas": 46,
+          "comp": 35,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 98,
+            "min": 1.2900513990388163e-11,
+            "median": 2.1526137186413568e-09,
+            "max": 2.8504576363611434,
+            "mean": 0.1185410543393615,
+            "total": 11.617023325257428
+          },
+          "feas": {
+            "n": 98,
+            "min": 8.337644463729532e-10,
+            "median": 8.82348895305668e-07,
+            "max": 0.0059124301565397774,
+            "mean": 0.0001452672125371695,
+            "total": 0.01423618682864261
+          },
+          "comp": {
+            "n": 98,
+            "min": 5.206629502541027e-10,
+            "median": 5.565375769921166e-07,
+            "max": 0.001950835741566112,
+            "mean": 5.8312102218895125e-05,
+            "total": 0.005714586017451722
+          },
+          "dual": {
+            "n": 98,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 651,
+          "converged": 275,
+          "stuck": 2
+        },
+        "inner_status_by_case": {
+          "converged": 95,
+          "max_iter": 98,
+          "stuck": 2
+        },
+        "inner_total": 928,
+        "completed_inner_high_gradient": 651,
+        "last_completed_inner": {
+          "converged": 82,
+          "max_iter": 15,
+          "stuck": 1
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 98,
+          "min": 34.09724537198781,
+          "median": 56.21986300995923,
+          "max": 79.32323108194396,
+          "mean": 56.955665819023494,
+          "total": 5581.655250264303
+        },
+        "hessian_builds": {
+          "n": 98,
+          "min": 1307,
+          "median": 2218.5,
+          "max": 3000,
+          "mean": 2266.326530612245,
+          "total": 222100
+        },
+        "hessian_gradient_calls": {
+          "n": 98,
+          "min": 335899,
+          "median": 570154.5,
+          "max": 771000,
+          "mean": 582445.918367347,
+          "total": 57079700
+        },
+        "accepted_steps": {
+          "n": 98,
+          "min": 1307,
+          "median": 2218.5,
+          "max": 3000,
+          "mean": 2266.3061224489797,
+          "total": 222098
+        },
+        "seconds_per_hessian_build": {
+          "n": 98,
+          "min": 0.018087526871404875,
+          "median": 0.025400798166417143,
+          "max": 0.032646038363324185,
+          "mean": 0.025195600467811354,
+          "total": 2.469168845845513
+        },
+        "inner_accepted_per_build": {
+          "n": 928,
+          "min": 0.9473684210526315,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9999124967591392,
+          "total": 927.9187969924812
+        }
+      }
+    },
+    {
+      "tau": 6,
+      "targets": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      },
+      "controls": {
+        "n": 97,
+        "stage_stops": {
+          "kkt": 39,
+          "outer_limit": 58
+        },
+        "variables": {
+          "n": 97,
+          "min": 153,
+          "median": 153,
+          "max": 153,
+          "mean": 153,
+          "total": 14841
+        },
+        "completed_outer": {
+          "n": 97,
+          "min": 7,
+          "median": 10,
+          "max": 10,
+          "mean": 9.56701030927835,
+          "total": 928
+        },
+        "stage_seconds": {
+          "n": 97,
+          "min": 49.294173223985126,
+          "median": 80.46568799798843,
+          "max": 111.71459198999219,
+          "mean": 80.75844054818502,
+          "total": 7833.568733173946
+        },
+        "final_rho": {
+          "1000000.0": 17,
+          "100000.0": 46,
+          "10000.0": 29,
+          "100000000.0": 1,
+          "10000000.0": 4
+        },
+        "rho_increases": 96,
+        "kkt_blockers": {
+          "stat": 33,
+          "feas": 56,
+          "comp": 51,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 97,
+            "min": 1.759736800721612e-11,
+            "median": 3.464556804638752e-09,
+            "max": 7.9139049699074135,
+            "mean": 0.2509059315282984,
+            "total": 24.33787535824494
+          },
+          "feas": {
+            "n": 97,
+            "min": 7.48534789707378e-10,
+            "median": 4.084604920129298e-06,
+            "max": 0.0064473467077650615,
+            "mean": 0.00026192894574858977,
+            "total": 0.025407107737613205
+          },
+          "comp": {
+            "n": 97,
+            "min": 2.697937873108458e-10,
+            "median": 1.2536738153226534e-06,
+            "max": 0.0017807240864379792,
+            "mean": 0.00011327735640891436,
+            "total": 0.010987903571664693
+          },
+          "dual": {
+            "n": 97,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 715,
+          "converged": 211,
+          "stuck": 2
+        },
+        "inner_status_by_case": {
+          "converged": 83,
+          "max_iter": 97,
+          "stuck": 2
+        },
+        "inner_total": 928,
+        "completed_inner_high_gradient": 713,
+        "last_completed_inner": {
+          "converged": 61,
+          "max_iter": 34,
+          "stuck": 2
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 97,
+          "min": 49.18117230097414,
+          "median": 80.33160203997977,
+          "max": 111.55436746790656,
+          "mean": 80.6223722222035,
+          "total": 7820.3701055537385
+        },
+        "hessian_builds": {
+          "n": 97,
+          "min": 1484,
+          "median": 2503,
+          "max": 3000,
+          "mean": 2429.8453608247423,
+          "total": 235695
+        },
+        "hessian_gradient_calls": {
+          "n": 97,
+          "min": 455588,
+          "median": 768421,
+          "max": 921000,
+          "mean": 745962.5257731959,
+          "total": 72358365
+        },
+        "accepted_steps": {
+          "n": 97,
+          "min": 1484,
+          "median": 2503,
+          "max": 3000,
+          "mean": 2429.824742268041,
+          "total": 235693
+        },
+        "seconds_per_hessian_build": {
+          "n": 97,
+          "min": 0.02583446927145325,
+          "median": 0.03301979405043873,
+          "max": 0.039251908946968186,
+          "mean": 0.03328574041440952,
+          "total": 3.2287168201977234
+        },
+        "inner_accepted_per_build": {
+          "n": 928,
+          "min": 0.9545454545454546,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9999459833592125,
+          "total": 927.9498725573492
+        }
+      }
+    },
+    {
+      "tau": 7,
+      "targets": {
+        "n": 29,
+        "stage_stops": {
+          "timeout": 29
+        },
+        "variables": {
+          "n": 29,
+          "min": 178,
+          "median": 178,
+          "max": 178,
+          "mean": 178,
+          "total": 5162
+        },
+        "completed_outer": {
+          "n": 29,
+          "min": 8,
+          "median": 9,
+          "max": 9,
+          "mean": 8.758620689655173,
+          "total": 254
+        },
+        "stage_seconds": {
+          "n": 29,
+          "min": 120.00698230302078,
+          "median": 120.02403169000172,
+          "max": 120.06364377299906,
+          "mean": 120.0267669850015,
+          "total": 3480.7762425650435
+        },
+        "final_rho": {
+          "10000.0": 24,
+          "100000.0": 5
+        },
+        "rho_increases": 5,
+        "kkt_blockers": {
+          "stat": 25,
+          "feas": 29,
+          "comp": 29,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 29,
+            "min": 9.583484596176195e-10,
+            "median": 0.020936612300140666,
+            "max": 0.9342038778632419,
+            "mean": 0.11771209792590456,
+            "total": 3.413650839851232
+          },
+          "feas": {
+            "n": 29,
+            "min": 0.0001908759743605437,
+            "median": 0.001061873817506484,
+            "max": 0.002963799048539023,
+            "mean": 0.0011076887959849157,
+            "total": 0.03212297508356256
+          },
+          "comp": {
+            "n": 29,
+            "min": 1.9829245443699073e-05,
+            "median": 0.0007932492837188915,
+            "max": 0.0030187795148380533,
+            "mean": 0.0008757219818315797,
+            "total": 0.02539593747311581
+          },
+          "dual": {
+            "n": 29,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 248,
+          "timeout": 29,
+          "converged": 6
+        },
+        "inner_status_by_case": {
+          "converged": 5,
+          "max_iter": 29,
+          "stuck": 0
+        },
+        "inner_total": 283,
+        "completed_inner_high_gradient": 248,
+        "last_completed_inner": {
+          "max_iter": 25,
+          "converged": 4
+        },
+        "interrupted_cases": 29,
+        "interrupted_with_steps": 29,
+        "interrupted_seconds": {
+          "n": 29,
+          "min": 1.8156470539979637,
+          "median": 7.547010381997097,
+          "max": 12.021595508005703,
+          "mean": 7.353918055103538,
+          "total": 213.2636235980026
+        },
+        "interrupted_accepted_total": 5377,
+        "inner_seconds": {
+          "n": 29,
+          "min": 119.85244937197422,
+          "median": 119.88030205501127,
+          "max": 119.9186053420126,
+          "mean": 119.878135587996,
+          "total": 3476.465932051884
+        },
+        "hessian_builds": {
+          "n": 29,
+          "min": 2525,
+          "median": 2807,
+          "max": 2987,
+          "mean": 2791.4827586206898,
+          "total": 80953
+        },
+        "hessian_gradient_calls": {
+          "n": 29,
+          "min": 901425,
+          "median": 1002099,
+          "max": 1066359,
+          "mean": 996559.3448275862,
+          "total": 28900221
+        },
+        "accepted_steps": {
+          "n": 29,
+          "min": 2524,
+          "median": 2806,
+          "max": 2986,
+          "mean": 2790.4827586206898,
+          "total": 80924
+        },
+        "seconds_per_hessian_build": {
+          "n": 29,
+          "min": 0.04012666515497616,
+          "median": 0.042699001406857846,
+          "max": 0.04747353805110347,
+          "mean": 0.04304864099040207,
+          "total": 1.2484105887216599
+        },
+        "inner_accepted_per_build": {
+          "n": 283,
+          "min": 0.975609756097561,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9993142845250518,
+          "total": 282.80594252058967
+        }
+      },
+      "controls": {
+        "n": 69,
+        "stage_stops": {
+          "outer_limit": 48,
+          "kkt": 21
+        },
+        "variables": {
+          "n": 69,
+          "min": 178,
+          "median": 178,
+          "max": 178,
+          "mean": 178,
+          "total": 12282
+        },
+        "completed_outer": {
+          "n": 69,
+          "min": 9,
+          "median": 10,
+          "max": 10,
+          "mean": 9.869565217391305,
+          "total": 681
+        },
+        "stage_seconds": {
+          "n": 69,
+          "min": 77.43445787002565,
+          "median": 107.52512019698042,
+          "max": 119.952116475004,
+          "mean": 105.24185997582686,
+          "total": 7261.688338332053
+        },
+        "final_rho": {
+          "100000.0": 38,
+          "10000.0": 9,
+          "1000000.0": 20,
+          "10000000.0": 2
+        },
+        "rho_increases": 84,
+        "kkt_blockers": {
+          "stat": 9,
+          "feas": 48,
+          "comp": 42,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 69,
+            "min": 1.774713092533236e-11,
+            "median": 1.1034404060286908e-09,
+            "max": 3.9259027804805506,
+            "mean": 0.18991205403817377,
+            "total": 13.10393172863399
+          },
+          "feas": {
+            "n": 69,
+            "min": 1.0337278533167904e-09,
+            "median": 2.7984998173719022e-05,
+            "max": 0.0038407049263031734,
+            "mean": 0.00021330205385059004,
+            "total": 0.014717841715690714
+          },
+          "comp": {
+            "n": 69,
+            "min": 2.457760395202513e-09,
+            "median": 5.783020559174679e-06,
+            "max": 0.002702770052096521,
+            "mean": 0.0001382413995251893,
+            "total": 0.009538656567238062
+          },
+          "dual": {
+            "n": 69,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 519,
+          "converged": 161,
+          "stuck": 1
+        },
+        "inner_status_by_case": {
+          "converged": 67,
+          "max_iter": 69,
+          "stuck": 1
+        },
+        "inner_total": 681,
+        "completed_inner_high_gradient": 519,
+        "last_completed_inner": {
+          "converged": 59,
+          "max_iter": 9,
+          "stuck": 1
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 69,
+          "min": 77.29261048801709,
+          "median": 107.36600485199597,
+          "max": 119.7906498600205,
+          "mean": 105.07841661849027,
+          "total": 7250.410746675829
+        },
+        "hessian_builds": {
+          "n": 69,
+          "min": 1823,
+          "median": 2539,
+          "max": 3000,
+          "mean": 2515.057971014493,
+          "total": 173539
+        },
+        "hessian_gradient_calls": {
+          "n": 69,
+          "min": 650811,
+          "median": 906423,
+          "max": 1071000,
+          "mean": 897875.695652174,
+          "total": 61953423
+        },
+        "accepted_steps": {
+          "n": 69,
+          "min": 1823,
+          "median": 2539,
+          "max": 3000,
+          "mean": 2515.0434782608695,
+          "total": 173538
+        },
+        "seconds_per_hessian_build": {
+          "n": 69,
+          "min": 0.030815367227279462,
+          "median": 0.041661296997148205,
+          "max": 0.05012943684790949,
+          "mean": 0.041927816195314355,
+          "total": 2.8930193174766905
+        },
+        "inner_accepted_per_build": {
+          "n": 681,
+          "min": 0.9787234042553191,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9999687568344424,
+          "total": 680.9787234042553
+        }
+      }
+    },
+    {
+      "tau": 8,
+      "targets": {
+        "n": 93,
+        "stage_stops": {
+          "timeout": 93
+        },
+        "variables": {
+          "n": 93,
+          "min": 203,
+          "median": 203,
+          "max": 203,
+          "mean": 203,
+          "total": 18879
+        },
+        "completed_outer": {
+          "n": 93,
+          "min": 6,
+          "median": 7,
+          "max": 9,
+          "mean": 7.10752688172043,
+          "total": 661
+        },
+        "stage_seconds": {
+          "n": 93,
+          "min": 120.0075724190101,
+          "median": 120.03318867797498,
+          "max": 120.0773841390037,
+          "mean": 120.0346302445884,
+          "total": 11163.220612746722
+        },
+        "final_rho": {
+          "10000.0": 83,
+          "100000.0": 7,
+          "1000000.0": 3
+        },
+        "rho_increases": 13,
+        "kkt_blockers": {
+          "stat": 82,
+          "feas": 93,
+          "comp": 93,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 93,
+            "min": 2.900773475589258e-10,
+            "median": 0.024654292828750195,
+            "max": 4.347614119461421,
+            "mean": 0.268872594865549,
+            "total": 25.005151322496054
+          },
+          "feas": {
+            "n": 93,
+            "min": 9.62209567870187e-06,
+            "median": 0.0013529829509803248,
+            "max": 0.003899051730043651,
+            "mean": 0.0014372130955646743,
+            "total": 0.13366081788751472
+          },
+          "comp": {
+            "n": 93,
+            "min": 4.848009980275292e-06,
+            "median": 0.0013064421135636842,
+            "max": 0.0035496038084071174,
+            "mean": 0.001270622410479027,
+            "total": 0.1181678841745495
+          },
+          "dual": {
+            "n": 93,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 642,
+          "timeout": 93,
+          "converged": 19
+        },
+        "inner_status_by_case": {
+          "converged": 11,
+          "max_iter": 93,
+          "stuck": 0
+        },
+        "inner_total": 754,
+        "completed_inner_high_gradient": 642,
+        "last_completed_inner": {
+          "max_iter": 82,
+          "converged": 11
+        },
+        "interrupted_cases": 93,
+        "interrupted_with_steps": 91,
+        "interrupted_seconds": {
+          "n": 93,
+          "min": 0.04404614100349136,
+          "median": 8.810306526982458,
+          "max": 18.937401144998148,
+          "mean": 7.941280529635297,
+          "total": 738.5390892560827
+        },
+        "interrupted_accepted_total": 14428,
+        "inner_seconds": {
+          "n": 93,
+          "min": 119.7607201510109,
+          "median": 119.89623384401784,
+          "max": 119.94440492696594,
+          "mean": 119.89594786536225,
+          "total": 11150.32315147869
+        },
+        "hessian_builds": {
+          "n": 93,
+          "min": 1876,
+          "median": 2283,
+          "max": 2559,
+          "mean": 2251.1827956989246,
+          "total": 209360
+        },
+        "hessian_gradient_calls": {
+          "n": 93,
+          "min": 763532,
+          "median": 929181,
+          "max": 1041513,
+          "mean": 916231.3978494623,
+          "total": 85209520
+        },
+        "accepted_steps": {
+          "n": 93,
+          "min": 1875,
+          "median": 2282,
+          "max": 2558,
+          "mean": 2250.1827956989246,
+          "total": 209267
+        },
+        "seconds_per_hessian_build": {
+          "n": 93,
+          "min": 0.046852976869513424,
+          "median": 0.05251044614453012,
+          "max": 0.06393084195895189,
+          "mean": 0.05341655590179569,
+          "total": 4.967739698866999
+        },
+        "inner_accepted_per_build": {
+          "n": 754,
+          "min": 0.0,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9953095893610951,
+          "total": 750.4634303782657
+        }
+      },
+      "controls": {
+        "n": 4,
+        "stage_stops": {
+          "outer_limit": 2,
+          "kkt": 2
+        },
+        "variables": {
+          "n": 4,
+          "min": 203,
+          "median": 203.0,
+          "max": 203,
+          "mean": 203,
+          "total": 812
+        },
+        "completed_outer": {
+          "n": 4,
+          "min": 9,
+          "median": 10.0,
+          "max": 10,
+          "mean": 9.75,
+          "total": 39
+        },
+        "stage_seconds": {
+          "n": 4,
+          "min": 103.82282649498666,
+          "median": 115.59266550450411,
+          "max": 117.76741137201316,
+          "mean": 113.19389221900201,
+          "total": 452.77556887600804
+        },
+        "final_rho": {
+          "100000.0": 1,
+          "10000.0": 1,
+          "1000000.0": 2
+        },
+        "rho_increases": 5,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 2,
+          "comp": 2,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 4,
+            "min": 3.97705552181083e-10,
+            "median": 7.708504442623431e-10,
+            "max": 2.639934116989274e-09,
+            "mean": 1.1448351394237608e-09,
+            "total": 4.579340557695043e-09
+          },
+          "feas": {
+            "n": 4,
+            "min": 4.077269771807224e-11,
+            "median": 8.350685489308396e-06,
+            "max": 4.7862660251696276e-05,
+            "mean": 1.6141018000752697e-05,
+            "total": 6.456407200301079e-05
+          },
+          "comp": {
+            "n": 4,
+            "min": 1.2843032887177586e-10,
+            "median": 3.1080742217415303e-06,
+            "max": 4.3255710910690415e-05,
+            "mean": 1.2367996946125587e-05,
+            "total": 4.947198778450235e-05
+          },
+          "dual": {
+            "n": 4,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 27,
+          "converged": 12
+        },
+        "inner_status_by_case": {
+          "converged": 4,
+          "max_iter": 4,
+          "stuck": 0
+        },
+        "inner_total": 39,
+        "completed_inner_high_gradient": 27,
+        "last_completed_inner": {
+          "converged": 4
+        },
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 4,
+          "min": 103.67067152707023,
+          "median": 115.43233232553757,
+          "max": 117.5651224470057,
+          "mean": 113.02511465628777,
+          "total": 452.1004586251511
+        },
+        "hessian_builds": {
+          "n": 4,
+          "min": 2132,
+          "median": 2214.0,
+          "max": 2353,
+          "mean": 2228.25,
+          "total": 8913
+        },
+        "hessian_gradient_calls": {
+          "n": 4,
+          "min": 867724,
+          "median": 901098.0,
+          "max": 957671,
+          "mean": 906897.75,
+          "total": 3627591
+        },
+        "accepted_steps": {
+          "n": 4,
+          "min": 2132,
+          "median": 2214.0,
+          "max": 2353,
+          "mean": 2228.25,
+          "total": 8913
+        },
+        "seconds_per_hessian_build": {
+          "n": 4,
+          "min": 0.04575051700223752,
+          "median": 0.05156890640750342,
+          "max": 0.054377947477800975,
+          "mean": 0.05081656932376133,
+          "total": 0.20326627729504532
+        },
+        "inner_accepted_per_build": {
+          "n": 39,
+          "min": 1.0,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "total": 39.0
+        }
+      }
+    },
+    {
+      "tau": 9,
+      "targets": {
+        "n": 97,
+        "stage_stops": {
+          "timeout": 97
+        },
+        "variables": {
+          "n": 97,
+          "min": 228,
+          "median": 228,
+          "max": 228,
+          "mean": 228,
+          "total": 22116
+        },
+        "completed_outer": {
+          "n": 97,
+          "min": 4,
+          "median": 5,
+          "max": 7,
+          "mean": 5.463917525773196,
+          "total": 530
+        },
+        "stage_seconds": {
+          "n": 97,
+          "min": 120.00800027899095,
+          "median": 120.03966090499307,
+          "max": 120.09679334101384,
+          "mean": 120.0398503842082,
+          "total": 11643.865487268195
+        },
+        "final_rho": {
+          "10000.0": 97
+        },
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 97,
+          "feas": 97,
+          "comp": 97,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 97,
+            "min": 2.6379977819148963e-05,
+            "median": 0.20131092878749227,
+            "max": 5.567688542158776,
+            "mean": 0.5370351022992739,
+            "total": 52.09240492302957
+          },
+          "feas": {
+            "n": 97,
+            "min": 0.0004166068602051154,
+            "median": 0.00172407355213626,
+            "max": 0.07020515019443685,
+            "mean": 0.004390554578275329,
+            "total": 0.4258837940927069
+          },
+          "comp": {
+            "n": 97,
+            "min": 0.0004166068602051154,
+            "median": 0.0017221644173049735,
+            "max": 0.014299512264988316,
+            "mean": 0.002246355092263205,
+            "total": 0.21789644394953087
+          },
+          "dual": {
+            "n": 97,
+            "min": 0.0,
+            "median": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "total": 0.0
+          }
+        },
+        "inner_status": {
+          "max_iter": 530,
+          "timeout": 97
+        },
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 97,
+          "stuck": 0
+        },
+        "inner_total": 627,
+        "completed_inner_high_gradient": 530,
+        "last_completed_inner": {
+          "max_iter": 97
+        },
+        "interrupted_cases": 97,
+        "interrupted_with_steps": 97,
+        "interrupted_seconds": {
+          "n": 97,
+          "min": 0.2305516749911476,
+          "median": 9.047543696011417,
+          "max": 21.208441841008607,
+          "mean": 9.918410661207878,
+          "total": 962.085834137164
+        },
+        "interrupted_accepted_total": 14894,
+        "inner_seconds": {
+          "n": 97,
+          "min": 119.86773727697437,
+          "median": 119.91408560198033,
+          "max": 119.97498525903211,
+          "mean": 119.91519088238555,
+          "total": 11631.773515591398
+        },
+        "hessian_builds": {
+          "n": 97,
+          "min": 1485,
+          "median": 1797,
+          "max": 2325,
+          "mean": 1793.721649484536,
+          "total": 173991
+        },
+        "hessian_gradient_calls": {
+          "n": 97,
+          "min": 678645,
+          "median": 821229,
+          "max": 1062525,
+          "mean": 819730.793814433,
+          "total": 79513887
+        },
+        "accepted_steps": {
+          "n": 97,
+          "min": 1484,
+          "median": 1796,
+          "max": 2324,
+          "mean": 1792.721649484536,
+          "total": 173894
+        },
+        "seconds_per_hessian_build": {
+          "n": 97,
+          "min": 0.05158222246495756,
+          "median": 0.06672817341901432,
+          "max": 0.08077052478519384,
+          "mean": 0.06717476026209225,
+          "total": 6.515951745422948
+        },
+        "inner_accepted_per_build": {
+          "n": 627,
+          "min": 0.75,
+          "median": 1.0,
+          "max": 1.0,
+          "mean": 0.9977101183043416,
+          "total": 625.5642441768223
+        }
+      },
+      "controls": {
+        "n": 0,
+        "stage_stops": {},
+        "variables": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "completed_outer": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "stage_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "final_rho": {},
+        "rho_increases": 0,
+        "kkt_blockers": {
+          "stat": 0,
+          "feas": 0,
+          "comp": 0,
+          "dual": 0
+        },
+        "final_kkt": {
+          "stat": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "feas": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "comp": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          },
+          "dual": {
+            "n": 0,
+            "min": null,
+            "median": null,
+            "max": null,
+            "mean": null,
+            "total": 0
+          }
+        },
+        "inner_status": {},
+        "inner_status_by_case": {
+          "converged": 0,
+          "max_iter": 0,
+          "stuck": 0
+        },
+        "inner_total": 0,
+        "completed_inner_high_gradient": 0,
+        "last_completed_inner": {},
+        "interrupted_cases": 0,
+        "interrupted_with_steps": 0,
+        "interrupted_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "interrupted_accepted_total": 0,
+        "inner_seconds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_builds": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "hessian_gradient_calls": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "accepted_steps": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "seconds_per_hessian_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        },
+        "inner_accepted_per_build": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "max": null,
+          "mean": null,
+          "total": 0
+        }
+      }
+    }
+  ],
+  "new_optimization": false,
+  "kkt_recomputed": false
+}

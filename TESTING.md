@@ -249,3 +249,15 @@ PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-stage-objectives/ver
 
 Python標準ライブラリだけで実行できる。後者は入力10,748ファイルhash、全900行と前回分布比較との一致、独立のCSV順序統計、初期化受理202点との軌道/時間の対応を検算し、成果物は上書きしない。
 `analyze.py`と`inspect_initialization.py`は生成済み出力があると停止する。再生成は別ディレクトリで計画する。図だけMatplotlibが必要。
+
+## R3s G初段時間切れの診断
+
+主対象219件と旧入口の分離、KKT成分の重複、中央差分の評価カウンタ、rho増加の内側精度条件を4単体検査にした。
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s experiments/2026-11-17-r3s-stage01 -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-stage01/verify.py --check-only
+```
+
+Python標準ライブラリのみ。後者は全900件/6,982内側記録を生ログから再読し、分類/残差/外側回数/評価カウンタ/rho更新/中断点不採用を別コードで検算する。代表3例6トレースは保存コピーの生点まで照合し、REPORTの件数表も確認する。
+成果物は上書きせず、入力と追加コピーのhashを再確認する。新しい求解・KKT数値再計算は起動しない。

@@ -12,8 +12,10 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 - 24件は旧入口、876件は外側停滞の打切り規則入り。著者MATLAB/L-BFGSと同じ実装ではない。
 - 図3との目的値分布比較では、中央値比は1タスク1.067倍、7/8/9タスク2.230/2.387/2.553倍。証明付き返却点だけでも差が残り、著者の数値再現は未達。
 - 同じ900入力の段階別診断を完了。両端が原実行可能な857組で591短縮・266件は差1秒以内。修復後の初期化受理202件は全て返却までの短縮が1秒未満で、多タスク側は前処理への依存が強い。
-- 次は規則入り876件中のG stage01時間切れ219件を保存ログで診断し、分岐への依存と数値的な未達を分ける。
+- G stage01時間切れ219件を診断。全件が外側4〜9回で120秒に達し、内側stuckは0。9タスクは規則入り97件全てがこの型。内側計算の費用と段階予算の組合せがGの進行を止めている。
+- 次は保存3状態の1反復を分解計測し、Hessian構築・固有分解・探索の費用を区別してから少数例の対照を計画する。修正効果は未検証。
 
+[初段時間切れの診断](experiments/2026-11-17-r3s-stage01/REPORT.md)・[図](experiments/2026-11-17-r3s-stage01/stage01-diagnosis.png)、
 [段階別診断](experiments/2026-11-17-r3s-stage-objectives/REPORT.md)・[図](experiments/2026-11-17-r3s-stage-objectives/stage-objectives.png)、
 [図3との比較](experiments/2026-11-17-r3s-paper-comparison/REPORT.md)・[分布図](experiments/2026-11-17-r3s-paper-comparison/objective-distributions.png)、
 [900件の求解レポート](experiments/2026-11-16-r3s-cohort/REPORT.md)・[実行手順](experiments/2026-11-16-r3s-cohort/USAGE.md)。
