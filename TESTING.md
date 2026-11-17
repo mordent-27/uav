@@ -293,3 +293,13 @@ PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-gradient-e2e/verify.
 ```
 
 Gだけの差し替え/元入口の維持を2単体検査にした。後者は標準ライブラリだけで8返却点を原制約監査し、G検証記録/保存KKT/採用点hash/CSV/入力hashを照合する。新規求解は起動しない。
+
+## 最終未達点の分岐下界
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s experiments/2026-11-17-r3s-final-branches -p 'test_*.py' -v
+PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-final-branches/verify.py --check-only
+```
+
+可動領域端点/領域の重なり/固定タスクの距離下界/平滑化定義を4単体検査にした。標準ライブラリだけで30点の区間被覆・訪問順・下界を元入力から独立に再構成し、672制約行/26段階のKKT成分との整合を確認する。
+native_check.pyでは最終672行をRust評価器と全行照合し、最大差7.11e-15を確認した（NumPy/SciPy環境）。通常のverify.pyは保存記録の照合のみでモデル/求解を起動しない。
