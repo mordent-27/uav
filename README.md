@@ -14,9 +14,11 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 - 同じ900入力の段階別診断を完了。両端が原実行可能な857組で591短縮・266件は差1秒以内。修復後の初期化受理202件は全て返却までの短縮が1秒未満で、多タスク側は前処理への依存が強い。
 - G stage01時間切れ219件を診断。全件が外側4〜9回で120秒に達し、内側stuckは0。9タスクは規則入り97件全てがこの型。内側計算の費用と段階予算の組合せがGの進行を止めている。
 - 保存3状態の1反復を分解計測。曲率の中央差分が73〜75%、Jacobianが15〜16%、固有値分解が5〜6%。元のHessianと受理点の一致を確認した。
-- 次は差分ループ専用の勾配取得で重複評価を省けるか、同じ3状態で数値一致と費用を比較する。G全体や目的値への改善効果は未検証。
+- 差分専用の勾配取得を実装。全1,271評価点の勾配とHessian/キャッシュ/受理点の一致を確認し、同じ3状態の1反復中央値を35.8〜37.7%短縮した。
+- 次は同じ予算の少数例でG経路から返却までを対照比較する。G全体や目的値への改善効果は未検証。
 
-[1反復の費用分解](experiments/2026-11-17-r3s-step-profile/REPORT.md)・[次の比較案](experiments/2026-11-17-r3s-step-profile/NEXT.md)、
+[勾配専用経路の比較](experiments/2026-11-17-r3s-gradient-only/REPORT.md)、
+[1反復の費用分解](experiments/2026-11-17-r3s-step-profile/REPORT.md)、
 [初段時間切れの診断](experiments/2026-11-17-r3s-stage01/REPORT.md)・[図](experiments/2026-11-17-r3s-stage01/stage01-diagnosis.png)、
 [段階別診断](experiments/2026-11-17-r3s-stage-objectives/REPORT.md)・[図](experiments/2026-11-17-r3s-stage-objectives/stage-objectives.png)、
 [図3との比較](experiments/2026-11-17-r3s-paper-comparison/REPORT.md)・[分布図](experiments/2026-11-17-r3s-paper-comparison/objective-distributions.png)、
