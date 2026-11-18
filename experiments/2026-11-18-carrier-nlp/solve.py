@@ -156,13 +156,11 @@ class Branch:
             need = [p['s_min'], math.dist(r[k], r[k+1])/(p['v_c'] if m >= 0 else p['v_d'])]
             need += [math.dist(q[j][k], q[j][k+1])/p['v_c'] for j in self.used]
             s[k] = max(s[k], *need)
-        assert max(s) <= p['s_max']+1e-11
         d = copy.deepcopy(self.data)
         tr = d['solution'] = dict(r=r.tolist(), s=s.tolist(), c=[float(t) if m >= 0 else 0. for t, m in zip(s, self.modes)])
         tr['e'] = diag.replay(d)
         check = diag.residuals(d)
-        assert check['viol'] < 1e-10, check
-        assert min(tr['e']) >= p['e_min'] and max(tr['e']) <= p['e_max']
+        accepted = bool(check['viol'] < 1e-10 and min(tr['e']) >= p['e_min'] and max(tr['e']) <= p['e_max'] and max(s) <= p['s_max']+1e-11)
         own = dict(speed_excess_km=0., region_excess_km=0., contact_error_km=0.)
         regions = d['instance']['regions']
         for j in self.used:
@@ -181,7 +179,7 @@ class Branch:
                                paper_algorithm=False, global_optimality=False, energy_buffer=ENERGY_BUFFER,
                                max_roundoff_time_correction_hours=float(max(abs(s-before))))
         d['stages'] = []
-        result = dict(with_carrier=self.with_carrier, objective_hours=float(sum(s)), solver_status=stats['return_status'],
+        result = dict(with_carrier=self.with_carrier, accepted=accepted, objective_hours=float(sum(s)), solver_status=stats['return_status'],
                       solver_success=bool(stats['success']), iterations=stats['iter_count'], seconds=seconds,
                       variables=int(self.v.numel()), equalities=self.me, inequalities=self.mi,
                       kkt=self.kkt(x, lam, lam_x), original=check, min_energy=min(tr['e']),
@@ -212,7 +210,7 @@ def main():
             (out/f'{name}.json').write_text(json.dumps(sol, indent=1, allow_nan=False)+'\n')
             (out/f'{name}-solver.json').write_text(json.dumps(raw, allow_nan=False)+'\n')
             row[name] = res
-            print(case, name, json.dumps(dict(T=res['objective_hours'], status=res['solver_status'], it=res['iterations'],
+            print(case, name, json.dumps(dict(accepted=res['accepted'], T=res['objective_hours'], status=res['solver_status'], it=res['iterations'],
                   kkt=res['kkt'], late=res['certify_unreachable_max_km'], own=res['carrier_own'])), flush=True)
         rows.append(row)
     (HERE/'results.json').write_text(json.dumps(rows, indent=1, allow_nan=False)+'\n')
