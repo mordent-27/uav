@@ -23,13 +23,17 @@ for p in index['points']:
     except ValueError as e:
         row.update(status='not_applicable', reason=str(e)); rows.append(row); continue
     fails = [f for c in cert['carriers'] for f in c['failures']]
-    assert all(f['kind'] == 'unreachable' for f in fails), fails  # free initial position: only reachability can fail
+    region = [f for f in fails if f['kind'] == 'outside_region']
+    assert all(f['kind'] in ('unreachable', 'outside_region') for f in fails), fails
+    assert all(f['excess_km'] <= 1e-6 for f in region), region  # returned points were accepted at 1e-6
+    fails = [f for f in fails if f['kind'] == 'unreachable']
     if cert['feasible']:
         cc.check_constructed(d, cert)
     worst = max(fails, key=lambda f: f['excess_km'], default=None)
     worst_region = next((c['region'] for c in cert['carriers'] for f in c['failures'] if f is worst), None)
-    row.update(status='feasible' if cert['feasible'] else 'carrier_late', failing_pairs=len(fails),
-               failing_regions=sorted({c['region'] for c in cert['carriers'] if not c['feasible']}),
+    row.update(status='carrier_late' if fails else ('feasible' if cert['feasible'] else 'region_tolerance_only'),
+               failing_pairs=len(fails), region_excess_km=max((f['excess_km'] for f in region), default=0.),
+               failing_regions=sorted({c['region'] for c in cert['carriers'] if any(f['kind'] == 'unreachable' for f in c['failures'])}),
                max_excess_km=worst['excess_km'] if worst else 0., worst_region=worst_region,
                worst_pair=None if worst is None else [worst['start_stamp'], worst['end_stamp']],
                worst_required_seconds=worst and worst['required_seconds'],
@@ -41,6 +45,7 @@ def tally(group):
     return dict(points=len(group), with_charging=sum(r['charging_segments'] > 0 for r in group),
                 with_revisit=sum(bool(r['revisit_regions']) for r in group),
                 carrier_late=sum(r['status'] == 'carrier_late' for r in group),
+                region_tolerance_only=sum(r['status'] == 'region_tolerance_only' for r in group),
                 not_applicable=sum(r['status'] == 'not_applicable' for r in group))
 
 late = [r for r in rows if r['status'] == 'carrier_late']
@@ -60,7 +65,7 @@ summary = dict(date='2026-11-18', source_index_sha256=sha(HERE/'source-index.jso
 (HERE/'summary.json').write_text(json.dumps(summary, indent=1))
 (HERE/'certificates.json').write_text(json.dumps(certs))
 keys = ['case', 'tau', 'origin', 'route', 'selected', 'hours', 'status', 'charging_segments', 'regions_used', 'revisit_regions',
-        'failing_pairs', 'failing_regions', 'max_excess_km', 'worst_region', 'worst_pair', 'worst_required_seconds', 'worst_available_seconds']
+        'failing_pairs', 'region_excess_km', 'failing_regions', 'max_excess_km', 'worst_region', 'worst_pair', 'worst_required_seconds', 'worst_available_seconds']
 with open(HERE/'cases.csv', 'w', newline='') as f:
     w = csv.DictWriter(f, keys, extrasaction='ignore'); w.writeheader(); w.writerows(rows)
 print(json.dumps({k: summary[k] for k in ('all', 'by_route', 'late_without_revisit', 'excess_km', 'ratio_required_over_available', 'experiment2_targets')}, indent=1))

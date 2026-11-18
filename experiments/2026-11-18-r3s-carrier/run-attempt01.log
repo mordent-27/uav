@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/home/mordent/robotech/3A/optimization/uav/experiments/2026-11-18-r3s-carrier/run.py", line 26, in <module>
+    assert all(f['kind'] == 'unreachable' for f in fails), fails  # free initial position: only reachability can fail
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [{'kind': 'outside_region', 'stamp': 13, 'excess_km': 1.6595356200355127e-09}, {'kind': 'unreachable', 'start_stamp': 6, 'end_stamp': 13, 'available_seconds': 1206.0621392255853, 'required_seconds': 1266.4681272044563, 'excess_km': 0.1812179639366125}, {'kind': 'unreachable', 'start_stamp': 16, 'end_stamp': 19, 'available_seconds': 548.1964034445356, 'required_seconds': 1133.3649608462285, 'excess_km': 1.7555056722050795}]
+(copied from the terminal; the first run wrote no other file)
