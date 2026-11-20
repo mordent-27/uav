@@ -1,0 +1,275 @@
+{
+  "passed": true,
+  "new_solves": 80,
+  "comparison_measured": 60,
+  "comparison_warmup": 12,
+  "extra_feasible_starts": 8,
+  "deterministic_constructions": 2,
+  "original_start_R_feasible": 6,
+  "original_start_q_feasible": 4,
+  "original_start_R_success": 5,
+  "original_start_q_success": 4,
+  "same_quality_pairs": 3,
+  "cases": [
+    {
+      "case": "tau4-seed4000012",
+      "R": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 2.2922924152549116,
+        "iterations": 778,
+        "variables": 74,
+        "inequalities": 42,
+        "time_median_ms": 134.22938401345164,
+        "time_min_ms": 127.22237600246444,
+        "time_max_ms": 147.9922569997143,
+        "total_median_ms": 143.12439200875815,
+        "raw_kkt": {
+          "stat": 3.998414793704441e-11,
+          "feas": 4.7961634663806766e-15,
+          "comp": 3.457667077100268e-07,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "q": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 2.292292415254911,
+        "iterations": 34,
+        "variables": 174,
+        "inequalities": 142,
+        "time_median_ms": 13.85064898931887,
+        "time_min_ms": 13.27728400065098,
+        "time_max_ms": 18.596150999655947,
+        "total_median_ms": 32.8697279910557,
+        "raw_kkt": {
+          "stat": 6.315293388360078e-11,
+          "feas": 2.3980817331903383e-15,
+          "comp": 3.4572321960801844e-07,
+          "dual": 1.1378761239220876e-11
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "same_quality": true,
+      "q_over_R_solver_time_ratio": 0.10318641548657367
+    },
+    {
+      "case": "tau6-seed6000032",
+      "R": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 2.4926523655924746,
+        "iterations": 14,
+        "variables": 110,
+        "inequalities": 63,
+        "time_median_ms": 4.198758993879892,
+        "time_min_ms": 4.150477994699031,
+        "time_max_ms": 4.342579995864071,
+        "total_median_ms": 17.551204000483267,
+        "raw_kkt": {
+          "stat": 7.73479015386667e-12,
+          "feas": 3.197442310920451e-15,
+          "comp": 5.540366592171608e-07,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "q": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 2.492652365622213,
+        "iterations": 102,
+        "variables": 318,
+        "inequalities": 271,
+        "time_median_ms": 87.75589500146452,
+        "time_min_ms": 79.3553109979257,
+        "time_max_ms": 88.58174498891458,
+        "total_median_ms": 127.23746399569791,
+        "raw_kkt": {
+          "stat": 4.151770086458792e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 5.268643297196007e-07,
+          "dual": 8.345321411176628e-12
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "same_quality": true,
+      "q_over_R_solver_time_ratio": 20.900436326394882
+    },
+    {
+      "case": "tau9-seed9000076",
+      "R": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 4.183864327134158,
+        "iterations": 1451,
+        "variables": 164,
+        "inequalities": 97,
+        "time_median_ms": 413.25027200218756,
+        "time_min_ms": 410.6939589983085,
+        "time_max_ms": 425.46696100907866,
+        "total_median_ms": 435.3687330003595,
+        "raw_kkt": {
+          "stat": 4.732817923859254e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 3.78640896373131e-08,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "q": {
+        "accepted": false,
+        "solver_success": false,
+        "objective_hours": 6.5314088401516175,
+        "iterations": 1500,
+        "variables": 374,
+        "inequalities": 307,
+        "time_median_ms": 1012.7500649978174,
+        "time_min_ms": 1010.7375790103106,
+        "time_max_ms": 1066.3190299965208,
+        "total_median_ms": 1056.208804002381,
+        "raw_kkt": {
+          "stat": 1.2668264095490846e-05,
+          "feas": 15.386490168354419,
+          "comp": 15.386490168354419,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 2471.6738890895213
+      },
+      "same_quality": false,
+      "q_over_R_solver_time_ratio": 2.450694249010576
+    },
+    {
+      "case": "tau9-seed9000001",
+      "R": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 3.1413105359725617,
+        "iterations": 280,
+        "variables": 164,
+        "inequalities": 94,
+        "time_median_ms": 90.41142599016894,
+        "time_min_ms": 88.04607301135547,
+        "time_max_ms": 109.97786998632364,
+        "total_median_ms": 112.11810600070748,
+        "raw_kkt": {
+          "stat": 4.527470757465196e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 5.268288115385818e-07,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "q": {
+        "accepted": false,
+        "solver_success": false,
+        "objective_hours": 22.0288451218497,
+        "iterations": 1500,
+        "variables": 468,
+        "inequalities": 398,
+        "time_median_ms": 1705.8879410033114,
+        "time_min_ms": 1592.4502510024467,
+        "time_max_ms": 1711.984409004799,
+        "total_median_ms": 1761.2007730058394,
+        "raw_kkt": {
+          "stat": 16.715843129877076,
+          "feas": 30.494515321226974,
+          "comp": 30.494515321226974,
+          "dual": 0.5535898423315142
+        },
+        "max_time_correction_seconds": 1166.7321726945638
+      },
+      "same_quality": false,
+      "q_over_R_solver_time_ratio": 18.868057021784
+    },
+    {
+      "case": "tau8-seed8000015",
+      "R": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 3.7516307194274727,
+        "iterations": 16,
+        "variables": 146,
+        "inequalities": 86,
+        "time_median_ms": 5.815634998725727,
+        "time_min_ms": 5.657105997670442,
+        "time_max_ms": 6.105954002123326,
+        "total_median_ms": 25.53197399538476,
+        "raw_kkt": {
+          "stat": 2.38684324857956e-14,
+          "feas": 3.836930773104541e-14,
+          "comp": 5.4292106632658485e-08,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "q": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 3.7516307194375944,
+        "iterations": 393,
+        "variables": 334,
+        "inequalities": 274,
+        "time_median_ms": 217.89283100224566,
+        "time_min_ms": 211.07480800128542,
+        "time_max_ms": 232.0976979972329,
+        "total_median_ms": 257.7559700002894,
+        "raw_kkt": {
+          "stat": 5.772756498654301e-11,
+          "feas": 3.197442310920451e-15,
+          "comp": 5.429208247420547e-08,
+          "dual": 1.9981799525262005e-11
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "same_quality": true,
+      "q_over_R_solver_time_ratio": 37.46673081271237
+    },
+    {
+      "case": "tau7-seed7000053",
+      "R": {
+        "accepted": true,
+        "solver_success": false,
+        "objective_hours": 3.327991039168317,
+        "iterations": 1500,
+        "variables": 128,
+        "inequalities": 74,
+        "time_median_ms": 475.33186100190505,
+        "time_min_ms": 470.99406000052113,
+        "time_max_ms": 486.81186699832324,
+        "total_median_ms": 494.23137499252334,
+        "raw_kkt": {
+          "stat": 0.03996391883671677,
+          "feas": 0.11946813540153124,
+          "comp": 0.11946813540153124,
+          "dual": 0.0
+        },
+        "max_time_correction_seconds": 11.946829540823794
+      },
+      "q": {
+        "accepted": true,
+        "solver_success": true,
+        "objective_hours": 2.8676736971038657,
+        "iterations": 514,
+        "variables": 294,
+        "inequalities": 240,
+        "time_median_ms": 292.8030460025184,
+        "time_min_ms": 289.8412459908286,
+        "time_max_ms": 297.5310859910678,
+        "total_median_ms": 327.6350250089308,
+        "raw_kkt": {
+          "stat": 5.066769825243932e-11,
+          "feas": 1.5987211554602255e-15,
+          "comp": 5.071555128871156e-07,
+          "dual": 5.248574036242253e-11
+        },
+        "max_time_correction_seconds": 0.0
+      },
+      "same_quality": false,
+      "q_over_R_solver_time_ratio": 0.6159970959770039
+    }
+  ],
+  "tau9_reduced_start_both_accepted": true,
+  "prior_outputs_changed": false
+}

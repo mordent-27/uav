@@ -303,3 +303,15 @@ PYTHONDONTWRITEBYTECODE=1 python experiments/2026-11-17-r3s-final-branches/verif
 
 可動領域端点/領域の重なり/固定タスクの距離下界/平滑化定義を4単体検査にした。標準ライブラリだけで30点の区間被覆・訪問順・下界を元入力から独立に再構成し、672制約行/26段階のKKT成分との整合を確認する。
 native_check.pyでは最終672行をRust評価器と全行照合し、最大差7.11e-15を確認した（NumPy/SciPy環境）。通常のverify.pyは保存記録の照合のみでモデル/求解を起動しない。
+
+
+## 2026-11-20：Rによる車両変数消去の追加実験
+
+[4単体検査](experiments/2026-11-20-carrier-followup/test_model.py)を求解前に通過。Rの添字/字義どおりの残差、勾配とHessian-vectorの有限差分、既存q点での補間の整合、意図的に壊した電池・車両の検出を調べる。NumPy/CasADiが必要。
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python experiments/2026-11-20-carrier-followup/test_model.py
+python experiments/2026-11-20-carrier-followup/verify_results.py
+```
+
+後者は標準ライブラリのみで、全80返却点と2構成点、入力・依存コードhash、5反復の解の同一性、集計を再検算する。最適化は起動しない。旧900件と本体コードは変更していない。実行環境は[USAGE](experiments/2026-11-20-carrier-followup/USAGE.md)。Rのτ=7は原実行可能な補正点だが、反復上限・raw未収束として記録する。

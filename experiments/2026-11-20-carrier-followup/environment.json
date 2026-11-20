@@ -1,0 +1,29 @@
+{
+ "python": "3.12.13",
+ "platform": "Linux-6.18.60-1-lts-x86_64-with-glibc2.44",
+ "numpy": "2.5.1",
+ "casadi": "3.8.2",
+ "options": {
+  "print_time": false,
+  "ipopt": {
+   "print_level": 0,
+   "sb": "yes",
+   "hessian_approximation": "exact",
+   "tol": 1e-10,
+   "dual_inf_tol": 1e-08,
+   "constr_viol_tol": 1e-11,
+   "compl_inf_tol": 1e-09,
+   "acceptable_iter": 0,
+   "max_iter": 1500,
+   "max_wall_time": 300.0,
+   "nlp_scaling_method": "none",
+   "bound_relax_factor": 0.0,
+   "mu_strategy": "adaptive"
+  }
+ },
+ "threads": {
+  "OPENBLAS_NUM_THREADS": "1",
+  "OMP_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ }
+}

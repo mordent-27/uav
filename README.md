@@ -8,7 +8,7 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 
 現在地と検証順は[ROADMAP.md](ROADMAP.md)、実行記録は[WORK_LOG.md](WORK_LOG.md)、単体検査は[TESTING.md](TESTING.md)。
 
-提出稿の[仮採点と修正理由](experiments/2026-11-20-report-review/REVIEW.md)を保存した（原稿83/100、各問25点の独自基準）。[提出用TeX](../human/report.tex)と[PDF](../human/report.pdf)は修正済み、A4・8ページ。原版・修正版を実験ディレクトリへ保存し、既存894点等を再検算した。新規求解0。原論文の数値再現は引き続き未達。
+提出稿の[仮採点と修正理由](experiments/2026-11-20-report-review/REVIEW.md)を保存した（原稿83/100、各問25点の独自基準）。その後、指定された[追加実験1・2](experiments/2026-11-20-carrier-followup/REPORT.md)を完了。τ=9の2例は固定割当のまま実行可能だった。Rのみとqありの同品質3例の比較では、Rのみが速いのは2例、一律の高速化はない。80求解を独立検算し、旧900件は変更していない。[提出用TeX](../human/report.tex)と[PDF](../human/report.pdf)はA4・8ページを保ち、[GitHub](https://github.com/mordent-27/uav)の参照を追加した。Git外のhuman成果物は[保存版](experiments/2026-11-20-carrier-followup/revised/)にも残す。原論文の数値再現は引き続き未達。
 
 - 診断用の入口で固定900件を完了。原実行可能な返却点894、返却点の固定分岐KKT830。AL終点の共通KKT863・追加物理KKT779は別の点の指標。
 - 24件は旧入口、876件は外側停滞の打切り規則入り。著者MATLAB/L-BFGSと同じ実装ではない。
@@ -18,8 +18,8 @@ Mobile Charging Support* (arXiv:2609.40201v1)。Rust 依存ライブラリなし
 - 保存3状態の1反復を分解計測。曲率の中央差分が73〜75%、Jacobianが15〜16%、固有値分解が5〜6%。元のHessianと受理点の一致を確認した。
 - 差分専用の勾配取得を実装。全1,271評価点の勾配とHessian/キャッシュ/受理点の一致を確認し、同じ3状態の1反復中央値を35.8〜37.7%短縮した。
 - 同じ予算で4入力×2条件を新規比較。返却軌道/目的値は全4入力で同一。対照のGは400→301秒に短縮したが、8タスク2例は第13段階の未達で補助へ戻り、全体費用が増えた。
-- 最終未達2点は、現在の割当のままでは原実行不能と証明。初回充電までの飛行距離下界20.31/24.68kmが、航続距離14.4kmを超える。制約672行の別実装もRustと最大差7.11e-15で一致。
-- 次は成功対照の途中の割当も同じ下界で追い、回復する例を誤って止めないか確認する。共有入口への高速化適用は引き続き保留。
+- 11/17のAL最終未達のτ=8の2点は、その時点の割当のままでは原実行不能と証明。初回充電までの飛行距離下界20.31/24.68kmが、航続距離14.4kmを超える。制約672行の別実装もRustと最大差7.11e-15で一致。
+- 成功対照の分岐回復も確認済み。途中の下界違反だけの打切りは成功を失うため採用しない。共有入口への高速化適用は引き続き保留。
 
 [最終未達の分岐診断](experiments/2026-11-17-r3s-final-branches/REPORT.md)・[図](experiments/2026-11-17-r3s-final-branches/infeasible-flight-blocks.png)・[成功例の分岐回復](experiments/2026-11-17-r3s-branch-recovery/REPORT.md)、
 [入口から返却までの対照](experiments/2026-11-17-r3s-gradient-e2e/REPORT.md)、
