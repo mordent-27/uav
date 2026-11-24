@@ -1,0 +1,502 @@
+{
+ "solved": 590,
+ "planned": 590,
+ "all": {
+  "points": 590,
+  "R": {
+   "success": 555,
+   "rejected": 29,
+   "corrected_feasible": 6
+  },
+  "base": {
+   "success": 561,
+   "rejected": 25,
+   "corrected_feasible": 4
+  },
+  "both_success": 534,
+  "increase_seconds": {
+   "n": 534,
+   "median": 54.337989678191654,
+   "p90": 149.44413815386656,
+   "max": 1097.8450869956164,
+   "min": -3.7916965567319494e-06
+  },
+  "increase_percent": {
+   "n": 534,
+   "median": 0.576406094928672,
+   "p90": 1.7227174198767736,
+   "max": 26.80029051677071,
+   "min": -2.6514068718341832e-08
+  },
+  "R_minus_returned_seconds": {
+   "n": 555,
+   "median": 46.25217931088059,
+   "p90": 146.5371348816598,
+   "max": 1097.8450869956218,
+   "min": -12096.1036581578
+  },
+  "base_success_still_short": 560
+ },
+ "jump": {
+  "points": 354,
+  "R": {
+   "success": 328,
+   "rejected": 22,
+   "corrected_feasible": 4
+  },
+  "base": {
+   "success": 332,
+   "rejected": 18,
+   "corrected_feasible": 4
+  },
+  "both_success": 314,
+  "increase_seconds": {
+   "n": 314,
+   "median": 58.0120284590107,
+   "p90": 157.16458990601367,
+   "max": 1097.8450869956164,
+   "min": -3.7916965567319494e-06
+  },
+  "increase_percent": {
+   "n": 314,
+   "median": 0.6593202860700642,
+   "p90": 1.914459761384979,
+   "max": 26.80029051677071,
+   "min": -2.6514068718341832e-08
+  },
+  "R_minus_returned_seconds": {
+   "n": 328,
+   "median": 49.043568422772,
+   "p90": 151.87715160433726,
+   "max": 1097.8450869956218,
+   "min": -12096.1036581578
+  },
+  "base_success_still_short": 332
+ },
+ "other": {
+  "points": 236,
+  "R": {
+   "success": 227,
+   "rejected": 7,
+   "corrected_feasible": 2
+  },
+  "base": {
+   "success": 229,
+   "rejected": 7
+  },
+  "both_success": 220,
+  "increase_seconds": {
+   "n": 220,
+   "median": 43.1396269913181,
+   "p90": 126.8951798770928,
+   "max": 301.29134108820546,
+   "min": -3.9692249487188747e-08
+  },
+  "increase_percent": {
+   "n": 220,
+   "median": 0.44277216849867296,
+   "p90": 1.5001098703881555,
+   "max": 4.475136194036677,
+   "min": -8.642198068287144e-10
+  },
+  "R_minus_returned_seconds": {
+   "n": 227,
+   "median": 43.18123960115923,
+   "p90": 126.89517990498248,
+   "max": 301.2913410883957,
+   "min": -3.9692249487188747e-08
+  },
+  "base_success_still_short": 228
+ },
+ "by_route": {
+  "G": {
+   "points": 60,
+   "R": {
+    "success": 57,
+    "rejected": 3
+   },
+   "base": {
+    "success": 59,
+    "rejected": 1
+   },
+   "both_success": 56,
+   "increase_seconds": {
+    "n": 56,
+    "median": 27.837209338323188,
+    "p90": 97.60482891243782,
+    "max": 1097.8450869956164,
+    "min": 0.0
+   },
+   "increase_percent": {
+    "n": 56,
+    "median": 0.5381281575154051,
+    "p90": 2.8616545601469534,
+    "max": 26.80029051677071,
+    "min": 0.0
+   },
+   "R_minus_returned_seconds": {
+    "n": 57,
+    "median": 27.837209338300806,
+    "p90": 93.22380081814701,
+    "max": 1097.8450869956218,
+    "min": 0.0
+   },
+   "base_success_still_short": 59
+  },
+  "fallback": {
+   "points": 530,
+   "R": {
+    "success": 498,
+    "rejected": 26,
+    "corrected_feasible": 6
+   },
+   "base": {
+    "success": 502,
+    "rejected": 24,
+    "corrected_feasible": 4
+   },
+   "both_success": 478,
+   "increase_seconds": {
+    "n": 478,
+    "median": 55.674418661166754,
+    "p90": 149.44413815386656,
+    "max": 410.4950572052395,
+    "min": -3.7916965567319494e-06
+   },
+   "increase_percent": {
+    "n": 478,
+    "median": 0.5777824265759013,
+    "p90": 1.6900114972468572,
+    "max": 4.89063045441438,
+    "min": -2.6514068718341832e-08
+   },
+   "R_minus_returned_seconds": {
+    "n": 498,
+    "median": 48.89086872692694,
+    "p90": 146.5371348816598,
+    "max": 410.4950572052395,
+    "min": -12096.1036581578
+   },
+   "base_success_still_short": 501
+  }
+ },
+ "by_tau": {
+  "1": {
+   "points": 10,
+   "R": {
+    "success": 9,
+    "rejected": 1
+   },
+   "base": {
+    "success": 10
+   },
+   "both_success": 9,
+   "increase_seconds": {
+    "n": 9,
+    "median": 7.2693239308386115,
+    "p90": 55.674418640655965,
+    "max": 55.67441864137859,
+    "min": -5.17985654369113e-10
+   },
+   "increase_percent": {
+    "n": 9,
+    "median": 0.3151540600629721,
+    "p90": 2.939647735897699,
+    "max": 3.0172354766522247,
+    "min": -2.660094367001875e-11
+   },
+   "R_minus_returned_seconds": {
+    "n": 9,
+    "median": 7.269323759605184,
+    "p90": 55.67441864065796,
+    "max": 55.6744186418574,
+    "min": -5.81534820298657e-10
+   },
+   "base_success_still_short": 10
+  },
+  "2": {
+   "points": 38,
+   "R": {
+    "success": 38
+   },
+   "base": {
+    "success": 37,
+    "rejected": 1
+   },
+   "both_success": 37,
+   "increase_seconds": {
+    "n": 37,
+    "median": 17.803516642673767,
+    "p90": 61.21080202055849,
+    "max": 160.78014347397885,
+    "min": 0.08548381981636766
+   },
+   "increase_percent": {
+    "n": 37,
+    "median": 0.6635201054244533,
+    "p90": 1.8235308392001048,
+    "max": 4.89063045441438,
+    "min": 0.004175235494607854
+   },
+   "R_minus_returned_seconds": {
+    "n": 38,
+    "median": 14.183415901698272,
+    "p90": 61.210802019348655,
+    "max": 160.78014546901179,
+    "min": -1163.2743459501594
+   },
+   "base_success_still_short": 37
+  },
+  "3": {
+   "points": 50,
+   "R": {
+    "success": 45,
+    "corrected_feasible": 1,
+    "rejected": 4
+   },
+   "base": {
+    "success": 48,
+    "rejected": 1,
+    "corrected_feasible": 1
+   },
+   "both_success": 44,
+   "increase_seconds": {
+    "n": 44,
+    "median": 29.088495018909775,
+    "p90": 79.76147260667075,
+    "max": 751.4877853507567,
+    "min": -3.9692249487188747e-08
+   },
+   "increase_percent": {
+    "n": 44,
+    "median": 0.6062434466029387,
+    "p90": 1.969796622537312,
+    "max": 16.565470762752298,
+    "min": -8.642198068287144e-10
+   },
+   "R_minus_returned_seconds": {
+    "n": 45,
+    "median": 27.881116169933673,
+    "p90": 79.76147260667075,
+    "max": 751.4877853505297,
+    "min": -1391.7163262299014
+   },
+   "base_success_still_short": 47
+  },
+  "4": {
+   "points": 59,
+   "R": {
+    "success": 58,
+    "rejected": 1
+   },
+   "base": {
+    "success": 55,
+    "rejected": 4
+   },
+   "both_success": 55,
+   "increase_seconds": {
+    "n": 55,
+    "median": 28.627783995541378,
+    "p90": 99.42468882335422,
+    "max": 307.57980789487203,
+    "min": -1.1176659597822436e-08
+   },
+   "increase_percent": {
+    "n": 55,
+    "median": 0.4347022060914085,
+    "p90": 2.0364742193235807,
+    "max": 9.687217659183588,
+    "min": -1.365685342591405e-10
+   },
+   "R_minus_returned_seconds": {
+    "n": 58,
+    "median": 28.04850247221493,
+    "p90": 97.14138815154381,
+    "max": 307.5798078939028,
+    "min": -5078.038620103815
+   },
+   "base_success_still_short": 55
+  },
+  "5": {
+   "points": 70,
+   "R": {
+    "success": 65,
+    "rejected": 5
+   },
+   "base": {
+    "success": 68,
+    "rejected": 1,
+    "corrected_feasible": 1
+   },
+   "both_success": 63,
+   "increase_seconds": {
+    "n": 63,
+    "median": 33.2249634947666,
+    "p90": 90.61718044927645,
+    "max": 1097.8450869956164,
+    "min": 9.691041888970631e-05
+   },
+   "increase_percent": {
+    "n": 63,
+    "median": 0.4863582496806407,
+    "p90": 1.3693639051079565,
+    "max": 26.80029051677071,
+    "min": 1.623794521066202e-06
+   },
+   "R_minus_returned_seconds": {
+    "n": 65,
+    "median": 29.758229054310625,
+    "p90": 94.4904891420368,
+    "max": 1097.8450869956218,
+    "min": -6969.535371741745
+   },
+   "base_success_still_short": 68
+  },
+  "6": {
+   "points": 84,
+   "R": {
+    "success": 81,
+    "rejected": 3
+   },
+   "base": {
+    "success": 82,
+    "rejected": 2
+   },
+   "both_success": 79,
+   "increase_seconds": {
+    "n": 79,
+    "median": 56.07775214587445,
+    "p90": 145.63678318604366,
+    "max": 331.874701404261,
+    "min": 0.056233913044501094
+   },
+   "increase_percent": {
+    "n": 79,
+    "median": 0.6446940521575684,
+    "p90": 1.9292109237702304,
+    "max": 4.680575373682072,
+    "min": 0.0005507315181230155
+   },
+   "R_minus_returned_seconds": {
+    "n": 81,
+    "median": 51.02469072022835,
+    "p90": 138.2917143356873,
+    "max": 331.8747014085823,
+    "min": -8237.478099087011
+   },
+   "base_success_still_short": 82
+  },
+  "7": {
+   "points": 85,
+   "R": {
+    "success": 81,
+    "rejected": 3,
+    "corrected_feasible": 1
+   },
+   "base": {
+    "success": 82,
+    "rejected": 3
+   },
+   "both_success": 80,
+   "increase_seconds": {
+    "n": 80,
+    "median": 55.76405154755824,
+    "p90": 142.32424015743507,
+    "max": 337.5623458191841,
+    "min": -3.948841253986757e-10
+   },
+   "increase_percent": {
+    "n": 80,
+    "median": 0.4528304228368474,
+    "p90": 1.4707851945382489,
+    "max": 3.2301694577461904,
+    "min": -3.4083846855992306e-12
+   },
+   "R_minus_returned_seconds": {
+    "n": 81,
+    "median": 49.47631829295158,
+    "p90": 142.32424015743507,
+    "max": 337.56234581815454,
+    "min": -10074.312016528263
+   },
+   "base_success_still_short": 82
+  },
+  "8": {
+   "points": 98,
+   "R": {
+    "success": 90,
+    "rejected": 6,
+    "corrected_feasible": 2
+   },
+   "base": {
+    "success": 94,
+    "rejected": 3,
+    "corrected_feasible": 1
+   },
+   "both_success": 88,
+   "increase_seconds": {
+    "n": 88,
+    "median": 80.40814368187199,
+    "p90": 191.42402218490577,
+    "max": 410.4950572052395,
+    "min": -3.7916965567319494e-06
+   },
+   "increase_percent": {
+    "n": 88,
+    "median": 0.6422424566301266,
+    "p90": 1.914459761384979,
+    "max": 4.320624592567546,
+    "min": -2.6514068718341832e-08
+   },
+   "R_minus_returned_seconds": {
+    "n": 90,
+    "median": 75.18269462088253,
+    "p90": 191.42402218490736,
+    "max": 410.4950572052395,
+    "min": -11545.240446504627
+   },
+   "base_success_still_short": 94
+  },
+  "9": {
+   "points": 96,
+   "R": {
+    "success": 88,
+    "rejected": 6,
+    "corrected_feasible": 2
+   },
+   "base": {
+    "success": 85,
+    "rejected": 10,
+    "corrected_feasible": 1
+   },
+   "both_success": 79,
+   "increase_seconds": {
+    "n": 79,
+    "median": 92.23599854994227,
+    "p90": 180.444171908632,
+    "max": 404.35531514910554,
+    "min": -5.665867774951039e-09
+   },
+   "increase_percent": {
+    "n": 79,
+    "median": 0.5931605113744132,
+    "p90": 1.436212107235324,
+    "max": 3.8112292555040117,
+    "min": -3.3095748364075916e-11
+   },
+   "R_minus_returned_seconds": {
+    "n": 88,
+    "median": 80.5039406718798,
+    "p90": 176.02028380551235,
+    "max": 404.35531514910235,
+    "min": -12096.1036581578
+   },
+   "base_success_still_short": 85
+  }
+ },
+ "errors": [],
+ "notes": [
+  "local Ipopt solutions with fixed assignment; increases are differences of local solutions",
+  "R rejected is not an infeasibility proof"
+ ]
+}

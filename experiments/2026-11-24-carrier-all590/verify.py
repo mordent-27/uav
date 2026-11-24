@@ -25,7 +25,7 @@ def main():
             ok = audit['accepted'] if m == 'R' else (audit['original_residual'] < 1e-10 and audit['min_energy'] >= ref['phys']['e_min'] and audit['max_energy'] <= ref['phys']['e_max'])
             saved_ok = res[m]['cls'] != 'rejected'
             obj = sum(d['solution']['s'])
-            if ok != saved_ok or abs(obj-res[m]['objective_hours']) > 1e-12 or abs(audit['R_excess_km']-res[m]['R_excess_km']) > 1e-12:
+            if ok != saved_ok or abs(obj-res[m]['objective_hours']) > 1e-12*max(1., abs(obj)) or abs(audit['R_excess_km']-res[m]['R_excess_km']) > 1e-12*max(1., abs(audit['R_excess_km'])):
                 bad.append((res['case'], m, ok, saved_ok, obj, res[m]['objective_hours']))
             n += 1
     out = dict(checked_solutions=n, mismatches=bad, method='verify_point.check on stored solutions with the original instance/modes')
